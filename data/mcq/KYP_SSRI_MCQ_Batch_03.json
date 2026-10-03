@@ -1,0 +1,340 @@
+{
+ "batch": "kyp-ssri-mcq-batch-03",
+ "title": "SSRI MCQ Batch 03 - Citalopram / Fluvoxamine (SSRI class completion)",
+ "generated": "2026-10-02",
+ "examOrientation": "Indian exams (NEET PG / INI-CET) + USMLE-style vignettes",
+ "textbookAnchors": "Facts aligned with Katzung Basic & Clinical Pharmacology 14e and K.D. Tripathi Essentials of Medical Pharmacology 7e, cross-checked against KYP monographs (citalopram: most SERT-selective SSRI, racemic; escitalopram = S-enantiomer, R-enantiomer antagonises the allosteric SERT effect; dose-dependent QTc prolongation with FDA 2011 caps - 40 mg/day, 20 mg/day if >60 y or CYP2C19 poor metaboliser; t½ ~33 h, no active metabolite, MDD label; fluvoxamine: potent CYP1A2 inhibitor - tizanidine contraindicated, clozapine/theophylline rise, duloxetine caution; OCD-only FDA label; t½ ~18 h, no active metabolite, once-nightly CR; more sedating-feeling). No copyrighted text reproduced.",
+ "schema": {
+  "core_fields": "id, question, options[4], correctIndex, explanation, afterSectionId - IDENTICAL to KYP microQuizzes",
+  "metadata_fields": "drugSlug, domain, difficulty (Foundation|Clinical|Advanced), style (vignette|recall) - batch extras",
+  "notes": [
+   "afterSectionId values are real section ids observed live on KYP SSRI pages: top, quick-facts, mechanism, timeline, neurotransmitters, neural-pathways, knowledge-graph, high-yield-summary.",
+   "Answer positions deliberately spread: A5 B4 C4 D4 (see stats.answerSpread).",
+   "Completes the SSRI class (Batch 01 = fluoxetine/paroxetine/sertraline/escitalopram); closes with one 6-drug class-summary question.",
+   "QA gate: this batch passed scripts/mcq_4step_check.py after extending the fact table with citalopram/fluvoxamine data."
+  ]
+ },
+ "stats": {
+  "total": 17,
+  "byDrug": {
+   "citalopram": 8,
+   "fluvoxamine": 8,
+   "mixed": 1
+  },
+  "byDifficulty": {
+   "Foundation": 4,
+   "Clinical": 9,
+   "Advanced": 4
+  },
+  "byStyle": {
+   "recall": 8,
+   "vignette": 9
+  },
+  "byDomain": {
+   "Mechanism & Neuroscience": 2,
+   "Pharmacokinetics": 4,
+   "Clinical Uses": 2,
+   "Adverse Effects & Safety": 4,
+   "Drug Interactions": 3,
+   "Indian Practice": 1,
+   "Active Recall": 1
+  },
+  "answerSpread": {
+   "0": 5,
+   "1": 4,
+   "2": 4,
+   "3": 4
+  }
+ },
+ "questions": [
+  {
+   "id": "ssri-cit-01",
+   "drugSlug": "citalopram",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Among the six SSRIs, which agent does the Know Your Pill monograph single out as the most SERT-selective member of the class?",
+   "options": [
+    "Fluoxetine — its loose receptor profile (NET, 5-HT2C) is precisely why it is the least selective",
+    "Sertraline — its fingerprint is the broadest FDA label in the class",
+    "Paroxetine — the highest affinity for muscarinic receptors of the group",
+    "Citalopram — the class benchmark for clean SERT selectivity"
+   ],
+   "correctIndex": 3,
+   "explanation": "KYP tags citalopram as the most SERT-selective SSRI — its identity is serotonin-transporter purity. Fluoxetine is the loosest of the class (NET and 5-HT2C effects), sertraline's claim to fame is its broad label plus a mild DAT effect, and paroxetine's receptor profile is actually dirtied by muscarinic (anticholinergic) affinity. In exam one-liners, 'cleanest SERT selectivity' points to the citalopram family."
+  },
+  {
+   "id": "ssri-cit-02",
+   "drugSlug": "citalopram",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "A resident is listing SSRI half-lives from memory. Citalopram's is best stated as:",
+   "options": [
+    "About 5 hours for the parent, with an active O-desmethyl metabolite",
+    "About 18 hours with an active metabolite extending the effect",
+    "About 33 hours with no active metabolite — comfortably once-daily",
+    "Roughly 4-6 days, long enough to support a weekly formulation"
+   ],
+   "correctIndex": 2,
+   "explanation": "Citalopram's half-life is about 33 hours (Tripathi 7e) with no active metabolite, so once-daily dosing is easy and it is not the class's discontinuation offender. The 5-hour/O-desmethyl profile is venlafaxine; 18 hours describes fluvoxamine (which also lacks an active metabolite — option B fails twice); and the 4-6 day half-life with a weekly formulation is fluoxetine's, thanks to long-lived norfluoxetine. Half-lives are the classic SSRI fingerprint distractor set."
+  },
+  {
+   "id": "ssri-cit-03",
+   "drugSlug": "citalopram",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 72-year-old woman started citalopram 40 mg daily elsewhere for depression now reports dizziness; ECG shows QTc 488 ms. The most appropriate action:",
+   "options": [
+    "Switch to fluoxetine 60 mg — a more cardiac-forgiving SSRI at that dose",
+    "Reassure — a QTc of 488 ms needs no action on any SSRI",
+    "Cut citalopram to the age-adjusted ceiling of 20 mg/day and reassess the QTc",
+    "Start propranolol to blunt catecholamine-triggered arrhythmia and keep the 40 mg dose"
+   ],
+   "correctIndex": 2,
+   "explanation": "Citalopram prolongs the QTc in a dose-dependent manner — the basis of the FDA 2011 warning capping it at 40 mg/day, and at 20 mg/day for patients over 60 years. This 72-year-old is double over her age-adjusted ceiling, so the correct move is dose reduction (with electrolyte and concomitant QT-drug review) and ECG follow-up. Fluoxetine 60 mg is a bulimia dose with no cardiac-free pass, propranolol does not shorten drug-induced QT stretch, and 'no action on any SSRI' is false — sertraline or escitalopram would be the cardiac-friendlier swaps."
+  },
+  {
+   "id": "ssri-cit-04",
+   "drugSlug": "citalopram",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 45-year-old on citalopram 40 mg for MDD is genotyped as a CYP2C19 poor metaboliser; his cardiac history is clean. The correct dose ceiling is:",
+   "options": [
+    "No ceiling applies — genotype does not alter citalopram dosing",
+    "80 mg/day — poor metabolisers need more drug for the same SERT effect",
+    "20 mg/day — the FDA cap for CYP2C19 poor metabolisers",
+    "30 mg/day with weekly ECGs — the standard poor-metaboliser schedule"
+   ],
+   "correctIndex": 2,
+   "explanation": "Citalopram is cleared notably via CYP2C19, so poor metabolisers run higher exposures — FDA labelling caps them at 20 mg/day, the same ceiling as for patients over 60, precisely to limit dose-dependent QTc risk. Doubling to 80 mg doubles the arrhythmia hazard, 30 mg with weekly ECGs is an invented schedule, and genotype absolutely does change this drug's dosing. Strong 2C19 inhibitors (e.g., omeprazole) call for the same 20 mg cap."
+  },
+  {
+   "id": "ssri-cit-05",
+   "drugSlug": "citalopram",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A resident proposes citalopram for a patient with MDD and comorbid panic disorder, describing it as having 'one of the broadest FDA labels in the class'. Best correction:",
+   "options": [
+    "Citalopram's FDA label is major depressive disorder — the panic-disorder use is off-label",
+    "Citalopram carries FDA labels for MDD, panic disorder and OCD",
+    "Panic disorder is labelled for citalopram but not for sertraline",
+    "Citalopram's label covers bulimia nervosa instead of panic disorder"
+   ],
+   "correctIndex": 0,
+   "explanation": "Citalopram's indication anchor is MDD — panic and most other uses are off-label (KYP: 'MDD + off-label panic, etc.'). The broad-label credit belongs to sertraline, panic labels sit with sertraline/paroxetine/fluoxetine, and bulimia nervosa is fluoxetine's exclusive label. Label-precision traps like this are NEET-PG and USMLE staples."
+  },
+  {
+   "id": "ssri-cit-06",
+   "drugSlug": "citalopram",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Which statement about the citalopram–escitalopram relationship is correct?",
+   "options": [
+    "Escitalopram is the R-enantiomer of citalopram and is pharmacologically inert",
+    "Escitalopram is the S-enantiomer of citalopram; the R-enantiomer antagonises its allosteric SERT effect",
+    "Citalopram is a prodrug converted to escitalopram by CYP2D6",
+    "Racemic citalopram contains two active diastereomers in a 1:1 ratio"
+   ],
+   "correctIndex": 1,
+   "explanation": "Citalopram is a racemate; escitalopram is its pure S-enantiomer, effective at about half the dose with milder effects (Tripathi). The R-enantiomer is not simply inert ballast — it counteracts the S-enantiomer's allosteric binding to SERT, the pharmacological basis for escitalopram's cleaner, lower-dose profile. The metabolite-conversion story is backwards (that pattern is venlafaxine→desvenlafaxine), and a racemate mixes enantiomers, not diastereomers."
+  },
+  {
+   "id": "ssri-cit-07",
+   "drugSlug": "citalopram",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "Two weeks into citalopram 20 mg, a 34-year-old reports queasiness, daytime sleepiness and drenching sweats, and wants to stop everything. Best advice:",
+   "options": [
+    "Stop now — this triad signals a hypersensitivity reaction",
+    "Reassure: nausea, somnolence and sweating are citalopram's commonest early effects and usually settle; simple dosing adjustments can help",
+    "Switch to paroxetine the same day for smoother tolerability",
+    "Add long-term ondansetron to cover the serotonergic nausea"
+   ],
+   "correctIndex": 1,
+   "explanation": "Nausea, somnolence and sweating are exactly the common adverse effects KYP lists for citalopram; they typically attenuate within 1-2 weeks, so reassurance plus practical measures (food, dose timing) beats abandonment — abrupt stopping risks discontinuation symptoms. Paroxetine trades these for a heavier anticholinergic and discontinuation burden, and chronic ondansetron is no strategy — it, too, prolongs the QTc."
+  },
+  {
+   "id": "ssri-cit-08",
+   "drugSlug": "citalopram",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "NEET-PG style one-liner: in SSRI overdose, which agent is most linked to dose-dependent QTc prolongation and torsades — the reason Tripathi advises avoiding it in patients at high suicide risk?",
+   "options": [
+    "Sertraline — the class's best-documented cardiac-safety profile",
+    "Escitalopram — at therapeutic doses it is the QT-safest option",
+    "Fluoxetine — notorious for lethal arrhythmias in overdose",
+    "Citalopram — recorded overdose deaths from QT stretch"
+   ],
+   "correctIndex": 3,
+   "explanation": "Citalopram is the overdose outlier among SSRIs: dose-related QTc prolongation with a few recorded fatalities is why Tripathi flags it for patients likely to attempt suicide, and why the FDA imposed the 40 mg/20 mg caps in 2011. Sertraline — not citalopram — actually holds the best cardiac-safety data, and fluoxetine is among the safest in overdose; the SSRIs' overdose safety is what displaced TCAs. Escitalopram's QT signal is smaller than its parent's, though it shares the mechanism."
+  },
+  {
+   "id": "ssri-flv-01",
+   "drugSlug": "fluvoxamine",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which single psychiatric indication carries the US FDA label for fluvoxamine?",
+   "options": [
+    "Major depressive disorder",
+    "Obsessive-compulsive disorder",
+    "Generalised anxiety disorder",
+    "Bulimia nervosa"
+   ],
+   "correctIndex": 1,
+   "explanation": "KYP tags fluvoxamine 'OCD-only FDA indication', matching Katzung's note that it is approved only for obsessive-compulsive behaviour. Social anxiety is a recognised off-label niche, and Indian texts (Tripathi) also recommend it for GAD — but the FDA label remains OCD alone. MDD is labelled across the other SSRIs, and bulimia belongs to fluoxetine exclusively. Knowing which SSRI holds which niche label is a guaranteed exam point."
+  },
+  {
+   "id": "ssri-flv-02",
+   "drugSlug": "fluvoxamine",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 52-year-old with spinal spasticity on fluvoxamine 100 mg/day is offered tizanidine 4 mg for muscle spasm. The pharmacist flags the combination because:",
+   "options": [
+    "Both drugs are alpha-2 agonists — additive bradycardia and hypotension",
+    "Fluvoxamine potently inhibits CYP1A2, the enzyme that clears tizanidine — the pair is contraindicated",
+    "Tizanidine induces CYP2D6, crashing fluvoxamine levels",
+    "Tizanidine is a strong 2D6 inhibitor that will raise SSRI exposure"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tizanidine is a CYP1A2 substrate; fluvoxamine is the class's prototypical potent 1A2 inhibitor and multiplies tizanidine exposure, producing severe hypotension and sedation — hence a contraindication, not a mere caution. Alpha-2 agonism is tizanidine's mechanism alone (fluvoxamine has none), and options C and D both invert the pharmacology, since tizanidine neither induces nor inhibits the relevant enzymes. The 1A2 owner of the SSRI class is always fluvoxamine."
+  },
+  {
+   "id": "ssri-flv-03",
+   "drugSlug": "fluvoxamine",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 31-year-old stable on clozapine 300 mg develops disabling OCD rituals and is started on fluvoxamine. Two weeks later: excessive sedation, pooling saliva and a generalised seizure. The most likely explanation:",
+   "options": [
+    "Fluvoxamine's CYP1A2 inhibition has pushed clozapine into toxic concentrations",
+    "Serotonin syndrome — clozapine plus SSRI serotonergic loading",
+    "Additive anticholinergic burden producing a cholinergic crisis",
+    "Clozapine has induced fluvoxamine's metabolism, causing SSRI withdrawal"
+   ],
+   "correctIndex": 0,
+   "explanation": "Clozapine is cleared substantially by CYP1A2; fluvoxamine's potent 1A2 blockade raises clozapine levels — hence sedation, hypersalivation and dose-related seizures (the same logic as the fluvoxamine–theophylline pair). Some units exploit this deliberately as a low-dose 'clozapine booster', but as an unplanned add-on it is straightforward toxicity. Clozapine blocks rather than loads 5-HT2A, so serotonin syndrome does not fit; a 'cholinergic crisis' is the opposite of anticholinergic excess; and the induction story runs the wrong way."
+  },
+  {
+   "id": "ssri-flv-04",
+   "drugSlug": "fluvoxamine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Fluvoxamine's pharmacokinetic fingerprint is best described as:",
+   "options": [
+    "Half-life about 18 hours with no active metabolite; a once-nightly CR formulation exists",
+    "Half-life about 33 hours with a long-lived active metabolite",
+    "Half-life 4-6 days; parent and nor-metabolite both active",
+    "Half-life about 5 hours; the O-desmethyl metabolite carries the effect"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tripathi lists fluvoxamine's half-life as ~18 hours with no active metabolite — immediate-release dosing is typically twice daily, and the CR tablet exploits its tolerability for once-nightly dosing. The 33-hour claim belongs to citalopram (also without an active metabolite, so option B fails twice), 4-6 days with an active nor-metabolite is fluoxetine, and the 5-hour/O-desmethyl pattern is venlafaxine→desvenlafaxine. PK fingerprints like these are reliable SSRI distractor material."
+  },
+  {
+   "id": "ssri-flv-05",
+   "drugSlug": "fluvoxamine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 44-year-old on fluvoxamine is given linezolid for suspected MRSA cellulitis. On day 3 she is agitated and diaphoretic, with hyperreflexia, inducible clonus and temperature 38.4°C. Diagnosis and management:",
+   "options": [
+    "Neuroleptic malignant syndrome — start bromocriptine and cool aggressively",
+    "Cellulitis with early sepsis — escalate antibiotics and continue all current drugs",
+    "Serotonin syndrome from the fluvoxamine–linezolid pair — hold the offending drugs and give supportive care (± cyproheptadine)",
+    "Fluvoxamine discontinuation syndrome — restart the SSRI and taper later"
+   ],
+   "correctIndex": 2,
+   "explanation": "Linezolid is a weak MAOI; stacked on fluvoxamine — a strongly serotonergic SSRI — it is the textbook serotonin-syndrome setup: clonus, hyperreflexia, hyperthermia and agitation. NMS shows lead-pipe rigidity and evolves over days to weeks, sepsis does not produce inducible clonus, and discontinuation symptoms appear after stopping rather than adding a serotonergic agent. Hold both drugs, support actively, and reserve cyproheptadine for significant cases."
+  },
+  {
+   "id": "ssri-flv-06",
+   "drugSlug": "fluvoxamine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "Three weeks into fluvoxamine 50 mg at night for OCD, a 28-year-old feels 'drugged' until mid-morning and still queasy, though her rituals have eased. Best next step:",
+   "options": [
+    "Switch to fluoxetine — it is the sedating SSRI and will suit her better",
+    "Stop fluvoxamine — sedation proves she cannot tolerate the SSRI class",
+    "Add morning modafinil to pharmacologically cancel the sedation",
+    "Reassure and optimise timing: fluvoxamine is the more sedating-feeling SSRI, so keep the whole dose at bedtime and let the nausea settle"
+   ],
+   "correctIndex": 3,
+   "explanation": "KYP flags fluvoxamine as the more sedating-feeling SSRI, with nausea its commonest GI complaint — the fix is timing (the full dose at bedtime, matching the once-nightly CR design) and time, not abandonment, especially while her OCD is responding. Fluoxetine is the most activating of the class, sedation is not class intolerance, and adding a stimulant to solve a scheduling problem stacks a second drug's risks onto the first."
+  },
+  {
+   "id": "ssri-flv-07",
+   "drugSlug": "fluvoxamine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Fluvoxamine's signature drug-interaction liability is inhibition of which CYP isoform?",
+   "options": [
+    "CYP2D6 — the enzyme behind tamoxifen activation failure",
+    "CYP2C9 — the warfarin and phenytoin route",
+    "CYP2E1 — the alcohol-inducible enzyme",
+    "CYP1A2 — the route for theophylline, clozapine and tizanidine"
+   ],
+   "correctIndex": 3,
+   "explanation": "Fluvoxamine is the class's prototypical CYP1A2 inhibitor — hence rising levels of theophylline, clozapine, duloxetine and the contraindicated tizanidine. 2D6 is fluoxetine's and paroxetine's territory (fluvoxamine is only a weak 2D6 inhibitor — a favourite Katzung contrast), 2C9 belongs to fluconazole, and 2E1 is alcohol metabolism. Pair each SSRI with its CYP fingerprint: fluvoxamine→1A2, fluoxetine/paroxetine→2D6, citalopram/escitalopram→modest."
+  },
+  {
+   "id": "ssri-flv-08",
+   "drugSlug": "fluvoxamine",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 58-year-old on duloxetine 60 mg for painful diabetic neuropathy is started on fluvoxamine for OCD-spectrum rituals. Ten days later she has severe nausea, tremor and sweating. The most likely mechanism:",
+   "options": [
+    "Fluvoxamine inhibits CYP1A2, one of duloxetine's clearance routes — duloxetine levels rise and serotonergic load climbs",
+    "Duloxetine induces fluvoxamine's metabolism, triggering SSRI withdrawal",
+    "Additive noradrenergic toxicity causing a hypertensive emergency",
+    "Both drugs are strong 2D6 inhibitors — additive blockade causes a neuroleptic-malignant-like state"
+   ],
+   "correctIndex": 0,
+   "explanation": "Duloxetine is cleared by CYP1A2 and 2D6; fluvoxamine's potent 1A2 inhibition raises duloxetine exposure, stacking serotonergic toxicity (nausea, tremor, sweating) on top — exactly the pair KYP flags for caution. Neither drug is a paroxetine-class 2D6 inhibitor, the induction story runs backwards, and a hypertensive emergency is an MAOI/tyramine or noradrenergic-overdose picture, not this combination."
+  },
+  {
+   "id": "ssri-mix-b03-01",
+   "drugSlug": "mixed",
+   "domain": "Active Recall",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which drug–signature pair is CORRECT for the six-member SSRI class (per the Know Your Pill class comparison)?",
+   "options": [
+    "Fluvoxamine — the class's potent CYP1A2 inhibitor, with OCD as its only FDA-labelled indication",
+    "Paroxetine — the SSRI of choice to co-prescribe with tamoxifen in breast cancer",
+    "Escitalopram — the SSRI carrying the 40 mg/day QTc-driven dose cap",
+    "Fluoxetine — the shortest-half-life SSRI with the worst discontinuation syndrome"
+   ],
+   "correctIndex": 0,
+   "explanation": "Fluvoxamine owns two signatures — potent CYP1A2 inhibition and the OCD-only FDA label — so this pair is correct. The other three swap tags: paroxetine is avoided with tamoxifen (strong 2D6 blockade starves endoxifen formation; it is also Category D), the 40/20 mg QTc cap belongs to citalopram, and the shortest-half-life/worst-discontinuation crown belongs to paroxetine, whereas fluoxetine actually has the longest half-life and the smoothest withdrawal. The remaining clean pairs to memorise: sertraline (broadest label + cardiac safety) and escitalopram (lowest CYP burden, S-enantiomer)."
+  }
+ ]
+}

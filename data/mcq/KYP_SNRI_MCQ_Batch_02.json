@@ -1,0 +1,723 @@
+{
+ "batch": "kyp-snri-mcq-batch-02",
+ "title": "SNRI MCQ Batch 02 - Venlafaxine / Desvenlafaxine / Duloxetine / Milnacipran / Levomilnacipran",
+ "generated": "2026-10-02",
+ "examOrientation": "Indian exams (NEET PG / INI-CET) + USMLE-style vignettes",
+ "textbookAnchors": "Facts aligned with Stahl's Essential Psychopharmacology, Katzung Basic & Clinical Pharmacology, K.D. Tripathi Essentials of Medical Pharmacology, Oxford Handbook of Psychiatry, and USMLE board conventions; cross-checked against KYP monographs (venlafaxine ~5h parent / ~11h ODV, BP signature monitoring, worst-in-class discontinuation; duloxetine 12h, CYP1A2/2D6, hepatotoxicity warning, 5 FDA indications incl. 3 pain labels). No copyrighted text reproduced.",
+ "schema": {
+  "core_fields": "id, question, options[4], correctIndex, explanation, afterSectionId - IDENTICAL to KYP microQuizzes",
+  "metadata_fields": "drugSlug, domain, difficulty (Foundation|Clinical|Advanced), style (vignette|recall) - batch extras",
+  "notes": [
+   "afterSectionId values are real section ids observed live on KYP SNRI pages: top, quick-facts, mechanism, timeline, neurotransmitters, neural-pathways, knowledge-graph, high-yield-summary.",
+   "Answer positions deliberately spread: A10 B10 C10 D11 (see stats.answerSpread).",
+   "QA gate: this batch passed scripts/mcq_4step_check.py after extending the fact table with SNRI data."
+  ]
+ },
+ "stats": {
+  "total": 41,
+  "byDrug": {"venlafaxine": 8, "desvenlafaxine": 8, "duloxetine": 8, "milnacipran": 8, "levomilnacipran": 8, "mixed": 1},
+  "byDifficulty": {"Foundation": 11, "Clinical": 21, "Advanced": 9},
+  "byStyle": {"recall": 23, "vignette": 18},
+  "byDomain": {"Mechanism & Neuroscience": 6, "Pharmacokinetics": 5, "Clinical Uses": 12, "Adverse Effects & Safety": 10, "Drug Interactions": 4, "Indian Practice": 2, "Exam Pearls": 1, "Active Recall": 1},
+  "answerSpread": {"0": 10, "1": 10, "2": 11, "3": 10}
+ },
+ "questions": [
+  {
+   "id": "snri-ven-01",
+   "drugSlug": "venlafaxine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Venlafaxine's parent half-life is about 5 hours and its active metabolite ODV about 11 hours. The practical clinical implication is:",
+   "options": [
+    "Missed doses barely matter \u2014 the longest effective half-life in the class",
+    "Once-weekly dosing becomes feasible",
+    "Discontinuation symptoms can begin within hours of a missed dose \u2014 among the hardest antidepressants to stop",
+    "Routine serum level monitoring is mandatory"
+   ],
+   "correctIndex": 2,
+   "explanation": "With a ~5-hour parent half-life plus a dual-mechanism (serotonergic + noradrenergic) withdrawal, venlafaxine has the worst discontinuation syndrome of any antidepressant \u2014 symptoms can start within hours of a missed dose. The long-half-life/weekly-dosing profile belongs to fluoxetine, not venlafaxine. Serum levels are not routinely monitored for any antidepressant."
+  },
+  {
+   "id": "snri-ven-02",
+   "drugSlug": "venlafaxine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Which option correctly describes venlafaxine's dose-dependent monoamine pharmacology?",
+   "options": [
+    "Balanced SERT and NET blockade from the first dose",
+    "Primarily serotonergic at \u226475 mg; NET blockade emerges at 150-225 mg",
+    "Primarily noradrenergic at \u226475 mg, turning serotonergic at high doses",
+    "Meaningful DAT blockade at all therapeutic doses"
+   ],
+   "correctIndex": 1,
+   "explanation": "Venlafaxine is an SSRI at low doses; noradrenergic (NET) effects only appear as the dose climbs to 150-225 mg, with a weak DAT effect emerging higher still (KYP: 'SERT + NET at moderate dose, weak DAT at high dose'). The 'balanced from dose one' drug is duloxetine. This dose-dependency is exactly why venlafaxine needs titration for treatment-resistant cases."
+  },
+  {
+   "id": "snri-ven-03",
+   "drugSlug": "venlafaxine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 54-year-old on venlafaxine XR titrated to 225 mg returns after 3 weeks: BP 156/98 on repeat check, previously 124/80. Best management:",
+   "options": [
+    "Continue unchanged \u2014 blood-pressure rises with venlafaxine are unrelated to dose",
+    "Add a diuretic routinely for every patient titrated above 150 mg",
+    "Stop venlafaxine immediately and switch to paroxetine the same day",
+    "Recheck and manage the BP; reduce the venlafaxine dose if it persists \u2014 dose-dependent BP elevation is its signature risk"
+   ],
+   "correctIndex": 3,
+   "explanation": "Venlafaxine causes dose-dependent, sustained blood-pressure elevation \u2014 more common at higher doses \u2014 which is why KYP tags BP monitoring as its SIGNATURE monitoring (baseline, 2 and 4 weeks, every dose change). The correct move is BP management plus dose reduction, not ignoring it, not reflexive diuretics for all, and not an abrupt same-day swap that invites discontinuation symptoms."
+  },
+  {
+   "id": "snri-ven-04",
+   "drugSlug": "venlafaxine",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "neural-pathways",
+   "question": "A woman stable on venlafaxine XR 150 mg is started on fluoxetine 20 mg by another clinic. The key pharmacokinetic consequence is:",
+   "options": [
+    "Venlafaxine levels crash, precipitating withdrawal",
+    "ODV accumulates to toxic concentrations",
+    "Fluoxetine competitively blocks venlafaxine at the SERT receptor",
+    "Parent venlafaxine rises while ODV falls \u2014 total active moiety is roughly preserved, but dose-related effects need watching"
+   ],
+   "correctIndex": 3,
+   "explanation": "Venlafaxine is activated to ODV mainly by CYP2D6; fluoxetine (and paroxetine) potently inhibit that step, so parent drug rises and metabolite falls. Because venlafaxine and ODV are roughly equipotent, total serotonergic-noradrenergic activity is largely maintained \u2014 the concern is a shift toward parent-related effects and the general interaction load. Levels do not crash, ODV does not accumulate, and receptor-level blockade is not the mechanism."
+  },
+  {
+   "id": "snri-ven-05",
+   "drugSlug": "venlafaxine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 38-year-old with MDD has failed sertraline and escitalopram at full doses for adequate durations. BP is 118/76, examinations normal. The most evidence-based next step:",
+   "options": [
+    "Venlafaxine \u2014 titrate toward 150-225 mg to add noradrenergic drive",
+    "Desvenlafaxine \u2014 titrate to 300 mg/day",
+    "Duloxetine \u2014 push above 120 mg to gain DAT blockade",
+    "Levomilnacipran \u2014 FDA-approved for treatment-resistant depression"
+   ],
+   "correctIndex": 0,
+   "explanation": "After two SSRI failures, switching to venlafaxine and titrating into the noradrenergic range (150-225 mg) is the classic strategy \u2014 the dose-dependent NET effect is the point. Desvenlafaxine caps at 100 mg, duloxetine's DAT effect is not an established escalation strategy and 120 mg is not its MDD titration target, and levomilnacipran's label is plain MDD, not treatment-resistance."
+  },
+  {
+   "id": "snri-ven-06",
+   "drugSlug": "venlafaxine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 41-year-old runs out of venlafaxine XR during a trip and misses 3 days. She returns with 'electric shock' sensations, nausea, irritability and chills. Diagnosis and management:",
+   "options": [
+    "Serotonin syndrome \u2014 give cyproheptadine",
+    "Migraine with aura \u2014 try sumatriptan",
+    "Depressive relapse \u2014 restart at the full dose indefinitely",
+    "Discontinuation syndrome \u2014 reinstate and taper slowly"
+   ],
+   "correctIndex": 3,
+   "explanation": "Sensory 'brain zaps', GI upset and flu-like symptoms within days of missing the shortest-half-life-type antidepressant are textbook discontinuation \u2014 and venlafaxine is the worst offender. Management is reinstatement followed by a slow taper, never abrupt stopping. There is no serotonergic load to cause serotonin syndrome, and calling it relapse condemns her to indefinite treatment."
+  },
+  {
+   "id": "snri-ven-07",
+   "drugSlug": "venlafaxine",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "neural-pathways",
+   "question": "A 29-year-old continues venlafaxine 150 mg through pregnancy and is now 36 weeks. Counselling the delivery team should emphasise:",
+   "options": [
+    "No special monitoring is needed beyond routine newborn care",
+    "Watching for poor neonatal adaptation \u2014 and monitoring the newborn's blood pressure, since neonatal hypertension has been reported",
+    "Mandatory two-week NICU admission for every SNRI-exposed newborn",
+    "Starting the newborn on prophylactic ODV"
+   ],
+   "correctIndex": 1,
+   "explanation": "SNRI neonatal adaptation syndrome can be MORE severe than with SSRIs (dual-mechanism withdrawal plus noradrenergic effects), and KYP highlights reported neonatal hypertension \u2014 unique among antidepressants and attributable to maternal NET blockade. The baby needs observation with BP awareness, not routine NICU admission or prophylactic drug treatment. Maternal relapse risk from abrupt stopping remains the bigger danger."
+  },
+  {
+   "id": "snri-ven-08",
+   "drugSlug": "venlafaxine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Among these antidepressants, which carries the greatest risk of conduction abnormalities, tachycardia and seizures in overdose?",
+   "options": [
+    "Sertraline",
+    "Escitalopram",
+    "Fluvoxamine",
+    "Venlafaxine"
+   ],
+   "correctIndex": 3,
+   "explanation": "Venlafaxine is the most toxic of the commonly used newer antidepressants in overdose \u2014 noradrenergic activity drives tachycardia and hypertension, with QRS/conduction prolongation and seizures; cardiology input is often needed. The SSRIs listed are comparatively benign in overdose, which is precisely why they replaced TCAs as first-line. This toxicity point separates venlafaxine from its class-mates in exam settings."
+  },
+  {
+   "id": "snri-des-01",
+   "drugSlug": "desvenlafaxine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Desvenlafaxine's relationship to venlafaxine is best described as:",
+   "options": [
+    "It is the R-enantiomer of venlafaxine",
+    "It is a prodrug that converts to venlafaxine",
+    "It is chemically unrelated to venlafaxine",
+    "It is venlafaxine's principal active metabolite (O-desmethylvenlafaxine), marketed standalone"
+   ],
+   "correctIndex": 3,
+   "explanation": "Desvenlafaxine IS O-desmethylvenlafaxine \u2014 the active metabolite CYP2D6 generates from venlafaxine \u2014 commercialised on its own. The enantiomer story belongs to escitalopram/citalopram; a prodrug converts TO the parent, not the reverse. Recognising metabolite-drugs is a recurring exam trick (fluoxetine\u2192norfluoxetine, venlafaxine\u2192desvenlafaxine)."
+  },
+  {
+   "id": "snri-des-02",
+   "drugSlug": "desvenlafaxine",
+   "domain": "Drug Interactions",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Why is desvenlafaxine convenient in a patient already taking a strong CYP2D6 inhibitor such as fluoxetine?",
+   "options": [
+    "Desvenlafaxine is already the active moiety and does not need CYP2D6 activation",
+    "CYP2D6 inhibitors accelerate its clearance",
+    "Desvenlafaxine is itself a potent CYP2D6 inhibitor",
+    "The combination eliminates serotonergic toxicity risk"
+   ],
+   "correctIndex": 0,
+   "explanation": "Because desvenlafaxine is the downstream metabolite, 2D6 blockade cannot meaningfully derail its levels \u2014 no activation step is required. It neither induces nor is cleared faster because of 2D6 inhibition, and combining serotonergic drugs always keeps serotonin-syndrome vigilance alive. This predictability is its flagship interaction advantage over parent venlafaxine."
+  },
+  {
+   "id": "snri-des-03",
+   "drugSlug": "desvenlafaxine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 66-year-old with diabetic nephropathy (eGFR 24 mL/min) needs an antidepressant. Desvenlafaxine is chosen. Correct dosing approach:",
+   "options": [
+    "Standard dosing \u2014 no renal adjustment exists for this drug",
+    "Reduce the dose \u2014 approximately 50 mg/day maximum in severe renal impairment",
+    "Absolutely contraindicated below eGFR 30",
+    "Double the dose to compensate for reduced clearance"
+   ],
+   "correctIndex": 1,
+   "explanation": "Desvenlafaxine is substantially renally cleared, so severe impairment requires dose reduction (label guidance: about half the usual maximum, i.e. ~50 mg/day). Renal disease adjusts the dose \u2014 it does not forbid the drug, and certainly never justifies doubling. Forgetting renal adjustment for renally-cleared psychotropics (desvenlafaxine, milnacipran, lithium, gabapentin) is a classic exam trap."
+  },
+  {
+   "id": "snri-des-04",
+   "drugSlug": "desvenlafaxine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Desvenlafaxine's FDA-approved label covers:",
+   "options": [
+    "MDD, GAD and panic disorder",
+    "MDD and diabetic peripheral neuropathic pain",
+    "Major depressive disorder only",
+    "Fibromyalgia only"
+   ],
+   "correctIndex": 2,
+   "explanation": "Despite several attempted label expansions, desvenlafaxine's US label remains MDD alone \u2014 no anxiety or pain indication. GAD/panic labels belong to venlafaxine; DPNP to duloxetine; fibromyalgia to milnacipran and duloxetine. Exam writers love moving one indication across the SNRI family to test precision."
+  },
+  {
+   "id": "snri-des-05",
+   "drugSlug": "desvenlafaxine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 67-year-old woman, three weeks on desvenlafaxine and on hydrochlorothiazide, presents with confusion. Na+ 126 mEq/L, euvolaemic, low serum osmolality. Best explanation and step:",
+   "options": [
+    "Pseudohyponatraemia \u2014 simply repeat the sample",
+    "Addisonian crisis \u2014 start steroids empirically",
+    "SNRI-induced SIADH \u2014 hold the drug, correct sodium by severity, then rechallenge cautiously or switch",
+    "Psychogenic polydipsia \u2014 fluid restrict and continue the drug"
+   ],
+   "correctIndex": 2,
+   "explanation": "SIADH-type hyponatraemia is an SSRI/SNRI class effect \u2014 the risk stack here is elderly + female + thiazide + recent antidepressant start, giving euvolaemic hypo-osmolar hyponatraemia. Exclude pseudohyponatraemia and adrenal insufficiency, hold the offending drug, correct by severity, and either rechallenge low or change class. Ignoring it risks seizures \u2014 and desvenlafaxine is not exempt just because it is an SNRI."
+  },
+  {
+   "id": "snri-des-06",
+   "drugSlug": "desvenlafaxine",
+   "domain": "Clinical Uses",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 45-year-old stable on venlafaxine XR 150 mg wants a smoother regimen without dose-related BP worries. The intern proposes switching. Best assessment:",
+   "options": [
+    "A two-week washout is required between the two drugs",
+    "Direct switch is reasonable \u2014 same active moiety; approximate equivalence is ~100 mg desvenlafaxine for 150 mg venlafaxine",
+    "Cross-taper through an MAOI first for safety",
+    "Switching from venlafaxine to its own metabolite is not permitted"
+   ],
+   "correctIndex": 1,
+   "explanation": "Because desvenlafaxine IS venlafaxine's active metabolite, a direct switch needs no washout \u2014 the clinical rule of equivalence (roughly 75 mg venlafaxine \u2248 50 mg desvenlafaxine) lets you convert straight across, often with less BP drift and a somewhat cleaner interaction profile. Washouts are for MAOI moves, and routing through an MAOI would be dangerous, not safe."
+  },
+  {
+   "id": "snri-des-07",
+   "drugSlug": "desvenlafaxine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "neural-pathways",
+   "question": "Desvenlafaxine's metabolic profile is best described as:",
+   "options": [
+    "Primarily CYP2D6-dependent, like its parent drug",
+    "Primarily CYP1A2-dependent",
+    "Minimal CYP dependence \u2014 conjugation and renal excretion dominate",
+    "Requires CYP3A4 activation to become active"
+   ],
+   "correctIndex": 2,
+   "explanation": "Having skipped the parent's 2D6 gate, desvenlafaxine relies mainly on conjugation with minor 3A4 contribution and is largely renally cleared \u2014 hence its CYP-quiet reputation. The 2D6 story belongs to venlafaxine, 1A2 to duloxetine, and 3A4-activation claims are backwards (3A4 only plays a minor clearing role). This underpins the desvenlafaxine-in-polypharmacy answer."
+  },
+  {
+   "id": "snri-des-08",
+   "drugSlug": "desvenlafaxine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "neural-pathways",
+   "question": "A 31-year-old stable on fluoxetine 40 mg for bulimia nervosa now needs an SNRI for a comorbid condition. Which SNRI gives the most predictable pharmacokinetics here?",
+   "options": [
+    "Venlafaxine \u2014 2D6 inhibition by fluoxetine makes its levels more predictable",
+    "Duloxetine \u2014 fluoxetine will raise its levels beneficially",
+    "Desvenlafaxine \u2014 predictable levels despite fluoxetine's 2D6 blockade",
+    "Milnacipran \u2014 FDA-approved to combine safely with fluoxetine"
+   ],
+   "correctIndex": 2,
+   "explanation": "Fluoxetine's potent, long-lived 2D6 inhibition makes parent-venlafaxine levels drift upward while ODV falls \u2014 workable but unpredictable, and duloxetine shares 2D6 (plus its own 1A2 issues). Desvenlafaxine sits downstream of the blocked step, so its levels stay steady. Milnacipran would also be reasonably CYP-quiet, but there is no such co-prescription label \u2014 the label claim in option D is the giveaway."
+  },
+  {
+   "id": "snri-dul-01",
+   "drugSlug": "duloxetine",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "The only antidepressant FDA-approved for diabetic peripheral neuropathic pain, fibromyalgia AND chronic musculoskeletal pain is:",
+   "options": [
+    "Duloxetine",
+    "Amitriptyline",
+    "Venlafaxine",
+    "Milnacipran"
+   ],
+   "correctIndex": 0,
+   "explanation": "Duloxetine carries five FDA indications \u2014 MDD, GAD, DPNP, fibromyalgia and chronic musculoskeletal pain \u2014 making it the only antidepressant labelled for all three pain conditions (KYP: 'the only antidepressant FDA-approved for three pain conditions'). Amitriptyline is widely used for neuropathic pain but off-label; venlafaxine has no pain label; milnacipran's pain label is fibromyalgia only."
+  },
+  {
+   "id": "snri-dul-02",
+   "drugSlug": "duloxetine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Duloxetine's pharmacokinetic signature is:",
+   "options": [
+    "~5-hour half-life; CYP2D6 activation to an active metabolite",
+    "12-hour half-life; CYP1A2/2D6 metabolism; no active metabolite",
+    "2-4 day half-life with a long-lived nor-metabolite",
+    "Minimal hepatic metabolism; excreted largely unchanged by kidney"
+   ],
+   "correctIndex": 1,
+   "explanation": "Duloxetine runs a ~12-hour half-life, is cleared by CYP1A2 and 2D6, and forms no active metabolite. The 5-hour/active-metabolite description is venlafaxine, the long nor-metabolite story is fluoxetine, and the renally-cleared-unchanged profile belongs to milnacipran. Pairing each SNRI with its PK fingerprint is a reliable way examiners build distractors."
+  },
+  {
+   "id": "snri-dul-03",
+   "drugSlug": "duloxetine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 48-year-old drinks six beers daily, ALT 92 U/L, and asks for duloxetine for chronic low-back pain. Best response:",
+   "options": [
+    "Proceed \u2014 duloxetine is safe in liver disease",
+    "Proceed but add ursodeoxycholic acid for protection",
+    "Avoid duloxetine \u2014 substantial alcohol use and hepatic impairment are contraindications due to hepatotoxicity risk",
+    "Double the dose, since alcohol induces its clearance"
+   ],
+   "correctIndex": 2,
+   "explanation": "Duloxetine carries a signature hepatotoxicity warning \u2014 KYP explicitly says avoid in hepatic impairment, cirrhosis and substantial alcohol use, and this patient stacks all three with a deranged ALT. Ursodeoxycholic acid protects nothing here, and alcohol does not make dose escalation safe. Alternatives with hepatic caution aside, gabapentinoids or topical/physical approaches suit this patient better until the liver and alcohol issues are addressed."
+  },
+  {
+   "id": "snri-dul-04",
+   "drugSlug": "duloxetine",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which co-prescription most dangerously raises duloxetine exposure?",
+   "options": [
+    "Sertraline",
+    "Fluvoxamine \u2014 a potent CYP1A2 inhibitor",
+    "Metformin",
+    "Amlodipine"
+   ],
+   "correctIndex": 1,
+   "explanation": "Duloxetine is cleared by CYP1A2 and 2D6; fluvoxamine, the class's prototypical 1A2 inhibitor, can push duloxetine levels sharply up \u2014 the combination warrants avoidance or major caution. Sertraline is comparatively CYP-quiet, and metformin/amlodipine are irrelevant to 1A2. Remember the mirrored pairs: fluvoxamine\u21921A2 (duloxetine), fluoxetine/paroxetine\u21922D6 (venlafaxine, atomoxetine, TCAs)."
+  },
+  {
+   "id": "snri-dul-05",
+   "drugSlug": "duloxetine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 58-year-old with type 2 diabetes has burning bilateral foot pain and PHQ-9 of 12 (moderate depression), normal LFTs, no alcohol use. Best single drug choice:",
+   "options": [
+    "Amitriptyline 150 mg at night",
+    "Sertraline 100 mg",
+    "Duloxetine \u2014 treats mood and neuropathic pain in one agent",
+    "Alprazolam for the burning pain"
+   ],
+   "correctIndex": 2,
+   "explanation": "This is the classic dual-indication vignette: duloxetine carries both the DPNP and MDD labels, solving both problems with one prescription. Amitriptyline, though effective for pain, is anticholinergic, arrhythmogenic in overdose and off-label \u2014 a poor fit with cardiac unknowns; sertraline does nothing for neuropathy; alprazolam treats neither and risks dependence. With normal LFTs and no alcohol use, duloxetine's hepatotoxicity caution is satisfied."
+  },
+  {
+   "id": "snri-dul-06",
+   "drugSlug": "duloxetine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 34-year-old starts duloxetine 30 mg. On day 4 she calls saying she feels persistently queasy and cannot finish lunch. Best advice:",
+   "options": [
+    "Stop immediately \u2014 this is a drug allergy",
+    "Double the dose to push past it faster",
+    "Reassure: early nausea is the most common duloxetine effect and usually settles; take with food, and titrate slowly",
+    "Switch to paroxetine the same day"
+   ],
+   "correctIndex": 2,
+   "explanation": "Nausea is duloxetine's most common early effect \u2014 managed with food, slower titration and time, not abandonment; most cases attenuate within 1-2 weeks. Doubling the dose amplifies the very receptor-mediated GI effect causing the problem, abrupt stopping risks withdrawal, and paroxetine brings its own worse long-term burden (discontinuation, anticholinergic, sexual effects)."
+  },
+  {
+   "id": "snri-dul-07",
+   "drugSlug": "duloxetine",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "neural-pathways",
+   "question": "A pregnant patient with depression and disabling neuropathic pain genuinely needs an SNRI. Per the Know Your Pill monograph, which drug offers more pregnancy-safety data to lean on?",
+   "options": [
+    "Duloxetine",
+    "Milnacipran",
+    "Levomilnacipran",
+    "Venlafaxine"
+   ],
+   "correctIndex": 3,
+   "explanation": "KYP's duloxetine pregnancy section states it plainly: in a pregnant patient needing depression-plus-neuropathic-pain SNRI cover, duloxetine may be considered after specialist consultation, but venlafaxine has more pregnancy data behind it. The newer SNRIs (milnacipran, levomilnacipran) have thin reproductive databases and are not the data-backed pick. As always with perinatal decisions, shared decision-making and specialist input come first."
+  },
+  {
+   "id": "snri-dul-08",
+   "drugSlug": "duloxetine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "How does duloxetine's monoamine pharmacology differ from venlafaxine's?",
+   "options": [
+    "Duloxetine blocks SERT and NET fairly evenly from the start; venlafaxine's NET effect only emerges at higher doses",
+    "Duloxetine gains DAT blockade above 150 mg, venlafaxine never does",
+    "Venlafaxine is balanced from dose one; duloxetine becomes so only at high doses",
+    "Duloxetine acts mainly at 5-HT3 receptors with minor NET effects"
+   ],
+   "correctIndex": 0,
+   "explanation": "This is the defining mechanistic contrast of the SNRI class: duloxetine is 'balanced from dose one', while venlafaxine is an SSRI whose noradrenergic component must be titrated into existence. The DAT claim inverts the true pattern (venlafaxine shows weak DAT effect at high doses, duloxetine none clinically), and 5-HT3 action is a mirtazapine/trazodone story, not duloxetine's."
+  },
+  {
+   "id": "snri-mil-01",
+   "drugSlug": "milnacipran",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Milnacipran's US FDA label is for:",
+   "options": [
+    "Major depressive disorder",
+    "Generalised anxiety disorder",
+    "Diabetic peripheral neuropathic pain",
+    "Fibromyalgia"
+   ],
+   "correctIndex": 3,
+   "explanation": "In the United States, milnacipran (as Savella) is labelled for fibromyalgia \u2014 NOT depression \u2014 even though it is an antidepressant approved for MDD in Europe and Asia. GAD belongs to venlafaxine/duloxetine, DPNP to duloxetine. This reverse-label trap (an 'antidepressant' whose US label is pain) is a favourite of examiners on both sides of the Atlantic."
+  },
+  {
+   "id": "snri-mil-02",
+   "drugSlug": "milnacipran",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Milnacipran's typical dosing frequency and its rationale:",
+   "options": [
+    "Once-daily XR \u2014 the half-life exceeds 24 hours",
+    "Twice-daily \u2014 its ~8-hour half-life demands split dosing",
+    "Once weekly \u2014 steady state is reached within a week",
+    "Three times daily, taken only with meals"
+   ],
+   "correctIndex": 1,
+   "explanation": "Milnacipran's half-life (~8 hours) is too short for once-daily cover, so it is dosed twice daily \u2014 the odd one out among SNRIs, most of which are once-daily (or weekly for fluoxetine). Once-daily XR describes levomilnacipran. Dosing frequency facts are easy marks when each drug's half-life is memorised as a fingerprint."
+  },
+  {
+   "id": "snri-mil-03",
+   "drugSlug": "milnacipran",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 39-year-old woman has widespread pain, fatigue and sleep disturbance satisfying fibromyalgia criteria, with a comorbid depressive episode. Which prescription addresses both problems?",
+   "options": [
+    "Milnacipran",
+    "Alprazolam",
+    "Zolpidem",
+    "Fluvoxamine"
+   ],
+   "correctIndex": 0,
+   "explanation": "Milnacipran carries a dedicated fibromyalgia label and is a functioning antidepressant \u2014 the one option that hits both targets. Duloxetine would also serve, but it is not among the options. Alprazolam and zolpidem treat neither the pain syndrome nor depression and add dependence risk; fluvoxamine has no fibromyalgia role. Non-pharmacologic exercise/CBT remains part of any fibromyalgia plan alongside drug therapy."
+  },
+  {
+   "id": "snri-mil-04",
+   "drugSlug": "milnacipran",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 71-year-old on eight cardiac medications (eGFR 48) needs an SNRI. The most interaction-averse choice is:",
+   "options": [
+    "Duloxetine",
+    "Venlafaxine",
+    "Milnacipran \u2014 minimal CYP metabolism, with renal dose adjustment",
+    "Fluoxetine"
+   ],
+   "correctIndex": 2,
+   "explanation": "Milnacipran barely touches the CYP system \u2014 it is largely excreted unchanged by the kidney \u2014 so it displaces an eight-drug cardiac regimen the least; the only adjustment needed is renal. Duloxetine brings 1A2/2D6 plus hepatotoxicity caution, venlafaxine brings 2D6 and BP elevation, and fluoxetine is the class's most potent 2D6 inhibitor with a long half-life. For CYP-quiet polypharmacy, think milnacipran/desvenlafaxine first."
+  },
+  {
+   "id": "snri-mil-05",
+   "drugSlug": "milnacipran",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which side-effect cluster best matches milnacipran's noradrenergic profile?",
+   "options": [
+    "Hypotension, bradycardia and miosis",
+    "Extrapyramidal rigidity and hyperprolactinaemia",
+    "Hypertension, palpitations, urinary hesitation and sweating",
+    "Sedation, hypersalivation and weight loss"
+   ],
+   "correctIndex": 2,
+   "explanation": "Milnacipran leans slightly noradrenergic, so its adverse effects read like a NET-agonist list: BP elevation, tachycardia/palpitations, urinary hesitancy and sweating. Hypotension-bradycardia-miosis is the opposite autonomic direction; extrapyramidal/hyperprolactinaemia effects belong to dopamine-blocking antipsychotics (risperidone, haloperidol); the sedation-hypersalivation cluster fits clozapine, not an SNRI."
+  },
+  {
+   "id": "snri-mil-06",
+   "drugSlug": "milnacipran",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Which statement best characterises milnacipran's reuptake pharmacology?",
+   "options": [
+    "It inhibits SERT roughly three times more potently than NET",
+    "Its main target is DAT",
+    "Its main target is 5-HT3",
+    "It inhibits NET somewhat more potently than SERT \u2014 a noradrenaline-leaning SNRI"
+   ],
+   "correctIndex": 3,
+   "explanation": "Milnacipran blocks noradrenaline reuptake a few-fold more potently than serotonin reuptake \u2014 the most NE-leaning of the SNRIs alongside its enantiomer levomilnacipran. The SERT-predominant description belongs to venlafaxine at low doses, and DAT/5-HT3 are not milnacipran targets at all. Enantiomer-pair trivia: racemic milnacipran (BID) vs levomilnacipran (the 1S,2R enantiomer, OD)."
+  },
+  {
+   "id": "snri-mil-07",
+   "drugSlug": "milnacipran",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Which TWO antidepressants carry FDA approval specifically for fibromyalgia?",
+   "options": [
+    "Duloxetine and milnacipran",
+    "Venlafaxine and desvenlafaxine",
+    "Amitriptyline and nortriptyline",
+    "Mirtazapine and trazodone"
+   ],
+   "correctIndex": 0,
+   "explanation": "The FDA's fibromyalgia list holds pregabalin, duloxetine and milnacipran \u2014 so the two antidepressant members are duloxetine and milnacipran. Amitriptyline is the most-cited off-label fibromyalgia drug but never gained the label; venlafaxine/desvenlafaxine and the mirtazapine/trazodone pair have no such label. Pairing 'best evidence, no label' (amitriptyline) against 'labelled' (duloxetine/milnacipran) is a reliable distractor strategy \u2014 and a common real-world confusion."
+  },
+  {
+   "id": "snri-mil-08",
+   "drugSlug": "milnacipran",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 55-year-old with BP 172/104 on no antihypertensives presents with fibromyalgia symptoms. Before considering milnacipran, the correct clinical step is:",
+   "options": [
+    "Start milnacipran and simply recheck BP in a month",
+    "Treat the blood pressure first \u2014 uncontrolled hypertension is a reason to avoid milnacipran and other noradrenergic SNRIs",
+    "Start milnacipran with routine propranolol cover for everyone",
+    "Switch the plan to duloxetine 120 mg, which never raises BP"
+   ],
+   "correctIndex": 1,
+   "explanation": "Noradrenergic SNRIs raise BP; starting one on top of uncontrolled hypertension invites strokes and cardiac strain \u2014 control the BP first (or choose a class without noradrenergic load), then reassess. Rechecking in a month concedes a month of uncontrolled hypertension, routine beta-blocker 'cover' is not standard practice, and duloxetine at 120 mg is neither BP-neutral nor an MDD dosing point. Cardiovascular safety gates every SNRI prescription."
+  },
+  {
+   "id": "snri-lev-01",
+   "drugSlug": "levomilnacipran",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "The most noradrenergic of the SNRIs is:",
+   "options": [
+    "Levomilnacipran",
+    "Duloxetine",
+    "Venlafaxine",
+    "Desvenlafaxine"
+   ],
+   "correctIndex": 0,
+   "explanation": "Levomilnacipran blocks NET roughly 2-3 times more potently than SERT \u2014 the strongest noradrenaline emphasis in the class \u2014 followed by milnacipran, then duloxetine (balanced), then venlafaxine/desvenlafaxine (serotonergic-leaning). Its adverse-effect profile follows the pharmacology: BP/HR rise, urinary hesitancy, mydriasis. Knowing the class's NET-to-SERT gradient lets you predict both benefits (energy, drive) and harms."
+  },
+  {
+   "id": "snri-lev-02",
+   "drugSlug": "levomilnacipran",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Levomilnacipran's formulation and half-life profile:",
+   "options": [
+    "Twice-daily IR with a 4-hour half-life",
+    "Once-daily extended-release with a roughly 12-hour half-life",
+    "Once-weekly dosing",
+    "Three times daily, independent of meals"
+   ],
+   "correctIndex": 1,
+   "explanation": "Levomilnacipran is an extended-release once-daily capsule with a half-life around 12 hours \u2014 the XR design compensates for the shortish half-life to give smooth noradrenergic cover. Twice-daily IR describes its parent milnacipran, and weekly dosing exists only for fluoxetine. Half-life-plus-formulation pairings are quick exam wins if memorised as a table."
+  },
+  {
+   "id": "snri-lev-03",
+   "drugSlug": "levomilnacipran",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Levomilnacipran's FDA label covers:",
+   "options": [
+    "Major depressive disorder only",
+    "MDD, GAD and panic disorder",
+    "MDD and diabetic peripheral neuropathic pain",
+    "Fibromyalgia"
+   ],
+   "correctIndex": 0,
+   "explanation": "Levomilnacipran is MDD-only \u2014 no anxiety or pain labels. GAD/panic sit with venlafaxine and duloxetine, DPNP with duloxetine, fibromyalgia with duloxetine and milnacipran. The newest SNRI carries the narrowest label; examiners exploit exactly that asymmetry."
+  },
+  {
+   "id": "snri-lev-04",
+   "drugSlug": "levomilnacipran",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 33-year-old man, three weeks on levomilnacipran XR 40 mg, reports difficulty initiating urination and a dull testicular ache. No fever, examination benign apart from prostatic enlargement history absent. Best interpretation:",
+   "options": [
+    "Prostatitis \u2014 start ciprofloxacin",
+    "Testicular torsion \u2014 arrange immediate surgery",
+    "Noradrenergic effects of levomilnacipran \u2014 review the dose and consider switching",
+    "Normal drug response \u2014 reassure without review"
+   ],
+   "correctIndex": 2,
+   "explanation": "Urinary hesitation plus testicular pain is a signature noradrenergic (NET-mediated) adverse-effect pair of levomilnacipran \u2014 increased urethral tone and unusual referred pain, both dose-related. There is no infective or ischaemic picture to justify antibiotics or the operating theatre, but 'normal response' would leave the patient suffering; dose reduction or a switch usually resolves it. NET pharmacology predicts these AEs before the drug is even started."
+  },
+  {
+   "id": "snri-lev-05",
+   "drugSlug": "levomilnacipran",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which co-medication most significantly changes levomilnacipran exposure?",
+   "options": [
+    "Ketoconazole \u2014 a strong CYP3A4 inhibitor raises levomilnacipran levels",
+    "Ranitidine",
+    "Metformin",
+    "Amlodipine"
+   ],
+   "correctIndex": 0,
+   "explanation": "Levomilnacipran's only meaningful metabolic handle is minor CYP3A4 \u2014 strong 3A4 inhibitors (ketoconazole, clarithromycin) raise its levels and inducers (rifampicin, carbamazepine) lower them. Ranitidine, metformin and amlodipine leave it untouched. The teaching point: 'CYP-minimal' never means 'CYP-invisible' \u2014 every renally-cleared or lightly-metabolised drug still has one pathway worth checking."
+  },
+  {
+   "id": "snri-lev-06",
+   "drugSlug": "levomilnacipran",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Levomilnacipran's relationship to milnacipran is best described as:",
+   "options": [
+    "It is the racemic form of milnacipran",
+    "It is the single active enantiomer of milnacipran, engineered for once-daily dosing and greater noradrenaline selectivity",
+    "It is milnacipran's inactive metabolite",
+    "It is chemically unrelated to milnacipran"
+   ],
+   "correctIndex": 1,
+   "explanation": "Milnacipran is racemic; levomilnacipran is its isolated 1S,2R-enantiomer \u2014 the noradrenaline-selective workhorse \u2014 reformulated as once-daily XR. The enantiomer-isolation strategy mirrors escitalopram-from-citalopram, a recurring psychopharmacology pattern worth one mnemonic: 'cut the racemate, keep the active half, chase the cleaner label'."
+  },
+  {
+   "id": "snri-lev-07",
+   "drugSlug": "levomilnacipran",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which statement about levomilnacipran's cardiovascular effects is correct?",
+   "options": [
+    "It lowers heart rate and blood pressure",
+    "It has no cardiovascular effects at all",
+    "It causes dose-dependent hyperprolactinaemia",
+    "It can raise heart rate and blood pressure \u2014 monitor, especially during titration"
+   ],
+   "correctIndex": 3,
+   "explanation": "Consistent with its NET emphasis, levomilnacipran raises heart rate and blood pressure in a dose-related fashion \u2014 baseline vitals and titration-phase checks are standard. The opposite-direction claim (bradycardia-hypotension) and the irrelevant hyperprolactinaemia statement are both wrong. Its BP/HR liability is the practical price of the class's strongest noradrenergic profile."
+  },
+  {
+   "id": "snri-lev-08",
+   "drugSlug": "levomilnacipran",
+   "domain": "Clinical Uses",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 68-year-old with BPH (on tamsulosin), treated hypertension and pure MDD asks about the 'new SNRI'. Best assessment of levomilnacipran:",
+   "options": [
+    "Levomilnacipran \u2014 the best choice even in prostatic outflow obstruction",
+    "Levomilnacipran \u2014 safe because renal clearance bypasses the prostate",
+    "Levomilnacipran at half the usual dose avoids noradrenergic effects",
+    "Levomilnacipran is a poor fit \u2014 noradrenergic effects can worsen hypertension and urinary outflow"
+   ],
+   "correctIndex": 3,
+   "explanation": "BPH and hypertension are the two clinical states noradrenergic drugs aggravate: increased urethral tone worsens obstruction (even on tamsulosin), and NET blockade pushes BP up. 'Renal clearance bypasses the prostate' is pharmacological nonsense, and halving the dose blunts but does not remove the mechanism. A serotonergic-leaning SSRI or SNRI (escitalopram, sertraline) fits this patient better."
+  },
+  {
+   "id": "snri-mix-01",
+   "drugSlug": "mixed",
+   "domain": "Active Recall",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which SNRI\u2013signature pair is CORRECT (per the Know Your Pill class comparison)?",
+   "options": [
+    "Venlafaxine \u2014 dose-dependent blood-pressure rise and the worst discontinuation syndrome among antidepressants",
+    "Duloxetine \u2014 the safest SNRI in alcoholic liver disease",
+    "Milnacipran \u2014 FDA-approved in the US for major depressive disorder",
+    "Levomilnacipran \u2014 the most serotonergic of the SNRIs"
+   ],
+   "correctIndex": 0,
+   "explanation": "KYP's SNRI table: venlafaxine owns dose-dependent BP elevation and the worst discontinuation (short parent half-life + dual-mechanism withdrawal). The other three swap signatures: duloxetine carries the hepatotoxicity warning (worst in alcoholic liver, not safest), milnacipran's US label is fibromyalgia, and levomilnacipran is the most NORadrenergic, not serotonergic. Swapping one tag between drugs is the standard way class-table questions are examined."
+   }
+ ]
+}

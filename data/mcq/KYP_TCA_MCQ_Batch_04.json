@@ -1,0 +1,1678 @@
+{
+ "batch": "kyp-tca-mcq-batch-04",
+ "title": "TCA MCQ Batch 04 - Tricyclic & tetracyclic antidepressants (12 drugs)",
+ "generated": "2026-10-02",
+ "examOrientation": "Indian exams (NEET PG / INI-CET) + USMLE-style vignettes",
+ "textbookAnchors": "Facts aligned with Katzung Basic & Clinical Pharmacology 14e (Ch.30 antidepressants, Ch.58 poisoned patient: QRS >100 ms, sodium bicarbonate displaces TCA from cardiac sodium channels), K.D. Tripathi Essentials of Medical Pharmacology 7e (Ch.33: TCA classification, enuresis 25 mg, clomipramine/bupropion seizure potential, amitriptyline-dosulepin overdose danger, amoxapine D2/loxapine link, Table 33.1 Indian brands), and KYP monograph facts (nortriptyline 50-150 ng/mL window, doxepin 3-6 mg hypnotic, maprotiline seizures, trimipramine weakest reuptake blockade). No copyrighted text reproduced.",
+ "schema": {
+  "core_fields": "id, question, options[4], correctIndex, explanation, afterSectionId - IDENTICAL to KYP microQuizzes",
+  "metadata_fields": "drugSlug, domain, difficulty (Foundation|Clinical|Advanced), style (vignette|recall) - batch extras",
+  "notes": [
+   "afterSectionId values are real section ids observed live on KYP drug pages: top, quick-facts, mechanism, timeline, neurotransmitters, neural-pathways, knowledge-graph, high-yield-summary.",
+   "Answer positions deliberately spread: A25 B24 C24 D24 (see stats.answerSpread).",
+   "QA gate: this batch passed scripts/mcq_4step_check.py after extending the FACTS table with the 12 TCA/tetracyclic entries."
+  ]
+ },
+ "stats": {
+  "total": 97,
+  "byDrug": {"imipramine": 8, "amitriptyline": 8, "clomipramine": 8, "nortriptyline": 8, "desipramine": 8, "doxepin": 8, "trimipramine": 8, "protriptyline": 8, "lofepramine": 8, "dothiepin": 8, "maprotiline": 8, "amoxapine": 8, "mixed": 1},
+  "byDifficulty": {"Foundation": 24, "Clinical": 53, "Advanced": 20},
+  "byStyle": {"recall": 44, "vignette": 53},
+  "byDomain": {"Mechanism & Neuroscience": 14, "Pharmacokinetics": 11, "Clinical Uses": 22, "Adverse Effects & Safety": 23, "Drug Interactions": 9, "Indian Practice": 6, "Exam Pearls": 11, "Active Recall": 1},
+  "answerSpread": {"0": 25, "1": 24, "2": 24, "3": 24}
+ },
+ "questions": [
+  {
+   "id": "tca-imi-01",
+   "drugSlug": "imipramine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Imipramine, the prototype tricyclic antidepressant, produces its antidepressant effect chiefly by:",
+   "options": [
+    "Increasing GABA release in the amygdala",
+    "Blocking the norepinephrine and serotonin transporters (NET and SERT), potentiating NA and 5-HT signalling",
+    "Blocking D2 receptors in the mesolimbic pathway",
+    "Acting as a full agonist at presynaptic 5-HT1A autoreceptors"
+   ],
+   "correctIndex": 1,
+   "explanation": "Imipramine inhibits NET and SERT \u2014 the defining uptake blockade of TCAs \u2014 while its additional muscarinic, alpha-1 and H1 receptor blockade generates side effects, not benefit. D2 blockade is antipsychotic territory (amoxapine being the lone antidepressant exception), 5-HT1A agonism is buspirone/vilazodone pharmacology, and the GABA claim belongs to benzodiazepines. Classic pearl: uptake blockade starts within hours, yet the antidepressant effect needs 2-3 weeks of downstream adaptation."
+  },
+  {
+   "id": "tca-imi-02",
+   "drugSlug": "imipramine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Imipramine's principal metabolite and its pharmacological character are best described as:",
+   "options": [
+    "An inactive glucuronide that terminates the antidepressant effect",
+    "Hydroxyimipramine \u2014 equally serotonergic with a longer half-life",
+    "Nortriptyline, produced by aromatic hydroxylation",
+    "Desipramine \u2014 an active metabolite that predominantly blocks norepinephrine reuptake"
+   ],
+   "correctIndex": 3,
+   "explanation": "Demethylation of imipramine produces desipramine, which is more potent and more selective at NET than the parent; its half-life is longer than imipramine's, so the metabolite carries much of the clinical effect. Nortriptyline comes from amitriptyline, not imipramine \u2014 the classic swap trap. The metabolites of TCAs are excreted in urine over 1-2 weeks, which is why abrupt stops behave unpredictably."
+  },
+  {
+   "id": "tca-imi-03",
+   "drugSlug": "imipramine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 7-year-old boy wets the bed 4-5 nights a week despite an enuresis alarm, fluid restriction and a normal urinalysis. The family requests drug therapy. The classic pharmacological choice is:",
+   "options": [
+    "Desmopressin \u2014 the only drug ever proven effective for enuresis",
+    "Sertraline \u2014 SSRIs are now first-line for paediatric enuresis",
+    "Imipramine 25 mg at bedtime",
+    "Amitriptyline 75 mg at bedtime"
+   ],
+   "correctIndex": 2,
+   "explanation": "Imipramine 25 mg at bedtime is the exam-classic drug for enuresis in children above 5 years (Indian formularies list DEPSONIL/ANTIDEP for this), though bedwetting tends to return when the drug is stopped. Desmopressin is a real alternative but claiming it is the only proven drug is false, SSRIs have no enuresis role, and 75 mg of a strongly anticholinergic TCA is an inappropriate paediatric dose. Non-drug alarm therapy remains the first-line approach before any tablet."
+  },
+  {
+   "id": "tca-imi-04",
+   "drugSlug": "imipramine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 68-year-old woman started imipramine 75 mg at night for depression. On day 5 she reports giddiness on standing; lying BP is 132/84 and standing BP is 100/62. The best explanation and step is:",
+   "options": [
+    "Anticholinergic tachycardia \u2014 add propranolol",
+    "Alpha-1 adrenergic blockade causing postural hypotension \u2014 advise slow position change and review the dose",
+    "H1-mediated sedation \u2014 switch the dose to morning",
+    "SIADH \u2014 check serum sodium and add fluid restriction"
+   ],
+   "correctIndex": 1,
+   "explanation": "TCAs block vascular alpha-1 receptors and dampen cardiovascular reflexes, producing the classic orthostatic drop \u2014 elderly patients are the most susceptible, and tolerance develops over weeks. Propranolol does not correct an alpha-1-mediated pressure fall, sedation is not the mechanism here, and the lying-to-standing gradient points at posture rather than SIADH. TCAs plus old age is the classic falls combination examiners test."
+  },
+  {
+   "id": "tca-imi-05",
+   "drugSlug": "imipramine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 32-year-old man has recurrent unexpected panic attacks with a superimposed depressive episode. He refuses SSRIs after a cousin developed sexual dysfunction on one. Cardiac examination is normal. A reasonable classic alternative is:",
+   "options": [
+    "Protriptyline \u2014 the best TCA for panic disorder",
+    "Maprotiline \u2014 licensed for panic disorder",
+    "Imipramine \u2014 has proven efficacy in panic disorder and depression",
+    "Trimipramine \u2014 antipanic effect via H1 blockade"
+   ],
+   "correctIndex": 2,
+   "explanation": "Imipramine is the historically first and still classic antipanic TCA \u2014 Indian texts list TCAs as highly effective in panic (clomipramine reduces panic attacks in over 75% of patients), and imipramine covers his depression simultaneously. Protriptyline is an activating agent with no antipanic pedigree, maprotiline has no panic license and adds seizure risk, and H1 blockade has nothing to do with panic circuitry. Counsel that TCAs can also cause sexual dysfunction \u2014 the class, not just SSRIs."
+  },
+  {
+   "id": "tca-imi-06",
+   "drugSlug": "imipramine",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "neural-pathways",
+   "question": "A 40-year-old stable on imipramine 150 mg is started on fluoxetine 20 mg by a different prescriber. Ten days later he reports dry mouth, constipation, tremor and palpitations. The best explanation is:",
+   "options": [
+    "Additive serotonin toxicity \u2014 this is full serotonin syndrome",
+    "Fluoxetine potently inhibits CYP2D6, raising imipramine and desipramine concentrations and producing anticholinergic-cardiac toxicity",
+    "Fluoxetine induces CYP3A4, accelerating imipramine clearance and causing withdrawal effects",
+    "Imipramine displaces fluoxetine from plasma proteins, raising SSRI levels"
+   ],
+   "correctIndex": 1,
+   "explanation": "Fluoxetine (and paroxetine) are potent CYP2D6 inhibitors, and 2D6 is the main handle on TCA levels \u2014 co-prescription can raise tricyclic concentrations dramatically and unpredictably, giving anticholinergic and cardiac toxicity within 1-2 weeks. The presentation here is anticholinergic-adrenergic, not the neuromuscular hyperactivity of serotonin syndrome; fluoxetine inhibits rather than induces; and protein displacement is trivial for drugs with volumes of distribution around 20 L/kg. Stop or cut the TCA and get an ECG."
+  },
+  {
+   "id": "tca-imi-07",
+   "drugSlug": "imipramine",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 17-year-old girl is brought to casualty 2 hours after swallowing her grandmother's imipramine tablets. She is drowsy, has had two generalised seizures, BP is 86/58, and the ECG shows sinus tachycardia with QRS 128 ms. The single most important drug to give now is:",
+   "options": [
+    "IV flumazenil to reverse sedation",
+    "IV propranolol for the tachycardia",
+    "IV phenytoin loading for the seizures",
+    "IV sodium bicarbonate \u2014 it displaces the TCA from cardiac sodium channels"
+   ],
+   "correctIndex": 3,
+   "explanation": "The overdose triad of coma, convulsions and cardiac conduction failure is on display, and QRS widening beyond 100 ms is the trigger for IV sodium bicarbonate \u2014 alkalinisation displaces the tricyclic from myocardial sodium channels and is the definitive antidote. Flumazenil can precipitate seizures, beta-blockade does not fix sodium-channel blockade, and class IA/IC antiarrhythmics or phenytoin-style agents that also block sodium channels can worsen conduction. Remember that roughly 1500 mg of imipramine or amitriptyline (under a week's supply) can be lethal in an adult."
+  },
+  {
+   "id": "tca-imi-08",
+   "drugSlug": "imipramine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Imipramine blocks monoamine transporters within hours, yet antidepressant benefit takes 2-3 weeks. The best-supported explanation is:",
+   "options": [
+    "Time-dependent desensitisation of presynaptic alpha-2 and 5-HT1A autoreceptors with downstream receptor adaptations",
+    "Slow accumulation of drug in brain tissue over several weeks",
+    "Gradual conversion of imipramine into a more potent metabolite only after 2 weeks",
+    "Delayed induction of the hepatic enzymes that synthesise monoamines"
+   ],
+   "correctIndex": 0,
+   "explanation": "Uptake blockade is immediate, but the surge of synaptic monoamine initially fires presynaptic alpha-2 and 5-HT1A autoreceptors that suppress neurone firing; only after these desensitise \u2014 and receptors remodel \u2014 does mood lift, typically after 2-3 weeks. Brain levels stabilise within days, desipramine forms within hours-to-days, and hepatic enzyme induction is irrelevant to amine synthesis. This lag is also why relapse prevention continues at about 100 mg imipramine/day equivalent for months, with withdrawal considered only after 6-12 months of remission."
+  },
+  {
+   "id": "tca-ami-01",
+   "drugSlug": "amitriptyline",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Among the tricyclic antidepressants, the one with the strongest anticholinergic activity, the deepest sedation and the most weight gain is:",
+   "options": [
+    "Desipramine",
+    "Protriptyline",
+    "Amitriptyline",
+    "Nortriptyline"
+   ],
+   "correctIndex": 2,
+   "explanation": "Amitriptyline is the maximally 'dirty' TCA: top-grade muscarinic and H1 blockade plus alpha-1 effects give dry mouth, constipation, sedation and appetite-driven weight gain. The secondary amines nortriptyline and desipramine are far less anticholinergic, and protriptyline is the class's activating pole \u2014 the exact mirror image. Matching each TCA to its receptor-blockade rank is the fastest way to answer a third of TCA questions."
+  },
+  {
+   "id": "tca-ami-02",
+   "drugSlug": "amitriptyline",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "The relationship between amitriptyline and nortriptyline is best described as:",
+   "options": [
+    "Hepatic demethylation converts amitriptyline into nortriptyline, an active metabolite that predominantly blocks norepinephrine reuptake",
+    "Nortriptyline is an inactive metabolite that shortens the effect",
+    "Aromatic hydroxylation converts amitriptyline into nortriptyline",
+    "They are enantiomers of the same molecule"
+   ],
+   "correctIndex": 0,
+   "explanation": "Amitriptyline is demethylated in the liver to nortriptyline \u2014 an active secondary-amine metabolite whose preference for NET makes it the better-tolerated twin. Hydroxylation is a later inactivation step, the enantiomer story belongs to citalopram/escitalopram, and nortriptyline is very much pharmacologically active. With parent half-lives of 16-24 hours for amitriptyline, once-daily bedtime dosing is practicable."
+  },
+  {
+   "id": "tca-ami-03",
+   "drugSlug": "amitriptyline",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 26-year-old woman has 8 migraine days per month. Propranolol was stopped for fatigue and wheeze (asthma), and topiramate caused word-finding trouble. She also has sleep-onset difficulty. A classic next prophylactic choice is:",
+   "options": [
+    "Daily oral sumatriptan for prophylaxis",
+    "Twice-weekly rizatriptan to prevent attacks",
+    "Daily ergotamine through the month",
+    "Low-dose amitriptyline at night"
+   ],
+   "correctIndex": 3,
+   "explanation": "Amitriptyline has solid prophylactic value in migraine \u2014 especially mixed tension-migraine patterns \u2014 and its sedation conveniently treats her insomnia at 10-25 mg at night. Triptans and ergotamine are acute-abortive drugs; using them as daily prophylaxis invites medication-overuse headache rather than prevention. Pearl: the sedation and weight gain that are 'side effects' in depression become the therapeutic payload in prophylaxis \u2014 though the migraine use remains off-label."
+  },
+  {
+   "id": "tca-ami-04",
+   "drugSlug": "amitriptyline",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 74-year-old man has been on amitriptyline 50 mg at night, started years ago for sleep. He reports worsening constipation, blurred vision and a fall last week; his family feels he has become more confused. The best action is:",
+   "options": [
+    "Double the dose for better sleep",
+    "Add lactulose and continue the amitriptyline unchanged",
+    "Stop and taper the amitriptyline \u2014 anticholinergic burden in the elderly causes confusion, constipation, retention and falls",
+    "Add donepezil to counter the central anticholinergic effects"
+   ],
+   "correctIndex": 2,
+   "explanation": "Strongly anticholinergic TCAs are on every 'avoid in elderly' list \u2014 the constellation of cognitive dulling, constipation, blurred vision and falls is the anticholinergic burden itself, so the drug must go, not the symptoms be patched. Doubling the dose deepens every element of the syndrome, lactulose ignores the cause, and routinely pitting donepezil against a TCA is not standard practice. Taper gradually \u2014 cholinergic rebound makes abrupt stops unpleasant."
+  },
+  {
+   "id": "tca-ami-05",
+   "drugSlug": "amitriptyline",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 55-year-old with painful diabetic neuropathy has burning feet that wreck his sleep despite optimised glycaemic control. The best initial drug for his pain is:",
+   "options": [
+    "Amitriptyline 10-25 mg at night",
+    "Fluoxetine \u2014 an SSRI with proven neuropathic analgesia",
+    "Protriptyline in the morning for its activating profile",
+    "As-needed ibuprofen"
+   ],
+   "correctIndex": 0,
+   "explanation": "Low-dose amitriptyline at night is the classic TCA for diabetic neuropathic pain and post-herpetic neuralgia (relieving roughly half of PHN patients per Indian texts), hitting pain and sleep together. SSRIs are clearly less effective than TCAs for neuropathic pain, protriptyline is an activating agent with no analgesic niche, and NSAIDs do not address a neuropathic mechanism. Pearl: every TCA pain use is off-label in the US \u2014 duloxetine owns the pain labels \u2014 yet amitriptyline remains the exam default for PHN and diabetic neuropathy."
+  },
+  {
+   "id": "tca-ami-06",
+   "drugSlug": "amitriptyline",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "neural-pathways",
+   "question": "A patient on phenelzine for atypical depression self-starts a relative's amitriptyline tablets for insomnia. He arrives with a pounding occipital headache, BP 204/112, agitation and sweating. The correct diagnosis and immediate priority is:",
+   "options": [
+    "Migraine \u2014 give sumatriptan",
+    "Anxiety attack \u2014 reassure and discharge",
+    "Serotonin syndrome \u2014 cyproheptadine before anything else",
+    "TCA-MAOI hypertensive crisis \u2014 stop the TCA and control BP urgently (an alpha-blocker such as phentolamine)"
+   ],
+   "correctIndex": 3,
+   "explanation": "Combining a TCA with an MAOI produces the notorious hypertensive crisis with excitement and hallucinations \u2014 MAOIs must be stopped two weeks before a TCA is started (longer for fluoxetine). Sumatriptan is contraindicated within MAOI use and would compound the pressor response; dismissing it as anxiety is dangerous; serotonin syndrome is a different pharmacodynamic clash with a different dominant picture. This interaction is the headline reason TCAs and MAOIs are never freely combined."
+  },
+  {
+   "id": "tca-ami-07",
+   "drugSlug": "amitriptyline",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 45-year-old man has a depressive episode dominated by severe insomnia, agitation and anxious ruminations. A TCA is planned. Which TCA best fits his symptom profile?",
+   "options": [
+    "Protriptyline in the morning",
+    "Amitriptyline at bedtime",
+    "Desipramine at bedtime",
+    "Maprotiline in divided daytime doses"
+   ],
+   "correctIndex": 1,
+   "explanation": "The more sedative TCAs suit depressed patients with anxiety and agitation, and amitriptyline is the most sedating of all \u2014 its side effect profile is being used as therapy here. Protriptyline and desipramine sit at the activating end and would worsen insomnia and jitteriness, while maprotiline is only moderately sedating and carries the class's worst seizure liability. Symptom-directed selection \u2014 'sedate the agitated, activate the retarded' \u2014 is the TCA-era art being tested."
+  },
+  {
+   "id": "tca-ami-08",
+   "drugSlug": "amitriptyline",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Which pairing of TCA superlatives is CORRECT?",
+   "options": [
+    "Strongest anticholinergic \u2014 desipramine; most activating \u2014 amitriptyline",
+    "Most sedating \u2014 protriptyline; strongest NET blockade \u2014 clomipramine",
+    "Strongest anticholinergic \u2014 amitriptyline; most activating \u2014 protriptyline",
+    "Most serotonergic \u2014 doxepin; strongest NET blockade \u2014 trimipramine"
+   ],
+   "correctIndex": 2,
+   "explanation": "Amitriptyline owns the anticholinergic/sedation/weight-gain superlatives and protriptyline owns 'most activating' \u2014 the correct row simply refuses to swap them. Desipramine, not clomipramine, is the NET-heavy agent (clomipramine is the SERT champion), and trimipramine is the reuptake-weak one, making both other rows deliberate tag-swaps. Superlative shuffling between class-mates is the single most common way TCA tables are examined."
+  }
+  ,
+  {
+   "id": "tca-clo-01",
+   "drugSlug": "clomipramine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "The MOST serotonergic of all the tricyclic antidepressants (SERT blockade predominating) is:",
+   "options": [
+    "Clomipramine",
+    "Desipramine",
+    "Maprotiline",
+    "Trimipramine"
+   ],
+   "correctIndex": 0,
+   "explanation": "Clomipramine carries the highest SERT affinity in the TCA class, which is exactly why it works in OCD and panic and why it is the worst TCA for serotonergic sexual dysfunction. Desipramine and maprotiline sit at the noradrenergic pole, and trimipramine barely blocks either transporter. Relative transporter selectivity, not ring chemistry, predicts the indication \u2014 that is the transferable lesson here."
+  },
+  {
+   "id": "tca-clo-02",
+   "drugSlug": "clomipramine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Clomipramine is demethylated to desmethylclomipramine. Which statement about this metabolism is correct?",
+   "options": [
+    "Desmethylclomipramine is inactive and abbreviates the clinical effect",
+    "Clomipramine is excreted largely unchanged in urine",
+    "The parent is the more serotonergic species while the desmethyl metabolite is more noradrenergic, and both contribute to the effect",
+    "Clomipramine bypasses hepatic metabolism entirely"
+   ],
+   "correctIndex": 2,
+   "explanation": "Like the imipramine-to-desipramine pattern, clomipramine's parent form is SERT-dominant while its desmethyl metabolite shifts toward NET \u2014 so the clinical profile is a blend of the two. The metabolite is pharmacologically active, hepatic metabolism is extensive with only about 5% of TCAs appearing unchanged in urine, and metabolites trickle out over 1-2 weeks. CYP2D6 inhibitors raise both species, which is why the interaction question never goes away."
+  },
+  {
+   "id": "tca-clo-03",
+   "drugSlug": "clomipramine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 24-year-old with 4 hours a day of contamination obsessions and washing rituals has failed an adequate sertraline trial at full dose. He has no seizure history and a normal ECG. The best next serotonergic option is:",
+   "options": [
+    "Fluoxetine \u2014 the only agent with evidence in resistant OCD",
+    "Clomipramine \u2014 the gold-standard TCA for OCD",
+    "Reboxetine \u2014 the noradrenergic option for OCD",
+    "Doxepin \u2014 the H1-based option for OCD"
+   ],
+   "correctIndex": 1,
+   "explanation": "Clomipramine is the most effective TCA in OCD and the historical reference treatment against which SSRIs were judged \u2014 the standard next step after an SSRI failure, provided ECG and seizure-threshold precautions are respected. Reboxetine is a selective NRI with no OCD credentials, doxepin is an H1-heavy sedative, and fluoxetine is a legitimate option but hardly the 'only' one. Indian texts record more than 25% improvement on OCD rating scales with the TCAs, clomipramine especially."
+  },
+  {
+   "id": "tca-clo-04",
+   "drugSlug": "clomipramine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 30-year-old on clomipramine for OCD has the dose escalated rapidly to 225 mg/day. Three weeks later he has a first-ever generalised tonic-clonic seizure. CT head is normal, sodium 138 mEq/L, no fever, no alcohol or other drugs. The best interpretation and step is:",
+   "options": [
+    "Idiopathic epilepsy \u2014 start lifelong valproate and continue clomipramine unchanged",
+    "Psychogenic non-epileptic event \u2014 reassure and continue unchanged",
+    "SIADH with hyponatraemic seizure \u2014 definitely unrelated to the drug",
+    "Dose-related lowering of the seizure threshold by clomipramine \u2014 reduce or stop the drug and reconsider the strategy"
+   ],
+   "correctIndex": 3,
+   "explanation": "Clomipramine (with bupropion) has the highest seizure-precipitating potential among antidepressants in Indian texts, and the risk climbs with rapid titration and higher doses \u2014 this temporal pattern makes the drug the presumptive cause. Declaring idiopathic epilepsy after one seizure on an escalating proconvulsant over-treats, sodium is normal so SIADH is excluded by the data given, and continuing unchanged invites recurrence. Cut the dose or switch back to an SSRI and check an ECG while at it."
+  },
+  {
+   "id": "tca-clo-05",
+   "drugSlug": "clomipramine",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "neural-pathways",
+   "question": "Why must clomipramine dosing be watched whenever fluoxetine or paroxetine is co-prescribed?",
+   "options": [
+    "Both SSRIs induce CYP2D6 and halve clomipramine levels",
+    "Both SSRIs displace clomipramine from albumin, causing acute toxicity",
+    "Both are potent CYP2D6 inhibitors and can raise clomipramine and desmethylclomipramine levels several-fold, risking toxicity and seizures",
+    "Clomipramine inhibits the SSRIs' metabolism, causing serotonin syndrome by kinetic overload"
+   ],
+   "correctIndex": 2,
+   "explanation": "Fluoxetine and paroxetine are the two most potent 2D6-blocking SSRIs, and since 2D6 is the gateway for TCA clearance, levels of clomipramine and its metabolite can climb dramatically \u2014 the toxicity is anticholinergic, cardiac and seizure-related. Induction is the wrong direction, protein displacement is minor for drugs with huge volumes of distribution, and serotonin syndrome from this pair is a pharmacodynamic concern, not a kinetic one. If the combination is unavoidable, use low doses, slow titration and an ECG."
+  },
+  {
+   "id": "tca-clo-06",
+   "drugSlug": "clomipramine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 28-year-old man's OCD is well controlled on clomipramine, but he now reports delayed ejaculation and reduced libido and wants to stop the drug. The best statement is:",
+   "options": [
+    "Sexual dysfunction is a recognised, dose-related effect of clomipramine \u2014 discuss dose adjustment or a switch rather than abrupt stopping",
+    "This signals disease relapse \u2014 the dose should be increased",
+    "Sexual effects are limited to SSRIs \u2014 clomipramine is exempt from this problem",
+    "This is permanent pelvic nerve damage \u2014 it will not reverse"
+   ],
+   "correctIndex": 0,
+   "explanation": "Sexual effects are common with the highly serotonergic TCAs \u2014 clomipramine is the class leader for delayed ejaculation, the same pharmacology that makes it a (slower, regular-use) option for premature ejaculation. Increasing the dose worsens the effect, SSRIs are not unique in causing it, and the effect reverses on dose reduction or discontinuation. Abrupt stopping of a working OCD regimen risks relapse \u2014 negotiate the change instead."
+  },
+  {
+   "id": "tca-clo-07",
+   "drugSlug": "clomipramine",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "At a district hospital pharmacy, two brands are stocked for a patient's OCD prescription: CLOFRANIL 25 mg and ANAFRANIL 25 mg. Both brands contain:",
+   "options": [
+    "Doxepin",
+    "Dothiepin",
+    "Lofepramine",
+    "Clomipramine"
+   ],
+   "correctIndex": 3,
+   "explanation": "CLOFRANIL (10/25/50 mg, 75 mg SR) and ANAFRANIL/CLONIL are the Indian clomipramine brands listed in standard Indian formularies \u2014 brand-generic mapping remains a live NEET-PG question format. The sedating alternatives carry different labels: PROTHIADEN/DOTHIN is dothiepin and DOXIN/SPECTRA is doxepin, while lofepramine has no standard Indian brand in the classic tables. Knowing the Indian brand landscape also protects against pharmacy substitution errors."
+  },
+  {
+   "id": "tca-clo-08",
+   "drugSlug": "clomipramine",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A postgraduate seminar asks: if clomipramine matches or beats SSRIs against placebo in OCD trials, why do SSRIs remain first line worldwide? A 19-year-old with OCD and a seizure history is waiting. The core reason is:",
+   "options": [
+    "SSRIs work in days, whereas clomipramine needs months",
+    "SSRIs' far better tolerability and overdose safety outweigh any marginal efficacy edge of clomipramine",
+    "Clomipramine is contraindicated in all adults below 40",
+    "Clomipramine has never been formally tested against placebo"
+   ],
+   "correctIndex": 1,
+   "explanation": "Clomipramine brings anticholinergic load, weight gain, dose-related seizures, cardiac conduction risk and lethal overdose potential \u2014 a poor trade for a small efficacy margin, and a frankly poor choice for this seizure-history patient. Anti-OCD onset is similarly delayed (weeks to months) for both drug types, there is no under-40 contraindication, and clomipramine's placebo-controlled evidence is extensive. The transferable principle: first-line status in psychiatry is usually decided by the safety-tolerability column, not the efficacy column."
+  },
+  {
+   "id": "tca-nor-01",
+   "drugSlug": "nortriptyline",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Compared with its parent amitriptyline, nortriptyline is best described as:",
+   "options": [
+    "Pharmacologically identical \u2014 they are effectively the same molecule",
+    "More anticholinergic and more sedating",
+    "Stronger at SERT and weaker at NET",
+    "A secondary-amine TCA with predominantly NET blockade \u2014 less sedation, less anticholinergic load than the parent"
+   ],
+   "correctIndex": 3,
+   "explanation": "N-demethylation of amitriptyline produces the secondary amine nortriptyline, whose profile shifts toward norepinephrine-transporter blockade with milder muscarinic, alpha-1 and H1 effects \u2014 the biochemical basis of its cleaner tolerability. The identical-molecule claim is false, the direction of the receptor shifts is inverted in the other two distractors. This parent-to-metabolite pharmacology shift is the template for the whole class (imipramine to desipramine mirrors it)."
+  },
+  {
+   "id": "tca-nor-02",
+   "drugSlug": "nortriptyline",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Why are nortriptyline plasma levels unusually reliable for guiding dosing?",
+   "options": [
+    "It is not bound to plasma proteins at all",
+    "Secondary-amine TCAs like nortriptyline have fairly linear kinetics, no further active metabolites, and serum levels predict both response and toxicity",
+    "It undergoes no hepatic metabolism whatsoever",
+    "Renal excretion is its sole elimination route, making levels dose-proportional"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung's kinetic point: the secondary amine TCAs (desipramine, nortriptyline) have linear kinetics, no further active metabolites and a wide therapeutic window, so a measured level genuinely predicts clinical state. TCAs are highly protein bound and hepatically metabolised, and only about 5% leaves the body unchanged in urine \u2014 the renal claim is backwards. This is the kinetic foundation of nortriptyline's unique level-guided dosing."
+  },
+  {
+   "id": "tca-nor-03",
+   "drugSlug": "nortriptyline",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 38-year-old has taken nortriptyline 25 mg nightly for 4 weeks for depression: no benefit, no side effects. Plasma level is 38 ng/mL. The most appropriate step is:",
+   "options": [
+    "Declare nortriptyline a failure and stop all treatment",
+    "Add fluoxetine to push the level up conveniently",
+    "Increase the dose \u2014 the level is below the 50-150 ng/mL therapeutic window, so nortriptyline has not yet been truly trialled",
+    "Switch to imipramine, which has a much wider therapeutic window"
+   ],
+   "correctIndex": 2,
+   "explanation": "Nortriptyline is the one antidepressant with a genuinely established therapeutic window of roughly 50-150 ng/mL; a level of 38 ng/mL means the trial was under-dosed, so titrating upward is correct before declaring failure. Using fluoxetine as a 'level booster' is the unpredictable 2D6 hack \u2014 dangerous and not a dosing strategy. Pearl: window logic cuts both ways \u2014 levels above the window carry toxicity, not extra benefit."
+  },
+  {
+   "id": "tca-nor-04",
+   "drugSlug": "nortriptyline",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 60-year-old man 6 weeks after an uncomplicated MI develops a moderate depressive episode and has not responded adequately to an SSRI. If a TCA must be used, the best cardiac choice is:",
+   "options": [
+    "Amitriptyline",
+    "Dothiepin",
+    "Nortriptyline",
+    "Doxepin \u2014 its H1 blockade protects the myocardium"
+   ],
+   "correctIndex": 2,
+   "explanation": "Among TCAs, nortriptyline showed the best cardiac tolerability in post-MI cohorts \u2014 the least conduction and arrhythmia trouble \u2014 making it the default TCA when heart disease constrains the choice (with ECG monitoring still mandatory). Amitriptyline and dothiepin sit at the dangerous end for cardiac and overdose risk, and H1 blockade offers no myocardial protection whatsoever. Pearl: even the 'safest' TCA is still second-line after revascularisation-era SSRIs \u2014 avoid TCAs in the acute post-MI phase."
+  },
+  {
+   "id": "tca-nor-05",
+   "drugSlug": "nortriptyline",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "neural-pathways",
+   "question": "Adding paroxetine to a stable nortriptyline regimen will predictably:",
+   "options": [
+    "Lower nortriptyline levels by enzyme induction",
+    "Raise nortriptyline levels \u2014 paroxetine is a potent CYP2D6 inhibitor",
+    "Leave levels unchanged \u2014 the two drugs use different enzyme systems",
+    "Raise levels only in ultrarapid 2D6 metabolisers"
+   ],
+   "correctIndex": 1,
+   "explanation": "Paroxetine (with fluoxetine) is the strongest SSRI inhibitor of CYP2D6, the enzyme that clears nortriptyline \u2014 levels rise dramatically and sometimes unpredictably, so the combination needs dose cuts, level checks or avoidance. Induction is the wrong direction, 2D6 is exactly the shared system, and the interaction matters across phenotypes, not only in ultrarapid metabolisers. This single pair explains a large share of real-world TCA toxicity reports."
+  },
+  {
+   "id": "tca-nor-06",
+   "drugSlug": "nortriptyline",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 45-year-old on nortriptyline 100 mg (plasma level 185 ng/mL) reports dry mouth, fine tremor and palpitations. ECG shows QTc 440 ms and QRS 90 ms, rhythm sinus. The best management is:",
+   "options": [
+    "Continue the same dose \u2014 the level is acceptable",
+    "Double the dose to convert non-response into response",
+    "Reduce the dose \u2014 the level is above the 50-150 ng/mL window and toxicity signs are present",
+    "Give immediate IV sodium bicarbonate"
+   ],
+   "correctIndex": 2,
+   "explanation": "A level above the therapeutic window plus clinical anticholinergic-adrenergic signs is the textbook indication for dose reduction and a recheck \u2014 more drug means more toxicity, not more benefit. Bicarbonate is the overdose antidote for widened conduction; at QRS 90 ms with stable rhythm there is no such indication, and calling the level 'acceptable' ignores both the number and the symptoms. This is the mirror image of the under-dosed level question \u2014 window logic in the toxic direction."
+  },
+  {
+   "id": "tca-nor-07",
+   "drugSlug": "nortriptyline",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 70-year-old woman on amitriptyline 25 mg for chronic pain has daytime sedation, constipation and a near-fall. Her physician wants to retain TCA efficacy with less anticholinergic and orthostatic burden. The best switch is to:",
+   "options": [
+    "Nortriptyline",
+    "Trimipramine",
+    "Dothiepin",
+    "Clomipramine"
+   ],
+   "correctIndex": 0,
+   "explanation": "Moving from a tertiary amine (amitriptyline) to its secondary-amine metabolite nortriptyline keeps most of the analgesic-antidepressant action while shedding muscarinic, sedative and orthostatic load \u2014 Indian texts note postural hypotension is less severe with the desipramine-like (secondary amine) drugs. Trimipramine and dothiepin are more sedating, and clomipramine adds anticholinergic and seizure concerns. This metabolite-switch is the standard geriatric manoeuvre in TCA-based pain management."
+  },
+  {
+   "id": "tca-nor-08",
+   "drugSlug": "nortriptyline",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "The one antidepressant for which therapeutic plasma-level monitoring is genuinely established in routine practice is:",
+   "options": [
+    "Sertraline",
+    "Fluoxetine",
+    "Venlafaxine",
+    "Nortriptyline (with desipramine the other level-measurable secondary amine)"
+   ],
+   "correctIndex": 3,
+   "explanation": "Nortriptyline's defined 50-150 ng/mL window plus its linear kinetics make level-guided dosing genuinely useful \u2014 the flagship exception to 'antidepressants are never level-monitored'. SSRIs and SNRIs have flat dose-response curves and wide windows, so their levels add nothing actionable. Exam contrast to remember: TCAs are measurable because of their window and kinetics; modern antidepressants are not because of theirs."
+  },
+  {
+   "id": "tca-des-01",
+   "drugSlug": "desipramine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "The most noradrenergic of the classic tricyclic antidepressants is:",
+   "options": [
+    "Clomipramine",
+    "Desipramine",
+    "Amitriptyline",
+    "Doxepin"
+   ],
+   "correctIndex": 1,
+   "explanation": "Desipramine is the classic TCA maximum for NET blockade \u2014 more potent and more selective than its parent imipramine \u2014 with minimal muscarinic and H1 activity. Clomipramine is the serotonergic pole, and amitriptyline and doxepin are receptor-blockade-heavy rather than transporter-selective. Its adrenergic fingerprint predicts its clinical fingerprint: alerting effect, adrenergic side effects, and little anticholinergic trouble."
+  },
+  {
+   "id": "tca-des-02",
+   "drugSlug": "desipramine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Desipramine's origin and kinetic behaviour are best described as:",
+   "options": [
+    "An active metabolite of imipramine that itself forms no further active metabolites and shows fairly linear kinetics",
+    "A prodrug that is converted into imipramine",
+    "An active metabolite of amitriptyline",
+    "A chemically unrelated racemic mixture"
+   ],
+   "correctIndex": 0,
+   "explanation": "Imipramine is demethylated to desipramine \u2014 the two differ by a single methyl group, yet the profiles diverge sharply \u2014 and desipramine then goes on to have linear kinetics with no further active metabolites. The prodrug direction is reversed, amitriptyline's metabolite is nortriptyline (the classic swap), and the racemate story belongs to milnacipran. Metabolite-drug lineage questions (fluoxetine to norfluoxetine, amitriptyline to nortriptyline, imipramine to desipramine) are permanent exam fixtures."
+  },
+  {
+   "id": "tca-des-03",
+   "drugSlug": "desipramine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 35-year-old with withdrawn, retarded depression and hypersomnia was tried on a sedating TCA and complains he feels like a zombie all day. A better TCA fit for his presentation is:",
+   "options": [
+    "Trimipramine",
+    "Dothiepin",
+    "Desipramine",
+    "Doxepin"
+   ],
+   "correctIndex": 2,
+   "explanation": "Indian texts are explicit: the less sedative or stimulant TCAs are better for withdrawn and retarded patients, and desipramine is the least sedating classic TCA with a net-activating noradrenergic profile. Trimipramine, dothiepin and doxepin are among the most sedating members of the class \u2014 all three would deepen his hypersomnia. The teaching couplet: sedating TCAs for anxious-agitated patients, activating TCAs for retarded ones."
+  },
+  {
+   "id": "tca-des-04",
+   "drugSlug": "desipramine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 42-year-old man two weeks into desipramine reports palpitations, sweating, fine tremor and early-morning waking. TSH is normal, he is afebrile, and there is no caffeine load. The best explanation is:",
+   "options": [
+    "Anticholinergic effects of desipramine",
+    "Masked hyperthyroidism \u2014 repeat the TSH",
+    "SIADH from desipramine",
+    "Noradrenergic (NET-mediated) effects \u2014 expected, dose-related adrenergic effects; counsel and review the dose if troublesome"
+   ],
+   "correctIndex": 3,
+   "explanation": "Desipramine's NET dominance predicts exactly this adrenergic cluster \u2014 tachycardia, tremor, sweating and insomnia \u2014 and some tolerance develops over weeks, so counselling plus dose review is the measured response. Desipramine is among the least anticholinergic TCAs, the thyroid has been excluded, and SIADH presents with hyponatraemia rather than sympathetic overdrive. Knowing a drug's receptor fingerprint lets you predict its complaint list before the patient does."
+  },
+  {
+   "id": "tca-des-05",
+   "drugSlug": "desipramine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 78-year-old needs a TCA. He has early prostatism, habitual constipation, and glaucoma is suspected on eye review. The physician wants minimal anticholinergic and orthostatic load. The best TCA choice is:",
+   "options": [
+    "Amitriptyline",
+    "Doxepin at antidepressant doses",
+    "Trimipramine",
+    "Desipramine"
+   ],
+   "correctIndex": 3,
+   "explanation": "Desipramine has the lowest anticholinergic burden among the classic TCAs and produces milder postural drops than the tertiary amines \u2014 Indian texts specifically grade postural hypotension as less severe with desipramine-like drugs. Amitriptyline, doxepin and trimipramine are strongly muscarinic and H1-blocking and could precipitate urinary retention, angle-crisis or impaction in this man. Even so, orthostatic checks and an ECG remain mandatory for any TCA in the very elderly."
+  },
+  {
+   "id": "tca-des-06",
+   "drugSlug": "desipramine",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "One classic TCA has minimal anticholinergic effects yet carries an outsized exam reputation for lethal arrhythmias in overdose. Which is it?",
+   "options": [
+    "Nortriptyline",
+    "Clomipramine",
+    "Trimipramine",
+    "Desipramine"
+   ],
+   "correctIndex": 3,
+   "explanation": "Desipramine pairs the gentlest receptor-blocking profile with a disproportionate overdose-arrhythmia risk \u2014 the potent noradrenergic drive plus TCA sodium-channel blockade make sudden ventricular arrhythmia its signature danger. Nortriptyline is the relatively cardiac-tolerated member, clomipramine's fame is seizures, and trimipramine's is sedation. The paradox is the exam point: a 'clean' side-effect profile never implies a safe overdose profile."
+  },
+  {
+   "id": "tca-des-07",
+   "drugSlug": "desipramine",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "neural-pathways",
+   "question": "A hypertensive patient well controlled on clonidine is started on desipramine for depression. Two weeks later his BP has crept up despite an unchanged clonidine dose. The mechanism is:",
+   "options": [
+    "The TCA blocks transporter-mediated uptake into adrenergic neurones, abolishing clonidine's (and guanethidine's) antihypertensive action",
+    "The TCA induces hepatic metabolism of clonidine",
+    "The TCA increases renal clearance of clonidine",
+    "Additive alpha-1 blockade has raised the BP"
+   ],
+   "correctIndex": 0,
+   "explanation": "TCAs block the uptake-1 transporter that carries clonidine and guanethidine into the adrenergic neurone \u2014 Indian texts state plainly that TCAs abolish the antihypertensive action of both drugs. Enzyme induction and renal clearance changes are not the mechanism, and alpha-1 blockade would lower rather than raise pressure. This is one of the oldest and most examinated interaction mechanisms in pharmacology."
+  },
+  {
+   "id": "tca-des-08",
+   "drugSlug": "desipramine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A patient on a routine desipramine dose develops marked toxicity; genotyping reveals CYP2D6 poor-metaboliser status. The correct corollary is:",
+   "options": [
+    "Poor metabolisers need higher desipramine doses to respond",
+    "Ultrarapid metabolisers may fail therapy at standard doses \u2014 TCA dosing is phenotype-dependent, which is why levels were historically measured",
+    "CYP2D6 phenotype matters only for SSRIs, not for TCAs",
+    "Desipramine levels are unaffected by 2D6 status because renal clearance dominates"
+   ],
+   "correctIndex": 1,
+   "explanation": "Constitutional 2D6 variation (about 7% of some populations are poor metabolisers) can produce low or excessive TCA exposure: poor metabolisers accumulate and become toxic, ultrarapid metabolisers clear the drug before it works. Only about 5% of a TCA dose leaves unchanged in urine \u2014 hepatic 2D6 dominates \u2014 and the phenotype matters most for TCAs of all drug classes. This polymorphism, plus TCAs' narrow margins, is the historical reason plasma levels entered psychiatric practice."
+  }
+  ,
+  {
+   "id": "tca-dox-01",
+   "drugSlug": "doxepin",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Doxepin stands out among the tricyclic antidepressants for:",
+   "options": [
+    "The strongest dopamine-transporter blockade",
+    "The strongest SERT blockade",
+    "The strongest H1 blockade \u2014 the basis of its sedation and its low-dose hypnotic role",
+    "The strongest MAO-B inhibition"
+   ],
+   "correctIndex": 2,
+   "explanation": "Doxepin carries the highest H1 affinity of any TCA \u2014 the class-leading histamine blockade that produces its deep sedation, weight gain and, at tiny doses, a clean hypnotic effect. SERT supremacy belongs to clomipramine, and meaningful DAT or MAO-B action is not part of any TCA's profile. Receptor-rank recall ('doxepin = H1, clomipramine = SERT, desipramine = NET') answers a disproportionate share of TCA comparisons."
+  },
+  {
+   "id": "tca-dox-02",
+   "drugSlug": "doxepin",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Low-dose doxepin (3-6 mg) is marketed as a hypnotic. At that dose its pharmacological action is:",
+   "options": [
+    "SERT blockade sufficient for an antidepressant effect",
+    "NET blockade sufficient for pain relief",
+    "D2 blockade sufficient for sedation",
+    "Selective H1 antagonism \u2014 hypnotic effect without meaningful reuptake blockade"
+   ],
+   "correctIndex": 3,
+   "explanation": "At 3-6 mg, doxepin achieves H1 occupancy \u2014 the hypnotic mechanism \u2014 while SERT/NET blockade requires much higher, antidepressant-range exposure, so the low-dose product is functionally a selective antihistamine. D2 blockade is antipsychotic pharmacology (amoxapine being the lone antidepressant exception) and has no hypnotic label here. This dose-selectivity question is the standard way examiners test receptor-affinity logic."
+  },
+  {
+   "id": "tca-dox-03",
+   "drugSlug": "doxepin",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 71-year-old widow with chronic insomnia had two night-time falls on zolpidem and refuses benzodiazepines. She is not depressed and wants 'something gentler'. A reasonable option is:",
+   "options": [
+    "Amitriptyline 75 mg at bedtime",
+    "Low-dose doxepin 3-6 mg at bedtime",
+    "Doxepin 100 mg at bedtime",
+    "Clomipramine 25 mg at bedtime"
+   ],
+   "correctIndex": 1,
+   "explanation": "Low-dose doxepin gives H1-mediated sleep onset and maintenance without benzodiazepine-receptor effects, and at 3-6 mg it avoids most of the anticholinergic-cardiac burden that full TCA doses would impose on a 71-year-old. The 75-100 mg TCA options are antidepressant doses with real fall, conduction and anticholinergic risk and no extra hypnotic benefit for a non-depressed patient, and clomipramine adds seizure and cardiac concerns for zero sleep advantage. Same molecule, tenfold different risk \u2014 dose makes the drug."
+  },
+  {
+   "id": "tca-dox-04",
+   "drugSlug": "doxepin",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 40-year-old with refractory pruritus of atopic dermatitis finds oral antihistamines too sedating for work hours. Which option from the TCA family is appropriate?",
+   "options": [
+    "Oral doxepin 75 mg during the day",
+    "Topical doxepin 5% cream",
+    "Topical imipramine gel",
+    "Oral clomipramine 10 mg three times daily"
+   ],
+   "correctIndex": 1,
+   "explanation": "Topical doxepin relieves itching in atopic dermatitis and lichen simplex by local H1 blockade (Indian formularies list a 5% cream), delivering antipruritic effect with minimal systemic sedation when used on limited areas. There is no such thing as topical imipramine, daytime oral doxepin 75 mg is an antidepressant dose that guarantees sedation, and clomipramine has no antipruritic niche. Counsel patients that applying it to large body surfaces can still produce drowsiness from absorption."
+  },
+  {
+   "id": "tca-dox-05",
+   "drugSlug": "doxepin",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 55-year-old on doxepin 50 mg at night for depression with insomnia complains of heavy morning grogginess and slowed reaction time while driving to work. The best explanation and step is:",
+   "options": [
+    "Paradoxical stimulation \u2014 switch to a morning dose",
+    "Accumulation of an active metabolite with a 3-day half-life \u2014 stop the drug immediately",
+    "Tolerance to the hypnotic effect \u2014 double the bedtime dose",
+    "Long half-life (about 16-24 hours) with residual H1 sedation carried into the next day \u2014 reduce the dose and counsel about driving"
+   ],
+   "correctIndex": 3,
+   "explanation": "Doxepin's half-life sits in the 16-24 hour band shared with amitriptyline and imipramine, so an antidepressant-dose night dose leaves H1 sedation on board the next morning \u2014 the classic hangover effect, worst in older patients and drivers. Doubling deepens the carryover, there is no 3-day metabolite, and morning dosing simply relocates the sedation into the working day. Dose reduction, earlier dosing or a shorter-half-life alternative is the practical fix."
+  },
+  {
+   "id": "tca-dox-06",
+   "drugSlug": "doxepin",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 66-year-old man with treated BPH starts doxepin 75 mg for depression. On day 4 he cannot pass urine and the bladder is palpably distended. The best explanation is:",
+   "options": [
+    "Antimuscarinic effects aggravating prostatic outflow obstruction",
+    "Alpha-1 blockade relaxing the bladder neck \u2014 expected and benign, wait for tolerance",
+    "SIADH with overflow incontinence",
+    "H1 blockade paralysing the detrusor"
+   ],
+   "correctIndex": 0,
+   "explanation": "Doxepin is a strongly muscarinic TCA, and its anticholinergic action deters detrusor contraction while aggravating prostatic obstruction \u2014 producing the classic painful retention that Indian texts flag especially in males with enlarged prostates. Alpha-1 blockade would relax outflow (it is the BPH-treatment mechanism), SIADH has nothing to do with voiding mechanics, and H1 receptors are not the detrusor's control. Stop the drug, catheterise if needed, and count a TCA as a permanent BPH caution."
+  },
+  {
+   "id": "tca-dox-07",
+   "drugSlug": "doxepin",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "neural-pathways",
+   "question": "A man on doxepin 75 mg self-starts over-the-counter cimetidine for dyspepsia. A week later his family reports marked sedation and confusion. The best explanation is:",
+   "options": [
+    "Cimetidine induces hepatic metabolism and lowers doxepin levels",
+    "Cimetidine inhibits hepatic drug metabolism, raising doxepin levels and producing sedative toxicity",
+    "Antacid chelation has increased doxepin absorption",
+    "Doxepin inhibits cimetidine, causing acid hypersecretion"
+   ],
+   "correctIndex": 1,
+   "explanation": "Cimetidine is the textbook broad CYP inhibitor; by slowing hepatic clearance it raises TCA levels \u2014 doxepin included \u2014 and the clinical result is disproportionate sedation and confusion. Induction is the opposite of cimetidine's action, chelation would reduce rather than boost absorption, and the fourth option is pharmacologically backwards. Switching to a non-inhibiting antisecretory agent (or antacid timing separation) resolves the interaction."
+  },
+  {
+   "id": "tca-dox-08",
+   "drugSlug": "doxepin",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "The pharmacological basis of doxepin's 'two personalities' \u2014 hypnotic at 3-6 mg, antidepressant at reuptake-blocking doses \u2014 is:",
+   "options": [
+    "H1 receptors are occupied at very low concentrations, while meaningful SERT/NET blockade requires much higher drug exposure",
+    "Low doses are converted overnight into a special hypnotic metabolite",
+    "The blood-brain barrier admits only low doses at night",
+    "CYP2D6 activity varies circadianly, changing the active fraction"
+   ],
+   "correctIndex": 0,
+   "explanation": "It is pure receptor-affinity logic: doxepin's H1 affinity is its strongest binding property, so hypnotic H1 occupancy happens at a fraction of the concentration needed to inhibit the monoamine transporters \u2014 hence the 3-6 mg hypnotic versus antidepressant doses an order of magnitude higher. Doxepin does have an active demethylated metabolite, but it is not a bedtime-specific 'hypnotic switch'; the barrier and circadian claims are inventions. This question pattern \u2014 affinity versus exposure \u2014 recurs for every low-dose repurposing story."
+  },
+  {
+   "id": "tca-tri-01",
+   "drugSlug": "trimipramine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Trimipramine's defining pharmacology among the TCAs is:",
+   "options": [
+    "Essentially no NET or SERT reuptake inhibition \u2014 its actions come from strong H1 (plus muscarinic, alpha-1 and 5-HT2) receptor blockade",
+    "The strongest SERT blockade in the class",
+    "The strongest NET blockade in the class",
+    "Selective reversible inhibition of MAO-A"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung's receptor table rates trimipramine at or near zero for both transporters while giving it class-maximum H1 blockade \u2014 the unique 'non-reuptake TCA' whose clinical personality (sedation, appetite gain) is entirely receptor-driven. SERT supremacy is clomipramine's, NET supremacy is desipramine's, and reversible MAO-A inhibition defines moclobemide. Trimipramine is the standing proof that reuptake blockade is not the only route to antidepressant activity."
+  },
+  {
+   "id": "tca-tri-02",
+   "drugSlug": "trimipramine",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "The clinical niche where trimipramine is most at home is:",
+   "options": [
+    "Depression with distressing weight gain requiring appetite suppression",
+    "Depressed patients with prominent insomnia and weight loss",
+    "OCD that has failed SSRIs",
+    "First-line therapy for diabetic neuropathic pain"
+   ],
+   "correctIndex": 1,
+   "explanation": "Trimipramine's H1-driven sedation and appetite stimulation make it the natural fit for the depressed patient who cannot sleep and is losing weight \u2014 the side effects become the treatment. Its appetite effect would aggravate an already weight-gaining patient, OCD wants clomipramine or SSRIs, and diabetic neuropathy's first-line options are amitriptyline, duloxetine or pregabalin. Matching drug 'side effects' to symptom deficits is the TCA-era selection skill this batch keeps testing."
+  },
+  {
+   "id": "tca-tri-03",
+   "drugSlug": "trimipramine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 39-year-old woman on trimipramine 75 mg at bedtime reports sleeping 10 hours, morning sluggishness and 4 kg weight gain over six weeks \u2014 though her insomnia has resolved. The best counselling is:",
+   "options": [
+    "These effects mean the drug is failing \u2014 stop it immediately",
+    "Weight gain signals imminent diabetes \u2014 start metformin now",
+    "These effects are permanent and must be accepted",
+    "Sedation and weight gain are expected, dose-related H1-mediated effects \u2014 review dose timing, diet and the benefit-risk balance"
+   ],
+   "correctIndex": 3,
+   "explanation": "Deep sedation and appetite-driven weight gain are the signature H1 effects of trimipramine \u2014 dose-related, reversible and manageable through dose timing, reduction and lifestyle work rather than alarm. Her sleep improvement shows the drug is working, not failing; metformin is not an automatic prescription for drug-induced weight gain; and nothing about H1 pharmacology is permanent. Set expectations early \u2014 this pair of effects is the most common reason patients quietly stop TCAs."
+  },
+  {
+   "id": "tca-tri-04",
+   "drugSlug": "trimipramine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "How can trimipramine still act as an antidepressant despite negligible monoamine reuptake blockade?",
+   "options": [
+    "It is a prodrug converted into desipramine overnight",
+    "It releases monoamines the way amphetamine does",
+    "Receptor blockade (H1/5-HT2) triggers the same delayed downstream neuroplastic adaptations \u2014 reuptake blockade is not the only road to antidepressant change",
+    "Its antidepressant effect is purely a placebo phenomenon"
+   ],
+   "correctIndex": 2,
+   "explanation": "Antidepressant change ultimately reflects downstream signalling and neuroplastic remodelling, which receptor blockade can initiate just as transporter blockade can \u2014 trimipramine carries trial evidence for efficacy despite a near-zero reuptake score. It is not a prodrug to desipramine (its demethylated metabolite is its own), it has no amphetamine-like releasing action, and dismissing the effect as placebo contradicts the trial record. Advanced framing: the monoamine hypothesis describes entry points, not the endpoint."
+  },
+  {
+   "id": "tca-tri-05",
+   "drugSlug": "trimipramine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 47-year-old depressed after job loss has severe initial insomnia, a 6 kg weight loss and anxious ruminations. SSRIs were not tolerated and a TCA is planned. The best fit is:",
+   "options": [
+    "Protriptyline in the morning",
+    "Trimipramine at bedtime",
+    "Desipramine in the morning",
+    "Maprotiline at night in high dose"
+   ],
+   "correctIndex": 1,
+   "explanation": "A sedating, appetite-restoring TCA taken at bedtime matches his insomnia, weight loss and anxiety \u2014 trimipramine's receptor profile is being prescribed as therapy. Protriptyline and desipramine are the activating options and would worsen sleeplessness and jitteriness, and maprotiline adds serious seizure liability without any specific appetite benefit. This is the same symptom-matching principle tested for amitriptyline, taken one drug deeper into the class."
+  },
+  {
+   "id": "tca-tri-06",
+   "drugSlug": "trimipramine",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "neural-pathways",
+   "question": "An epileptic patient on carbamazepine starts trimipramine for depression, and the response at usual doses is poor. The best explanation is:",
+   "options": [
+    "Carbamazepine displaces trimipramine from plasma proteins, increasing free drug and toxicity",
+    "Trimipramine accelerates the clearance of carbamazepine",
+    "Carbamazepine blocks trimipramine's central receptors",
+    "Carbamazepine, a strong enzyme inducer, accelerates TCA metabolism and lowers tricyclic levels"
+   ],
+   "correctIndex": 3,
+   "explanation": "Enzyme inducers \u2014 carbamazepine, phenytoin, phenobarbitone \u2014 enhance TCA metabolism and can drop levels below the therapeutic range, exactly what Indian texts warn for tricyclics. Protein displacement would cause transient toxicity rather than non-response, the induction direction in the second option is reversed, and receptor blockade is invented. Double warning for this patient: the interaction lowers efficacy while the TCA simultaneously lowers his seizure threshold \u2014 a specialist-level combination."
+  },
+  {
+   "id": "tca-tri-07",
+   "drugSlug": "trimipramine",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "SURMONTIL 10 and 25 mg tablets, listed in Indian formularies, contain:",
+   "options": [
+    "Doxepin",
+    "Imipramine",
+    "Trimipramine",
+    "Nortriptyline"
+   ],
+   "correctIndex": 2,
+   "explanation": "SURMONTIL is the trimipramine brand in the Indian comparative-properties table \u2014 the sedating, reuptake-weak TCA. The neighbours are worth memorising together: DEPSONIL/ANTIDEP is imipramine, DOXIN/SPECTRA/DOXETAR is doxepin, SAROTENA/TRYPTOMER is amitriptyline. Brand-to-generic mapping questions survive in Indian exams precisely because formulary substitution errors are real-world events."
+  },
+  {
+   "id": "tca-tri-08",
+   "drugSlug": "trimipramine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A junior resident argues that a trimipramine overdose should be nearly harmless 'because it barely blocks reuptake'. The correct response is:",
+   "options": [
+    "Wrong \u2014 muscarinic, alpha-1 and H1 blockade plus class 1A-like sodium-channel effects still make it cardiotoxic and potentially lethal in overdose",
+    "Correct \u2014 weak reuptake blockade means weak toxicity",
+    "Only its metabolite is dangerous; the parent is safe",
+    "Its overdose toxicity is limited to sedation"
+   ],
+   "correctIndex": 0,
+   "explanation": "Overdose danger comes from the same receptor actions and myocardial sodium-channel blockade that produce side effects \u2014 none of which requires reuptake inhibition \u2014 so trimipramine overdose still demands ECG monitoring and bicarbonate if conduction widens. 'Weak reuptake, weak toxicity' is the seductive trap this question exists to kill; the metabolite claim and the sedation-only claim are both false. Class membership, not transporter potency, sets the overdose protocol."
+  },
+  {
+   "id": "tca-pro-01",
+   "drugSlug": "protriptyline",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "The MOST activating (least sedating) tricyclic antidepressant is:",
+   "options": [
+    "Amitriptyline",
+    "Doxepin",
+    "Trimipramine",
+    "Protriptyline"
+   ],
+   "correctIndex": 3,
+   "explanation": "Protriptyline combines strong NET blockade with minimal H1 and muscarinic sedation, making it the class's activating pole \u2014 historically described as the stimulant-flavoured TCA. Amitriptyline, doxepin and trimipramine are the three most sedating members, so all three distractors are perfect mirror images of the answer. This superlative ('most activating = protriptyline, most sedating = amitriptyline/trimipramine') is among the highest-frequency TCA facts in Indian exams."
+  },
+  {
+   "id": "tca-pro-02",
+   "drugSlug": "protriptyline",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Historically, protriptyline was additionally used to:",
+   "options": [
+    "Treat status epilepticus",
+    "Lower blood pressure in hypertensive crises",
+    "Promote wakefulness in narcolepsy and fatigue states",
+    "Reduce intraocular pressure in glaucoma"
+   ],
+   "correctIndex": 2,
+   "explanation": "Protriptyline's wake-promoting, REM-suppressing profile made it a historical adjunct in narcolepsy and related fatigue states \u2014 the wakefulness parallel to its activating antidepressant profile. The other options invert its pharmacology: TCAs lower seizure threshold, tend to raise rather than lower pressures, and their anticholinergic action is contraindicated in narrow-angle glaucoma, not used for it. TCA 'second jobs' worth knowing together: imipramine-enuresis, clomipramine-OCD, protriptyline-wakefulness."
+  },
+  {
+   "id": "tca-pro-03",
+   "drugSlug": "protriptyline",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 29-year-old with retarded depression sleeps 12 hours a day, has low drive, no anxiety, and is obese. A sedating TCA made things worse. The best TCA candidate now is:",
+   "options": [
+    "Amitriptyline",
+    "Protriptyline",
+    "Trimipramine",
+    "Dothiepin"
+   ],
+   "correctIndex": 1,
+   "explanation": "An activating, weight-neutral TCA is the pharmacological mirror of his symptom set \u2014 protriptyline attacks the hypersomnia and retardation without adding weight. Amitriptyline, trimipramine and dothiepin are all heavily sedating and appetite-promoting \u2014 each would aggravate both complaints. The selection logic 'activate the retarded, sedate the agitated' converts receptor tables directly into prescriptions."
+  },
+  {
+   "id": "tca-pro-04",
+   "drugSlug": "protriptyline",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A man started protriptyline 15 mg at bedtime and now complains of sleep-onset insomnia and jitteriness. The best correction is:",
+   "options": [
+    "Shift the dose to the morning \u2014 its activating profile makes bedtime dosing counterproductive",
+    "Double the bedtime dose",
+    "Add a benzodiazepine at night to cover the stimulation",
+    "Increase the dose but keep it at bedtime"
+   ],
+   "correctIndex": 0,
+   "explanation": "The most activating TCA should be dosed in the morning \u2014 bedtime dosing guarantees insomnia, and moving the dose treats the pharmacology rather than sedating around it. Doubling or stacking a hypnotic deepens the problem and adds fall risk, and simply increasing the bedtime dose worsens the stimulation. Dose timing should always follow a drug's profile: sedating TCAs at night, protriptyline with breakfast."
+  },
+  {
+   "id": "tca-pro-05",
+   "drugSlug": "protriptyline",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 50-year-old gained 9 kg over a year of amitriptyline for migraine prophylaxis and now reports low mood without sleep problems. He is keen to avoid further weight gain. The TCA that best fits his constraint is:",
+   "options": [
+    "Doxepin",
+    "Amitriptyline at a higher dose",
+    "Protriptyline",
+    "Trimipramine"
+   ],
+   "correctIndex": 2,
+   "explanation": "Protriptyline is the weight-neutral, non-sedating TCA \u2014 the only listed option that respects his anti-weight-gain constraint while treating mood. Amitriptyline (at any dose), doxepin and trimipramine are the class's strongest H1 blockers, and H1 blockade is precisely the mechanism of TCA weight gain. When a patient's constraint is the drug's own signature side effect, pick the member that lacks that signature."
+  },
+  {
+   "id": "tca-pro-06",
+   "drugSlug": "protriptyline",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "In Indian practice, protriptyline (like maprotiline) is best described as:",
+   "options": [
+    "Among the most-prescribed TCAs in India",
+    "Marketed mainly in other countries \u2014 absent from the standard Indian TCA brand tables",
+    "Available in India only as fixed-dose combinations",
+    "The TCA that replaced SSRIs in Indian guidelines"
+   ],
+   "correctIndex": 1,
+   "explanation": "Indian texts explicitly note that protriptyline, maprotiline and similar drugs are marketed in other countries \u2014 the Indian brand landscape (Tripathi's Table 33.1) centres on imipramine, amitriptyline, doxepin, clomipramine, dothiepin, trimipramine, nortriptyline and amoxapine. Fixed-dose combinations are not the issue, and SSRIs remain first-line everywhere. Exam relevance: Indian-exam answer options rarely offer protriptyline as a practical prescription, even when its pharmacology is asked."
+  },
+  {
+   "id": "tca-pro-07",
+   "drugSlug": "protriptyline",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A patient stops his protriptyline abruptly before a long journey, without telling anyone. Three days later he has nausea, 'electric shock' sensations, vivid dreams and sweating. The best interpretation is:",
+   "options": [
+    "Cholinergic-rebound discontinuation syndrome \u2014 reinstate and taper slowly",
+    "Food poisoning \u2014 supportive care only",
+    "Migraine aura \u2014 treat with a triptan",
+    "Depressive relapse requiring an indefinitely higher dose"
+   ],
+   "correctIndex": 0,
+   "explanation": "TCAs have a prominent discontinuation syndrome built on cholinergic rebound and flu-like symptoms \u2014 the autonomic-sensory cluster within days of stopping is textbook, and management is reinstatement followed by a gradual taper. Relabelling it relapse over-treats and misleads, while food poisoning and migraine fit neither the timing nor the sensory pattern. The pearl: even the activating TCAs rebound cholinergically \u2014 withdrawal symptoms reflect blocked receptors, not stimulation."
+  },
+  {
+   "id": "tca-pro-08",
+   "drugSlug": "protriptyline",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Which row of TCA superlative pairings is entirely CORRECT?",
+   "options": [
+    "Most serotonergic \u2014 desipramine; most sedating \u2014 protriptyline; best post-MI tolerability \u2014 amitriptyline",
+    "Most anticholinergic \u2014 maprotiline; most seizure-prone \u2014 nortriptyline; most weight-neutral \u2014 dothiepin",
+    "Strongest H1 blockade \u2014 clomipramine; strongest NET blockade \u2014 trimipramine; most serotonergic \u2014 doxepin",
+    "Most serotonergic \u2014 clomipramine; strongest NET blockade \u2014 desipramine; best cardiac tolerability \u2014 nortriptyline"
+   ],
+   "correctIndex": 3,
+   "explanation": "The correct row is the class table verbatim: clomipramine owns SERT, desipramine owns NET, nortriptyline owns cardiac tolerability. Every distractor swaps exactly one or two tags \u2014 desipramine is the least serotonergic of its row, protriptyline the least sedating, maprotiline the seizure champion, doxepin the H1 champion. When three of four options are tag-swapped versions of the truth, only systematic recall of the class table survives."
+  }
+  ,
+  {
+   "id": "tca-lof-01",
+   "drugSlug": "lofepramine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Lofepramine's mechanism is best described as:",
+   "options": [
+    "Direct, strong SERT blockade with no metabolites",
+    "A TCA that is itself a weak reuptake inhibitor but is converted to desipramine, which supplies the norepinephrine reuptake blockade",
+    "Selective dopamine D2 blockade",
+    "MAO-A inhibition combined with 5-HT2 antagonism"
+   ],
+   "correctIndex": 1,
+   "explanation": "Lofepramine is an imipramine congener whose parent molecule contributes little; hepatic conversion to desipramine provides the NET-dominant antidepressant action. D2 blockade among antidepressants is amoxapine's unique property, and MAO-A inhibition plus 5-HT2 antagonism is moclobemide/mirtazapine territory. It is the third member of the desipramine metabolite family \u2014 the fact most often examined about this drug."
+  },
+  {
+   "id": "tca-lof-02",
+   "drugSlug": "lofepramine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Compared with amitriptyline, lofepramine's main selling point is:",
+   "options": [
+    "Stronger sedation for insomnia",
+    "More weight gain, which helps underweight patients",
+    "Less anticholinergic and cardiac toxicity \u2014 better tolerated, including in overdose",
+    "A faster onset \u2014 days instead of weeks"
+   ],
+   "correctIndex": 2,
+   "explanation": "Lofepramine's reputation rests on its lighter muscarinic and cardiac load, which made it the UK general-practice TCA of choice for elderly and higher-risk patients and gives it a comparatively benign overdose profile. Sedation and weight gain are amitriptyline's specialities, not lofepramine's, and no antidepressant works in days \u2014 the 1-2 week onset is common to the class. Whenever an exam contrasts these two, safety \u2014 not speed or sedation \u2014 is the axis."
+  },
+  {
+   "id": "tca-lof-03",
+   "drugSlug": "lofepramine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 76-year-old man with depression has early prostatism, habitual constipation, and borderline narrow angles on eye review. The physician wants a TCA with the least anticholinergic load. The best choice is:",
+   "options": [
+    "Lofepramine",
+    "Amitriptyline",
+    "Doxepin",
+    "Trimipramine"
+   ],
+   "correctIndex": 0,
+   "explanation": "Every TCA blocks muscarinic receptors, but lofepramine sits at the low end of the class range, while amitriptyline, doxepin and trimipramine are strong blockers that could precipitate urinary retention, impaction or an angle-closure event in exactly this man. His three risk factors (prostate, gut, angle) are the anticholinergic triad \u2014 the entire selection rests on the muscarinic column of the class table. Add an ECG and orthostatic checks regardless of which TCA is chosen."
+  },
+  {
+   "id": "tca-lof-04",
+   "drugSlug": "lofepramine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 30-year-old with depression expresses passive suicidal ideation but is being managed as an outpatient; cost considerations lead the team to consider a TCA. The most defensible TCA choice on overdose-safety grounds is:",
+   "options": [
+    "Dothiepin",
+    "Amitriptyline",
+    "Imipramine",
+    "Lofepramine"
+   ],
+   "correctIndex": 3,
+   "explanation": "When suicide risk is live and a TCA is still chosen, overdose lethality becomes a prescribing criterion \u2014 lofepramine is among the least lethal TCAs, while dothiepin and amitriptyline sit at the lethal end of the fatal-toxicity tables. Imipramine offers no such safety margin. Pearl: this 'least-lethal member' logic (lofepramine among TCAs, SSRIs overall) is the same reasoning that retired TCAs from first-line use."
+  },
+  {
+   "id": "tca-lof-05",
+   "drugSlug": "lofepramine",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "neural-pathways",
+   "question": "A patient stable on lofepramine is started on fluoxetine by another clinic. Two weeks later he has dry mouth, tremor and palpitations. The best explanation is:",
+   "options": [
+    "Fluoxetine blocks CYP2D6, impeding lofepramine's conversion to desipramine and raising tricyclic concentrations toward toxicity",
+    "Fluoxetine induces lofepramine clearance, causing withdrawal effects",
+    "Lofepramine triggers serotonin syndrome with fluoxetine",
+    "Fluoxetine chelates lofepramine in the gut"
+   ],
+   "correctIndex": 0,
+   "explanation": "Fluoxetine's potent 2D6 inhibition blocks the metabolic gateway shared by lofepramine and its desipramine product, so tricyclic levels rise and the anticholinergic-adrenergic toxicity appears within 1-2 weeks. Induction is the wrong direction, the symptom cluster here is anticholinergic-cardiac rather than serotonergic, and chelation is not how fluoxetine works. Stop or reduce the TCA, obtain an ECG, and document the interaction in both charts."
+  },
+  {
+   "id": "tca-lof-06",
+   "drugSlug": "lofepramine",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Ranking TCAs by overdose lethality (fatal-toxicity-index style), the correct statement is:",
+   "options": [
+    "Lofepramine is more lethal than dothiepin and amitriptyline",
+    "Nortriptyline tops the lethality tables",
+    "Clomipramine is the most lethal TCA in overdose",
+    "Dothiepin (dosulepin) and amitriptyline rank among the most lethal, while lofepramine ranks among the least"
+   ],
+   "correctIndex": 3,
+   "explanation": "Indian texts pair amitriptyline with dosulepin as the overdose-dangerous TCAs, UK fatal-toxicity data place dosulepin at the very top, and lofepramine's lighter cardiac load keeps it near the bottom of the lethality range. The first three options each invert or misplace a well-documented rank \u2014 nortriptyline is comparatively cardiac-tolerated and clomipramine's notoriety is seizures, not overdose lethality. Lethality ranking is not trivia: it decides which TCA (if any) may leave the clinic with a suicidal patient."
+  },
+  {
+   "id": "tca-lof-07",
+   "drugSlug": "lofepramine",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Lofepramine's real-world geography of use is best described as:",
+   "options": [
+    "The first-line antidepressant of the United States",
+    "Available only in Japan",
+    "Long established in the UK (and available in India), where its tolerability made it a general-practice staple",
+    "Banned across Europe"
+   ],
+   "correctIndex": 2,
+   "explanation": "Lofepramine never took a US label but has been a British general-practice workhorse for decades and is available in the Indian market \u2014 a geography question that trips up candidates who assume all classic TCAs are American drugs. Japan-only and Europe-wide-ban claims are false. Its UK reputation was built precisely on the tolerability-overdose profile tested in the previous questions."
+  },
+  {
+   "id": "tca-lof-08",
+   "drugSlug": "lofepramine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which pair of antidepressants shares desipramine as its principal active metabolite?",
+   "options": [
+    "Amitriptyline and clomipramine",
+    "Imipramine and lofepramine",
+    "Doxepin and dothiepin",
+    "Trimipramine and protriptyline"
+   ],
+   "correctIndex": 1,
+   "explanation": "Imipramine is demethylated to desipramine, and lofepramine \u2014 an imipramine congener \u2014 is also converted to desipramine, making them the two-entry desipramine family. Amitriptyline yields nortriptyline and clomipramine yields desmethylclomipramine, while the doxepin/dothiepin and trimipramine/protriptyline pairs are deliberately unrelated decoys. Metabolite-lineage sorting is a permanent fixture of Indian exam papers \u2014 draw the family tree once and reuse it forever."
+  },
+  {
+   "id": "tca-dot-01",
+   "drugSlug": "dothiepin",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Dothiepin (dosulepin) pharmacology in one line is:",
+   "options": [
+    "Selective D2 antagonism with mild serotonergic action",
+    "Pure SERT blockade",
+    "Norepinephrine and serotonin reuptake inhibition with strong sedative action",
+    "Irreversible MAO inhibition"
+   ],
+   "correctIndex": 2,
+   "explanation": "Indian classification places dothiepin in the NA + 5-HT reuptake inhibitor group, and clinically it is among the most sedating TCAs \u2014 the combination that made it popular for depressed patients with insomnia. D2 antagonism would make it an antipsychotic (only amoxapine among antidepressants does that), no TCA is a pure SERT blocker (that is the SSRI definition), and irreversible MAO inhibition is the phenelzine world. Its sedation is H1-mediated, exactly like its class-mates."
+  },
+  {
+   "id": "tca-dot-02",
+   "drugSlug": "dothiepin",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Dothiepin's standing in India and the UK is best described as:",
+   "options": [
+    "First-line drug for paediatric OCD",
+    "A US-labelled hypnotic",
+    "Restricted to research settings",
+    "A widely dispensed sedating TCA in India and the UK for depression with anxiety and insomnia"
+   ],
+   "correctIndex": 3,
+   "explanation": "PROTHIADEN and DOTHIN remain familiar Indian brands, and dosulepin was for decades one of the most-dispensed TCAs in UK general practice \u2014 its niche being depressed patients who need sedation. It has no paediatric OCD role (clomipramine/SSRIs own that), no US hypnotic label (that is low-dose doxepin), and its research-only description is the opposite of its history. Its later reputation \u2014 overdose lethality \u2014 is what the next questions address."
+  },
+  {
+   "id": "tca-dot-03",
+   "drugSlug": "dothiepin",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 34-year-old with depression and recent suicidal ideation is to be managed as an outpatient. The team decides to try a TCA for cost reasons. Which TCA tops the fatal-toxicity tables and should specifically be avoided in this setting?",
+   "options": [
+    "Lofepramine",
+    "Dothiepin",
+    "Nortriptyline",
+    "Desipramine"
+   ],
+   "correctIndex": 1,
+   "explanation": "Dosulepin consistently ranks at or near the top of TCA lethality tables \u2014 Indian texts pair it with amitriptyline as the overdose-dangerous members \u2014 so it is precisely the wrong TCA for an outpatient with active suicidal thinking. Lofepramine is the safe-side answer, nortriptyline is comparatively cardiac-tolerated, and desipramine, though feared for arrhythmia, does not top the lethality rankings. The general rule: live suicide risk plus TCA means choosing the least-lethal member or, better, no TCA at all."
+  },
+  {
+   "id": "tca-dot-04",
+   "drugSlug": "dothiepin",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 42-year-old woman in India has moderate depression with marked insomnia and anxiety; SSRIs caused intolerable agitation. The clinic pharmacy stocks standard Indian TCA brands. A sensible choice is:",
+   "options": [
+    "Dothiepin 25-50 mg at night (PROTHIADEN/DOTHIN)",
+    "Protriptyline at night",
+    "Desipramine at night",
+    "Maprotiline at night"
+   ],
+   "correctIndex": 0,
+   "explanation": "Her symptom cluster (insomnia, anxiety) is the classic indication for a sedating TCA, and dothiepin is both strongly sedating and reliably stocked in Indian pharmacies under PROTHIADEN/DOTHIN. Protriptyline and desipramine are the activating TCAs and would worsen her agitation and sleeplessness, and maprotiline brings the class's worst seizure risk without sedative advantage. Note the dosing logic: start low at night and titrate \u2014 TCAs are not loading-dose drugs."
+  },
+  {
+   "id": "tca-dot-05",
+   "drugSlug": "dothiepin",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 78-year-old on dothiepin 50 mg at night adds an over-the-counter diphenhydramine sleep syrup and oxybutynin for urinary urgency. Three days later the family reports acute confusion, a dry tongue and failed urination. The best explanation is:",
+   "options": [
+    "Additive anticholinergic burden \u2014 antimuscarinic toxicity from the TCA, antihistamine and oxybutynin together",
+    "Serotonin syndrome",
+    "Dothiepin-induced SIADH alone",
+    "Opioid withdrawal"
+   ],
+   "correctIndex": 0,
+   "explanation": "Three anticholinergics stacked in an elderly man produce the classic antimuscarinic delirium with retention \u2014 dry skin and tongue, confusion, blocked bladder \u2014 the textbook geriatric polypharmacy trap that every 'avoid in elderly' list warns about. There is no serotonergic drug load for serotonin syndrome, SIADH causes hyponatraemia rather than retention with a dry tongue, and nothing about the picture suggests opioid withdrawal. Before adding any drug to a TCA, count the anticholinergic burden first."
+  },
+  {
+   "id": "tca-dot-06",
+   "drugSlug": "dothiepin",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A rural patient collects PROTHIADEN 25 mg for depression with insomnia. The pharmacist's most important counselling points are:",
+   "options": [
+    "Take at bedtime; expect drowsiness \u2014 avoid driving and machinery, avoid alcohol, and report urinary retention or a racing heartbeat",
+    "Take it in the morning with tea for energy",
+    "Stop as soon as mood improves, usually within 3-4 days",
+    "Combine it freely with over-the-counter cold remedies for congestion"
+   ],
+   "correctIndex": 0,
+   "explanation": "Dothiepin counselling is the TCA triad: sedation (no driving, no alcohol), anticholinergic warnings (retention, constipation) and cardiac warning signs, with bedtime dosing to exploit the drowsiness. Morning dosing fights the pharmacology, stopping at day 3-4 both ignores the 1-2 week onset and invites relapse (effective treatment continues for months), and cold remedies add sympathomimetic and anticholinergic interactions. Indian exam formats increasingly test pharmacist-level counselling points, not just mechanisms."
+  },
+  {
+   "id": "tca-dot-07",
+   "drugSlug": "dothiepin",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 58-year-old man with coronary artery disease (stented two years ago) is prescribed dothiepin for depression with insomnia. Which monitoring or precaution matters most?",
+   "options": [
+    "Baseline and follow-up ECG \u2014 TCAs slow intraventricular conduction and are arrhythmogenic, especially in ischaemic heart disease",
+    "Weekly serum sodium measurement",
+    "Monthly prolactin levels",
+    "Annual vitamin B12 levels"
+   ],
+   "correctIndex": 0,
+   "explanation": "TCA arrhythmias cluster in patients with ischaemic heart disease \u2014 Indian texts call arrhythmia the effect that can cause sudden death in these patients \u2014 so baseline ECG and cardiac review precede the prescription, and the acute post-MI phase is a reason to avoid TCAs entirely. Sodium monitoring is a real but secondary issue for antidepressants (SIADH), and prolactin and B12 have no place in TCA monitoring. Cardiac disease gates TCA prescribing the way hepatic disease gates duloxetine."
+  },
+  {
+   "id": "tca-dot-08",
+   "drugSlug": "dothiepin",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Dosulepin's notorious distinction in antidepressant safety data is:",
+   "options": [
+    "The highest risk of tardive dyskinesia among antidepressants",
+    "The most hepatotoxic antidepressant in routine use",
+    "Among the most lethal TCAs in overdose \u2014 a key reason prescribers moved to SSRIs",
+    "The only antidepressant that causes hypertension"
+   ],
+   "correctIndex": 2,
+   "explanation": "UK fatal-toxicity analyses put dosulepin at the head of the TCA lethality table, and Indian texts pair it with amitriptyline as particularly dangerous in overdose \u2014 the single biggest clinical argument that displaced TCAs from first-line use. Tardive dyskinesia is dopamine-blockade territory (antipsychotics, amoxapine), hepatotoxicity fame belongs to duloxetine and the MAOI hydrazines historically, and venlafaxine's dose-related hypertension is real but neither unique nor dosulepin's. One number-free superlative, endlessly examined: dosulepin = most lethal TCA."
+  },
+  {
+   "id": "tca-map-01",
+   "drugSlug": "maprotiline",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Maprotiline differs from the classic TCAs structurally and pharmacologically as:",
+   "options": [
+    "A tetracyclic (four-ring) compound with selective noradrenaline reuptake inhibition and negligible serotonergic action",
+    "A tricyclic with strong SERT blockade",
+    "A tetracyclic that acts as a D2 antagonist",
+    "A unicyclic amphetamine-like stimulant"
+   ],
+   "correctIndex": 0,
+   "explanation": "Maprotiline is the tetracyclic, NET-selective member of the older antidepressants \u2014 four rings, strong norepinephrine-transporter blockade, essentially no 5-HT action. The D2-blocking tetracyclic is amoxapine (loxapine heritage), and the unicyclic stimulant-family member is bupropion's structural cousin story \u2014 both decoys here. Ring counts and receptor selectivity must be memorised separately, because the exam swaps them freely."
+  },
+  {
+   "id": "tca-map-02",
+   "drugSlug": "maprotiline",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "The antidepressant with the classic (exam) reputation for the highest dose-related seizure incidence is:",
+   "options": [
+    "Sertraline",
+    "Escitalopram",
+    "Nortriptyline",
+    "Maprotiline"
+   ],
+   "correctIndex": 3,
+   "explanation": "Maprotiline is the textbook answer for antidepressant seizure liability \u2014 dose-related fits that rise steeply with titration \u2014 the one-word association ('maprotiline = seizures') every Indian exam candidate is expected to carry. SSRIs and nortriptyline are comparatively safe in this regard. Know the supporting cast too: bupropion, clomipramine and amoxapine form the rest of the higher-risk set, with desipramine among the safer options."
+  },
+  {
+   "id": "tca-map-03",
+   "drugSlug": "maprotiline",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 26-year-old starts maprotiline 75 mg for depression; the dose is escalated to 150 mg by week 3. She then has a first-ever generalised seizure. CT head is normal, sodium 138 mEq/L, no fever, no other drugs. The most appropriate conclusion is:",
+   "options": [
+    "New-onset epilepsy \u2014 start lifelong antiepileptics",
+    "Panic-related pseudoseizure \u2014 continue the drug unchanged",
+    "Dose-related seizure liability of maprotiline \u2014 reduce or stop the drug and switch class",
+    "Caffeine withdrawal \u2014 no change in treatment needed"
+   ],
+   "correctIndex": 2,
+   "explanation": "Maprotiline's seizure risk climbs with dose and speed of titration, so a first seizure on an escalating dose is the drug's signature adverse effect until proven otherwise \u2014 the correct response is to remove the cause and move to a safer class such as an SSRI. Branding it epilepsy after one seizure during a proconvulsant titration over-treats, and the normal sodium, imaging and absence of fever close the other doors. This vignette is the direct clinical application of the maprotiline-seizures association."
+  },
+  {
+   "id": "tca-map-04",
+   "drugSlug": "maprotiline",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "neural-pathways",
+   "question": "A resident adds fluoxetine to maprotiline, hoping to boost the 'serotonergic component'. The most important hazard of this combination is:",
+   "options": [
+    "Additive weight gain",
+    "CYP2D6 inhibition by fluoxetine raises maprotiline levels, compounding seizure and cardiac risk",
+    "Fluoxetine reliably reverses maprotiline-induced sedation",
+    "The combination is a standard approved therapy for OCD"
+   ],
+   "correctIndex": 1,
+   "explanation": "Fluoxetine's potent 2D6 inhibition raises TCA levels dramatically, and stacking that on maprotiline's own seizure liability produces a genuinely dangerous combination \u2014 kinetic interaction plus pharmacodynamic amplification at once. Weight gain is trivial next to seizures, maprotiline's sedation is mild anyway, and no such combination carries an OCD label (OCD wants serotonergic monotherapy escalation). SSRIs and TCAs can be combined only deliberately, at low doses, with levels and ECG \u2014 never casually."
+  },
+  {
+   "id": "tca-map-05",
+   "drugSlug": "maprotiline",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "mechanism",
+   "question": "A resident proposes maprotiline for a patient with OCD, reasoning that 'tetracyclic drugs block serotonin more strongly'. The correct rebuttal is:",
+   "options": [
+    "Agreed \u2014 maprotiline is the most serotonergic antidepressant available",
+    "Agreed \u2014 the four-ring structure enhances SERT affinity",
+    "Disagreed \u2014 tetracyclics only block D2 receptors",
+    "Disagreed \u2014 maprotiline is a selective norepinephrine reuptake inhibitor; OCD needs strong serotonergic drugs such as clomipramine or SSRIs"
+   ],
+   "correctIndex": 3,
+   "explanation": "Structure does not confer function: the four-ring maprotiline is serotonergically silent and NET-selective, so it has no place in OCD, whose treatment hinges on serotonergic enhancement. The first two options accept a false premise, and the D2 claim confuses maprotiline with amoxapine. This is the batch's recurring lesson \u2014 memorise each drug's receptor selectivity, never infer it from chemistry."
+  },
+  {
+   "id": "tca-map-06",
+   "drugSlug": "maprotiline",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Which set correctly lists the HIGHER seizure-risk members of the antidepressant family?",
+   "options": [
+    "Nortriptyline, sertraline, escitalopram",
+    "Desipramine, citalopram, vortioxetine",
+    "Maprotiline, bupropion, clomipramine, amoxapine",
+    "Doxepin, trimipramine, lofepramine"
+   ],
+   "correctIndex": 2,
+   "explanation": "The higher-risk set is maprotiline (the classic maximum), bupropion, clomipramine and amoxapine \u2014 Indian texts name bupropion, clomipramine and amoxapine as having greater seizure propensity, and maprotiline completes the exam set. Desipramine is explicitly cited as safer, and the SSRIs across all three wrong rows are the low-risk reference group. Sorting a drug list into risky-versus-safe columns is how this fact is actually examined."
+  },
+  {
+   "id": "tca-map-07",
+   "drugSlug": "maprotiline",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A patient on maprotiline 100 mg reports dry mouth, constipation and light-headedness on standing. He objects: 'I was told this drug is different from the TCAs.' The correct response is:",
+   "options": [
+    "He is right \u2014 tetracyclics have no autonomic effects",
+    "Tetracyclic does not mean safe \u2014 maprotiline produces TCA-like anticholinergic and orthostatic effects and is monitored the same way",
+    "These symptoms are allergic \u2014 the drug must be stopped permanently",
+    "These symptoms indicate overdose \u2014 call poison control"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung notes explicitly that maprotiline may cause TCA-like adverse effects despite its different ring structure \u2014 muscarinic, H1 and alpha-1 blockade produce the same dry mouth, constipation and postural drops, with the same monitoring. There is nothing allergic about anticholinergic symptoms, and therapeutic-dose effects are not an overdose signal. The batch theme repeats: ring chemistry changes the name, receptor blockade writes the symptom list."
+  },
+  {
+   "id": "tca-map-08",
+   "drugSlug": "maprotiline",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 24-year-old with well-controlled epilepsy needs a TCA for depression. The relatively safer choice \u2014 and the classic avoid \u2014 are:",
+   "options": [
+    "Desipramine relatively safer; avoid maprotiline and clomipramine",
+    "Maprotiline relatively safer; avoid desipramine",
+    "Clomipramine relatively safer; avoid imipramine",
+    "Bupropion relatively safer; avoid nortriptyline"
+   ],
+   "correctIndex": 0,
+   "explanation": "Indian texts grade desipramine (with the SSRIs and SNRIs) as safer for seizure threshold, while maprotiline, clomipramine and bupropion form the classic avoid-set \u2014 an epilepsy history amplifies every one of those risks. Each distractor simply inverts the safe and risky columns. Pairing 'who is safe' with 'who is not' in one answer is the standard two-sided way this table is examined."
+  },
+  {
+   "id": "tca-amo-01",
+   "drugSlug": "amoxapine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "What makes amoxapine unique among antidepressants?",
+   "options": [
+    "It is an SSRI with 5-HT3 antagonism",
+    "It combines norepinephrine reuptake inhibition with dopamine D2 receptor blockade \u2014 antipsychotic-like activity",
+    "It is an irreversible MAO-B inhibitor",
+    "It is a benzodiazepine-site agonist"
+   ],
+   "correctIndex": 1,
+   "explanation": "Amoxapine is the only older antidepressant that blocks D2 receptors alongside its NET inhibition \u2014 Indian texts state that none of the TCAs except amoxapine block dopamine receptors \u2014 giving it a mixed antidepressant-neuroleptic profile. 5-HT3 antagonism is vortioxetine's mechanism, MAO-B inhibition is selegiline's, and benzodiazepine-site action is unrelated. That D2 block is the root of everything unique about the drug: EPS, hyperprolactinaemia and its psychotic-depression niche."
+  },
+  {
+   "id": "tca-amo-02",
+   "drugSlug": "amoxapine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Amoxapine's chemical pedigree is best described as:",
+   "options": [
+    "The N-demethylated metabolite of the antipsychotic loxapine",
+    "The active metabolite of imipramine",
+    "The R-enantiomer of maprotiline",
+    "A prodrug of clozapine"
+   ],
+   "correctIndex": 0,
+   "explanation": "Amoxapine is literally the N-demethylated metabolite of loxapine, an older antipsychotic \u2014 which is why one molecule can carry both antidepressant and neuroleptic properties. Imipramine's metabolite is desipramine (the swap trap again), enantiomer stories belong to escitalopram and levomilnacipran, and no clozapine prodrug exists. Pedigree questions are the most reliable marks in this drug's section of any exam."
+  },
+  {
+   "id": "tca-amo-03",
+   "drugSlug": "amoxapine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 55-year-old man, five weeks into amoxapine for depression, develops bradykinesia, cogwheel rigidity and a masked face. He takes no antipsychotics and the CT head is normal. The best explanation is:",
+   "options": [
+    "Worsening depression with psychomotor retardation",
+    "Incident idiopathic Parkinson's disease \u2014 start levodopa",
+    "TCA-induced chorea",
+    "Amoxapine's D2 blockade causing drug-induced parkinsonism \u2014 review and stop the drug"
+   ],
+   "correctIndex": 3,
+   "explanation": "Amoxapine's D2-blocking action (parent drug plus its 7-hydroxy metabolite) can produce a parkinsonian syndrome \u2014 Katzung calls it out specifically \u2014 and it is the one antidepressant whose complaint list reads like a low-dose antipsychotic's. Psychomotor retardation does not produce cogwheel rigidity, prescribing levodopa before withdrawing the culprit drug is premature, and chorea is the wrong movement disorder entirely. Withdrawal or dose reduction usually reverses the syndrome \u2014 diagnose iatrogenic disease first."
+  },
+  {
+   "id": "tca-amo-04",
+   "drugSlug": "amoxapine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 48-year-old has severe depression with mood-congruent delusions of guilt. Modern care would use an antidepressant plus an antipsychotic. Historically, which single antidepressant offered both activities in one molecule for exactly this 'psychotic depression' problem?",
+   "options": [
+    "Doxepin",
+    "Nortriptyline",
+    "Amoxapine",
+    "Lofepramine"
+   ],
+   "correctIndex": 2,
+   "explanation": "Amoxapine's mixed antidepressant-plus-neuroleptic properties \u2014 inherited from its loxapine parentage \u2014 made it the historical one-molecule answer for psychotic depression, as Indian texts note. Doxepin, nortriptyline and lofepramine have no D2 action and no antipsychotic credentials. The modern regimen (for example sertraline or a TCA plus an antipsychotic) superseded it, but the pharmacology behind the old strategy still earns marks."
+  },
+  {
+   "id": "tca-amo-05",
+   "drugSlug": "amoxapine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 39-year-old woman on amoxapine reports bilateral breast discharge and amenorrhoea. Serum prolactin is markedly raised and pituitary MRI is normal. The best explanation is:",
+   "options": [
+    "Amoxapine's D2 blockade disinhibiting prolactin secretion \u2014 drug-induced hyperprolactinaemia",
+    "An early prolactinoma missed by MRI",
+    "Hypothyroidism unrelated to the drug",
+    "A generic TCA class effect mediated by H1 blockade"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tuberoinfundibular D2 tone normally suppresses prolactin; amoxapine's D2 antagonism removes it, producing galactorrhoea and menstrual disruption \u2014 an antipsychotic-type effect unique among antidepressants. A normal MRI with a clear drug timeline argues against tumour (check TSH, but the drug is the leading suspect), and H1 blockade has nothing to do with prolactin. No other antidepressant regularly does this \u2014 that uniqueness is the exam point."
+  },
+  {
+   "id": "tca-amo-06",
+   "drugSlug": "amoxapine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "During an emergency-ward teaching round on antidepressant overdoses, which pairing is correct?",
+   "options": [
+    "Fluoxetine overdose \u2014 status epilepticus is the leading cause of death",
+    "Sertraline overdose \u2014 QRS widening routinely requiring bicarbonate",
+    "Amoxapine overdose \u2014 seizures can progress to status epilepticus on top of the usual TCA-like picture",
+    "Citalopram overdose \u2014 no cardiac effects at all"
+   ],
+   "correctIndex": 2,
+   "explanation": "Amoxapine overdose combines TCA-like toxicity with a special liability to seizures, including status epilepticus \u2014 Indian texts flag this explicitly, and it follows from the same D2/receptor pharmacology that marks the drug otherwise. SSRI overdoses are famously benign (fluoxetine's risk is not status epilepticus), sertraline does not routinely widen QRS, and citalopram is the SSRI with a dose-dependent QT effect \u2014 so 'no cardiac effects at all' is false. Overdose-profile sorting across the antidepressant classes is a reliable exam station."
+  },
+  {
+   "id": "tca-amo-07",
+   "drugSlug": "amoxapine",
+   "domain": "Indian Practice",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Per Indian textbook accounts, which set of TCAs was listed as useful in childhood ADHD before atomoxetine's arrival?",
+   "options": [
+    "Doxepin, trimipramine, dothiepin",
+    "Amitriptyline, clomipramine, lofepramine",
+    "Maprotiline, protriptyline, doxepin",
+    "Imipramine, nortriptyline, amoxapine"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi lists imipramine, nortriptyline and amoxapine \u2014 the TCAs with less depressant properties \u2014 as then-first-line ADHD drugs with steadier action than stimulants, a historical footprint atomoxetine (a selective NRI) has since replaced. The wrong rows are padded with strongly sedating or seizure-prone members that never had the ADHD role. Notice the thread: norepinephrine reuptake inhibition runs from these TCAs straight to atomoxetine's modern label."
+  },
+  {
+   "id": "tca-amo-08",
+   "drugSlug": "amoxapine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Amoxapine's antipsychotic (D2-blocking) punch comes mainly from:",
+   "options": [
+    "Renal excretion of unchanged amoxapine",
+    "Its active metabolite 7-hydroxyamoxapine \u2014 a potent D2 blocker",
+    "Back-conversion to loxapine in the liver",
+    "Its own strong SERT blockade"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung identifies 7-hydroxyamoxapine as a potent D2 blocker with antipsychotic effects \u2014 the metabolite, not the parent, drives much of the extrapyramidal and prolactin story. Metabolism runs loxapine to amoxapine, never the reverse, and only about 5% of TCAs leave unchanged in urine while SERT blockade belongs to clomipramine. When an active metabolite outpowers the parent, timing questions (why EPS appears days into treatment) answer themselves."
+  },
+  {
+   "id": "tca-mix-01",
+   "drugSlug": "mixed",
+   "domain": "Active Recall",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which TCA-signature pair is CORRECT (per the Know Your Pill class comparison)?",
+   "options": [
+    "Clomipramine \u2014 the most serotonergic TCA and the gold-standard TCA for OCD",
+    "Desipramine \u2014 the most sedating TCA with the strongest anticholinergic effects",
+    "Doxepin \u2014 the most activating TCA, historically used for narcolepsy",
+    "Maprotiline \u2014 the safest antidepressant in patients with epilepsy"
+   ],
+   "correctIndex": 0,
+   "explanation": "Clomipramine owns both tags in the correct row \u2014 maximal SERT blockade and the reference TCA for OCD. The distractors swap signatures: desipramine is the most NORadrenergic with the LEAST anticholinergic burden, doxepin is the H1 champion while protriptyline is the activating one, and maprotiline is the most seizure-prone antidepressant, the opposite of epilepsy-safe. Swapping one tag between class-mates is how every class-table question is built \u2014 verify each pairing individually."
+   }
+ ]
+}

@@ -774,6 +774,110 @@ export const isocarboxazid: Drug = {
       explanation: "For depression: start 10 mg twice daily, target 20-40 mg/day, maximum 60 mg/day. Increase by 10 mg/day weekly to 40 mg; up to 60",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "maoi-iso-01",
+      question: "Isocarboxazid is best described as:",
+      options: [
+        "A nonhydrazine, amphetamine-related reversible inhibitor of MAO-A",
+        "A selective irreversible MAO-B inhibitor used in parkinsonism",
+        "A hydrazine derivative that irreversibly and nonselectively inhibits MAO-A and MAO-B",
+        "An oxazolidinone antibiotic that possesses MAO-inhibiting activity"
+      ],
+      correctIndex: 2,
+      explanation: "Isocarboxazid is one of the two hydrazine MAOIs (alongside phenelzine) — irreversible and nonselective for both MAO isoforms in Katzung's classification. The amphetamine-related reversible description fuses tranylcypromine with moclobemide, MAO-B selectivity defines selegiline, and the oxazolidinone antibiotic with MAO activity is linezolid — a drug, not an antidepressant.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "maoi-iso-02",
+      question: "The current clinical status of isocarboxazid is:",
+      options: [
+        "Rarely used — obsolete because of toxicity and food/drug interactions, reserved for resistant cases",
+        "First-line for atypical depression in most current guidelines",
+        "The preferred MAOI for Parkinson's disease",
+        "The most commonly prescribed MAOI in current practice"
+      ],
+      correctIndex: 0,
+      explanation: "Both Katzung and Tripathi describe the classical MAOIs as largely obsolete — superseded because of high toxicity and potentially lethal food and drug interactions — and isocarboxazid is the least used of them, kept only for depression unresponsive to other antidepressants. It was never first-line for atypical depression, has no parkinsonism role (that is selegiline's), and is certainly not the most prescribed MAOI.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "maoi-iso-03",
+      question: "A patient on isocarboxazid is being treated for MRSA pneumonia. Which antibiotic is contraindicated?",
+      options: [
+        "Vancomycin",
+        "Ceftriaxone",
+        "Clindamycin",
+        "Linezolid"
+      ],
+      correctIndex: 3,
+      explanation: "Linezolid is a weak nonselective MAO inhibitor as well as a serotonergic agent; combined with an MAOI it can precipitate serotonin syndrome or pressor reactions, and Katzung lists linezolid among the serotonergic drugs causing the syndrome with an explicit FDA warning. Vancomycin, ceftriaxone and clindamycin carry no MAOI or serotonergic activity and are safe here.",
+      afterSectionId: "neural-pathways",
+    },
+    {
+      id: "maoi-iso-04",
+      question: "Two hours after a restaurant meal, a woman on isocarboxazid has a throbbing headache, sweating, neck stiffness and BP 230/120 mmHg. Which management principle is CORRECT?",
+      options: [
+        "Give IV propranolol alone — beta-blockade is the definitive treatment",
+        "Treat with a rapidly acting alpha-blocker such as IV phentolamine; a beta-blocker alone risks unopposed alpha-mediated vasoconstriction",
+        "Reassure and review in the morning — the pressure settles without treatment",
+        "Give cyproheptadine because the reaction is mediated by serotonin"
+      ],
+      correctIndex: 1,
+      explanation: "This is the tyramine-induced hypertensive crisis of nonselective irreversible MAOI therapy: treatment is prompt IV alpha-blockade (phentolamine, with prazosin or chlorpromazine as described alternatives). Reaching for a pure beta-blocker first is the classic exam trap — peripheral alpha vasoconstriction continues unopposed and can worsen. The reaction is adrenergic, not serotonergic, and it is a medical emergency, never overnight observation.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "maoi-iso-05",
+      question: "A patient who failed isocarboxazid therapy is to start fluoxetine. The minimum washout between the two:",
+      options: [
+        "24-48 hours — enzyme activity returns quickly",
+        "5 weeks — that is the rule in every MAOI switch",
+        "14 days — an MAOI must be stopped at least 2 weeks before a serotonergic agent",
+        "3-4 days with half-dose fluoxetine at initiation"
+      ],
+      correctIndex: 2,
+      explanation: "Direction is the exam point: when an MAOI is the drug being STOPPED, only 14 days are needed before any serotonergic agent. The 5-week interval applies in the reverse direction — stopping FLUOXETINE before starting an MAOI — because active norfluoxetine persists. The 24-48-hour window belongs to reversible moclobemide and has no place with irreversible isocarboxazid.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "maoi-iso-06",
+      question: "A post-operative patient who stopped isocarboxazid 6 days ago receives pethidine (meperidine) for pain. She develops high fever, sweating, agitation, muscular rigidity and severe respiratory depression. The most likely explanation:",
+      options: [
+        "MAOI-pethidine interaction — impaired hydrolysis shunts pethidine toward excess norpethidine, an excitatory metabolite; pethidine must be avoided with MAOIs",
+        "An anaphylactoid reaction to pethidine requiring adrenaline",
+        "Malignant hyperthermia from the anaesthetic agent — give dantrolene",
+        "Opioid withdrawal — the MAOI accelerated pethidine clearance"
+      ],
+      correctIndex: 0,
+      explanation: "MAOI-pethidine is a classically lethal pairing: MAO inhibition retards pethidine's hydrolysis while demethylation continues, so norpethidine (normally a minor metabolite) accumulates, causing excitation, hyperthermia, convulsions and respiratory depression (Tripathi's accepted explanation). This is a pharmacological interaction — not allergy, not anaesthetic malignant hyperthermia, and MAOIs do not accelerate opioid clearance.",
+      afterSectionId: "neural-pathways",
+    },
+    {
+      id: "maoi-iso-07",
+      question: "Which statement is correct?",
+      options: [
+        "Isocarboxazid — reversible MAO-A inhibition with a 1-2 day washout",
+        "Isocarboxazid — MAO-B selective and antiparkinsonian in action",
+        "Isocarboxazid — the most activating MAOI, with an amphetamine-like structure",
+        "Isocarboxazid — a hydrazine, irreversible, nonselective MAOI that is now rarely used"
+      ],
+      correctIndex: 3,
+      explanation: "Isocarboxazid belongs to the hydrazine, irreversible, nonselective MAOI family alongside phenelzine, and it is the class member closest to obsolescence. The reversible/1-2-day tags describe moclobemide, MAO-B selectivity describes selegiline, and the amphetamine-activation profile describes tranylcypromine — every distractor is a signature borrowed from a sibling drug.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "maoi-iso-08",
+      question: "A resistant-depression patient is cleared for isocarboxazid after four failed antidepressant trials. The safest initiation plan:",
+      options: [
+        "Start isocarboxazid while tapering venlafaxine over the same week",
+        "Verify at least 14 days since the last serotonergic drug (about 5 weeks if fluoxetine), assess the patient's dietary reliability, counsel on contraindicated co-drugs and plan BP monitoring",
+        "A baseline ECG alone is sufficient — dietary counselling is optional",
+        "Give prophylactic phentolamine daily for the entire treatment course"
+      ],
+      correctIndex: 1,
+      explanation: "Starting a classical MAOI demands the complete checklist: washout completion (14 days, or about 5 weeks after fluoxetine), a patient able to sustain the low-tyramine diet, education about the contraindicated co-drugs (SSRIs, SNRIs, TCAs, pethidine, tramadol, dextromethorphan, linezolid, sympathomimetics) and BP vigilance. Overlapping with venlafaxine risks serotonin syndrome, diet counselling is never optional, and daily prophylactic alpha-blockade is not a real strategy.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

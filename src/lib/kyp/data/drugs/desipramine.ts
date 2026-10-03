@@ -912,6 +912,110 @@ export const desipramine: Drug = {
       explanation: "For depression: start 25 mg at bedtime or morning, target 100-200 mg/day, maximum 300 mg/day. Increase by 25 mg every 3-7 days",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "tca-des-01",
+      question: "The most noradrenergic of the classic tricyclic antidepressants is:",
+      options: [
+        "Clomipramine",
+        "Desipramine",
+        "Amitriptyline",
+        "Doxepin"
+      ],
+      correctIndex: 1,
+      explanation: "Desipramine is the classic TCA maximum for NET blockade — more potent and more selective than its parent imipramine — with minimal muscarinic and H1 activity. Clomipramine is the serotonergic pole, and amitriptyline and doxepin are receptor-blockade-heavy rather than transporter-selective. Its adrenergic fingerprint predicts its clinical fingerprint: alerting effect, adrenergic side effects, and little anticholinergic trouble.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "tca-des-02",
+      question: "Desipramine's origin and kinetic behaviour are best described as:",
+      options: [
+        "An active metabolite of imipramine that itself forms no further active metabolites and shows fairly linear kinetics",
+        "A prodrug that is converted into imipramine",
+        "An active metabolite of amitriptyline",
+        "A chemically unrelated racemic mixture"
+      ],
+      correctIndex: 0,
+      explanation: "Imipramine is demethylated to desipramine — the two differ by a single methyl group, yet the profiles diverge sharply — and desipramine then goes on to have linear kinetics with no further active metabolites. The prodrug direction is reversed, amitriptyline's metabolite is nortriptyline (the classic swap), and the racemate story belongs to milnacipran. Metabolite-drug lineage questions (fluoxetine to norfluoxetine, amitriptyline to nortriptyline, imipramine to desipramine) are permanent exam fixtures.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "tca-des-03",
+      question: "A 35-year-old with withdrawn, retarded depression and hypersomnia was tried on a sedating TCA and complains he feels like a zombie all day. A better TCA fit for his presentation is:",
+      options: [
+        "Trimipramine",
+        "Dothiepin",
+        "Desipramine",
+        "Doxepin"
+      ],
+      correctIndex: 2,
+      explanation: "Indian texts are explicit: the less sedative or stimulant TCAs are better for withdrawn and retarded patients, and desipramine is the least sedating classic TCA with a net-activating noradrenergic profile. Trimipramine, dothiepin and doxepin are among the most sedating members of the class — all three would deepen his hypersomnia. The teaching couplet: sedating TCAs for anxious-agitated patients, activating TCAs for retarded ones.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tca-des-04",
+      question: "A 42-year-old man two weeks into desipramine reports palpitations, sweating, fine tremor and early-morning waking. TSH is normal, he is afebrile, and there is no caffeine load. The best explanation is:",
+      options: [
+        "Anticholinergic effects of desipramine",
+        "Masked hyperthyroidism — repeat the TSH",
+        "SIADH from desipramine",
+        "Noradrenergic (NET-mediated) effects — expected, dose-related adrenergic effects; counsel and review the dose if troublesome"
+      ],
+      correctIndex: 3,
+      explanation: "Desipramine's NET dominance predicts exactly this adrenergic cluster — tachycardia, tremor, sweating and insomnia — and some tolerance develops over weeks, so counselling plus dose review is the measured response. Desipramine is among the least anticholinergic TCAs, the thyroid has been excluded, and SIADH presents with hyponatraemia rather than sympathetic overdrive. Knowing a drug's receptor fingerprint lets you predict its complaint list before the patient does.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tca-des-05",
+      question: "A 78-year-old needs a TCA. He has early prostatism, habitual constipation, and glaucoma is suspected on eye review. The physician wants minimal anticholinergic and orthostatic load. The best TCA choice is:",
+      options: [
+        "Amitriptyline",
+        "Doxepin at antidepressant doses",
+        "Trimipramine",
+        "Desipramine"
+      ],
+      correctIndex: 3,
+      explanation: "Desipramine has the lowest anticholinergic burden among the classic TCAs and produces milder postural drops than the tertiary amines — Indian texts specifically grade postural hypotension as less severe with desipramine-like drugs. Amitriptyline, doxepin and trimipramine are strongly muscarinic and H1-blocking and could precipitate urinary retention, angle-crisis or impaction in this man. Even so, orthostatic checks and an ECG remain mandatory for any TCA in the very elderly.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tca-des-06",
+      question: "One classic TCA has minimal anticholinergic effects yet carries an outsized exam reputation for lethal arrhythmias in overdose. Which is it?",
+      options: [
+        "Nortriptyline",
+        "Clomipramine",
+        "Trimipramine",
+        "Desipramine"
+      ],
+      correctIndex: 3,
+      explanation: "Desipramine pairs the gentlest receptor-blocking profile with a disproportionate overdose-arrhythmia risk — the potent noradrenergic drive plus TCA sodium-channel blockade make sudden ventricular arrhythmia its signature danger. Nortriptyline is the relatively cardiac-tolerated member, clomipramine's fame is seizures, and trimipramine's is sedation. The paradox is the exam point: a 'clean' side-effect profile never implies a safe overdose profile.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tca-des-07",
+      question: "A hypertensive patient well controlled on clonidine is started on desipramine for depression. Two weeks later his BP has crept up despite an unchanged clonidine dose. The mechanism is:",
+      options: [
+        "The TCA blocks transporter-mediated uptake into adrenergic neurones, abolishing clonidine's (and guanethidine's) antihypertensive action",
+        "The TCA induces hepatic metabolism of clonidine",
+        "The TCA increases renal clearance of clonidine",
+        "Additive alpha-1 blockade has raised the BP"
+      ],
+      correctIndex: 0,
+      explanation: "TCAs block the uptake-1 transporter that carries clonidine and guanethidine into the adrenergic neurone — Indian texts state plainly that TCAs abolish the antihypertensive action of both drugs. Enzyme induction and renal clearance changes are not the mechanism, and alpha-1 blockade would lower rather than raise pressure. This is one of the oldest and most examinated interaction mechanisms in pharmacology.",
+      afterSectionId: "neural-pathways",
+    },
+    {
+      id: "tca-des-08",
+      question: "A patient on a routine desipramine dose develops marked toxicity; genotyping reveals CYP2D6 poor-metaboliser status. The correct corollary is:",
+      options: [
+        "Poor metabolisers need higher desipramine doses to respond",
+        "Ultrarapid metabolisers may fail therapy at standard doses — TCA dosing is phenotype-dependent, which is why levels were historically measured",
+        "CYP2D6 phenotype matters only for SSRIs, not for TCAs",
+        "Desipramine levels are unaffected by 2D6 status because renal clearance dominates"
+      ],
+      correctIndex: 1,
+      explanation: "Constitutional 2D6 variation (about 7% of some populations are poor metabolisers) can produce low or excessive TCA exposure: poor metabolisers accumulate and become toxic, ultrarapid metabolisers clear the drug before it works. Only about 5% of a TCA dose leaves unchanged in urine — hepatic 2D6 dominates — and the phenotype matters most for TCAs of all drug classes. This polymorphism, plus TCAs' narrow margins, is the historical reason plasma levels entered psychiatric practice.",
+      afterSectionId: "timeline",
+    },
   ],
   activeRecallQuestions: [
     {

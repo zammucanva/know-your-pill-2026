@@ -1,0 +1,1162 @@
+{
+ "batch": "kyp-sud-mcq-batch-16a",
+ "title": "SUD Treatment MCQ Batch 16a - Naltrexone / Buprenorphine / Acamprosate / Disulfiram / Varenicline / Nalmefene / Naltrexone-bupropion / Sodium oxybate",
+ "generated": "2026-10-02",
+ "examOrientation": "Indian exams (NEET PG / INI-CET) + USMLE-style vignettes",
+ "textbookAnchors": "Facts aligned with Katzung Basic & Clinical Pharmacology 14e (ch.23 alcohol-use disorder: naltrexone 50 mg/day + monthly IM depot, dose-dependent hepatotoxicity and the naltrexone-disulfiram avoidance, opioid-free rule, blocks opioid analgesia, acamprosate NMDA-GABAA actions 333 mg TID renal excretion no interactions, COMBINE study; ch.31 opioid antagonists: naloxone 1-2 h renarcotisation, naltrexone t1/2 10 h with 100 mg blocking heroin 48 h, nalmefene 8-10 h derivative, buprenorphine partial mu agonist with delta/kappa antagonism, ceiling on respiratory depression, sublingual route, slow mu dissociation, Suboxone/Probuphine, high-dose antagonist action; ch.7 varenicline alpha4beta2 partial agonist superior to bupropion; ch.32 GHB/sodium oxybate GABAB, narcolepsy restricted access, date-rape PK; ch.41 Contrave-type approved weight-loss list), K.D. Tripathi Essentials of Medical Pharmacology 7e (ch.28 disulfiram 500->250 mg regimen, 12 h alcohol-free rule, irreversible ALDH inhibition 7-14 days, aldehyde syndrome, CYP inhibition, metronidazole/procarbazine disulfiram-like reactions; naltrexone NALTIMA in Indian deaddiction centres; acamprosate 666 mg TID loose motions; ch.30 varenicline 0.5->1 mg BD <=12 weeks; ch.34 buprenorphine t1/2 40 h, naloxone non-reversal, kappa antagonism, NORPHIN/TIDIGESIC brands; nalmefene no hepatotoxicity, higher oral bioavailability, longer acting), and KYP monograph anchors (naltrexone opioid-free 7-10 days window; buprenorphine CYP3A4; varenicline renal adjust, non-CYP, cimetidine interaction, boxed warning 2008 removed 2016 after EAGLES; nalmefene as-needed EU alcohol reduction and no abuse potential; naltrexone-bupropion contraindication set; sodium oxybate two divided night doses and REMS; disulfiram copper chelation in Wilson's disease). No copyrighted text reproduced.",
+ "schema": {
+  "core_fields": "id, question, options[4], correctIndex, explanation, afterSectionId - IDENTICAL to KYP microQuizzes",
+  "metadata_fields": "drugSlug, domain, difficulty (Foundation|Clinical|Advanced), style (vignette|recall) - batch extras",
+  "notes": [
+   "afterSectionId values are real section ids observed live on KYP pages: top, quick-facts, mechanism, timeline, neurotransmitters, neural-pathways, knowledge-graph, high-yield-summary.",
+   "Answer positions deliberately spread: A17 B16 C16 D16 (see stats.answerSpread).",
+   "QA gate: this batch passed scripts/mcq_4step_check.py after extending the fact table with the eight substance-use-disorder agents.",
+   "id pattern: sud-<code>-01..08 per drug (nal/bnp/acm/dis/var/nmf/ntb/sob) + one sud-mix-01 class-summary at the end."
+  ]
+ },
+ "stats": {
+  "total": 65,
+  "byDrug": {
+   "naltrexone": 8,
+   "buprenorphine": 8,
+   "acamprosate": 8,
+   "disulfiram": 8,
+   "varenicline": 8,
+   "nalmefene": 8,
+   "naltrexone-bupropion": 8,
+   "sodium-oxybate": 8,
+   "mixed": 1
+  },
+  "byDifficulty": {
+   "Foundation": 16,
+   "Clinical": 36,
+   "Advanced": 13
+  },
+  "byStyle": {
+   "recall": 29,
+   "vignette": 36
+  },
+  "byDomain": {
+   "Mechanism & Neuroscience": 10,
+   "Adverse Effects & Safety": 16,
+   "Clinical Uses": 15,
+   "Exam Pearls": 9,
+   "Pharmacokinetics": 8,
+   "Indian Practice": 2,
+   "Drug Interactions": 5
+  },
+  "answerSpread": {
+   "0": 17,
+   "1": 16,
+   "2": 16,
+   "3": 16
+  }
+ },
+ "questions": [
+  {
+   "id": "sud-nal-01",
+   "drugSlug": "naltrexone",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Naltrexone's core receptor pharmacology - the property that lets it cut alcohol craving and heavy drinking - is best described as:",
+   "options": [
+    "Nonselective mu-opioid receptor antagonism that blocks endorphin-mediated reinforcement of drinking",
+    "Partial mu-opioid agonism that substitutes for endogenous opioids the way methadone does",
+    "D2 dopamine receptor antagonism that blunts mesolimbic reward signalling",
+    "Inhibition of aldehyde dehydrogenase, raising aversive acetaldehyde after each drink"
+   ],
+   "correctIndex": 0,
+   "explanation": "Naltrexone is a relatively long-acting, nonselective opioid antagonist; by blocking mu-opioid receptors it weakens the endorphin-to-dopamine reinforcement that alcohol and opioids share, which is why craving and drinking days fall (Katzung ch.23; Tripathi ch.28). The partial-agonist profile belongs to buprenorphine, D2 blockade is typical-antipsychotic logic, and aldehyde dehydrogenase inhibition is disulfiram's aversion mechanism - none of these is naltrexone's antagonist action."
+  },
+  {
+   "id": "sud-nal-02",
+   "drugSlug": "naltrexone",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 44-year-old man who has been taking tramadol 100 mg three times daily for chronic back pain enters an alcohol deaddiction programme and is started on oral naltrexone 50 mg the same morning. Ninety minutes later he has severe myalgia, abdominal cramps, diarrhoea, piloerection, yawning and lacrimation. The most likely explanation is:",
+   "options": [
+    "Acute naltrexone hepatotoxicity presenting within hours of the first dose",
+    "Precipitated opioid withdrawal - naltrexone's mu-antagonism met a patient who was still opioid-dependent on tramadol",
+    "Serotonin syndrome from tramadol's serotonergic activity triggered by naltrexone co-administration",
+    "A disulfiram-ethanol reaction from hidden alcohol in his lunch"
+   ],
+   "correctIndex": 1,
+   "explanation": "Administering an opioid antagonist to an opioid-dependent patient almost instantaneously precipitates an abstinence syndrome, so patients must be opioid-free (classically 7-10 days for naltrexone) before the first dose - tramadol's opioid agonism counts (Katzung ch.31). Serotonin syndrome would show hyperreflexia, clonus and autonomic storm rather than the miosis-piloerection-yawning pattern, and naltrexone hepatotoxicity is a subacute, dose-dependent problem, not a 90-minute syndrome."
+  },
+  {
+   "id": "sud-nal-03",
+   "drugSlug": "naltrexone",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "The standard adult dosing of naltrexone in alcohol-use-disorder maintenance is:",
+   "options": [
+    "666 mg (two 333 mg enteric-coated tablets) three times daily",
+    "0.5 mg daily titrated to 1 mg twice daily for up to 12 weeks",
+    "Oral 50 mg once daily, with an extended-release intramuscular injection every 4 weeks for adherence problems",
+    "Sublingual 2-16 mg daily, with a subcutaneous implant lasting 6 months"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung gives oral naltrexone 50 mg once daily for alcoholism, with an extended-release IM formulation given every 4 weeks - the depot is the adherence answer (Tripathi lists NALTIMA 50 mg tablets used in Indian deaddiction centres). Sublingual dosing with a 6-month implant is buprenorphine's Probuphine concept, the 666 mg three-times-daily regimen is acamprosate, and 0.5-1 mg twice-daily titration is varenicline's smoking-cessation schedule."
+  },
+  {
+   "id": "sud-nal-04",
+   "drugSlug": "naltrexone",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Baseline liver-function testing before naltrexone is standard practice because:",
+   "options": [
+    "Standard 50 mg dosing predictably causes fulminant hepatic failure within weeks",
+    "The drug is cleared entirely by the liver with no renal route at all",
+    "It chelates hepatic copper, causing cumulative copper-toxic liver injury",
+    "Naltrexone can cause dose-dependent hepatotoxicity, and the naltrexone-disulfiram combination is specifically avoided as both drugs are potential hepatotoxins"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung notes dose-dependent hepatotoxicity with abnormalities in serum aminotransferases and advises caution plus the explicit avoidance of combining naltrexone with disulfiram, since both are potential hepatotoxins. Fulminant failure at standard doses is not the teaching point, acamprosate - not naltrexone - is the renally-cleared member of this class, and copper chelation is disulfiram's Wilson-disease adjunct role, not a naltrexone toxicity."
+  },
+  {
+   "id": "sud-nal-05",
+   "drugSlug": "naltrexone",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 38-year-old woman three months into naltrexone maintenance for alcohol-use disorder is listed for laparoscopic cholecystectomy. The surgeon proposes standard postoperative opioid analgesia. The pharmacological concern is:",
+   "options": [
+    "Naltrexone blocks the analgesic effect of usual opioid doses, so perioperative planning needs regional or non-opioid analgesia, or the antagonist must be held well in advance",
+    "Naltrexone potentiates opioid respiratory depression, so all opioid doses must be halved",
+    "Naltrexone must be stopped and replaced with methadone before any operation",
+    "Opioids remain fully effective under naltrexone but predictably cause histamine-driven hypotension"
+   ],
+   "correctIndex": 0,
+   "explanation": "Naltrexone blocks the therapeutic analgesic effects of usual doses of opioids - a classic exam trap in any surgical patient on opioid-antagonist therapy (Katzung ch.31). Antagonism does not potentiate respiratory depression, methadone substitution is unnecessary for a naltrexone patient, and histamine-mediated hypotension is morphine's own adverse effect, which is moot while the mu receptors are blocked."
+  },
+  {
+   "id": "sud-nal-06",
+   "drugSlug": "naltrexone",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which pharmacokinetic profile makes oral 'opioid blockade' maintenance with naltrexone practical?",
+   "options": [
+    "A terminal half-life near 40 hours from tight receptor binding with biliary-faecal excretion",
+    "A half-life of about 10 hours, with 100 mg orally blocking the effects of injected heroin for up to 48 hours",
+    "A half-life of about 1 hour, so blockade requires a continuous intravenous infusion",
+    "A half-life of 8-10 hours that is only achievable intravenously, with no useful oral activity"
+   ],
+   "correctIndex": 1,
+   "explanation": "Naltrexone is well absorbed orally (unlike naloxone), has a half-life of about 10 hours, and a single 100 mg oral dose blocks injected heroin for up to 48 hours - the numbers that make maintenance feasible (Katzung ch.31). The 1-2 hour intravenous action describes naloxone, the 8-10 hour IV-only profile describes nalmefene in US practice, and the 40-hour terminal half-life with biliary excretion is buprenorphine's fingerprint."
+  },
+  {
+   "id": "sud-nal-07",
+   "drugSlug": "naltrexone",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "At an Indian deaddiction centre, a motivated patient has just completed supervised alcohol withdrawal and asks when naltrexone (NALTIMA 50 mg) should begin and why adherence is stressed. The correct teaching is:",
+   "options": [
+    "Start only if the patient accepts daily breath-alcohol testing for the next 6 months",
+    "Start at 250 mg daily for one week, then reduce to a 50 mg maintenance dose",
+    "Start only after the withdrawal phase in a motivated patient; good adherence is what delivers reduced craving and fewer drinking days, and the monthly depot can cover forgetfulness",
+    "Start during active withdrawal so the drug smooths the tremor and autonomic symptoms"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi describes naltrexone as approved for relapse prevention in alcohol-dependent subjects and used at most Indian deaddiction centres after withdrawal, in motivated patients; Katzung adds that benefit tracks adherence and that the IM depot is an accepted alternative. Naltrexone is not a withdrawal-suppressing drug (benzodiazepines are), breath-testing is not a licensing condition, and the 500 mg to 250 mg step-down is disulfiram's aversion regimen, not naltrexone's."
+  },
+  {
+   "id": "sud-nal-08",
+   "drugSlug": "naltrexone",
+   "domain": "Clinical Uses",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A heavy drinker tells you his brother had a dramatic reduction in craving on naltrexone while a cousin on the same dose felt nothing. The pharmacogenomic concept this illustrates is:",
+   "options": [
+    "CYP2D6 poor-metaboliser status predicts naltrexone toxicity and mandates halving the dose",
+    "Inactive ALDH2 enzyme genotype predicts strong naltrexone benefit rather than aversion benefit",
+    "A GABAA-receptor polymorphism exclusively determines acamprosate response and predicts naltrexone failure",
+    "A polymorphism in the mu-opioid receptor gene has been linked to a blunted naltrexone response, raising the possibility of genotype-guided alcohol-dependence pharmacotherapy"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung ch.23 highlights the link between a polymorphism in an opioid receptor gene and a blunted naltrexone response, explicitly raising genotype-guided pharmacotherapy as a possibility - the exam-friendly pharmacogenomics hook of this class. Naltrexone response is not taught as CYP2D6-dependent, ALDH2 loss-of-function is the protective/aversion-sensitivity genotype, and no exclusive GABAA-acamprosate genotype rule exists."
+  },
+  {
+   "id": "sud-bnp-01",
+   "drugSlug": "buprenorphine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Buprenorphine's receptor signature - the reason it is called a mixed agonist-antagonist - is:",
+   "options": [
+    "Partial mu-receptor agonism with low intrinsic activity, plus antagonist actions at delta and kappa receptors",
+    "Full mu-receptor agonism with the highest affinity among clinically used opioids",
+    "Pure mu-receptor antagonism with oral activity and 48-hour heroin blockade",
+    "Partial agonism at alpha4beta2 nicotinic receptors that reduces tobacco craving"
+   ],
+   "correctIndex": 0,
+   "explanation": "Buprenorphine is a potent, long-acting phenanthrene that is a partial mu-receptor agonist (low intrinsic activity) and an antagonist at delta and kappa receptors - the mixed agonist-antagonist definition (Katzung ch.31; Tripathi adds kappa antagonism). Full high-affinity agonism describes fentanyl or methadone, pure oral antagonism with 48-hour blockade is naltrexone's profile, and alpha4beta2 partial agonism is varenicline's mechanism."
+  },
+  {
+   "id": "sud-bnp-02",
+   "drugSlug": "buprenorphine",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "An opioid-substitution clinic choosing between buprenorphine and methadone asks you to defend buprenorphine's overdose-safety reputation. The exam pearl is:",
+   "options": [
+    "Buprenorphine carries no dependence liability, so overdose only occurs in naive users",
+    "Respiratory depression from buprenorphine exhibits a ceiling effect, so dose escalation is far less likely to be fatal than with full agonists like methadone",
+    "Buprenorphine causes less constipation and miosis, therefore overdose is pharmacologically impossible",
+    "A single standard 0.4 mg dose of intravenous naloxone reliably reverses any buprenorphine overdose"
+   ],
+   "correctIndex": 1,
+   "explanation": "The ceiling effect on buprenorphine's respiratory depression is the signature safety differentiator versus full agonists - Tripathi and Katzung both teach it, and it is why buprenorphine is the safer maintenance opioid (Katzung ch.31). Overdose still occurs, especially with injected misuse plus benzodiazepines; naloxone fails to reverse established buprenorphine effect because of tight receptor binding; and dependence, though milder and slower in onset, is real."
+  },
+  {
+   "id": "sud-bnp-03",
+   "drugSlug": "buprenorphine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A man used heroin last night and presents this morning to an opioid-treatment clinic asking to start buprenorphine maintenance today. He has only mild pinpoint pupils and no withdrawal signs. The correct instruction is:",
+   "options": [
+    "Give a methadone loading dose first and start buprenorphine the following day",
+    "Give intramuscular buprenorphine 0.3 mg now as a bridge to sublingual therapy",
+    "Wait until objective moderate withdrawal signs appear before the first dose - switching from a full agonist too early precipitates withdrawal",
+    "Give the first sublingual dose immediately; buprenorphine never interacts with residual heroin"
+   ],
+   "correctIndex": 2,
+   "explanation": "Because buprenorphine is a partial mu agonist with high affinity, giving it while full-agonist opioids still occupy receptors precipitates withdrawal - induction is deliberately delayed until moderate withdrawal is objectively present (Katzung ch.31). Immediate dosing or an IM bridge would trigger exactly that syndrome, and loading with methadone first increases the agonist burden and makes the problem worse, not better."
+  },
+  {
+   "id": "sud-bnp-04",
+   "drugSlug": "buprenorphine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which trio correctly captures buprenorphine's pharmacokinetics?",
+   "options": [
+    "Fully bioavailable by mouth, half-life about 10 hours, excreted unchanged in urine",
+    "Intramuscular route only, half-life 1-2 hours, cleared by glucuronidation",
+    "Hepatically activated prodrug, half-life 8-10 hours, dose limited by a toxic metabolite",
+    "Sublingual route preferred, long duration from slow dissociation from mu receptors, terminal half-life around 40 hours with biliary-faecal excretion"
+   ],
+   "correctIndex": 3,
+   "explanation": "Significant first-pass metabolism makes the sublingual route preferred (Katzung); its long duration reflects slow dissociation from mu receptors, rendering effects resistant to naloxone reversal; and Tripathi gives a terminal half-life of about 40 hours with mostly unchanged biliary excretion into faeces. Oral 10-hour renal excretion matches no opioid here, the 1-2 hour glucuronidated profile is naloxone's, and a hepatotoxic-metabolite prodrug story belongs to no formulation of buprenorphine."
+  },
+  {
+   "id": "sud-bnp-05",
+   "drugSlug": "buprenorphine",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A patient stable on buprenorphine maintenance has been buying alprazolam from a friend for sleep. The single most important counselling point is:",
+   "options": [
+    "Combining buprenorphine with benzodiazepines or other CNS depressants can cause serious respiratory depression and death, even though buprenorphine alone has a ceiling effect",
+    "Benzodiazepines induce CYP3A4 and will drop buprenorphine levels, precipitating acute withdrawal",
+    "The combination is recommended because benzodiazepines prevent the seizures that buprenorphine causes at maintenance doses",
+    "Only intravenous misuse is dangerous; taking benzodiazepines by mouth alongside buprenorphine is entirely safe"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung is explicit that buprenorphine formulations can still cause serious respiratory depression and death, particularly when misused intravenously or combined with benzodiazepines, sedatives, antipsychotics or alcohol - the ceiling lowers risk but does not abolish it. Benzodiazepines are not meaningful 3A4 inducers here, buprenorphine maintenance is not a seizure-producing state, and oral co-ingestion is precisely the documented fatal pattern."
+  },
+  {
+   "id": "sud-bnp-06",
+   "drugSlug": "buprenorphine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A patient on methadone 60 mg daily is switched directly to buprenorphine, taking the first sublingual dose 6 hours after his last methadone dose. Within the hour he has cramps, diarrhoea, gooseflesh and agitation. What happened and how is it prevented?",
+   "options": [
+    "Acute buprenorphine hepatotoxicity presenting within the first hour",
+    "Precipitated withdrawal - buprenorphine was started too soon after a full agonist; switch only when the methadone dose is low and moderate withdrawal is present",
+    "Acute methadone overdose - the two drugs simply added their agonist effects together",
+    "A histamine reaction to buprenorphine excipients requiring immediate adrenaline"
+   ],
+   "correctIndex": 1,
+   "explanation": "This is the induction mirror of the naltrexone trap: a partial agonist with high affinity displaces the full agonist from receptors, precipitating withdrawal when the gap after the last methadone dose is short and the dose is still high (Katzung ch.31). Additive agonism is the opposite of what occurred, there is no histamine or anaphylactic pattern here, and hepatic injury is a subacute naltrexone-themed concern rather than a 1-hour event."
+  },
+  {
+   "id": "sud-bnp-07",
+   "drugSlug": "buprenorphine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "How does high-dose buprenorphine behave at the mu receptor, and why does this matter in opioid-use-disorder treatment?",
+   "options": [
+    "At high doses it loses mu-receptor affinity and acts purely at ORL1 receptors",
+    "At high doses it blocks its own CYP3A4 metabolism, producing dose-proportional accumulation",
+    "At high doses its own mu-antagonist-like action limits analgesia and respiratory depression, widening the safety margin compared with methadone",
+    "At high doses it converts into a full agonist, so analgesia and respiratory depression rise without limit"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung states that high-dose administration of buprenorphine results in a mu-opioid antagonist action that limits its analgesic and respiratory-depressant properties - the receptor-level explanation of the ceiling that makes it the gold-standard maintenance agonist. It never converts to an unlimited full agonist, ORL1 (orphanin) binding exists but does not explain the ceiling, and its CYP3A4 metabolism is not self-inhibited."
+  },
+  {
+   "id": "sud-bnp-08",
+   "drugSlug": "buprenorphine",
+   "domain": "Indian Practice",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "top",
+   "question": "Which statement about buprenorphine's Indian formulations and uses is correct?",
+   "options": [
+    "It is available only as a once-monthly intramuscular depot suspension",
+    "It is marketed in India only as an antitussive syrup for refractory cough",
+    "Its use is restricted to anaesthetists for intraoperative analgesia alone",
+    "It is available as 0.2 mg sublingual tablets and 0.3 mg/mL injections for pain, and in higher sublingual doses for opioid-substitution therapy"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi lists NORPHIN, TIDIGESIC and BUPRIGESIC 0.3 mg/mL injections and 0.2 mg sublingual tablets, with buprenorphine recommended for pain as well as the treatment of morphine dependence - the basis of Indian opioid-substitution practice. There is no depot-only reality (monthly IM depots belong to naltrexone and antipsychotics), it is not an antitussive, and its use extends far beyond the operating theatre."
+  },
+  {
+   "id": "sud-acm-01",
+   "drugSlug": "acamprosate",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Acamprosate's pharmacological identity, as examined in Indian and US tests, is best stated as:",
+   "options": [
+    "A taurine analogue that weakly antagonises NMDA-glutamatergic transmission while modestly activating GABAA receptors",
+    "A GABA-transaminase inhibitor that raises brain GABA concentrations progressively",
+    "A benzodiazepine-site agonist with full hypnotic efficacy on the GABAA receptor",
+    "A selective 5-HT3 antagonist that blocks the emetic and reward pathways"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung characterises acamprosate's best-studied actions as weak NMDA-receptor antagonism and GABAA-receptor activation, and the drug is a taurine analogue (KYP monograph) - a glutamatergic stabiliser for the post-withdrawal brain. GABA-transaminase inhibition is vigabatrin's mechanism, full benzodiazepine-site agonism is the sedative-hypnotic model acamprosate deliberately avoids, and 5-HT3 antagonism describes ondansetron."
+  },
+  {
+   "id": "sud-acm-02",
+   "drugSlug": "acamprosate",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 52-year-old man with alcoholic cirrhosis (Child-Pugh B, controlled ascites, deranged transaminases) has completed detoxification and wants a medicine to help him stay abstinent. The most appropriate choice is:",
+   "options": [
+    "Chlordiazepoxide maintenance 25 mg three times daily for the next 6 months",
+    "Acamprosate, because it is eliminated by the kidneys and lacks the hepatic-toxicity concerns of the other relapse-prevention options",
+    "Disulfiram 250 mg daily, the classic aversion drug suitable for every newly abstinent patient with liver disease",
+    "Naltrexone 50 mg daily, first-line here because its hepatic metabolism is negligible"
+   ],
+   "correctIndex": 1,
+   "explanation": "Acamprosate is eliminated by the kidneys and lacks the hepatic-toxicity signal, making it the mirror-image choice in cirrhosis (Katzung ch.23; KYP anchor) - the classic cirrhosis question pairs it against disulfiram and naltrexone. Disulfiram is inappropriate in liver disease and only for supervised motivated abstinence, naltrexone has dose-dependent hepatotoxicity with transaminase caution, and benzodiazepine maintenance is a withdrawal treatment lasting days, not months."
+  },
+  {
+   "id": "sud-acm-03",
+   "drugSlug": "acamprosate",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 61-year-old diabetic hypertensive man with eGFR 28 mL/min on five regular tablets is about to start acamprosate. The correct pharmacokinetic counselling is:",
+   "options": [
+    "It undergoes heavy first-pass metabolism, so it must be taken on an empty stomach to be absorbed",
+    "It auto-induces its own metabolism, so plasma levels fall over the first weeks and the dose must be escalated",
+    "Acamprosate is eliminated almost entirely by the kidneys, so the dose must be reduced in renal impairment - and it will not clash with his cardiovascular tablets",
+    "It is cleared by CYP3A4, so grapefruit juice and ketoconazole must be avoided"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung notes acamprosate is eliminated renally and does not appear to participate in drug-drug interactions; the label requires dose adjustment in renal impairment - the renal-versus-hepatic mirror that makes it the choice in cirrhosis and the caution in CKD (KYP anchor). There is no CYP3A4 story, food actually reduces its absorption (so it is taken with meals anyway rather than fasted), and autoinduction is carbamazepine's signature, not acamprosate's."
+  },
+  {
+   "id": "sud-acm-04",
+   "drugSlug": "acamprosate",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Foundation",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "Two weeks after starting acamprosate, a patient reports daily loose motions and asks whether he should abandon the tablet. The best advice is:",
+   "options": [
+    "Diarrhoea signals developing pancreatitis from acamprosate, so stop it permanently",
+    "Diarrhoea proves the tablets are not being absorbed, so double the dose immediately",
+    "Diarrhoea means he has secretly resumed drinking, so escalate to disulfiram",
+    "Diarrhoea is acamprosate's most common adverse effect; taking it with food, maintaining hydration, and usually continuing the drug is the standard approach"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi lists loose motions as the common side effect of acamprosate (with nausea, abdominal pain and itching), so a symptomatic but benign GI profile is expected and manageable rather than a stop signal. Pancreatitis is not the associated pattern, doubling the dose would aggravate the problem, and no pharmacological rule lets diarrhoea certify relapse to drinking."
+  },
+  {
+   "id": "sud-acm-05",
+   "drugSlug": "acamprosate",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "In exam terms, how do the relapse-prevention goals of acamprosate and naltrexone differ?",
+   "options": [
+    "Acamprosate is used to maintain complete abstinence after withdrawal, whereas naltrexone mainly reduces craving and relapse to heavy drinking if a slip occurs",
+    "Acamprosate blunts the euphoria of the first drink, whereas naltrexone restores normal glutamate tone",
+    "Both are opioid antagonists with interchangeable indications in alcohol-use disorder",
+    "Acamprosate is an aversion agent, whereas naltrexone is a substitution agonist"
+   ],
+   "correctIndex": 0,
+   "explanation": "The canonical dichotomy: acamprosate (glutamatergic stabiliser) is marketed on abstinence maintenance, while naltrexone (mu-antagonist) reduces craving and heavy-drinking relapse - Tripathi rates acamprosate's abstinence efficacy comparable to naltrexone, and Katzung details the COMBINE trial where acamprosate alone fell short. The swapped definitions invert the pair's mechanisms, opioid antagonism is naltrexone's alone, and aversion and substitution belong to disulfiram and buprenorphine/methadone respectively."
+  },
+  {
+   "id": "sud-acm-06",
+   "drugSlug": "acamprosate",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A patient finishes a 7-day benzodiazepine taper for alcohol withdrawal and is now tremor-free and motivated. When should acamprosate start and how is it used?",
+   "options": [
+    "Give one monthly depot injection and reassess the need at 3 months",
+    "Start soon after withdrawal is complete and give it continuously - around 666 mg three times daily alongside psychosocial therapy",
+    "Start only after at least 3 months of laboratory-verified abstinence",
+    "Start only during an active withdrawal so the drug can blunt the acute syndrome"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi advises starting acamprosate soon after withdrawing alcohol and continuing it continuously (666 mg two to three times daily) with social and motivational therapy - the window immediately after detox is when it works. Waiting months squanders the highest-risk period, acamprosate is not a withdrawal-suppressing drug (benzodiazepines are), and no depot formulation of acamprosate exists."
+  },
+  {
+   "id": "sud-acm-07",
+   "drugSlug": "acamprosate",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "A polymorbid hypertensive patient on five drugs asks whether acamprosate will clash with his antihypertensives, statin and metformin. The honest pharmacological answer is:",
+   "options": [
+    "It displaces warfarin from albumin and predictably raises INR",
+    "It induces CYP3A4 and will cause oral-contraceptive failure",
+    "Acamprosate appears to participate essentially in no drug-drug interactions, so his existing regimen needs no change",
+    "It is a potent CYP2D6 inhibitor, so metoprolol must be stopped first"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung's alcoholism section states plainly that acamprosate does not appear to participate in drug-drug interactions - consistent with purely renal handling and no CYP dependence. CYP2D6 inhibition is paroxetine-fluoxetine territory, albumin displacement with warfarin is not an acamprosate behaviour, and enzyme-induction contraceptive failure is the carbamazepine-rifampicin lesson imported as a distractor."
+  },
+  {
+   "id": "sud-acm-08",
+   "drugSlug": "acamprosate",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Why does early abstinence make acamprosate pharmacologically rational?",
+   "options": [
+    "Alcohol withdrawal depletes endogenous opioids, and acamprosate replaces them",
+    "Withdrawal blocks dopamine reuptake, and acamprosate competitively blocks dopamine receptors",
+    "Withdrawal raises acetaldehyde concentrations, and acamprosate accelerates its oxidation",
+    "Chronic ethanol leaves a hyperexcitable glutamatergic state with blunted GABA tone; acamprosate's weak NMDA antagonism plus GABAA support dampens that craving-prone imbalance"
+   ],
+   "correctIndex": 3,
+   "explanation": "Acamprosate's molecular actions centre on the glutamate-GABA balance - weak NMDA-receptor antagonism with GABAA activation - which targets the hyperglutamatergic craving state left after chronic ethanol (Katzung ch.23). Opioid-replenishment framing describes the system naltrexone modulates (by blocking, not replacing), dopamine-receptor blockade is antipsychotic pharmacology, and acetaldehyde oxidation is disulfiram's target - which it inhibits rather than accelerates."
+  },
+  {
+   "id": "sud-dis-01",
+   "drugSlug": "disulfiram",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Disulfiram produces alcohol aversion through which mechanism?",
+   "options": [
+    "Irreversible inhibition of aldehyde dehydrogenase, so ingested alcohol accumulates acetaldehyde",
+    "Competitive inhibition of alcohol dehydrogenase, slowing the conversion of ethanol to acetaldehyde",
+    "Blockade of mu-opioid receptors that mediate the reward of alcohol",
+    "Induction of CYP2E1, which generates toxic ethanol metabolites more rapidly"
+   ],
+   "correctIndex": 0,
+   "explanation": "Disulfiram inhibits aldehyde dehydrogenase (irreversibly, per Tripathi, so fresh enzyme must be synthesised), alcohol metabolises as usual but acetaldehyde piles up and produces the distressing aldehyde syndrome (Katzung ch.23; Tripathi ch.28). Inhibiting alcohol dehydrogenase would push in the opposite direction by reducing acetaldehyde formation, mu-opioid blockade is naltrexone's reward mechanism, and CYP2E1 induction is chronic-alcohol pharmacology rather than a disulfiram action."
+  },
+  {
+   "id": "sud-dis-02",
+   "drugSlug": "disulfiram",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A man three weeks into disulfiram aversion therapy rinses with an alcohol-based mouthwash at 9 am. By 10 am he is flushed, throbbing-headed, vomiting, with BP 90/60. The correct interpretation and management is:",
+   "options": [
+    "An evolving ischaemic stroke, warranting urgent thrombolysis referral",
+    "A disulfiram-ethanol reaction from hidden alcohol - supportive care with IV fluids, antiemetics and monitoring, plus counselling about mouthwash, sauces, cough syrups and vinegar",
+    "Anaphylaxis to disulfiram, requiring immediate intramuscular adrenaline",
+    "A hypertensive emergency, requiring sublingual nifedipine at once"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung warns against any alcohol-containing medication including nonprescription products, and Tripathi's aldehyde syndrome - flushing, throbbing headache, vomiting, hypotension over 1-4 hours - is treated supportively with fluids and antiemetics; hidden-alcohol counselling is mandatory teaching. There is no urticaria or bronchospasm to support anaphylaxis, the problem here is hypotension rather than hypertension, and the toxic syndrome is far more classic than a stroke."
+  },
+  {
+   "id": "sud-dis-03",
+   "drugSlug": "disulfiram",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "The standard disulfiram aversion-therapy regimen and its preconditions (as taught from Tripathi) are:",
+   "options": [
+    "50 mg daily started 7-10 days after the last drink, with monthly liver tests",
+    "0.5-1 mg twice daily for 12 weeks, then tapered off",
+    "500 mg daily for one week, then 250 mg daily, only in well-motivated subjects who have taken no alcohol for at least 12 hours",
+    "666 mg three times daily begun the day after the last drink, lifelong"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi gives disulfiram 500 mg/day for one week followed by 250 mg daily, insisting on motivated abstinent subjects alcohol-free for 12 hours, with sensitisation peaking around 12 hours after the first dose. The 666 mg three-times-daily schedule is acamprosate, 50 mg after an opioid-free window describes naltrexone's start rules, and the 0.5-1 mg twice-daily 12-week course belongs to varenicline, not to disulfiram."
+  },
+  {
+   "id": "sud-dis-04",
+   "drugSlug": "disulfiram",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A patient stops disulfiram 'just for one day' before a wedding, drinks at the reception, and still develops a violent reaction. The pharmacokinetic explanation is:",
+   "options": [
+    "Disulfiram induces aldehyde dehydrogenase, and the induction fades within 24 hours",
+    "The reaction that day proves disulfiram was never absorbed from his gut",
+    "Alcohol dehydrogenase was inhibited, so ethanol elimination is delayed for a week",
+    "Aldehyde dehydrogenase inhibition is irreversible, so activity returns only as fresh enzyme is synthesised - sensitisation lasts about 7-14 days after the last dose"
+   ],
+   "correctIndex": 3,
+   "explanation": "Because disulfiram's inhibition of aldehyde dehydrogenase is irreversible, Tripathi teaches that sensitisation begins 2-3 hours after the first dose, peaks near 12 hours, and persists 7-14 days after stopping; Katzung adds that drug action may linger for several days after the last dose. Induction is the exact opposite of the truth, a reaction on schedule proves sensitisation persisted rather than failed, and alcohol dehydrogenase is not disulfiram's enzyme."
+  },
+  {
+   "id": "sud-dis-05",
+   "drugSlug": "disulfiram",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "An epileptic alcoholic maintained on phenytoin is started on disulfiram; on day 8 he develops ataxia, nystagmus and slurred speech. The mechanism is:",
+   "options": [
+    "Disulfiram inhibits several CYP enzymes including those clearing phenytoin, raising phenytoin levels into the toxic range",
+    "Disulfiram displaces phenytoin from plasma albumin, causing transient peak spikes",
+    "Phenytoin induces disulfiram metabolism, so alcohol sensitisation fails",
+    "Pure additive cerebellar toxicity of the two drugs at otherwise normal plasma levels"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung lists disulfiram among inhibitors of the metabolism of phenytoin, oral anticoagulants and isoniazid; Tripathi generalises it to several CYP isoenzymes with prolongation of many drugs' half-lives - so day-8 phenytoin toxicity is textbook. Displacement is a transient effect that does not build over a week, induction runs in the wrong direction, and 'additive at normal levels' is not a mechanism anyone can verify."
+  },
+  {
+   "id": "sud-dis-06",
+   "drugSlug": "disulfiram",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A severe disulfiram-ethanol reaction with vomiting, flushing and circulatory collapse arrives in the emergency room. The correct management is:",
+   "options": [
+    "Immediate haemodialysis to clear disulfiram from the circulation",
+    "Supportive and symptomatic care - IV fluids, antiemetics, oxygen and haemodynamic monitoring, with no specific antidote for the reaction",
+    "Naloxone 0.4 mg intravenously, because acetaldehyde acts as an endogenous opioid agonist",
+    "Fomepizole, which reverses the inhibition of aldehyde dehydrogenase"
+   ],
+   "correctIndex": 1,
+   "explanation": "The disulfiram-ethanol reaction is managed supportively - fluids, antiemetics, monitoring - exactly as one manages the metronidazole-alcohol reaction that mimics it; there is no specific antidote (KYP anchor; Tripathi describes the syndrome as self-limited over 1-4 hours). Naloxone addresses opioid overdose and acetaldehyde is not an opioid agonist, fomepizole inhibits alcohol dehydrogenase in methanol poisoning and does not reverse aldehyde dehydrogenase, and haemodialysis is not part of this syndrome's care."
+  },
+  {
+   "id": "sud-dis-07",
+   "drugSlug": "disulfiram",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "Among the following patients seeking alcohol-relapse prevention, disulfiram should NOT be prescribed to:",
+   "options": [
+    "An abstinent patient whose spouse will supervise each dose at home",
+    "A motivated abstinent patient who has been counselled about hidden alcohol in foods and medicines",
+    "A patient who is still physically dependent on alcohol and drinking daily, awaiting detoxification",
+    "A well-motivated abstinent professional with no cardiac disease who wants a deterrent"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi is explicit that disulfiram should not be used in patients who are physically dependent on alcohol - aversion therapy is only for abstinent, motivated subjects after the dependence has been treated. Supervised dosing by a family member, intact motivation, and hidden-alcohol counselling are all standard, favourable features of disulfiram therapy, not contraindications."
+  },
+  {
+   "id": "sud-dis-08",
+   "drugSlug": "disulfiram",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Which pair of drugs is classically taught to produce disulfiram-like reactions with alcohol?",
+   "options": [
+    "Paracetamol and ondansetron",
+    "Metformin and glimepiride",
+    "Amoxicillin and azithromycin",
+    "Metronidazole and procarbazine"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi teaches a disulfiram-like intolerance to alcohol with metronidazole (manufacturers advise against drinking during therapy) and describes hot flushing with a disulfiram-like reaction when procarbazine meets alcohol - the classic exam pair. Paracetamol, ondansetron, the antidiabetics and the plain beta-lactam/macrolide antibiotics carry no such alcohol-reaction teaching, making each distractor a real drug but wrong for this question."
+  },
+  {
+   "id": "sud-var-01",
+   "drugSlug": "varenicline",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Varenicline's alpha4beta2 nicotinic partial agonism translates into which dual clinical benefit in smoking cessation?",
+   "options": [
+    "Enough agonist activity to ease craving and withdrawal, while blocking full nicotine from producing its dopamine reward burst",
+    "Complete blockade of all nicotinic receptor subtypes, abolishing withdrawal symptoms at once",
+    "Irreversible occupation of nicotinic receptors, allowing once-weekly dosing",
+    "Upregulation of dopamine transporters that accelerates dopamine clearance from the synapse"
+   ],
+   "correctIndex": 0,
+   "explanation": "Because nicotine's reinforcing action runs through alpha4beta2 receptors in the mesolimbic system, varenicline's partial agonism substitutes enough activity to dampen craving and withdrawal while its persistent antagonist component blocks the reward of smoked nicotine (Tripathi ch.30; Katzung ch.7). Full blockade would worsen withdrawal rather than ease it, the receptor binding is high-affinity but not irreversible, and dopamine-transporter upregulation is not part of its mechanism."
+  },
+  {
+   "id": "sud-var-02",
+   "drugSlug": "varenicline",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 36-year-old smoker with depression in remission asks to start varenicline. The correct, current counselling is:",
+   "options": [
+    "Bupropion must be stopped first, because the pair causes serotonin syndrome together",
+    "Nausea is the commonest effect (take each dose with food and a full glass of water); monitor mood, since neuropsychiatric events carried a boxed warning from 2008 that was removed in 2016 after the EAGLES trial",
+    "Varenicline is permanently contraindicated in anyone with any past history of depression",
+    "Sertraline must be co-prescribed with every varenicline course to prevent relapse of depression"
+   ],
+   "correctIndex": 1,
+   "explanation": "Nausea leads varenicline's adverse-effect list and is mitigated by food and water; the neuropsychiatric boxed warning added in 2008 was removed in 2016 after EAGLES found no significant increase in neuropsychiatric events, so monitoring - not a ban - is today's standard (KYP anchor; Katzung 14e notes low reported incidence with continued surveillance). Bupropion plus varenicline is an used combination rather than a serotonin-toxicity risk, and no rule demands prophylactic SSRI cover."
+  },
+  {
+   "id": "sud-var-03",
+   "drugSlug": "varenicline",
+   "domain": "Clinical Uses",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 45-year-old smoking 30 cigarettes daily has failed two structured courses of the nicotine patch. Asking for 'the most effective single tablet', you advise:",
+   "options": [
+    "Cytisine - the Indian-marketed compound with proven superiority over varenicline",
+    "Clonidine - the first-line central alpha2 agonist for tobacco dependence",
+    "Varenicline - head-to-head trials showed efficacy superior to bupropion, using a 0.5 mg once-daily titration up to 1 mg twice daily over about 12 weeks",
+    "Nortriptyline - the first-line pharmacotherapy for smokers with comorbid insomnia"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung 14e states varenicline's efficacy is superior to bupropion's, and Tripathi gives the 0.5 mg once daily titrated to 1 mg twice daily schedule for up to 12 weeks before tapering - the evidence-based choice after patch failure. Nortriptyline is a second-line antidepressant option rather than first-line, cytisine is varenicline's natural laburnum-flower analog without Indian market superiority, and clonidine is an off-label adjunct, not a first-line agent."
+  },
+  {
+   "id": "sud-var-04",
+   "drugSlug": "varenicline",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "The most common adverse effect of varenicline, and its standard mitigation, is:",
+   "options": [
+    "Diarrhoea - reduced by taking the dose with dairy products",
+    "Constipation - reduced by a high-fibre diet and osmotic laxatives",
+    "Weight gain - reduced by structured calorie counting during therapy",
+    "Nausea - reduced by taking each dose with food and a full glass of water"
+   ],
+   "correctIndex": 3,
+   "explanation": "Nausea (with insomnia and abnormal dreams) is the adverse effect that limits varenicline use, and taking it with food and water is the label-level mitigation (Katzung ch.7; KYP anchor). Diarrhoea is acamprosate's GI signature rather than varenicline's, constipation is not its profile, and post-cessation weight gain is a withdrawal phenomenon the drug does not cause - it is, if anything, the weight-gain-reduction point made for naltrexone."
+  },
+  {
+   "id": "sud-var-05",
+   "drugSlug": "varenicline",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 58-year-old diabetic smoker with diabetic nephropathy (eGFR 25 mL/min) wants to quit with varenicline. The correct dose advice is:",
+   "options": [
+    "Reduce the dose - varenicline is cleared by the kidneys with minimal CYP metabolism, so renal impairment raises its exposure",
+    "Use the full standard dose, because no smoking-cessation drug ever needs renal adjustment",
+    "Avoid varenicline and use full-dose bupropion, which is inherently safer in renal failure",
+    "Double the varenicline dose to compensate for loss of the drug during dialysis sessions"
+   ],
+   "correctIndex": 0,
+   "explanation": "Varenicline is renally excreted and not meaningfully CYP-metabolised, so the label calls for dose reduction in renal impairment (KYP anchor) - the same renal-clearance logic that governs acamprosate dosing. The blanket no-adjustment claim is false, bupropion's metabolites accumulate in renal impairment so 'inherently safer at full dose' is wrong, and doubling for dialysis invents kinetics that do not exist."
+  },
+  {
+   "id": "sud-var-06",
+   "drugSlug": "varenicline",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "An elderly smoker on cimetidine for peptic ulcer disease starts varenicline and reports disproportionate nausea. The pharmacokinetic explanation is:",
+   "options": [
+    "The pair forms an insoluble chelate in the gut that destroys both molecules",
+    "Cimetidine inhibits the renal tubular transporter that secretes varenicline, raising its plasma exposure",
+    "Cimetidine induces CYP3A4, lowering varenicline levels and triggering craving-driven overuse",
+    "Varenicline inhibits cimetidine's renal secretion, causing ulcer flare and secondary nausea"
+   ],
+   "correctIndex": 1,
+   "explanation": "Varenicline's clearance is largely renal tubular secretion, and cimetidine inhibits that transporter, raising varenicline exposure and its nausea (KYP anchor; consistent with its non-CYP profile). Induction is the wrong direction for an inhibitor like cimetidine, varenicline does not slow cimetidine clearance, and gut chelation is the tetracycline-antacid interaction, not this pair."
+  },
+  {
+   "id": "sud-var-07",
+   "drugSlug": "varenicline",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 40-year-old in treatment for alcohol-use disorder who also smokes heavily asks whether the anti-smoking tablet will help or harm his drinking. The evidence-based answer is:",
+   "options": [
+    "Varenicline reduces alcohol craving but predictably worsens smoking outcomes in dual users",
+    "Varenicline is the approved first-line drug for alcohol dependence in India",
+    "Varenicline can reduce alcohol consumption in heavy-drinking smokers, so treating his tobacco dependence now is reasonable with monitoring",
+    "Varenicline is contraindicated in any patient with alcohol-use disorder"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung's alcoholism section cites trial evidence that varenicline decreases alcohol consumption in heavy-drinking smokers, so dual-dependence treatment is evidence-supported rather than forbidden. There is no alcohol-use-disorder contraindication, smoking outcomes are not worsened in dual users, and first-line approval for alcohol dependence belongs to naltrexone, acamprosate and disulfiram - not varenicline."
+  },
+  {
+   "id": "sud-var-08",
+   "drugSlug": "varenicline",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "The partial-agonist teaching point that varenicline shares with aripiprazole is that:",
+   "options": [
+    "Both are competitive antagonists at the same receptor family, differing only in dose",
+    "Both induce their own receptors over weeks, mandating automatic dose escalation",
+    "Both act exclusively on presynaptic autoreceptors, leaving postsynaptic signalling untouched",
+    "Both use partial agonism to provide baseline receptor activity while blocking overstimulation by the full agonist, whether nicotine or dopamine"
+   ],
+   "correctIndex": 3,
+   "explanation": "Varenicline at alpha4beta2 nicotinic receptors and aripiprazole at D2 receptors apply the same stabiliser logic - partial agonism supplies enough signal to prevent deficits yet caps the full agonist's overshoot; this cross-class parallel is a favourite INI-CET connection. Calling either drug a competitive antagonist destroys the concept, receptor self-induction is not part of either story, and neither is exclusively an autoreceptor agent."
+  },
+  {
+   "id": "sud-nmf-01",
+   "drugSlug": "nalmefene",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Nalmefene's receptor profile and chemistry are best described as:",
+   "options": [
+    "A pure opioid antagonist - mu-blockade with partial kappa-antagonist activity - chemically a derivative of naltrexone",
+    "A mixed agonist-antagonist with strong kappa-agonism that produces dysphoria",
+    "A delta-selective opioid agonist developed as an antitussive",
+    "A sigma-receptor agonist producing psychotomimetic effects"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung groups nalmefene with naloxone and naltrexone among the pure opioid antagonists and calls it a derivative of naltrexone; the KYP monograph adds mu-antagonism with partial kappa-antagonist activity. Strong kappa agonism with dysphoria is the pentazocine-nalbuphine profile, delta-agonist antitussive framing fits no antagonist, and sigma-receptor psychotomimesis is the old nalorphine-pentazocine story, not nalmefene's."
+  },
+  {
+   "id": "sud-nmf-02",
+   "drugSlug": "nalmefene",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "An opioid-overdose patient wakes after one naloxone dose, walks out of the emergency department at 2 hours, and returns comatose at 5 hours. The teaching point for the residents is:",
+   "options": [
+    "Renarcotisation occurs because naloxone slowly converts agonists into antagonists",
+    "Naloxone's 1-2 hour action is shorter than most opioids' effect - renarcotisation risk demands prolonged observation or a longer-acting antagonist such as nalmefene (half-life about 8-10 hours)",
+    "Naloxone induces rebound opioid hypersensitivity, so every discharged patient needs a double naloxone dose",
+    "The relapse proves naloxone induced CYP2E1 and accelerated opioid metabolism"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung's antagonist section warns that a patient may recover after naloxone and relapse into coma 1-2 hours later because the antagonist outlasts nothing - hence observation and, where persistence is needed, nalmefene with its 8-10 hour half-life (KYP anchor: renarcotisation teaching). Rebound hypersensitivity, CYP2E1 induction and agonist-to-antagonist conversion are invented mechanisms that only sound plausible."
+  },
+  {
+   "id": "sud-nmf-03",
+   "drugSlug": "nalmefene",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Why might an emergency department keep nalmefene alongside naloxone?",
+   "options": [
+    "It is the first-line drug for alcohol-withdrawal delirium",
+    "It substitutes for methadone in maintenance therapy at lower cost",
+    "For reversal of long-acting opioid overdoses where repeated naloxone dosing would otherwise be needed - with no abuse potential of its own",
+    "It reverses benzodiazepine overdose when flumazenil is unavailable"
+   ],
+   "correctIndex": 2,
+   "explanation": "Like naloxone, nalmefene is used for opioid overdose but persists far longer (Katzung ch.31), making it the antagonist for long-acting opioid situations - and as a pure antagonist it has no abuse potential (KYP anchor). Flumazenil remains the benzodiazepine antidote, alcohol-withdrawal delirium is treated with benzodiazepines, and a pure antagonist can never substitute for a maintenance agonist like methadone."
+  },
+  {
+   "id": "sud-nmf-04",
+   "drugSlug": "nalmefene",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A recovering opioid-dependent patient is offered nalmefene and protests that he does not want to get 'hooked on the antidote'. The correct response is:",
+   "options": [
+    "It is a mild partial agonist, so low-grade dependence develops within a few weeks",
+    "A benzodiazepine must be co-prescribed to prevent antagonist-induced seizures",
+    "It creates lifelong opioid hypersensitivity, making future analgesia impossible",
+    "As a pure antagonist nalmefene has no abuse potential, produces no tolerance to its antagonism, and causes no withdrawal of its own - it only bites if opioids are still on board"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung notes the antagonists are almost inert without an agonist on board, there is no tolerance to their antagonistic action, and chronic administration produces no abstinence syndrome on withdrawal - the reassurance package for this exact patient (KYP anchor adds no abuse potential). No partial-agonist dependence exists, antagonist seizures are not a thing to cover, and opioid analgesia is fully possible once the antagonist has cleared."
+  },
+  {
+   "id": "sud-nmf-05",
+   "drugSlug": "nalmefene",
+   "domain": "Clinical Uses",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "A heavy drinker refuses 'total prohibition' but wants to cut down; he asks for a tablet to take on days he expects to drink. The European practice he is describing is:",
+   "options": [
+    "As-needed nalmefene before anticipated drinking - an antagonist strategy for reducing alcohol use, approved in Europe but not FDA-approved for this indication",
+    "Methadone 20 mg daily to replace alcohol's reward signal",
+    "Acamprosate 666 mg three times daily, taken only on drinking days",
+    "Disulfiram 250 mg swallowed immediately after each drink"
+   ],
+   "correctIndex": 0,
+   "explanation": "As-needed nalmefene for alcohol-use reduction is the targeted-use concept in Europe; Katzung notes nalmefene has similar effects to naltrexone in alcohol-use disorder without FDA approval for that indication (KYP anchor). Methadone is opioid maintenance, acamprosate is a continuous abstinence drug whose efficacy collapses if taken erratically, and taking disulfiram after drinking inverts the entire aversion design - the reaction would already be underway."
+  },
+  {
+   "id": "sud-nmf-06",
+   "drugSlug": "nalmefene",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which comparison of opioid-antagonist half-lives is correct?",
+   "options": [
+    "Both antagonists persist about 4 days, so duration never guides the choice",
+    "Nalmefene lasts about 8-10 hours, far beyond naloxone's 1-2 hour intravenous action - a persistence gap that matters in overdose care",
+    "Naloxone acts for 24-36 hours, dwarfing nalmefene's 1-2 hour window",
+    "Nalmefene works for roughly 5 minutes, making it ideal for rapid outpatient discharge"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung gives nalmefene a half-life of 8-10 hours against naloxone's 1-2 hour injection duration (Tripathi puts adult naloxone plasma half-life near 1 hour) - the numbers behind the renarcotisation teaching. The other options invert the ratio, invent a 5-minute antagonist, or erase a difference that is precisely the point of choosing nalmefene."
+  },
+  {
+   "id": "sud-nmf-07",
+   "drugSlug": "nalmefene",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "An unconscious patient receives intravenous nalmefene; he wakes but within 20 minutes is vomiting, has diarrhoea, gooseflesh, abdominal cramps and agitation. The correct interpretation is:",
+   "options": [
+    "Serotonin syndrome generated by nalmefene's serotonergic metabolites",
+    "Anticholinergic delirium from nalmefene's muscarinic blockade",
+    "Precipitated acute opioid withdrawal - the patient was opioid-dependent, and the antagonist instantly unmasked it",
+    "Anaphylaxis to nalmefene, requiring immediate intramuscular adrenaline"
+   ],
+   "correctIndex": 2,
+   "explanation": "Given to an opioid-dependent subject, an antagonist almost instantaneously precipitates an abstinence syndrome - vomiting, diarrhoea, cramps, piloerection and agitation are the classic picture (Katzung ch.31; Tripathi's naloxone chapter). Anaphylaxis requires bronchospasm, urticaria and hypotension rather than this autonomic pattern, nalmefene has no serotonergic story, and muscarinic blockade would produce dry secretions and delirium of a different character."
+  },
+  {
+   "id": "sud-nmf-08",
+   "drugSlug": "nalmefene",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Which statement comparing nalmefene with naltrexone is correct?",
+   "options": [
+    "Nalmefene is a partial mu agonist, which is why it suits maintenance therapy",
+    "Nalmefene is more hepatotoxic than naltrexone, so monthly liver tests are mandatory",
+    "Nalmefene is inactive by every route until hepatically activated",
+    "Nalmefene lacks naltrexone's hepatotoxicity signal, has higher oral bioavailability, and is longer acting"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi's antagonist chapter credits nalmefene with lacking naltrexone's hepatotoxicity, higher oral bioavailability and longer action; Katzung 14e adds that in the USA it is available only intravenously for overdose - together the complete comparison card. Partial agonism is buprenorphine's property, the hepatotoxicity ranking inverts the real difference, and a prodrug-activation claim has no basis for nalmefene."
+  },
+  {
+   "id": "sud-ntb-01",
+   "drugSlug": "naltrexone-bupropion",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "The pharmacological rationale for combining naltrexone with bupropion in weight management is:",
+   "options": [
+    "Naltrexone blocks the beta-endorphin feedback loop on bupropion-activated hypothalamic POMC neurons, while bupropion's DA/NE reuptake inhibition curbs appetite and craving",
+    "Naltrexone blocks intestinal mu receptors, cutting fat absorption from the gut",
+    "Bupropion inhibits pancreatic lipase while naltrexone raises GLP-1 secretion",
+    "Both drugs antagonise nicotinic taste receptors, blunting the reward of sweet foods"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung calls naltrexone plus bupropion a synergistic weight-loss strategy: bupropion (NDRI) supplies noradrenergic-dopaminergic appetite suppression, and naltrexone's mu-blockade removes the beta-endorphin brake on the activated POMC pathway (KYP anchor; Katzung ch.31 notes the pair for weight loss). Blocking fat absorption is orlistat's mechanism, lipase inhibition plus GLP-1 agonism misassembles orlistat and liraglutide, and nicotinic taste blockade belongs to no approved anti-obesity drug."
+  },
+  {
+   "id": "sud-ntb-02",
+   "drugSlug": "naltrexone-bupropion",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 39-year-old woman with BMI 33, diet-controlled type 2 diabetes, controlled blood pressure and no seizure history asks about the 'combination slimming tablet'. The approved role of naltrexone-bupropion (Contrave-type) is:",
+   "options": [
+    "A short 4-week appetite suppressant for event-driven weight loss",
+    "An FDA-approved weight-loss medication used alongside diet and exercise for chronic weight management",
+    "First-line monotherapy that can induce diabetes remission without any lifestyle change",
+    "A drug approved in India only after bariatric surgery has failed"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung lists naltrexone plus extended-release bupropion among the approved weight-loss medications (with orlistat, phentermine/topiramate, lorcaserin and high-dose liraglutide), always as an adjunct to diet and exercise (ch.41). It is not a diabetes-remission monotherapy, there is no post-bariatric-failure-only approval in India, and chronic management - not a 4-week crash - is the design."
+  },
+  {
+   "id": "sud-ntb-03",
+   "drugSlug": "naltrexone-bupropion",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 45-year-old man with BMI 34 has untreated blood pressure of 158/100 mmHg and asks to start naltrexone-bupropion for weight loss. The correct decision is:",
+   "options": [
+    "Start normally, since the pressor effect belongs to the naltrexone component, not bupropion",
+    "Start it with an added thiazide and review the combination after 6 months",
+    "Do not start it - uncontrolled hypertension is a contraindication because the bupropion component raises blood pressure and heart rate; treat the BP first",
+    "Start at double dose, because obesity-related hypertension blunts the drug's effect"
+   ],
+   "correctIndex": 2,
+   "explanation": "Bupropion raises blood pressure and heart rate, so uncontrolled hypertension is a hard contraindication for the combination (KYP anchor; the mandated exam vignette) - control the BP before considering it. Doubling a contraindicated drug compounds the hazard, the pressor effect is the bupropion component rather than naltrexone, and adding a thiazide does not convert a contraindication into a permission."
+  },
+  {
+   "id": "sud-ntb-04",
+   "drugSlug": "naltrexone-bupropion",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A patient on phenelzine for atypical depression asks for naltrexone-bupropion to lose weight. The correct answer is:",
+   "options": [
+    "Safe concurrently, since both drugs lower the seizure threshold and this combination is desirable",
+    "Safe if the phenelzine dose is halved for the duration of the weight-loss course",
+    "Contraindicated only when the patient also drinks alcohol at the same time",
+    "Contraindicated - MAOIs must be stopped with a 14-day washout before any bupropion-containing product, because of hypertensive-crisis and seizure risk"
+   ],
+   "correctIndex": 3,
+   "explanation": "Bupropion-containing products are contraindicated with MAOIs and require the standard 14-day washout (KYP anchor; the same MAOI rule that governs all antidepressant switching). Shared seizure-threshold lowering is a danger signal rather than a benefit, halving an MAOI dose does not remove a categorical interaction, and alcohol is a separate concern - the MAOI gate applies regardless."
+  },
+  {
+   "id": "sud-ntb-05",
+   "drugSlug": "naltrexone-bupropion",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A woman on naltrexone-bupropion for weight loss needs an emergency dental extraction under opioid analgesia. The counselling point is:",
+   "options": [
+    "The naltrexone component blocks the analgesic effect of usual opioid doses, so the product must be stopped well beforehand or non-opioid and regional analgesia planned",
+    "Opioids work normally but will cause severe hypertension in combination with bupropion",
+    "The bupropion component doubles opioid potency, so the opioid dose should be halved",
+    "No interaction exists - the combination only interacts with weight, nothing else"
+   ],
+   "correctIndex": 0,
+   "explanation": "The naltrexone component of the combination blocks therapeutic opioid analgesia exactly as standalone naltrexone does (Katzung ch.31; KYP anchor), so perioperative planning must account for it - the same trap as nal-05 applied to a fixed-dose combination. Opioids do not become pressor agents under bupropion, potentiation is pharmacologically backwards, and the opioid blockade is a real, examinable interaction."
+  },
+  {
+   "id": "sud-ntb-06",
+   "drugSlug": "naltrexone-bupropion",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "The most common adverse effect of naltrexone-bupropion combination therapy is:",
+   "options": [
+    "Hyperprolactinaemia with galactorrhoea and amenorrhoea",
+    "Nausea - the leading complaint, contributed to by both components",
+    "Agranulocytosis - requiring weekly absolute-neutrophil counts",
+    "Retinal pigmentary deposits - requiring annual fundoscopy"
+   ],
+   "correctIndex": 1,
+   "explanation": "Nausea is the leading complaint with the combination, contributed to by both components (KYP anchor), with insomnia, dry mouth, constipation and a modest BP/HR rise behind it. Weekly neutrophil monitoring is clozapine's burden, retinal pigmentary deposits are thioridazine's signature toxicity, and hyperprolactinaemia with galactorrhoea belongs to risperidone and amisulpride - three monitoring rules that map onto the wrong drugs."
+  },
+  {
+   "id": "sud-ntb-07",
+   "drugSlug": "naltrexone-bupropion",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "Which of these patients is an APPROPRIATE candidate for naltrexone-bupropion?",
+   "options": [
+    "A patient with bulimia nervosa in active binge-purge cycles",
+    "A patient on methadone maintenance for opioid-use disorder",
+    "A patient with BMI 31, diet-controlled diabetes, BP 128/80 on amlodipine, no seizure history and no opioid therapy",
+    "A patient with a past seizure who stopped lamotrigine one month ago"
+   ],
+   "correctIndex": 2,
+   "explanation": "This candidate clears every gate: controlled BP, no seizure history, no eating disorder, no opioid exposure (KYP anchor contraindication set). A recent seizure with an anticonvulsant just stopped is a bupropion contraindication, bulimia nervosa and other eating disorders are explicit contraindications (bupropion's seizure risk in a purging patient), and methadone maintenance guarantees both blocked analgesia and precipitated withdrawal from the naltrexone component."
+  },
+  {
+   "id": "sud-ntb-08",
+   "drugSlug": "naltrexone-bupropion",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Why is bupropion the preferred pharmacological partner of naltrexone in this weight-loss combination (rather than an SSRI)?",
+   "options": [
+    "Bupropion is a potent 5-HT2C antagonist that directly dissolves visceral fat",
+    "Bupropion raises GLP-1 secretion from intestinal L-cells",
+    "Bupropion irreversibly inhibits gastric and pancreatic lipase",
+    "Bupropion's DA/NE reuptake inhibition drives appetite suppression and craving reduction while sparing the serotonergic sexual and weight-gain baggage"
+   ],
+   "correctIndex": 3,
+   "explanation": "Bupropion is the established NDRI with virtually no direct serotonergic action - dopaminergic/noradrenergic appetite and craving control without SSRI-style weight gain or sexual dysfunction, which is what naltrexone's reward-blockade then complements (Katzung ch.30; KYP anchor). 5-HT2C agonism-selectivity was lorcaserin's mechanism, GLP-1 raising belongs to liraglutide's class, and lipase inhibition is orlistat - the distractor set is the rest of the approved weight-loss arsenal wearing bupropion's name."
+  },
+  {
+   "id": "sud-sob-01",
+   "drugSlug": "sodium-oxybate",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Sodium oxybate's chemical identity and principal receptor mediator are:",
+   "options": [
+    "The sodium salt of gamma-hydroxybutyrate (GHB), acting chiefly through GABAB receptors",
+    "A benzodiazepine-site agonist that restores GABAA chloride-channel function",
+    "A selective orexin OX2 receptor agonist that replaces lost orexin signalling",
+    "A 5-HT2A receptor agonist that suppresses abnormal REM intrusions"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung defines GHB's salt form as sodium oxybate and, on knockout-mouse evidence, concludes GABAB receptors are the sole mediators of its pharmacological action. Benzodiazepine-site agonism is the Z-drug mechanism, an orexin agonist does not exist clinically (suvorexant is the antagonist), and a 5-HT2A story fits no narcolepsy therapy."
+  },
+  {
+   "id": "sud-sob-02",
+   "drugSlug": "sodium-oxybate",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 24-year-old with narcolepsy and daily cataplexy has failed modafinil and asks about 'the night medicine given in two doses'. The correct response is:",
+   "options": [
+    "Methylphenidate 60 mg at bedtime, which consolidates night sleep and prevents cataplexy",
+    "Sodium oxybate - two divided night doses consolidate night sleep, reducing both cataplexy and daytime sleepiness, and it is dispensed only through a restricted-distribution programme",
+    "Zolpidem 10 mg twice nightly, which deepens sleep and abolishes cataplexy",
+    "Suvorexant 20 mg nightly, which replaces the lost orexin neurons"
+   ],
+   "correctIndex": 1,
+   "explanation": "Sodium oxybate treats narcolepsy with cataplexy by consolidating night sleep, decreasing daytime sleepiness and cataplexy episodes, under restricted-access distribution because of its abuse potential (Katzung ch.32; KYP anchor REMS). Z-drugs neither treat cataplexy nor carry that programme, suvorexant is an orexin antagonist and is contraindicated in narcolepsy rather than a neuron replacement, and bedtime stimulants worsen the night sleep that oxybate is designed to fix."
+  },
+  {
+   "id": "sud-sob-03",
+   "drugSlug": "sodium-oxybate",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A newly treated narcolepsy patient asks how to actually take sodium oxybate. The correct administration counselling is:",
+   "options": [
+    "Three equal doses taken at breakfast, lunch and dinner",
+    "One loading dose every Sunday night, repeated weekly",
+    "First dose at bedtime, then a second dose 2.5-4 hours later after waking briefly to an alarm - the total nightly dose is always split in two, and the patient stays in bed",
+    "A single dose every morning to cover the daytime sleepiness"
+   ],
+   "correctIndex": 2,
+   "explanation": "The drug's design is two divided night doses - one at bedtime and one 2.5-4 hours later - so that night-sleep consolidation is achieved while the patient remains in bed (KYP anchor; the mandated counselling vignette). Morning or daytime dosing inverts a night-hypnotic into a daytime sedative, three-meal dosing abolishes the sleep design, and no weekly loading schedule exists."
+  },
+  {
+   "id": "sud-sob-04",
+   "drugSlug": "sodium-oxybate",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A narcolepsy patient stable on sodium oxybate attends a party, drinks heavily and takes a friend's alprazolam. The principal danger is:",
+   "options": [
+    "Hepatotoxicity, because ethanol and oxybate compete for alcohol dehydrogenase",
+    "Acute parkinsonism from GABAB-dopamine antagonism in the basal ganglia",
+    "Hypertensive crisis from combined GABAergic blockade",
+    "Additive respiratory depression that can be fatal - alcohol and sedative-hypnotics must be strictly avoided on oxybate nights"
+   ],
+   "correctIndex": 3,
+   "explanation": "Sodium oxybate's fatal interaction is respiratory depression with alcohol and other CNS depressants (KYP anchor) - the same narrow safety margin that made GHB unusable as a general anaesthetic (Katzung ch.32). Competition for alcohol dehydrogenase is disulfiram-ethanol logic misapplied, parkinsonism is not a GABAB phenomenon, and the expected haemodynamic problem is depression, not a crisis."
+  },
+  {
+   "id": "sud-sob-05",
+   "drugSlug": "sodium-oxybate",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A pharmacy student asks why sodium oxybate is dispensed through a restricted-distribution system at all. The correct answer is:",
+   "options": [
+    "Because GHB has major abuse potential - euphoria, enhanced perception, amnesia and sedation - with a notorious date-rape history, so supply is tightly controlled",
+    "Because it causes agranulocytosis, requiring neutrophil monitoring like clozapine",
+    "Because it is an orexin agonist that could trigger insomnia epidemics if diverted",
+    "Because it binds GABAB receptors irreversibly, causing permanent sedation after one dose"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung describes GHB's euphoria, sensory enhancement and amnesia that made it a popular club drug ('liquid ecstasy', 'date rape drug'), which is why prescribed sodium oxybate sits under restricted-access rules (ch.32; KYP anchor REMS). Neutrophil monitoring is clozapine's programme, orexin agonism is not its mechanism, and GABAB binding is competitive and short-lived, not irreversible."
+  },
+  {
+   "id": "sud-sob-06",
+   "drugSlug": "sodium-oxybate",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which pharmacokinetic fingerprint belongs to GHB (sodium oxybate)?",
+   "options": [
+    "Peak effect at 24 hours with an elimination half-life of 8-10 days",
+    "Rapid absorption with peak plasma levels 20-30 minutes after a 10-20 mg/kg dose, and an elimination half-life of about 30 minutes",
+    "Slow absorption over 6 hours with a terminal half-life of about 40 hours",
+    "Complete first-pass destruction, so it must be given sublingually"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung's GHB section gives rapid absorption, maximal plasma concentration 20-30 minutes after a 10-20 mg/kg ingestion, and an elimination half-life of about 30 minutes - the short, sharp PK that explains both its club-drug appeal and its two-dose night regimen. The 40-hour half-life is buprenorphine's number, sublingual-first-pass logic is buprenorphine's route story, and a 24-hour peak with multi-day persistence belongs to no sedative here."
+  },
+  {
+   "id": "sud-sob-07",
+   "drugSlug": "sodium-oxybate",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "mechanism",
+   "question": "A 20-year-old is found collapsed at a party, briefly comatose, and wakes within 2-3 hours confused but essentially intact; friends say his drink was spiked with 'liquid ecstasy'. The receptor-biology correlate is:",
+   "options": [
+    "LSD intoxication - 5-HT2A agonism producing a 12-hour psychosis",
+    "Cannabis intoxication - CB1 agonism producing 24-hour amnesia",
+    "GHB intoxication - VTA GABA neurons are an order of magnitude more sensitive to GHB than dopamine neurons, producing sedation and amnesia with reinforcing potential",
+    "Cocaine intoxication - dopamine neurons are hyperpolarised by transporter blockade"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung ties 'liquid ecstasy' and the date-rape profile to GHB, whose low-affinity site is the GABAB receptor and whose EC50s show VTA GABA neurons about tenfold more sensitive than dopamine neurons - the basis of sedation-amnesia plus addiction liability (ch.32). Cocaine blocks the transporter and increases dopamine firing rather than hyperpolarising, the LSD duration and cannabis time-course fit neither the brief coma nor the rapid recovery."
+  },
+  {
+   "id": "sud-sob-08",
+   "drugSlug": "sodium-oxybate",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "The 'dual identity' exam framing of sodium oxybate is that it is:",
+   "options": [
+    "A first-line antiepileptic for absence seizures that doubles as a hypnotic",
+    "An orexin-replacement drug approved for insomnia with cataplexy",
+    "A pure peripheral muscle relaxant licensed for spasticity",
+    "An orphan narcolepsy therapy under restricted programmes, yet the same molecule (GHB) is an abused club drug with an amnesic, sedative misuse heritage"
+   ],
+   "correctIndex": 3,
+   "explanation": "One molecule, two worlds: prescribed sodium oxybate for narcolepsy under restricted access, and street GHB with euphoria-amnesia misuse and date-rape notoriety (Katzung ch.32; KYP anchor) - the dual-identity line examiners love. It is not an antiepileptic, orexin replacement does not exist, and the spasticity GABAB agent is baclofen, whose identity this distractor borrows."
+  },
+  {
+   "id": "sud-mix-01",
+   "drugSlug": "mixed",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "Class-summary capstone: which mechanism-to-drug pairing across the substance-use-disorder armamentarium is CORRECT?",
+   "options": [
+    "Disulfiram - irreversible aldehyde dehydrogenase inhibition that creates acetaldehyde aversion to alcohol",
+    "Naltrexone - partial mu agonism with a ceiling effect on respiratory depression",
+    "Acamprosate - alpha4beta2 nicotinic partial agonism that blunts tobacco reward",
+    "Sodium oxybate - pure mu-opioid antagonism used to cut alcohol craving"
+   ],
+   "correctIndex": 0,
+   "explanation": "The correct row is disulfiram - irreversible ALDH inhibition and acetaldehyde aversion (Tripathi ch.28). The swapped tags are the class's favourite confusions: partial mu agonism with a respiratory-depression ceiling is buprenorphine's profile, not naltrexone's antagonist action; alpha4beta2 nicotinic partial agonism is varenicline; and pure mu-antagonism for alcohol craving is naltrexone (or nalmefene), while sodium oxybate is the GABAB-acting narcolepsy drug. One correct anchor, three deliberate mis-pairings."
+  }
+ ]
+}

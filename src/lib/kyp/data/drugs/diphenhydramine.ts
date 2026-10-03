@@ -749,6 +749,110 @@ export const diphenhydramine: Drug = {
       explanation: "For insomnia (short-term): start 25-50 mg at bedtime, target 25-50 mg, maximum 50 mg. Intermittent use preferred",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "slp-dph-01",
+      question: "An 81-year-old woman with mild cognitive impairment has bought an over-the-counter diphenhydramine sleep aid and uses it nightly. Her son reports new confusion and a near-fall last week. What is the best advice?",
+      options: [
+        "Stop the diphenhydramine: its anticholinergic burden causes confusion and delirium in the elderly, and BEERS-criteria guidance says avoid it",
+        "Double the dose for stronger sedation, since over-the-counter agents cannot harm the elderly",
+        "Switch to promethazine syrup, which is safer for nightly geriatric use",
+        "Continue nightly but add donepezil to offset the anticholinergic effects"
+      ],
+      correctIndex: 0,
+      explanation: "Diphenhydramine is the classic first-generation antihistamine sleep aid whose central anticholinergic action produces confusion, delirium and falls in older adults, the signature BEERS-criteria avoid example, so the correct action is to stop it and address sleep with non-anticholinergic measures. Doubling an anticholinergic in a cognitively impaired elder worsens the risk, promethazine carries the same burden, and adding donepezil to license a harmful drug is backwards pharmacology.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "slp-dph-02",
+      question: "Diphenhydramine's sedative action is explained by:",
+      options: [
+        "Serotonin 5-HT2A antagonism with melatonin release",
+        "First-generation ethanolamine-class H1 antagonism with strong blood-brain barrier penetration",
+        "Second-generation H1 antagonism with P-glycoprotein-limited CNS entry",
+        "Agonism at GABA-A receptors at the barbiturate site"
+      ],
+      correctIndex: 1,
+      explanation: "Diphenhydramine is the prototype first-generation ethanolamine antihistamine; its marked sedation follows from lipophilic blood-brain barrier penetration and central H1 blockade, which is why it was pressed into service as an over-the-counter hypnotic. Second-generation antihistamines were designed to stay out of the CNS, and it has no GABA-A or 5-HT2A pharmacology. This same central action is what makes it anticholinergically risky in the elderly.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "slp-dph-03",
+      question: "A 33-year-old nurse has used diphenhydramine nightly for 2 weeks; it worked the first three nights but now barely helps. What is happening and what should she do?",
+      options: [
+        "She needs a higher nightly dose indefinitely to restore the first-night effect",
+        "The loss of effect proves allergy to the capsule dye",
+        "Rapid tolerance to the hypnotic effect develops within days, so diphenhydramine is a poor long-term choice; non-drug sleep measures should take over",
+        "Tolerance never develops to antihistamines, so the tablets must be expired"
+      ],
+      correctIndex: 2,
+      explanation: "Tolerance to the sedative effect of antihistamines develops rapidly, within days, which is the core reason diphenhydramine is a poor long-term hypnotic and why CBT-I and sleep-hygiene measures remain first-line for chronic insomnia. Expired tablets and capsule-dye allergy do not explain a classic tachyphylaxis curve, and escalating the dose adds anticholinergic load without restoring sleep benefit.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "slp-dph-04",
+      question: "In children, diphenhydramine and related first-generation antihistamines are known to produce:",
+      options: [
+        "Uniform deep sedation with dose-proportional opioid-like respiratory depression",
+        "Paradoxical hypotension and bradycardia as the leading overdose signs",
+        "Exclusively peripheral effects, since children's H1 receptors are all peripheral",
+        "Paradoxical excitation, and in acute overdose a belladonna-like central excitation with hallucinations and convulsions"
+      ],
+      correctIndex: 3,
+      explanation: "Children often respond to first-generation antihistamines with paradoxical excitation rather than sedation, and Tripathi's overdose description, with central excitation, tremors, hallucinations, incoordination, convulsions and flushing resembling belladonna poisoning, captures the anticholinergic toxidrome. Opioid-like respiratory depression and bradycardic collapse are not the pattern, and the CNS actions prove these drugs are not purely peripheral. Dosing in children therefore demands particular care.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "slp-dph-05",
+      question: "A 29-year-old mother with 6 months of poor sleep wants something safe from the chemist. What is the evidence-based first recommendation?",
+      options: [
+        "Cognitive behavioural therapy for insomnia with sleep hygiene, the recognised first-line treatment; OTC antihistamines are not for chronic use",
+        "Start nightly diphenhydramine 50 mg, the safest long-term option for chronic insomnia",
+        "Start zopiclone 7.5 mg nightly for at least a year",
+        "Take promethazine 25 mg each night, because prescription-only status makes it superior"
+      ],
+      correctIndex: 0,
+      explanation: "CBT-I is the recognised first-line therapy for chronic insomnia, and hypnotics, whether OTC antihistamines or prescription Z-drugs, are adjuncts for limited courses rather than substitutes. Nightly diphenhydramine brings rapid tolerance and anticholinergic load, a year of zopiclone exceeds every short-course guidance, and prescription status is not a marker of superiority. This is the question examiners use to test treatment hierarchy.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "slp-dph-06",
+      question: "Which statement about Indian diphenhydramine practice (BENADRYL) is correct?",
+      options: [
+        "100 mg intravenously three times daily as an antihypertensive",
+        "25 to 50 mg orally; it is also useful for motion sickness and for acute dystonic reactions to antipsychotics",
+        "250 to 500 mg orally; used primarily as an antidepressant in India",
+        "A 10 mg sublingual film; used for acute migraine and glaucoma attacks"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi lists diphenhydramine as BENADRYL 25 and 50 mg capsules and syrup at 25 to 50 mg orally, with uses including motion sickness (also marketed as the dimenhydrinate salt) and prompt relief of acute drug-induced dystonia through central anticholinergic action; Katzung notes its parenteral use for antipsychotic dystonic reactions. It is not an antidepressant, has no sublingual migraine or glaucoma role, and is never an antihypertensive.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "slp-dph-07",
+      question: "A 70-year-old man on amitriptyline 25 mg nightly for neuropathic pain self-medicates with diphenhydramine for sleep and now has dry mouth, constipation and urinary hesitancy. What is the mechanism?",
+      options: [
+        "Diphenhydramine potentiates amitriptyline's serotonin reuptake blockade, causing serotonin syndrome",
+        "The symptoms reflect an allergic interaction between the two molecules' metabolites",
+        "Additive anticholinergic toxicity: both drugs are antimuscarinic, so the burden sums",
+        "Amitriptyline inhibits diphenhydramine's CYP3A4 metabolism, producing opioid-like toxicity"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi warns that antihistamines given with atropine substitutes, phenothiazines, tricyclic antidepressants or disopyramide show additive anticholinergic action; the antimuscarinic burden of amitriptyline plus diphenhydramine sums, and dry mouth, constipation and urinary hesitancy are textbook anticholinergic toxicity, with delirium and urinary retention as the dangerous endpoints. No 3A4-opioid or serotonin-syndrome mechanism exists here, and an allergic interaction between metabolites is pharmacological nonsense. Deprescribing one of the two anticholinergics is the fix.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "slp-dph-08",
+      question: "A pharmacology professor asks why cetirizine and loratadine avoid the sedation and delirium risk that makes diphenhydramine unsafe in the elderly. What is the correct explanation?",
+      options: [
+        "They are given at doses 10 times lower, which abolishes all CNS action by arithmetic alone",
+        "They selectively block peripheral H2 receptors instead of H1",
+        "They are enzyme inducers that accelerate their own clearance from the brain",
+        "They penetrate the CNS poorly because of P-glycoprotein efflux at the blood-brain barrier and polar structure, keeping central H1 blockade minimal"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung explains that second-generation antihistamines are substrates of the P-glycoprotein transporter at the blood-brain barrier, so they enter the CNS poorly or not at all, giving minimal central H1 blockade; this is exactly why cetirizine, hydroxyzine's metabolite, causes only mild somnolence. Dose arithmetic is not the mechanism, these are H1 drugs with negligible H2 action, and enzyme induction does not govern brain entry. This BBB logic ties the whole antihistamine class together.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

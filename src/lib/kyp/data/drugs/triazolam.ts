@@ -812,6 +812,110 @@ export const triazolam: Drug = {
       explanation: "For sleep onset: start 0.125 mg at bedtime (elderly 0.125 fixed), target 0.125–0.25 mg, maximum 0.25 mg. Only as needed, short courses",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "bzd-tzl-01",
+      question: "Triazolam's elimination half-life is approximately:",
+      options: [
+        "1-2 hours",
+        "2-4 hours — an ultra-short hypnotic",
+        "10-15 hours",
+        "30-100 hours"
+      ],
+      correctIndex: 1,
+      explanation: "Triazolam is the ultra-short triazolobenzodiazepine — a 2-4 hour half-life that clears before morning but sets up rebound insomnia. The 1-2 hour tier belongs to zaleplon, and the longer tiers to temazepam and flurazepam respectively.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "bzd-tzl-02",
+      question: "A traveller on triazolam 0.25 mg crosses three time zones and next morning cannot recall the airport check-in or the flight safety briefing. The pharmacological explanation:",
+      options: [
+        "Retrograde amnesia from hippocampal damage",
+        "Anterograde amnesia — benzodiazepines block consolidation of new memories around dosing",
+        "A transient ischaemic attack",
+        "Jet-lag-related dream incorporation"
+      ],
+      correctIndex: 1,
+      explanation: "Benzodiazepines classically produce anterograde amnesia — events around and after dosing fail to consolidate — and triazolam, at old 0.5 mg doses, became notorious for exactly this. The history before dosing is intact (retrograde amnesia would be neurological), and TIA has no link to a hypnotic.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "bzd-tzl-03",
+      question: "Beyond insomnia, triazolam retains a legitimate niche in:",
+      options: [
+        "Chronic daily anxiety",
+        "Status epilepticus maintenance",
+        "Dental procedural sedation (short, titratable, amnesia beneficial)",
+        "Alcohol-withdrawal maintenance for months"
+      ],
+      correctIndex: 2,
+      explanation: "Dentistry still uses triazolam for short procedural sedation — rapid onset, brief span, amnesia that suits the chair. Chronic anxiety, epilepsy maintenance and long alcohol-withdrawal cover all need longer half-lives than an ultra-short hypnotic can give.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "bzd-tzl-04",
+      question: "Triazolam's signature discontinuation phenomenon is:",
+      options: [
+        "Weight gain and oedema",
+        "Hyperprolactinaemia",
+        "Constipation and ileus",
+        "Rebound insomnia — worse than baseline for a few nights after stopping"
+      ],
+      correctIndex: 3,
+      explanation: "Rebound insomnia after abrupt stop is triazolam's trademark — the ultra-short half-life lets GABA-A adaptations surface immediately. Weight gain and hyperprolactinaemia belong to other drug classes entirely, and ileus is a clozapine concern.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "bzd-tzl-05",
+      question: "Triazolam was suspended or restricted in several European countries because of:",
+      options: [
+        "Hepatic failure clusters",
+        "Confusion, amnesia and behavioural disinhibition at previously higher doses (up to 0.5-1 mg)",
+        "Cataract formation",
+        "Irreversible parkinsonism"
+      ],
+      correctIndex: 1,
+      explanation: "At the old higher doses, triazolam generated psychiatric reactions — amnesia, confusion, disinhibition — prompting bans in the UK and several European states; survival at 0.125-0.25 mg reflects dose reduction, not exoneration. Hepatic failure, cataracts and parkinsonism are not its harms.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "bzd-tzl-06",
+      question: "Triazolam's metabolic dependence and the classic contraindicated co-drug:",
+      options: [
+        "Glucuronidation — caution only in renal failure",
+        "CYP3A4 — ketoconazole, ritonavir, erythromycin/clarithromycin are contraindicated or to be avoided",
+        "Renal excretion unchanged — no interactions",
+        "CYP2C9 — warfarin is the concern"
+      ],
+      correctIndex: 1,
+      explanation: "Triazolam is a CYP3A4 substrate to an extreme degree — strong 3A4 inhibitors (azoles, ritonavir, macrolides) convert a 0.25 mg tablet into hours of profound sedation, and the label forbids such combinations. Glucuronidation is the LOT exemption, and 2C9 belongs to warfarin and phenytoin.",
+      afterSectionId: "neural-pathways",
+    },
+    {
+      id: "bzd-tzl-07",
+      question: "A patient's only problem is taking 60-90 minutes to fall asleep; she sleeps through once asleep and must wake at 5 am. The most half-life-appropriate hypnotic:",
+      options: [
+        "Flurazepam 30 mg",
+        "Diazepam 10 mg",
+        "Zaleplon 10 mg (or ultra-short hypnotic) taken at bedtime",
+        "Clonazepam 1 mg nightly for a month"
+      ],
+      correctIndex: 2,
+      explanation: "Pure sleep-onset insomnia with an early alarm wants the shortest effective span — zaleplon (or an ultra-short agent) clears before the 5 am alarm without carryover. Flurazepam and diazepam guarantee morning fog, and a month of clonazepam is a dependence treadmill.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "bzd-tzl-08",
+      question: "A patient on triazolam develops a dental abscess and is given clarithromycin. That night he is nearly unrousable. The mechanism:",
+      options: [
+        "Clarithromycin induces CYP3A4, clearing triazolam too fast",
+        "The two drugs compete for renal excretion",
+        "Clarithromycin inhibits CYP3A4, massively raising triazolam exposure",
+        "The antibiotic neutralises gastric acid, dumping the whole dose into absorption at once"
+      ],
+      correctIndex: 2,
+      explanation: "This is the classic macrolide-hypnotic interaction: clarithromycin's potent CYP3A4 inhibition turns a standard triazolam dose into profound, prolonged sedation — a recognised cause of emergency presentations. Induction is the opposite direction, renal competition is irrelevant, and gastric-acid mechanics do not apply to this pair.",
+      afterSectionId: "top",
+    },
   ],
   activeRecallQuestions: [
     {

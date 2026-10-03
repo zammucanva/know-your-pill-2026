@@ -797,6 +797,110 @@ export const molindone: Drug = {
       explanation: "For schizophrenia: start 5–10 mg twice daily, target 30–100 mg/day, maximum 225 mg/day. Titrate to 50–75 mg/day",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "tap-mol-01",
+      question: "Molindone's classification and efficacy standing are correctly stated as:",
+      options: [
+        "A dibenzodiazepine with minimal D2 affinity",
+        "A dihydroindolone; a first-generation D2 antagonist with efficacy comparable to other typical antipsychotics",
+        "A substituted benzamide selective for D2 and D3",
+        "A tetracyclic selective noradrenaline reuptake inhibitor"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung files molindone among the miscellaneous-structure first-generation antipsychotics (a dihydroindolone) and notes there is no significant efficacy difference among the typicals. The dibenzodiazepine is clozapine, the benzamide is sulpiride, and the tetracyclic NRI is maprotiline.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "tap-mol-02",
+      question: "A 19-year-old has gained 8 kg on olanzapine and refuses every switch, insisting all antipsychotics cause weight gain. Which drug is the classic counter-example taught for the least weight gain?",
+      options: [
+        "Olanzapine",
+        "Clozapine",
+        "Molindone",
+        "Chlorpromazine"
+      ],
+      correctIndex: 2,
+      explanation: "Classic teaching crowns molindone as the antipsychotic historically associated with the least weight gain — its tolerability niche before market discontinuation. Olanzapine and clozapine head the weight-gain league, and chlorpromazine reliably adds kilograms as well.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-mol-03",
+      question: "A family is relieved to learn molindone is weight-friendly, so they ask whether any counselling is still needed. The correct counselling is:",
+      options: [
+        "Weight neutrality abolishes the need for all monitoring",
+        "Only blood pressure needs attention; movement disorders are impossible",
+        "Weight benefit does not protect against EPS — dystonia, akathisia and parkinsonism still occur, so movement effects remain the counselling priority",
+        "Weekly CBCs are mandatory as with clozapine"
+      ],
+      correctIndex: 2,
+      explanation: "Molindone's advantage is metabolic, not neurological: as a first-generation D2 antagonist it still causes EPS, so dystonia, akathisia and parkinsonism counselling continues. Agranulocytosis is clozapine-specific, and declaring EPS impossible is simply false.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-mol-04",
+      question: "Molindone's clinical standing among first-generation antipsychotics is best summarised as:",
+      options: [
+        "The most efficacious option for refractory schizophrenia",
+        "A specifically approved treatment for Tourette tics",
+        "The treatment of choice in acute mania",
+        "Comparable efficacy to other typicals, with tolerability — chiefly weight — as its distinguishing appeal"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung states there is no significant efficacy difference among the first-generation agents, so molindone's appeal was tolerability, chiefly the weight story. Refractory schizophrenia is clozapine's territory, the classic tic drugs are pimozide and haloperidol, and no antipsychotic displaces mood stabilisers in mania.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-mol-05",
+      question: "A resident cannot find molindone in the hospital pharmacy and asks why. The correct answer is:",
+      options: [
+        "It was withdrawn worldwide for cardiac arrhythmia deaths",
+        "Its US marketing (brand Moban) has been discontinued for supply and commercial reasons, so availability must be checked locally before prescribing",
+        "It is available only in fixed combination with lithium",
+        "It remains the most widely stocked antipsychotic in US hospitals"
+      ],
+      correctIndex: 1,
+      explanation: "Molindone disappeared from the US market for supply and commercial reasons — not a safety withdrawal — so availability must be verified locally. The arrhythmia-withdrawal story belongs to thioridazine and mesoridazine, and the other two options are fabrications.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-mol-06",
+      question: "An obese 20-year-old with first-episode psychosis needs an antipsychotic with minimal metabolic impact. Applying current practice, the best-fitting second-generation option is:",
+      options: [
+        "Olanzapine — because it improves lipid profiles",
+        "Clozapine — for its diabetes-protective effect",
+        "Ziprasidone — the second-generation agent with the least weight gain",
+        "Quetiapine — the most weight-neutral atypical"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung identifies ziprasidone as the second-generation drug causing the least weight gain — the modern occupant of the weight-friendly niche molindone once held (with aripiprazole and lurasidone as other low-liability choices). Olanzapine and clozapine carry the greatest metabolic risk, and quetiapine is intermediate, not the most weight-neutral.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-mol-07",
+      question: "Moban is the US brand name for:",
+      options: [
+        "Thiothixene",
+        "Pimozide",
+        "Molindone",
+        "Loxapine"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung's preparation list pairs molindone with Moban. The same list pairs thiothixene with Navane, pimozide with Orap, and loxapine — as the inhaled acute-agitation product — with Adasuve, each a real brand of a different drug.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "tap-mol-08",
+      question: "Two weeks after starting an antipsychotic, a 68-year-old shows mask-like facies, shuffling gait and cogwheel rigidity; the family believes dementia is setting in. The correct assessment is:",
+      options: [
+        "Early Alzheimer's dementia — begin a cholinesterase inhibitor",
+        "Neuroleptic malignant syndrome — dantrolene immediately",
+        "Worsening psychosis — raise the antipsychotic dose",
+        "Drug-induced parkinsonism — reduce the dose or switch; levodopa will not help while D2 receptors are blocked"
+      ],
+      correctIndex: 3,
+      explanation: "Parkinsonism appearing 1-4 weeks into antipsychotic therapy (Tripathi) is dose-related D2 blockade in the nigrostriatal pathway — manage with dose reduction, an anticholinergic or a switch. Levodopa is ineffective while D2 receptors are blocked, raising the dose worsens the picture, and NMS requires fever with a marked CPK rise.",
+      afterSectionId: "brain-regions",
+    },
   ],
   activeRecallQuestions: [
     {

@@ -814,6 +814,110 @@ export const zolpidem: Drug = {
       explanation: "For sleep-onset insomnia (women): start 5 mg at bedtime, target 5 mg, maximum 5 mg. Only as needed; 5 mg ceiling",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "slp-zol-01",
+      question: "A 34-year-old woman on zolpidem 10 mg at bedtime for 3 weeks is brought in by her family after being found at 2 am preparing food in the kitchen, and on another night driving the car. She has no memory of either episode. What is the correct interpretation and action?",
+      options: [
+        "Complex sleep behaviour with amnesia, the boxed-warning adverse effect of zolpidem; stop the drug immediately",
+        "A normal parasomnia merely aggravated by coffee; continue the same dose with a caffeine restriction",
+        "Nocturnal seizure activity; add carbamazepine and continue zolpidem unchanged",
+        "Deliberate drug-seeking behaviour; switch her to a benzodiazepine such as diazepam"
+      ],
+      correctIndex: 0,
+      explanation: "Sleep-driving and sleep-eating with no memory of the event are the signature complex sleep behaviours that carry a boxed warning for zolpidem, so the correct action is immediate withdrawal of the drug. These are not benign dose-normal parasomnias and not a reason to switch to a benzodiazepine, which would add its own hangover and dependence burden. Katzung records FDA warnings for sleep-driving and somnambulistic behaviour with the sedative-hypnotics, and any patient describing night-time activity without recall on a Z-drug must have the hypnotic stopped at once.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "slp-zol-02",
+      question: "A 52-year-old woman has been taking immediate-release zolpidem 10 mg at bedtime. She reports daytime sleepiness and failed an early-morning driving simulation assessment. Which adjustment reflects the 2013 FDA labelling change?",
+      options: [
+        "Split the 10 mg tablet into two halves taken 6 hours apart",
+        "Halve the dose to 5 mg, because women clear zolpidem more slowly and are more susceptible to next-morning impairment",
+        "Double the dose to 20 mg so that tolerance to the sedative effect develops faster",
+        "Switch to triple the bedtime dose of eszopiclone for smoother coverage"
+      ],
+      correctIndex: 1,
+      explanation: "In 2013 the FDA required the recommended immediate-release zolpidem dose for women to be cut in half to 5 mg, because female patients clear the drug more slowly and showed next-morning driving impairment on the higher dose. Raising the dose, splitting it through the night, or moving to a longer half-life agent would all worsen residual sedation. Zolpidem is metabolised by CYP3A4 and its elimination half-life is greater in women and increased in the elderly, which is the pharmacokinetic basis of the label change.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "slp-zol-03",
+      question: "Zolpidem's receptor pharmacology is best described as:",
+      options: [
+        "A competitive antagonist at melatonin MT1 and MT2 receptors in the suprachiasmatic nucleus",
+        "An inverse agonist at the benzodiazepine site that raises arousal by reducing GABA tone",
+        "A positive allosteric modulator of the GABA-A receptor that binds selectively at the alpha-1 (BZ1)-containing subtype",
+        "A direct agonist at the GABA binding site itself, mimicking GABA at all subunit combinations"
+      ],
+      correctIndex: 2,
+      explanation: "Zolpidem is a non-benzodiazepine (imidazopyridine) hypnotic that potentiates GABA at GABA-A receptors containing the alpha-1 subunit, producing strong hypnotic-amnesic action with little anticonvulsant or muscle-relaxant effect. It does not open the chloride channel directly like barbiturates, and it has no action at melatonin receptors, which are the targets of ramelteon and tasimelteon. Because it binds at the benzodiazepine site, flumazenil can displace it.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "slp-zol-04",
+      question: "A 40-year-old man on rifampicin for spinal tuberculosis says his nightly zolpidem no longer puts him to sleep. What is the pharmacokinetic explanation?",
+      options: [
+        "Rifampicin inhibits CYP3A4, causing toxic zolpidem accumulation and rebound insomnia",
+        "Rifampicin induces renal clearance of unchanged zolpidem, which is the drug's main elimination route",
+        "Rifampicin down-regulates GABA-A alpha-1 subunit expression, so the receptor no longer responds to zolpidem",
+        "Rifampicin induces CYP3A4, accelerating zolpidem's hepatic metabolism and lowering its hypnotic levels"
+      ],
+      correctIndex: 3,
+      explanation: "Zolpidem is rapidly metabolised to inactive products by hepatic CYP3A4, so potent inducers such as rifampicin reduce exposure and the hypnotic effect appears to fade. Inhibition is the opposite of what is happening here, and zolpidem is cleared by hepatic metabolism rather than by renal excretion of unchanged drug. Receptor down-regulation is not the mechanism of this interaction.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "slp-zol-05",
+      question: "Which pattern of actions distinguishes zolpidem from classical benzodiazepines such as temazepam?",
+      options: [
+        "Pronounced hypnotic effect with negligible anticonvulsant and muscle-relaxant actions",
+        "Equally strong anticonvulsant, anxiolytic and muscle-relaxant actions alongside hypnosis",
+        "Marked suppression of REM sleep with reversal of the normal stage distribution",
+        "Potent anxiolytic action that makes it a first-line drug for panic disorder"
+      ],
+      correctIndex: 0,
+      explanation: "Because zolpidem acts selectively at the alpha-1-containing GABA-A subtype that mediates hypnosis, it shortens sleep latency with minimal residual sedation, but the anticonvulsant and muscle-relaxant actions that come from other alpha subtypes are not evident, and Tripathi explicitly notes its anticonvulsant and antianxiety effects are absent. It therefore cannot replace benzodiazepines in panic disorder or seizures. Its effect on sleep stages, including REM, is slight rather than marked.",
+      afterSectionId: "neurotransmitters",
+    },
+    {
+      id: "slp-zol-06",
+      question: "A young woman is brought to the emergency department drowsy after ingesting her flatmate's zolpidem tablets. Which intervention is expected to reverse the hypnotic effect?",
+      options: [
+        "Physostigmine, to reverse the central anticholinergic syndrome produced by zolpidem",
+        "Flumazenil, which competes at the benzodiazepine site on the GABA-A receptor where zolpidem binds",
+        "Naloxone, because Z-drugs act at mu-opioid receptors in overdose",
+        "N-acetylcysteine, to replenish glutathione stores consumed by zolpidem metabolism"
+      ],
+      correctIndex: 1,
+      explanation: "Zolpidem binds at the benzodiazepine site of the GABA-A receptor, so the competitive antagonist flumazenil can reverse its sedation, a favourite exam link between the benzodiazepine site and the Z-drugs. Naloxone targets opioid receptors and N-acetylcysteine is the paracetamol antidote, and neither has any role here. Zolpidem is not a significant anticholinergic, so physostigmine would not help.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "slp-zol-07",
+      question: "A pharmacist in Pune dispenses NITREST (zolpidem) 10 mg to a 46-year-old teacher for short-term insomnia. Which counselling point is the most important?",
+      options: [
+        "Continue the tablet nightly for at least six months to build tolerance to the sedation",
+        "If one tablet fails, take a second at 3 am and still drive to work at 7 am",
+        "Take a single dose immediately at bedtime, never with alcohol, and do not drive if you wake before the effect has fully worn off",
+        "Take the tablet with a bedtime snack and antacid to prolong its absorption through the night"
+      ],
+      correctIndex: 2,
+      explanation: "Zolpidem acts within about 30 to 60 minutes and its short half-life (about 2 hours per Tripathi) means a single bedtime dose only, no alcohol, and no driving after early-morning waking; complex sleep behaviours such as sleep-driving carry the boxed warning. A six-month nightly course contradicts all short-course hypnotic guidance, and redosing at night before an early drive is exactly the pattern that produces next-morning impairment. Antacids do not convert zolpidem into a sustained-release product.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "slp-zol-08",
+      question: "Regarding regulatory scheduling of hypnotics, which contrast is correct?",
+      options: [
+        "Ramelteon is Schedule IV, whereas zolpidem is freely sold over the counter worldwide",
+        "Both zolpidem and ramelteon are Schedule II drugs comparable to amphetamine",
+        "Neither zolpidem nor ramelteon carries any controlled-substance status anywhere",
+        "Zolpidem is a controlled substance (Schedule IV in the USA), whereas ramelteon has no abuse potential and is not scheduled"
+      ],
+      correctIndex: 3,
+      explanation: "Z-drugs such as zolpidem retain benzodiazepine-like dependence potential and are scheduled (C-IV in the USA), while ramelteon's melatonergic mechanism produces no euphoria or dependence and the drug is unscheduled, which is why it is the textbook choice for the insomniac with a substance-use history. Amphetamine-level Schedule II status is wrong for both, and zolpidem is prescription-only rather than an over-the-counter sale. Keeping the scheduled-versus-unscheduled contrast in mind is a recurring exam theme.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

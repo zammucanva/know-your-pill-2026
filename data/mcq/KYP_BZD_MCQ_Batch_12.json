@@ -1,0 +1,2120 @@
+{
+ "batch": "kyp-bzd-mcq-batch-12",
+ "title": "Benzodiazepine MCQ Batch 12 - 15 agents from alprazolam to loflazepate",
+ "generated": "2026-10-02",
+ "examOrientation": "Indian exams (NEET PG / INI-CET) + USMLE-style vignettes",
+ "textbookAnchors": "Facts aligned with Katzung Basic & Clinical Pharmacology 14e and K.D. Tripathi Essentials of Medical Pharmacology 7e; cross-checked against KYP monographs. USMLE board conventions for vignette style. No copyrighted text reproduced.",
+ "schema": {
+  "core_fields": "id, question, options[4], correctIndex, explanation, afterSectionId - IDENTICAL to KYP microQuizzes",
+  "metadata_fields": "drugSlug, domain, difficulty (Foundation|Clinical|Advanced), style (vignette|recall) - batch extras",
+  "notes": [
+   "afterSectionId values are real KYP drug-page section ids.",
+   "Answer positions deliberately spread (see stats.answerSpread)."
+  ]
+ },
+ "stats": {
+  "total": 121,
+  "byDrug": {
+   "alprazolam": 8,
+   "diazepam": 8,
+   "lorazepam": 8,
+   "clonazepam": 8,
+   "chlordiazepoxide": 8,
+   "clorazepate": 8,
+   "oxazepam": 8,
+   "temazepam": 8,
+   "midazolam": 8,
+   "estazolam": 8,
+   "flurazepam": 8,
+   "quazepam": 8,
+   "triazolam": 8,
+   "flunitrazepam": 8,
+   "loflazepate": 8,
+   "mixed": 1
+  },
+  "byDifficulty": {
+   "Foundation": 26,
+   "Clinical": 66,
+   "Advanced": 29
+  },
+  "byStyle": {
+   "recall": 62,
+   "vignette": 59
+  },
+  "byDomain": {
+   "Mechanism & Neuroscience": 8,
+   "Clinical Uses": 26,
+   "Pharmacokinetics": 25,
+   "Adverse Effects & Safety": 24,
+   "Drug Interactions": 9,
+   "Indian Practice": 11,
+   "Exam Pearls": 17,
+   "Active Recall": 1
+  },
+  "answerSpread": {
+   "0": 31,
+   "1": 30,
+   "2": 30,
+   "3": 30
+  }
+ },
+ "questions": [
+  {
+   "id": "bzd-alp-01",
+   "drugSlug": "alprazolam",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Alprazolam's chemical identity within the benzodiazepine family is best described as:",
+   "options": [
+    "A 1,4-benzodiazepine with a triazole ring fused at the 1,2-position — the triazolobenzodiazepine chemistry it shares with triazolam",
+    "An imidazopyridine structurally unrelated to benzodiazepines but active at the same site",
+    "A 1,5-benzodiazepine distinguished by nitrogen substitution at the ring's 5-position",
+    "A beta-carboline inverse agonist at the benzodiazepine site"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung notes the structures of alprazolam and triazolam add a triazole ring at the 1,2-position of the 1,4-benzodiazepine nucleus — the triazolobenzodiazepine subfamily. Option B is zolpidem's imidazopyridine chemistry, option C describes clobazam (the 1,5-isomer), and option D names beta-carbolines such as DMCM, which are inverse agonists and convulsants, not anxiolytics."
+  },
+  {
+   "id": "bzd-alp-02",
+   "drugSlug": "alprazolam",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 27-year-old woman reports recurrent unexpected panic attacks with palpitations, choking sensation and fear of dying, now with agoraphobic avoidance. Her physician wants rapid control of attacks while an SSRI is being titrated. The classic benzodiazepine choice here is:",
+   "options": [
+    "Oxazepam",
+    "Flurazepam",
+    "Buspirone",
+    "Alprazolam"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung states alprazolam appears more selective in panic disorder and agoraphobia than other benzodiazepines, and Tripathi documents good response in panic disorder with severe autonomic symptoms (0.25-1 mg TDS, up to 6 mg/day). Buspirone is not a benzodiazepine, takes 3-4 weeks to act and is less effective in panic; flurazepam is an obsolete hypnotic; oxazepam is the short-lasting-anxiety agent, not the classic panic drug."
+  },
+  {
+   "id": "bzd-alp-03",
+   "drugSlug": "alprazolam",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 35-year-old man on alprazolam 0.5 mg three times daily for generalised anxiety says each dose calms him but anxiety 'comes roaring back' in the gaps between doses. The pharmacokinetic explanation and the practical fix are:",
+   "options": [
+    "An excessively long half-life causes trough accumulation — the fix is once-weekly dosing",
+    "Enterogastric recirculation dumps the drug into the gut at each meal — take it with antacids",
+    "A short-intermediate half-life (about 12 hours) creates troughs of interdose rebound — a sustained-release (SR/XR) formulation can smooth them",
+    "An active metabolite competes with the parent drug — switch to a metabolite-free agent at higher TDS dosing"
+   ],
+   "correctIndex": 2,
+   "explanation": "Alprazolam's plasma half-life is about 12 hours (Tripathi's table; 12-15 hours in Katzung), so TDS dosing leaves troughs where rebound anxiety — a mini-withdrawal — emerges; Tripathi specifically recommends sustained-release tablets to obviate this interdose anxiety. Weekly dosing is fluoxetine-style pharmacology, not alprazolam's, and the recirculation and metabolite-competition stories describe mechanisms the drug does not have."
+  },
+  {
+   "id": "bzd-alp-04",
+   "drugSlug": "alprazolam",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A patient who took alprazolam 1 mg three times daily for 8 months ran out of tablets 3 days ago and now has intense anxiety, insomnia, tremor and photophobia. The correct management principle is:",
+   "options": [
+    "Reinstate the drug and taper slowly over weeks to months — abrupt cessation of a short-half-life high-potency benzodiazepine can cause severe withdrawal with rare seizures",
+    "Stop definitively and give a beta-blocker alone for two days",
+    "Switch immediately to full-dose zolpidem, a safer benzodiazepine agonist, then stop it after one week",
+    "Give a single intravenous flumazenil infusion to clear residual drug faster"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tripathi warns alprazolam's discontinuation withdrawal is relatively more marked than with other BZDs, and Katzung notes abrupt discontinuance of short-half-life sedative-hypnotics causes rebound and withdrawal — the standard response is reinstate-then-taper over weeks to months. Zolpidem is an alpha-1-selective nonbenzodiazepine, not a safe swap, and flumazenil in a dependent patient can precipitate an abstinence syndrome with seizures instead of treating withdrawal."
+  },
+  {
+   "id": "bzd-alp-05",
+   "drugSlug": "alprazolam",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Alprazolam's clearance depends chiefly on which metabolic pathway, making it vulnerable to which inhibitor pair?",
+   "options": [
+    "Direct glucuronidation — probenecid and valproate raise levels",
+    "CYP3A4 oxidative metabolism — ketoconazole and erythromycin raise levels and deepen sedation",
+    "Renal filtration of unchanged drug — trimethoprim and cimetidine raise levels",
+    "CYP2D6 hydroxylation — fluoxetine and paroxetine raise levels"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi names ketoconazole and erythromycin among CYP3A4 inhibitors that prolong benzodiazepine action, and Katzung highlights alprazolam (with diazepam, midazolam and triazolam) as a P450-sensitive agent. The glucuronidation-only pathway is the LOT signature (lorazepam-oxazepam-temazepam), renal excretion of unchanged benzodiazepine fits no member, and 2D6 belongs to tricyclics and codeine rather than alprazolam."
+  },
+  {
+   "id": "bzd-alp-06",
+   "drugSlug": "alprazolam",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Within the benzodiazepine half-life spectrum, alprazolam's elimination half-life is best matched by which figure?",
+   "options": [
+    "About 2-3 hours — the ultrashort end of the class",
+    "About 12 hours — a short-intermediate half-life that explains interdose rebound on TDS dosing",
+    "About 50-100 hours including active metabolites — the long end of the class",
+    "About 30-60 hours of effective cover with marked tissue redistribution"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi's table lists alprazolam at about 12 hours and Katzung at 12-15 hours — squarely short-intermediate, which is exactly why interdose rebound and marked withdrawal occur with TDS anxiolytic dosing. The 2-3 hour figure is triazolam's, 50-100 hours belongs to flurazepam/clorazepate territory, and 30-60 hours with redistribution mirrors diazepam — each a deliberate mirror the answer rejects."
+  },
+  {
+   "id": "bzd-alp-07",
+   "drugSlug": "alprazolam",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A Delhi psychiatrist starts a patient on 0.5 mg TDS of a high-potency anxiolytic dispensed as ALPRAX, then switches to ALPRAX-SR when interdose anxiety appears. Which drug and Indian brand family is in play?",
+   "options": [
+    "Lorazepam — LARPOSE/ATIVAN 1 and 2 mg tablets",
+    "Alprazolam — ALPRAX/ALZOLAM/RESTYL with 0.25-1 mg tablets and 0.5-1.5 mg SR/CR forms",
+    "Chlordiazepoxide — LIBRIUM 10 and 25 mg tablets",
+    "Diazepam — CALMPOSE/PLACIDOX 2, 5, 10 mg tablets"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi lists alprazolam in India as ALPRAX, ALZOLAM and RESTYL in 0.25, 0.5, 1 mg tablets with SR/CR versions at 0.5, 1, 1.5 mg, dosed 0.25-1 mg TDS up to 6 mg/day in panic disorder. The other brand families belong to batch-mates: LARPOSE/ATIVAN to lorazepam, LIBRIUM to chlordiazepoxide, and CALMPOSE/PLACIDOX to diazepam."
+  },
+  {
+   "id": "bzd-alp-08",
+   "drugSlug": "alprazolam",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 40-year-old with persistent anxiety plus low-grade depressive features (low mood, easy fatigability, no psychotic symptoms) is referred for a benzodiazepine trial. Which member is classically noted for some mood-elevating action in mild depression alongside its anxiolytic effect?",
+   "options": [
+    "Oxazepam",
+    "Clonazepam",
+    "Flurazepam",
+    "Alprazolam"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi describes alprazolam as a high-potency anxiolytic that in addition has some mood-elevating action in mild depression, making it classically useful in anxiety associated with depression. Oxazepam is the short-lasting/elderly anxiolytic, clonazepam is primarily an anticonvulsant, and flurazepam is an obsolete hypnotic — none carries the mood-elevating tag."
+  },
+  {
+   "id": "bzd-dia-01",
+   "drugSlug": "diazepam",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "The canonical benzodiazepine mechanism, exemplified by diazepam, is best stated as:",
+   "options": [
+    "Binding the alpha/gamma-interface benzodiazepine site on GABA-A receptors and increasing the FREQUENCY of GABA-gated chloride channel opening, with no direct GABA-mimetic action",
+    "Binding the barbiturate site and increasing the DURATION of channel opening, with direct channel activation at high doses",
+    "Directly activating GABA-A receptors as a full GABA agonist independent of endogenous GABA",
+    "Blocking GABA reuptake and thereby raising synaptic GABA concentrations"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tripathi and Katzung both place benzodiazepines at the alpha/gamma subunit interface, where they allosterically increase the frequency of chloride channel-opening events without opening the channel themselves — the basis of their lower ceiling of CNS depression. Option B is barbiturate pharmacology (duration increase plus direct channel opening), full GABA-mimetic activation is what barbiturates do at high concentration, and GABA reuptake blockade describes tiagabine."
+  },
+  {
+   "id": "bzd-dia-02",
+   "drugSlug": "diazepam",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "The mother of a 6-year-old with epilepsy calls: her son has had three consecutive convulsions at home without fully regaining awareness between them; the ambulance is on its way. The benzodiazepine formulation designed exactly for this home scenario is:",
+   "options": [
+    "Rectal diazepam gel",
+    "Oral clonazepam wafers",
+    "Sublingual flurazepam tablets",
+    "Intramuscular chlordiazepoxide injection"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung notes diazepam's rectal gel formulation is used for acute repetitive (cluster) seizures — the classic out-of-hospital tool when intravenous access is impossible. Oral clonazepam acts far too slowly for cluster seizures, flurazepam has no sublingual emergency role, and chlordiazepoxide combines erratic IM absorption with a weak anticonvulsant action."
+  },
+  {
+   "id": "bzd-dia-03",
+   "drugSlug": "diazepam",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 72-year-old woman started diazepam 5 mg twice daily four weeks ago for lumbar muscle spasm. Her family reports progressive daytime drowsiness, unsteadiness and a near-fall. The most likely pharmacokinetic reason is:",
+   "options": [
+    "Diazepam and its active metabolite desmethyldiazepam have effective half-lives measured in days, so the drug accumulates progressively — the elderly are especially vulnerable",
+    "Diazepam is renally cleared, so age-related GFR decline has caused accumulation of unchanged drug",
+    "Diazepam's half-life is only 2-3 hours, so each doubled dose has produced transient overdose peaks",
+    "Diazepam binds its receptor irreversibly, so effect builds with every dose"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tripathi gives diazepam an elimination half-life of 20-30 hours with the biological effect prolonged further by active metabolites, chiefly desmethyldiazepam; Katzung's effective range of 20-80 hours explains why four weeks of dosing in an elderly patient means deep accumulation with falls and confusion. Diazepam is hepatically metabolised rather than excreted unchanged, is nowhere near ultrashort, and binds reversibly — as proven by flumazenil antagonism."
+  },
+  {
+   "id": "bzd-dia-04",
+   "drugSlug": "diazepam",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Why does an intravenous bolus of diazepam abort seizures within seconds yet its effect fades within 15-30 minutes, while lorazepam's anticonvulsant effect lasts 6-12 hours?",
+   "options": [
+    "Diazepam is highly lipid-soluble, so it enters the brain rapidly but redistributes just as rapidly into peripheral fat; the less lipophilic lorazepam redistributes slowly and lingers in the central compartment",
+    "Diazepam is water-soluble with fast brain entry, while lorazepam reaches the brain only after hepatic activation",
+    "Diazepam is a partial agonist at the benzodiazepine site, whereas lorazepam is a full inverse agonist",
+    "Diazepam is eliminated by the kidneys within minutes, while lorazepam binds the chloride channel irreversibly"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung contrasts logP 2.8 for diazepam with 2.4 for lorazepam: the more lipophilic drug both penetrates brain quickly and exits into peripheral fat quickly, whereas lorazepam's lower lipid solubility gives slower redistribution and a sustained 6-12 hour anticonvulsant effect (Tripathi). Both drugs are reversible, competitive-site modulators, and neither is renally eliminated within minutes nor a prodrug."
+  },
+  {
+   "id": "bzd-dia-05",
+   "drugSlug": "diazepam",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A junior doctor orders intramuscular diazepam 10 mg for an agitated alcohol-withdrawal patient in whom intravenous access has failed. The senior's most defensible objection is:",
+   "options": [
+    "IM diazepam causes dose-dependent hearing loss",
+    "IM diazepam reaches peak level within two minutes, risking apnoea every time",
+    "IM diazepam is contraindicated because it causes haemolysis in alcoholics",
+    "IM diazepam is erratically and unpredictably absorbed — the rational moves are oral dosing or IM lorazepam if a parenteral benzodiazepine is essential"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung's pharmacokinetic table and Tripathi both flag diazepam's erratic bioavailability from IM injection, which makes the route unreliable precisely when dependable levels are needed; lorazepam is the benzodiazepine with dependable IM absorption. Peak absorption is delayed rather than two-minute, and the hearing-loss and haemolysis objections are fabricated liabilities."
+  },
+  {
+   "id": "bzd-dia-06",
+   "drugSlug": "diazepam",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A man with spinal muscle spasm on diazepam 5 mg TDS starts antitubercular therapy including rifampicin. Two weeks later he reports the diazepam 'does nothing now'. The best explanation is:",
+   "options": [
+    "Rifampicin is a potent hepatic microsomal enzyme inducer that accelerates the oxidative metabolism of diazepam and its active metabolites",
+    "Rifampicin blocks diazepam's conversion to its active metabolite in the stomach",
+    "Rifampicin competitively displaces diazepam from the benzodiazepine receptor",
+    "Rifampicin raises diazepam levels by saturating hepatic blood flow, causing sedation"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung notes the metabolism of diazepam (with midazolam and triazolam) is affected by hepatic P450 inducers and inhibitors; rifampicin is the classic inducer, so diazepam levels and effect fall. Option B garbles gastric-activation pharmacology (that is clorazepate's story, and rifampicin is irrelevant to it), and displacement or flow-saturation are mechanisms rifampicin does not possess."
+  },
+  {
+   "id": "bzd-dia-07",
+   "drugSlug": "diazepam",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 44-year-old chronic heavy drinker, abstinent for 48 hours, is admitted with coarse tremor, sweating, tachycardia, disorientation and visual hallucinations. Which drug class provides the substitution cover for this presentation, with diazepam a leading intravenous option in severe cases?",
+   "options": [
+    "Major tranquillisers such as haloperidol",
+    "Opioid substitution such as buprenorphine",
+    "Naltrexone initiated immediately",
+    "Benzodiazepines"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi states benzodiazepines (chlordiazepoxide, diazepam) are the preferred substitution therapy for alcohol withdrawal, their long duration allowing later gradual tapering. Haloperidol lowers the seizure threshold and provides no cross-tolerance cover, buprenorphine addresses opioid dependence, and naltrexone is relapse-prevention therapy started after detoxification, not acute cover."
+  },
+  {
+   "id": "bzd-dia-08",
+   "drugSlug": "diazepam",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 26-year-old woman discovers she is 8 weeks pregnant after taking diazepam intermittently for sleep; she also asks whether she may use it again near her due date. Counselling should include:",
+   "options": [
+    "Continuing freely, since benzodiazepines are proven safe in all trimesters",
+    "Avoiding benzodiazepines where possible in the first trimester because of an association with cleft lip/palate, and avoiding use near term because neonatal flaccidity (floppy infant syndrome) and respiratory depression can occur",
+    "Stopping diazepam but taking a barbiturate hypnotic instead, which is pregnancy-safe",
+    "Doubling the dose near term to prevent withdrawal seizures in the newborn"
+   ],
+   "correctIndex": 1,
+   "explanation": "The KYP safety anchor is two-fold: first-trimester use is associated with cleft lip/palate (Tripathi notes the original diazepam teratogenicity report was disputed, but caution remains the standard teaching), and administration around labour produces neonatal flaccidity and respiratory depression — Katzung adds that all sedative-hypnotics cross the placenta and can depress neonatal vital functions. Barbiturates are certainly not pregnancy-safe substitutes, and escalating the dose near term is the opposite of sound care."
+  },
+  {
+   "id": "bzd-lor-01",
+   "drugSlug": "lorazepam",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 24-year-old man has been in continuous generalised tonic-clonic seizure activity for 10 minutes when the emergency team arrives. The current first-choice drug and regimen are:",
+   "options": [
+    "Intravenous lorazepam 4 mg (0.1 mg/kg) injected at 2 mg/min, repeatable once after 10 minutes — effective in 75-90% with a 6-12 hour sustained effect",
+    "Oral clonazepam 2 mg, repeated every 15 minutes",
+    "Intramuscular diazepam 20 mg, repeated every 5 minutes",
+    "Intravenous phenytoin 1 g loaded over 60 minutes as the immediate first measure"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tripathi's status epilepticus algorithm makes IV lorazepam 0.1 mg/kg (about 4 mg) at no more than 2 mg/min, repeated once after 10 minutes, the first-choice drug — its lower lipid solubility gives a more sustained anticonvulsant effect (6-12 hours) and less thrombophlebitis than diazepam. Oral clonazepam has no emergency role, IM diazepam is erratically absorbed, and phenytoin is second-line because it acts far too slowly to be the initial abortive agent."
+  },
+  {
+   "id": "bzd-lor-02",
+   "drugSlug": "lorazepam",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 55-year-old man with early alcoholic cirrhosis needs an anxiolytic. The resident proposes lorazepam, explaining it is 'metabolism-proof' for his liver. The pharmacokinetic basis of that claim is:",
+   "options": [
+    "Lorazepam is excreted unchanged by the kidneys, so liver status is irrelevant",
+    "Lorazepam is conjugated directly with glucuronic acid to an inactive metabolite, bypassing the oxidative pathway, so no active metabolites accumulate in liver disease",
+    "Lorazepam is a prodrug activated by gastric acid, so it works even in severe liver failure",
+    "Lorazepam induces its own metabolism, so levels self-correct over two weeks"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi and Katzung both list lorazepam among the agents metabolised directly to inactive glucuronides with no active metabolites — the LOT trio with oxazepam and temazepam — which is why it is preferred in the elderly and in liver disease. Renal excretion of unchanged drug is false for lorazepam, gastric-acid activation is clorazepate's prodrug story, and benzodiazepines do not self-induce their metabolism."
+  },
+  {
+   "id": "bzd-lor-03",
+   "drugSlug": "lorazepam",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 50-year-old woman with chronic liver disease is severely agitated and cannulating her is proving impossible; the team wants an anxiolytic with reliable INTRAMUSCULAR absorption. The textbook benzodiazepine answer is:",
+   "options": [
+    "Diazepam — a deep gluteal injection gives prompt, predictable levels",
+    "Lorazepam — regarded as the only benzodiazepine recommended for IM use, with minor injection-site complications",
+    "Chlordiazepoxide — designed specifically for intramuscular emergency use",
+    "Clorazepate — its IM prodrug formulation converts rapidly at the injection site"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi's monograph states lorazepam is the only BZD recommended for IM use, with minor injection-site problems — which is why it doubles as the agitated-patient and preoperative agent. Diazepam and chlordiazepoxide both carry erratic IM bioavailability (Katzung's table comments), and clorazepate has no injection form at all — it is an oral prodrug activated by gastric acid."
+  },
+  {
+   "id": "bzd-lor-04",
+   "drugSlug": "lorazepam",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 34-year-old is scheduled for upper GI endoscopy tomorrow evening. The physician wants a benzodiazepine given the night before that provides tranquillity plus marked perioperative amnesia, without next-day hangover from metabolite accumulation. The best fit is:",
+   "options": [
+    "Diazepam — its desmethyldiazepam metabolite shortens recovery and clears hangover",
+    "Triazolam — its 2-3 hour half-life guarantees amnesia across the whole procedure day",
+    "Flurazepam — its long half-life ensures smooth sedation with a clear-headed wake-up",
+    "Lorazepam — intermediate half-life, no active metabolites, and pronounced amnesia when injected"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi highlights lorazepam's capability of producing marked amnesia when injected (loss of recall of perioperative events, especially with lorazepam) and its glucuronidation-only, metabolite-free profile avoids next-day hangover. Diazepam's active metabolite is the hangover source rather than an advantage, triazolam is too ultrashort to cover a procedure day, and flurazepam is the classic hangover hypnotic."
+  },
+  {
+   "id": "bzd-lor-05",
+   "drugSlug": "lorazepam",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 38-year-old has taken lorazepam 2 mg three times daily for two years after a bereavement and now wants to stop because she feels 'blunted'; she asks to simply quit. The correct counsel is:",
+   "options": [
+    "Stop immediately; benzodiazepine withdrawal is always trivial",
+    "Stop lorazepam and immediately start full-dose buspirone to block withdrawal",
+    "Taper gradually over weeks to months — abrupt stoppage risks rebound anxiety, insomnia and, rarely, convulsions",
+    "Stop lorazepam and start an SSRI at double dose for one week to cover withdrawal"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi describes the benzodiazepine withdrawal syndrome (anxiety, insomnia, restlessness, malaise, bad dreams; occasionally agitation, panic, delirium; rarely convulsions) and Katzung confirms abrupt discontinuance causes rebound — hence tapering over weeks to months. Buspirone is explicitly ineffective in blocking sedative-hypnotic withdrawal, and no sedative withdrawal is covered by a rapid SSRI ramp."
+  },
+  {
+   "id": "bzd-lor-06",
+   "drugSlug": "lorazepam",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A patient with onychomycosis on oral ketoconazole is started on diazepam for muscle spasm and becomes excessively sedated; his physician switches him to lorazepam. The rationale is:",
+   "options": [
+    "Ketoconazole blocks gastric-acid activation of diazepam, whereas lorazepam needs no acid",
+    "Ketoconazole displaces lorazepam from plasma proteins, lowering its levels and its side effects",
+    "Lorazepam induces the oxidative enzymes, restoring diazepam's clearance",
+    "Ketoconazole blocks the microsomal oxidative pathway that diazepam depends on, while lorazepam's glucuronidation bypasses that blockade entirely"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi names ketoconazole (with erythromycin) among the inhibitors that prolong the action of oxidatively cleared benzodiazepines; lorazepam is conjugated directly with glucuronic acid, so the interaction is sidestepped — a core LOT teaching point. Gastric-acid activation belongs to clorazepate, protein displacement is not how ketoconazole acts, and lorazepam does not induce drug-metabolising enzymes."
+  },
+  {
+   "id": "bzd-lor-07",
+   "drugSlug": "lorazepam",
+   "domain": "Indian Practice",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which Indian preparation list correctly belongs to lorazepam?",
+   "options": [
+    "LIBRIUM 10 and 25 mg tablets",
+    "LARPOSE and ATIVAN 1, 2 mg tablets; CALMESE 1, 2 mg tablets with 4 mg/2 ml injection",
+    "VALIUM and CALMPOSE 2, 5, 10 mg tablets",
+    "ALPRAX and RESTYL 0.25, 0.5, 1 mg tablets"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi's preparation table lists lorazepam as LARPOSE and ATIVAN (1, 2 mg tablets) and CALMESE (1, 2 mg tablets; 4 mg/2 ml injection) at a daily dose of 1-6 mg. LIBRIUM belongs to chlordiazepoxide, VALIUM/CALMPOSE to diazepam, and ALPRAX/RESTYL to alprazolam."
+  },
+  {
+   "id": "bzd-lor-08",
+   "drugSlug": "lorazepam",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "Compared with intravenous diazepam for status epilepticus, lorazepam's documented advantages are best captured by:",
+   "options": [
+    "Instant seizure control within 60 seconds with a 1-hour effect, allowing same-day discharge",
+    "Equal efficacy but uniquely lower cost because lorazepam needs no refrigeration",
+    "Superior control because lorazepam additionally blocks NMDA receptors at anticonvulsant doses",
+    "Seizure control in 75-90% of cases with a single regimen, a more sustained 6-12 hour effect from slower redistribution, and less thrombophlebitis"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi quantifies lorazepam in status epilepticus: effective in 75-90% of cases, anticonvulsant effect lasting 6-12 hours due to lower lipid solubility and slower redistribution, with less thrombophlebitis than diazepam. The remaining options attach wrong numbers or invented mechanisms — lorazepam acts at the GABA-A benzodiazepine site, not at NMDA receptors."
+  },
+  {
+   "id": "bzd-cln-01",
+   "drugSlug": "clonazepam",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "Among benzodiazepines used as antiseizure agents, clonazepam's distinguishing pharmacological claim is:",
+   "options": [
+    "It is the weakest benzodiazepine antiseizure agent but the safest hypnotic",
+    "It uniquely blocks sodium channels like phenytoin and is therefore first-line in generalised tonic-clonic seizures",
+    "On a milligram basis it is one of the most potent antiseizure benzodiazepines known, with a long half-life (about 24 hours) and special efficacy in absence, atonic and myoclonic seizures",
+    "It is a prodrug that must be converted to desmethyldiazepam before any antiseizure effect appears"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung calls clonazepam on a milligram basis one of the most potent antiseizure agents known, with documented efficacy in absence, atonic and myoclonic seizures, and Tripathi gives it an average half-life of about 24 hours with no active metabolite. Clonazepam is singularly ineffective in GTCS (Tripathi), its principal action is GABAergic facilitation rather than sodium-channel blockade, and it is not a prodrug."
+  },
+  {
+   "id": "bzd-cln-02",
+   "drugSlug": "clonazepam",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 12-year-old boy has sudden, lightning-like jerks of both arms on waking, dropping his toothbrush every morning; the EEG shows a myoclonic pattern. Valproate is planned and the paediatrician considers a benzodiazepine adjuvant. The classic choice is:",
+   "options": [
+    "Chlordiazepoxide",
+    "Oxazepam",
+    "Clonazepam",
+    "Quazepam"
+   ],
+   "correctIndex": 2,
+   "explanation": "Clonazepam has documented efficacy in myoclonic seizures (Katzung) and Tripathi lists it as an adjuvant in myoclonus — the classic benzodiazepine for this epilepsy syndrome. Chlordiazepoxide is an anxiolytic and alcohol-withdrawal agent with weak anticonvulsant action, oxazepam is a short-lasting anxiolytic, and quazepam is a hypnotic; none is a myoclonus drug."
+  },
+  {
+   "id": "bzd-cln-03",
+   "drugSlug": "clonazepam",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A boy started on clonazepam 0.5 mg twice daily for myoclonic seizures returns after a week: his jerks are fewer but he is dull and sleepy in class, and his mother read online that the drug 'stops working over time'. The correct counselling is:",
+   "options": [
+    "Sedation signals an allergic reaction — stop the drug permanently today",
+    "Tolerance never develops to benzodiazepine antiseizure effects, so the dose can simply be doubled",
+    "Sedation and dullness are the most important early adverse effects and some tolerance develops with chronic use, so start low, titrate gradually and never stop abruptly",
+    "Clonazepam causes permanent cognitive decline, so switch to phenytoin now"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi's clonazepam monograph names sedation and dullness as the most important side effects, notes some tolerance with chronic therapy, and advises starting at a low dose — precisely the counselling offered. Permanent cognitive decline is not the documented issue, and abrupt stoppage risks withdrawal seizures rather than solving anything."
+  },
+  {
+   "id": "bzd-cln-04",
+   "drugSlug": "clonazepam",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 68-year-old man shouts and thrashes during vivid dreams, occasionally injuring his wife; polysomnography confirms REM sleep behaviour disorder. Which benzodiazepine is the standard first-line therapy for this condition?",
+   "options": [
+    "Clonazepam",
+    "Temazepam",
+    "Estazolam",
+    "Loflazepate"
+   ],
+   "correctIndex": 0,
+   "explanation": "Clonazepam is the classic first-line drug for REM sleep behaviour disorder, its GABAergic dampening of motor output preventing dream-enactment injury — one of its signature neuropsychiatric uses alongside myoclonus, akathisia and bipolar mania adjunctive cover (KYP anchor). Temazepam, estazolam and loflazepate are hypnotics/anxiolytics without an established RBD role."
+  },
+  {
+   "id": "bzd-cln-05",
+   "drugSlug": "clonazepam",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which pharmacokinetic statement about clonazepam is correct?",
+   "options": [
+    "Oral absorption is good; it is about 85% protein-bound, completely metabolised in the liver with no active metabolite, and its half-life averages about 24 hours",
+    "It is excreted unchanged in urine, giving a half-life of 2-3 hours",
+    "It is converted in the stomach to desmethyldiazepam, which carries the entire effect",
+    "Its half-life of 50-100 hours makes thrice-daily dosing mandatory"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tripathi gives clonazepam good oral absorption, 85% plasma protein binding, complete hepatic metabolism with no active metabolite, and an average half-life of about 24 hours. Renal excretion of unchanged drug is false, gastric activation is clorazepate's pathway, and 50-100 hours is flurazepam/clorazepate territory — a deliberate long-acting mirror."
+  },
+  {
+   "id": "bzd-cln-06",
+   "drugSlug": "clonazepam",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A patient whose myoclonic seizures have been quiet on clonazepam for a year stops it overnight before a flight. The next day he has rebound jerks and a generalised convulsion. The key teaching point is:",
+   "options": [
+    "One missed dose cannot matter with any anticonvulsant",
+    "Abrupt stoppage only causes mild nausea with clonazepam",
+    "Clonazepam carries marked dependence and withdrawal liability; benzodiazepine anticonvulsants must always be tapered and never stopped abruptly",
+    "Flight anxiety, not drug withdrawal, caused the convulsion"
+   ],
+   "correctIndex": 2,
+   "explanation": "KYP's monograph flags clonazepam's marked dependence and withdrawal potential, and Tripathi warns that abrupt withdrawal of antiepileptic therapy can precipitate seizures including status epilepticus — benzodiazepines demand a taper. The other options dismiss or misattribute a predictable pharmacological risk."
+  },
+  {
+   "id": "bzd-cln-07",
+   "drugSlug": "clonazepam",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "A resident asks how clonazepam should be initiated and titrated for a seizure patient. The textbook answer is:",
+   "options": [
+    "Start at a low dose (about 0.5 mg/day style initiation) and increase gradually over weeks — maximal tolerated doses are often around 0.1-0.2 mg/kg/day and many weeks of titration may be needed",
+    "Begin at 4 mg/day and increase daily until the jerks stop",
+    "Give 10 mg intravenously daily for one week, then stop",
+    "Use a fixed 5 mg twice-daily dose for all ages with no titration"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung notes starting doses should be small because sedation is prominent on initiation, with maximal tolerated doses usually in the range of 0.1-0.2 mg/kg/day reached over many weeks of gradual increase. Aggressive loading (the other options) would simply buy sedation, ataxia and tolerance."
+  },
+  {
+   "id": "bzd-cln-08",
+   "drugSlug": "clonazepam",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "Clonazepam's anticonvulsant spectrum contains one famously weak spot. Which pairing is correct?",
+   "options": [
+    "Excellent in absence and myoclonic seizures — but singularly ineffective in generalised tonic-clonic seizures",
+    "First-line in generalised tonic-clonic seizures but useless in absence seizures",
+    "Broadly equal efficacy across all seizure types including infantile spasms",
+    "Effective only in febrile convulsions of children"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tripathi states clonazepam blocks PTZ seizures at mildly sedating doses but is singularly ineffective in GTCS, while being primarily employed in absence seizures and useful as a myoclonic adjuvant. The other options invert or inflate its spectrum."
+  },
+  {
+   "id": "bzd-chl-01",
+   "drugSlug": "chlordiazepoxide",
+   "domain": "Exam Pearls",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "The first benzodiazepine ever marketed, introduced in 1960 and still a byword for the class's origins, is:",
+   "options": [
+    "Diazepam (Valium)",
+    "Oxazepam (Serax)",
+    "Meprobamate (Miltown)",
+    "Chlordiazepoxide (Librium)"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi introduces chlordiazepoxide as the first BZD to be used clinically, and Katzung's preparation list preserves the Librium brand. Diazepam followed soon after as the class prototype, oxazepam arrived later as a metabolite-based agent, and meprobamate is not a benzodiazepine at all — it is an older carbamate sedative."
+  },
+  {
+   "id": "bzd-chl-02",
+   "drugSlug": "chlordiazepoxide",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 45-year-old man dependent on alcohol presents on day two of abstinence with tremor, sweating, insomnia and a rising pulse; the ward plans graded substitution cover guided by withdrawal scores. The classic benzodiazepine of choice is:",
+   "options": [
+    "Alprazolam — its short half-life gives the tightest seizure cover",
+    "Chlordiazepoxide — long-acting cover that can itself be tapered stepwise as the scores settle",
+    "Zolpidem — a benzodiazepine-receptor hypnotic with proven withdrawal cover",
+    "Buspirone — a 5-HT1A partial agonist that blocks alcohol withdrawal"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi calls chlordiazepoxide the commonest BZD used to cover alcohol withdrawal — its long, smooth effect from active metabolites allows later gradual tapering, the logic behind CIWA-driven regimens. Alprazolam's short half-life and dependence liability make it a poor withdrawal agent, buspirone is explicitly ineffective against sedative-hypnotic withdrawal (Katzung), and zolpidem is not used as withdrawal cover."
+  },
+  {
+   "id": "bzd-chl-03",
+   "drugSlug": "chlordiazepoxide",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Chlordiazepoxide's parent plasma half-life is only 6-12 hours (Tripathi), yet its clinical action is long and smooth. The reconciling fact is:",
+   "options": [
+    "It binds the benzodiazepine receptor irreversibly",
+    "It undergoes enterohepatic recirculation measured in weeks",
+    "The parent compound is stored intact in adipose tissue for months",
+    "It generates a cascade of active metabolites — desmethylchlordiazepoxide, demoxepam and ultimately desmethyldiazepam — that extends the effective half-life to 15-40 hours"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung's biotransformation figure traces chlordiazepoxide through desmethylchlordiazepoxide and demoxepam into desmethyldiazepam, giving an effective half-life of 15-40 hours despite the short parent half-life — a prodrug-like pharmacokinetic tail. Irreversible binding would make flumazenil useless (it is not), and weeks-long recirculation or intact tissue storage are fabricated pharmacokinetics."
+  },
+  {
+   "id": "bzd-chl-04",
+   "drugSlug": "chlordiazepoxide",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "An emergency nurse draws up intramuscular chlordiazepoxide for an acutely anxious patient and is stopped by the pharmacist. The reason:",
+   "options": [
+    "Like diazepam, chlordiazepoxide gives erratic bioavailability from IM injection — use the oral route, or pick lorazepam if parenteral cover is essential",
+    "Intramuscular chlordiazepoxide causes fatal arrhythmia within minutes",
+    "Chlordiazepoxide cannot be dissolved in any injection vehicle",
+    "IM chlordiazepoxide is fine; the objection applies only to IV use in the elderly"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung's pharmacokinetic table flags erratic bioavailability from IM injection for chlordiazepoxide exactly as for diazepam — an unreliable route when predictable levels matter. The other objections are invented; the real alternatives are oral dosing or IM lorazepam, the benzodiazepine with dependable IM absorption."
+  },
+  {
+   "id": "bzd-chl-05",
+   "drugSlug": "chlordiazepoxide",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "During a ward round a junior proposes intravenous chlordiazepoxide 50 mg to abort an ongoing tonic-clonic seizure. The consultant's objection rests on which textbook point?",
+   "options": [
+    "Chlordiazepoxide is an opioid antagonist and would worsen the seizure",
+    "Chlordiazepoxide's anticonvulsant action is weak — status epilepticus calls for lorazepam or diazepam instead",
+    "Chlordiazepoxide is reserved solely for insomnia by regulatory law",
+    "Chlordiazepoxide acts only on the spinal cord and never on cortical seizures"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi explicitly notes chlordiazepoxide's anticonvulsant action is weak, which is why the emergency seizure roles belong to lorazepam, diazepam and clonazepam; chlordiazepoxide's niche is anxiety and alcohol-withdrawal cover. The other options attach nonsensical mechanisms or a legal claim the drug does not have."
+  },
+  {
+   "id": "bzd-chl-06",
+   "drugSlug": "chlordiazepoxide",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A woman on twice-daily chlordiazepoxide for chronic anxiety begins antitubercular therapy. Over two weeks she becomes increasingly drowsy and confused. Which ATT component most plausibly explains the change?",
+   "options": [
+    "Isoniazid — Tripathi lists it (with cimetidine and oral contraceptives) among agents that retard benzodiazepine metabolism",
+    "Rifampicin — it doubles benzodiazepine levels by blocking biliary excretion",
+    "Pyrazinamide — it blocks GABA synthesis, sensitising the receptors",
+    "Ethambutol — it competes for the benzodiazepine binding site"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tripathi's benzodiazepine interaction list names cimetidine, isoniazid and oral contraceptives as metabolism-retarding agents, so isoniazid fits the timeline of rising sedation. Rifampicin is the opposite — an inducer that would reduce levels — and the remaining options describe mechanisms those drugs lack."
+  },
+  {
+   "id": "bzd-chl-07",
+   "drugSlug": "chlordiazepoxide",
+   "domain": "Indian Practice",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Tripathi's preparation table pairs chlordiazepoxide with which Indian brands and doses?",
+   "options": [
+    "ATIVAN 1, 2 mg tablets — daily dose 1-6 mg",
+    "Halcion 0.125, 0.25 mg tablets — bedtime dosing only",
+    "Serenace 0.5, 1.5 mg tablets — up to 20 mg/day",
+    "LIBRIUM 10, 25 mg tablets and EQUILIBRIUM 10 mg tablet — daily dose 25-100 mg"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi lists chlordiazepoxide as LIBRIUM 10 and 25 mg tablets and EQUILIBRIUM 10 mg, at a daily dose of 25-100 mg for anxiety states. ATIVAN is lorazepam, Halcion is triazolam's US brand, and Serenace is haloperidol — each a real product of a different drug."
+  },
+  {
+   "id": "bzd-chl-08",
+   "drugSlug": "chlordiazepoxide",
+   "domain": "Indian Practice",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "An IBS patient in India receives a strip whose each tablet combines dicyclomine 10 mg with chlordiazepoxide 5 mg (a NORMAXIN-type combination). What is the pharmacological logic of adding chlordiazepoxide here?",
+   "options": [
+    "The anxiety and emotional component of nervous dyspepsia and IBS is dampened by the benzodiazepine, complementing the antispasmodic",
+    "Chlordiazepoxide directly relaxes intestinal smooth muscle by blocking calcium channels",
+    "Chlordiazepoxide accelerates gastric emptying to shorten colonic transit",
+    "Chlordiazepoxide sterilises the gut flora that drives IBS"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tripathi describes chlordiazepoxide combinations with antispasmodics (SPASRIL, ARWIN, NORMAXIN, CIBIS) for nervous dyspepsia, IBS, colic and psychosomatic disorders — the benzodiazepine addresses the anxious, stress-driven component. It has no calcium-channel, prokinetic or antibacterial action in the gut."
+  },
+  {
+   "id": "bzd-crz-01",
+   "drugSlug": "clorazepate",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Clorazepate is best described pharmacokinetically as:",
+   "options": [
+    "An active drug excreted unchanged by the kidneys within hours",
+    "An inactive prodrug decarboxylated by gastric acid in the stomach to desmethyldiazepam (nordiazepam), which carries the pharmacological effect",
+    "A benzodiazepine antagonist that blocks desmethyldiazepam at its receptor",
+    "An inverse agonist requiring enzymatic inactivation"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung states clorazepate is a prodrug converted to its active form desmethyldiazepam by acid hydrolysis in the stomach — the pharmacology, and the 50-100 hour half-life in Katzung's table, belongs to the metabolite. The other options misdescribe it as an active, renal or antagonistic molecule."
+  },
+  {
+   "id": "bzd-crz-02",
+   "drugSlug": "clorazepate",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 70-year-old on omeprazole for reflux is started on clorazepate for anxiety. After four days she reports it 'barely seems to do anything'. The most pharmacologically consistent explanation is:",
+   "options": [
+    "Acid suppression has raised gastric pH, slowing the acid-mediated conversion of clorazepate to desmethyldiazepam and delaying its effect",
+    "Omeprazole induces the oxidative enzymes and clears desmethyldiazepam too rapidly",
+    "Omeprazole blocks the benzodiazepine binding site allosterically",
+    "Clorazepate requires a specific microsomal enzyme for activation, which omeprazole inhibits"
+   ],
+   "correctIndex": 0,
+   "explanation": "Clorazepate depends on gastric acid for its decarboxylation to desmethyldiazepam (Katzung), so proton-pump inhibition delays activation and blunts the onset — a niche KYP pearl. The drug is not a CYP-dependent prodrug, and omeprazole neither induces the oxidative machinery nor touches the benzodiazepine site."
+  },
+  {
+   "id": "bzd-crz-03",
+   "drugSlug": "clorazepate",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Clorazepate's effective elimination half-life, counting its active form, is:",
+   "options": [
+    "About 50-100 hours — long-acting territory, since desmethyldiazepam's half-life exceeds 40 hours",
+    "About 2-3 hours",
+    "About 10-20 hours with no metabolite carryover",
+    "About 20-30 minutes because of instant renal clearing"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung's pharmacokinetic table gives clorazepate 50-100 hours (nordiazepam), reflecting an activation product whose elimination half-life exceeds 40 hours. The 2-3 hour figure is triazolam's, 10-20 hours matches lorazepam/oxazepam, and minutes-long clearing fits no benzodiazepine."
+  },
+  {
+   "id": "bzd-crz-04",
+   "drugSlug": "clorazepate",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Clorazepate's label-level uses include:",
+   "options": [
+    "Monotherapy for acute status epilepticus",
+    "Reversal of benzodiazepine overdose",
+    "Induction of surgical anaesthesia",
+    "Anxiety states and adjunctive antiseizure therapy — Katzung notes clorazepate dipotassium is approved for use alongside other antiseizure drugs"
+   ],
+   "correctIndex": 3,
+   "explanation": "Clorazepate is used for anxiety and as an adjunct antiseizure agent (Katzung's antiepileptic chapter), consistent with its long desmethyldiazepam effect. Status epilepticus needs intravenous lorazepam or diazepam, overdose reversal is flumazenil's job, and no benzodiazepine induces surgical anaesthesia as a sole agent."
+  },
+  {
+   "id": "bzd-crz-05",
+   "drugSlug": "clorazepate",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "knowledge-graph",
+   "question": "A patient on clorazepate tells her doctor: 'This tablet feels slow to start but keeps working for days.' The combined pharmacokinetic explanation is:",
+   "options": [
+    "Slow gastric conversion plus rapid renal elimination creates a pulse-then-pause pattern",
+    "Instant absorption with irreversible receptor binding produces the days-long effect",
+    "Gastric-acid conversion delays the onset, while desmethyldiazepam's long half-life (50-100 hours) sustains and accumulates the effect",
+    "A long-acting antagonist is released first, then the agonist metabolite"
+   ],
+   "correctIndex": 2,
+   "explanation": "Both halves of her observation are clorazepate's signature: acid-dependent activation delays the onset (worse with PPIs), and desmethyldiazepam's more-than-40-hour half-life sustains and accumulates the effect (Katzung). The other options weld together mechanisms the drug does not possess."
+  },
+  {
+   "id": "bzd-crz-06",
+   "drugSlug": "clorazepate",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Once converted, clorazepate's active moiety acts by:",
+   "options": [
+    "Increasing the frequency of GABA-gated chloride channel opening at the benzodiazepine site — facilitatory, not GABA-mimetic",
+    "Increasing the duration of each channel opening, like a barbiturate, with direct channel activation",
+    "Directly opening chloride channels as a full GABA agonist",
+    "Blocking chloride channels to moderately raise neuronal excitability"
+   ],
+   "correctIndex": 0,
+   "explanation": "Desmethyldiazepam is a benzodiazepine-site agonist: Tripathi and Katzung both describe frequency enhancement of GABA-gated chloride openings without direct channel activation — the class's lower-ceiling safety hinge. Duration increase and direct opening are barbiturate actions, and channel blockade is picrotoxin's convulsant mechanism."
+  },
+  {
+   "id": "bzd-crz-07",
+   "drugSlug": "clorazepate",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 78-year-old has taken clorazepate nightly for three weeks and now has daytime grogginess and a bathroom fall at 2 AM. Her physician's best switch is toward:",
+   "options": [
+    "A higher clorazepate dose taken in the morning instead",
+    "Adding flumazenil at bedtime to clear the metabolite",
+    "Switching to nightly intravenous midazolam at home",
+    "A glucuronidation-only, short-to-intermediate agent such as oxazepam or lorazepam, avoiding active-metabolite accumulation"
+   ],
+   "correctIndex": 3,
+   "explanation": "Long-acting, active-metabolite benzodiazepines accumulate with repeated dosing (Katzung: cumulative and residual effects), producing exactly this hangover-and-falls picture in the elderly; the fix is a metabolite-free, glucuronidated agent. Raising the dose worsens accumulation, flumazenil is an emergency antagonist that would cause agitation and rebound, and home IV midazolam is unsafe nonsense."
+  },
+  {
+   "id": "bzd-crz-08",
+   "drugSlug": "clorazepate",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "Which sequence correctly traces clorazepate's metabolic fate?",
+   "options": [
+    "Clorazepate (inactive) undergoes gastric-acid decarboxylation to desmethyldiazepam, which is then slowly oxidised to oxazepam and excreted as a glucuronide",
+    "Clorazepate is cleaved by gastric esterases to temazepam, which is excreted directly by the kidney",
+    "Clorazepate is oxidised by microsomal enzymes to flurazepam-like metabolites excreted in bile",
+    "Clorazepate is filtered unchanged and actively reabsorbed in the renal tubule"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung's biotransformation map sends inactive clorazepate to desmethyldiazepam (as for diazepam, prazepam and chlordiazepoxide), which then oxidises to oxazepam and exits as a glucuronide. Temazepam and flurazepam sit on unrelated metabolic branches, and unchanged renal handling fits no benzodiazepine."
+  },
+  {
+   "id": "bzd-oxa-01",
+   "drugSlug": "oxazepam",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "The 'LOT' rule of benzodiazepine metabolism — which trio is glucuronidated directly without oxidative steps?",
+   "options": [
+    "Lamotrigine, oxcarbazepine and topiramate",
+    "Levetiracetam, oxazepam and triazolam",
+    "Lorazepam, oxazepam and temazepam",
+    "Lorazepam, diazepam and clorazepate"
+   ],
+   "correctIndex": 2,
+   "explanation": "Lorazepam, oxazepam and temazepam are conjugated straight to glucuronides — no CYP oxidation, no active-metabolite chain — which is why they are the benzodiazepines of choice in hepatic disease and the elderly. The other trios mix oxidative drugs (diazepam, chlordiazepoxide, triazolam) or are not benzodiazepines at all."
+  },
+  {
+   "id": "bzd-oxa-02",
+   "drugSlug": "oxazepam",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 58-year-old with Child-Pugh B cirrhosis and severe generalised anxiety needs a benzodiazepine. The most appropriate choice is:",
+   "options": [
+    "Diazepam 5 mg TDS",
+    "Chlordiazepoxide 25 mg TDS",
+    "Alprazolam 0.5 mg TDS",
+    "Oxazepam 10-15 mg TDS"
+   ],
+   "correctIndex": 3,
+   "explanation": "With hepatic impairment you want a drug that is glucuronidated directly and forms no active metabolites — oxazepam (or lorazepam). Diazepam, chlordiazepoxide and alprazolam all rely on hepatic oxidation and their long half-lives/active metabolites accumulate dangerously in cirrhosis, precipitating encephalopathy."
+  },
+  {
+   "id": "bzd-oxa-03",
+   "drugSlug": "oxazepam",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Why does oxazepam have unusually low abuse appeal among benzodiazepines?",
+   "options": [
+    "It is a GABA-A antagonist rather than an agonist",
+    "It cannot cross the blood-brain barrier at all",
+    "Its slow onset — from low lipid solubility — blunts the reinforcing rush",
+    "It blocks dopamine reuptake instead of potentiating GABA"
+   ],
+   "correctIndex": 2,
+   "explanation": "Oxazepam's poor lipid solubility slows absorption, so onset is delayed — and slow-onset sedatives are weak reinforcers because the user does not get the immediate 'hit'. It is a full GABA-A modulator, crosses into the brain fine, and has no dopaminergic action; the kinetics, not the receptor, explain the abuse profile."
+  },
+  {
+   "id": "bzd-oxa-04",
+   "drugSlug": "oxazepam",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "An 81-year-old needs only occasional, as-needed anxiolytic cover before stressful events. The safest benzodiazepine strategy:",
+   "options": [
+    "Diazepam 5 mg PRN",
+    "Oxazepam 10 mg PRN with a hard limit on doses per week",
+    "Clonazepam 0.5 mg daily regardless of need",
+    "Flurazepam 15 mg nightly"
+   ],
+   "correctIndex": 1,
+   "explanation": "For an elderly patient, oxazepam PRN offers intermediate action without accumulation — diazepam and flurazepam pile up through active metabolites and cause falls, and continuous clonazepam invites dependence regardless of need. Intermittent use with dose limits is the geriatric principle."
+  },
+  {
+   "id": "bzd-oxa-05",
+   "drugSlug": "oxazepam",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A woman who took oxazepam 15 mg TDS for six weeks stops abruptly and returns with insomnia, tremor and a racing heart by day 2. Best management:",
+   "options": [
+    "Give propranolol and continue off-drug",
+    "Switch immediately to alprazolam at equivalent dose",
+    "Admit for electroconvulsive therapy",
+    "Reinstate oxazepam and taper slowly over weeks"
+   ],
+   "correctIndex": 3,
+   "explanation": "Six weeks is enough for benzodiazepine dependence — abrupt stop produces rebound insomnia, tremor and autonomic surging, with seizure risk if pushed further. The correct response is reinstatement followed by a planned weeks-to-months taper; beta-blockers only mask tremor, and switching to a shorter, higher-risk drug worsens the problem."
+  },
+  {
+   "id": "bzd-oxa-06",
+   "drugSlug": "oxazepam",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "neural-pathways",
+   "question": "Oxazepam's metabolite profile is best described as:",
+   "options": [
+    "Converted to desmethyldiazepam, which persists for days",
+    "Oxidised to an active metabolite longer-lived than the parent",
+    "No active metabolites — glucuronide conjugates are inactive and renally excreted",
+    "Hydrolysed by plasma esterases within minutes"
+   ],
+   "correctIndex": 2,
+   "explanation": "Oxazepam exits as an inactive glucuronide — there is no active-metabolite relay, which is precisely why it does not accumulate. Desmethyldiazepam is the long-lived metabolite of diazepam, chlordiazepoxide and clorazepate; esterase hydrolysis describes the prodrug esters, not oxazepam."
+  },
+  {
+   "id": "bzd-oxa-07",
+   "drugSlug": "oxazepam",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "A de-addiction unit plans detoxification for a 65-year-old with alcohol dependence whose LFTs are deranged. Which benzodiazepine strategy fits best?",
+   "options": [
+    "Oxazepam-based symptom-triggered regimen — glucuronidation spares the injured liver",
+    "Standard chlordiazepoxide taper regardless of LFTs",
+    "Diazepam loading, since its half-life does not matter in withdrawal",
+    "Clonazepam drops three times daily"
+   ],
+   "correctIndex": 0,
+   "explanation": "In alcohol withdrawal with hepatic dysfunction, lorazepam or oxazepam is preferred because both rely on glucuronidation and lack active metabolites; the classic chlordiazepoxide or diazepam regimens assume a liver that can oxidise and then clear days of desmethyldiazepam. Symptom-triggered dosing shortens exposure further."
+  },
+  {
+   "id": "bzd-oxa-08",
+   "drugSlug": "oxazepam",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A patient on oxazepam is started on omeprazole and antacids. The expected effect on oxazepam exposure:",
+   "options": [
+    "Levels fall sharply — oxazepam needs gastric acid for conversion",
+    "Levels rise several-fold via CYP inhibition",
+    "Essentially unchanged — unlike clorazepate, oxazepam does not need gastric acid and is not CYP-cleared",
+    "Oxazepam is chelated and becomes unabsorbable"
+   ],
+   "correctIndex": 2,
+   "explanation": "Oxazepam neither depends on gastric acid (it is not a prodrug) nor on CYP oxidation (glucuronidation only), so acid-suppression barely moves it. The gastric-acid dependency belongs to clorazepate, whose decarboxylation to desmethyldiazepam is delayed by proton-pump inhibitors — that is the mirror fact this question tests."
+  },
+  {
+   "id": "bzd-tem-01",
+   "drugSlug": "temazepam",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Temazepam's elimination half-life sits at roughly:",
+   "options": [
+    "1-2 hours",
+    "10-15 hours — an intermediate span that covers the night with modest hangover",
+    "30-100 hours",
+    "4-6 days"
+   ],
+   "correctIndex": 1,
+   "explanation": "Temazepam's ~10-15 hour half-life is the hypnotic sweet spot: long enough to maintain sleep, short enough that most patients wake clear-headed. The 1-2 hour tier is zaleplon/triazolam territory, 30-100 hours describes flurazepam and the diazepam family, and days-long half-lives belong to fluoxetine, not hypnotics."
+  },
+  {
+   "id": "bzd-tem-02",
+   "drugSlug": "temazepam",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 45-year-old with sleep-maintenance insomnia (wakes at 3 am nightly) wants a hypnotic without morning fog before an exam week. Reasonable choice:",
+   "options": [
+    "Diazepam 10 mg at bedtime",
+    "Flurazepam 30 mg at bedtime",
+    "Clonazepam 1 mg at bedtime indefinitely",
+    "Temazepam 15 mg at bedtime, short course"
+   ],
+   "correctIndex": 3,
+   "explanation": "Temazepam's intermediate half-life makes it the classic sleep-maintenance hypnotic with a tolerable morning profile for short courses. Diazepam and flurazepam carry long active-moiety tails that fog the next day, and indefinite clonazepam builds dependence — the exam-week framing is precisely when short-course logic matters."
+  },
+  {
+   "id": "bzd-tem-03",
+   "drugSlug": "temazepam",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Temazepam's hepatic handling is characterised by:",
+   "options": [
+    "Extensive CYP3A4 oxidation to active metabolites",
+    "Direct glucuronidation — one of the LOT trio",
+    "Renal excretion unchanged, like gabapentin",
+    "Ester hydrolysis to an inactive acid"
+   ],
+   "correctIndex": 1,
+   "explanation": "Temazepam completes the LOT trio (lorazepam, oxazepam, temazepam) — direct glucuronidation with no CYP step and no active metabolites, giving it relative safety in hepatic impairment and old age. Oxidative metabolism defines diazepam-class drugs, renal-unchanged handling fits gabapentin or paliperidone, and ester hydrolysis is the prodrug route."
+  },
+  {
+   "id": "bzd-tem-04",
+   "drugSlug": "temazepam",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Temazepam's gel-filled capsules were reformulated in the UK primarily because:",
+   "options": [
+    "The gel caused oesophageal ulceration",
+    "They were too expensive to manufacture",
+    "The capsule shell degraded in humidity",
+    "Drug abusers melted the gel to inject the drug, causing fatal embolic complications"
+   ],
+   "correctIndex": 3,
+   "explanation": "In the 1980s-90s the lipid-filled temazepam capsules were heated and drawn up for injection — the gel re-solidified in pulmonary vessels and caused fatal emboli — driving reformulation to solid dosage forms. It is a striking real-world pharmacovigilance story and a recurring forensic-style exam item."
+  },
+  {
+   "id": "bzd-tem-05",
+   "drugSlug": "temazepam",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "The typical hypnotic dose range for temazepam in adults is:",
+   "options": [
+    "0.125-0.25 mg",
+    "1-2 mg",
+    "15-30 mg at bedtime",
+    "100-200 mg at bedtime"
+   ],
+   "correctIndex": 2,
+   "explanation": "Temazepam is dosed 15-30 mg at bedtime — milligram doses an order of magnitude above the high-potency triazolobenzodiazepines. The 0.125-0.25 mg range is triazolam, 1-2 mg is clonazepam/lorazepam territory, and 100-200 mg suits no benzodiazepine hypnotic."
+  },
+  {
+   "id": "bzd-tem-06",
+   "drugSlug": "temazepam",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "A man with loud snoring and witnessed apnoeas (untreated sleep apnoea) asks for temazepam for his insomnia. Best response:",
+   "options": [
+    "Prescribe it — benzodiazepines do not affect breathing during sleep",
+    "Dose it half-strength to be safe",
+    "Prescribe it only with a statin on board",
+    "Defer the benzodiazepine — sedatives depress upper-airway tone and worsen apnoea; treat the OSA (CPAP) and use CBT-I"
+   ],
+   "correctIndex": 3,
+   "explanation": "Untreated obstructive sleep apnoea is a standard caution for all sedative-hypnotics: benzodiazepines reduce upper-airway muscle tone and blunt arousal responses, prolonging apnoeas and desaturation. Half-dosing does not remove the mechanism, and the correct path is treating the apnoea plus cognitive-behavioural therapy for insomnia."
+  },
+  {
+   "id": "bzd-tem-07",
+   "drugSlug": "temazepam",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Ranking classic benzodiazepine hypnotics by next-day hangover, the correct order (worst to best) is roughly:",
+   "options": [
+    "Temazepam > triazolam > zaleplon",
+    "Flurazepam > temazepam > triazolam",
+    "Triazolam > flurazepam > temazepam",
+    "All three hang over identically"
+   ],
+   "correctIndex": 1,
+   "explanation": "Flurazepam's 30-100 hour active-moiety tail makes it the hangover champion; temazepam's intermediate span gives a modest morning residue; triazolam clears fast but instead causes rebound insomnia and amnesia — a different harm, not a hangover. Half-life predicts hangover is the testable rule."
+  },
+  {
+   "id": "bzd-tem-08",
+   "drugSlug": "temazepam",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "neural-pathways",
+   "question": "A 70-year-old Indian patient has taken nitrazepam 10 mg nightly for years and now reports daytime sleepiness and a fall. Switching to temazepam at a lower equivalent dose is proposed because:",
+   "options": [
+    "Temazepam is more potent per milligram, allowing larger doses",
+    "Temazepam has no withdrawal risk at all",
+    "Temazepam is shorter-acting with fewer active-metabolite accumulations, reducing daytime carryover",
+    "Nitrazepam and temazepam are the same molecule under different brands"
+   ],
+   "correctIndex": 2,
+   "explanation": "Nitrazepam's long half-life suits young adults poorly in the elderly — accumulation and falls follow — while temazepam's intermediate span plus glucuronidation-only metabolism reduces carryover. Potency per milligram is irrelevant to the accumulation story, withdrawal risk still exists and demands a taper, and the two are distinct molecules."
+  },
+  {
+   "id": "bzd-mid-01",
+   "drugSlug": "midazolam",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Among these agents, the benzodiazepine with the shortest elimination half-life and fastest IV onset is:",
+   "options": [
+    "Diazepam (~20-100 hours effective)",
+    "Temazepam (~10-15 hours)",
+    "Midazolam (~1.5-3 hours)",
+    "Eszopiclone (~6 hours)"
+   ],
+   "correctIndex": 2,
+   "explanation": "Midazolam's imidazole ring makes it water-soluble for injection, giving rapid IV onset with a 1.5-3 hour half-life — the pharmacokinetic basis of its procedural-sedation dominance. Diazepam's long active tail, temazepam's intermediate span and eszopiclone's 6-hour Z-drug half-life are each an order of magnitude off."
+  },
+  {
+   "id": "bzd-mid-02",
+   "drugSlug": "midazolam",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A gastroenterology unit wants sedation for endoscopy in a cooperative adult with good reserves, plus reliable lack of recall of the procedure. The standard agent is:",
+   "options": [
+    "Chlordiazepoxide 50 mg orally",
+    "Temazepam 20 mg orally",
+    "Titred IV midazolam — sedation plus anterograde amnesia",
+    "Zolpidem 10 mg orally"
+   ],
+   "correctIndex": 2,
+   "explanation": "IV midazolam titration is the endoscopy standard — rapid onset, short offset, and anterograde amnesia that spares patients the memory of the procedure. Oral chlordiazepoxide or temazepam cannot be titrated intra-procedurally, and zolpidem is a hypnotic without procedural-sedation credentials."
+  },
+  {
+   "id": "bzd-mid-03",
+   "drugSlug": "midazolam",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 4-year-old in active convulsion at home; the paramedic needs a route that works without an IV. The evidence-based benzodiazepine move:",
+   "options": [
+    "Oral diazepam tablets crushed in water",
+    "Buccal or intranasal midazolam",
+    "IM haloperidol",
+    "Rectal loflazepate"
+   ],
+   "correctIndex": 1,
+   "explanation": "Buccal or intranasal midazolam is the out-of-hospital standard for paediatric status epilepticus — rapid mucosal absorption without an IV line, and trials show it matches or beats rectal diazepam. Oral diazepam is unsafe and slow in an actively seizing child, haloperidol is not an anticonvulsant, and rectal loflazepate is not a thing."
+  },
+  {
+   "id": "bzd-mid-04",
+   "drugSlug": "midazolam",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "During endoscopy, a patient given midazolam plus fentanyl becomes apnoeic and cyanotic. The immediate pharmacological response:",
+   "options": [
+    "Give a benzodiazepine bolus to deepen sedation",
+    "Wait for spontaneous recovery while observing",
+    "Double the fentanyl to restore comfort",
+    "Support airway/ventilation and give flumazenil — with naloxone ready for the opioid"
+   ],
+   "correctIndex": 3,
+   "explanation": "Benzodiazepine-plus-opioid is the classic procedural respiratory-depression stack; management is airway support plus flumazenil for the benzodiazepine component, anticipating that the opioid half needs naloxone. Deepening sedation or adding fentanyl is precisely backwards, and observation alone ignores a peri-arrest airway."
+  },
+  {
+   "id": "bzd-mid-05",
+   "drugSlug": "midazolam",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "neural-pathways",
+   "question": "Midazolam's formulation advantage over diazepam for IV use is:",
+   "options": [
+    "It is an ester prodrug activated in plasma",
+    "It contains propylene glycol only",
+    "Water-soluble at injection pH — less venous irritation, faster onset",
+    "It bypasses the blood-brain barrier by active transport"
+   ],
+   "correctIndex": 2,
+   "explanation": "Midazolam's pH-dependent ring opening makes it water-soluble in the vial and lipophilic at physiological pH — comfortable veins and rapid CNS entry. Diazepam's lipid vehicle causes thrombophlebitis. Propylene glycol is the solvent of the parenteral lorazepam/diazepam world (irritant in prolonged infusions), and no benzodiazepine uses active transport to cross the BBB."
+  },
+  {
+   "id": "bzd-mid-06",
+   "drugSlug": "midazolam",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which co-medication most dangerously prolongs midazolam sedation?",
+   "options": [
+    "Ranitidine",
+    "Metformin",
+    "Ketoconazole or clarithromycin — strong CYP3A4 inhibitors",
+    "Amlodipine"
+   ],
+   "correctIndex": 2,
+   "explanation": "Midazolam is a prototypical CYP3A4 substrate; strong inhibitors (ketoconazole, clarithromycin, ritonavir) can turn a routine dose into prolonged apnoea-prone sedation. Ranitidine barely touches CYP, and metformin and amlodipine are pharmacologically irrelevant here — the exam point is that LOT drugs escape this, oxidative benzodiazepines do not."
+  },
+  {
+   "id": "bzd-mid-07",
+   "drugSlug": "midazolam",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "Before endoscopy a patient asks why he will not remember the procedure. The correct pharmacological explanation:",
+   "options": [
+    "The drug erases old long-term memories retrogradely",
+    "Benzodiazepines prevent consolidation of NEW (anterograde) memories around the procedure — a desired effect, not a complication",
+    "The amnesia is psychogenic anxiety",
+    "Midazolam blocks sensory input at the spinal cord"
+   ],
+   "correctIndex": 1,
+   "explanation": "Benzodiazepines impair anterograde memory consolidation via GABA-A modulation in the hippocampal circuit — events after dosing are not stored, which is exactly why midazolam is prized in procedures. Retrograde amnesia is not a benzodiazepine effect, and sensory pathways remain intact — patients feel, they just do not file."
+  },
+  {
+   "id": "bzd-mid-08",
+   "drugSlug": "midazolam",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "In Indian district-hospital practice, a child presents with an ongoing febrile seizure and no IV access. The practical benzodiazepine route the guidelines push:",
+   "options": [
+    "Intranasal or buccal midazolam",
+    "Oral clobazam sachets",
+    "IM fluphenazine",
+    "IV diazepam infusion at full speed"
+   ],
+   "correctIndex": 0,
+   "explanation": "Without IV access, intranasal or buccal midazolam is the recommended route for terminating prolonged febrile seizures — rapid mucosal uptake, single-administration kits, and no cannulation struggle. Oral routes fail in a seizing child, antipsychotics are irrelevant, and rapid IV diazepam without a line is a non-option."
+  },
+  {
+   "id": "bzd-est-01",
+   "drugSlug": "estazolam",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Estazolam's pharmacological class is:",
+   "options": [
+    "A triazolobenzodiazepine hypnotic acting at the benzodiazepine site of GABA-A receptors",
+    "A melatonin MT1/MT2 agonist",
+    "A dual orexin receptor antagonist",
+    "A first-generation antihistamine"
+   ],
+   "correctIndex": 0,
+   "explanation": "Estazolam is a triazolobenzodiazepine (like alprazolam and triazolam) acting at the standard benzodiazepine site on GABA-A receptors, used as a hypnotic. Melatonin agonists, orexin antagonists and antihistamines are the non-benzodiazepine sleep classes — the exam increasingly asks you to sort hypnotics by mechanism, and estazolam belongs firmly in the benzodiazepine box."
+  },
+  {
+   "id": "bzd-est-02",
+   "drugSlug": "estazolam",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Estazolam's duration tier among hypnotics is best described as:",
+   "options": [
+    "Ultra-short — 1-2 hours",
+    "Intermediate — roughly 10-24 hours, able to maintain sleep",
+    "Ultra-long — 3-7 days",
+    "Weeks-long with irreversible binding"
+   ],
+   "correctIndex": 1,
+   "explanation": "Estazolam is an intermediate-duration benzodiazepine hypnotic (~10-24 hour half-life) — it maintains sleep but carries some morning carryover risk in the elderly. Ultra-short describes zaleplon/triazolam, and multi-day persistence is flurazepam/diazepam-metabolite territory, not estazolam."
+  },
+  {
+   "id": "bzd-est-03",
+   "drugSlug": "estazolam",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A patient has taken estazolam nightly for three months and reports that it 'stopped working', so she has started doubling the dose. The correct assessment:",
+   "options": [
+    "Tolerance with escalating doses — plan a gradual taper and move to CBT-I",
+    "She needs a permanently higher dose — prescribe double indefinitely",
+    "Switch abruptly to a stronger benzodiazepine at three times the dose",
+    "This is proof the original tablets were substandard"
+   ],
+   "correctIndex": 0,
+   "explanation": "Nightly benzodiazepine use produces tolerance within weeks; 'it stopped working' plus self-escalation is the dependence warning shot. The evidence-based response is a slow taper with cognitive-behavioural therapy for insomnia taking over — doubling indefinitely deepens dependence, and abrupt switches amplify withdrawal risk."
+  },
+  {
+   "id": "bzd-est-04",
+   "drugSlug": "estazolam",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "neural-pathways",
+   "question": "Estazolam's metabolism is primarily:",
+   "options": [
+    "Direct glucuronidation — the LOT pattern",
+    "Renal excretion unchanged",
+    "Plasma esterase hydrolysis",
+    "Hepatic oxidation — so caution with CYP inhibitors and liver disease"
+   ],
+   "correctIndex": 3,
+   "explanation": "Estazolam relies on hepatic oxidation — it is NOT a LOT drug — so CYP3A4 inhibitors, hepatic disease and old age all raise exposure. Glucuronidation defines lorazepam/oxazepam/temazepam; unchanged renal excretion fits gabapentin; esterase hydrolysis is the prodrug esters' story."
+  },
+  {
+   "id": "bzd-est-05",
+   "drugSlug": "estazolam",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "For which insomnia pattern was estazolam traditionally positioned?",
+   "options": [
+    "Middle-of-the-night re-dosing",
+    "Daytime sedation for psychosis",
+    "Status epilepticus first-line",
+    "Sleep-maintenance difficulty — the intermediate half-life covers the night"
+   ],
+   "correctIndex": 3,
+   "explanation": "Estazolam's intermediate duration made it a sleep-maintenance hypnotic — the same niche temazepam occupies. Middle-of-the-night dosing belongs to zaleplon's ultra-short profile, and estazolam has no role in psychosis or status epilepticus."
+  },
+  {
+   "id": "bzd-est-06",
+   "drugSlug": "estazolam",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Which set correctly sorts hypnotics by duration (shortest to longest)?",
+   "options": [
+    "Flurazepam, estazolam, zaleplon",
+    "Estazolam, zaleplon, flurazepam",
+    "All three share one half-life tier",
+    "Zaleplon, estazolam, flurazepam"
+   ],
+   "correctIndex": 3,
+   "explanation": "Zaleplon (~1 h) < estazolam (~10-24 h) < flurazepam (~30-100 h with active metabolite) is the correct ladder — half-life ranking is the most reusable hypnotic fact in exams. The other rows simply invert it; hypnotics never share one tier by definition of their clinical niches."
+  },
+  {
+   "id": "bzd-est-07",
+   "drugSlug": "estazolam",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "An elderly woman on estazolam for months now has day-time drowsiness, slurred speech and a near-fall. Best assessment:",
+   "options": [
+    "The dose is too low — increase it",
+    "Normal ageing unrelated to the drug",
+    "Switch immediately to triazolam 0.5 mg nightly",
+    "Cumulative benzodiazepine effect — taper the drug and reassess (falls, fractures and cognitive fog rise with age)"
+   ],
+   "correctIndex": 3,
+   "explanation": "Sedative carryover in the elderly is a geriatric-safety emergency-in-waiting: benzodiazepines raise fall and fracture risk and mimic dementia. The move is tapering off, not dose escalation, not swapping to another benzodiazepine (triazolam adds amnesia and rebound), and never dismissing a near-fall as 'just ageing'."
+  },
+  {
+   "id": "bzd-est-08",
+   "drugSlug": "estazolam",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A woman on estazolam is prescribed ketoconazole for a fungal infection. The relevant counselling:",
+   "options": [
+    "No interaction — estazolam is glucuronidated",
+    "Expect reduced estazolam effect from enzyme induction",
+    "Watch for excessive sedation — ketoconazole's CYP3A4 inhibition raises estazolam levels",
+    "Take both with grapefruit juice to normalise levels"
+   ],
+   "correctIndex": 2,
+   "explanation": "Oxidatively-cleared benzodiazepines such as estazolam are CYP3A4 substrates; ketoconazole's strong inhibition raises levels and sedation. The glucuronidation exemption belongs to the LOT trio, induction would need a drug like rifampicin or carbamazepine, and grapefruit is itself a 3A4 inhibitor — the exact thing to avoid."
+  },
+  {
+   "id": "bzd-flz-01",
+   "drugSlug": "flurazepam",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which hypnotic has the longest effective half-life — the classic next-day hangover agent?",
+   "options": [
+    "Zaleplon",
+    "Triazolam",
+    "Flurazepam",
+    "Temazepam"
+   ],
+   "correctIndex": 2,
+   "explanation": "Flurazepam's active metabolite desalkylflurazepam accumulates with an effective half-life of 30-100 hours — nights of dosing build day-time sedation, the textbook hangover hypnotic. Zaleplon (1 h) and triazolam (2-4 h) clear fastest, and temazepam sits mid-table at 10-15 hours."
+  },
+  {
+   "id": "bzd-flz-02",
+   "drugSlug": "flurazepam",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 74-year-old on flurazepam 30 mg nightly for 'sleep' has day-time somnolence, unsteadiness and a hip bruise from a night-time fall. The correct action:",
+   "options": [
+    "Increase to 60 mg for stronger sleep",
+    "Add a morning stimulant to counter the hangover",
+    "Taper and stop flurazepam; use CBT-I and address sleep hygiene — accumulation in the elderly causes falls and fractures",
+    "Switch to diphenhydramine OTC"
+   ],
+   "correctIndex": 2,
+   "explanation": "Flurazepam's multi-day metabolite tail accumulates exactly in the patients who can least afford it — falls, hip fractures and pseudo-dementia. Tapering off with CBT-I is the geriatric standard; raising the dose or layering a stimulant compounds the harm, and OTC antihistamines are their own Beers-criteria hazard."
+  },
+  {
+   "id": "bzd-flz-03",
+   "drugSlug": "flurazepam",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Flurazepam has largely fallen out of use because:",
+   "options": [
+    "It is too short-acting to maintain sleep",
+    "It has no effect on sleep architecture",
+    "It is not sedating at any dose",
+    "Its long half-life causes cumulative next-day impairment and falls"
+   ],
+   "correctIndex": 3,
+   "explanation": "The same property that maintained sleep — a very long active-moiety half-life — is what retired the drug: accumulation produces hangover, cognitive dulling and fall risk, especially beyond middle age. It is not short-acting, it is plainly sedating, and it does alter sleep architecture."
+  },
+  {
+   "id": "bzd-flz-04",
+   "drugSlug": "flurazepam",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "neural-pathways",
+   "question": "The pharmacokinetic reason flurazepam hangs over into the next day is:",
+   "options": [
+    "Its parent drug is irreversibly bound to GABA-A receptors",
+    "Renal excretion of unchanged drug is the only route",
+    "Its lipophilic active metabolite (desalkylflurazepam) accumulates over nights",
+    "It induces its own metabolism slowly"
+   ],
+   "correctIndex": 2,
+   "explanation": "Desalkylflurazepam, the long-lived active metabolite, is lipophilic and builds up with repeated nightly dosing — hangover is pharmacokinetics, not receptor lock-in. No benzodiazepine binds irreversibly, unchanged renal excretion fits gabapentin, and autoinduction is a carbamazepine story."
+  },
+  {
+   "id": "bzd-flz-05",
+   "drugSlug": "flurazepam",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Contrasting the two obsolete-era hypnotics: flurazepam's signature harm versus triazolam's signature harm:",
+   "options": [
+    "Flurazepam — amnesia; triazolam — hangover",
+    "Both cause identical harms at identical half-lives",
+    "Flurazepam — seizures on discontinuation only; triazolam — weight gain",
+    "Flurazepam — next-day hangover from accumulation; triazolam — rebound insomnia and anterograde amnesia"
+   ],
+   "correctIndex": 3,
+   "explanation": "The pair is a half-life lesson: flurazepam's 30-100 hour tail buys hangover, triazolam's 2-4 hour burst buys rebound insomnia and amnesia — opposite failure modes at opposite half-life extremes. Exam options routinely swap the two signatures, so anchor each to its half-life."
+  },
+  {
+   "id": "bzd-flz-06",
+   "drugSlug": "flurazepam",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "top",
+   "question": "In which patient would flurazepam accumulation be MOST dangerous?",
+   "options": [
+    "A young adult with sleep-onset insomnia and normal lungs",
+    "A COPD patient with hypercapnia — accumulating sedative deepens respiratory depression",
+    "A bodybuilder with insomnia",
+    "A shift-worker with normal spirometry"
+   ],
+   "correctIndex": 1,
+   "explanation": "Chronic respiratory disease with CO2 retention is the classic danger zone for long-acting sedatives: blunted hypoxic drive plus accumulating drug risks respiratory failure. Healthy young adults tolerate the hangover, and shift-work insomnia is a kinetics problem, not a respiratory one."
+  },
+  {
+   "id": "bzd-flz-07",
+   "drugSlug": "flurazepam",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 40-year-old needs a hypnotic for short-term sleep-onset insomnia but must drive at 7 am daily. Which prescription best fits?",
+   "options": [
+    "Flurazepam 30 mg",
+    "Diazepam 10 mg",
+    "Zolpidem 5-10 mg (short course) — minimal carryover versus long-acting benzodiazepines",
+    "Clonazepam 2 mg"
+   ],
+   "correctIndex": 2,
+   "explanation": "For a driver needing a clear 7 am, short-half-life agents are the fit — zolpidem's 2-3 hour span minimises morning carryover for short courses. Flurazepam and diazepam guarantee next-day impairment, and 2 mg clonazepam builds dependence fast."
+  },
+  {
+   "id": "bzd-flz-08",
+   "drugSlug": "flurazepam",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "Which pair correctly groups the LONG-acting benzodiazepines?",
+   "options": [
+    "Midazolam and triazolam",
+    "Oxazepam and lorazepam",
+    "Flurazepam and diazepam",
+    "Zaleplon and eszopiclone"
+   ],
+   "correctIndex": 2,
+   "explanation": "Flurazepam and diazepam (via desmethyldiazepam) head the long-acting tier. Midazolam/triazolam are ultra-short, lorazepam/oxazepam intermediate (the glucuronidation pair), and zaleplon/ezopiclone are Z-drugs, not benzodiazepines at all — the last option is a class-identity trap."
+  },
+  {
+   "id": "bzd-qua-01",
+   "drugSlug": "quazepam",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Quazepam is best identified as:",
+   "options": [
+    "An SSRI with sedative properties",
+    "A barbiturate",
+    "An orexin antagonist",
+    "A long-acting benzodiazepine hypnotic — marketed with claims of alpha1-preferring metabolite selectivity"
+   ],
+   "correctIndex": 3,
+   "explanation": "Quazepam is a long-acting benzodiazepine hypnotic whose main metabolite was claimed to prefer the alpha1 GABA-A subunit — the same subunit Z-drugs target — but its long half-life gives it classic benzodiazepine hangover anyway. SSRIs, barbiturates and orexin antagonists are different classes entirely."
+  },
+  {
+   "id": "bzd-qua-02",
+   "drugSlug": "quazepam",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Quazepam's approved use and typical dose are:",
+   "options": [
+    "Insomnia — about 15 mg at bedtime",
+    "Status epilepticus — 10 mg IV",
+    "Panic disorder — 0.5 mg TDS",
+    "Anaesthesia induction — 2 mg IV"
+   ],
+   "correctIndex": 0,
+   "explanation": "Quazepam is a bedtime hypnotic at around 15 mg — its only label niche. The IV/anaesthesia and status options describe midazolam and diazepam/lorazepam, and 0.5 mg TDS is alprazolam-scale dosing for panic."
+  },
+  {
+   "id": "bzd-qua-03",
+   "drugSlug": "quazepam",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Quazepam's half-life behaviour most resembles:",
+   "options": [
+    "Zaleplon — ultra-short with clean mornings",
+    "Flurazepam — long-acting with accumulating active metabolites",
+    "Oxazepam — intermediate glucuronidated",
+    "Ramelteon — melatonergic with no dependence"
+   ],
+   "correctIndex": 1,
+   "explanation": "Quazepam and its active metabolites sit in the 30-100 hour tier — the flurazepam club — so repeated use accumulates and fogs mornings. Zaleplon and oxazepam sit at opposite, shorter tiers, and ramelteon is not a benzodiazepine at all."
+  },
+  {
+   "id": "bzd-qua-04",
+   "drugSlug": "quazepam",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A long-haul driver taking quazepam nightly reports morning 'heaviness' and a near-miss on the highway. The pharmacologically correct advice:",
+   "options": [
+    "Increase the dose so he sleeps deeper and wakes refreshed",
+    "Take the dose at 3 am instead",
+    "Stop the long-acting hypnotic — carryover sedation impairs morning driving; switch to a shorter agent or CBT-I",
+    "Add caffeine tablets each morning"
+   ],
+   "correctIndex": 2,
+   "explanation": "Long-acting hypnotics guarantee morning carryover — for a driver that is a crash risk, and the fix is stopping the accumulating drug in favour of a short-half-life option or behavioural therapy. Deeper dosing worsens carryover, 3 am dosing wrecks sleep architecture, and caffeine does not restore psychomotor performance."
+  },
+  {
+   "id": "bzd-qua-05",
+   "drugSlug": "quazepam",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Quazepam's distinctive marketing claim — relevant as an exam differentiator — was:",
+   "options": [
+    "Selective serotonin reuptake enhancement",
+    "Alpha1-subunit-preferring active metabolite — anxiolysis-hypnosis with theoretically less muscle relaxancy",
+    "Irreversible orexin receptor antagonism",
+    "Barbiturate-like direct chloride-channel opening"
+   ],
+   "correctIndex": 1,
+   "explanation": "Quazepam's metabolite was claimed to prefer GABA-A alpha1 — the subunit linked to sedation rather than the alpha2/3 anxiolysis-and-myorelaxation sites — a pharmacological cousin-in-spirit of the Z-drug concept. Direct channel opening is barbiturate behaviour, and the other mechanisms belong to unrelated classes."
+  },
+  {
+   "id": "bzd-qua-06",
+   "drugSlug": "quazepam",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "An 85-year-old is prescribed quazepam for institutional-night restlessness. The geriatric-pharmacology verdict:",
+   "options": [
+    "Ideal — alpha1 selectivity makes it fall-proof",
+    "Avoid — long-acting benzodiazepines are on explicit avoid-lists in dementia/elderly care (falls, delirium)",
+    "Safe if crushed into food",
+    "Preferable to any behavioural intervention"
+   ],
+   "correctIndex": 1,
+   "explanation": "Whatever the subunit claims, quazepam remains a long-acting benzodiazepine — Beers-criteria territory in the elderly and dementia care for falls, fractures and delirium. Crushing changes nothing pharmacologically, and non-drug behavioural approaches outrank sedatives for night restlessness."
+  },
+  {
+   "id": "bzd-qua-07",
+   "drugSlug": "quazepam",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "Which hypnotic carries the alpha1-preferring-metabolite claim?",
+   "options": [
+    "Temazepam",
+    "Triazolam",
+    "Quazepam",
+    "Eszopiclone"
+   ],
+   "correctIndex": 2,
+   "explanation": "Quazepam is the textbook answer for the alpha1-preferring-metabolite claim among classic benzodiazepines — a favourite one-liner in pharmacology quizzes. Temazepam and triazolam carry no such claim, and eszopiclone is itself an alpha1-acting Z-drug by primary design, not via a metabolite story."
+  },
+  {
+   "id": "bzd-qua-08",
+   "drugSlug": "quazepam",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "neural-pathways",
+   "question": "After three weeks of nightly quazepam, a patient stops abruptly. Two nights later: severe insomnia, sweating and a generalised seizure. The explanation:",
+   "options": [
+    "Benzodiazepine withdrawal syndrome with seizure — reinstate and taper",
+    "A coincidental head injury",
+    "Food allergy to the tablet coating",
+    "Quazepam is exempt from withdrawal because of alpha1 selectivity"
+   ],
+   "correctIndex": 0,
+   "explanation": "Three weeks of nightly benzodiazepine is dependence territory; abrupt cessation causes rebound insomnia, autonomic surge and seizures — alpha1 selectivity does not exempt any benzodiazepine from GABA-A down-regulation. Management is reinstatement followed by a graded taper, not dismissal."
+  },
+  {
+   "id": "bzd-tzl-01",
+   "drugSlug": "triazolam",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Triazolam's elimination half-life is approximately:",
+   "options": [
+    "1-2 hours",
+    "2-4 hours — an ultra-short hypnotic",
+    "10-15 hours",
+    "30-100 hours"
+   ],
+   "correctIndex": 1,
+   "explanation": "Triazolam is the ultra-short triazolobenzodiazepine — a 2-4 hour half-life that clears before morning but sets up rebound insomnia. The 1-2 hour tier belongs to zaleplon, and the longer tiers to temazepam and flurazepam respectively."
+  },
+  {
+   "id": "bzd-tzl-02",
+   "drugSlug": "triazolam",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A traveller on triazolam 0.25 mg crosses three time zones and next morning cannot recall the airport check-in or the flight safety briefing. The pharmacological explanation:",
+   "options": [
+    "Retrograde amnesia from hippocampal damage",
+    "Anterograde amnesia — benzodiazepines block consolidation of new memories around dosing",
+    "A transient ischaemic attack",
+    "Jet-lag-related dream incorporation"
+   ],
+   "correctIndex": 1,
+   "explanation": "Benzodiazepines classically produce anterograde amnesia — events around and after dosing fail to consolidate — and triazolam, at old 0.5 mg doses, became notorious for exactly this. The history before dosing is intact (retrograde amnesia would be neurological), and TIA has no link to a hypnotic."
+  },
+  {
+   "id": "bzd-tzl-03",
+   "drugSlug": "triazolam",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Beyond insomnia, triazolam retains a legitimate niche in:",
+   "options": [
+    "Chronic daily anxiety",
+    "Status epilepticus maintenance",
+    "Dental procedural sedation (short, titratable, amnesia beneficial)",
+    "Alcohol-withdrawal maintenance for months"
+   ],
+   "correctIndex": 2,
+   "explanation": "Dentistry still uses triazolam for short procedural sedation — rapid onset, brief span, amnesia that suits the chair. Chronic anxiety, epilepsy maintenance and long alcohol-withdrawal cover all need longer half-lives than an ultra-short hypnotic can give."
+  },
+  {
+   "id": "bzd-tzl-04",
+   "drugSlug": "triazolam",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Triazolam's signature discontinuation phenomenon is:",
+   "options": [
+    "Weight gain and oedema",
+    "Hyperprolactinaemia",
+    "Constipation and ileus",
+    "Rebound insomnia — worse than baseline for a few nights after stopping"
+   ],
+   "correctIndex": 3,
+   "explanation": "Rebound insomnia after abrupt stop is triazolam's trademark — the ultra-short half-life lets GABA-A adaptations surface immediately. Weight gain and hyperprolactinaemia belong to other drug classes entirely, and ileus is a clozapine concern."
+  },
+  {
+   "id": "bzd-tzl-05",
+   "drugSlug": "triazolam",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Triazolam was suspended or restricted in several European countries because of:",
+   "options": [
+    "Hepatic failure clusters",
+    "Confusion, amnesia and behavioural disinhibition at previously higher doses (up to 0.5-1 mg)",
+    "Cataract formation",
+    "Irreversible parkinsonism"
+   ],
+   "correctIndex": 1,
+   "explanation": "At the old higher doses, triazolam generated psychiatric reactions — amnesia, confusion, disinhibition — prompting bans in the UK and several European states; survival at 0.125-0.25 mg reflects dose reduction, not exoneration. Hepatic failure, cataracts and parkinsonism are not its harms."
+  },
+  {
+   "id": "bzd-tzl-06",
+   "drugSlug": "triazolam",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "neural-pathways",
+   "question": "Triazolam's metabolic dependence and the classic contraindicated co-drug:",
+   "options": [
+    "Glucuronidation — caution only in renal failure",
+    "CYP3A4 — ketoconazole, ritonavir, erythromycin/clarithromycin are contraindicated or to be avoided",
+    "Renal excretion unchanged — no interactions",
+    "CYP2C9 — warfarin is the concern"
+   ],
+   "correctIndex": 1,
+   "explanation": "Triazolam is a CYP3A4 substrate to an extreme degree — strong 3A4 inhibitors (azoles, ritonavir, macrolides) convert a 0.25 mg tablet into hours of profound sedation, and the label forbids such combinations. Glucuronidation is the LOT exemption, and 2C9 belongs to warfarin and phenytoin."
+  },
+  {
+   "id": "bzd-tzl-07",
+   "drugSlug": "triazolam",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A patient's only problem is taking 60-90 minutes to fall asleep; she sleeps through once asleep and must wake at 5 am. The most half-life-appropriate hypnotic:",
+   "options": [
+    "Flurazepam 30 mg",
+    "Diazepam 10 mg",
+    "Zaleplon 10 mg (or ultra-short hypnotic) taken at bedtime",
+    "Clonazepam 1 mg nightly for a month"
+   ],
+   "correctIndex": 2,
+   "explanation": "Pure sleep-onset insomnia with an early alarm wants the shortest effective span — zaleplon (or an ultra-short agent) clears before the 5 am alarm without carryover. Flurazepam and diazepam guarantee morning fog, and a month of clonazepam is a dependence treadmill."
+  },
+  {
+   "id": "bzd-tzl-08",
+   "drugSlug": "triazolam",
+   "domain": "Indian Practice",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "A patient on triazolam develops a dental abscess and is given clarithromycin. That night he is nearly unrousable. The mechanism:",
+   "options": [
+    "Clarithromycin induces CYP3A4, clearing triazolam too fast",
+    "The two drugs compete for renal excretion",
+    "Clarithromycin inhibits CYP3A4, massively raising triazolam exposure",
+    "The antibiotic neutralises gastric acid, dumping the whole dose into absorption at once"
+   ],
+   "correctIndex": 2,
+   "explanation": "This is the classic macrolide-hypnotic interaction: clarithromycin's potent CYP3A4 inhibition turns a standard triazolam dose into profound, prolonged sedation — a recognised cause of emergency presentations. Induction is the opposite direction, renal competition is irrelevant, and gastric-acid mechanics do not apply to this pair."
+  },
+  {
+   "id": "bzd-fnz-01",
+   "drugSlug": "flunitrazepam",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Flunitrazepam is internationally better known by which street identity and class?",
+   "options": [
+    "'Special K' — an NMDA antagonist",
+    "'Ecstasy' — a serotonin releaser",
+    "'Roofies' / Rohypnol — a potent long-acting benzodiazepine",
+    "'Speed' — an amphetamine"
+   ],
+   "correctIndex": 2,
+   "explanation": "Flunitrazepam is Rohypnol — the 'date-rape drug' — a 1-2 mg benzodiazepine roughly ten times diazepam's potency with pronounced amnesia. Special K, ecstasy and speed are ketamine, MDMA and amphetamine respectively — different classes with different toxidromes."
+  },
+  {
+   "id": "bzd-fnz-02",
+   "drugSlug": "flunitrazepam",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "A 21-year-old presents after a night she cannot remember; friends report sudden profound sedation after one drink, and she fears drink-spiking. The correct work-up includes:",
+   "options": [
+    "Serum prolactin only",
+    "Brain MRI the same night",
+    "Immediate urine drug screen for benzodiazepines (plus standard assault care) — benzodiazepines are detectable for ~48-72 hours",
+    "Reassurance and discharge without testing"
+   ],
+   "correctIndex": 2,
+   "explanation": "Suspected chemical submission calls for timely urine toxicology — flunitrazepam and metabolites remain detectable in urine for roughly two to three days — alongside standard assault medical and psychological care. Prolactin and MRI answer nothing here, and dismissal abandons both forensics and the patient."
+  },
+  {
+   "id": "bzd-fnz-03",
+   "drugSlug": "flunitrazepam",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "The pharmacological properties that make flunitrazepam a substance-assault agent are:",
+   "options": [
+    "Potency, rapid sedation, anterograde amnesia and enhancement of alcohol's effect",
+    "Stimulation and euphoria at low doses",
+    "Analgesia without sedation",
+    "A distinctive colour and odour that victims detect"
+   ],
+   "correctIndex": 0,
+   "explanation": "Flunitrazepam combines high potency, fast deep sedation, reliable anterograde amnesia and synergy with alcohol — the assault-toolkit pharmacology. It is a sedative, not a stimulant or analgesic, and modern tablets are formulated to dissolve inconspicuously — the opposite of a warning sign."
+  },
+  {
+   "id": "bzd-fnz-04",
+   "drugSlug": "flunitrazepam",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "neural-pathways",
+   "question": "Flunitrazepam's elimination profile:",
+   "options": [
+    "Half-life under 1 hour — cleared before evidence is lost",
+    "Half-life of one week",
+    "Excreted unchanged by kidneys within 2 hours",
+    "Half-life around 18-26 hours with active metabolites — sedation can persist into the next day"
+   ],
+   "correctIndex": 3,
+   "explanation": "Flunitrazepam's 18-26 hour half-life plus active metabolites means victims can remain sedated and impaired well into the following day — and clinicians may mistake the residue for intoxication with another agent. The ultra-short options describe zaleplon, not this drug."
+  },
+  {
+   "id": "bzd-fnz-05",
+   "drugSlug": "flunitrazepam",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Flunitrazepam's regulatory status is best stated as:",
+   "options": [
+    "FDA-approved Schedule II hypnotic",
+    "Not approved in the US; internationally controlled (Schedule IV convention) and illicit in many countries",
+    "Available over the counter worldwide",
+    "A prescription-free Ayurvedic preparation"
+   ],
+   "correctIndex": 1,
+   "explanation": "The US never approved flunitrazepam; it is controlled under the international psychotropic conventions and carries heavy illicit-trade restrictions — a favourite regulatory-status exam point. The other options are simply wrong."
+  },
+  {
+   "id": "bzd-fnz-06",
+   "drugSlug": "flunitrazepam",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "An Indian ED receives a comatose young woman with pin-gauge-normal vitals and smell of alcohol; friends mention 'someone put something in her drink'. In addition to standard coma care, the specific antidote that can reverse benzodiazepine sedation is:",
+   "options": [
+    "Naloxone",
+    "Flumazenil — used cautiously given unknown co-ingestions and seizure risk",
+    "N-acetylcysteine",
+    "Atropine"
+   ],
+   "correctIndex": 1,
+   "explanation": "Flumazenil reverses benzodiazepine sedation but must be used cautiously in unknown co-ingestions — in chronic benzodiazepine users or TCA-poisoned patients it can precipitate seizures — hence airway-first care with judicious antidote use. Naloxone targets opioids, NAC paracetamol, and atropine anticholinergic bradycardia."
+  },
+  {
+   "id": "bzd-fnz-07",
+   "drugSlug": "flunitrazepam",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "Why is co-ingestion of flunitrazepam with alcohol more dangerous than either alone?",
+   "options": [
+    "They compete for the same CYP enzyme, leaving one unmetabolised",
+    "Both potentiate GABA-A and CNS depression — additive respiratory and consciousness impairment",
+    "Alcohol converts flunitrazepam into a barbiturate",
+    "They have no interaction — the fear is folklore"
+   ],
+   "correctIndex": 1,
+   "explanation": "Alcohol and benzodiazepines converge on GABA-A inhibition — the additivity is the danger — producing disproportionate respiratory depression and unconsciousness, the mechanism behind most sedative overdose deaths. Enzyme competition is minor here, no chemical conversion occurs, and the folklore framing is exactly the myth the exam kills."
+  },
+  {
+   "id": "bzd-fnz-08",
+   "drugSlug": "flunitrazepam",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "Contrasting two triazolobenzodiazepine-family agents: flunitrazepam versus triazolam:",
+   "options": [
+    "Both are ultra-short with identical half-lives",
+    "Flunitrazepam is long-acting (18-26 h) with assault-misuse notoriety; triazolam is ultra-short (2-4 h) with rebound-insomnia notoriety",
+    "Flunitrazepam is ultra-short; triazolam long-acting",
+    "Both are prodrugs of oxazepam"
+   ],
+   "correctIndex": 1,
+   "explanation": "The pair share a chemistry family (triazolo/benzodiazepine platform) but sit at opposite half-life poles with opposite notorieties — long-acting amnesic misuse for flunitrazepam, ultra-short rebound and amnesia for triazolam. Neither is a prodrug of oxazepam."
+  },
+  {
+   "id": "bzd-lfp-01",
+   "drugSlug": "loflazepate",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "neural-pathways",
+   "question": "Loflazepate's pharmacokinetic identity is:",
+   "options": [
+    "An inactive metabolite of diazepam",
+    "A glucuronidated ultra-short hypnotic",
+    "A direct-acting antagonist at GABA-A",
+    "An ester PRODRUG rapidly converted in the body to desmethyldiazepam"
+   ],
+   "correctIndex": 3,
+   "explanation": "Loflazepate (dipotassium clorazepate's chemical cousin in the prodrug club) is an ester that hydrolyses to desmethyldiazepam — the long-lived active benzodiazepine. It is a prodrug, not a metabolite, not an ultra-short agent, and certainly not an antagonist."
+  },
+  {
+   "id": "bzd-lfp-02",
+   "drugSlug": "loflazepate",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Because of its prodrug-to-desmethyldiazepam design, loflazepate's dosing pattern is:",
+   "options": [
+    "Once daily — the long active-moiety half-life covers the day",
+    "Six times daily",
+    "Continuous IV infusion",
+    "Weekly depot injection"
+   ],
+   "correctIndex": 0,
+   "explanation": "Once the ester converts to desmethyldiazepam, the effective half-life is measured in days — so loflazepate is a once-daily anxiolytic with steady cover and no interdose rebound. Multiple daily dosing fits short-half-life drugs, and there is no benzodiazepine depot."
+  },
+  {
+   "id": "bzd-lfp-03",
+   "drugSlug": "loflazepate",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Which set lists the benzodiazepine PRODRUGS?",
+   "options": [
+    "Chlordiazepoxide, clorazepate, loflazepate — all yielding desmethyldiazepam",
+    "Lorazepam, oxazepam, temazepam",
+    "Midazolam, triazolam, alprazolam",
+    "Zolpidem, eszopiclone, zaleplon"
+   ],
+   "correctIndex": 0,
+   "explanation": "The prodrug trio — chlordiazepoxide, clorazepate and loflazepate — all funnel into desmethyldiazepam before further oxidation to oxazepam. The LOT trio are active parents, the triazolobenzodiazepines are active parents, and the last option is the Z-drug class."
+  },
+  {
+   "id": "bzd-lfp-04",
+   "drugSlug": "loflazepate",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "An 82-year-old on loflazepate for chronic anxiety develops day-time confusion and two falls over a fortnight. The pharmacological reason and action:",
+   "options": [
+    "The prodrug's desmethyldiazepam load accumulates in old age — taper off and use non-pharmacological anxiety care",
+    "The drug is too short-acting, causing withdrawal between doses — increase frequency",
+    "It is an idiosyncratic allergy — continue with antihistamine cover",
+    "Nothing — confusion at 82 is expected"
+   ],
+   "correctIndex": 0,
+   "explanation": "Old age plus a days-long active moiety equals accumulation: confusion and falls. The response is a slow taper off with behavioural anxiety strategies — not more drug, not antihistamines, and never dismissing an iatrogenic fall cluster."
+  },
+  {
+   "id": "bzd-lfp-05",
+   "drugSlug": "loflazepate",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "neural-pathways",
+   "question": "A key difference between clorazepate's and loflazepate's prodrug activation:",
+   "options": [
+    "Clorazepate's decarboxylation requires gastric acid (delayed by PPIs); loflazepate's ester hydrolysis is not acid-dependent",
+    "Both need IV activation",
+    "Loflazepate needs gastric acid; clorazepate does not",
+    "Neither is ever converted — both act unchanged"
+   ],
+   "correctIndex": 0,
+   "explanation": "Clorazepate's decarboxylation to desmethyldiazepam happens in the acidic stomach — proton-pump inhibitors measurably delay its absorption — whereas loflazepate's ester hydrolysis proceeds without acid dependency. Both ultimately yield the same active moiety; only the activation chemistry differs."
+  },
+  {
+   "id": "bzd-lfp-06",
+   "drugSlug": "loflazepate",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A patient with generalised anxiety stable on loflazepate once daily asks why she never feels 'waves' of anxiety between doses. The explanation:",
+   "options": [
+    "The drug's active moiety (desmethyldiazepam) has a days-long half-life, smoothing levels across the day",
+    "The drug permanently rewires anxiety circuits",
+    "It accumulates in fat forever, never leaving",
+    "Loflazepate is actually an SSRI"
+   ],
+   "correctIndex": 0,
+   "explanation": "Interdose rebound is a short-half-life benzodiazepine problem; a days-long active moiety keeps receptor occupancy steady — that is the pharmacological answer. Permanent rewiring and irreversible fat storage are myths, and loflazepate is no SSRI."
+  },
+  {
+   "id": "bzd-lfp-07",
+   "drugSlug": "loflazepate",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which statement about loflazepate's interaction profile is correct?",
+   "options": [
+    "It is immune to all drug interactions because it is a prodrug",
+    "Once converted to desmethyldiazepam it follows the class pattern — CYP inhibition (ketoconazole, cimetidine) and CNS depressants still matter",
+    "It activates only in the presence of alcohol",
+    "It potently induces CYP3A4 like carbamazepine"
+   ],
+   "correctIndex": 1,
+   "explanation": "Prodrug status changes activation, not destiny: the resulting desmethyldiazepam is an oxidatively-cleared benzodiazepine subject to CYP inhibition and additive CNS depression. No benzodiazepine needs alcohol to activate, and no benzodiazepine meaningfully induces CYP enzymes."
+  },
+  {
+   "id": "bzd-lfp-08",
+   "drugSlug": "loflazepate",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "top",
+   "question": "In Indian formularies, loflazepate is positioned as:",
+   "options": [
+    "An emergency anticonvulsant IV agent",
+    "A first-line antipsychotic",
+    "A weight-loss adjunct",
+    "A long-acting anxiolytic for generalised anxiety, with the usual dependence cautions"
+   ],
+   "correctIndex": 3,
+   "explanation": "Loflazepate's Indian niche is long-acting anxiolysis — the prodrug-to-desmethyldiazepam design fits once-daily anxiety cover — always with the class-wide dependence and taper warnings. It has no IV emergency, antipsychotic or weight-loss role."
+  },
+  {
+   "id": "bzd-mix-01",
+   "drugSlug": "mixed",
+   "domain": "Active Recall",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which benzodiazepine–signature pair is CORRECT?",
+   "options": [
+    "Diazepam — the safest benzodiazepine in cirrhosis",
+    "Triazolam — the preferred agent for middle-of-the-night dosing",
+    "Flunitrazepam — an FDA-approved first-line hypnotic",
+    "Midazolam — shortest half-life; procedural sedation with anterograde amnesia; buccal route for paediatric status"
+   ],
+   "correctIndex": 3,
+   "explanation": "Midazolam owns the ultra-short/procedural/amnesia/buccal-status signature. The swapped tags: cirrhosis-safety belongs to lorazepam or oxazepam (glucuronidation, no metabolites), middle-of-the-night dosing to zaleplon, and flunitrazepam is unapproved in the US with assault-misuse infamy. Swapping one tag between drugs is how class questions are built — and defeated."
+  }
+ ]
+}

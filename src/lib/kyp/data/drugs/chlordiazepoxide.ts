@@ -859,6 +859,110 @@ export const chlordiazepoxide: Drug = {
       explanation: "For alcohol withdrawal (outpatient mild): start 10–25 mg three to four times daily (or 50 mg TDS day 1), target 50–100 mg day 1 tapering, maximum Regimen-limited (inpatient 400 mg/day max typical). Fixed or CIWA-triggered regimens, tapering over 5–7 days (e.g., 50/25/10 mg step-down)",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "bzd-chl-01",
+      question: "The first benzodiazepine ever marketed, introduced in 1960 and still a byword for the class's origins, is:",
+      options: [
+        "Diazepam (Valium)",
+        "Oxazepam (Serax)",
+        "Meprobamate (Miltown)",
+        "Chlordiazepoxide (Librium)"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi introduces chlordiazepoxide as the first BZD to be used clinically, and Katzung's preparation list preserves the Librium brand. Diazepam followed soon after as the class prototype, oxazepam arrived later as a metabolite-based agent, and meprobamate is not a benzodiazepine at all — it is an older carbamate sedative.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "bzd-chl-02",
+      question: "A 45-year-old man dependent on alcohol presents on day two of abstinence with tremor, sweating, insomnia and a rising pulse; the ward plans graded substitution cover guided by withdrawal scores. The classic benzodiazepine of choice is:",
+      options: [
+        "Alprazolam — its short half-life gives the tightest seizure cover",
+        "Chlordiazepoxide — long-acting cover that can itself be tapered stepwise as the scores settle",
+        "Zolpidem — a benzodiazepine-receptor hypnotic with proven withdrawal cover",
+        "Buspirone — a 5-HT1A partial agonist that blocks alcohol withdrawal"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi calls chlordiazepoxide the commonest BZD used to cover alcohol withdrawal — its long, smooth effect from active metabolites allows later gradual tapering, the logic behind CIWA-driven regimens. Alprazolam's short half-life and dependence liability make it a poor withdrawal agent, buspirone is explicitly ineffective against sedative-hypnotic withdrawal (Katzung), and zolpidem is not used as withdrawal cover.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "bzd-chl-03",
+      question: "Chlordiazepoxide's parent plasma half-life is only 6-12 hours (Tripathi), yet its clinical action is long and smooth. The reconciling fact is:",
+      options: [
+        "It binds the benzodiazepine receptor irreversibly",
+        "It undergoes enterohepatic recirculation measured in weeks",
+        "The parent compound is stored intact in adipose tissue for months",
+        "It generates a cascade of active metabolites — desmethylchlordiazepoxide, demoxepam and ultimately desmethyldiazepam — that extends the effective half-life to 15-40 hours"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung's biotransformation figure traces chlordiazepoxide through desmethylchlordiazepoxide and demoxepam into desmethyldiazepam, giving an effective half-life of 15-40 hours despite the short parent half-life — a prodrug-like pharmacokinetic tail. Irreversible binding would make flumazenil useless (it is not), and weeks-long recirculation or intact tissue storage are fabricated pharmacokinetics.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "bzd-chl-04",
+      question: "An emergency nurse draws up intramuscular chlordiazepoxide for an acutely anxious patient and is stopped by the pharmacist. The reason:",
+      options: [
+        "Like diazepam, chlordiazepoxide gives erratic bioavailability from IM injection — use the oral route, or pick lorazepam if parenteral cover is essential",
+        "Intramuscular chlordiazepoxide causes fatal arrhythmia within minutes",
+        "Chlordiazepoxide cannot be dissolved in any injection vehicle",
+        "IM chlordiazepoxide is fine; the objection applies only to IV use in the elderly"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung's pharmacokinetic table flags erratic bioavailability from IM injection for chlordiazepoxide exactly as for diazepam — an unreliable route when predictable levels matter. The other objections are invented; the real alternatives are oral dosing or IM lorazepam, the benzodiazepine with dependable IM absorption.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "bzd-chl-05",
+      question: "During a ward round a junior proposes intravenous chlordiazepoxide 50 mg to abort an ongoing tonic-clonic seizure. The consultant's objection rests on which textbook point?",
+      options: [
+        "Chlordiazepoxide is an opioid antagonist and would worsen the seizure",
+        "Chlordiazepoxide's anticonvulsant action is weak — status epilepticus calls for lorazepam or diazepam instead",
+        "Chlordiazepoxide is reserved solely for insomnia by regulatory law",
+        "Chlordiazepoxide acts only on the spinal cord and never on cortical seizures"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi explicitly notes chlordiazepoxide's anticonvulsant action is weak, which is why the emergency seizure roles belong to lorazepam, diazepam and clonazepam; chlordiazepoxide's niche is anxiety and alcohol-withdrawal cover. The other options attach nonsensical mechanisms or a legal claim the drug does not have.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "bzd-chl-06",
+      question: "A woman on twice-daily chlordiazepoxide for chronic anxiety begins antitubercular therapy. Over two weeks she becomes increasingly drowsy and confused. Which ATT component most plausibly explains the change?",
+      options: [
+        "Isoniazid — Tripathi lists it (with cimetidine and oral contraceptives) among agents that retard benzodiazepine metabolism",
+        "Rifampicin — it doubles benzodiazepine levels by blocking biliary excretion",
+        "Pyrazinamide — it blocks GABA synthesis, sensitising the receptors",
+        "Ethambutol — it competes for the benzodiazepine binding site"
+      ],
+      correctIndex: 0,
+      explanation: "Tripathi's benzodiazepine interaction list names cimetidine, isoniazid and oral contraceptives as metabolism-retarding agents, so isoniazid fits the timeline of rising sedation. Rifampicin is the opposite — an inducer that would reduce levels — and the remaining options describe mechanisms those drugs lack.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "bzd-chl-07",
+      question: "Tripathi's preparation table pairs chlordiazepoxide with which Indian brands and doses?",
+      options: [
+        "ATIVAN 1, 2 mg tablets — daily dose 1-6 mg",
+        "Halcion 0.125, 0.25 mg tablets — bedtime dosing only",
+        "Serenace 0.5, 1.5 mg tablets — up to 20 mg/day",
+        "LIBRIUM 10, 25 mg tablets and EQUILIBRIUM 10 mg tablet — daily dose 25-100 mg"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi lists chlordiazepoxide as LIBRIUM 10 and 25 mg tablets and EQUILIBRIUM 10 mg, at a daily dose of 25-100 mg for anxiety states. ATIVAN is lorazepam, Halcion is triazolam's US brand, and Serenace is haloperidol — each a real product of a different drug.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "bzd-chl-08",
+      question: "An IBS patient in India receives a strip whose each tablet combines dicyclomine 10 mg with chlordiazepoxide 5 mg (a NORMAXIN-type combination). What is the pharmacological logic of adding chlordiazepoxide here?",
+      options: [
+        "The anxiety and emotional component of nervous dyspepsia and IBS is dampened by the benzodiazepine, complementing the antispasmodic",
+        "Chlordiazepoxide directly relaxes intestinal smooth muscle by blocking calcium channels",
+        "Chlordiazepoxide accelerates gastric emptying to shorten colonic transit",
+        "Chlordiazepoxide sterilises the gut flora that drives IBS"
+      ],
+      correctIndex: 0,
+      explanation: "Tripathi describes chlordiazepoxide combinations with antispasmodics (SPASRIL, ARWIN, NORMAXIN, CIBIS) for nervous dyspepsia, IBS, colic and psychosomatic disorders — the benzodiazepine addresses the anxious, stress-driven component. It has no calcium-channel, prokinetic or antibacterial action in the gut.",
+      afterSectionId: "quick-facts",
+    },
   ],
   activeRecallQuestions: [
     {

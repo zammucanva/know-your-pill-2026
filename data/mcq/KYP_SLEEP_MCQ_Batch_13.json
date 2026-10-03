@@ -1,0 +1,1300 @@
+{
+ "batch": "kyp-sleep-mcq-batch-13",
+ "title": "Sleep Agent MCQ Batch 13 - Z-drugs, melatonergics, orexin antagonist, antihistamines",
+ "generated": "2026-10-02",
+ "examOrientation": "Indian exams (NEET PG / INI-CET) + USMLE-style vignettes",
+ "textbookAnchors": "Facts aligned with Katzung Basic & Clinical Pharmacology 14e (ch.22 sedative-hypnotic drugs incl. Table 22-1 PK/doses and the ramelteon-tasimelteon box; ch.16 H1 antihistamines), K.D. Tripathi Essentials of Medical Pharmacology 7e (ch.29 sedative-hypnotics, ch.43 antihistaminics), Oxford Handbook of Psychiatry, and USMLE board conventions; cross-checked against KYP monographs (zolpidem alpha1/BZ1-selective GABA-A modulator with boxed warning for complex sleep behaviours and the FDA 2013 female dose halving to 5 mg; zopiclone cyclopyrrolone with signature bitter metallic taste; eszopiclone S-enantiomer, ~6 h half-life and 6-month no-tolerance data; zaleplon ~1 h half-life enabling middle-of-the-night dosing; ramelteon MT1/MT2 agonist with no abuse potential, prolactin rise and fluvoxamine >50-fold 1A2 interaction; tasimelteon for non-24-hour sleep-wake disorder in the totally blind; suvorexant dual orexin receptor antagonist contraindicated in narcolepsy with 3A4 interaction caution; hydroxyzine non-scheduled anxiolytic-antipruritic with cetirizine metabolite and QTc warning; diphenhydramine OTC anticholinergic sleep aid with BEERS-criteria avoid in elderly and rapid tolerance). No copyrighted text reproduced.",
+ "schema": {
+  "core_fields": "id, question, options[4], correctIndex, explanation, afterSectionId - IDENTICAL to KYP microQuizzes",
+  "metadata_fields": "drugSlug, domain, difficulty (Foundation|Clinical|Advanced), style (vignette|recall) - batch extras",
+  "notes": [
+   "afterSectionId values are real section ids observed live on KYP pages: top, quick-facts, mechanism, timeline, neurotransmitters, neural-pathways, knowledge-graph, high-yield-summary.",
+   "Answer positions deliberately spread: A19 B18 C18 D18 (see stats.answerSpread).",
+   "QA gate: this batch passed scripts/mcq_4step_check.py after extending the fact table with hypnotic/sleep-agent data.",
+   "id pattern: slp-<code>-01..08 per drug (zol/zop/esz/zal/ram/tas/suv/hyd/dph) + one slp-mix-01 class-summary at the end."
+  ]
+ },
+ "stats": {
+  "total": 73,
+  "byDrug": {
+   "zolpidem": 8,
+   "zopiclone": 8,
+   "eszopiclone": 8,
+   "zaleplon": 8,
+   "ramelteon": 8,
+   "tasimelteon": 8,
+   "suvorexant": 8,
+   "hydroxyzine": 8,
+   "diphenhydramine": 8,
+   "mixed": 1
+  },
+  "byDifficulty": {
+   "Clinical": 39,
+   "Foundation": 19,
+   "Advanced": 15
+  },
+  "byStyle": {
+   "vignette": 41,
+   "recall": 32
+  },
+  "byDomain": {
+   "Adverse Effects & Safety": 13,
+   "Clinical Uses": 17,
+   "Mechanism & Neuroscience": 15,
+   "Pharmacokinetics": 6,
+   "Exam Pearls": 7,
+   "Indian Practice": 6,
+   "Drug Interactions": 8,
+   "Active Recall": 1
+  },
+  "answerSpread": {
+   "0": 19,
+   "1": 18,
+   "2": 18,
+   "3": 18
+  }
+ },
+ "questions": [
+  {
+   "id": "slp-zol-01",
+   "drugSlug": "zolpidem",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 34-year-old woman on zolpidem 10 mg at bedtime for 3 weeks is brought in by her family after being found at 2 am preparing food in the kitchen, and on another night driving the car. She has no memory of either episode. What is the correct interpretation and action?",
+   "options": [
+    "Complex sleep behaviour with amnesia, the boxed-warning adverse effect of zolpidem; stop the drug immediately",
+    "A normal parasomnia merely aggravated by coffee; continue the same dose with a caffeine restriction",
+    "Nocturnal seizure activity; add carbamazepine and continue zolpidem unchanged",
+    "Deliberate drug-seeking behaviour; switch her to a benzodiazepine such as diazepam"
+   ],
+   "correctIndex": 0,
+   "explanation": "Sleep-driving and sleep-eating with no memory of the event are the signature complex sleep behaviours that carry a boxed warning for zolpidem, so the correct action is immediate withdrawal of the drug. These are not benign dose-normal parasomnias and not a reason to switch to a benzodiazepine, which would add its own hangover and dependence burden. Katzung records FDA warnings for sleep-driving and somnambulistic behaviour with the sedative-hypnotics, and any patient describing night-time activity without recall on a Z-drug must have the hypnotic stopped at once."
+  },
+  {
+   "id": "slp-zol-02",
+   "drugSlug": "zolpidem",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 52-year-old woman has been taking immediate-release zolpidem 10 mg at bedtime. She reports daytime sleepiness and failed an early-morning driving simulation assessment. Which adjustment reflects the 2013 FDA labelling change?",
+   "options": [
+    "Split the 10 mg tablet into two halves taken 6 hours apart",
+    "Halve the dose to 5 mg, because women clear zolpidem more slowly and are more susceptible to next-morning impairment",
+    "Double the dose to 20 mg so that tolerance to the sedative effect develops faster",
+    "Switch to triple the bedtime dose of eszopiclone for smoother coverage"
+   ],
+   "correctIndex": 1,
+   "explanation": "In 2013 the FDA required the recommended immediate-release zolpidem dose for women to be cut in half to 5 mg, because female patients clear the drug more slowly and showed next-morning driving impairment on the higher dose. Raising the dose, splitting it through the night, or moving to a longer half-life agent would all worsen residual sedation. Zolpidem is metabolised by CYP3A4 and its elimination half-life is greater in women and increased in the elderly, which is the pharmacokinetic basis of the label change."
+  },
+  {
+   "id": "slp-zol-03",
+   "drugSlug": "zolpidem",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Zolpidem's receptor pharmacology is best described as:",
+   "options": [
+    "A competitive antagonist at melatonin MT1 and MT2 receptors in the suprachiasmatic nucleus",
+    "An inverse agonist at the benzodiazepine site that raises arousal by reducing GABA tone",
+    "A positive allosteric modulator of the GABA-A receptor that binds selectively at the alpha-1 (BZ1)-containing subtype",
+    "A direct agonist at the GABA binding site itself, mimicking GABA at all subunit combinations"
+   ],
+   "correctIndex": 2,
+   "explanation": "Zolpidem is a non-benzodiazepine (imidazopyridine) hypnotic that potentiates GABA at GABA-A receptors containing the alpha-1 subunit, producing strong hypnotic-amnesic action with little anticonvulsant or muscle-relaxant effect. It does not open the chloride channel directly like barbiturates, and it has no action at melatonin receptors, which are the targets of ramelteon and tasimelteon. Because it binds at the benzodiazepine site, flumazenil can displace it."
+  },
+  {
+   "id": "slp-zol-04",
+   "drugSlug": "zolpidem",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 40-year-old man on rifampicin for spinal tuberculosis says his nightly zolpidem no longer puts him to sleep. What is the pharmacokinetic explanation?",
+   "options": [
+    "Rifampicin inhibits CYP3A4, causing toxic zolpidem accumulation and rebound insomnia",
+    "Rifampicin induces renal clearance of unchanged zolpidem, which is the drug's main elimination route",
+    "Rifampicin down-regulates GABA-A alpha-1 subunit expression, so the receptor no longer responds to zolpidem",
+    "Rifampicin induces CYP3A4, accelerating zolpidem's hepatic metabolism and lowering its hypnotic levels"
+   ],
+   "correctIndex": 3,
+   "explanation": "Zolpidem is rapidly metabolised to inactive products by hepatic CYP3A4, so potent inducers such as rifampicin reduce exposure and the hypnotic effect appears to fade. Inhibition is the opposite of what is happening here, and zolpidem is cleared by hepatic metabolism rather than by renal excretion of unchanged drug. Receptor down-regulation is not the mechanism of this interaction."
+  },
+  {
+   "id": "slp-zol-05",
+   "drugSlug": "zolpidem",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "neurotransmitters",
+   "question": "Which pattern of actions distinguishes zolpidem from classical benzodiazepines such as temazepam?",
+   "options": [
+    "Pronounced hypnotic effect with negligible anticonvulsant and muscle-relaxant actions",
+    "Equally strong anticonvulsant, anxiolytic and muscle-relaxant actions alongside hypnosis",
+    "Marked suppression of REM sleep with reversal of the normal stage distribution",
+    "Potent anxiolytic action that makes it a first-line drug for panic disorder"
+   ],
+   "correctIndex": 0,
+   "explanation": "Because zolpidem acts selectively at the alpha-1-containing GABA-A subtype that mediates hypnosis, it shortens sleep latency with minimal residual sedation, but the anticonvulsant and muscle-relaxant actions that come from other alpha subtypes are not evident, and Tripathi explicitly notes its anticonvulsant and antianxiety effects are absent. It therefore cannot replace benzodiazepines in panic disorder or seizures. Its effect on sleep stages, including REM, is slight rather than marked."
+  },
+  {
+   "id": "slp-zol-06",
+   "drugSlug": "zolpidem",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A young woman is brought to the emergency department drowsy after ingesting her flatmate's zolpidem tablets. Which intervention is expected to reverse the hypnotic effect?",
+   "options": [
+    "Physostigmine, to reverse the central anticholinergic syndrome produced by zolpidem",
+    "Flumazenil, which competes at the benzodiazepine site on the GABA-A receptor where zolpidem binds",
+    "Naloxone, because Z-drugs act at mu-opioid receptors in overdose",
+    "N-acetylcysteine, to replenish glutathione stores consumed by zolpidem metabolism"
+   ],
+   "correctIndex": 1,
+   "explanation": "Zolpidem binds at the benzodiazepine site of the GABA-A receptor, so the competitive antagonist flumazenil can reverse its sedation, a favourite exam link between the benzodiazepine site and the Z-drugs. Naloxone targets opioid receptors and N-acetylcysteine is the paracetamol antidote, and neither has any role here. Zolpidem is not a significant anticholinergic, so physostigmine would not help."
+  },
+  {
+   "id": "slp-zol-07",
+   "drugSlug": "zolpidem",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A pharmacist in Pune dispenses NITREST (zolpidem) 10 mg to a 46-year-old teacher for short-term insomnia. Which counselling point is the most important?",
+   "options": [
+    "Continue the tablet nightly for at least six months to build tolerance to the sedation",
+    "If one tablet fails, take a second at 3 am and still drive to work at 7 am",
+    "Take a single dose immediately at bedtime, never with alcohol, and do not drive if you wake before the effect has fully worn off",
+    "Take the tablet with a bedtime snack and antacid to prolong its absorption through the night"
+   ],
+   "correctIndex": 2,
+   "explanation": "Zolpidem acts within about 30 to 60 minutes and its short half-life (about 2 hours per Tripathi) means a single bedtime dose only, no alcohol, and no driving after early-morning waking; complex sleep behaviours such as sleep-driving carry the boxed warning. A six-month nightly course contradicts all short-course hypnotic guidance, and redosing at night before an early drive is exactly the pattern that produces next-morning impairment. Antacids do not convert zolpidem into a sustained-release product."
+  },
+  {
+   "id": "slp-zol-08",
+   "drugSlug": "zolpidem",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Regarding regulatory scheduling of hypnotics, which contrast is correct?",
+   "options": [
+    "Ramelteon is Schedule IV, whereas zolpidem is freely sold over the counter worldwide",
+    "Both zolpidem and ramelteon are Schedule II drugs comparable to amphetamine",
+    "Neither zolpidem nor ramelteon carries any controlled-substance status anywhere",
+    "Zolpidem is a controlled substance (Schedule IV in the USA), whereas ramelteon has no abuse potential and is not scheduled"
+   ],
+   "correctIndex": 3,
+   "explanation": "Z-drugs such as zolpidem retain benzodiazepine-like dependence potential and are scheduled (C-IV in the USA), while ramelteon's melatonergic mechanism produces no euphoria or dependence and the drug is unscheduled, which is why it is the textbook choice for the insomniac with a substance-use history. Amphetamine-level Schedule II status is wrong for both, and zolpidem is prescription-only rather than an over-the-counter sale. Keeping the scheduled-versus-unscheduled contrast in mind is a recurring exam theme."
+  },
+  {
+   "id": "slp-zop-01",
+   "drugSlug": "zopiclone",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 38-year-old man started zopiclone 7.5 mg at bedtime a week ago and now complains that everything tastes of metal, even plain water. What is the correct interpretation?",
+   "options": [
+    "Dysgeusia, the bitter metallic after-taste that is the characteristic adverse effect of zopiclone",
+    "Hyposmia from zopiclone-induced zinc deficiency, requiring zinc supplementation",
+    "Allergic stomatitis, mandating immediate antifungal lozenges",
+    "An olfactory hallucination of emerging psychosis, requiring an antipsychotic"
+   ],
+   "correctIndex": 0,
+   "explanation": "A bitter or metallic after-taste (dysgeusia) is the classic fingerprint of zopiclone, listed first among its side effects by Tripathi, and it is shared by its S-enantiomer eszopiclone. It is not a psychotic hallucination, not a deficiency state and not infective stomatitis, so supplementation and antifungals are misplaced. Dysgeusia is the commonest reason patients abandon the drug, so warning them in advance is good practice."
+  },
+  {
+   "id": "slp-zop-02",
+   "drugSlug": "zopiclone",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Zopiclone's chemical class and receptor action are best described as:",
+   "options": [
+    "A barbiturate derivative that directly opens the GABA-A chloride channel at high concentrations",
+    "A cyclopyrrolone non-benzodiazepine that acts as an agonist at the benzodiazepine-receptor subtype mediating hypnosis",
+    "A pyrazolopyrimidine that blocks melatonin reuptake from the synaptic cleft",
+    "A phenothiazine that blocks histamine H1 receptors to induce drowsiness"
+   ],
+   "correctIndex": 1,
+   "explanation": "Zopiclone was the first of the non-benzodiazepine hypnotics; it is a cyclopyrrolone acting as an agonist at the benzodiazepine receptor subtype involved in hypnotic action, with sleep effects resembling benzodiazepines. The pyrazolopyrimidine label belongs to zaleplon, and the antihistamine and barbiturate descriptions fit hydroxyzine and the historical barbiturates rather than zopiclone. Its alpha-1-preferring action explains the sparing of anticonvulsant and muscle-relaxant effects."
+  },
+  {
+   "id": "slp-zop-03",
+   "drugSlug": "zopiclone",
+   "domain": "Indian Practice",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which prescribing pattern matches Indian zopiclone practice (ZOPITRAN / ZOPICON / ZOLIUM)?",
+   "options": [
+    "7.5 mg three times daily after meals for generalised anxiety disorder",
+    "15 mg dissolved in milk at bedtime, repeated twice nightly if the patient wakes",
+    "One 7.5 mg tablet at bedtime for not more than 2 to 4 weeks; 3.75 mg in the elderly",
+    "One 75 mg tablet at bedtime, continued indefinitely until sleep normalises"
+   ],
+   "correctIndex": 2,
+   "explanation": "Indian brands supply zopiclone as a single 7.5 mg bedtime tablet, limited to short courses of roughly two to four weeks, with 3.75 mg recommended in the elderly because of slower clearance. It is not a thrice-daily anxiolytic, and doubling or repeating the dose at night invites next-morning impairment and dependence. The bitter taste is tolerated better at the lowest effective dose."
+  },
+  {
+   "id": "slp-zop-04",
+   "drugSlug": "zopiclone",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 60-year-old woman has taken alprazolam nightly for 3 years and wants to stop, but says she cannot sleep without it. Which hypnotic has traditionally been used to wean insomniacs off regular benzodiazepines?",
+   "options": [
+    "Fluoxetine, because blocking serotonin reuptake restores benzodiazepine receptor sensitivity",
+    "Modafinil, to replace night-time sedation with daytime alertness",
+    "Propranolol, to block the rebound tremor of benzodiazepine withdrawal",
+    "Zopiclone"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi specifically notes that zopiclone has been used to wean insomniacs off regular benzodiazepine medication, bridging the hypnotic component while the benzodiazepine is tapered. Fluoxetine, modafinil and propranolol have no hypnotic bridging role and none of them addresses the receptor pharmacology that makes benzodiazepine withdrawal difficult. Its own course must still remain time-limited, because dependence, though milder, can occur."
+  },
+  {
+   "id": "slp-zop-05",
+   "drugSlug": "zopiclone",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which statement about zopiclone's pharmacokinetics and sleep architecture is correct?",
+   "options": [
+    "Half-life of 5 to 6 hours, with preserved REM sleep and possible next-morning impairment",
+    "Half-life under 1 hour, which makes it ideal for middle-of-the-night dosing",
+    "Half-life of 2 to 5 days, requiring weekly dose titration",
+    "Complete REM suppression comparable to high-dose amitriptyline"
+   ],
+   "correctIndex": 0,
+   "explanation": "Zopiclone's half-life is about 5 to 6 hours (Tripathi), long enough to hold sleep through much of the night yet short enough to limit hangover; it does not disturb REM sleep and tends to prolong slow-wave stages 3 and 4, although some next-morning impairment can still occur. The sub-hour half-life belongs to zaleplon, no hypnotic here lasts for days, and REM is preserved rather than abolished."
+  },
+  {
+   "id": "slp-zop-06",
+   "drugSlug": "zopiclone",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 24-year-old woman who was given her aunt's zopiclone tablets over several weeks is found mildly drowsy after taking an unknown number. Which statement guides management?",
+   "options": [
+    "Zopiclone overdose requires repeated activated charcoal every 4 hours for 48 hours",
+    "Zopiclone overdose is managed supportively like benzodiazepine overdose, with a comparatively benign outlook",
+    "Zopiclone overdose causes fulminant hepatic necrosis, so N-acetylcysteine is mandatory",
+    "Zopiclone overdose causes severe metabolic acidosis with high fatality, so dialysis is first-line"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi notes that zopiclone's safety in overdose is similar to that of the benzodiazepines: supportive care is the mainstay and most patients recover, with flumazenil available if sedation is severe. It is not a paracetamol-like hepatotoxin and does not produce the acidosis picture that would make dialysis first-line. Single-dose charcoal may be considered after a large ingestion, but prolonged repeat dosing is not standard."
+  },
+  {
+   "id": "slp-zop-07",
+   "drugSlug": "zopiclone",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "neurotransmitters",
+   "question": "On polysomnography, how does zopiclone typically modify sleep architecture?",
+   "options": [
+    "Conversion of stage 2 NREM into prolonged REM sleep throughout the night",
+    "No measurable effect on any sleep parameter except vivid nightmares",
+    "Effects resembling benzodiazepine hypnosis but without altering REM sleep, with a tendency to prolong stages 3 and 4",
+    "Complete suppression of slow-wave sleep with marked REM rebound on withdrawal"
+   ],
+   "correctIndex": 2,
+   "explanation": "Zopiclone's effect on sleep resembles that of benzodiazepines, but it is reported not to disturb REM sleep and it tends to deepen stages 3 and 4, a favourable profile cited by Tripathi. Marked slow-wave suppression with REM rebound is a feature of high-dose benzodiazepine or barbiturate use, not of zopiclone. It is a genuine hypnotic with documented sleep-architecture effects, not a nightmare-only drug."
+  },
+  {
+   "id": "slp-zop-08",
+   "drugSlug": "zopiclone",
+   "domain": "Clinical Uses",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A patient with dysgeusia on zopiclone 7.5 mg is switched to eszopiclone 2 mg, but the metallic taste returns within days. What is the most likely explanation?",
+   "options": [
+    "Eszopiclone is chemically unrelated to zopiclone, so this reaction must be a new allergy",
+    "The 2 mg dose exceeds eszopiclone's maximum permitted dose of 1 mg",
+    "The taste return proves the dispensed tablets were counterfeit zolpidem",
+    "Eszopiclone is the S-enantiomer of zopiclone, so the taste disturbance is shared by both molecules"
+   ],
+   "correctIndex": 3,
+   "explanation": "Eszopiclone is the active S-enantiomer of the zopiclone racemate, so the characteristic dysgeusia recurs because both are the same pharmacological entity at different stereochemical purity. An allergic reaction and counterfeit-drug speculation are unnecessary to explain the return of a shared adverse effect, and 1 to 3 mg is the standard eszopiclone range rather than a breach of any ceiling. This enantiomer link is a favourite exam pairing."
+  },
+  {
+   "id": "slp-esz-01",
+   "drugSlug": "eszopiclone",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Eszopiclone's identity and mechanism are best summarised as:",
+   "options": [
+    "The S-enantiomer of the cyclopyrrolone zopiclone, acting at the benzodiazepine site of GABA-A receptors",
+    "The R-enantiomer of melatonin, acting at MT1 and MT2 receptors",
+    "A dual orexin receptor antagonist derived from the benzodiazepine nucleus",
+    "A first-generation H1 antihistamine of piperazine structure"
+   ],
+   "correctIndex": 0,
+   "explanation": "Eszopiclone is the active S-enantiomer of zopiclone, a cyclopyrrolone that potentiates GABA-A function through the benzodiazepine site with alpha-1 preference, marketed separately for its refined hypnotic profile; the racemate had been available outside the USA since 1989 (Katzung). The melatonin, orexin and antihistamine descriptions belong to ramelteon or tasimelteon, suvorexant, and hydroxyzine respectively. It shares zopiclone's dysgeusia precisely because it is the same molecule."
+  },
+  {
+   "id": "slp-esz-02",
+   "drugSlug": "eszopiclone",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Among the Z-drugs (zolpidem, zopiclone, eszopiclone, zaleplon), which half-life ranking is correct?",
+   "options": [
+    "Zolpidem has the longest half-life at about 24 hours, which permits once-weekly dosing",
+    "Eszopiclone is the longest at about 6 hours; zaleplon the shortest at about 1 hour",
+    "Zaleplon is the longest at about 6 hours; eszopiclone the shortest at about 1 hour",
+    "All four share an identical half-life of about 4 hours, differing only in dose"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung's pharmacokinetic table gives eszopiclone a 6-hour elimination half-life (the longest of the Z-drugs), zolpidem roughly 2 to 3.5 hours, and zaleplon under 1 to 2 hours, so the ranking rises from zaleplon through zolpidem to zopiclone and eszopiclone. The mirror-image ranking is the classic trap, and no member of this class has a 24-hour half-life or a weekly formulation. This ranking drives the next-day hangover differences examiners test."
+  },
+  {
+   "id": "slp-esz-03",
+   "drugSlug": "eszopiclone",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 45-year-old man with chronic insomnia accepts eszopiclone but fears he will need ever-larger doses. What is the evidence-based reassurance?",
+   "options": [
+    "It loses all effect after 1 week and must be replaced by temazepam for long-term use",
+    "The dose must be escalated to 6 to 9 mg by the second month to retain hypnotic effect",
+    "Efficacy has been maintained for up to 6 months of nightly use without development of tolerance",
+    "Tolerance is certain within 2 weeks, so the dose must be doubled monthly"
+   ],
+   "correctIndex": 2,
+   "explanation": "Eszopiclone is the Z-drug with long-term data: Tripathi notes it produces little tolerance and physical dependence and is considered suitable for short-term as well as chronic insomnia, with efficacy maintained for about 6 months of continuous nightly use. Predicting obligatory monthly escalation contradicts that profile, and 1 to 3 mg remains the working dose range. Temazepam is a benzodiazepine hypnotic, not an escape from tolerance."
+  },
+  {
+   "id": "slp-esz-04",
+   "drugSlug": "eszopiclone",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "The usual bedtime dose range of eszopiclone in adults is:",
+   "options": [
+    "10 to 20 mg",
+    "25 to 50 mg",
+    "100 to 200 mg",
+    "1 to 3 mg"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung's dosing table lists eszopiclone at 1 to 3 mg at bedtime, and nothing higher. The 25 to 50 mg range is hydroxyzine's, not eszopiclone's, and the 100 to 200 mg range, again not eszopiclone's, belongs to historical agents such as secobarbital; milligram potency differs enormously across hypnotic classes, so assuming cross-class dose equivalence is a classic error. The 10 to 20 mg figure is zaleplon's territory, not eszopiclone's."
+  },
+  {
+   "id": "slp-esz-05",
+   "drugSlug": "eszopiclone",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "knowledge-graph",
+   "question": "A 55-year-old woman on eszopiclone develops oropharyngeal candidiasis and starts ketoconazole. She reports heavier morning sedation. Why?",
+   "options": [
+    "Ketoconazole inhibits CYP3A4, prolonging eszopiclone's half-life and raising its exposure",
+    "Ketoconazole induces CYP3A4, so eszopiclone now acts faster but wears off sooner",
+    "Ketoconazole displaces eszopiclone from plasma albumin, halving its effective concentration",
+    "Ketoconazole blocks eszopiclone receptors in the gut wall, causing dose dumping"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung notes that eszopiclone's elimination half-life is prolonged in the elderly and in the presence of CYP3A4 inhibitors such as ketoconazole, so exposure and next-morning sedation rise; rifampin, a 3A4 inducer, has the opposite effect. Induction would shorten rather than lengthen the drug's action. There is no clinically relevant albumin-displacement or gut-receptor mechanism here."
+  },
+  {
+   "id": "slp-esz-06",
+   "drugSlug": "eszopiclone",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "neurotransmitters",
+   "question": "A polysomnography report of a patient on eszopiclone 3 mg is discussed at rounds. Which sleep-architecture effect is characteristic of the drug?",
+   "options": [
+    "Isolated prolongation of REM sleep without any change in sleep latency",
+    "Increased total sleep time, with REM sleep decreased at the highest recommended dose",
+    "Increased total sleep time with complete REM preservation at every dose, including toxic ones",
+    "Selective suppression of stage 2 NREM sleep with no change in total sleep time"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung states that eszopiclone increases total sleep time, mainly via increases in stage 2 NREM sleep, and that at the highest recommended dose it decreases REM sleep. Complete dose-independent REM preservation overstates the data, and suppressing stage 2 or selectively prolonging REM are the opposite of its documented pattern. Sleep onset also improves, so the drug is not REM-selective."
+  },
+  {
+   "id": "slp-esz-07",
+   "drugSlug": "eszopiclone",
+   "domain": "Clinical Uses",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 50-year-old woman has persistent insomnia despite escitalopram treatment for depression and asks whether her hypnotic choice matters. Why might eszopiclone be favoured here?",
+   "options": [
+    "It carries a proven anti-suicidal effect independent of sleep improvement",
+    "It converts partial antidepressant response into remission by raising escitalopram plasma levels",
+    "It has specific trial data as adjunctive therapy for insomnia occurring with depression",
+    "It is the only hypnotic that doubles the antidepressant's serotonin reuptake blockade"
+   ],
+   "correctIndex": 2,
+   "explanation": "Eszopiclone carries study data supporting benefit in insomnia with comorbid depression, including co-administration with SSRIs, which is exactly the KYP anchor for this clinical situation. It neither potentiates serotonin reuptake inhibition nor changes escitalopram levels, and no hypnotic has an independent anti-suicidal label. The choice rests on sleep-specific evidence, not on antidepressant pharmacokinetics."
+  },
+  {
+   "id": "slp-esz-08",
+   "drugSlug": "eszopiclone",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "A patient with latent tuberculosis is about to start rifampicin while taking eszopiclone. The expected consequence is:",
+   "options": [
+    "Reduced hepatic metabolism of eszopiclone via CYP3A4 inhibition, causing daytime sedation",
+    "No interaction at all, because eszopiclone is eliminated unchanged by the kidneys",
+    "Rising eszopiclone levels only if the tablet is taken with grapefruit juice",
+    "Increased hepatic metabolism of eszopiclone via CYP3A4 induction, weakening its hypnotic effect"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung specifically notes that inducers of CYP3A4 such as rifampin increase the hepatic metabolism of eszopiclone, so the hypnotic effect weakens and the dose may need review. Inhibition would raise levels rather than lower them, and renal excretion of unchanged drug is not eszopiclone's route. Grapefruit juice is an intestinal 3A4 inhibitor that raises levels of drugs like suvorexant; it does not rescue an induction interaction."
+  },
+  {
+   "id": "slp-zal-01",
+   "drugSlug": "zaleplon",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 30-year-old surgeon reliably wakes at 3 am and then takes more than 4 hours to fall asleep again; she must be sharp for a 7 am ward round. Which hypnotic best fits middle-of-the-night dosing?",
+   "options": [
+    "Zaleplon, whose ultra-short half-life of about 1 hour allows dosing after middle-of-night awakening when at least 4 hours of sleep remain",
+    "Eszopiclone, because its 6-hour half-life guarantees continuous sleep until the alarm",
+    "Diazepam, whose long half-life smooths out the remaining hours of the night",
+    "Promethazine, because antihistamine sedation reliably clears before morning"
+   ],
+   "correctIndex": 0,
+   "explanation": "Zaleplon is the shortest-acting Z-drug (half-life about 1 hour, listed as under 1 to 2 hours in Katzung's table), which makes it the classic agent for middle-of-the-night dosing provided at least 4 hours remain before waking. Eszopiclone's 6-hour half-life and diazepam's long half-life guarantee hangover if taken at 3 am, and antihistamine sedation is prolonged with anticholinergic load. This pharmacokinetic niche is a standard exam question."
+  },
+  {
+   "id": "slp-zal-02",
+   "drugSlug": "zaleplon",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Zaleplon's elimination half-life is approximately:",
+   "options": [
+    "4 to 6 days, with an active metabolite persisting for weeks",
+    "1 hour, the shortest among the commonly used hypnotics",
+    "6 hours, the longest among the Z-drugs",
+    "22 to 36 hours, requiring once-daily daytime dosing"
+   ],
+   "correctIndex": 1,
+   "explanation": "Zaleplon is cleared with a half-life of roughly 1 hour (Katzung's table lists under 1 to 2 hours), the shortest of any standard hypnotic, which underlies its middle-of-the-night usability and minimal hangover. The 6-hour figure belongs to eszopiclone, the 22 to 36 hour range to sertraline, and the 4 to 6 day figure to fluoxetine; none of these apply to zaleplon."
+  },
+  {
+   "id": "slp-zal-03",
+   "drugSlug": "zaleplon",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Zaleplon's structural family and receptor target are:",
+   "options": [
+    "A cyclopyrrolone acting at orexin OX1 and OX2 receptors",
+    "An ethanolamine antihistamine acting at central H1 receptors",
+    "A pyrazolopyrimidine acting selectively at alpha-1-containing GABA-A (BZ1) receptors",
+    "An imidazopyridine acting at GABA-B receptors in the spinal cord"
+   ],
+   "correctIndex": 2,
+   "explanation": "Zaleplon is a pyrazolopyrimidine, one of the three non-benzodiazepine Z-drug skeletons (zolpidem is the imidazopyridine and zopiclone or eszopiclone the cyclopyrrolone), and like the others it binds the alpha-1 (BZ1) GABA-A subtype that mediates hypnosis. GABA-B, orexin and H1 targets are not part of its pharmacology, which is why it lacks anticonvulsant and muscle-relaxant actions. Katzung groups all three Z-drugs as selective alpha-1 agonists."
+  },
+  {
+   "id": "slp-zal-04",
+   "drugSlug": "zaleplon",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A patient who stopped nightly zaleplon after 2 weeks is anxious about the terrible rebound insomnia she read about with sleeping pills. What should you tell her?",
+   "options": [
+    "Rebound insomnia is guaranteed and must be pre-empted with a benzodiazepine taper",
+    "Withdrawal will produce seizures because zaleplon is a potent anticonvulsant",
+    "Withdrawal always includes vivid hallucinations requiring hospital admission",
+    "Zaleplon is associated with minimal rebound insomnia and no significant withdrawal at recommended doses"
+   ],
+   "correctIndex": 3,
+   "explanation": "Both Katzung and Tripathi record minimal rebound insomnia and no significant withdrawal or dependence with zaleplon at recommended doses, and its hypnotic effect does not fade on nightly use, though courses should still be short. Pre-emptive benzodiazepine tapers and seizure predictions describe the pharmacology of full GABAergic agonists, not this alpha-1-selective agent. Hallucinatory withdrawal is likewise not a zaleplon syndrome."
+  },
+  {
+   "id": "slp-zal-05",
+   "drugSlug": "zaleplon",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A candidate preparing for a 6 am exam takes a hypnotic at 4 am after an anxious awakening at 2:30 am and needs zero next-morning impairment. Which agent is the most defensible pharmacokinetic choice?",
+   "options": [
+    "Zaleplon, because its roughly 1-hour half-life leaves the least residual sedation of the standard hypnotics",
+    "Zopiclone, because a 5-hour half-life is fully gone by the second hour",
+    "Eszopiclone, because less day-after somnolence means zero impairment at any dose",
+    "Diphenhydramine, because over-the-counter agents never impair next-day performance"
+   ],
+   "correctIndex": 0,
+   "explanation": "When only a few hours of sleep remain, the shortest half-life wins, and zaleplon's roughly 1-hour clearance makes it the least hangover-prone prescription hypnotic. Zopiclone and eszopiclone would still be circulating at the alarm with their 5 to 6 hour half-lives, and diphenhydramine is notorious for next-day grogginess and anticholinergic load. Katzung does note that zaleplon and eszopiclone cause less day-after somnolence than zolpidem at usual doses, but less is not none for a 6-hour half-life drug taken at 4 am."
+  },
+  {
+   "id": "slp-zal-06",
+   "drugSlug": "zaleplon",
+   "domain": "Indian Practice",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which dosing statement matches Indian zaleplon practice (ZAPLON / ZALEP / ZASO)?",
+   "options": [
+    "5 to 10 mg three times daily for round-the-clock anxiolysis",
+    "5 to 10 mg at bedtime (maximum 20 mg); oral bioavailability reduced to about 30% by first-pass metabolism",
+    "50 to 100 mg at bedtime; bioavailability near 100% because it is an intramuscular formulation",
+    "1 to 3 mg at bedtime with mandatory weekly liver function tests"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi lists zaleplon at 5 to 10 mg at bedtime with a 20 mg maximum, and notes rapid absorption with only about 30% oral bioavailability due to first-pass metabolism. It is a single bedtime hypnotic, not a thrice-daily anxiolytic, and no liver-function monitoring schedule attaches to it; the 1 to 3 mg range belongs to eszopiclone. Its rapid clearance is what preserves the morning performance."
+  },
+  {
+   "id": "slp-zal-07",
+   "drugSlug": "zaleplon",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "knowledge-graph",
+   "question": "A man on disulfiram for relapse prevention in alcohol dependence is given a friend's zaleplon and becomes unusually heavily sedated. What is the mechanism?",
+   "options": [
+    "Disulfiram inhibits renal tubular secretion, so unchanged zaleplon accumulates in blood",
+    "Disulfiram sensitises GABA-A receptors, multiplying the effect of a normal zaleplon dose",
+    "Disulfiram inhibits aldehyde dehydrogenase, the enzyme that metabolises zaleplon, so exposure rises",
+    "Disulfiram induces CYP3A4, so zaleplon accumulates as toxic inactive metabolites"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung's pharmacokinetic table notes that zaleplon is metabolised via aldehyde dehydrogenase, so inhibitors of that enzyme such as disulfiram can raise its exposure and deepen sedation, a distinctive interaction among the hypnotics. Grapefruit juice and CYP3A4 are irrelevant to zaleplon, whose issue here is not renal handling, and there is no receptor-sensitisation mechanism. Asking every insomniac about disulfiram therapy is the practical takeaway."
+  },
+  {
+   "id": "slp-zal-08",
+   "drugSlug": "zaleplon",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 28-year-old woman has used zaleplon nightly for 3 weeks and reports that it still works like the first night. What is the correct counselling?",
+   "options": [
+    "Efficacy persisting proves tolerance; the dose should now be doubled",
+    "Because it keeps working, nightly use for years is endorsed",
+    "It should be replaced immediately by a barbiturate for proven long-term safety",
+    "Its effect does not fade on nightly use, but courses should still be limited to about 1 to 2 weeks"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi notes that zaleplon's hypnotic effect does not fade on nightly use and that tolerance and dependence are unusual, but he still limits use to 1 to 2 weeks; short courses remain the rule for all hypnotics. Doubling the dose is precisely the escalation behaviour to avoid, and barbiturates are obsolete for insomnia with far worse overdose and dependence profiles. Katzung likewise warns that long-term hypnotic use is an irrational and dangerous practice."
+  },
+  {
+   "id": "slp-ram-01",
+   "drugSlug": "ramelteon",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 29-year-old man with alcohol-use disorder in stable recovery has chronic sleep-onset insomnia and refuses anything addictive. Which hypnotic is the most appropriate choice?",
+   "options": [
+    "Ramelteon, a melatonergic agent with no demonstrated dependence potential and no controlled-substance scheduling",
+    "Zolpidem, because Z-drugs cannot produce dependence at any dose",
+    "Temazepam, because benzodiazepines are considered safe in recovered alcoholics",
+    "Diazepam, because it also covers alcohol-withdrawal prophylaxis"
+   ],
+   "correctIndex": 0,
+   "explanation": "Ramelteon's MT1/MT2 agonism produces no euphoria and no benzodiazepine-like dependence, it is not a scheduled drug, and both Tripathi and Katzung record no dependence or rebound, making it the classic answer for insomniacs with a substance-use history. Z-drugs and benzodiazepines are precisely the agents to avoid in this setting, and prescribing a benzodiazepine as withdrawal prophylaxis in a recovering alcoholic invites relapse. This vignette appears in some form in most exam banks."
+  },
+  {
+   "id": "slp-ram-02",
+   "drugSlug": "ramelteon",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Ramelteon's mechanism of action is:",
+   "options": [
+    "Irreversible inhibition of monoamine oxidase B, raising synaptic dopamine",
+    "Selective agonism at MT1 and MT2 melatonin receptors in the suprachiasmatic nucleus, with no direct effect on GABAergic transmission",
+    "Positive allosteric modulation of GABA-A receptors at the benzodiazepine site",
+    "Competitive antagonism at orexin OX1 and OX2 receptors in the lateral hypothalamus"
+   ],
+   "correctIndex": 1,
+   "explanation": "Ramelteon is a selective MT1/MT2 melatonin receptor agonist acting on the circadian pacemaker in the suprachiasmatic nuclei; Katzung emphasises that it has no direct effects on GABAergic neurotransmission. The GABA-A description fits the Z-drugs, orexin antagonism describes suvorexant, and MAO-B inhibition belongs to selegiline. This melatonergic mechanism is the basis of its absent abuse potential."
+  },
+  {
+   "id": "slp-ram-03",
+   "drugSlug": "ramelteon",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "knowledge-graph",
+   "question": "A 61-year-old woman with OCD is on fluvoxamine and now asks for ramelteon for sleep-onset insomnia. What is the correct advice?",
+   "options": [
+    "Halve the ramelteon dose and combine, since the interaction raises levels by only about 20%",
+    "Give both together but add flumazenil cover in case of over-sedation",
+    "Avoid the combination: fluvoxamine strongly inhibits CYP1A2 and can raise ramelteon plasma levels more than 50-fold",
+    "Combine freely, because fluvoxamine induces CYP1A2 and actually lowers ramelteon levels slightly"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung states that fluvoxamine can raise plasma concentrations of ramelteon and its active metabolite over 50-fold via CYP1A2 inhibition, making co-administration contraindicated rather than merely dose-adjusted. The enzyme is inhibited, not induced, and the magnitude dwarfs any 20% adjustment, while flumazenil has no role outside benzodiazepine and Z-drug sedation. Escitalopram for OCD or CBT-I approaches are safer routes to her sleep."
+  },
+  {
+   "id": "slp-ram-04",
+   "drugSlug": "ramelteon",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 26-year-old woman on ramelteon for shift-related sleep-onset insomnia reports that her last two menstrual periods were irregular; her prolactin is mildly elevated. What is the best interpretation?",
+   "options": [
+    "Prolactin never rises on melatonergic drugs, so the result must be a laboratory error",
+    "The rise proves a prolactinoma, so urgent pituitary MRI is mandatory",
+    "The effect is due to ramelteon's dopamine agonism, which stimulates the lactotroph cells",
+    "Ramelteon may increase prolactin levels, and menstrual changes are a recognised hormonal adverse effect to monitor"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung notes that ramelteon may increase prolactin levels, and menstrual or hormonal effects are recognised, so a modest rise in this context is drug-attributable and monitored rather than proof of adenoma. The mechanism is inhibition of tuberoinfundibular dopamine pathways, which releases the brake on prolactin, not dopamine agonism; persistent marked hyperprolactinaemia would still warrant standard evaluation. The laboratory-error option ignores a documented class effect."
+  },
+  {
+   "id": "slp-ram-05",
+   "drugSlug": "ramelteon",
+   "domain": "Indian Practice",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which prescription matches Indian ramelteon practice (ROZEREM)?",
+   "options": [
+    "One 8 mg tablet taken about half an hour before going to bed",
+    "One 80 mg tablet at bedtime, titrated weekly to a maximum of 240 mg",
+    "8 mg three times daily with meals for daytime anxiety",
+    "A 0.8 mg intramuscular injection given at midnight in hospital only"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tripathi lists ROZEREM as a single 8 mg tablet about half an hour before bedtime for sleep-onset insomnia and notes that the drug is approved in India as well as the USA. Ramelteon is neither a thrice-daily anxiolytic nor a high-dose titrated hypnotic, and it is an oral tablet rather than an injectable. Its sleep-latency effect is modest, so patients should take it in the pre-bed window rather than after lights out."
+  },
+  {
+   "id": "slp-ram-06",
+   "drugSlug": "ramelteon",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 55-year-old frequent traveller wants a hypnotic that he can use repeatedly when his sleep schedule flips. Which description of ramelteon is the honest selling point, together with its limitation?",
+   "options": [
+    "It abolishes early-morning awakening and doubles total sleep time on polysomnography",
+    "It maintained its sleep-latency benefit in trials without rebound on stopping, but the reduction in sleep latency is modest",
+    "It produces deep sedation within 10 minutes, but rebound insomnia is severe",
+    "It shortens sleep latency dramatically like midazolam and is safe for years of unreviewed nightly use"
+   ],
+   "correctIndex": 1,
+   "explanation": "Trials showed ramelteon reduced latency to persistent sleep with no effects on sleep architecture, no rebound insomnia and no significant withdrawal (Katzung), and Tripathi records maintained benefit on continuous nightly use, but the size of the sleep-latency effect is modest rather than midazolam-like. It is not a deep sedative, does not abolish early-morning awakening, and does not massively increase total sleep time. Setting honest expectations prevents premature failure labels."
+  },
+  {
+   "id": "slp-ram-07",
+   "drugSlug": "ramelteon",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "knowledge-graph",
+   "question": "A 47-year-old asthmatic on theophylline is offered ramelteon by a colleague. What pharmacokinetic point should the prescriber check first?",
+   "options": [
+    "Ramelteon induces CYP1A2 and will halve theophylline levels, precipitating an asthma flare",
+    "There is no plausible interaction, because theophylline is metabolised purely by glucuronidation",
+    "Both drugs depend on CYP1A2, so co-prescription calls for watchfulness over theophylline levels and ramelteon exposure",
+    "Theophylline is a CYP2D6 substrate, so ramelteon's strong 2D6 inhibition will raise its levels"
+   ],
+   "correctIndex": 2,
+   "explanation": "CYP1A2 is mainly responsible for ramelteon's metabolism (with CYP2C9 also involved, per Katzung) and is likewise a major theophylline pathway, so shared 1A2 dependence is the checkpoint, and fluvoxamine-class 1A2 inhibitors remain an outright contraindication for ramelteon. Theophylline is not primarily a 2D6 substrate, ramelteon is not a 1A2 inducer, and theophylline has important oxidative 1A2 metabolism, not glucuronidation alone."
+  },
+  {
+   "id": "slp-ram-08",
+   "drugSlug": "ramelteon",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which pharmacokinetic profile belongs to ramelteon?",
+   "options": [
+    "Near-complete oral bioavailability with a parent half-life of 6 hours and no metabolites",
+    "Negligible hepatic metabolism, with almost the whole dose excreted unchanged in urine within 24 hours",
+    "A half-life of 20 to 30 hours that makes morning hangover unavoidable",
+    "Extensive first-pass metabolism with low bioavailability; parent half-life 1 to 3 hours and an active metabolite of 2 to 5 hours"
+   ],
+   "correctIndex": 3,
+   "explanation": "Ramelteon undergoes extensive first-pass metabolism, so bioavailability is low and the elimination half-life is 1 to 3 hours (Tripathi), forming an active metabolite with a longer 2 to 5 hour half-life (Katzung). The 6-hour figure belongs to eszopiclone, near-total renal excretion of unchanged drug describes agents like desvenlafaxine, and a 20 to 30 hour half-life would contradict its no-next-morning-sedation profile."
+  },
+  {
+   "id": "slp-tas-01",
+   "drugSlug": "tasimelteon",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 32-year-old totally blind man has had months of drifting sleep: on some nights he sleeps well, on others he is wide awake until dawn, and his daytime sleepiness keeps shifting across the clock. Which drug was developed specifically for his condition?",
+   "options": [
+    "Tasimelteon, approved for non-24-hour sleep-wake disorder in totally blind individuals",
+    "Extended-release zolpidem, the Z-drug designed for circadian disorders",
+    "Suvorexant, the orexin antagonist labelled for circadian rhythm rebuilding",
+    "Diphenhydramine, because over-the-counter sedation resets the circadian pacemaker"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tasimelteon is an MT1/MT2 melatonin receptor agonist approved for non-24-hour sleep-wake disorder (Katzung), the free-running rhythm that develops when totally blind individuals lose the light entrainment of the suprachiasmatic nucleus. Zolpidem and suvorexant are hypnotics for insomnia, not circadian entrainers, and diphenhydramine neither resets nor stabilises the pacemaker. The blind-patient vignette with drifting sleep is the exam hook for this orphan drug."
+  },
+  {
+   "id": "slp-tas-02",
+   "drugSlug": "tasimelteon",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Tasimelteon's pharmacology most closely resembles which agent, and through what target?",
+   "options": [
+    "Hydroxyzine, through central H1 antagonism with anticholinergic sedation",
+    "Ramelteon, through agonism at MT1 and MT2 melatonin receptors with no direct GABAergic action",
+    "Zopiclone, through agonism at the benzodiazepine site of GABA-A receptors",
+    "Suvorexant, through antagonism at OX1 and OX2 orexin receptors"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung describes tasimelteon as similar to ramelteon, an orally active MT1/MT2 agonist with no direct effects on GABAergic neurotransmission, approved for non-24-hour sleep-wake disorder. The GABAergic, orexin and histamine descriptions map onto the Z-drugs, suvorexant and hydroxyzine respectively and are wrong for tasimelteon. Its melatonergic profile also predicts the absence of abuse liability."
+  },
+  {
+   "id": "slp-tas-03",
+   "drugSlug": "tasimelteon",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "neural-pathways",
+   "question": "Why does a totally blind patient develop non-24-hour sleep-wake disorder, and how does tasimelteon help?",
+   "options": [
+    "Permanent darkness raises orexin tone, and tasimelteon blocks orexin receptors to restore the rhythm",
+    "The disorder reflects loss of GABA-A receptors in the thalamus, and tasimelteon replaces the missing GABA input",
+    "Light no longer entrains the suprachiasmatic nucleus, so the pacemaker free-runs; tasimelteon's MT1/MT2 agonism supplies entraining input that stabilises the rhythm",
+    "The blind patient's pineal gland atrophies, and tasimelteon surgically restores melatonin output"
+   ],
+   "correctIndex": 2,
+   "explanation": "In total blindness, retinal light input cannot reach the suprachiasmatic nuclei, so the endogenous circadian pacemaker drifts on its intrinsic cycle of just over 24 hours; melatonin receptor agonism at MT1/MT2, the pathway through which darkness signals reach the SCN, is the handle tasimelteon uses to re-entrain the rhythm. The pineal is not surgically restorable, orexin is a wake-promoting system unrelated to light entrainment, and no GABA replacement occurs. Entrainment, not sedation, is the therapeutic concept."
+  },
+  {
+   "id": "slp-tas-04",
+   "drugSlug": "tasimelteon",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which statement about tasimelteon's regulatory niche is correct?",
+   "options": [
+    "It is the first-line over-the-counter hypnotic for insomnia in India",
+    "It carries a boxed warning for complex sleep behaviours identical to zolpidem's",
+    "It is approved as an antipsychotic adjunct with a prolactin-lowering label",
+    "It is an orphan-drug niche agent approved specifically for non-24-hour sleep-wake disorder, not a first-line hypnotic for ordinary insomnia"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tasimelteon occupies a narrow orphan niche, the treatment of non-24-hour sleep-wake disorder in the totally blind (Katzung: approved for non-24-hour sleep-wake disorder), rather than competing as a general insomnia hypnotic. It is not an over-the-counter product, has no zolpidem-style boxed warning for complex sleep behaviours, and has no antipsychotic or prolactin indication. The niche label is exactly what examiners test."
+  },
+  {
+   "id": "slp-tas-05",
+   "drugSlug": "tasimelteon",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A junior resident plans to prescribe tasimelteon for a sighted office worker with simple sleep-onset insomnia. What is the strongest objection?",
+   "options": [
+    "Tasimelteon's approved evidence lies in non-24-hour disorder of the blind; for ordinary insomnia the evidence-based routes are agents such as ramelteon for sleep-onset latency and CBT-I",
+    "Tasimelteon is contraindicated in sighted people because light destroys the drug in the retina",
+    "Tasimelteon is a strong orexin blocker and will cause narcolepsy in sighted users",
+    "Tasimelteon requires daily ECGs because it prolongs the QT interval at therapeutic doses"
+   ],
+   "correctIndex": 0,
+   "explanation": "The teaching point is indication discipline: tasimelteon was developed and approved for non-24-hour sleep-wake disorder in totally blind individuals, and using it for garden-variety insomnia ignores the evidence base that supports ramelteon for sleep-onset latency and CBT-I as first-line therapy. Photosensitivity, iatrogenic narcolepsy and routine QT prolongation are invented hazards. Orphan drugs are not interchangeable with conventional hypnotics."
+  },
+  {
+   "id": "slp-tas-06",
+   "drugSlug": "tasimelteon",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Like ramelteon, tasimelteon's abuse and scheduling profile is best described as:",
+   "options": [
+    "Scheduled as a Schedule X drug in India but unscheduled everywhere else",
+    "No abuse potential and no controlled-substance scheduling, in contrast to scheduled Z-drugs and benzodiazepines",
+    "Schedule II status requiring triplicate prescription because of euphoric effects",
+    "High abuse liability mediated by dopamine reuptake inhibition in the nucleus accumbens"
+   ],
+   "correctIndex": 1,
+   "explanation": "As a melatonergic agonist acting on circadian receptors rather than on reward or GABA pathways, tasimelteon shares ramelteon's absence of euphoria, dependence and scheduling, which is the class contrast examiners love against the scheduled Z-drugs and benzodiazepines. Dopamine-reuptake stimulant pharmacology describes amphetamine-like agents, not melatonergics, and there is no India-specific Schedule X status for it. The scheduled-versus-unscheduled ladder is a recurring KYP pearl."
+  },
+  {
+   "id": "slp-tas-07",
+   "drugSlug": "tasimelteon",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Which contrast between the two melatonin receptor agonists is correct?",
+   "options": [
+    "Both are approved only for narcolepsy with cataplexy",
+    "Both are approved only as adjuncts to antipsychotics for drug-induced insomnia",
+    "Ramelteon is indicated for sleep-onset insomnia; tasimelteon for non-24-hour sleep-wake disorder in the blind",
+    "Tasimelteon is indicated for sleep-onset insomnia; ramelteon for non-24-hour disorder in the blind"
+   ],
+   "correctIndex": 2,
+   "explanation": "The pairing is symmetrical and memorable: ramelteon carries the sleep-onset insomnia label (Katzung: prescribed for difficulty falling asleep), while tasimelteon carries the non-24-hour sleep-wake disorder label for the totally blind. Neither is a narcolepsy drug, since narcolepsy reflects orexin loss and would point toward orexin agonism rather than antagonism, and neither has an antipsychotic-adjunct label. Swapping the two indications is the classic mirror trap."
+  },
+  {
+   "id": "slp-tas-08",
+   "drugSlug": "tasimelteon",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A blind patient starting tasimelteon asks how to take it. Which counselling is most appropriate?",
+   "options": [
+    "Take it only on the nights when you cannot sleep, at whatever time suits, to preserve the drug effect",
+    "Take it at breakfast with strong tea to counteract daytime sleepiness",
+    "Take double the dose on weekends to reset the rhythm for the whole week",
+    "Take it at a fixed time before the intended bedtime every night, keeping a consistent dark, quiet sleep window"
+   ],
+   "correctIndex": 3,
+   "explanation": "Circadian entrainment therapy works only with a fixed nightly dosing time anchored to the intended sleep period; erratic, as-needed or weekend-doubling dosing defeats the very entrainment the drug is meant to provide. Morning dosing inverts the phase signal, and caffeine co-administration has no place. Consistency of the sleep-wake schedule is part of the treatment, not an optional extra."
+  },
+  {
+   "id": "slp-suv-01",
+   "drugSlug": "suvorexant",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 40-year-old man with narcolepsy and cataplexy has read about a new sleep pill that blocks orexin and asks for a prescription. What is the correct response?",
+   "options": [
+    "Suvorexant is inappropriate: narcolepsy already involves loss of orexin signalling, and blocking the remaining orexin system is contraindicated",
+    "Prescribe suvorexant, because orexin blockade directly corrects the wakefulness defect of narcolepsy",
+    "Prescribe suvorexant with modafinil, since that combination is specifically approved for narcolepsy",
+    "Double the suvorexant dose, because narcolepsy patients need stronger orexin blockade"
+   ],
+   "correctIndex": 0,
+   "explanation": "Narcolepsy results from loss of hypothalamic orexin (hypocretin) neurons; Katzung notes that animals lacking orexin or its receptors show narcolepsy, so antagonising the orexin receptors is contraindicated in principle, and the KYP monograph flags narcolepsy with cataplexy caution for suvorexant. Orexin antagonists suppress wakefulness and cannot treat a disorder defined by orexin deficiency. Modafinil, not suvorexant, is the narcolepsy-directed drug."
+  },
+  {
+   "id": "slp-suv-02",
+   "drugSlug": "suvorexant",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Suvorexant's mechanism is best described as:",
+   "options": [
+    "Competitive blockade of peripheral H1 receptors with central anticholinergic spillover",
+    "Dual antagonism of orexin receptors OX1 and OX2, blocking a wake-promoting neuropeptide system",
+    "Positive modulation of the benzodiazepine site on GABA-A receptors",
+    "Agonism at MT1 and MT2 melatonin receptors in the suprachiasmatic nucleus"
+   ],
+   "correctIndex": 1,
+   "explanation": "Suvorexant is a dual orexin receptor antagonist: orexin neurons in the hypothalamus promote wakefulness, and blocking OX1/OX2 signalling decreases time to persistent sleep and increases total sleep time (Katzung), a mechanism entirely distinct from GABA-A modulation, melatonin agonism and H1 blockade. Those three alternatives describe the Z-drugs, ramelteon or tasimelteon, and hydroxyzine respectively. This novelty is what makes DORAs a favourite mechanism question."
+  },
+  {
+   "id": "slp-suv-03",
+   "drugSlug": "suvorexant",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Foundation",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 50-year-old man started suvorexant a week ago and reports grogginess lasting well into the morning as his only complaint. What is the correct interpretation?",
+   "options": [
+    "Grogginess indicates paradoxical excitation, a reaction unique to orexin antagonists",
+    "Morning symptoms mean the drug is working perfectly and need no review at any dose",
+    "Next-day somnolence is the most common adverse effect of suvorexant; review dose and timing before abandoning the drug",
+    "The grogginess proves emerging narcolepsy, so all sleep medication must be stopped immediately"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung identifies next-day somnolence as the most common adverse effect of suvorexant, so dose and timing review come first rather than drug abandonment or a new narcolepsy diagnosis. Paradoxical excitation is the hallmark of first-generation antihistamines in children, not of orexin antagonists. Dismissing dose-related somnolence as perfect dosing invites driving impairment, which is the safety point the label emphasises."
+  },
+  {
+   "id": "slp-suv-04",
+   "drugSlug": "suvorexant",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "knowledge-graph",
+   "question": "A patient on suvorexant is starting ketoconazole for tinea, drinks grapefruit juice daily, and his daughter suggests adding fluvoxamine for anxiety. Which counselling is correct?",
+   "options": [
+    "All three are safe, because suvorexant is cleared exclusively by renal glucuronidation",
+    "Only grapefruit juice matters; antifungals and SSRIs do not touch suvorexant levels",
+    "Combine everything, but take the suvorexant at breakfast to avoid accumulation",
+    "Avoid strong CYP3A4 inhibitors such as ketoconazole (and fluvoxamine, a potent inhibitor), and skip grapefruit juice, because suvorexant is a CYP3A4 substrate"
+   ],
+   "correctIndex": 3,
+   "explanation": "Suvorexant is a CYP3A4 substrate whose half-life is prolonged by inhibitors including azole antifungals, clarithromycin and verapamil (Katzung), so ketoconazole should be avoided, the potent inhibitor fluvoxamine is flagged in the KYP anchor, and grapefruit juice should be skipped. Renal glucuronidation is not its clearance route, and morning dosing does not neutralise an inhibition interaction. Checking the total 3A4 load is the transferable skill."
+  },
+  {
+   "id": "slp-suv-05",
+   "drugSlug": "suvorexant",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 60-year-old woman cannot fall asleep and also wakes at 3 am unable to return to sleep. Which hypnotic carries a label covering both sleep-onset and sleep-maintenance insomnia?",
+   "options": [
+    "Suvorexant, which is FDA-approved for both sleep-onset and sleep-maintenance insomnia",
+    "Ramelteon, whose label covers both onset and maintenance insomnia",
+    "Zaleplon, whose ultra-short half-life makes it ideal for sleep-maintenance insomnia",
+    "Diphenhydramine, the only agent approved for chronic maintenance insomnia"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung notes that suvorexant is FDA-approved for treatment of both sleep-onset and sleep-maintenance insomnia, reflecting its documented ability to shorten sleep latency and increase total sleep time. Ramelteon's evidence is for sleep-onset latency, zaleplon's niche is single re-dosing after middle-of-night awakening rather than a maintenance label, and diphenhydramine has no such chronic approval. Matching the insomnia phenotype to the label is the clinical skill being tested."
+  },
+  {
+   "id": "slp-suv-06",
+   "drugSlug": "suvorexant",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "neural-pathways",
+   "question": "At the systems level, why does blocking orexin signalling promote sleep rather than wakefulness?",
+   "options": [
+    "Orexin is the final transmitter of the suprachiasmatic pacemaker, so blockade abolishes the sleep clock",
+    "Orexin neurons in the hypothalamus stabilise arousal by exciting wake-promoting nuclei, so removing that excitatory drive permits sleep",
+    "Orexin neurons inhibit wake-promoting centres, so blocking them releases full wakefulness",
+    "Orexin acts only on the cerebellum, so its blockade sedates through motor pathways"
+   ],
+   "correctIndex": 1,
+   "explanation": "Hypothalamic orexin neurons project widely and stabilise wakefulness by exciting the arousal systems (locus coeruleus, raphe nuclei, tuberomammillary nucleus and others); Katzung's tables place orexin as an excitatory, glutamate co-releasing system, so antagonism removes wake-drive and permits sleep. The inverted-sign option, the cerebellar claim and the suprachiasmatic-clock claim all misstate the pathway. This wake-stabilisation concept is why orexin loss produces narcolepsy."
+  },
+  {
+   "id": "slp-suv-07",
+   "drugSlug": "suvorexant",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Which pairing of agent with next-morning impairment risk is correct?",
+   "options": [
+    "Suvorexant: next-day somnolence occurs only in children; zaleplon: severe anterograde amnesia at 5 mg",
+    "Suvorexant: causes morning insomnia by blocking sleep; zaleplon: must be taken in the morning to work",
+    "Suvorexant: next-day somnolence is its commonest adverse effect; zaleplon: least residual sedation among the standard hypnotics",
+    "Suvorexant: famous for zero hangover; zaleplon: the most hangover-prone hypnotic available"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung names next-day somnolence as the most common adverse effect of suvorexant, while zaleplon's sub-hour half-life gives it the lowest hangover burden of the standard hypnotics; the half-life ranking (zaleplon lowest, eszopiclone longest of the Z-drugs) drives next-morning impairment. The remaining options invert documented facts: suvorexant is not a zero-hangover drug, zaleplon is not amnesia-prone at its usual doses, and neither agent is a morning drug."
+  },
+  {
+   "id": "slp-suv-08",
+   "drugSlug": "suvorexant",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "knowledge-graph",
+   "question": "A 58-year-old man with atrial fibrillation on verapamil asks to add suvorexant for insomnia. What is the key pharmacokinetic concern?",
+   "options": [
+    "Verapamil induces CYP3A4 and will strip suvorexant of its effect entirely",
+    "Verapamil and suvorexant share renal tubular secretion, so levels of both rise",
+    "Suvorexant blocks verapamil's calcium channels centrally, causing profound bradycardia",
+    "Verapamil inhibits CYP3A4 and can prolong suvorexant's half-life, increasing next-day somnolence"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung explicitly lists verapamil among the CYP3A4 inhibitors that prolong suvorexant's half-life, alongside azole antifungals and clarithromycin, so co-prescription risks accumulation and next-day somnolence; a melatonergic option may be cleaner in this patient. Induction is the opposite of verapamil's effect, renal co-secretion is not the shared pathway, and suvorexant has no calcium-channel action. Screening the 3A4 load before adding a DORA is the practical rule."
+  },
+  {
+   "id": "slp-hyd-01",
+   "drugSlug": "hydroxyzine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Hydroxyzine's pharmacological family and sedative mechanism are:",
+   "options": [
+    "A first-generation piperazine H1 antihistamine whose marked central H1 blockade produces sedation",
+    "A second-generation H1 antihistamine restricted to peripheral receptors by P-glycoprotein efflux",
+    "A benzodiazepine-site partial agonist acting at the alpha-2 subunit",
+    "A 5-HT3 antiemetic used in chemotherapy that incidentally sedates"
+   ],
+   "correctIndex": 0,
+   "explanation": "Hydroxyzine is a first-generation piperazine antihistamine, grouped by both textbooks with the markedly sedating H1 agents, and it crosses the blood-brain barrier to block central H1 receptors, producing the sedation exploited for sleep and anxiety. Second-generation antihistamines such as cetirizine, its own metabolite, penetrate the CNS poorly, and the GABA-A and 5-HT3 descriptions belong to the Z-drugs and ondansetron respectively."
+  },
+  {
+   "id": "slp-hyd-02",
+   "drugSlug": "hydroxyzine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 35-year-old woman with generalised anxiety with prominent autonomic symptoms also has chronic urticaria. Which single prescription addresses both problems without dependence risk?",
+   "options": [
+    "Diphenhydramine, which is contraindicated in urticaria but anxiolytic",
+    "Hydroxyzine, an anxiolytic and antipruritic first-generation antihistamine that is non-scheduled",
+    "Alprazolam, which covers anxiety and urticaria through mast-cell stabilisation",
+    "Zolpidem, because Z-drugs treat both anxiety and histamine-mediated itching"
+   ],
+   "correctIndex": 1,
+   "explanation": "Hydroxyzine is the classic non-scheduled anxiolytic for anxiety with autonomic manifestations (Tripathi) and retains full H1 antipruritic and urticarial activity, giving one prescription for two problems with no dependence liability. Alprazolam has no antihistamine action and carries dependence risk, zolpidem is a hypnotic without anxiolytic or antipruritic labels, and diphenhydramine is in fact a standard antipruritic rather than a contraindicated one, though its anticholinergic load makes it the poorer anxiolytic."
+  },
+  {
+   "id": "slp-hyd-03",
+   "drugSlug": "hydroxyzine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which metabolite relationship is a favourite exam question for hydroxyzine?",
+   "options": [
+    "Hydroxyzine is the active metabolite of cetirizine, formed by hepatic oxidation",
+    "Desloratadine is hydroxyzine's only metabolite and is more sedating",
+    "Cetirizine is an active metabolite of hydroxyzine, marketed separately for allergic disorders",
+    "Fexofenadine is the active metabolite of hydroxyzine"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung lists cetirizine as the active metabolite of hydroxyzine (just as fexofenadine is the metabolite of terfenadine and desloratadine of loratadine), and Tripathi repeats that cetirizine is a hydroxyzine metabolite with marked peripheral H1 affinity and poor brain penetration. The parent-metabolite direction is reversed in the claim that hydroxyzine itself is formed from cetirizine, and fexofenadine and desloratadine belong to terfenadine and loratadine respectively."
+  },
+  {
+   "id": "slp-hyd-04",
+   "drugSlug": "hydroxyzine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 74-year-old man with benign prostatic hyperplasia and narrow-angle glaucoma is prescribed hydroxyzine 25 mg for night-time agitation. What is the key safety concern?",
+   "options": [
+    "Hydroxyzine is a cholinergic agonist, so retention and glaucoma are impossible",
+    "The main risk is hypoglycaemia from H1-mediated insulin release",
+    "First-generation antihistamines lower intraocular pressure protectively in glaucoma",
+    "The anticholinergic burden of first-generation antihistamines can precipitate urinary retention and worsen glaucoma"
+   ],
+   "correctIndex": 3,
+   "explanation": "First-generation antihistamines carry classic antimuscarinic effects, so in a man with prostatic enlargement they risk urinary retention, and in narrow-angle glaucoma they can precipitate an acute attack by increasing intraocular pressure; the anticholinergic cluster is documented in both textbooks. Hydroxyzine is anticholinergic, not cholinergic, and there is no insulin-mediated hypoglycaemia. This is exactly why antihistamines are discouraged in elderly patients with these comorbidities."
+  },
+  {
+   "id": "slp-hyd-05",
+   "drugSlug": "hydroxyzine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 48-year-old woman on hydroxyzine for anxiety has a prolonged QTc on a pre-operative ECG; she also takes escitalopram and ondansetron. What is the best interpretation and action?",
+   "options": [
+    "Hydroxyzine carries a QTc-prolongation warning in certain situations; review its continuation given the other QT-relevant co-medication",
+    "QTc effects are unique to ondansetron, so hydroxyzine can continue unreviewed",
+    "Hydroxyzine shortens the QT interval, so escitalopram must be stopped instead",
+    "Antihistamines cannot affect the ECG, so the finding is anxiety-related artefact"
+   ],
+   "correctIndex": 0,
+   "explanation": "Hydroxyzine's label carries a QT-prolongation warning for use in certain situations, and stacking it with escitalopram and ondansetron, two other QT-relevant drugs, is exactly the scenario where the KYP monograph advises caution and review. Ondansetron is not the only QT offender in this list, hydroxyzine does not shorten the QT interval, and a documented ECG change is not dismissed as artefact. A sedative without QT liability should be sought."
+  },
+  {
+   "id": "slp-hyd-06",
+   "drugSlug": "hydroxyzine",
+   "domain": "Indian Practice",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which prescription matches Indian hydroxyzine practice (ATARAX)?",
+   "options": [
+    "A 5 mg sublingual spray, licensed only for insomnia in children",
+    "25 to 50 mg orally or intramuscularly, available as 10 and 25 mg tablets, syrup and injection",
+    "250 to 500 mg orally, available only as 100 mg capsules",
+    "A 0.5 mg injection, restricted to anaesthesia use"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi lists hydroxyzine as ATARAX 10 and 25 mg tablets, syrup, drops and a 25 mg/ml injection, dosed at 25 to 50 mg by mouth or intramuscularly for anxiety, pruritus and sedation. The 250 to 500 mg range and capsule-only format are invented, it is not an anaesthesia-restricted injection, and there is no sublingual paediatric insomnia licence. The 10 and 25 mg tablet strengths are the direct recall item."
+  },
+  {
+   "id": "slp-hyd-07",
+   "drugSlug": "hydroxyzine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "neurotransmitters",
+   "question": "Why does hydroxyzine sedate robustly while its metabolite cetirizine causes only mild somnolence?",
+   "options": [
+    "Hydroxyzine sedates through dopamine D2 blockade in the chemoreceptor trigger zone",
+    "Cetirizine is an inverse agonist at the benzodiazepine site, keeping patients awake",
+    "Hydroxyzine readily crosses the blood-brain barrier to block central H1 receptors, whereas cetirizine penetrates the brain poorly",
+    "Cetirizine is a more potent central H1 blocker but is simply given at one-tenth the dose"
+   ],
+   "correctIndex": 2,
+   "explanation": "The sedation difference is anatomical: hydroxyzine, like other first-generation antihistamines, crosses the BBB and blocks central H1, while its metabolite cetirizine penetrates the brain poorly (Tripathi records only mild sedation), a property shared with the second-generation agents. Dose arithmetic is not the mechanism, D2-blockade at the chemoreceptor trigger zone is promethazine-class antiemetic pharmacology, and no benzodiazepine-site action exists for either drug."
+  },
+  {
+   "id": "slp-hyd-08",
+   "drugSlug": "hydroxyzine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 28-year-old woman at 10 weeks of pregnancy with severe nocturnal urticaria asks about the hydroxyzine left from her previous prescription. What is the correct advice?",
+   "options": [
+    "It is the safest sedating antihistamine in pregnancy and can be used freely throughout",
+    "It is mandatory in pregnancy because uncontrolled urticaria threatens the fetus",
+    "It is an absolute abortifacient and is banned outright in every trimester",
+    "Avoid it: hydroxyzine is teratogenic in animals, so caution is exercised with antihistamines in pregnancy"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi notes that hydroxyzine, cyclizine and fexofenadine are teratogenic in animals and that caution is exercised in prescribing any antihistaminic during pregnancy, even without proven excess malformations in humans. Calling it the safest choice overstates the data, urticaria does not compel its use, and the abortifacient claim overstates the evidence in the opposite direction. A dermatology-guided safer alternative is the right route."
+  },
+  {
+   "id": "slp-dph-01",
+   "drugSlug": "diphenhydramine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "An 81-year-old woman with mild cognitive impairment has bought an over-the-counter diphenhydramine sleep aid and uses it nightly. Her son reports new confusion and a near-fall last week. What is the best advice?",
+   "options": [
+    "Stop the diphenhydramine: its anticholinergic burden causes confusion and delirium in the elderly, and BEERS-criteria guidance says avoid it",
+    "Double the dose for stronger sedation, since over-the-counter agents cannot harm the elderly",
+    "Switch to promethazine syrup, which is safer for nightly geriatric use",
+    "Continue nightly but add donepezil to offset the anticholinergic effects"
+   ],
+   "correctIndex": 0,
+   "explanation": "Diphenhydramine is the classic first-generation antihistamine sleep aid whose central anticholinergic action produces confusion, delirium and falls in older adults, the signature BEERS-criteria avoid example, so the correct action is to stop it and address sleep with non-anticholinergic measures. Doubling an anticholinergic in a cognitively impaired elder worsens the risk, promethazine carries the same burden, and adding donepezil to license a harmful drug is backwards pharmacology."
+  },
+  {
+   "id": "slp-dph-02",
+   "drugSlug": "diphenhydramine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Diphenhydramine's sedative action is explained by:",
+   "options": [
+    "Serotonin 5-HT2A antagonism with melatonin release",
+    "First-generation ethanolamine-class H1 antagonism with strong blood-brain barrier penetration",
+    "Second-generation H1 antagonism with P-glycoprotein-limited CNS entry",
+    "Agonism at GABA-A receptors at the barbiturate site"
+   ],
+   "correctIndex": 1,
+   "explanation": "Diphenhydramine is the prototype first-generation ethanolamine antihistamine; its marked sedation follows from lipophilic blood-brain barrier penetration and central H1 blockade, which is why it was pressed into service as an over-the-counter hypnotic. Second-generation antihistamines were designed to stay out of the CNS, and it has no GABA-A or 5-HT2A pharmacology. This same central action is what makes it anticholinergically risky in the elderly."
+  },
+  {
+   "id": "slp-dph-03",
+   "drugSlug": "diphenhydramine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 33-year-old nurse has used diphenhydramine nightly for 2 weeks; it worked the first three nights but now barely helps. What is happening and what should she do?",
+   "options": [
+    "She needs a higher nightly dose indefinitely to restore the first-night effect",
+    "The loss of effect proves allergy to the capsule dye",
+    "Rapid tolerance to the hypnotic effect develops within days, so diphenhydramine is a poor long-term choice; non-drug sleep measures should take over",
+    "Tolerance never develops to antihistamines, so the tablets must be expired"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tolerance to the sedative effect of antihistamines develops rapidly, within days, which is the core reason diphenhydramine is a poor long-term hypnotic and why CBT-I and sleep-hygiene measures remain first-line for chronic insomnia. Expired tablets and capsule-dye allergy do not explain a classic tachyphylaxis curve, and escalating the dose adds anticholinergic load without restoring sleep benefit."
+  },
+  {
+   "id": "slp-dph-04",
+   "drugSlug": "diphenhydramine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "In children, diphenhydramine and related first-generation antihistamines are known to produce:",
+   "options": [
+    "Uniform deep sedation with dose-proportional opioid-like respiratory depression",
+    "Paradoxical hypotension and bradycardia as the leading overdose signs",
+    "Exclusively peripheral effects, since children's H1 receptors are all peripheral",
+    "Paradoxical excitation, and in acute overdose a belladonna-like central excitation with hallucinations and convulsions"
+   ],
+   "correctIndex": 3,
+   "explanation": "Children often respond to first-generation antihistamines with paradoxical excitation rather than sedation, and Tripathi's overdose description, with central excitation, tremors, hallucinations, incoordination, convulsions and flushing resembling belladonna poisoning, captures the anticholinergic toxidrome. Opioid-like respiratory depression and bradycardic collapse are not the pattern, and the CNS actions prove these drugs are not purely peripheral. Dosing in children therefore demands particular care."
+  },
+  {
+   "id": "slp-dph-05",
+   "drugSlug": "diphenhydramine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 29-year-old mother with 6 months of poor sleep wants something safe from the chemist. What is the evidence-based first recommendation?",
+   "options": [
+    "Cognitive behavioural therapy for insomnia with sleep hygiene, the recognised first-line treatment; OTC antihistamines are not for chronic use",
+    "Start nightly diphenhydramine 50 mg, the safest long-term option for chronic insomnia",
+    "Start zopiclone 7.5 mg nightly for at least a year",
+    "Take promethazine 25 mg each night, because prescription-only status makes it superior"
+   ],
+   "correctIndex": 0,
+   "explanation": "CBT-I is the recognised first-line therapy for chronic insomnia, and hypnotics, whether OTC antihistamines or prescription Z-drugs, are adjuncts for limited courses rather than substitutes. Nightly diphenhydramine brings rapid tolerance and anticholinergic load, a year of zopiclone exceeds every short-course guidance, and prescription status is not a marker of superiority. This is the question examiners use to test treatment hierarchy."
+  },
+  {
+   "id": "slp-dph-06",
+   "drugSlug": "diphenhydramine",
+   "domain": "Indian Practice",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which statement about Indian diphenhydramine practice (BENADRYL) is correct?",
+   "options": [
+    "100 mg intravenously three times daily as an antihypertensive",
+    "25 to 50 mg orally; it is also useful for motion sickness and for acute dystonic reactions to antipsychotics",
+    "250 to 500 mg orally; used primarily as an antidepressant in India",
+    "A 10 mg sublingual film; used for acute migraine and glaucoma attacks"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi lists diphenhydramine as BENADRYL 25 and 50 mg capsules and syrup at 25 to 50 mg orally, with uses including motion sickness (also marketed as the dimenhydrinate salt) and prompt relief of acute drug-induced dystonia through central anticholinergic action; Katzung notes its parenteral use for antipsychotic dystonic reactions. It is not an antidepressant, has no sublingual migraine or glaucoma role, and is never an antihypertensive."
+  },
+  {
+   "id": "slp-dph-07",
+   "drugSlug": "diphenhydramine",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "knowledge-graph",
+   "question": "A 70-year-old man on amitriptyline 25 mg nightly for neuropathic pain self-medicates with diphenhydramine for sleep and now has dry mouth, constipation and urinary hesitancy. What is the mechanism?",
+   "options": [
+    "Diphenhydramine potentiates amitriptyline's serotonin reuptake blockade, causing serotonin syndrome",
+    "The symptoms reflect an allergic interaction between the two molecules' metabolites",
+    "Additive anticholinergic toxicity: both drugs are antimuscarinic, so the burden sums",
+    "Amitriptyline inhibits diphenhydramine's CYP3A4 metabolism, producing opioid-like toxicity"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi warns that antihistamines given with atropine substitutes, phenothiazines, tricyclic antidepressants or disopyramide show additive anticholinergic action; the antimuscarinic burden of amitriptyline plus diphenhydramine sums, and dry mouth, constipation and urinary hesitancy are textbook anticholinergic toxicity, with delirium and urinary retention as the dangerous endpoints. No 3A4-opioid or serotonin-syndrome mechanism exists here, and an allergic interaction between metabolites is pharmacological nonsense. Deprescribing one of the two anticholinergics is the fix."
+  },
+  {
+   "id": "slp-dph-08",
+   "drugSlug": "diphenhydramine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A pharmacology professor asks why cetirizine and loratadine avoid the sedation and delirium risk that makes diphenhydramine unsafe in the elderly. What is the correct explanation?",
+   "options": [
+    "They are given at doses 10 times lower, which abolishes all CNS action by arithmetic alone",
+    "They selectively block peripheral H2 receptors instead of H1",
+    "They are enzyme inducers that accelerate their own clearance from the brain",
+    "They penetrate the CNS poorly because of P-glycoprotein efflux at the blood-brain barrier and polar structure, keeping central H1 blockade minimal"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung explains that second-generation antihistamines are substrates of the P-glycoprotein transporter at the blood-brain barrier, so they enter the CNS poorly or not at all, giving minimal central H1 blockade; this is exactly why cetirizine, hydroxyzine's metabolite, causes only mild somnolence. Dose arithmetic is not the mechanism, these are H1 drugs with negligible H2 action, and enzyme induction does not govern brain entry. This BBB logic ties the whole antihistamine class together."
+  },
+  {
+   "id": "slp-mix-01",
+   "drugSlug": "mixed",
+   "domain": "Active Recall",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Which row correctly matches each sleep agent to its primary molecular target?",
+   "options": [
+    "Ramelteon at MT1/MT2 receptors; suvorexant at OX1/OX2 receptors; zolpidem at alpha-1 GABA-A; diphenhydramine at central H1",
+    "Ramelteon at OX1/OX2 receptors; suvorexant at central H1; zolpidem at MT1/MT2 receptors; diphenhydramine at alpha-1 GABA-A",
+    "Ramelteon at alpha-1 GABA-A; suvorexant at MT1/MT2 receptors; zolpidem at OX1/OX2 receptors; diphenhydramine at central H1",
+    "Ramelteon at central H1; suvorexant at alpha-1 GABA-A; zolpidem at OX1/OX2 receptors; diphenhydramine at MT1/MT2 receptors"
+   ],
+   "correctIndex": 0,
+   "explanation": "The KYP mechanism ladder runs on four independent rungs: melatonergics (ramelteon and tasimelteon) at MT1/MT2, dual orexin antagonism (suvorexant) at OX1/OX2, alpha-1-selective GABA-A modulation (zolpidem and the other Z-drugs) and central H1 blockade (hydroxyzine and diphenhydramine). Each wrong row is a full rotation of the correct ladder, the classic matching-question trap, and only one row keeps every drug on its own target. Suvorexant is the newest rung, antagonising wake-drive neuropeptides rather than enhancing inhibitory tone."
+  }
+ ]
+}

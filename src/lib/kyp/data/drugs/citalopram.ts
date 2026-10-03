@@ -1669,6 +1669,110 @@ export const citalopram: Drug = {
       explanation: "Escitalopram is the S-enantiomer alone (the active half of citalopram's racemic mixture). At half the dose (10mg vs 20mg), it provides the same antidepressant effect WITHOUT the R-enantiomer's hERG channel blockade. It also has a wider therapeutic range (up to 20mg vs citalopram's 40mg cap with no 20mg elderly cap). The Lancet 2018 NMA ranked escitalopram (not citalopram) among the best.",
       afterSectionId: "evidence-practice",
     },
+    {
+      id: "ssri-cit-01",
+      question: "Among the six SSRIs, which agent does the Know Your Pill monograph single out as the most SERT-selective member of the class?",
+      options: [
+        "Fluoxetine — its loose receptor profile (NET, 5-HT2C) is precisely why it is the least selective",
+        "Sertraline — its fingerprint is the broadest FDA label in the class",
+        "Paroxetine — the highest affinity for muscarinic receptors of the group",
+        "Citalopram — the class benchmark for clean SERT selectivity"
+      ],
+      correctIndex: 3,
+      explanation: "KYP tags citalopram as the most SERT-selective SSRI — its identity is serotonin-transporter purity. Fluoxetine is the loosest of the class (NET and 5-HT2C effects), sertraline's claim to fame is its broad label plus a mild DAT effect, and paroxetine's receptor profile is actually dirtied by muscarinic (anticholinergic) affinity. In exam one-liners, 'cleanest SERT selectivity' points to the citalopram family.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "ssri-cit-02",
+      question: "A resident is listing SSRI half-lives from memory. Citalopram's is best stated as:",
+      options: [
+        "About 5 hours for the parent, with an active O-desmethyl metabolite",
+        "About 18 hours with an active metabolite extending the effect",
+        "About 33 hours with no active metabolite — comfortably once-daily",
+        "Roughly 4-6 days, long enough to support a weekly formulation"
+      ],
+      correctIndex: 2,
+      explanation: "Citalopram's half-life is about 33 hours (Tripathi 7e) with no active metabolite, so once-daily dosing is easy and it is not the class's discontinuation offender. The 5-hour/O-desmethyl profile is venlafaxine; 18 hours describes fluvoxamine (which also lacks an active metabolite — option B fails twice); and the 4-6 day half-life with a weekly formulation is fluoxetine's, thanks to long-lived norfluoxetine. Half-lives are the classic SSRI fingerprint distractor set.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "ssri-cit-03",
+      question: "A 72-year-old woman started citalopram 40 mg daily elsewhere for depression now reports dizziness; ECG shows QTc 488 ms. The most appropriate action:",
+      options: [
+        "Switch to fluoxetine 60 mg — a more cardiac-forgiving SSRI at that dose",
+        "Reassure — a QTc of 488 ms needs no action on any SSRI",
+        "Cut citalopram to the age-adjusted ceiling of 20 mg/day and reassess the QTc",
+        "Start propranolol to blunt catecholamine-triggered arrhythmia and keep the 40 mg dose"
+      ],
+      correctIndex: 2,
+      explanation: "Citalopram prolongs the QTc in a dose-dependent manner — the basis of the FDA 2011 warning capping it at 40 mg/day, and at 20 mg/day for patients over 60 years. This 72-year-old is double over her age-adjusted ceiling, so the correct move is dose reduction (with electrolyte and concomitant QT-drug review) and ECG follow-up. Fluoxetine 60 mg is a bulimia dose with no cardiac-free pass, propranolol does not shorten drug-induced QT stretch, and 'no action on any SSRI' is false — sertraline or escitalopram would be the cardiac-friendlier swaps.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "ssri-cit-04",
+      question: "A 45-year-old on citalopram 40 mg for MDD is genotyped as a CYP2C19 poor metaboliser; his cardiac history is clean. The correct dose ceiling is:",
+      options: [
+        "No ceiling applies — genotype does not alter citalopram dosing",
+        "80 mg/day — poor metabolisers need more drug for the same SERT effect",
+        "20 mg/day — the FDA cap for CYP2C19 poor metabolisers",
+        "30 mg/day with weekly ECGs — the standard poor-metaboliser schedule"
+      ],
+      correctIndex: 2,
+      explanation: "Citalopram is cleared notably via CYP2C19, so poor metabolisers run higher exposures — FDA labelling caps them at 20 mg/day, the same ceiling as for patients over 60, precisely to limit dose-dependent QTc risk. Doubling to 80 mg doubles the arrhythmia hazard, 30 mg with weekly ECGs is an invented schedule, and genotype absolutely does change this drug's dosing. Strong 2C19 inhibitors (e.g., omeprazole) call for the same 20 mg cap.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "ssri-cit-05",
+      question: "A resident proposes citalopram for a patient with MDD and comorbid panic disorder, describing it as having 'one of the broadest FDA labels in the class'. Best correction:",
+      options: [
+        "Citalopram's FDA label is major depressive disorder — the panic-disorder use is off-label",
+        "Citalopram carries FDA labels for MDD, panic disorder and OCD",
+        "Panic disorder is labelled for citalopram but not for sertraline",
+        "Citalopram's label covers bulimia nervosa instead of panic disorder"
+      ],
+      correctIndex: 0,
+      explanation: "Citalopram's indication anchor is MDD — panic and most other uses are off-label (KYP: 'MDD + off-label panic, etc.'). The broad-label credit belongs to sertraline, panic labels sit with sertraline/paroxetine/fluoxetine, and bulimia nervosa is fluoxetine's exclusive label. Label-precision traps like this are NEET-PG and USMLE staples.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "ssri-cit-06",
+      question: "Which statement about the citalopram–escitalopram relationship is correct?",
+      options: [
+        "Escitalopram is the R-enantiomer of citalopram and is pharmacologically inert",
+        "Escitalopram is the S-enantiomer of citalopram; the R-enantiomer antagonises its allosteric SERT effect",
+        "Citalopram is a prodrug converted to escitalopram by CYP2D6",
+        "Racemic citalopram contains two active diastereomers in a 1:1 ratio"
+      ],
+      correctIndex: 1,
+      explanation: "Citalopram is a racemate; escitalopram is its pure S-enantiomer, effective at about half the dose with milder effects (Tripathi). The R-enantiomer is not simply inert ballast — it counteracts the S-enantiomer's allosteric binding to SERT, the pharmacological basis for escitalopram's cleaner, lower-dose profile. The metabolite-conversion story is backwards (that pattern is venlafaxine→desvenlafaxine), and a racemate mixes enantiomers, not diastereomers.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "ssri-cit-07",
+      question: "Two weeks into citalopram 20 mg, a 34-year-old reports queasiness, daytime sleepiness and drenching sweats, and wants to stop everything. Best advice:",
+      options: [
+        "Stop now — this triad signals a hypersensitivity reaction",
+        "Reassure: nausea, somnolence and sweating are citalopram's commonest early effects and usually settle; simple dosing adjustments can help",
+        "Switch to paroxetine the same day for smoother tolerability",
+        "Add long-term ondansetron to cover the serotonergic nausea"
+      ],
+      correctIndex: 1,
+      explanation: "Nausea, somnolence and sweating are exactly the common adverse effects KYP lists for citalopram; they typically attenuate within 1-2 weeks, so reassurance plus practical measures (food, dose timing) beats abandonment — abrupt stopping risks discontinuation symptoms. Paroxetine trades these for a heavier anticholinergic and discontinuation burden, and chronic ondansetron is no strategy — it, too, prolongs the QTc.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "ssri-cit-08",
+      question: "NEET-PG style one-liner: in SSRI overdose, which agent is most linked to dose-dependent QTc prolongation and torsades — the reason Tripathi advises avoiding it in patients at high suicide risk?",
+      options: [
+        "Sertraline — the class's best-documented cardiac-safety profile",
+        "Escitalopram — at therapeutic doses it is the QT-safest option",
+        "Fluoxetine — notorious for lethal arrhythmias in overdose",
+        "Citalopram — recorded overdose deaths from QT stretch"
+      ],
+      correctIndex: 3,
+      explanation: "Citalopram is the overdose outlier among SSRIs: dose-related QTc prolongation with a few recorded fatalities is why Tripathi flags it for patients likely to attempt suicide, and why the FDA imposed the 40 mg/20 mg caps in 2011. Sertraline — not citalopram — actually holds the best cardiac-safety data, and fluoxetine is among the safest in overdose; the SSRIs' overdose safety is what displaced TCAs. Escitalopram's QT signal is smaller than its parent's, though it shares the mechanism.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
 
   /* End-of-page active recall questions */

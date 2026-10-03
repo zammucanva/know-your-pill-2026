@@ -1651,6 +1651,149 @@ export const escitalopram: Drug = {
       explanation: "Omeprazole is a strong CYP2C19 inhibitor. Escitalopram is primarily metabolised by CYP2C19 — co-prescription raises levels → dose-dependent QTc risk. Switch to pantoprazole (minimal CYP2C19 inhibition) or famotidine in patients on long-term escitalopram. This is an extremely common interaction in Indian elderly.",
       afterSectionId: "evidence-practice",
     },
+    {
+      id: "ssri-esc-01",
+      question: "Escitalopram's relationship to citalopram is best described as:",
+      options: [
+        "Its active metabolite",
+        "The R-enantiomer of citalopram",
+        "A prodrug that converts to citalopram",
+        "The S-enantiomer — the pharmacologically active half of racemic citalopram"
+      ],
+      correctIndex: 3,
+      explanation: "Escitalopram is the pure S-enantiomer of racemic citalopram — the component responsible for most SERT inhibition. It is not a metabolite or prodrug. Bonus: R-citalopram actually antagonises escitalopram's allosteric SERT action, which is why removing it produces a cleaner drug (Know Your Pill: 'S-enantiomer of citalopram').",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "ssri-esc-02",
+      question: "The exam-pearl feature of escitalopram's binding to SERT is:",
+      options: [
+        "It additionally binds an allosteric site that stabilises and prolongs SERT inhibition",
+        "It binds only the orthosteric site, like every other SSRI",
+        "It binds SERT irreversibly and covalently",
+        "It requires metabolic activation before binding SERT"
+      ],
+      correctIndex: 0,
+      explanation: "Escitalopram shows two-point binding: classical orthosteric SERT inhibition PLUS allosteric-site binding that stabilises the complex. This allosteric component underpins its high selectivity and potency — and R-citalopram interferes with exactly this effect. The rest of the class binds only the orthosteric site.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "ssri-esc-03",
+      question: "Standard adult escitalopram dosing:",
+      options: [
+        "20 mg starting dose, maximum 40 mg",
+        "10 mg starting dose, maximum 20 mg (10 mg in the elderly and hepatic impairment)",
+        "50 mg starting dose, maximum 200 mg",
+        "5 mg starting dose, maximum 5 mg"
+      ],
+      correctIndex: 1,
+      explanation: "Escitalopram runs 10 mg start, 20 mg maximum; halve to a 10 mg cap in patients 65+ and in hepatic impairment. The 20/40 numbers belong to citalopram (with its own 40 mg QTc cap). Escitalopram's identity: most selective SSRI with the lowest CYP-interaction burden.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "ssri-esc-04",
+      question: "A 76-year-old on amlodipine, metformin, atorvastatin and tamsulosin develops MDD. Which SSRI is the most interaction-averse choice for this polypharmacy?",
+      options: [
+        "Fluoxetine",
+        "Paroxetine",
+        "Escitalopram",
+        "Fluvoxamine"
+      ],
+      correctIndex: 2,
+      explanation: "Escitalopram has the lowest CYP-interaction profile of the class (Know Your Pill's distinguishing line) — minimal displacement of the existing regimen. Fluoxetine and paroxetine inhibit 2D6 (tamsulosin/other substrates), and fluvoxamine inhibits 1A2 (tizanidine is contraindicated; theophylline, clozapine rise). Elderly dosing still applies: 10 mg cap.",
+      afterSectionId: "top",
+    },
+    {
+      id: "ssri-esc-05",
+      question: "An 82-year-old with baseline QTc 470 ms was mistakenly started on escitalopram 20 mg. Correct action:",
+      options: [
+        "Continue unchanged — SSRIs carry no QTc concern",
+        "Switch to citalopram 40 mg",
+        "Give prophylactic IV magnesium",
+        "Reduce to 10 mg (age-appropriate maximum), obtain ECG follow-up, and consider an alternative if QTc climbs"
+      ],
+      correctIndex: 3,
+      explanation: "Escitalopram carries a dose-dependent QTc signal (smaller than citalopram's, which is why citalopram is capped) and the geriatric cap is 10 mg. A baseline near 470 ms leaves little headroom — correct the dose, re-ECG, and switch class if QTc extends. Magnesium treats, not prevents, torsade.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "ssri-esc-06",
+      question: "A 71-year-old woman, three weeks on escitalopram and on indapamide, presents with confusion and lethargy. Na+ 124 mEq/L, euvolaemic, serum osmolality low. Best explanation and step:",
+      options: [
+        "SSRI-induced SIADH — hold the SSRI, manage hyponatraemia by severity, then rechallenge cautiously or switch agents",
+        "Psychogenic polydipsia — fluid restrict and continue the SSRI",
+        "Addisonian crisis — start steroids empirically",
+        "Pseudohyponatraemia — simply repeat the sample"
+      ],
+      correctIndex: 0,
+      explanation: "SSRIs cause SIADH-type hyponatraemia; classic risk stack = elderly + female + thiazide-like diuretic (indapamide). Euvolaemic hypo-osmolar hyponatraemia after a recent SSRI start is the fingerprint: check osmolality, thyroid and cortisol, hold the drug, correct by severity, and either rechallenge at lower dose or change class. Ignoring it risks seizures.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "ssri-esc-07",
+      question: "A 30-year-old responds well to escitalopram 15 mg for MDD but develops anorgasmia and is losing motivation to continue. He has read that 'drug holidays are unreliable with my drug's half-life'. Best evidence-based plan:",
+      options: [
+        "Schedule weekend drug holidays",
+        "Continue escitalopram and address the sexual effect directly: consider dose reduction, switching to bupropion, or adding a PDE5 inhibitor",
+        "Stop antidepressant treatment altogether",
+        "Switch to paroxetine — it causes fewer sexual side effects"
+      ],
+      correctIndex: 1,
+      explanation: "Sexual dysfunction is the most common reason patients abandon SSRIs (Know Your Pill's own micro-quiz point). Real options: wait for tolerance, reduce dose if safe, switch to a pro-sexual agent (bupropion, mirtazapine), or augment with a PDE5 inhibitor. Drug holidays are unreliable for intermediate-half-life drugs, and paroxetine is among the WORST for sexual dysfunction, not better.",
+      afterSectionId: "top",
+    },
+    {
+      id: "ssri-esc-08",
+      question: "A 30-year-old primigravida at 34 weeks has continued escitalopram through pregnancy. Perinatal counselling for the delivery team should include:",
+      options: [
+        "Assurance that the newborn will have no effects at all",
+        "Mandatory NICU admission for every SSRI-exposed newborn",
+        "Possible poor neonatal adaptation — transient jitteriness, feeding or respiratory difficulty — usually self-limiting with monitoring",
+        "Starting the baby on an SSRI after birth"
+      ],
+      correctIndex: 2,
+      explanation: "Late-pregnancy SSRI exposure carries a small risk of poor neonatal adaptation (transient jitteriness, tachypnoea, feeding difficulty) that resolves over days with observation — plan delivery where the baby can be monitored. It does not justify stopping maternal treatment at term; relapse risk is the bigger danger. Sertraline is the class's preferred reproductive-safety pick; paroxetine is the one to avoid (Category D).",
+      afterSectionId: "top",
+    },
+    {
+      id: "ssri-esc-09",
+      question: "Why is citalopram capped at 40 mg/day (20 mg in elderly, 20 mg in CYP2C19 poor metabolisers) while escitalopram is not capped the same way?",
+      options: [
+        "Citalopram triggers serotonin syndrome above 60 mg",
+        "Escitalopram is renally cleared and cannot accumulate",
+        "It is purely a historical marketing decision",
+        "Citalopram shows dose-dependent QTc prolongation; escitalopram's QTc signal is small at therapeutic doses"
+      ],
+      correctIndex: 3,
+      explanation: "The FDA's 2011 citalopram warning tied dose to QTc — hence the 40/20 caps. Escitalopram retains a modest QTc signal worth watching in risk stacks (Know Your Pill: 'QTc watch'), but no equivalent cap. Know Your Pill's citalopram line: 'QTc dose-dependent; 40mg cap'.",
+      afterSectionId: "neural-pathways",
+    },
+    {
+      id: "ssri-esc-10",
+      question: "An inpatient on escitalopram is prescribed moxifloxacin for pneumonia and ondansetron as needed. The intern asks about combined risk. Best answer:",
+      options: [
+        "Additive QTc prolongation — get a baseline ECG, correct potassium and magnesium, review whether each QTc drug is necessary",
+        "None — the drugs come from unrelated classes",
+        "Additive serotonergic toxicity",
+        "Additive seizure threshold lowering"
+      ],
+      correctIndex: 0,
+      explanation: "This is the classic QTc stack: SSRI + fluoroquinolone + 5-HT3 antagonist. None is serotonergic, so serotonin syndrome is wrong. Manage by baseline ECG, electrolyte correction (K+, Mg2+), and pruning avoidable QTc drugs. Expecting inpatients on escitalopram to meet moxifloxacin or ondansetron makes this a practical ward question.",
+      afterSectionId: "neural-pathways",
+    },
+    {
+      id: "ssri-esc-11",
+      question: "How does R-citalopram interact with escitalopram's action at SERT?",
+      options: [
+        "It enhances escitalopram's allosteric binding",
+        "It antagonises the allosteric component — the basis for the S-isomer's superiority",
+        "It has no interaction at SERT whatsoever",
+        "It chemically converts escitalopram back to citalopram"
+      ],
+      correctIndex: 1,
+      explanation: "In the two-point binding model, R-citalopram allosterically counteracts escitalopram's stabilising effect on SERT — stripping it away produces a cleaner, more selective inhibitor. This is the mechanistic justification behind escitalopram's identity as the most selective SSRI and pairs with its 'lowest CYP interactions' tag.",
+      afterSectionId: "brain-regions",
+    },
   ],
 
   /* End-of-page active recall questions */

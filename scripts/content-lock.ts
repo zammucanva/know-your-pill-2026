@@ -62,14 +62,13 @@ const LOCKED_FILES: string[] = [
 ];
 
 // ─── Canonical content counts ───────────────────────────────────────────────
-// Re-locked after the Phase 3 Stahl's Prescriber's Guide integration
-// (145 medications). MCQ and search-entry counts are carried in the
-// baseline alongside these canonical expectations.
+// Re-locked after the MCQ bank expansion (1,173 QA-passed questions
+// appended across the 145 monographs: 477 + 1,173 = 1,650 total).
 const EXPECTED_COUNTS = {
   medications: 145,
   diseases: 1,
   substances: 3,
-  mcqs: 477,
+  mcqs: 1650,
   searchEntries: 340,
 };
 

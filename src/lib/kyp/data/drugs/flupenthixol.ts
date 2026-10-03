@@ -805,6 +805,110 @@ export const flupenthixol: Drug = {
       explanation: "For psychosis (oral): start 3 mg once daily, target 3–15 mg/day, maximum 20 mg/day. Titrate to 6–12 mg",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "tap-fpx-01",
+      question: "Flupenthixol's chemistry and dose-dependent character are best captured as:",
+      options: [
+        "A benzamide whose low doses raise prolactin the least",
+        "A thioxanthene whose low doses are described as dopaminergically activating — an antidepressant-type effect",
+        "A phenothiazine acting predominantly at 5-HT2A",
+        "A dihydroindolone famed for marked weight gain"
+      ],
+      correctIndex: 1,
+      explanation: "Flupenthixol is a thioxanthene; classic teaching holds that low doses act dopaminergically in an activating, antidepressant-like way, while full antipsychotic doses block D2 — the reason it suits withdrawn, apathetic patients. Option A names sulpiride's chemical family, option D names molindone's class while inverting its weight claim, and flupenthixol is no 5-HT2A-selective agent.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "tap-fpx-02",
+      question: "A 26-year-old with schizophrenia is withdrawn and apathetic, spending most of the day silent in a corner, without agitation. Which antipsychotic fits this presentation best?",
+      options: [
+        "Chlorpromazine",
+        "Flupenthixol",
+        "Thioridazine",
+        "Cyamemazine"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi notes flupenthixol is indicated particularly in withdrawn and apathetic patients — its low-dose activating dopaminergic profile matches this negative-symptom picture — while it is explicitly not for psychomotor agitation or mania. The other three options are sedating low-potency agents that would deepen the passivity.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-fpx-03",
+      question: "A stable schizophrenic patient is changed to flupenthixol decanoate. He asks how often the deep intramuscular injection will be given. The correct interval is:",
+      options: [
+        "Once daily, like a tablet",
+        "Every 24-72 hours",
+        "Every 2-4 weeks",
+        "Every 3-6 months"
+      ],
+      correctIndex: 2,
+      explanation: "Flupenthixol decanoate is a classic depot given at 2-4 weekly intervals (India: Fluanxol Depot 20 mg/mL), placing it in Katzung's list of decanoate esters meant for long-term parenteral maintenance. The 24-72 hour ester belongs to zuclopenthixol acetate, and no antipsychotic depot runs on a 3-6 month cycle.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "tap-fpx-04",
+      question: "A 30-year-old with schizophrenia relapses at every discharge because he stops his tablets. On this admission he agrees to a long-acting injection. The most appropriate choice is:",
+      options: [
+        "Pimozide once daily, citing its 48-60 hour half-life",
+        "Zuclopenthixol acetate at every visit",
+        "Clozapine, to treat non-adherence first",
+        "Flupenthixol decanoate every 2-4 weeks"
+      ],
+      correctIndex: 3,
+      explanation: "Decanoate depots exist precisely for patients who cannot or will not take oral maintenance (Katzung), and flupenthixol decanoate is a standard 2-4 weekly option. Zuclopenthixol acetate is a days-scale acute-agitation ester, pimozide is unsuitable when any agitation is present and comes in no depot form, and clozapine is a reserved drug needing CBC monitoring rather than an adherence tool.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-fpx-05",
+      question: "Three weeks into flupenthixol therapy, a 24-year-old paces the corridor, cannot sit through meals, and describes inner restlessness; the family insists the psychosis is worsening. The correct interpretation is:",
+      options: [
+        "Akathisia — reduce the dose; a benzodiazepine or propranolol helps",
+        "Psychotic relapse — increase the antipsychotic dose",
+        "Acute dystonia — intramuscular promethazine",
+        "Tardive dyskinesia — start clozapine"
+      ],
+      correctIndex: 0,
+      explanation: "Compelling motor restlessness without anxiety appearing 1-8 weeks into therapy is akathisia (up to 20% incidence per Tripathi), which is easily mistaken for relapse — raising the dose makes it worse. Dose reduction, benzodiazepines and propranolol are the standard moves; dystonia is a spasm, and tardive dyskinesia is late and choreiform.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-fpx-06",
+      question: "A junior proposes giving flupenthixol decanoate to an acutely agitated patient because depots seem to work fastest. The correct correction is:",
+      options: [
+        "Depot esters act fastest because muscle absorbs them instantly",
+        "Depot esters are designed for long-term parenteral maintenance, not for rapid control of acute agitation",
+        "Depots eliminate the need for EPS monitoring",
+        "Depots reduce metabolic risk by shortening drug exposure"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung frames decanoate esters as suitable for long-term parenteral maintenance in patients who cannot or will not take oral medication — onset is governed by slow release from the muscle depot, so depots are the wrong tool for an emergency. They neither abolish EPS nor shorten exposure; they smooth it over weeks.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-fpx-07",
+      question: "Which Indian preparation set matches flupenthixol?",
+      options: [
+        "Orap 2 and 4 mg tablets",
+        "Sulpitac 50, 100, 200 mg tablets",
+        "Fluanxol 0.5, 1, 3 mg tablets and Fluanxol Depot 20 mg/mL ampoules",
+        "Loxapac 10, 25, 50 mg capsules"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi lists flupenthixol in India as FLUANXOL 0.5, 1 and 3 mg tablets with FLUANXOL DEPOT 20 mg/mL ampoules for the decanoate. The other strength-lists belong to pimozide, sulpiride and loxapine respectively.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-fpx-08",
+      question: "The most defensible pharmacological explanation for low-dose flupenthixol's antidepressant-type reputation is:",
+      options: [
+        "At low doses it inhibits serotonin reuptake like an SSRI",
+        "At low doses it inhibits monoamine oxidase reversibly",
+        "At low doses it agonises benzodiazepine receptors",
+        "At low doses its dopaminergic action is activating rather than tranquillising, while higher doses block postsynaptic D2 receptors"
+      ],
+      correctIndex: 3,
+      explanation: "The classic teaching separates flupenthixol's low-dose dopaminergic activation — an antidepressant-flavoured effect in withdrawn patients — from full-dose postsynaptic D2 blockade; no serotonergic, MAO-inhibiting or benzodiazepine-receptor mechanism exists for this drug. The same dose-dependence theme is how the benzamide sulpiride changes character with dose.",
+      afterSectionId: "mechanism",
+    },
   ],
   activeRecallQuestions: [
     {

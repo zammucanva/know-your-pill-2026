@@ -716,6 +716,110 @@ export const atomoxetine: Drug = {
       explanation: "For adhd (children ≤70 kg): start 0.5 mg/kg/day for 7 days, target 1.2 mg/kg/day, maximum 1.4 mg/kg/day. Increase to 1.2 mg/kg/day",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "atd-ato-01",
+      question: "Parents of an 8-year-old boy with ADHD refuse methylphenidate because a neighbour told them it causes dependence. Which feature of atomoxetine should the paediatrician highlight to address their fear?",
+      options: [
+        "It is a weak amphetamine derivative, so dependence risk is negligible",
+        "It is a non-stimulant norepinephrine reuptake inhibitor that does not produce dependence and is not a controlled substance",
+        "It is a sedative antihistamine that calms hyperactivity directly",
+        "It blocks dopamine D2 receptors, shutting down the reward pathway like an antipsychotic"
+      ],
+      correctIndex: 1,
+      explanation: "Atomoxetine is a selective NET inhibitor, chemically unrelated to amphetamine, with no dopamine-releasing stimulant action — Tripathi stresses it causes no dependence, and it is not a scheduled drug, which directly answers the family's stimulant worry. Calling it a weak amphetamine concedes the premise wrongly, antihistamine sedation is not its action, and D2 blockade is antipsychotic/amoxapine territory, not ADHD pharmacology.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "atd-ato-02",
+      question: "Parents of a 9-year-old with ADHD start atomoxetine and phone after 5 days: \"the old medicine (methylphenidate) worked the same afternoon; this one has done nothing.\" The correct counselling is:",
+      options: [
+        "Atomoxetine is failing; switch back to methylphenidate immediately",
+        "Double the atomoxetine dose today to force a response",
+        "Atomoxetine's benefit builds over weeks, unlike the stimulant's same-day effect — continue and review as planned",
+        "Atomoxetine only works in adults, so stop it"
+      ],
+      correctIndex: 2,
+      explanation: "The signature counselling point: atomoxetine is a non-stimulant whose clinical effect emerges over several weeks of noradrenergic adaptation, in contrast to methylphenidate's same-day action — day 5 is far too early to judge. Early dose-doubling and abandonment are the classic management errors, and atomoxetine is approved for children (above 6 years) as well as adults.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atd-ato-03",
+      question: "A 9-year-old on the standard atomoxetine dose develops marked tremor, tachycardia and poor intake after a routine increase; testing later shows he is a CYP2D6 poor metaboliser. What is the pharmacokinetic basis of his reaction?",
+      options: [
+        "Atomoxetine induces CYP3A4, increasing formation of a toxic metabolite",
+        "Atomoxetine is hydroxylated by CYP2D6, and poor metabolisers clear it slowly, so levels and toxicity rise at standard doses",
+        "It is excreted unchanged by the kidney, so his renal function must be failing",
+        "It is a prodrug requiring CYP1A2 activation that has failed"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi's PK entry: oral atomoxetine is hydroxylated by CYP2D6 and excreted mainly as glucuronide, with extensive- and poor-metaboliser polymorphism — poor metabolisers accumulate drug at normal doses, and 2D6 inhibitors (fluoxetine, paroxetine, quinidine) create the same picture pharmacologically. Induction, renal-unchanged excretion and prodrug activation are all false for this drug.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atd-ato-04",
+      question: "A 10-year-old with ADHD and comorbid anxiety is on fluoxetine 20 mg; atomoxetine is added. The most important pharmacokinetic consequence is:",
+      options: [
+        "Fluoxetine lowers atomoxetine levels via CYP2D6 induction",
+        "No interaction — the two drugs use entirely different enzymes",
+        "Atomoxetine reduces fluoxetine levels, causing anxiety rebound",
+        "Fluoxetine, a strong CYP2D6 inhibitor, increases atomoxetine levels and toxicity risk"
+      ],
+      correctIndex: 3,
+      explanation: "Fluoxetine and its long-lived metabolite norfluoxetine potently inhibit CYP2D6, the enzyme that hydroxylates atomoxetine — Tripathi names fluoxetine, paroxetine and quinidine as level-raising inhibitors — so slower titration and lower targets apply when the two are combined. Induction is the wrong direction, the enzymes are not \"entirely different,\" and atomoxetine does not meaningfully alter fluoxetine kinetics.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "atd-ato-05",
+      question: "A 10-year-old girl with ADHD on atomoxetine develops queasiness, dyspepsia and poor appetite, and has lost 1.5 kg over 6 weeks; her parents want to stop the drug. The most appropriate advice is:",
+      options: [
+        "Stop immediately — these symptoms indicate hepatotoxicity",
+        "These are the drug's most common adverse effects (dyspepsia, anorexia, other abdominal symptoms); give with food, monitor weight and growth, and review tolerability before abandoning therapy",
+        "Switch to dextroamphetamine, which has no appetite effects",
+        "Give the dose at bedtime to eliminate the gastrointestinal effects"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi's common atomoxetine adverse effects are dyspepsia, anorexia and other abdominal symptoms, with growth retardation possible in children — so structured monitoring (weight, height, appetite strategies, food co-administration) precedes any switch. Frank hepatotoxicity is rare and announces itself with jaundice and dark urine, stimulants are the worse appetite offenders, and bedtime dosing does not abolish GI effects.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atd-ato-06",
+      question: "A 12-year-old boy on atomoxetine for 4 months develops dark urine, scleral icterus and pruritus. The most appropriate action is:",
+      options: [
+        "Reassure — this is benign hyperbilirubinaemia of adolescence",
+        "Increase the dose to suppress the autoimmune component",
+        "Suspect rare atomoxetine hepatotoxicity: stop the drug and evaluate liver function urgently",
+        "Add ursodeoxycholic acid and continue atomoxetine unchanged"
+      ],
+      correctIndex: 2,
+      explanation: "Atomoxetine carries a rare-but-real hepatotoxicity warning — Tripathi lists hepatotoxicity among its uncommon effects — and jaundice with dark urine on the drug is a stop-and-evaluate scenario, as with any suspected drug-induced liver injury. Reassurance, dose escalation, or continuing under ursodiol cover all ignore a potentially progressive injury.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atd-ato-07",
+      question: "The mother of a 15-year-old newly started on atomoxetine has read online about a \"suicide warning\" and demands the drug be stopped. The most accurate counselling is:",
+      options: [
+        "A boxed warning for suicidal ideation exists for this age group; the plan is monitoring and early follow-up rather than automatic discontinuation",
+        "No warning exists — she has confused it with an antibiotic",
+        "The warning applies only to patients above 65 years",
+        "The warning concerns completed suicide, which is impossible on this drug"
+      ],
+      correctIndex: 0,
+      explanation: "Atomoxetine carries the antidepressant-class boxed warning for suicidal ideation in children and young adults — Tripathi notes rarely suicidal thoughts — and the regulatory response is structured monitoring and early review, not reflexive stopping, since untreated ADHD carries its own serious risks. The warning is real, focused on the young, and concerns emergent ideation that requires assessment.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atd-ato-08",
+      question: "Which statement about atomoxetine in Indian practice is correct?",
+      options: [
+        "It is marketed in India only as an injection for acute agitation",
+        "Indian brands include Attentrol and Axepta; it is indicated in children above 6 years and in adults, and is contraindicated in glaucoma and with MAOIs",
+        "It is available in India as Narebox 4 mg and 8 mg tablets",
+        "It is a Schedule X drug in India and cannot be refilled"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi's Indian entries: Attentrol and Axepta capsules, an ADHD indication in children over 6 years and adults (0.5-1.2 mg/kg/day, adults 40 mg up to a 100 mg ceiling), with glaucoma a contraindication and MAOI co-use prohibited. Narebox is reboxetine's brand, no injectable acute-agitation formulation exists for atomoxetine, and it is not a controlled substance — its freedom from abuse potential is exactly why it suits stimulant-wary families.",
+      afterSectionId: "top",
+    },
   ],
   activeRecallQuestions: [
     {

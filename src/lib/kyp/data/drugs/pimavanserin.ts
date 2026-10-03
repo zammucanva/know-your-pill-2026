@@ -853,6 +853,110 @@ export const pimavanserin: Drug = {
       explanation: "For parkinson's disease psychosis: start 34 mg once daily (two 17 mg capsules), target 34 mg/day, maximum 34 mg/day. No titration required",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "spc-pmv-01",
+      question: "Pimavanserin's receptor pharmacology, the design that defines it, is:",
+      options: [
+        "Selective inverse agonist/antagonist at 5-HT2A receptors, with no dopamine D2 blockade",
+        "High-affinity D2 receptor antagonism like haloperidol",
+        "D2 partial agonism like aripiprazole",
+        "Selective 5-HT2C agonism producing satiety"
+      ],
+      correctIndex: 0,
+      explanation: "Pimavanserin is a selective 5-HT2A inverse agonist/antagonist — the deliberate absence of D2 affinity is its defining feature, because D2 blockade worsens parkinsonian motor function. Haloperidol's D2 antagonism and aripiprazole's partial agonism would both damage motor status, and 5-HT2C agonism is lorcaserin's satiety mechanism, not an antipsychotic action.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "spc-pmv-02",
+      question: "The 'entire design logic' of pimavanserin — why inverse agonism at 5-HT2A with zero D2 affinity was chosen — is:",
+      options: [
+        "5-HT2A inverse agonism directly increases nigral dopamine synthesis",
+        "Parkinson's disease psychosis is driven by aberrant serotonergic 5-HT2A signalling (sensitised by dopaminergic therapy), while D2 blockade would worsen the motor state",
+        "5-HT2A receptors sit only in the gut, so the drug cannot reach motor circuits",
+        "Dopamine receptors are absent from the parkinsonian brain, making D2 blockade harmless"
+      ],
+      correctIndex: 1,
+      explanation: "The signature exam story: Parkinson's disease psychosis reflects aberrant 5-HT2A-mediated cortical signalling amplified by dopaminergic medication, and an agent that spares D2 treats hallucinations without aggravating bradykinesia. 5-HT2A receptors are cortical, striatal dopamine receptors are precisely what levodopa stimulates, and inverse agonism at 5-HT2A does not raise dopamine synthesis — it dampens the serotonergic driver of the psychosis.",
+      afterSectionId: "neurotransmitters",
+    },
+    {
+      id: "spc-pmv-03",
+      question: "A 71-year-old with 8-year Parkinson's disease on pramipexole reports vivid visual hallucinations several times weekly. The team wants the agent approved specifically for Parkinson's disease psychosis and orders a baseline ECG. The drug is:",
+      options: [
+        "Risperidone",
+        "A levodopa-carbidopa dose increase",
+        "Pimavanserin",
+        "Haloperidol"
+      ],
+      correctIndex: 2,
+      explanation: "Pimavanserin is the only therapy specifically approved for Parkinson's disease psychosis, chosen with a baseline ECG because of its QTc-prolongation warning (Katzung lists it for PD psychosis). Haloperidol and risperidone are D2 blockers that worsen parkinsonism and are used only as reluctant last resorts, and raising levodopa would aggravate the dopaminergic psychosis rather than treat it.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "spc-pmv-04",
+      question: "Before starting pimavanserin, the neurologist orders an ECG and reviews the patient's other medications for cardiac risk. The reason:",
+      options: [
+        "Pimavanserin causes dose-dependent hyperkalaemia that predisposes to arrhythmia",
+        "The drug is an opioid and suppresses the QT interval",
+        "ECGs are needed because pimavanserin lowers the seizure threshold",
+        "Pimavanserin carries a QTc-prolongation warning, so baseline and follow-up ECG monitoring is advised"
+      ],
+      correctIndex: 3,
+      explanation: "The label's cardiac warning is QTc prolongation — hence ECG baseline and vigilance for co-prescribed QT-prolongers (other antipsychotics, macrolides, some antiarrhythmics). Hyperkalaemia is not its mechanism, opioid actions do not apply, and seizures are not the ECG indication — this mirrors the ziprasidone/sertindole QTc vigilance of earlier antipsychotic batches.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "spc-pmv-05",
+      question: "A patient stable on pimavanserin develops tinea cruris, and oral ketoconazole is proposed. The correct caution:",
+      options: [
+        "Strong CYP3A4 inhibitors raise pimavanserin exposure — avoid or adjust, given the QTc risk",
+        "Ketoconazole is safe because pimavanserin is cleared renally unchanged",
+        "The interaction is harmless since pimavanserin induces CYP3A4",
+        "Only CYP2A6 matters for pimavanserin, so ignore azoles"
+      ],
+      correctIndex: 0,
+      explanation: "Pimavanserin is CYP3A4/2D6-metabolised; strong 3A4 inhibitors such as ketoconazole raise levels and amplify QTc risk, so the antifungal choice should change or the antipsychotic be reduced. Renal-unchanged clearance and 3A4 induction are wrong-direction claims, and 2A6 belongs to lorcaserin's metabolic story, not pimavanserin's.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "spc-pmv-06",
+      question: "The daughter of a 79-year-old with moderate Alzheimer's disease (no parkinsonism) requests pimavanserin for her mother's hallucinations. The accurate response:",
+      options: [
+        "Dementia hallucinations require levodopa trials first",
+        "Pimavanserin's approval is for Parkinson's disease psychosis; use in Alzheimer's-disease psychosis has not succeeded in trials and is not the labelled indication",
+        "Pimavanserin is first-line for all dementia-related hallucinations",
+        "Its registration is for Alzheimer's dementia, and Parkinson's hallucinations were never studied"
+      ],
+      correctIndex: 1,
+      explanation: "The label boundary matters: registration is for Parkinson's disease psychosis, and trials in Alzheimer's-disease psychosis did not establish that indication — general dementia psychosis instead starts with non-drug steps and cautious, time-limited antipsychotic use. The all-dementia-first-line claim and the reversed Alzheimer-registration claim both invert the label, and levodopa has no role in Alzheimer hallucinations.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "spc-pmv-07",
+      question: "A cardiology-minded examiner asks: 'Which antipsychotic-era agent treats psychosis in Parkinson's disease without worsening the motor score, yet still demands an ECG?' The intended answer, with its single caveat, is:",
+      options: [
+        "Haloperidol — motor-safe because it is high-potency",
+        "Clozapine — requires ECG but reliably worsens parkinsonism",
+        "Pimavanserin — no D2 blockade, so motor status is untouched, but QTc prolongation requires ECG vigilance",
+        "Ziprasidone — zero EPS and no cardiac monitoring needed"
+      ],
+      correctIndex: 2,
+      explanation: "Pimavanserin pairs the two exam facts: its D2-sparing design preserves the parkinsonian motor exam, while its QTc warning demands ECG monitoring. Ziprasidone is the atypical that MOST demands cardiac vigilance rather than the least, haloperidol's high potency means maximal EPS, and clozapine treats PD psychosis off-label with agranulocytosis and sedation burdens — none matches the pairing.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "spc-pmv-08",
+      question: "The ONLY approved therapy for Parkinson's disease psychosis is:",
+      options: [
+        "Risperidone",
+        "Quetiapine",
+        "Amantadine",
+        "Pimavanserin"
+      ],
+      correctIndex: 3,
+      explanation: "Pimavanserin holds the specific approval; risperidone carries the highest EPS/prolactin burden of the atypicals, quetiapine is a common off-label low-potency choice rather than an approved therapy, and amantadine treats dyskinesia and fatigue, not psychosis. This 'only-approved-for' framing is the signature NEET-PG/USMLE pearl.",
+      afterSectionId: "top",
+    },
   ],
   activeRecallQuestions: [
     {

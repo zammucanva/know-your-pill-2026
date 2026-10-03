@@ -1136,6 +1136,110 @@ export const quetiapine: Drug = {
       explanation: "For schizophrenia (ir): start 25 mg twice daily, target 400–800 mg/day divided, maximum 800 mg/day. Increase 25–50 mg bid/day or bid as tolerated to 300–400 by day 4",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "atp-que-01",
+      question: "Quetiapine's relative receptor affinities follow the order:",
+      options: [
+        "H1 > alpha-1 > M1,3 > D2 > 5-HT2A — explaining sedation and orthostasis at low doses",
+        "5-HT2A > H1 > D4 > D2 with strong muscarinic blockade",
+        "D2 > 5-HT2A > alpha-1 — a high-potency D2 profile",
+        "D2 = 5-HT2A > D4 with partial agonism at D2"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung lists quetiapine as H1 > alpha-1 > M1,3 > D2 > 5-HT2A — the H1/alpha-1 dominance explains its sedation and orthostatic hypotension, while weak D2 activity underlies minimal EPS and prolactin effects. The D2-predominant ordering fits haloperidol, partial D2 agonism is aripiprazole, and the 5-HT2A > H1 > D4 > D2 order is olanzapine's.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "atp-que-02",
+      question: "A 42-year-old long-haul truck driver on quetiapine 300 mg/day reports heavy daytime sleepiness and one near-miss on the highway over the past fortnight. The most appropriate advice is:",
+      options: [
+        "Stop quetiapine permanently — sedation signals a rare anaphylactic reaction",
+        "Take the larger dose at bedtime, avoid driving until sedation is reassessed, and inform the occupational physician",
+        "Take both doses in the morning to stay alert during the day",
+        "Reassure that tolerance is irrelevant and he may continue full-time driving"
+      ],
+      correctIndex: 1,
+      explanation: "Quetiapine's strong H1 and alpha-1 blockade makes somnolence its most common effect; the correct plan is night-weighted dosing, holding off safety-critical driving until sedation is reassessed (dose reduction or switching considered) and occupational-health disclosure. Continuing heavy-vehicle driving while sedated is dangerous, sedation is pharmacological rather than allergic, and morning dosing would worsen exactly the impairment complained of.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-que-03",
+      question: "A 29-year-old woman with bipolar II disorder presents in a depressive episode; a previous SSRI triggered hypomania. Which statement is supported by quetiapine's regulatory approvals?",
+      options: [
+        "Quetiapine's only approved use is treatment-resistant OCD",
+        "Quetiapine is approved for bulimia nervosa",
+        "Quetiapine monotherapy is approved for bipolar depressive episodes",
+        "Quetiapine is approved only as an add-on to antidepressants for bipolar depression"
+      ],
+      correctIndex: 2,
+      explanation: "Quetiapine is approved for schizophrenia, for both manic and depressive episodes of bipolar disorder (monotherapy in bipolar depression — valuable where antidepressants risk switch), and as adjunctive therapy in MDD with the XR formulation (Katzung: approved for bipolar depression; Tripathi covers mania/bipolar use). OCD is fluvoxamine territory, bulimia belongs to fluoxetine, and the add-on-only claim inverts the monotherapy point.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atp-que-04",
+      question: "The immediate-release quetiapine formulation requires twice-daily dosing because:",
+      options: [
+        "It is a prodrug cleaved slowly in plasma",
+        "Food abolishes its absorption",
+        "Its half-life exceeds 24 hours, so splitting prevents toxicity",
+        "Its elimination half-life is only about 6 hours"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi pegs quetiapine's half-life at about 6 hours — short for an antipsychotic — hence BD dosing of the IR tablets, with the XR version restoring once-daily dosing; the same short half-life drives 'major portion of daily dose at night' practice. No prodrug step exists, food does not abolish absorption, and a >24-hour half-life is olanzapine/aripiprazole territory, contradicting the twice-daily need.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atp-que-05",
+      question: "A 25-year-old with schizophrenia developed severe parkinsonism on haloperidol and recurrent rigidity on risperidone 8 mg/day. Which is the most EPS-sparing next choice?",
+      options: [
+        "Quetiapine",
+        "Haloperidol 5 mg with procyclidine cover",
+        "Paliperidone ER",
+        "Risperidone 4 mg"
+      ],
+      correctIndex: 0,
+      explanation: "Quetiapine (with clozapine) has the lowest EPS liability among antipsychotics — Katzung calls quetiapine and clozapine the atypicals least likely to cause tardive dyskinesia, and Tripathi notes minimal extrapyramidal and hyperprolactinaemic effects. Lowering the risperidone dose or switching to paliperidone keeps the same D2-heavy liability (paliperidone also raises prolactin), and haloperidol is the classic EPS offender even with anticholinergic cover.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atp-que-06",
+      question: "The historical beagle-dog toxicology finding with quetiapine that survives as a periodic-monitoring teaching point (India exam trivia) concerns:",
+      options: [
+        "Nephrolithiasis, requiring yearly renal ultrasound",
+        "Cataracts — hence periodic eye examinations during therapy",
+        "Retinal pigmentation like the older phenothiazines",
+        "Hearing loss, requiring routine audiometry"
+      ],
+      correctIndex: 1,
+      explanation: "Early toxicology showed quetiapine-related lens opacities (cataracts) in beagles; although human relevance was never established, the recommendation for periodic eye checks became enduring exam trivia. Retinal pigmentation is thioridazine/chlorpromazine lore, and neither deafness nor renal stones has any quetiapine link.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-que-07",
+      question: "Three days after starting quetiapine 50 mg at night, a 70-year-old woman reports light-headedness on standing from bed. The most likely mechanism is:",
+      options: [
+        "Muscarinic M1 blockade causing hyperthermia",
+        "Prolactin-mediated volume depletion",
+        "Alpha-1 adrenergic blockade producing orthostatic hypotension, typical during dose titration",
+        "D2 blockade causing parkinsonian autonomic failure"
+      ],
+      correctIndex: 2,
+      explanation: "Quetiapine's alpha-1 blockade causes postural hypotension, especially during early dose titration (Tripathi), and elderly patients are most exposed — the fix is slower up-titration, not drug withdrawal in most cases. Parkinsonian autonomic failure is not its dominant pathway at 50 mg, M1 blockade would give dry mouth and constipation rather than hyperthermia, and prolactin does not deplete volume.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-que-08",
+      question: "A patient stable on quetiapine 400 mg/day starts carbamazepine for trigeminal neuralgia; two weeks later his psychotic symptoms recur. The best explanation is:",
+      options: [
+        "Carbamazepine competes with quetiapine for the same D2 receptors",
+        "Carbamazepine increases renal clearance of quetiapine",
+        "Carbamazepine inhibits CYP2D6, raising toxic quetiapine metabolites",
+        "Carbamazepine induces CYP3A4, markedly lowering quetiapine levels"
+      ],
+      correctIndex: 3,
+      explanation: "Quetiapine is largely CYP3A4-cleared (Katzung 3A4 substrate list), and carbamazepine is a potent 3A4 inducer, so quetiapine exposure falls substantially — the classic interaction behind breakthrough psychosis on this pairing. Inhibition via 2D6 inverts both direction and enzyme (2D6 is risperidone's route), receptor-level competition is not how the interaction works, and renal clearance is paliperidone's pathway, not quetiapine's.",
+      afterSectionId: "timeline",
+    },
   ],
   activeRecallQuestions: [
     {

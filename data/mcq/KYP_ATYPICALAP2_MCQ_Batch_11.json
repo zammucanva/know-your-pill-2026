@@ -1,0 +1,1711 @@
+{
+ "batch": "kyp-atypicalap2-mcq-batch-11",
+ "title": "Atypical Antipsychotic MCQ Batch 11 - Clozapine / Ziprasidone / Lurasidone / Asenapine / Cariprazine / Brexpiprazole / Iloperidone / Sertindole / Zotepine / Blonanserin / Perospirone / Amisulpride",
+ "generated": "2026-10-02",
+ "examOrientation": "Indian exams (NEET PG / INI-CET) + USMLE-style vignettes",
+ "textbookAnchors": "Facts aligned with Katzung Basic & Clinical Pharmacology 14e (ch.29: clozapine refractory/suicide + agranulocytosis, ziprasidone greatest atypical QTc risk + IM agitation, cariprazine D3 partial agonism, sertindole EU-only, sulpiride-class prolactin, metabolic tiers), K.D. Tripathi 7e (ch.32: clozapine CYP1A2/2C19/3A4 t½ 12h + 0.8% agranulocytosis + myocarditis, ziprasidone t½ 8h + QTc, zotepine t½ 14h + NA reuptake + India/UK status + ZOLEPTIL/NIPOLEPT, amisulpride 50-300 mg negative symptoms + renal unchanged t½ 12h + SULPITAC), and KYP monograph anchors (clozapine REMS constellation ANC/myocarditis/ileus/seizures, ziprasidone 500 kcal & lurasidone 350 kcal food rules, asenapine sublingual-only, cariprazine 1-3 week effective half-life, brexpiprazole 2D6 halving, iloperidone alpha-1 titration + 2D6 PM dosing, blonanserin patch, perospirone benzisothiazole). No copyrighted text reproduced.",
+ "schema": {
+  "core_fields": "id, question, options[4], correctIndex, explanation, afterSectionId - IDENTICAL to KYP microQuizzes",
+  "metadata_fields": "drugSlug, domain, difficulty (Foundation|Clinical|Advanced), style (vignette|recall) - batch extras",
+  "notes": [
+   "afterSectionId values are real section ids observed live on KYP antipsychotic pages: top, quick-facts, mechanism, timeline, neurotransmitters, neural-pathways, knowledge-graph, high-yield-summary, brain-regions.",
+   "Answer positions deliberately spread: A25 B24 C24 D24 (|A-D|=1; see stats.answerSpread).",
+   "Intentional mirror-image distractor pairs kept per spec: clozapine smoking induce-vs-inhibit (atp-clo-06), lurasidone 3A4 inhibitor-vs-inducer (atp-lur-08 vs atp-lur-03), brexpiprazole 2D6 halve-vs-3A4 raise (atp-bre-03/bre-08), ziprasidone-vs-sertindole QTc comparison (atp-ser-08).",
+   "QA gate: this batch passed scripts/mcq_4step_check.py after extending the FACTS table with the 12 atypical-antipsychotic-II drugs."
+  ]
+ },
+ "stats": {
+  "total": 97,
+  "byDrug": {
+   "clozapine": 8,
+   "ziprasidone": 8,
+   "lurasidone": 8,
+   "asenapine": 8,
+   "cariprazine": 8,
+   "brexpiprazole": 8,
+   "iloperidone": 8,
+   "sertindole": 8,
+   "zotepine": 8,
+   "blonanserin": 8,
+   "perospirone": 8,
+   "amisulpride": 8,
+   "mixed": 1
+  },
+  "byDifficulty": {
+   "Foundation": 24,
+   "Clinical": 53,
+   "Advanced": 20
+  },
+  "byStyle": {
+   "recall": 45,
+   "vignette": 52
+  },
+  "byDomain": {
+   "Mechanism & Neuroscience": 12,
+   "Pharmacokinetics": 15,
+   "Clinical Uses": 23,
+   "Adverse Effects & Safety": 24,
+   "Drug Interactions": 8,
+   "Indian Practice": 2,
+   "Exam Pearls": 12,
+   "Active Recall": 1
+  },
+  "answerSpread": {
+   "0": 25,
+   "1": 24,
+   "2": 24,
+   "3": 24
+  }
+ },
+ "questions": [
+  {
+   "id": "atp-clo-01",
+   "drugSlug": "clozapine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "vignette",
+   "afterSectionId": "mechanism",
+   "question": "A patient on clozapine for a year has never had a single extrapyramidal day, and her serum prolactin has stayed at baseline despite excellent psychosis control. Which pharmacological description explains this?",
+   "options": [
+    "Weak, loosely bound D2 antagonism combined with broad 5-HT2A, D4, alpha-1, H1 and muscarinic blockade",
+    "Potent, sustained D2 occupancy of the nigrostriatal pathway with selective D1 blockade",
+    "Irreversible covalent binding to striatal D2 receptors that spares 5-HT systems",
+    "Dopamine-store depletion at nigrostriatal terminals, tetrabenazine-style"
+   ],
+   "correctIndex": 0,
+   "explanation": "Clozapine engages D2 loosely and transiently while covering 5-HT2A, D4, alpha-1, H1 and muscarinic receptors — Tripathi stresses that prolactin does not rise and EPS is few or absent, precisely because of this loose D2 grip. Sustained nigrostriatal D2 occupancy is the haloperidol fingerprint, not clozapine's, and the drug neither depletes dopamine stores nor binds receptors irreversibly."
+  },
+  {
+   "id": "atp-clo-02",
+   "drugSlug": "clozapine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Clozapine's metabolic fate is correctly characterised as:",
+   "options": [
+    "Exclusive glucuronidation to fully inactive products",
+    "CYP1A2-led oxidation (with 2C19/3A4 contribution) to active norclozapine, elimination t½ about 12 hours",
+    "Pure renal excretion of unchanged parent drug with no hepatic step",
+    "Plasma esterase hydrolysis completed within an hour of absorption"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi assigns clozapine to CYP1A2, 2C19 and 3A4 with an average t½ near 12 hours, and its N-desmethyl product norclozapine is pharmacologically active. Renal excretion of unchanged drug is amisulpride's route, and neither ultra-short ester hydrolysis nor pure inactive glucuronidation describes clozapine."
+  },
+  {
+   "id": "atp-clo-03",
+   "drugSlug": "clozapine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 34-year-old man with schizophrenia has shown no meaningful response to two adequate trials — risperidone 6 mg/day for 8 weeks, then olanzapine 20 mg/day for 8 weeks. His CBC is normal and he consents to blood monitoring. The most appropriate next step is:",
+   "options": [
+    "Combine risperidone and olanzapine at full doses indefinitely",
+    "Add fluoxetine to the current olanzapine and observe for 12 weeks",
+    "Start clozapine under its mandated blood-monitoring schedule",
+    "Switch to haloperidol decanoate and reassess after another year"
+   ],
+   "correctIndex": 2,
+   "explanation": "The correct move is to start clozapine under its mandated ANC blood-monitoring schedule — after two failed adequate trials it is the gold standard for treatment-resistant schizophrenia, and Katzung notes 30–50% of previously refractory patients respond (300–900 mg/day, response judged over up to 6 months). More switching or full-dose polypharmacy merely delays the only drug with proven refractory benefit, and antidepressant addition does not treat core psychosis."
+  },
+  {
+   "id": "atp-clo-04",
+   "drugSlug": "clozapine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "Eighteen days into clozapine therapy, a young man develops low-grade fever, tachycardia of 118/min and pleuritic chest pain; ESR and CRP are high with mildly raised troponin. The most likely diagnosis is:",
+   "options": [
+    "Aspiration pneumonia secondary to sedation",
+    "Neuroleptic malignant syndrome",
+    "A dose-related clozapine seizure",
+    "Clozapine-induced myocarditis, a first-month emergency requiring drug discontinuation"
+   ],
+   "correctIndex": 3,
+   "explanation": "Clozapine myocarditis characteristically appears within the first month as fever, tachycardia, chest pain and raised inflammatory markers, and Katzung states the drug must be discontinued if myocarditis manifests — later cardiomyopathy is the chronic counterpart. NMS brings rigidity with marked hyperthermia rather than pleuritic pain, and pneumonia would show radiological consolidation."
+  },
+  {
+   "id": "atp-clo-05",
+   "drugSlug": "clozapine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A patient stable on clozapine 450 mg/day reports two weeks of worsening constipation, now with abdominal distension, vomiting and absent bowel sounds on the ward. The immediate concern is:",
+   "options": [
+    "Clozapine-induced paralytic ileus — a potentially fatal emergency demanding urgent review",
+    "Simple dietary fibre deficiency treatable with a bulk laxative alone",
+    "Somatic delusion of early psychotic relapse",
+    "Sialorrhoea causing dehydration and electrolyte loss"
+   ],
+   "correctIndex": 0,
+   "explanation": "Clozapine's potent antimuscarinic action can drive severe constipation into paralytic ileus and bowel ischaemia — the signature, potentially fatal gastrointestinal emergency of this drug, requiring urgent imaging, bowel rest and drug hold. Dismissing it as fibre deficiency or a somatic complaint can be lethal, and sialorrhoea is the opposite problem of excess drooling."
+  },
+  {
+   "id": "atp-clo-06",
+   "drugSlug": "clozapine",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A man stable on clozapine 300 mg/day for two years has smoked 20 cigarettes daily for a decade; he quits abruptly and three days later is found oversedated, drooling and dizzy. The best explanation is:",
+   "options": [
+    "Nicotine cessation triggering clozapine myocarditis",
+    "Loss of tobacco-driven CYP1A2 induction, so clozapine levels rise into the toxic range",
+    "Nicotine competing at clozapine's receptors and precipitating withdrawal psychosis",
+    "Cigarette smoke blocking the liver enzyme that normally clears clozapine"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tobacco smoke potently induces CYP1A2, the principal clozapine-clearing enzyme; quitting reverses that induction and clozapine levels climb, producing sedation, hypersalivation, seizures or collapse — a toxicity emergency needing dose reduction. Nicotine is not a receptor competitor here, smoke induces rather than inhibits the enzyme, and myocarditis bears no relation to cessation."
+  },
+  {
+   "id": "atp-clo-07",
+   "drugSlug": "clozapine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "The adverse-effect constellation that underlies clozapine's restricted, monitored-access dispensing is:",
+   "options": [
+    "Irreversible tardive dystonia appearing within weeks of initiation",
+    "Hypothyroidism with nephrogenic diabetes insipidus needing lithium-style serum monitoring",
+    "Agranulocytosis (weekly counts initially), first-month myocarditis, paralytic ileus and dose-related seizures",
+    "Corneal and lenticular deposits with retinal degeneration mandating six-monthly eye checks"
+   ],
+   "correctIndex": 2,
+   "explanation": "Clozapine's guard-rails exist for agranulocytosis (≈0.8% incidence, weekly CBC early, ANC thresholds), myocarditis and cardiomyopathy, severe constipation progressing to ileus, and seizures at higher doses (risk climbs above ~600 mg/day) — a safety package no other antipsychotic carries. Ocular deposits belong to chlorpromazine/thioridazine lore, dystonia is neither typical nor guaranteed, and thyroid plus water-balance monitoring is lithium's burden."
+  },
+  {
+   "id": "atp-clo-08",
+   "drugSlug": "clozapine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "A patient on clozapine soaks two pillows nightly with drooled saliva; the oral cavity is healthy. This symptom is best described as:",
+   "options": [
+    "An early marrow-failure sign demanding immediate withdrawal",
+    "Xerostomia from antimuscarinic blockade, best managed with sugar-free gum",
+    "A dose-dependent prodrome of clozapine seizures",
+    "Sialorrhoea — a paradoxical clozapine hallmark attributed to central mechanisms, manageable without abandoning the drug"
+   ],
+   "correctIndex": 3,
+   "explanation": "Hypersalivation (sialorrhoea) is a characteristic paradox of clozapine — despite antimuscarinic properties, Tripathi notes it induces hypersalivation, attributed to central actions and impaired nocturnal swallowing — and it is managed supportively rather than by stopping an otherwise working drug. Marrow failure announces itself as fever and neutropenia, dry mouth is the opposite complaint, and drooling is no seizure prodrome."
+  },
+  {
+   "id": "atp-zip-01",
+   "drugSlug": "ziprasidone",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Beyond D2 and 5-HT2A antagonism, ziprasidone's receptor and reuptake pharmacology includes:",
+   "options": [
+    "5-HT1A agonism, 5-HT1D antagonism and moderately potent inhibition of 5-HT and NA reuptake",
+    "Pure D4 selectivity with no serotonergic activity at all",
+    "Irreversible monoamine-oxidase inhibition explaining antidepressant-type interactions",
+    "Strong muscarinic blockade accounting for dry mouth and constipation"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tripathi describes ziprasidone as combining D2 and 5-HT2A/2C blockade with 5-HT1A agonism, 5-HT1D antagonism and moderate inhibition of serotonin and noradrenaline reuptake — a built-in anxiolytic-antidepressant flavour. It lacks antimuscarinic actions, and MAO inhibition plays no part in its profile."
+  },
+  {
+   "id": "atp-zip-02",
+   "drugSlug": "ziprasidone",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Oral ziprasidone's pharmacokinetic signature is:",
+   "options": [
+    "Absorption so unreliable that serum levels are routinely measured",
+    "An elimination half-life near 8 hours mandating twice-daily dosing, with CYP3A4-dependent clearance",
+    "A 30-hour half-life permitting single nightly dosing",
+    "Renal excretion of unchanged parent drug"
+   ],
+   "correctIndex": 1,
+   "explanation": "Ziprasidone's t½ is roughly 8 hours (Tripathi), hence twice-daily dosing, and it is metabolised by CYP3A4 — ketoconazole-type inhibitors raise its levels. A 30-hour half-life belongs to agents like aripiprazole (75 h), renal unchanged excretion is amisulpride's route, and routine level monitoring is not practised — the practical check is the meal rule."
+  },
+  {
+   "id": "atp-zip-03",
+   "drugSlug": "ziprasidone",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A student with schizophrenia improves on ziprasidone 80 mg twice daily. She stops eating breakfast and swallows her morning dose on an empty stomach before class; months later she relapses despite unchanged dose and adherence. The most likely contributor is:",
+   "options": [
+    "Tachyphylaxis requiring permanent dose doubling",
+    "CYP1A2 induction caused by overnight fasting",
+    "Markedly reduced ziprasidone absorption when the dose is taken fasting",
+    "Autoimmune loss of D2 receptor responsiveness to ziprasidone"
+   ],
+   "correctIndex": 2,
+   "explanation": "Ziprasidone must be taken with a meal of roughly 500 kcal — on an empty stomach its bioavailability falls to about half the fed value, so fasting doses deliver far less drug and relapse follows despite 'adherence' (the class's signature food pearl). Tachyphylaxis is not the mechanism, and fasting does not induce CYP1A2."
+  },
+  {
+   "id": "atp-zip-04",
+   "drugSlug": "ziprasidone",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "Before starting ziprasidone in a 45-year-old man, the resident orders baseline investigations. Which test is most specifically required because of this drug's cardiac liability?",
+   "options": [
+    "Serial serum troponins",
+    "Twenty-four-hour urinary catecholamines",
+    "Routine waking EEG",
+    "Baseline ECG with QTc measurement"
+   ],
+   "correctIndex": 3,
+   "explanation": "Ziprasidone carries the greatest QTc-prolonging risk among the atypical agents (Katzung), so a baseline ECG — repeated after dose changes, with electrolytes corrected — is the specific safety step. Troponins track myocardial injury rather than repolarisation, and catecholamines or EEG have no role in this liability."
+  },
+  {
+   "id": "atp-zip-05",
+   "drugSlug": "ziprasidone",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 36-year-old with schizophrenia on olanzapine has gained 14 kg with HbA1c 7.1%; a switch is planned with metabolic recovery as priority. Which trio correctly names the leanest metabolic tier of atypical antipsychotics?",
+   "options": [
+    "Ziprasidone, aripiprazole and lurasidone",
+    "Clozapine, olanzapine and quetiapine",
+    "Risperidone, paliperidone and olanzapine",
+    "Zotepine and asenapine"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung calls ziprasidone the second-generation drug causing the least weight gain, with aripiprazole and lurasidone in the same small-increase group — the tier to choose in metabolic disease. Clozapine and olanzapine top the weight/diabetes league (with quetiapine and asenapine intermediate), risperidone-type agents carry prolactin issues, and zotepine behaves like clozapine metabolically."
+  },
+  {
+   "id": "atp-zip-06",
+   "drugSlug": "ziprasidone",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "An acutely agitated, violent patient in the emergency ward needs rapid control; the team prefers an atypical agent with minimal EPS in parenteral form. The best choice is:",
+   "options": [
+    "Transdermal cariprazine patch",
+    "Intramuscular ziprasidone",
+    "Oral sertindole dissolved in water",
+    "Sublingual amisulpride"
+   ],
+   "correctIndex": 1,
+   "explanation": "IM ziprasidone improves acute agitation within 1–2 hours with fewer extrapyramidal symptoms than haloperidol (Katzung) — a standard emergency choice. Sertindole is oral-only and QTc-restricted, amisulpride has no sublingual form, and no cariprazine patch exists — the transdermal antipsychotic developed in Japan is blonanserin."
+  },
+  {
+   "id": "atp-zip-07",
+   "drugSlug": "ziprasidone",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A man stable on ziprasidone is prescribed thioridazine 25 mg by a local practitioner for hiccups; he also takes amiodarone for paroxysmal fibrillation. The danger to flag first is:",
+   "options": [
+    "Serotonin syndrome from a triple serotonergic load",
+    "Antimuscarinic crisis with hyperthermia",
+    "Additive QTc prolongation with torsades de pointes risk",
+    "Loss of ziprasidone efficacy from enzyme induction by both drugs"
+   ],
+   "correctIndex": 2,
+   "explanation": "Ziprasidone must not be combined with other QT-prolonging drugs — Katzung explicitly names thioridazine, pimozide and class IA/III antiarrhythmics such as amiodarone — because additive repolarisation delay invites torsades. Neither co-drug meaningfully induces metabolism, and ziprasidone's serotonergic actions are far too mild for serotonin syndrome."
+  },
+  {
+   "id": "atp-zip-08",
+   "drugSlug": "ziprasidone",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "The two antipsychotics whose oral absorption is meaningfully food-dependent — the classic 'must take with food' pair — are:",
+   "options": [
+    "Olanzapine and quetiapine",
+    "Clozapine and asenapine",
+    "Risperidone with paliperidone (no meal requirement)",
+    "Ziprasidone and lurasidone"
+   ],
+   "correctIndex": 3,
+   "explanation": "Ziprasidone needs a ~500 kcal meal and lurasidone at least ~350 kcal for reliable absorption — the two food-dependent antipsychotics of the class, taught as mirror pearls. Clozapine and olanzapine are absorbed regardless of meals, asenapine's quirk is sublingual rather than dietary, and risperidone/paliperidone have no food stipulation."
+  },
+  {
+   "id": "atp-lur-01",
+   "drugSlug": "lurasidone",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Lurasidone's mechanism is best described as:",
+   "options": [
+    "D2 and 5-HT2A antagonism with 5-HT7 antagonism and 5-HT1A partial agonism",
+    "Irreversible D2 antagonism with strong H1 and muscarinic blockade",
+    "Selective D3 partial agonism without serotonergic actions",
+    "Combined MAO-B inhibition and dopamine release"
+   ],
+   "correctIndex": 0,
+   "explanation": "Lurasidone pairs D2 with 5-HT2A blockade, adds 5-HT7 antagonism and behaves as a 5-HT1A partial agonist — a receptor set linked to efficacy in schizophrenia and bipolar depression with a lean metabolic hand. Strong antimuscarinic/H1 loading is clozapine-style, and selective D3 partial agonism defines cariprazine, not lurasidone."
+  },
+  {
+   "id": "atp-lur-02",
+   "drugSlug": "lurasidone",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which statement about lurasidone's metabolism is correct?",
+   "options": [
+    "It undergoes rapid plasma ester hydrolysis",
+    "It is a CYP3A4 substrate; strong 3A4 inhibitors (ketoconazole, ritonavir) and inducers (rifampicin, carbamazepine) are contraindicated",
+    "It is cleared purely by glomerular filtration, unaffected by any enzyme inhibitor",
+    "It is a CYP1A2 substrate whose levels collapse in tobacco smokers"
+   ],
+   "correctIndex": 1,
+   "explanation": "Lurasidone depends on CYP3A4, so potent inhibitors such as ketoconazole or ritonavir and inducers such as rifampicin or carbamazepine are outright contraindicated — the constraint is absolute, not a dose-tweak. Glomerular-filtration clearance describes amisulpride, and tobacco-driven 1A2 induction is the clozapine/olanzapine story."
+  },
+  {
+   "id": "atp-lur-03",
+   "drugSlug": "lurasidone",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A woman stable on lurasidone develops cutaneous candidiasis and her GP starts ketoconazole tablets. The correct response is:",
+   "options": [
+    "Continue both unchanged with weekly ECGs as the safeguard",
+    "Stop lurasidone permanently and switch to haloperidol",
+    "Avoid the combination — choose a non-3A4-inhibiting antifungal, because lurasidone levels will rise",
+    "Double the lurasidone dose to cover induction losses"
+   ],
+   "correctIndex": 2,
+   "explanation": "Ketoconazole is a potent CYP3A4 inhibitor; co-prescription with the 3A4-substrate lurasidone is contraindicated because lurasidone exposure climbs — a topical agent or non-inhibiting antifungal is the fix. Doubling the antipsychotic worsens toxicity, ECGs do not mitigate a PK interaction, and abandoning an effective drug for haloperidol invites EPS."
+  },
+  {
+   "id": "atp-lur-04",
+   "drugSlug": "lurasidone",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 28-year-old woman with bipolar I disorder presents in a moderate depressive episode without psychosis; her weight is high-normal and she fears the metabolic price of olanzapine-fluoxetine. Which single-agent antipsychotic is the evidence-based choice here?",
+   "options": [
+    "Haloperidol",
+    "Zotepine",
+    "Thioridazine",
+    "Lurasidone"
+   ],
+   "correctIndex": 3,
+   "explanation": "Lurasidone is approved as monotherapy for bipolar depressive episodes — the class's classic bipolar-depression antipsychotic (Katzung groups it with quetiapine and olanzapine-fluoxetine for this indication) — with the least metabolic cost. Haloperidol has no depressive-episode claim, and zotepine or thioridazine are not bipolar-depression options at all."
+  },
+  {
+   "id": "atp-lur-05",
+   "drugSlug": "lurasidone",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A ward nurse gives lurasidone at 8 am; the patient eats nothing until a 2 pm canteen meal. The pharmacist's correction should state:",
+   "options": [
+    "Lurasidone needs a meal of at least ~350 kcal with the dose, or absorption falls short",
+    "Lurasidone must be taken strictly on an empty stomach",
+    "Any fluid, even plain water, doubles lurasidone levels",
+    "Doses above 80 mg of lurasidone need no food"
+   ],
+   "correctIndex": 0,
+   "explanation": "Lurasidone must be swallowed with food of at least ~350 kcal; fasting administration cuts exposure enough to undermine efficacy — the second food-dependent antipsychotic after ziprasidone's ~500 kcal rule. Empty-stomach dosing is exactly backwards, water changes nothing, and no dose escapes the meal requirement."
+  },
+  {
+   "id": "atp-lur-06",
+   "drugSlug": "lurasidone",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "Three weeks after starting lurasidone, a patient reports an inability to keep her legs still and a compulsion to pace the corridor; weight and fasting glucose are unchanged. The best interpretation is:",
+   "options": [
+    "A withdrawal syndrome proving covert non-adherence",
+    "Akathisia — lurasidone's signature adverse effect, against an otherwise benign metabolic backdrop",
+    "Drug-induced parkinsonism requiring permanent drug withdrawal",
+    "Restless legs from iron deficiency, unrelated to the antipsychotic"
+   ],
+   "correctIndex": 1,
+   "explanation": "Inner restlessness with pacing early in lurasidone therapy is akathisia, its commonest complaint, while the unchanged weight and glucose reflect its lowest-tier metabolic burden (Katzung places it in the small-increase group). Dose reduction or symptomatic cover usually suffices; iron studies are reasonable, but the timing after drug start is the giveaway."
+  },
+  {
+   "id": "atp-lur-07",
+   "drugSlug": "lurasidone",
+   "domain": "Clinical Uses",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 39-year-old with schizophrenia on olanzapine develops 12 kg weight gain, HbA1c 6.9% and triglycerides of 320 mg/dL, yet remains partly psychotic, so a switch is planned with metabolic recovery first. The most suitable single next agent is:",
+   "options": [
+    "Zotepine, for its noradrenergic antidepressant flavour",
+    "Thioridazine, to sidestep diabetic liability",
+    "Lurasidone, for its minimal weight and lipid impact",
+    "Clozapine, because it outperforms all others in difficult illness"
+   ],
+   "correctIndex": 2,
+   "explanation": "With metabolic syndrome dominating the picture, lurasidone's lowest-tier weight and lipid profile makes it the rational switch (Katzung: least weight gain with ziprasidone; lurasidone in the small-increase tier). Clozapine and zotepine would aggravate diabetes and dyslipidaemia, and thioridazine adds QTc and retinal danger without any metabolic rescue."
+  },
+  {
+   "id": "atp-lur-08",
+   "drugSlug": "lurasidone",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which co-prescription makes lurasidone therapy outright contraindicated by slashing its levels?",
+   "options": [
+    "Paroxetine, a strong CYP2D6 inhibitor",
+    "Omeprazole, a CYP2C19 inhibitor",
+    "Propranolol, a CYP2D6 inhibitor",
+    "Rifampicin, a powerful CYP3A4 inducer"
+   ],
+   "correctIndex": 3,
+   "explanation": "Strong CYP3A4 inducers — rifampicin, carbamazepine — are contraindicated with lurasidone because induced metabolism drops exposure below therapeutic range: the mirror image of the ketoconazole interaction. Paroxetine's 2D6 inhibition is the brexpiprazole issue, and omeprazole's 2C19 effect is irrelevant to this drug."
+  },
+  {
+   "id": "atp-ase-01",
+   "drugSlug": "asenapine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Asenapine's route of administration is critical because:",
+   "options": [
+    "Only sublingual/buccal delivery works — a swallowed tablet yields near-zero bioavailability",
+    "It must be given as a weekly intramuscular depot",
+    "Oral absorption is excellent and doubled by fatty food",
+    "The drug is active only via transdermal patch"
+   ],
+   "correctIndex": 0,
+   "explanation": "Asenapine is formulated for sublingual/buccal absorption; if swallowed, first-pass metabolism destroys the dose and bioavailability approaches nil — the signature administration pearl. No depot exists, the food-doubling story is ziprasidone's, and the standard product is a sublingual tablet even though a transdermal system has been developed in some markets."
+  },
+  {
+   "id": "atp-ase-02",
+   "drugSlug": "asenapine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Asenapine's pharmacology that supports its schizophrenia and mania labels is best summarised as:",
+   "options": [
+    "Pure 5-HT1A agonism without dopaminergic effect",
+    "High-affinity 5-HT2A and D2 antagonism with alpha-2 antagonism, cleared via minor 1A2/2D6 pathways",
+    "Selective mu-opioid antagonism combined with D3 partial agonism",
+    "GABA-A positive modulation with NMDA-channel blocking"
+   ],
+   "correctIndex": 1,
+   "explanation": "Asenapine blocks 5-HT2A and D2 with additional alpha-2 antagonism, and its clearance runs through minor CYP1A2/2D6 routes — a profile labelled for schizophrenia and manic/mixed bipolar episodes. Opioid, GABAergic or purely serotonergic mechanisms describe no antipsychotic in this batch."
+  },
+  {
+   "id": "atp-ase-03",
+   "drugSlug": "asenapine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A manic inpatient is started on asenapine. Two weeks later he is no better; the nurse discovers he has been swallowing the tablet dry with water, or dissolving it in a cup and drinking it. The explanation for failure is:",
+   "options": [
+    "Asenapine tolerance develops within two weeks",
+    "Antagonism between asenapine and his valproate",
+    "Swallowed asenapine is almost completely destroyed by first-pass metabolism",
+    "The dose is too low — asenapine needs 20 mg twice daily"
+   ],
+   "correctIndex": 2,
+   "explanation": "Asenapine works only when absorbed through the oral mucosa; swallowing the tablet delivers almost no drug, so his 'adherence' was pharmacologically a non-dose. The remedy is counselling on sublingual placement — dose escalation cannot rescue a destroyed dose, and no two-week tolerance or valproate antagonism exists."
+  },
+  {
+   "id": "atp-ase-04",
+   "drugSlug": "asenapine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "Five days after starting asenapine, a patient reports a numb tongue and a bitter taste; the oral mucosa looks entirely normal. The best interpretation is:",
+   "options": [
+    "The first sign of agranulocytosis with occult oral sepsis",
+    "Hypocalcaemia producing perioral tingling",
+    "A hypersensitivity reaction demanding permanent cessation",
+    "Recognised local effects of the sublingual formulation — oral hypoesthesia and dysgeusia"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tongue hypoesthesia, oral numbness and unpleasant taste are known local effects of sublingual asenapine and rarely force withdrawal. Marrow toxicity presents as fever and neutropenia rather than isolated tongue numbness (a CBC settles it), hypocalcaemia tingles around the mouth and fingers, and allergy is not this pattern."
+  },
+  {
+   "id": "atp-ase-05",
+   "drugSlug": "asenapine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 21-year-old man needs a drug covering both his first episode of schizophrenia and his recurrent acute manic/mixed episodes of bipolar I; previous oral tablets made him non-compliant and he accepts a melt-under-the-tongue form. The best-fitting agent is:",
+   "options": [
+    "Asenapine",
+    "Amisulpride",
+    "Iloperidone",
+    "Zotepine"
+   ],
+   "correctIndex": 0,
+   "explanation": "Asenapine carries labels for schizophrenia and bipolar I manic/mixed episodes and is delivered sublingually (5–10 mg twice daily) — a combination unique in this batch. Amisulpride, iloperidone and zotepine are swallowed-tablet agents whose labels do not span both problems in this way."
+  },
+  {
+   "id": "atp-ase-06",
+   "drugSlug": "asenapine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 24-year-old with bipolar I presents in a mixed episode; olanzapine previously caused 9 kg weight gain and quetiapine left her too sedated for work. A reasonable next choice with intermediate metabolic burden is:",
+   "options": [
+    "Thioridazine",
+    "Asenapine",
+    "Clozapine",
+    "Zotepine"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung places asenapine and quetiapine at an intermediate weight-gain level — leaner than clozapine/olanzapine — and asenapine is labelled for manic/mixed episodes, fitting her history and work needs. Clozapine and zotepine are among the most metabolic agents of the class, and thioridazine adds QTc and retinal toxicity with no manic-label advantage."
+  },
+  {
+   "id": "atp-ase-07",
+   "drugSlug": "asenapine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "Before discharge on asenapine, the nurse teaches administration technique. The correct instruction is:",
+   "options": [
+    "Chew the tablet thoroughly before swallowing",
+    "Take the dose immediately after a hot beverage",
+    "Place the tablet under the tongue and avoid eating or drinking for about 10 minutes",
+    "Swallow the tablet with a full glass of water for faster effect"
+   ],
+   "correctIndex": 2,
+   "explanation": "The tablet must dissolve under the tongue (or against the gum for the buccal form) with food and drink withheld for roughly 10 minutes — mucosal absorption is the entire basis of its delivery. Swallowing or chewing destroys the dose, and a hot drink soon after dosing dissolves the tablet prematurely."
+  },
+  {
+   "id": "atp-ase-08",
+   "drugSlug": "asenapine",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "In exam rankings of antipsychotic route quirks, asenapine is the classic answer for:",
+   "options": [
+    "The only antipsychotic dosed through an osmotic-pump tablet",
+    "The only antipsychotic requiring a 3-hour post-injection observation",
+    "The only antipsychotic needing weekly CBC for six months",
+    "The only antipsychotic delivered sublingually"
+   ],
+   "correctIndex": 3,
+   "explanation": "Asenapine is the class's only antipsychotic delivered sublingually — the 'swallowed tablet fails' pearl. The 3-hour post-injection observation is olanzapine pamoate's rule, the osmotic OROS shell is paliperidone's, and the weekly-count programme belongs to clozapine."
+  },
+  {
+   "id": "atp-car-01",
+   "drugSlug": "cariprazine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "What makes cariprazine mechanistically unique among antipsychotics?",
+   "options": [
+    "Partial agonism with preferential D3 (over D2) receptor affinity — the only D3-preferring agent of the class",
+    "Irreversible D2 antagonism combined with equal 5-HT7 inverse agonism",
+    "Selective D1 agonism driving prefrontal dopamine output",
+    "Alpha-2 agonism resembling clonidine"
+   ],
+   "correctIndex": 0,
+   "explanation": "Cariprazine is a partial agonist with higher affinity for D3 than D2 — Katzung calls it a D3 partial agonist with selectivity for the D3 receptor, unique in the class and tied to its negative-symptom promise. Pure D1 agonism, alpha-2 agonism and irreversible binding are properties of no antipsychotic."
+  },
+  {
+   "id": "atp-car-02",
+   "drugSlug": "cariprazine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Cariprazine's half-life profile stands out because:",
+   "options": [
+    "Esterases degrade it within minutes of absorption",
+    "A long-lived active didesmethyl metabolite stretches the effective half-life to roughly 1–3 weeks",
+    "A plasma t½ of 6 hours forces thrice-daily dosing",
+    "It is excreted unchanged in urine within hours"
+   ],
+   "correctIndex": 1,
+   "explanation": "Cariprazine's active didesmethyl metabolite persists so long that the effective half-life reaches about 1–3 weeks — drug action outlasts the last capsule by weeks. Nothing in its kinetics suits thrice-daily titration, and renal unchanged excretion is amisulpride's property."
+  },
+  {
+   "id": "atp-car-03",
+   "drugSlug": "cariprazine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A patient stopped cariprazine three weeks ago because of akathisia and still reports residual drug effects; the new team wants to start a different antipsychotic today. What should guide them?",
+   "options": [
+    "Give a doubled starting dose of the new drug to overcome receptor resistance",
+    "Reverse the residual effect with a dopamine-agonist infusion",
+    "Recognise that cariprazine levels fall slowly — effects persist for weeks, so allow washout and start the next drug low",
+    "Treat cariprazine as fully eliminated by now — standard initiation is safe"
+   ],
+   "correctIndex": 2,
+   "explanation": "With an effective half-life of 1–3 weeks (parent plus didesmethyl metabolite), cariprazine keeps occupying receptors long after the last dose — the classic switching hazard — so the successor drug should start low with patience rather than on a presumed clean slate. Doubling doses and dopamine agonists add toxicity without hastening washout."
+  },
+  {
+   "id": "atp-car-04",
+   "drugSlug": "cariprazine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 27-year-old is recovering from a first manic episode; his brother's schizophrenia is dominated by negative symptoms, and the psychiatrist weighs one agent against both dimensions. The claim best supported for cariprazine is:",
+   "options": [
+    "First-line status for treatment-resistant schizophrenia",
+    "Reliable reversal of established tardive dyskinesia",
+    "An approved obsessive-compulsive disorder indication",
+    "Approval in schizophrenia and bipolar I episodes, with D3-selective promise for negative symptoms"
+   ],
+   "correctIndex": 3,
+   "explanation": "Cariprazine (US approval 2015) covers schizophrenia and bipolar I manic/mixed (and depressive) episodes, and its D3 selectivity underpins interest in negative symptoms (Katzung). Refractory-schizophrenia first choice is clozapine, dyskinesia reversal is not its claim, and OCD is not among its labels."
+  },
+  {
+   "id": "atp-car-05",
+   "drugSlug": "cariprazine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A woman asks why her team chose cariprazine over risperidone, given her past galactorrhoea and 7 kg weight gain. The honest counselling point is:",
+   "options": [
+    "Cariprazine's partial agonism spares prolactin and keeps weight gain low, though akathisia is the complaint to watch",
+    "Cariprazine raises prolactin higher than risperidone but avoids weight gain",
+    "Cariprazine guarantees several kilograms of weight loss",
+    "Cariprazine eliminates every extrapyramidal risk, akathisia included"
+   ],
+   "correctIndex": 0,
+   "explanation": "As a D3/D2 partial agonist, cariprazine avoids the D2-blockade prolactin surge (like other partial agonists) and carries low weight gain, with akathisia as its main trade-off. No antipsychotic guarantees weight loss, and claiming zero EPS would be false reassurance."
+  },
+  {
+   "id": "atp-car-06",
+   "drugSlug": "cariprazine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 30-year-old with schizophrenia has avolition, social withdrawal and blunted affect on risperidone 6 mg with positive symptoms controlled — but new galactorrhoea. Which switch best addresses the negative-symptom dimension while sparing prolactin?",
+   "options": [
+    "Amisulpride 400 mg/day",
+    "Cariprazine",
+    "Zotepine",
+    "Sulpiride"
+   ],
+   "correctIndex": 1,
+   "explanation": "Cariprazine's D3-preferring partial agonism offers negative-symptom promise with prolactin and weight sparing — precisely this patient's needs. Sulpiride and standard-dose amisulpride would push prolactin higher still, and zotepine brings clozapine-like metabolic and seizure baggage without a negative-symptom claim."
+  },
+  {
+   "id": "atp-car-07",
+   "drugSlug": "cariprazine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "Within the partial-agonist antipsychotics, the correct D3-versus-D2 positioning is:",
+   "options": [
+    "Brexpiprazole exceeds cariprazine in D3-receptor selectivity",
+    "All three bind D3 exclusively with no D2 activity",
+    "Cariprazine is the D3-preferring outlier; aripiprazole and brexpiprazole are D2-anchored partial agonists",
+    "Aripiprazole carries the class's highest D3 affinity"
+   ],
+   "correctIndex": 2,
+   "explanation": "Cariprazine alone prefers D3; aripiprazole and brexpiprazole are D2 partial-agonist 'dopamine system stabilisers' (brexpiprazole adding stronger 5-HT2A antagonism). Exclusive D3 binding misstates all three, and any claim that brexpiprazole out-selects cariprazine at D3 inverts the actual design."
+  },
+  {
+   "id": "atp-car-08",
+   "drugSlug": "cariprazine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "Ten days after starting cariprazine, a patient reports inner restlessness and a constant urge to pace the ward; no delusions have returned. The best management is:",
+   "options": [
+    "Declare psychotic relapse and raise the cariprazine dose",
+    "Stop cariprazine and start clozapine the same day",
+    "Prescribe a nightly benzodiazepine and leave the antipsychotic untouched",
+    "Recognise akathisia — reduce the dose and/or add propranolol-type symptomatic cover"
+   ],
+   "correctIndex": 3,
+   "explanation": "Inner restlessness with pacing soon after starting cariprazine is akathisia — its commonest adverse effect — managed by dose reduction and symptomatic measures, not dose escalation. Mistaking it for relapse worsens the syndrome, clozapine is a last-resort refractory drug, and a benzodiazepine alone neither treats akathisia nor secures antipsychotic cover."
+  },
+  {
+   "id": "atp-bre-01",
+   "drugSlug": "brexpiprazole",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Brexpiprazole was engineered as aripiprazole's successor chiefly by:",
+   "options": [
+    "Retaining D2 partial agonism but strengthening 5-HT2A antagonism, softening akathisia",
+    "Swapping D2 partial agonism for full, irreversible D2 blockade",
+    "Adding strong muscarinic and H1 blockade for sedation",
+    "Replacing receptor pharmacology with dopamine-store depletion"
+   ],
+   "correctIndex": 0,
+   "explanation": "Brexpiprazole keeps the dopamine-partial-agonist chassis of aripiprazole while antagonising 5-HT2A more strongly, translating into less akathisia and somewhat more sedation than its parent. Full or irreversible D2 blockade would create a typical agent, and clozapine-style antimuscarinic loading was never the design goal."
+  },
+  {
+   "id": "atp-bre-02",
+   "drugSlug": "brexpiprazole",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Brexpiprazole's approved uses are:",
+   "options": [
+    "Treatment-resistant schizophrenia with mandatory ANC monitoring",
+    "Schizophrenia and adjunctive therapy in major depressive disorder",
+    "Monotherapy for bipolar mania and Tourette syndrome",
+    "Obsessive-compulsive disorder and generalised anxiety disorder"
+   ],
+   "correctIndex": 1,
+   "explanation": "Brexpiprazole is labelled for schizophrenia and as an antidepressant adjunct in MDD — Katzung lists it among antipsychotics approved for adjunctive unipolar depression. The Tourette and autism-irritability labels belong to aripiprazole, OCD remains off-label territory, and blood-count monitoring is uniquely clozapine's burden."
+  },
+  {
+   "id": "atp-bre-03",
+   "drugSlug": "brexpiprazole",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A man stable on brexpiprazole 2 mg/day is started on fluoxetine by a family physician for depressive symptoms. Within two weeks he is oversedated with new restlessness. The correct explanation and action is:",
+   "options": [
+    "A serotonergic malignant syndrome demanding cyproheptadine as the only action",
+    "Fluoxetine opposing brexpiprazole at striatal D2 receptors — switch to haloperidol",
+    "Fluoxetine inhibits CYP2D6, brexpiprazole levels rise — halve the brexpiprazole dose",
+    "Fluoxetine-induced CYP3A4 induction slashed brexpiprazole — raise the dose"
+   ],
+   "correctIndex": 2,
+   "explanation": "Fluoxetine is a strong CYP2D6 inhibitor and brexpiprazole is a 2D6 substrate, so exposure climbs and produces sedation plus akathisia — the remedy is halving the brexpiprazole dose (label guidance for strong 2D6 inhibitors). Fluoxetine induces nothing, and the picture is a PK interaction, not serotonin syndrome."
+  },
+  {
+   "id": "atp-bre-04",
+   "drugSlug": "brexpiprazole",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A clinical pharmacist reviews a chart showing brexpiprazole 2 mg/day with newly added paroxetine 20 mg. Which alert is correct?",
+   "options": [
+    "Paroxetine induces brexpiprazole metabolism — double the dose",
+    "No interaction exists — brexpiprazole is renally cleared",
+    "The pair must never be co-prescribed because of serotonin syndrome",
+    "Paroxetine, a strong CYP2D6 inhibitor, will raise brexpiprazole levels — halve the brexpiprazole dose"
+   ],
+   "correctIndex": 3,
+   "explanation": "Brexpiprazole is cleared via CYP2D6 (with 3A4 help), so strong 2D6 inhibitors such as paroxetine and fluoxetine mandate a halved dose per label logic. Paroxetine does not induce metabolism, renal unchanged excretion is amisulpride's story, and the combination is permitted with dose adjustment rather than banned."
+  },
+  {
+   "id": "atp-bre-05",
+   "drugSlug": "brexpiprazole",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A man with schizophrenia had disabling akathisia on aripiprazole. Switching him to brexpiprazole, the resident expects which tolerability shift?",
+   "options": [
+    "Less akathisia but more sedation and modest weight gain",
+    "More akathisia together with weight loss",
+    "Marked hyperprolactinaemia with galactorrhoea",
+    "Severe constipation with urinary retention"
+   ],
+   "correctIndex": 0,
+   "explanation": "Brexpiprazole's stronger 5-HT2A antagonism softens aripiprazole-type akathisia at the price of some sedation and modest weight gain — the designed trade-off (Katzung groups brexpiprazole with the no/minimal-prolactin agents). Galactorrhoea belongs to risperidone/amisulpride-tier D2 blockers and antimuscarinic ileus to clozapine."
+  },
+  {
+   "id": "atp-bre-06",
+   "drugSlug": "brexpiprazole",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 45-year-old woman with MDD has had only partial response to sertraline 150 mg/day over 10 weeks — PHQ-9 still moderately severe. Which augmentation strategy is best supported by an approved adjunctive label?",
+   "options": [
+    "Add sertindole",
+    "Add brexpiprazole",
+    "Switch to clozapine",
+    "Add amisulpride 400 mg/day"
+   ],
+   "correctIndex": 1,
+   "explanation": "Brexpiprazole carries an approved adjunctive-MDD indication — exactly this partial-response scenario (Katzung lists aripiprazole, quetiapine XR, brexpiprazole and olanzapine-fluoxetine among the formally approved options). Clozapine belongs to refractory psychosis, and amisulpride or sertindole lack an MDD-adjunct label while adding prolactin or QTc burdens."
+  },
+  {
+   "id": "atp-bre-07",
+   "drugSlug": "brexpiprazole",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "knowledge-graph",
+   "question": "A teaching exercise asks which modern agent was deliberately designed as aripiprazole's successor with a gentler akathisia profile. The best answer is:",
+   "options": [
+    "Iloperidone — an irreversible D2 binder",
+    "Zotepine — an SSRI-like molecule with D2 action",
+    "Brexpiprazole — same D2 partial-agonist principle, stronger 5-HT2A antagonism",
+    "Cariprazine — a D2 full antagonist with added H1 blockade"
+   ],
+   "correctIndex": 2,
+   "explanation": "Brexpiprazole is the refined aripiprazole: dopamine partial agonism retained, serotonergic 5-HT2A antagonism strengthened for tolerability. Cariprazine is a D3-preferring partial agonist, iloperidone is a reversible multi-receptor antagonist, and zotepine's extras are transporter inhibition, not SSRI mimicry."
+  },
+  {
+   "id": "atp-bre-08",
+   "drugSlug": "brexpiprazole",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "With carbamazepine co-therapy, brexpiprazole dosing needs:",
+   "options": [
+    "Halving, because carbamazepine blocks its metabolism",
+    "No change, because 2D6 alone governs its clearance",
+    "Weekly serum-level monitoring with a fixed 6 mg dose",
+    "An increase, because carbamazepine is a powerful CYP3A4 inducer that slashes brexpiprazole exposure"
+   ],
+   "correctIndex": 3,
+   "explanation": "Carbamazepine is a strong CYP3A4 inducer; brexpiprazole exposure falls, so its dose must rise — the mirror image of the fluoxetine/paroxetine halving rule. Halving applies to strong 2D6 inhibitors, and no routine serum-level service exists for this drug."
+  },
+  {
+   "id": "atp-ilo-01",
+   "drugSlug": "iloperidone",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Iloperidone's receptor signature and its most prominent clinical consequence are:",
+   "options": [
+    "5-HT2A/D2 antagonism with strong alpha-1 blockade — orthostatic hypotension",
+    "Pure D2 antagonism — EPS in most patients",
+    "Strong muscarinic blockade — urinary retention",
+    "H1 plus 5-HT2C agonism — profound sedation"
+   ],
+   "correctIndex": 0,
+   "explanation": "Iloperidone couples 5-HT2A/D2 antagonism with substantial alpha-1 blockade, making orthostatic hypotension and tachycardia its tolerability signature, worst during titration. It is neither an EPS-heavy pure D2 blocker nor a muscarinic agent, and no antipsychotic agonises H1/5-HT2C for sedation."
+  },
+  {
+   "id": "atp-ilo-02",
+   "drugSlug": "iloperidone",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "CYP2D6 status matters for iloperidone dosing because:",
+   "options": [
+    "Genotype exclusively determines QTc risk",
+    "Poor metabolisers reach higher iloperidone levels and need lower doses",
+    "Ultra-rapid metabolisers accumulate the drug dangerously",
+    "The drug works only in poor metabolisers"
+   ],
+   "correctIndex": 1,
+   "explanation": "Iloperidone is a CYP2D6 substrate; poor metabolisers attain steeply higher exposures, so the label roughly halves their target dose. QTc risk is real but modest and not dictated solely by genotype, and poor metabolisers are not the only responders."
+  },
+  {
+   "id": "atp-ilo-03",
+   "drugSlug": "iloperidone",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "During the first week of iloperidone titration, a patient feels faint on rising from bed; standing BP is 88/56 versus 122/80 lying. The immediate management is:",
+   "options": [
+    "Start fludrocortisone permanently",
+    "Switch to clozapine the same day",
+    "Slow the titration, counsel on rising gradually and review hydration",
+    "Double the titration pace to shorten exposure time"
+   ],
+   "correctIndex": 2,
+   "explanation": "Iloperidone's strong alpha-1 blockade makes orthostatic hypotension its dose-limiting problem, especially with rapid up-titration — the fix is slower titration, positional counselling and hydration review (why the label mandates gradual dose escalation). Accelerating titration invites falls, and fludrocortisone or a clozapine switch is unwarranted."
+  },
+  {
+   "id": "atp-ilo-04",
+   "drugSlug": "iloperidone",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Why did iloperidone, despite a clean EPS and metabolic profile, see limited clinical adoption?",
+   "options": [
+    "It lacks any demonstrable antipsychotic efficacy signal",
+    "It requires weekly CBC monitoring like clozapine",
+    "It is restricted to Japan by regulation",
+    "The mandatory slow titration for orthostatic hypotension delays therapeutic effect, and it offered no clear edge over established drugs"
+   ],
+   "correctIndex": 3,
+   "explanation": "Iloperidone's mandatory slow titration for orthostatic hypotension delays its therapeutic effect by weeks, and the drug offered no clear edge over established atypicals — hence limited adoption despite low EPS and metabolic burden. Its efficacy is established, no blood-count programme exists (that is clozapine), and its niche restriction is cardiac caution rather than Japanese origin."
+  },
+  {
+   "id": "atp-ilo-05",
+   "drugSlug": "iloperidone",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Besides CYP2D6, iloperidone's other major clearance enzyme is:",
+   "options": [
+    "CYP3A4",
+    "CYP1A2",
+    "CYP2C19",
+    "CYP2E1"
+   ],
+   "correctIndex": 0,
+   "explanation": "Iloperidone is cleared by both CYP2D6 and CYP3A4, so strong inhibitors of either enzyme — paroxetine-type 2D6 or ketoconazole-type 3A4 — raise levels and erode tolerability. The 1A2, 2C19 and 2E1 routes play no major part in its fate."
+  },
+  {
+   "id": "atp-ilo-06",
+   "drugSlug": "iloperidone",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A patient on iloperidone 12 mg twice daily begins paroxetine 20 mg for comorbid depression; days later he is dizzy, sedated and nearly faints on standing. The mechanism is:",
+   "options": [
+    "Competition for plasma albumin-binding sites",
+    "Paroxetine's strong CYP2D6 inhibition raising iloperidone exposure",
+    "Additive serotonin toxicity producing autonomic instability",
+    "Paroxetine-induced CYP3A4 induction lowering iloperidone"
+   ],
+   "correctIndex": 1,
+   "explanation": "Paroxetine is among the strongest CYP2D6 inhibitors; with iloperidone being 2D6-cleared, exposure jumps and alpha-1 effects (dizziness, orthostasis) surface — managed by cutting the iloperidone dose. Serotonin toxicity would show clonus and hyperthermia, paroxetine induces nothing, and albumin competition is not the mechanism."
+  },
+  {
+   "id": "atp-ilo-07",
+   "drugSlug": "iloperidone",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 26-year-old with schizophrenia has had severe EPS on risperidone and metabolic syndrome on olanzapine. A drug with low EPS and low metabolic burden is chosen, with counselling about slow titration. Which fits?",
+   "options": [
+    "Sulpiride",
+    "Thioridazine",
+    "Iloperidone",
+    "Zotepine"
+   ],
+   "correctIndex": 2,
+   "explanation": "Iloperidone combines low EPS and low metabolic liability — the price being alpha-1 orthostasis that forces the slow titration just counselled. Zotepine is metabolically clozapine-like and seizure-prone, sulpiride drives prolactin up, and thioridazine adds QTc and retinal toxicity."
+  },
+  {
+   "id": "atp-ilo-08",
+   "drugSlug": "iloperidone",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "In CYP2D6 poor metabolisers, iloperidone's label response is:",
+   "options": [
+    "Double the dose to compensate for non-response",
+    "Add quinidine to normalise the metabolic phenotype",
+    "Switch permanently to IM ziprasidone",
+    "Roughly halve the target dose because exposure rises steeply in poor metabolisers"
+   ],
+   "correctIndex": 3,
+   "explanation": "Because iloperidone levels climb steeply in 2D6 poor metabolisers, the label halves their dose — a classic pharmacogenetic dose-adjustment hook. Quinidine itself blocks 2D6 and would worsen exposure, and doubling the dose amplifies orthostatic danger."
+  },
+  {
+   "id": "atp-ser-01",
+   "drugSlug": "sertindole",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Sertindole's availability is restricted chiefly because of:",
+   "options": [
+    "QTc prolongation with arrhythmia risk — dispensed under a limited-use programme with ECG monitoring",
+    "Fatal hepatotoxicity within the first month",
+    "Agranulocytosis requiring weekly blood counts",
+    "Irreversible parkinsonism in most users"
+   ],
+   "correctIndex": 0,
+   "explanation": "Sertindole prolongs QTc and never entered the US market; in Europe it returned only under a restricted-access programme with baseline and follow-up ECGs. It is not hepatotoxic or marrow-toxic, and parkinsonism is not its problem — the cardiac channel effect is the whole story."
+  },
+  {
+   "id": "atp-ser-02",
+   "drugSlug": "sertindole",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "The global regulatory status of sertindole is best summarised as:",
+   "options": [
+    "Worldwide withdrawal with no remaining markets",
+    "Approved in some European countries, never approved in the USA, never first-line",
+    "FDA-approved with a black-box weight-gain warning",
+    "First-line in India's national mental-health programmes"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung records sertindole as approved in some European countries but not the USA; even where available it is reserved, never first-line, because of its QTc monitoring demands. It is not a US-labelled drug, and complete worldwide withdrawal overstates the case."
+  },
+  {
+   "id": "atp-ser-03",
+   "drugSlug": "sertindole",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A patient being considered for sertindole under its restricted programme has baseline ECG, electrolytes and cardiac history documented. Follow-up ECG is mandated:",
+   "options": [
+    "No further ECGs unless symptoms appear",
+    "Only after adding a benzodiazepine",
+    "After initiation and dose increases — with periodic ECGs throughout treatment",
+    "Only after five years of continuous therapy"
+   ],
+   "correctIndex": 2,
+   "explanation": "Sertindole programmes require ECG at baseline, after initiation and dose changes, and periodically thereafter, alongside electrolyte vigilance — because repolarisation risk tracks dose and concurrent QT-prolonging drugs. Waiting years or for symptoms defeats the entire monitoring logic."
+  },
+  {
+   "id": "atp-ser-04",
+   "drugSlug": "sertindole",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A man with schizophrenia on sertindole reports no sedation, no weight change and no EPS complaints, but his ECG QTc has drifted to 470 ms. The best interpretation is:",
+   "options": [
+    "An idiosyncratic reaction unrelated to the drug — continue unchanged",
+    "Proof of oversedation — reduce the dose",
+    "Emergent clozapine-induced myocarditis",
+    "The expected trade-off of sertindole's clean clinical profile — its repolarisation liability — warranting dose review and continued QT surveillance"
+   ],
+   "correctIndex": 3,
+   "explanation": "Sertindole's attractive profile — no sedation, low EPS and metabolic burden — is precisely paired with its defining QTc liability, so a lengthening QTc demands dose review, electrolyte checks and continued ECG follow-up rather than reassurance. Oversedation is irrelevant in a non-sedated patient, and myocarditis is clozapine's cardiac story."
+  },
+  {
+   "id": "atp-ser-05",
+   "drugSlug": "sertindole",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A patient has failed adequate trials of olanzapine and risperidone; baseline ECG and cardiac history are normal, and he lives where sertindole's programme operates. What justifies sertindole now?",
+   "options": [
+    "Atypical-like efficacy with a clean sedation/EPS/metabolic record — used cautiously under ECG surveillance",
+    "A proven anti-suicide benefit",
+    "A depot formulation guaranteeing adherence",
+    "Superior efficacy over every other antipsychotic"
+   ],
+   "correctIndex": 0,
+   "explanation": "Sertindole's case-by-case use rests on offering atypical efficacy without sedation, weight gain or EPS, under strict ECG surveillance — never a first-line claim. Anti-suicide evidence is clozapine's monopoly, sertindole has no depot, and sweeping superiority is not claimed."
+  },
+  {
+   "id": "atp-ser-06",
+   "drugSlug": "sertindole",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A man on sertindole becomes acutely agitated on the ward and a junior resident proposes haloperidol 5 mg IV. Why is this a poor plan?",
+   "options": [
+    "Haloperidol antagonises sertindole's antipsychotic effect",
+    "Both drugs prolong QTc — additive torsades risk, and IV haloperidol is itself a recognised trigger",
+    "Haloperidol instantly induces sertindole metabolism",
+    "The pair produces malignant hyperthermia"
+   ],
+   "correctIndex": 1,
+   "explanation": "Sertindole must not meet other QT-prolonging agents, and IV haloperidol is itself a recognised torsades trigger — the combination compounds repolarisation delay, so benzodiazepines are the safer agitation option. Enzyme induction is not the issue, and malignant hyperthermia describes anaesthetic reactions."
+  },
+  {
+   "id": "atp-ser-07",
+   "drugSlug": "sertindole",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "In the antipsychotic QTc-risk club taught alongside thioridazine and pimozide, the second-generation members are:",
+   "options": [
+    "Quetiapine and aripiprazole",
+    "Sulpiride and molindone",
+    "Ziprasidone and sertindole",
+    "Clozapine and olanzapine"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi names thioridazine, pimozide and ziprasidone for QT prolongation, and sertindole joins ziprasidone as the second-generation repolarisation-risk pair. The clozapine/olanzapine and quetiapine/aripiprazole pairs are metabolic-tier or lean-tier names rather than the QTc club, and molindone carries no such reputation."
+  },
+  {
+   "id": "atp-ser-08",
+   "drugSlug": "sertindole",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "Which statement correctly separates sertindole from ziprasidone?",
+   "options": [
+    "Sertindole needs food for absorption while ziprasidone does not",
+    "Sertindole is the leaner metabolic agent of the two",
+    "Both are prodrugs of a common active metabolite",
+    "Sertindole is programme-restricted with mandated ECGs; ziprasidone is marketed openly but carries the greatest atypical QTc risk and needs a fed state"
+   ],
+   "correctIndex": 3,
+   "explanation": "Sertindole's restriction (EU limited-use, ECG monitoring) contrasts with ziprasidone's open marketing, whose caveats are the greatest atypical QTc risk plus the ~500 kcal meal rule — sertindole has no food stipulation. Neither drug is a prodrug, and metabolic leanness is a shared rather than distinguishing feature."
+  },
+  {
+   "id": "atp-zot-01",
+   "drugSlug": "zotepine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Zotepine's receptor and reuptake pharmacology is best stated as:",
+   "options": [
+    "D2/D1, 5-HT2, alpha-1 and H1 blockade plus weak noradrenaline reuptake inhibition",
+    "Selective 5-HT6 antagonism as its only action",
+    "Pure dopamine depletion at nigrostriatal terminals",
+    "Muscarinic M4 agonism with alpha-2 antagonism"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tripathi lists zotepine as blocking D2, D1, 5-HT2, alpha-1 and H1 receptors while inhibiting NA reuptake — a transporter flavour shared among antipsychotics only with ziprasidone, hinting at an antidepressant-adjacent profile. Selective 5-HT6 blockade, dopamine depletion and muscarinic agonism describe no antipsychotic."
+  },
+  {
+   "id": "atp-zot-02",
+   "drugSlug": "zotepine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Zotepine's pharmacokinetics, in Tripathi's account, are:",
+   "options": [
+    "Sublingual absorption bypassing the liver",
+    "Good oral absorption with extensive first-pass metabolism, t½ about 14 hours, titrated 25 mg TDS up to 100 mg TDS",
+    "Zero first-pass effect with a 48-hour half-life and weekly dosing",
+    "Renal excretion of unchanged drug with a 6-hour half-life"
+   ],
+   "correctIndex": 1,
+   "explanation": "Zotepine is well absorbed but heavily first-passed, has a t½ near 14 hours, and is titrated from 25 mg three times daily up to 100 mg TDS (Tripathi). No sublingual or depot form exists, and renal unchanged excretion is amisulpride's property."
+  },
+  {
+   "id": "atp-zot-03",
+   "drugSlug": "zotepine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A man with schizophrenia on zotepine 300 mg/day (upper range) presents after a witnessed generalised seizure; he has no epilepsy history and glucose is normal. The most likely explanation is:",
+   "options": [
+    "Hypoglycaemia from metformin co-therapy",
+    "Occult benzodiazepine withdrawal",
+    "Dose-related seizure-threshold lowering by zotepine",
+    "Coincidental idiopathic epilepsy unmasked by chance"
+   ],
+   "correctIndex": 2,
+   "explanation": "Zotepine lowers the seizure threshold and seizures rise with high doses — a clozapine-style liability (Tripathi) — so a seizure at upper-range dosing first implicates the drug and demands dose review. Metformin hypoglycaemia and benzodiazepine withdrawal are not part of this story."
+  },
+  {
+   "id": "atp-zot-04",
+   "drugSlug": "zotepine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A patient on zotepine gains 9 kg in six months with rising fasting glucose and triglycerides. Which drug does zotepine most resemble in this metabolic behaviour?",
+   "options": [
+    "Ziprasidone — identical metabolic and cardiac profile",
+    "Aripiprazole — the same weight-gain tier",
+    "Amisulpride — matching lipid effects",
+    "Clozapine — weight gain, hyperglycaemia and dyslipidaemia, plus shared seizure risk at high dose"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi groups zotepine with clozapine for weight gain, hyperglycaemia and dyslipidaemia, and both share dose-related seizure risk. Ziprasidone and aripiprazole sit in the lean tier rather than this one, and amisulpride's distinguishing marks are prolactin and QTc, not dyslipidaemia."
+  },
+  {
+   "id": "atp-zot-05",
+   "drugSlug": "zotepine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Zotepine's market and usage status, per Tripathi, is:",
+   "options": [
+    "Available in India for schizophrenia but offering no specific advantage; discontinued in the UK",
+    "US first-line for refractory schizophrenia",
+    "Worldwide withdrawal with no market anywhere",
+    "EU limited-use programme with mandatory ECGs"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tripathi notes zotepine remains available in India for schizophrenia without any specific advantage and has been discontinued in the UK — a second-line agent without a unique niche. The ECG programme describes sertindole, and refractory first-line status is clozapine's role."
+  },
+  {
+   "id": "atp-zot-06",
+   "drugSlug": "zotepine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 32-year-old with epilepsy (well controlled on valproate) develops schizophrenia. Which antipsychotic choice best avoids seizure-threshold trouble?",
+   "options": [
+    "Olanzapine at 40 mg/day",
+    "Ziprasidone",
+    "Zotepine",
+    "Clozapine"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi notes risperidone, quetiapine, aripiprazole and ziprasidone have little effect on seizure threshold — ziprasidone is the safe pick here. Clozapine and zotepine are the class's epileptogenic drugs, and high-dose olanzapine also lowers the threshold."
+  },
+  {
+   "id": "atp-zot-07",
+   "drugSlug": "zotepine",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "The Indian preparation of zotepine listed by Tripathi is:",
+   "options": [
+    "Fluanxol 0.5–3 mg tablets",
+    "Clopamide 25 mg capsules",
+    "Zoleptil / Nipolept 25 and 50 mg tablets",
+    "Sulpitac 50, 100, 200 mg tablets"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi's preparation table lists ZOLEPTIL and NIPOLEPT 25 and 50 mg tablets for zotepine. Sulpitac is amisulpride, Fluanxol is flupenthixol, and clopamide is a diuretic — each a real product of a different drug class."
+  },
+  {
+   "id": "atp-zot-08",
+   "drugSlug": "zotepine",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "Which antipsychotics share noradrenaline reuptake inhibition among their actions?",
+   "options": [
+    "Clozapine and olanzapine",
+    "Amisulpride and sulpiride",
+    "Risperidone and paliperidone",
+    "Zotepine and ziprasidone"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi attributes NA reuptake inhibition to zotepine and moderate 5-HT/NA reuptake inhibition to ziprasidone — a transporter flavour rare among antipsychotics. The benzamides act purely at D2/D3 with no reuptake action, and neither the clozapine/olanzapine nor the risperidone/paliperidone pair includes transporter inhibition."
+  },
+  {
+   "id": "atp-blo-01",
+   "drugSlug": "blonanserin",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Blonanserin's receptor profile is distinctive for what it LACKS. Correctly stated, it is:",
+   "options": [
+    "D2 and 5-HT2A antagonism without 5-HT1A, alpha-1 or H1 activity",
+    "A benzamide acting only at presynaptic autoreceptors",
+    "A D2 partial agonist with strong 5-HT7 blockade",
+    "An H1-dominant sedative antipsychotic"
+   ],
+   "correctIndex": 0,
+   "explanation": "Blonanserin, developed in Japan, blocks D2 and 5-HT2A with essentially no 5-HT1A, alpha-1 or H1 action — a receptor-clean design explaining low sedation, little orthostasis and a lean metabolic hand. Autoreceptor-selective benzamide action is low-dose amisulpride's trick, D2 partial agonism is the aripiprazole family, and H1-dominance describes quetiapine-type sedation."
+  },
+  {
+   "id": "atp-blo-02",
+   "drugSlug": "blonanserin",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "The tolerability trade-off of blonanserin's clean receptor profile is:",
+   "options": [
+    "Severe antimuscarinic ileus",
+    "Moderate EPS — anticholinergic cover is sometimes needed",
+    "Dose-related agranulocytosis",
+    "Universal QTc prolongation beyond 500 ms"
+   ],
+   "correctIndex": 1,
+   "explanation": "With no serotonergic softening of its D2 action, blonanserin retains moderate EPS — parkinsonian symptoms can appear and anticholinergic cover is sometimes used. Marrow toxicity and ileus are clozapine's burdens, and no antipsychotic here is universally QTc-prolonging."
+  },
+  {
+   "id": "atp-blo-03",
+   "drugSlug": "blonanserin",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A patient with schizophrenia (where the drug is available) has dyslipidaemia and prediabetes; the psychiatrist wants a low-metabolic-burden antipsychotic and accepts moderate EPS risk with biperiden cover. The fitting choice is:",
+   "options": [
+    "Clozapine",
+    "Olanzapine",
+    "Blonanserin",
+    "Zotepine"
+   ],
+   "correctIndex": 2,
+   "explanation": "Blonanserin's low metabolic burden makes it a metabolically friendly option where its D2/5-HT2A profile suffices, accepting moderate EPS. Zotepine, clozapine and olanzapine all push weight, glucose and lipids the wrong way — the opposite of the plan."
+  },
+  {
+   "id": "atp-blo-04",
+   "drugSlug": "blonanserin",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "Because blonanserin lacks alpha-1 and H1 blockade, one predicts in practice:",
+   "options": [
+    "Severe orthostatic hypotension with profound daytime sleepiness",
+    "Daily seizures even at low dose",
+    "Universal galactorrhoea as its main complaint",
+    "Little orthostatic hypotension and little sedation"
+   ],
+   "correctIndex": 3,
+   "explanation": "Absent alpha-1 and H1 activity predicts minimal orthostatic hypotension and minimal sedation — blonanserin's practical tolerability edge alongside low metabolic burden. Seizure risk is a clozapine/zotepine matter, and galactorrhoea belongs to the risperidone/amisulpride prolactin tier rather than being blonanserin's headline."
+  },
+  {
+   "id": "atp-blo-05",
+   "drugSlug": "blonanserin",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A journal club discusses novel antipsychotic delivery systems. The formulation development unique to blonanserin is:",
+   "options": [
+    "A transdermal patch system developed in Japan",
+    "A once-monthly intramuscular decanoate",
+    "An osmotic-pump (OROS) tablet",
+    "A 24-hour sublingual film"
+   ],
+   "correctIndex": 0,
+   "explanation": "Japan developed a blonanserin transdermal patch — a distinctive delivery system in the antipsychotic world. Decanoates belong to haloperidol/fluphenazine-style agents, the OROS shell is paliperidone's, and no sublingual film exists (asenapine uses compressed sublingual tablets)."
+  },
+  {
+   "id": "atp-blo-06",
+   "drugSlug": "blonanserin",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A woman with schizophrenia switched from risperidone to blonanserin for metabolic reasons; four weeks in she reports hand tremor, stiffness and slowed gait. The correct management is:",
+   "options": [
+    "Diagnose idiopathic Parkinson disease and start levodopa",
+    "Recognise blonanserin's moderate EPS — reduce the dose and/or add an anticholinergic",
+    "Immediately switch to clozapine without further trials",
+    "Double blonanserin to overcome tolerance"
+   ],
+   "correctIndex": 1,
+   "explanation": "Parkinsonian stiffness on blonanserin reflects its moderate EPS liability — managed by dose reduction and anticholinergic cover rather than a leap to clozapine, whose metabolic risk she just escaped. Dose escalation aggravates EPS, and levodopa has no role in drug-induced parkinsonism."
+  },
+  {
+   "id": "atp-blo-07",
+   "drugSlug": "blonanserin",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "Blonanserin versus risperidone — the most accurate comparison is:",
+   "options": [
+    "Blonanserin is a prolactin-sparing partial agonist while risperidone is a full antagonist",
+    "Risperidone is Japan-only while blonanserin is the global standard",
+    "Both are D2/5-HT2A antagonists, but blonanserin omits risperidone's alpha-1/H1 load, trading a hypotension/sedation advantage for more EPS",
+    "Both share alpha-1 and H1 blockade, differing only in price"
+   ],
+   "correctIndex": 2,
+   "explanation": "Both antagonise D2 and 5-HT2A, but blonanserin omits alpha-1 and H1 — hence less sedation and orthostasis with a lighter metabolic hand, while retaining moderate EPS. Blonanserin is a full antagonist rather than a partial agonist, and it is the Japan-origin molecule, not risperidone."
+  },
+  {
+   "id": "atp-blo-08",
+   "drugSlug": "blonanserin",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Which receptor profile correctly identifies blonanserin among its peers?",
+   "options": [
+    "Alpha-1-dominant antagonism producing iloperidone-style orthostasis",
+    "H1/M1-dominant binding with weak D2 action",
+    "D3-preferring partial agonism",
+    "5-HT2A/D2 antagonism with no 5-HT1A, alpha-1 or H1 — the receptor-cleanest D2/5-HT2A agent"
+   ],
+   "correctIndex": 3,
+   "explanation": "Blonanserin is the receptor-clean D2/5-HT2A antagonist — no 5-HT1A, alpha-1 or H1 — distinguishing it from iloperidone (strong alpha-1), quetiapine (H1/M1-dominant) and cariprazine (D3 partial agonist). Each distractor maps to a real competitor's fingerprint."
+  },
+  {
+   "id": "atp-per-01",
+   "drugSlug": "perospirone",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Perospirone is best characterised as:",
+   "options": [
+    "A benzisothiazole with D2/5-HT2A antagonism and weak 5-HT1A partial agonism",
+    "A substituted benzamide with exclusive presynaptic D2 action",
+    "A dibenzodiazepine with M1-dominant binding",
+    "A butyrophenone with maximal EPS"
+   ],
+   "correctIndex": 0,
+   "explanation": "Perospirone is a Japanese benzisothiazole antipsychotic combining D2 and 5-HT2A antagonism with weak 5-HT1A partial agonism. Benzamides (amisulpride/sulpiride), dibenzodiazepines (clozapine) and butyrophenones (haloperidol) are different chemical families entirely."
+  },
+  {
+   "id": "atp-per-02",
+   "drugSlug": "perospirone",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Perospirone's availability and primary use are:",
+   "options": [
+    "The Indian standard for treatment-resistant schizophrenia",
+    "A Japanese-market antipsychotic for schizophrenia",
+    "FDA-approved for bipolar depression in the USA",
+    "An EU-only limited-use agent for refractory psychosis"
+   ],
+   "correctIndex": 1,
+   "explanation": "Perospirone is marketed in Japan for schizophrenia — one of the Japan-developed agents of this batch. It holds no US label, no EU restricted programme (that is sertindole), and refractory-schizophrenia first choice remains clozapine in India as well."
+  },
+  {
+   "id": "atp-per-03",
+   "drugSlug": "perospirone",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A Japanese psychiatrist switches an obese patient from olanzapine to perospirone. The tolerability balance the patient should be told to expect is:",
+   "options": [
+    "Severe sialorrhoea with ileus",
+    "Universal torsades requiring monthly ECGs",
+    "Low metabolic burden with moderate EPS possible",
+    "Clozapine-tier weight gain with agranulocytosis"
+   ],
+   "correctIndex": 2,
+   "explanation": "Perospirone carries a light metabolic footprint while retaining moderate EPS — the same balance taught for blonanserin. Marrow toxicity, ileus and sialorrhoea are clozapine-specific, and routine ECG programmes describe sertindole/ziprasidone practice."
+  },
+  {
+   "id": "atp-per-04",
+   "drugSlug": "perospirone",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A patient gains 8 kg on olanzapine and is switched to perospirone. Which counselling point belongs in the first follow-up visit?",
+   "options": [
+    "Weight gain will continue at the same pace but must be tolerated",
+    "No follow-up is needed for a year",
+    "Weekly blood counts are mandatory for six months",
+    "Watch for parkinsonian stiffness or restlessness — EPS is possible despite the favourable metabolic profile"
+   ],
+   "correctIndex": 3,
+   "explanation": "The switch targets perospirone's low metabolic burden, but its moderate EPS risk means counselling about stiffness, tremor and akathisia with early review. Weekly counts are clozapine practice, and ignoring EPS defeats the visit's purpose."
+  },
+  {
+   "id": "atp-per-05",
+   "drugSlug": "perospirone",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Perospirone's chemical family is:",
+   "options": [
+    "Benzisothiazole",
+    "Benzisoxazole (the risperidone-paliperidone family)",
+    "Substituted benzamide (the sulpiride-amisulpride family)",
+    "Dibenzodiazepine (the clozapine family)"
+   ],
+   "correctIndex": 0,
+   "explanation": "Perospirone is a benzisothiazole; risperidone/paliperidone are benzisoxazoles and amisulpride/sulpiride are substituted benzamides – families that examiners deliberately swap as distractors. The dibenzodiazepine label belongs to clozapine."
+  },
+  {
+   "id": "atp-per-06",
+   "drugSlug": "perospirone",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A man three weeks into perospirone reports cogwheel rigidity and slowed movements; fasting glucose is 92 mg/dL and triglycerides are normal. The balanced interpretation is:",
+   "options": [
+    "Neuroleptic malignant syndrome — restart perospirone at higher dose",
+    "Drug-induced parkinsonism (moderate EPS) — reduce dose ± anticholinergic; the clean metabolic panel confirms why the drug was chosen",
+    "Early idiopathic Parkinson disease requiring immediate levodopa",
+    "Emergent metabolic syndrome — switch to olanzapine"
+   ],
+   "correctIndex": 1,
+   "explanation": "Cogwheel rigidity early in therapy is perospirone's moderate EPS showing itself — dose reduction with anticholinergic cover is standard, while the clean metabolic panel illustrates the drug's appeal. Levodopa treats idiopathic disease, olanzapine would reverse the metabolic gain, and NMS means fever with rigidity and CK rise on a stopped drug."
+  },
+  {
+   "id": "atp-per-07",
+   "drugSlug": "perospirone",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "For an Indian (NEET PG) setting, perospirone's practical relevance is chiefly:",
+   "options": [
+    "Availability in Indian government hospitals as the cheapest antipsychotic",
+    "The recommended adjunct in Indian MDD guidelines",
+    "Exam-level knowledge that it is a Japan-market benzisothiazole not marketed in India",
+    "First-line therapy for refractory schizophrenia in India"
+   ],
+   "correctIndex": 2,
+   "explanation": "Perospirone is a Japan-market agent — Indian exams test the trivia (Japan, benzisothiazole, weak 5-HT1A partial agonism), not prescribing. It is not the refractory-schizophrenia answer (clozapine is), carries no Indian brand, and Indian MDD adjuncts centre on aripiprazole-type agents."
+  },
+  {
+   "id": "atp-per-08",
+   "drugSlug": "perospirone",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "The antipsychotics carrying 5-HT1A partial-agonist activity include:",
+   "options": [
+    "Haloperidol and thioridazine",
+    "Amisulpride and sulpiride",
+    "Zotepine and blonanserin",
+    "Ziprasidone, lurasidone, brexpiprazole, aripiprazole and perospirone"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung notes most second-generation agents act as 5-HT1A partial agonists — ziprasidone, lurasidone, brexpiprazole, aripiprazole and the Japanese benzisothiazole perospirone all share this action. Classic D2 antagonists and the benzamides lack it, and blonanserin is precisely the receptor-clean exception."
+  },
+  {
+   "id": "atp-ams-01",
+   "drugSlug": "amisulpride",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Amisulpride's mechanism distinguishing it from most other atypicals is:",
+   "options": [
+    "Limbic-preferring D2/D3 blockade as a substituted benzamide, with low 5-HT2 affinity",
+    "5-HT2A-predominant blockade with negligible D2 affinity",
+    "D3-preferring partial agonism",
+    "Reversible MAO-A inhibition"
+   ],
+   "correctIndex": 0,
+   "explanation": "Amisulpride is a substituted benzamide (sulpiride congener) with high-affinity D2/D3 blockade showing limbic preference and low 5-HT2 affinity (Tripathi) — explaining its negative-symptom interest and few EPS at moderate doses. 5-HT2A-predominant profiles are risperidone-type, D3 partial agonism is cariprazine, and moclobemide — not amisulpride — is the reversible inhibitor of MAO-A."
+  },
+  {
+   "id": "atp-ams-02",
+   "drugSlug": "amisulpride",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Amisulpride's pharmacokinetics, per Tripathi, are:",
+   "options": [
+    "Absorption requiring a 500 kcal meal",
+    "Orally absorbed, excreted largely unchanged in urine (t½ ~12 h) — renal function dictates dosing",
+    "Completely hepatic CYP3A4 metabolism with no renal component",
+    "Sublingual absorption mandatory"
+   ],
+   "correctIndex": 1,
+   "explanation": "Amisulpride is absorbed orally and mainly excreted unchanged in urine with a t½ near 12 hours, so renal impairment forces dose reduction. It has no meaningful CYP story, no sublingual form, and the meal rule belongs to ziprasidone/lurasidone."
+  },
+  {
+   "id": "atp-ams-03",
+   "drugSlug": "amisulpride",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 22-year-old woman on amisulpride 400 mg/day for three months reports milky bilateral nipple discharge with irregular menses; serum prolactin is 120 ng/mL. The best next step is:",
+   "options": [
+    "Order pituitary MRI immediately in every such case before any drug change",
+    "Reassure — amisulpride does not affect prolactin",
+    "Recognise amisulpride's marked hyperprolactinaemia — reduce the dose or switch to a prolactin-sparing antipsychotic",
+    "Start bromocriptine and continue the same amisulpride dose"
+   ],
+   "correctIndex": 2,
+   "explanation": "Amisulpride sits in the top prolactin tier (Tripathi: hyperprolactinaemia like the typical neuroleptics; Katzung notes the sulpiride class raises prolactin markedly), so galactorrhoea with amenorrhoea points to the drug — manage by dose cut or a prolactin-sparing switch. Bromocriptine while continuing the culprit is backwards, and MRI follows endocrine work-up rather than preceding it."
+  },
+  {
+   "id": "atp-ams-04",
+   "drugSlug": "amisulpride",
+   "domain": "Clinical Uses",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A psychiatrist plans low-dose amisulpride (~50 mg/day) for a patient whose illness is dominated by anxiety and depressive features rather than frank psychosis. The pharmacological rationale is:",
+   "options": [
+    "Low doses selectively block 5-HT2A receptors only",
+    "Dose changes merely alter sedation intensity",
+    "Only intramuscular dosing below 25 mg has any effect",
+    "Low doses preferentially block presynaptic dopamine autoreceptors, producing anxiolytic/antidepressant-type effects unlike standard antipsychotic dosing"
+   ],
+   "correctIndex": 3,
+   "explanation": "At ~50–100 mg/day, amisulpride preferentially blocks presynaptic D2/D3 autoreceptors (dopamine disinhibition — the anxiolytic/antidepressant-adjacent trick), while standard doses deliver full antipsychotic efficacy with strong negative-symptom claims (Tripathi: 50–300 mg/day for predominant negative symptoms; 200–400 mg BD in acute psychosis). Sedation is irrelevant — amisulpride is not a sedative at any dose."
+  },
+  {
+   "id": "atp-ams-05",
+   "drugSlug": "amisulpride",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 30-year-old man with schizophrenia has predominant negative symptoms — avolition, alogia, flat affect — with modest positive symptoms; renal function is normal. Which drug and dose-range logic fits best?",
+   "options": [
+    "Amisulpride at lower-range dosing, credited with negative-symptom benefit",
+    "Amisulpride 800 mg/day",
+    "Haloperidol 20 mg/day",
+    "Clozapine 50 mg/day"
+   ],
+   "correctIndex": 0,
+   "explanation": "Amisulpride is the classic agent for predominant negative symptoms — Tripathi gives 50–300 mg/day in two doses for that purpose, with strong negative-symptom efficacy claims. High-dose amisulpride targets positive symptoms instead, clozapine is the refractory-illness drug rather than a low-dose option, and haloperidol's EPS burden can worsen secondary negative symptoms."
+  },
+  {
+   "id": "atp-ams-06",
+   "drugSlug": "amisulpride",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 68-year-old with ischaemic heart disease starts amisulpride; he is not sedated but complains of insomnia and palpitations, and the ECG shows QTc 480 ms. The correct interpretation is:",
+   "options": [
+    "Impossible — benzamide drugs cannot change the QTc",
+    "Expected profile — amisulpride is non-sedating (insomnia/anxiety common) and QT prolongation is a recognised risk, especially in predisposed elderly",
+    "An atypical presentation of drug-induced myocarditis",
+    "Proof that amisulpride stimulates cardiac beta-1 receptors"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi notes amisulpride is not a sedative — insomnia, anxiety and agitation are its common effects — and that QT prolongation occurs, especially in predisposed elderly patients, so both complaints fit the drug. Myocarditis is clozapine's story, beta-1 stimulation is no part of benzamide pharmacology, and the QTc claim is documented."
+  },
+  {
+   "id": "atp-ams-07",
+   "drugSlug": "amisulpride",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A man stable on amisulpride 400 mg/day develops stage-4 CKD (eGFR 22 mL/min). The pharmacologically correct action is:",
+   "options": [
+    "Switch to paliperidone without any adjustment",
+    "Add probenecid to boost renal clearance",
+    "Reduce the amisulpride dose — it is excreted largely unchanged by the kidneys",
+    "Double the dose to compensate for poor absorption"
+   ],
+   "correctIndex": 2,
+   "explanation": "Amisulpride leaves the body mainly unchanged in urine (t½ ~12 h), so renal failure slows elimination and the dose must fall to avoid accumulation — with QTc and prolactin problems compounding otherwise. Doubling doses and probenecid (which blocks tubular secretion) worsen retention, and paliperidone is also renally dependent."
+  },
+  {
+   "id": "atp-ams-08",
+   "drugSlug": "amisulpride",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "Rank the antipsychotic prolactin tiers correctly:",
+   "options": [
+    "Aripiprazole raises prolactin more than amisulpride",
+    "Ziprasidone and aripiprazole are the highest-prolactin agents",
+    "All antipsychotics raise prolactin identically",
+    "Amisulpride/sulpiride and risperidone sit in the highest tier; aripiprazole-type agents sit lowest and can even normalise prolactin"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi and Katzung agree: amisulpride and sulpiride (with risperidone) drive marked hyperprolactinaemia, while aripiprazole-type partial agonists cause no or minimal rise and can normalise elevated prolactin — the exam-favourite contrast. Uniform prolactin behaviour across the class is false."
+  },
+  {
+   "id": "atp-mix-b11-01",
+   "drugSlug": "mixed",
+   "domain": "Active Recall",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Signature-feature matching across this atypical-antipsychotic class — which pairing is correct?",
+   "options": [
+    "Asenapine — sublingual only, since swallowed tablets are destroyed by first-pass metabolism",
+    "Ziprasidone — the highest weight-gain agent of the class",
+    "Cariprazine — the shortest effective half-life in the class",
+    "Amisulpride — FDA-approved in the USA for bipolar depression"
+   ],
+   "correctIndex": 0,
+   "explanation": "Asenapine is sublingual only because swallowed tablets are destroyed by first-pass metabolism — the swallow-kills-bioavailability pearl. Ziprasidone is instead among the LEANEST metabolic agents, cariprazine has the class's longest effective half-life (~1–3 weeks with its didesmethyl metabolite), and amisulpride is not FDA-approved (EU/India availability, Katzung). Every distractor inverts a real signature."
+  }
+ ]
+}

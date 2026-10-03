@@ -809,6 +809,110 @@ export const perphenazine: Drug = {
       explanation: "For psychosis (outpatient): start 4–8 mg three times daily, target 12–32 mg/day, maximum 64 mg/day. Increase by 8 mg every few days as tolerated",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "tap-per-01",
+      question: "Perphenazine is best classified as:",
+      options: [
+        "An aliphatic low-potency phenothiazine like chlorpromazine",
+        "A mid-potency piperazine phenothiazine - the first-generation comparator drug in the CATIE trial",
+        "A piperidine phenothiazine like thioridazine",
+        "A butyrophenone like haloperidol"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung classes perphenazine among the piperazine phenothiazines (footnote group with trifluoperazine) and describes the CATIE trial as using 'perphenazine, a piperazine derivative' as its first-generation comparator. Its EPS-sedation balance sits between low-potency chlorpromazine and high-potency haloperidol. Piperidine is the thioridazine side-chain group and butyrophenone is the haloperidol family.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "tap-per-02",
+      question: "Which CYP enzyme is principally responsible for perphenazine's metabolism (Katzung's CYP2D6 substrate list)?",
+      options: [
+        "CYP3A4",
+        "CYP1A2",
+        "CYP2C19",
+        "CYP2D6"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung's CYP2D6 substrate table lists perphenazine alongside TCAs, benztropine, haloperidol, risperidone and others - so potent 2D6 inhibitors (fluoxetine, paroxetine) and poor-metaboliser status raise its levels. CYP3A4, 1A2 and 2C19 handle other psychotropics but are not perphenazine's principal route.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "tap-per-03",
+      question: "A 29-year-old woman with schizoaffective disorder on perphenazine 24 mg/day starts paroxetine 20 mg for a depressive phase. Two weeks later she develops neck stiffness and inner restlessness. The most likely explanation is:",
+      options: [
+        "Paroxetine's potent CYP2D6 inhibition raised perphenazine levels, unmasking extrapyramidal effects",
+        "Paroxetine induced CYP2D6 and lowered perphenazine levels",
+        "Serotonin syndrome from the drug combination",
+        "Perphenazine reduced paroxetine absorption"
+      ],
+      correctIndex: 0,
+      explanation: "Paroxetine is among the strongest CYP2D6 inhibitors and perphenazine is a 2D6 substrate, so antipsychotic exposure climbs and dystonia plus akathisia emerge. Serotonin syndrome would add clonus, hyperreflexia, myoclonus and autonomic storm rather than isolated dystonia, and the induction and absorption options run pharmacologically backwards.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-per-04",
+      question: "A 42-year-old woman with severe depression and persecutory delusions has only partly responded to an SSRI. Within classic typical-antipsychotic practice, the rational move is:",
+      options: [
+        "Combine the SSRI with a relatively LOWER dose of an antipsychotic such as perphenazine",
+        "Stop the SSRI - antipsychotics alone fully treat depression",
+        "Combine two antipsychotics for a synergistic antidepressant effect",
+        "Use high-dose trifluoperazine as monotherapy"
+      ],
+      correctIndex: 0,
+      explanation: "Tripathi: in a depressed psychotic patient, a tricyclic/SSRI antidepressant may be combined with a relatively lower dose of an antipsychotic - the classic augmentation setting where a mid-potency agent such as perphenazine fits (schizoaffective and psychotic-depression practice). Antipsychotics alone are not antidepressants, and Katzung warns that combining two antipsychotics confounds evaluation without proven benefit.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-per-05",
+      question: "In the CATIE trial (as summarised by Katzung), the first-generation antipsychotic used as the mid-potency comparator against the atypicals was:",
+      options: [
+        "Haloperidol",
+        "Thioridazine",
+        "Perphenazine",
+        "Chlorpromazine"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung describes the CATIE findings as reporting that 'perphenazine, a piperazine derivative' served as the first-generation comparator arm against olanzapine, quetiapine, risperidone and ziprasidone. Haloperidol is the classic high-potency comparator of OLDER trials, and thioridazine and chlorpromazine are low-potency agents that were not the CATIE comparator.",
+      afterSectionId: "top",
+    },
+    {
+      id: "tap-per-06",
+      question: "Arranging typical antipsychotics by potency (highest first), the correct order is:",
+      options: [
+        "Chlorpromazine > perphenazine > haloperidol",
+        "Haloperidol > perphenazine > chlorpromazine",
+        "Perphenazine > chlorpromazine > haloperidol",
+        "The three are equipotent"
+      ],
+      correctIndex: 1,
+      explanation: "Minimum effective therapeutic doses define the ladder: haloperidol 2 mg (range 2-60), perphenazine 10 mg (range 8-64), chlorpromazine 100 mg (range 100-1000) per Katzung's dose table - higher potency means more EPS but less sedation, hypotension and anticholinergic load. Option A inverts the ladder, and equal EFFICACY does not mean equal POTENCY.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-per-07",
+      question: "Of the four classic extrapyramidal syndromes caused by antipsychotics, which characteristically appears LATE, after years of treatment?",
+      options: [
+        "Acute dystonia",
+        "Akathisia",
+        "Drug-induced parkinsonism",
+        "Tardive dyskinesia"
+      ],
+      correctIndex: 3,
+      explanation: "The timing ladder is the exam favourite: acute dystonia within days to the first week or two (young males), akathisia and parkinsonism early over weeks, and tardive dyskinesia ('tardive' = late) after years - 10-20% incidence with long-term typical therapy, commonest in elderly women (Tripathi). Each early syndrome is dose-related and manageable; TD may be lifelong.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-per-08",
+      question: "A man found to be a CYP2D6 poor metaboliser is started on standard-dose perphenazine. The most important counselling point is:",
+      options: [
+        "He will need a higher dose because poor metabolisers under-respond",
+        "Cholestatic jaundice will inevitably develop",
+        "Drug levels run higher than expected, so the risk of dystonia, akathisia and parkinsonism at standard doses is increased",
+        "Retinal degeneration is expected within months"
+      ],
+      correctIndex: 2,
+      explanation: "Poor metabolisers clear CYP2D6 substrates slowly, so perphenazine levels run high and standard doses over-expose striatal D2 receptors - hence exaggerated extrapyramidal effects and a case for lower starting doses. Cholestatic jaundice is an idiosyncratic hypersensitivity reaction unrelated to drug levels, and retinal degeneration is thioridazine's toxicity; option A states exactly the opposite of the truth.",
+      afterSectionId: "timeline",
+    },
   ],
   activeRecallQuestions: [
     {

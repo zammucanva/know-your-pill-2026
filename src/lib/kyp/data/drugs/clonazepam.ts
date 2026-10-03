@@ -910,6 +910,110 @@ export const clonazepam: Drug = {
       explanation: "For panic disorder: start 0.25 mg twice daily, target 0.5–2 mg/day, maximum 4 mg/day (maximum, exceptional). Increase by 0.125–0.25 mg every 3 days",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "bzd-cln-01",
+      question: "Among benzodiazepines used as antiseizure agents, clonazepam's distinguishing pharmacological claim is:",
+      options: [
+        "It is the weakest benzodiazepine antiseizure agent but the safest hypnotic",
+        "It uniquely blocks sodium channels like phenytoin and is therefore first-line in generalised tonic-clonic seizures",
+        "On a milligram basis it is one of the most potent antiseizure benzodiazepines known, with a long half-life (about 24 hours) and special efficacy in absence, atonic and myoclonic seizures",
+        "It is a prodrug that must be converted to desmethyldiazepam before any antiseizure effect appears"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung calls clonazepam on a milligram basis one of the most potent antiseizure agents known, with documented efficacy in absence, atonic and myoclonic seizures, and Tripathi gives it an average half-life of about 24 hours with no active metabolite. Clonazepam is singularly ineffective in GTCS (Tripathi), its principal action is GABAergic facilitation rather than sodium-channel blockade, and it is not a prodrug.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "bzd-cln-02",
+      question: "A 12-year-old boy has sudden, lightning-like jerks of both arms on waking, dropping his toothbrush every morning; the EEG shows a myoclonic pattern. Valproate is planned and the paediatrician considers a benzodiazepine adjuvant. The classic choice is:",
+      options: [
+        "Chlordiazepoxide",
+        "Oxazepam",
+        "Clonazepam",
+        "Quazepam"
+      ],
+      correctIndex: 2,
+      explanation: "Clonazepam has documented efficacy in myoclonic seizures (Katzung) and Tripathi lists it as an adjuvant in myoclonus — the classic benzodiazepine for this epilepsy syndrome. Chlordiazepoxide is an anxiolytic and alcohol-withdrawal agent with weak anticonvulsant action, oxazepam is a short-lasting anxiolytic, and quazepam is a hypnotic; none is a myoclonus drug.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "bzd-cln-03",
+      question: "A boy started on clonazepam 0.5 mg twice daily for myoclonic seizures returns after a week: his jerks are fewer but he is dull and sleepy in class, and his mother read online that the drug 'stops working over time'. The correct counselling is:",
+      options: [
+        "Sedation signals an allergic reaction — stop the drug permanently today",
+        "Tolerance never develops to benzodiazepine antiseizure effects, so the dose can simply be doubled",
+        "Sedation and dullness are the most important early adverse effects and some tolerance develops with chronic use, so start low, titrate gradually and never stop abruptly",
+        "Clonazepam causes permanent cognitive decline, so switch to phenytoin now"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi's clonazepam monograph names sedation and dullness as the most important side effects, notes some tolerance with chronic therapy, and advises starting at a low dose — precisely the counselling offered. Permanent cognitive decline is not the documented issue, and abrupt stoppage risks withdrawal seizures rather than solving anything.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "bzd-cln-04",
+      question: "A 68-year-old man shouts and thrashes during vivid dreams, occasionally injuring his wife; polysomnography confirms REM sleep behaviour disorder. Which benzodiazepine is the standard first-line therapy for this condition?",
+      options: [
+        "Clonazepam",
+        "Temazepam",
+        "Estazolam",
+        "Loflazepate"
+      ],
+      correctIndex: 0,
+      explanation: "Clonazepam is the classic first-line drug for REM sleep behaviour disorder, its GABAergic dampening of motor output preventing dream-enactment injury — one of its signature neuropsychiatric uses alongside myoclonus, akathisia and bipolar mania adjunctive cover (KYP anchor). Temazepam, estazolam and loflazepate are hypnotics/anxiolytics without an established RBD role.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "bzd-cln-05",
+      question: "Which pharmacokinetic statement about clonazepam is correct?",
+      options: [
+        "Oral absorption is good; it is about 85% protein-bound, completely metabolised in the liver with no active metabolite, and its half-life averages about 24 hours",
+        "It is excreted unchanged in urine, giving a half-life of 2-3 hours",
+        "It is converted in the stomach to desmethyldiazepam, which carries the entire effect",
+        "Its half-life of 50-100 hours makes thrice-daily dosing mandatory"
+      ],
+      correctIndex: 0,
+      explanation: "Tripathi gives clonazepam good oral absorption, 85% plasma protein binding, complete hepatic metabolism with no active metabolite, and an average half-life of about 24 hours. Renal excretion of unchanged drug is false, gastric activation is clorazepate's pathway, and 50-100 hours is flurazepam/clorazepate territory — a deliberate long-acting mirror.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "bzd-cln-06",
+      question: "A patient whose myoclonic seizures have been quiet on clonazepam for a year stops it overnight before a flight. The next day he has rebound jerks and a generalised convulsion. The key teaching point is:",
+      options: [
+        "One missed dose cannot matter with any anticonvulsant",
+        "Abrupt stoppage only causes mild nausea with clonazepam",
+        "Clonazepam carries marked dependence and withdrawal liability; benzodiazepine anticonvulsants must always be tapered and never stopped abruptly",
+        "Flight anxiety, not drug withdrawal, caused the convulsion"
+      ],
+      correctIndex: 2,
+      explanation: "KYP's monograph flags clonazepam's marked dependence and withdrawal potential, and Tripathi warns that abrupt withdrawal of antiepileptic therapy can precipitate seizures including status epilepticus — benzodiazepines demand a taper. The other options dismiss or misattribute a predictable pharmacological risk.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "bzd-cln-07",
+      question: "A resident asks how clonazepam should be initiated and titrated for a seizure patient. The textbook answer is:",
+      options: [
+        "Start at a low dose (about 0.5 mg/day style initiation) and increase gradually over weeks — maximal tolerated doses are often around 0.1-0.2 mg/kg/day and many weeks of titration may be needed",
+        "Begin at 4 mg/day and increase daily until the jerks stop",
+        "Give 10 mg intravenously daily for one week, then stop",
+        "Use a fixed 5 mg twice-daily dose for all ages with no titration"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung notes starting doses should be small because sedation is prominent on initiation, with maximal tolerated doses usually in the range of 0.1-0.2 mg/kg/day reached over many weeks of gradual increase. Aggressive loading (the other options) would simply buy sedation, ataxia and tolerance.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "bzd-cln-08",
+      question: "Clonazepam's anticonvulsant spectrum contains one famously weak spot. Which pairing is correct?",
+      options: [
+        "Excellent in absence and myoclonic seizures — but singularly ineffective in generalised tonic-clonic seizures",
+        "First-line in generalised tonic-clonic seizures but useless in absence seizures",
+        "Broadly equal efficacy across all seizure types including infantile spasms",
+        "Effective only in febrile convulsions of children"
+      ],
+      correctIndex: 0,
+      explanation: "Tripathi states clonazepam blocks PTZ seizures at mildly sedating doses but is singularly ineffective in GTCS, while being primarily employed in absence seizures and useful as a myoclonic adjuvant. The other options invert or inflate its spectrum.",
+      afterSectionId: "knowledge-graph",
+    },
   ],
   activeRecallQuestions: [
     {

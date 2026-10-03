@@ -818,6 +818,110 @@ export const fluphenazine: Drug = {
       explanation: "For psychosis (oral): start 2.5–10 mg/day, target 2.5–20 mg/day, maximum 40 mg/day. Titrate to response",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "tap-flu-01",
+      question: "Fluphenazine and trifluoperazine share the same side chain and therefore the same pharmacodynamic signature. Which one is it?",
+      options: [
+        "Piperazine side chain - high potency, minimum autonomic actions, marked EPS",
+        "Aliphatic side chain - low potency with heavy sedation and hypotension",
+        "Piperidine side chain - strong anticholinergic action with very low EPS",
+        "Butyrophenone structure - selective D2 antagonism"
+      ],
+      correctIndex: 0,
+      explanation: "Tripathi classes fluphenazine and trifluoperazine together as high-potency piperazine side-chain phenothiazines: minimal sedation, hypotension, seizure-threshold lowering, jaundice and hypersensitivity, but pronounced extrapyramidal side effects. The aliphatic group is chlorpromazine/triflupromazine, the piperidine group is thioridazine, and butyrophenone is haloperidol - a different chemical family altogether.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "tap-flu-02",
+      question: "Fluphenazine decanoate (ANATENSOL DECANOATE, PROLINATE) as a maintenance preparation is given:",
+      options: [
+        "Once weekly subcutaneously",
+        "Orally every night",
+        "Every 6 months",
+        "Every 2-4 weeks intramuscularly"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi: fluphenazine decanoate is the classic depot given intramuscularly every 2-4 weeks in uncooperative psychotics - the ester's slow release maintains D2 blockade between doses. Katzung adds that depot formulations may still block D2 receptors 3-6 months after the final injection. Weekly subcutaneous dosing, nightly oral use and half-yearly intervals are all wrong for this ester.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "tap-flu-03",
+      question: "A 31-year-old man with schizophrenia has been hospitalised twice this year because he stops his tablets; he denies illness and dislikes daily pills, though his symptoms are well controlled on oral fluphenazine. The most rational long-term strategy is:",
+      options: [
+        "Stop antipsychotics and review only after the next relapse",
+        "Convert to fluphenazine decanoate depot injections every 2-4 weeks",
+        "Double the oral dose to offset missed tablets",
+        "Add a benzodiazepine for long-term cover"
+      ],
+      correctIndex: 1,
+      explanation: "Non-adherence with repeated relapse is the textbook indication for a depot: Katzung calls fluphenazine and haloperidol decanoate suitable for long-term parenteral maintenance in patients who cannot or will not take oral medication. Stopping invites relapse (average relapse around 6 months after discontinuation), and doubling oral doses or adding benzodiazepines does nothing for the adherence problem itself.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-flu-04",
+      question: "Compared with chlorpromazine, which adverse effect is LEAST likely with high-potency fluphenazine?",
+      options: [
+        "Acute dystonic reaction",
+        "Akathisia",
+        "Cholestatic jaundice with photosensitivity",
+        "Drug-induced parkinsonism"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi: high-potency piperazine phenothiazines have minimum autonomic actions and are less likely to impair glucose tolerance, cause jaundice and cause hypersensitivity reactions - so cholestatic jaundice (a 2-4 week, 2-4% event of low-potency agents like chlorpromazine) is the least likely here. The three extrapyramidal options are precisely what fluphenazine maximises: acute dystonia, akathisia and parkinsonism are marked.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-flu-05",
+      question: "After 9 years on fluphenazine, a 55-year-old woman has constant lip-smacking, chewing movements and choreoathetoid limb movements. Which management set is correct?",
+      options: [
+        "Raise the fluphenazine dose to suppress the movements",
+        "Add trihexyphenidyl",
+        "Start levodopa-carbidopa",
+        "Reduce or stop fluphenazine, switch to a low-TD-risk atypical, consider VMAT2 inhibitors (valbenazine/deutetrabenazine), and avoid anticholinergics"
+      ],
+      correctIndex: 3,
+      explanation: "Tardive dyskinesia appears late (10-20% after long-term treatment, worst in elderly women) as purposeless facial and limb movements. Anticholinergics ACCENTUATE it (option B), dose increase only masks it transiently (option A), and levodopa worsens dyskinesia (option C). Katzung's steps: reduce or stop the drug, switch to an atypical with the least TD risk (quetiapine/clozapine), eliminate anticholinergics - and the modern VMAT2 inhibitors valbenazine/deutetrabenazine target the dyskinesia itself.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-flu-06",
+      question: "Katzung highlights which pair of first-generation drugs as well-tolerated parenteral preparations available for rapid initiation of treatment?",
+      options: [
+        "Chlorpromazine and thioridazine",
+        "Haloperidol and fluphenazine",
+        "Trifluoperazine and perphenazine",
+        "Thioridazine and pimozide"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung: parenteral forms of the high-potency older drugs haloperidol and fluphenazine are available for rapid initiation and for maintenance in noncompliant patients - because parenteral bioavailability far exceeds the oral route, IM doses must be only a fraction of oral doses. Low-potency agents (option A) lack this rapid-initiation profile, and pimozide is an oral-only D2 blocker.",
+      afterSectionId: "top",
+    },
+    {
+      id: "tap-flu-07",
+      question: "The classic equieffective dose relationship used in exams to compare antipsychotic potency is:",
+      options: [
+        "100 mg of chlorpromazine is roughly equivalent to 2 mg of fluphenazine",
+        "2 mg of chlorpromazine equals 100 mg of fluphenazine",
+        "All antipsychotics are equieffective at exactly 100 mg",
+        "Potency comparison is impossible because dose ranges never overlap"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung's dose table: minimum effective therapeutic dose is 100 mg/day for chlorpromazine (range 100-1000) versus 2 mg/day for fluphenazine (range 2-60) and 2 mg for haloperidol - a roughly 50:1 ratio that defines low versus high potency. Antipsychotic EFFICACY is equal across the class; potency only changes the milligram dose and the side-effect spectrum. Option B reverses the relationship, and options C and D contradict the table.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-flu-08",
+      question: "A 35-year-old man stable on fluphenazine 10 mg/day is started on fluoxetine for depression. Ten days later he complains of new stiffness, slowness and a shuffling gait. The mechanism is:",
+      options: [
+        "Fluoxetine induces CYP3A4 and lowers fluphenazine levels",
+        "The pair produces additive anticholinergic toxicity",
+        "Fluoxetine inhibits CYP2D6, raising fluphenazine levels and deepening D2 blockade",
+        "Fluoxetine displaces fluphenazine from striatal D2 receptors"
+      ],
+      correctIndex: 2,
+      explanation: "Fluoxetine is a potent CYP2D6 inhibitor and fluphenazine is a 2D6-cleared antipsychotic, so antipsychotic exposure rises and parkinsonism emerges within days-to-weeks (Katzung's fluoxetine discussion names haloperidol and thioridazine among such 2D6 substrates). Option A reverses inhibition into induction, anticholinergic stacking would produce dryness and confusion rather than bradykinesia, and displacement from receptors is not how the combination harms.",
+      afterSectionId: "mechanism",
+    },
   ],
   activeRecallQuestions: [
     {

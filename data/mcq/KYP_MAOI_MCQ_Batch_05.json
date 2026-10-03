@@ -1,0 +1,726 @@
+{
+ "batch": "kyp-maoi-mcq-batch-05",
+ "title": "MAOI MCQ Batch 05 - Phenelzine / Tranylcypromine / Isocarboxazid / Selegiline / Moclobemide",
+ "generated": "2026-10-02",
+ "examOrientation": "Indian exams (NEET PG / INI-CET) + USMLE-style vignettes",
+ "textbookAnchors": "Facts aligned with Katzung Basic & Clinical Pharmacology 14e (ch. 30 antidepressants, ch. 9 tyramine/cheese reaction, ch. 28 parkinsonism) and K.D. Tripathi Essentials of Medical Pharmacology 7e (nonselective MAOIs, cheese reaction and phentolamine, pethidine interaction, selegiline 5-10 mg selectivity, moclobemide RIMA 150 mg BD-TDS with 1-2 day recovery); cross-checked against the KYP MAOI anchors (phenelzine hydrazine/B6 neuropathy and 14-day washout, tranylcypromine amphetamine-like fastest onset, isocarboxazid rarely-used status, selegiline 6 mg/24h patch diet exception, moclobemide reversibility displaces tyramine). No copyrighted text reproduced.",
+ "schema": {
+  "core_fields": "id, question, options[4], correctIndex, explanation, afterSectionId - IDENTICAL to KYP microQuizzes",
+  "metadata_fields": "drugSlug, domain, difficulty (Foundation|Clinical|Advanced), style (vignette|recall) - batch extras",
+  "notes": [
+   "afterSectionId values are real section ids observed live on KYP drug pages: top, quick-facts, mechanism, timeline, neurotransmitters, neural-pathways, knowledge-graph, high-yield-summary.",
+   "Answer positions deliberately spread: A10 B10 C11 D10 (see stats.answerSpread).",
+   "QA gate: this batch passed scripts/mcq_4step_check.py after extending the fact table with MAOI/RIMA data."
+  ]
+ },
+ "stats": {
+  "total": 41,
+  "byDrug": {"phenelzine": 8, "tranylcypromine": 8, "isocarboxazid": 8, "selegiline": 8, "moclobemide": 8, "mixed": 1},
+  "byDifficulty": {"Foundation": 10, "Clinical": 23, "Advanced": 8},
+  "byStyle": {"recall": 19, "vignette": 22},
+  "byDomain": {"Mechanism & Neuroscience": 7, "Pharmacokinetics": 6, "Clinical Uses": 7, "Adverse Effects & Safety": 7, "Drug Interactions": 7, "Indian Practice": 2, "Exam Pearls": 4, "Active Recall": 1},
+  "answerSpread": {"0": 10, "1": 10, "2": 11, "3": 10}
+ },
+ "questions": [
+  {
+   "id": "maoi-phe-01",
+   "drugSlug": "phenelzine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Which option best describes the pharmacodynamic action of phenelzine?",
+   "options": [
+    "Competitive, reversible inhibition of MAO-A alone \u2014 the RIMA principle",
+    "Selective irreversible inhibition of MAO-B, sparing dietary amine metabolism",
+    "Irreversible, nonselective inhibition of both MAO-A and MAO-B, raising serotonin, noradrenaline and dopamine stores",
+    "Blockade of SERT with mild NET inhibition, without affecting any enzyme"
+   ],
+   "correctIndex": 2,
+   "explanation": "Phenelzine is a hydrazine that binds both MAO-A and MAO-B irreversibly and nonselectively, so intraneuronal serotonin, noradrenaline and dopamine all accumulate. Reversible MAO-A-only blockade is moclobemide's mechanism, and MAO-B selectivity belongs to low-dose selegiline. Phenelzine is an enzyme inhibitor, not a reuptake blocker."
+  },
+  {
+   "id": "maoi-phe-02",
+   "drugSlug": "phenelzine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 52-year-old man three months into phenelzine therapy reports burning, numb feet with a stocking-pattern sensory loss; blood glucose and vitamin B12 are normal. The most likely explanation:",
+   "options": [
+    "Hydrazine chemistry has produced pyridoxine (vitamin B6) deficiency \u2014 supplement pyridoxine",
+    "Cumulative anticholinergic toxicity \u2014 reduce the dose by half",
+    "Serotonin syndrome from tyramine-containing meals \u2014 give cyproheptadine",
+    "Orthostatic hypotension of MAOI therapy \u2014 advise extra salt and fluids"
+   ],
+   "correctIndex": 0,
+   "explanation": "Like other hydrazines, phenelzine interferes with pyridoxine, and B6 deficiency presents as a distal sensory (stocking-pattern) peripheral neuropathy \u2014 the same logic as isoniazid neuropathy. Supplementation with pyridoxine is the fix, not dose halving. There are no anticholinergic signs, no hyperreflexia or autonomic instability to suggest serotonin syndrome, and salt loading corrects hypotension, not neuropathy."
+  },
+  {
+   "id": "maoi-phe-03",
+   "drugSlug": "phenelzine",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "neural-pathways",
+   "question": "A 46-year-old on phenelzine develops a pounding occipital headache, neck stiffness and palpitations about 90 minutes after a meal of aged cheese and wine; BP is 212/118 mmHg. The best immediate treatment:",
+   "options": [
+    "IV phentolamine \u2014 a rapidly acting alpha-blocker",
+    "IV propranolol alone to control the BP and heart rate",
+    "Oral cyproheptadine \u2014 the reaction is serotonergic",
+    "Stop phenelzine and wait 48 hours for enzyme recovery"
+   ],
+   "correctIndex": 0,
+   "explanation": "This is the classic tyramine (cheese) hypertensive crisis: indirectly acting amines escape gut and hepatic degradation and discharge noradrenaline from adrenergic terminals; it is treated with an immediate IV alpha-blocker such as phentolamine (prazosin or chlorpromazine are described as alternatives). Propranolol alone leaves alpha-mediated vasoconstriction unopposed. Cyproheptadine treats serotonin syndrome, not tyramine crises, and stopping the drug helps nothing \u2014 enzyme recovery takes about 2 weeks."
+  },
+  {
+   "id": "maoi-phe-04",
+   "drugSlug": "phenelzine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 30-year-old with social anxiety disorder has been on sertraline 100 mg and is being switched to phenelzine after poor response. The correct switch protocol:",
+   "options": [
+    "Start phenelzine immediately \u2014 a 1-week overlap with 50 mg sertraline is safe",
+    "Stop sertraline and start phenelzine after 48-72 hours",
+    "Wait about 5 weeks \u2014 every SSRI needs the fluoxetine-length washout",
+    "Stop sertraline and wait 14 days before starting phenelzine"
+   ],
+   "correctIndex": 3,
+   "explanation": "Any serotonergic antidepressant must be stopped about 14 days before an irreversible MAOI to avoid serotonin syndrome. The 5-week interval is reserved for fluoxetine, whose active metabolite norfluoxetine lingers for weeks; sertraline needs the standard 2 weeks. Overlap or 48-72-hour gaps are dangerously short \u2014 that short-interval option belongs to moclobemide-centred switches, where reversibility shrinks the gap."
+  },
+  {
+   "id": "maoi-phe-05",
+   "drugSlug": "phenelzine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 34-year-old woman has depression with hypersomnia, leaden paralysis, hyperphagia and marked social phobia; she has not responded to two adequate SSRI trials. The most pharmacologically fitting next agent:",
+   "options": [
+    "Amitriptyline \u2014 TCAs outperform MAOIs in atypical depression",
+    "Phenelzine \u2014 atypical/retarded depression with phobic-anxiety features is classic MAOI territory",
+    "Alprazolam monotherapy \u2014 social phobia is a benzodiazepine-responsive condition",
+    "Methylphenidate \u2014 atypical depression is an approved stimulant indication"
+   ],
+   "correctIndex": 1,
+   "explanation": "Hypersomnia, leaden paralysis, hyperphagia and phobic-anxiety features define the atypical/retarded-depression profile for which classical MAOIs remain the textbook choice after SSRI failure (Tripathi's classic MAOI indication). TCAs do not outperform MAOIs in this subgroup \u2014 the reverse is taught. Alprazolam is not an antidepressant strategy for this presentation, and stimulants hold no such approved label."
+  },
+  {
+   "id": "maoi-phe-06",
+   "drugSlug": "phenelzine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which adverse-effect profile is most characteristic of phenelzine?",
+   "options": [
+    "Insomnia, anorexia and weight loss",
+    "Dry mouth, constipation and urinary retention as the dominant problems",
+    "Sedation, weight gain and paradoxical/orthostatic hypotension",
+    "Extrapyramidal rigidity with hyperprolactinaemia"
+   ],
+   "correctIndex": 2,
+   "explanation": "Phenelzine is the more sedating MAOI \u2014 Katzung contrasts it with the activating tranylcypromine and selegiline \u2014 and weight gain plus orthostatic (sometimes paradoxical) hypotension are the class's most treatment-limiting common effects. The insomnia-anorexia cluster describes the amphetamine-like activation profile, dry-mouth/constipation dominance describes TCAs, and rigidity with hyperprolactinaemia belongs to dopamine-blocking antipsychotics."
+  },
+  {
+   "id": "maoi-phe-07",
+   "drugSlug": "phenelzine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "The precise pharmacological reason tyramine is dangerous in phenelzine-treated patients is:",
+   "options": [
+    "Gut-wall and hepatic MAO can no longer degrade absorbed tyramine, so it reaches the circulation as an indirectly acting sympathomimetic that displaces and releases stored noradrenaline",
+    "Phenelzine directly stimulates vascular alpha-1 receptors",
+    "MAO inhibition converts dietary tyramine into adrenaline inside the adrenal medulla",
+    "Phenelzine blocks the hepatic CYP450 enzymes that clear noradrenaline"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tyramine is normally inactivated by MAO in the intestinal wall and liver (very high first-pass metabolism). With MAO inhibited it reaches the systemic circulation intact and acts as an indirectly acting sympathomimetic, displacing noradrenaline from transmitter-loaded nerve endings \u2014 hence the hypertensive crisis and stroke risk. Phenelzine is not a direct alpha agonist, tyramine is not adrenal-converted, and catecholamines are not cleared by CYP450."
+  },
+  {
+   "id": "maoi-phe-08",
+   "drugSlug": "phenelzine",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A patient newly started on phenelzine is attending a wedding banquet with paneer dishes, fermented pickles, soy sauce and drinks, and asks what to avoid. The best advice:",
+   "options": [
+    "Only imported blue cheeses are risky; fresh dairy, pickles and alcohol need no caution",
+    "Everything on the table is safe if the phenelzine tablet is taken after the meal",
+    "Dietary restrictions end 3 days after the last phenelzine dose",
+    "Strictly avoid aged and fermented tyramine sources \u2014 aged cheese, pickled/fermented foods, soy and yeast extracts, tap beer \u2014 and skip alcohol; precautions persist about 2 weeks after stopping"
+   ],
+   "correctIndex": 3,
+   "explanation": "Fermented and aged items \u2014 cheeses, pickled meat and fish, yeast extract, beer and wines \u2014 can deliver the 20-50 mg of tyramine that significantly raises blood pressure in irreversible MAOI users, and MAOIs also intensify the sedative effects of alcohol. Tablet timing is irrelevant, and enzyme recovery after stopping takes roughly 2 weeks, not days \u2014 so option C's 3-day claim is wrong and the fresh-dairy reassurance misses the real hazards."
+  }
+,
+  {
+   "id": "maoi-tra-01",
+   "drugSlug": "tranylcypromine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "The structural feature of tranylcypromine that best explains its clinical personality is:",
+   "options": [
+    "Hydrazine chemistry \u2014 it sequesters pyridoxine and causes neuropathy",
+    "An amphetamine-like structure \u2014 it is CNS-stimulating, producing activation and insomnia",
+    "A propargylamine structure conferring selective MAO-B inhibition",
+    "A tricyclic ring carrying strong anticholinergic and antihistaminic load"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tranylcypromine chemically resembles amphetamine (Katzung classifies it as the nonhydrazine, amphetamine-like MAOI), which is why it is the most stimulating MAOI and commonly disturbs sleep. Hydrazine-B6 neuropathy is the phenelzine/isocarboxazid story, propargylamine-based selective MAO-B inhibition is selegiline/rasagiline, and the tricyclic anticholinergic description fits amitriptyline-type drugs."
+  },
+  {
+   "id": "maoi-tra-02",
+   "drugSlug": "tranylcypromine",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Which drug-property pair is correct?",
+   "options": [
+    "Phenelzine \u2014 the most activating MAOI",
+    "Isocarboxazid \u2014 the fastest onset among the MAOIs",
+    "Tranylcypromine \u2014 the most activating MAOI with the fastest antidepressant onset",
+    "Moclobemide \u2014 the MAOI with the longest washout period"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tranylcypromine's amphetamine-like structure makes it the most stimulating of the class and gives it the quickest antidepressant effect; patients sedated by phenelzine are the classic switch candidates. Phenelzine is instead the more sedating MAOI, isocarboxazid is a rarely used hydrazine with no speed advantage, and moclobemide has the SHORTEST washout (1-2 days), not the longest."
+  },
+  {
+   "id": "maoi-tra-03",
+   "drugSlug": "tranylcypromine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 27-year-old recently started on tranylcypromine 40 mg/day (last dose at 9 pm) complains of difficulty falling asleep, restlessness and an inner feeling of drive. The most appropriate adjustment:",
+   "options": [
+    "Diagnose akathisia and start an antipsychotic",
+    "Double the evening dose so the sedation offsets the stimulation",
+    "Label it MAOI-induced hypomania and switch to lithium",
+    "Recognise amphetamine-like activation; take the last dose earlier in the day and avoid evening dosing"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tranylcypromine's amphetamine-like action commonly causes insomnia and restlessness; the practical fix is scheduling \u2014 dose in the morning and early afternoon, never late in the day (activation and insomnia are listed MAOI adverse effects). There is no mood elevation to call hypomania, no objective motor restlessness to treat as drug-induced akathisia, and raising the evening dose would worsen the insomnia."
+  },
+  {
+   "id": "maoi-tra-04",
+   "drugSlug": "tranylcypromine",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "neural-pathways",
+   "question": "A man on tranylcypromine buys an over-the-counter cold remedy containing pseudoephedrine. The anticipated danger and its mechanism:",
+   "options": [
+    "No interaction \u2014 decongestants act only on nasal alpha receptors",
+    "A hypertensive crisis \u2014 the indirectly acting sympathomimetic is normally degraded by MAO, which tranylcypromine has blocked",
+    "Serotonin syndrome \u2014 decongestants are strongly serotonergic",
+    "Hypotensive collapse \u2014 MAOIs potentiate the vasodilator effect of decongestants"
+   ],
+   "correctIndex": 1,
+   "explanation": "Cold and cough remedies containing ephedrine or pseudoephedrine are a classic MAOI hazard (Tripathi lists them as a mandatory warning): these indirectly acting sympathomimetics depend on MAO for their degradation, so blocked MAO leaves them free to discharge noradrenaline and spike blood pressure. Decongestants are not serotonergic, so serotonin syndrome is the wrong label, and they raise \u2014 not lower \u2014 blood pressure."
+  },
+  {
+   "id": "maoi-tra-05",
+   "drugSlug": "tranylcypromine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which statement about tranylcypromine's kinetics is correct?",
+   "options": [
+    "Enzyme activity recovers within 24-48 hours because the inhibition is reversible",
+    "Its plasma half-life is about 5 weeks, and this dictates the washout",
+    "Its plasma half-life is short, yet MAO inhibition persists about 2 weeks \u2014 a 'hit and run' drug",
+    "Once-daily extended-release dosing is mandatory for sustained MAO inhibition"
+   ],
+   "correctIndex": 2,
+   "explanation": "Like the other irreversible MAOIs, tranylcypromine inactivates the enzyme itself; the drug clears quickly but MAO activity returns only when fresh enzyme is synthesised, roughly 2-3 weeks later \u2014 Tripathi's 'hit and run' description. The 24-48-hour recovery is the moclobemide (reversible) profile, and the 5-week figure belongs to fluoxetine's washout, not to tranylcypromine's half-life."
+  },
+  {
+   "id": "maoi-tra-06",
+   "drugSlug": "tranylcypromine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A woman stabilised on phenelzine complains of daytime sedation and a 6 kg weight gain; her psychiatrist switches her to tranylcypromine. Correct counselling:",
+   "options": [
+    "Sedation and weight gain will become worse, so plan monthly weigh-ins",
+    "Expect more alertness and possible insomnia; tyramine precautions continue \u2014 tranylcypromine is among the most tyramine-sensitive MAOIs",
+    "Tyramine restrictions can be dropped because tranylcypromine inhibits only MAO-B",
+    "No washout is needed when moving between two MAOIs"
+   ],
+   "correctIndex": 1,
+   "explanation": "Phenelzine is the more sedating MAOI and tranylcypromine the more activating one, so patients often feel more awake \u2014 but may trade sedation for insomnia. Tyramine sensitivity does not lessen: tranylcypromine is an irreversible, nonselective MAO-A+B inhibitor and is regarded as highly tyramine-reactive. Switching between two irreversible MAOIs still demands a washout of about 2 weeks \u2014 overlapping them is forbidden."
+  },
+  {
+   "id": "maoi-tra-07",
+   "drugSlug": "tranylcypromine",
+   "domain": "Clinical Uses",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 41-year-old with treatment-resistant depression (three failed antidepressant trials, no cardiac disease) is planned for tranylcypromine. The most appropriate pre-treatment protocol:",
+   "options": [
+    "Overlap it with the current SSRI for 2 weeks to maintain antidepressant cover",
+    "Begin at full dose immediately \u2014 MAOIs are safer than SSRIs in overdose",
+    "Co-prescribe tramadol for the comorbid fibromyalgia pain",
+    "Confirm a full 14-day washout since the last serotonergic drug (about 5 weeks for fluoxetine), counsel the low-tyramine diet, start low and titrate with BP monitoring"
+   ],
+   "correctIndex": 3,
+   "explanation": "MAOI initiation after treatment resistance is a specialist move that demands the washout table (14 days after most serotonergic drugs; about 5 weeks after fluoxetine), explicit dietary counselling and cautious titration with blood-pressure awareness for tyramine and sympathomimetic risks. SSRI-MAOI overlap risks lethal serotonin syndrome, MAOIs are not the safe-in-overdose class, and tramadol plus an MAOI is a contraindicated combination."
+  },
+  {
+   "id": "maoi-tra-08",
+   "drugSlug": "tranylcypromine",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Which pair correctly matches an MAOI with its signature?",
+   "options": [
+    "Tranylcypromine \u2014 amphetamine-like activation, insomnia, fastest onset of the class",
+    "Phenelzine \u2014 the most activating MAOI, causing insomnia and weight loss",
+    "Isocarboxazid \u2014 the safest MAOI to combine with pethidine",
+    "Moclobemide \u2014 an irreversible inhibitor needing the longest enzyme-recovery period"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tranylcypromine owns the amphetamine-like, fastest-onset, most-activating profile. Phenelzine is the sedating, weight-gaining MAOI \u2014 the insomnia-anorexia tag is swapped onto it \u2014 isocarboxazid shares the class-wide pethidine contraindication rather than escaping it, and moclobemide is the reversible inhibitor with the SHORTEST recovery. Each distractor is a deliberately transplanted signature."
+  },
+  {
+   "id": "maoi-iso-01",
+   "drugSlug": "isocarboxazid",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Isocarboxazid is best described as:",
+   "options": [
+    "A nonhydrazine, amphetamine-related reversible inhibitor of MAO-A",
+    "A selective irreversible MAO-B inhibitor used in parkinsonism",
+    "A hydrazine derivative that irreversibly and nonselectively inhibits MAO-A and MAO-B",
+    "An oxazolidinone antibiotic that possesses MAO-inhibiting activity"
+   ],
+   "correctIndex": 2,
+   "explanation": "Isocarboxazid is one of the two hydrazine MAOIs (alongside phenelzine) \u2014 irreversible and nonselective for both MAO isoforms in Katzung's classification. The amphetamine-related reversible description fuses tranylcypromine with moclobemide, MAO-B selectivity defines selegiline, and the oxazolidinone antibiotic with MAO activity is linezolid \u2014 a drug, not an antidepressant."
+  },
+  {
+   "id": "maoi-iso-02",
+   "drugSlug": "isocarboxazid",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "The current clinical status of isocarboxazid is:",
+   "options": [
+    "Rarely used \u2014 obsolete because of toxicity and food/drug interactions, reserved for resistant cases",
+    "First-line for atypical depression in most current guidelines",
+    "The preferred MAOI for Parkinson's disease",
+    "The most commonly prescribed MAOI in current practice"
+   ],
+   "correctIndex": 0,
+   "explanation": "Both Katzung and Tripathi describe the classical MAOIs as largely obsolete \u2014 superseded because of high toxicity and potentially lethal food and drug interactions \u2014 and isocarboxazid is the least used of them, kept only for depression unresponsive to other antidepressants. It was never first-line for atypical depression, has no parkinsonism role (that is selegiline's), and is certainly not the most prescribed MAOI."
+  },
+  {
+   "id": "maoi-iso-03",
+   "drugSlug": "isocarboxazid",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "neural-pathways",
+   "question": "A patient on isocarboxazid is being treated for MRSA pneumonia. Which antibiotic is contraindicated?",
+   "options": [
+    "Vancomycin",
+    "Ceftriaxone",
+    "Clindamycin",
+    "Linezolid"
+   ],
+   "correctIndex": 3,
+   "explanation": "Linezolid is a weak nonselective MAO inhibitor as well as a serotonergic agent; combined with an MAOI it can precipitate serotonin syndrome or pressor reactions, and Katzung lists linezolid among the serotonergic drugs causing the syndrome with an explicit FDA warning. Vancomycin, ceftriaxone and clindamycin carry no MAOI or serotonergic activity and are safe here."
+  },
+  {
+   "id": "maoi-iso-04",
+   "drugSlug": "isocarboxazid",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "Two hours after a restaurant meal, a woman on isocarboxazid has a throbbing headache, sweating, neck stiffness and BP 230/120 mmHg. Which management principle is CORRECT?",
+   "options": [
+    "Give IV propranolol alone \u2014 beta-blockade is the definitive treatment",
+    "Treat with a rapidly acting alpha-blocker such as IV phentolamine; a beta-blocker alone risks unopposed alpha-mediated vasoconstriction",
+    "Reassure and review in the morning \u2014 the pressure settles without treatment",
+    "Give cyproheptadine because the reaction is mediated by serotonin"
+   ],
+   "correctIndex": 1,
+   "explanation": "This is the tyramine-induced hypertensive crisis of nonselective irreversible MAOI therapy: treatment is prompt IV alpha-blockade (phentolamine, with prazosin or chlorpromazine as described alternatives). Reaching for a pure beta-blocker first is the classic exam trap \u2014 peripheral alpha vasoconstriction continues unopposed and can worsen. The reaction is adrenergic, not serotonergic, and it is a medical emergency, never overnight observation."
+  },
+  {
+   "id": "maoi-iso-05",
+   "drugSlug": "isocarboxazid",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A patient who failed isocarboxazid therapy is to start fluoxetine. The minimum washout between the two:",
+   "options": [
+    "24-48 hours \u2014 enzyme activity returns quickly",
+    "5 weeks \u2014 that is the rule in every MAOI switch",
+    "14 days \u2014 an MAOI must be stopped at least 2 weeks before a serotonergic agent",
+    "3-4 days with half-dose fluoxetine at initiation"
+   ],
+   "correctIndex": 2,
+   "explanation": "Direction is the exam point: when an MAOI is the drug being STOPPED, only 14 days are needed before any serotonergic agent. The 5-week interval applies in the reverse direction \u2014 stopping FLUOXETINE before starting an MAOI \u2014 because active norfluoxetine persists. The 24-48-hour window belongs to reversible moclobemide and has no place with irreversible isocarboxazid."
+  },
+  {
+   "id": "maoi-iso-06",
+   "drugSlug": "isocarboxazid",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "neural-pathways",
+   "question": "A post-operative patient who stopped isocarboxazid 6 days ago receives pethidine (meperidine) for pain. She develops high fever, sweating, agitation, muscular rigidity and severe respiratory depression. The most likely explanation:",
+   "options": [
+    "MAOI-pethidine interaction \u2014 impaired hydrolysis shunts pethidine toward excess norpethidine, an excitatory metabolite; pethidine must be avoided with MAOIs",
+    "An anaphylactoid reaction to pethidine requiring adrenaline",
+    "Malignant hyperthermia from the anaesthetic agent \u2014 give dantrolene",
+    "Opioid withdrawal \u2014 the MAOI accelerated pethidine clearance"
+   ],
+   "correctIndex": 0,
+   "explanation": "MAOI-pethidine is a classically lethal pairing: MAO inhibition retards pethidine's hydrolysis while demethylation continues, so norpethidine (normally a minor metabolite) accumulates, causing excitation, hyperthermia, convulsions and respiratory depression (Tripathi's accepted explanation). This is a pharmacological interaction \u2014 not allergy, not anaesthetic malignant hyperthermia, and MAOIs do not accelerate opioid clearance."
+  },
+  {
+   "id": "maoi-iso-07",
+   "drugSlug": "isocarboxazid",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Which statement is correct?",
+   "options": [
+    "Isocarboxazid \u2014 reversible MAO-A inhibition with a 1-2 day washout",
+    "Isocarboxazid \u2014 MAO-B selective and antiparkinsonian in action",
+    "Isocarboxazid \u2014 the most activating MAOI, with an amphetamine-like structure",
+    "Isocarboxazid \u2014 a hydrazine, irreversible, nonselective MAOI that is now rarely used"
+   ],
+   "correctIndex": 3,
+   "explanation": "Isocarboxazid belongs to the hydrazine, irreversible, nonselective MAOI family alongside phenelzine, and it is the class member closest to obsolescence. The reversible/1-2-day tags describe moclobemide, MAO-B selectivity describes selegiline, and the amphetamine-activation profile describes tranylcypromine \u2014 every distractor is a signature borrowed from a sibling drug."
+  },
+  {
+   "id": "maoi-iso-08",
+   "drugSlug": "isocarboxazid",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A resistant-depression patient is cleared for isocarboxazid after four failed antidepressant trials. The safest initiation plan:",
+   "options": [
+    "Start isocarboxazid while tapering venlafaxine over the same week",
+    "Verify at least 14 days since the last serotonergic drug (about 5 weeks if fluoxetine), assess the patient's dietary reliability, counsel on contraindicated co-drugs and plan BP monitoring",
+    "A baseline ECG alone is sufficient \u2014 dietary counselling is optional",
+    "Give prophylactic phentolamine daily for the entire treatment course"
+   ],
+   "correctIndex": 1,
+   "explanation": "Starting a classical MAOI demands the complete checklist: washout completion (14 days, or about 5 weeks after fluoxetine), a patient able to sustain the low-tyramine diet, education about the contraindicated co-drugs (SSRIs, SNRIs, TCAs, pethidine, tramadol, dextromethorphan, linezolid, sympathomimetics) and BP vigilance. Overlapping with venlafaxine risks serotonin syndrome, diet counselling is never optional, and daily prophylactic alpha-blockade is not a real strategy."
+  }
+,
+  {
+   "id": "maoi-sel-01",
+   "drugSlug": "selegiline",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "At the doses used in Parkinson's disease (5-10 mg/day), selegiline acts as:",
+   "options": [
+    "A nonselective irreversible inhibitor of MAO-A and MAO-B",
+    "A reversible, selective inhibitor of MAO-A",
+    "A selective, irreversible inhibitor of MAO-B that retards intracerebral dopamine degradation \u2014 the basis of its antiparkinsonian benefit",
+    "A peripheral COMT inhibitor that blocks levodopa breakdown"
+   ],
+   "correctIndex": 2,
+   "explanation": "At 5-10 mg/day (5 mg with breakfast and 5 mg with lunch) selegiline selectively and irreversibly inhibits MAO-B, slowing central dopamine degradation \u2014 its antiparkinsonian rationale (Tripathi notes low doses spare peripheral dietary amine metabolism). Nonselective inhibition emerges only at higher doses; reversible MAO-A inhibition is moclobemide, and COMT inhibition is entacapone/tolcapone."
+  },
+  {
+   "id": "maoi-sel-02",
+   "drugSlug": "selegiline",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Which statement about selegiline's dose-dependent selectivity is CORRECT?",
+   "options": [
+    "MAO-B selectivity is maintained at every dose and every route",
+    "As the dose rises into the antidepressant range, selegiline becomes selective for MAO-A",
+    "The transdermal patch loses selectivity faster than the oral tablet",
+    "Oral antidepressant doses (20-50 mg/day) lose MAO-B selectivity and become nonselective, whereas the 6 mg/24 h patch retains selectivity"
+   ],
+   "correctIndex": 3,
+   "explanation": "Selectivity is dose-dependent: 5-10 mg/day keeps selegiline on MAO-B, but antidepressant-range oral dosing also inhibits MAO-A, bringing back tyramine and serotonergic hazards. The 6 mg/24 h transdermal patch is the formulation that retains MAO-B selectivity because it bypasses gut and liver first-pass \u2014 which is why it carries fewer dietary restrictions than oral antidepressant dosing. Options A, B and C each reverse or ignore this dose dependence."
+  },
+  {
+   "id": "maoi-sel-03",
+   "drugSlug": "selegiline",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 63-year-old with early Parkinson's disease on levodopa-carbidopa has begun to 'wear off' between doses. Selegiline is added. The expected benefit and one required adjustment:",
+   "options": [
+    "It retards dopamine degradation and potentiates levodopa, allowing the levodopa dose to be reduced by about 20-30%",
+    "It blocks COMT in the periphery, smoothing the plasma levodopa curve",
+    "It is a D2 receptor agonist that works independently of levodopa",
+    "It is an anticholinergic that specifically reduces tremor"
+   ],
+   "correctIndex": 0,
+   "explanation": "Selegiline's MAO-B blockade prolongs central dopamine action; as a levodopa adjunct it benefits roughly half to two-thirds of patients, permits a 20-30% levodopa dose reduction and attenuates wearing-off (Tripathi). COMT inhibition is entacapone's mechanism, D2 agonism is pramipexole/ropinirole, and anticholinergics are a separate tremor-directed class."
+  },
+  {
+   "id": "maoi-sel-04",
+   "drugSlug": "selegiline",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Why does selegiline characteristically cause insomnia, and what is the practical response?",
+   "options": [
+    "It elevates central acetylcholine, so doses should be taken at bedtime",
+    "It is metabolised to amphetamine-like compounds (L-amphetamine, L-methamphetamine) that are CNS-stimulating \u2014 give it early in the day",
+    "It blocks adenosine receptors like caffeine \u2014 split the dose at noon",
+    "Its metabolites are D-isomers identical to dexamphetamine, so seizures are expected"
+   ],
+   "correctIndex": 1,
+   "explanation": "Selegiline is N-demethylated to L-amphetamine and L-methamphetamine \u2014 sympathomimetic, stimulant metabolites responsible for insomnia and agitation (Tripathi) \u2014 hence morning/noon dosing and never late-evening dosing. The cholinergic and adenosine stories are wrong, and the isomer claim is inverted: selegiline yields the L-isomers, which are less stimulant than the D-amphetamine in dexamphetamine products."
+  },
+  {
+   "id": "maoi-sel-05",
+   "drugSlug": "selegiline",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A patient started on the selegiline transdermal system 6 mg/24 h for depression asks which foods to avoid. The correct answer at THIS dose:",
+   "options": [
+    "The patch never produces tyramine reactions at any dose",
+    "Oral selegiline 20-40 mg/day also retains MAO-B selectivity, so only the patch needs care",
+    "At 6 mg/24 h the patch retains MAO-B selectivity, so routine dietary tyramine restrictions are not required at this dose",
+    "Dietary tyramine matters only if the patient is also taking levodopa"
+   ],
+   "correctIndex": 2,
+   "explanation": "The 6 mg/24 h patch bypasses gut and liver first-pass and keeps MAO-B selectivity, which is why labeling spares patients on THIS dose the routine tyramine-restricted diet (the no-dietary-restriction claim belongs to the 6 mg patch only). Higher patch doses \u2014 and oral antidepressant doses of 20-50 mg/day \u2014 lose selectivity and restore dietary risk. Levodopa co-use does not create the tyramine hazard; loss of MAO-A inhibition does."
+  },
+  {
+   "id": "maoi-sel-06",
+   "drugSlug": "selegiline",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "neural-pathways",
+   "question": "A man with Parkinson's disease on selegiline 10 mg/day wants an over-the-counter dextromethorphan cough syrup. The correct advice:",
+   "options": [
+    "Safe \u2014 dextromethorphan acts peripherally on cough receptors",
+    "Safe \u2014 interactions with selegiline occur only with levodopa",
+    "Safe if the syrup and selegiline are taken 2 hours apart",
+    "Avoid it \u2014 dextromethorphan is contraindicated with MAO-B inhibitors, as are meperidine and tramadol"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung's parkinsonism chapter is explicit: patients on MAO-B inhibitors must avoid meperidine, tramadol, methadone, propoxyphene, cyclobenzaprine, St John's wort and the antitussive dextromethorphan \u2014 indeed all over-the-counter cold preparations warrant caution. Dextromethorphan is a centrally acting NMDA/serotonergic agent, the hazard is not limited to levodopa, and spacing doses by hours does not remove a contraindication."
+  },
+  {
+   "id": "maoi-sel-07",
+   "drugSlug": "selegiline",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 45-year-old with well-controlled epilepsy and depression is being considered for the selegiline patch. The most appropriate assessment:",
+   "options": [
+    "Selegiline is contraindicated in convulsive disorders \u2014 select another antidepressant",
+    "Only the oral form carries the epilepsy contraindication; the patch is exempt",
+    "The contraindication applies only when selegiline is used for parkinsonism",
+    "Add prophylactic levetiracetam and proceed with the patch"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tripathi lists convulsive disorders as a contraindication to selegiline, so epilepsy is a reason to choose a different antidepressant rather than patch over the risk. The restriction is not formulation-specific or indication-specific, and layering a second anticonvulsant to force a contraindicated drug is not acceptable practice."
+  },
+  {
+   "id": "maoi-sel-08",
+   "drugSlug": "selegiline",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Which selegiline summary is correct?",
+   "options": [
+    "Selegiline \u2014 a reversible MAO-A inhibitor with a 1-2 day washout",
+    "Selegiline \u2014 MAO-B selective at 5-10 mg/day, metabolised to L-amphetamine/L-methamphetamine, patch retains selectivity at 6 mg/24 h",
+    "Selegiline \u2014 the most sedating MAOI, best given at night for its weight-gain benefit",
+    "Selegiline \u2014 safe to combine with pethidine for post-operative analgesia"
+   ],
+   "correctIndex": 1,
+   "explanation": "Option B strings together selegiline's three real signatures: low-dose MAO-B selectivity, stimulant amphetamine (L-isomer) metabolites, and the 6 mg/24 h patch's retained selectivity. The reversible MAO-A description is moclobemide's, sedation-and-weight-gain belongs to phenelzine, and the pethidine combination is explicitly contraindicated with selegiline."
+  },
+  {
+   "id": "maoi-moc-01",
+   "drugSlug": "moclobemide",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "In moclobemide, the acronym RIMA stands for:",
+   "options": [
+    "Rapid Irreversible Monoamine oxidase Antagonist",
+    "Reversible Inhibitor of Monoamine oxidase B",
+    "Reversible Inhibitor of Monoamine oxidase A \u2014 competitive, selective MAO-A blockade, the design principle behind moclobemide",
+    "Reuptake Inhibitor of Monoamine-A transporters"
+   ],
+   "correctIndex": 2,
+   "explanation": "Moclobemide is the prototype RIMA: a REversible Inhibitor of MAO-A \u2014 competitive and selective for the A isoform, which is why enzyme activity returns within 1-2 days and why tyramine can displace it from the enzyme. The wrong-isozyme and wrong-target options describe what moclobemide is not, and it does not block transporters (that would be an SSRI/NET-type mechanism)."
+  },
+  {
+   "id": "maoi-moc-02",
+   "drugSlug": "moclobemide",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "The dosing consequence of moclobemide's short half-life (1-2 h) is:",
+   "options": [
+    "Two to three divided doses daily \u2014 about 150 mg BD-TDS, maximum 600 mg/day",
+    "Once-daily night dosing, like other long-half-life antidepressants",
+    "A weekly transdermal formulation",
+    "A mandatory 3-week titration before MAO inhibition appears"
+   ],
+   "correctIndex": 0,
+   "explanation": "With a 1-2 hour half-life, moclobemide must be given two to three times a day; Tripathi's schedule is 150 mg BD-TDS up to 600 mg/day, and full MAO activity returns within 1-2 days of stopping. Once-daily night dosing fits long-half-life drugs, a weekly patch is transdermal selegiline's territory, and a competitive inhibitor acts immediately \u2014 no 3-week enzyme-loading period exists."
+  },
+  {
+   "id": "maoi-moc-03",
+   "drugSlug": "moclobemide",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "neural-pathways",
+   "question": "A patient starting moclobemide refuses it, saying a relative 'almost died from cheese' on an antidepressant. The most accurate reassurance:",
+   "options": [
+    "Tyramine reactions are impossible with moclobemide \u2014 no caution is ever needed",
+    "The same restrictions as phenelzine apply \u2014 MAO-A blockade is identical in every respect",
+    "Moclobemide increases tyramine absorption by blocking gut transporters",
+    "Because inhibition is competitive, ingested tyramine can displace moclobemide from MAO-A, so pressor potentiation is minor and routine dietary restrictions are not required"
+   ],
+   "correctIndex": 3,
+   "explanation": "This is the RIMA advantage: tyramine competes with and displaces the reversible inhibitor, so the lost first-pass shutoff does not turn a cheese meal into a noradrenaline dump \u2014 Tripathi notes potentiation of the pressor response is minor and dietary restrictions are not required. Reactions are not impossible (prudence with very large tyramine loads is still advised), the logic is the opposite of irreversible phenelzine, and no gut-transporter mechanism is involved."
+  },
+  {
+   "id": "maoi-moc-04",
+   "drugSlug": "moclobemide",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A patient stable on sertraline is being switched to moclobemide; later she may move back to an SSRI. The correct washouts:",
+   "options": [
+    "1-2 days in both directions because moclobemide is reversible",
+    "About 14 days after stopping sertraline before starting moclobemide; only 24-48 hours after stopping moclobemide before the next serotonergic drug",
+    "5 weeks in both directions \u2014 the fluoxetine rule applies to all switches",
+    "No washout either way \u2014 overlap is permitted with reversible inhibitors"
+   ],
+   "correctIndex": 1,
+   "explanation": "Washout is asymmetric: any SSRI to MAOI (even a RIMA) still needs the standard 14-day gap to prevent serotonin syndrome, whereas moclobemide's own reversibility means only 1-2 days before starting the next serotonergic drug. The 5-week rule is fluoxetine-specific, and overlapping serotonergic drugs with moclobemide is never permitted \u2014 reversibility shrinks, but does not delete, the gap."
+  },
+  {
+   "id": "maoi-moc-05",
+   "drugSlug": "moclobemide",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "neural-pathways",
+   "question": "A patient on moclobemide 300 mg/day self-medicates with clomipramine. Two weeks later she has agitation, diaphoresis, mydriasis, hyperreflexia, inducible ankle clonus and temperature 38.8\u00b0C. The most likely diagnosis and step:",
+   "options": [
+    "Anticholinergic delirium from clomipramine \u2014 give physostigmine",
+    "Neuroleptic malignant syndrome \u2014 start bromocriptine",
+    "Moclobemide discontinuation delirium \u2014 restart moclobemide",
+    "Serotonin syndrome from the moclobemide-TCA combination \u2014 stop the serotonergic drugs and give supportive care"
+   ],
+   "correctIndex": 3,
+   "explanation": "Hyperreflexia, clonus, mydriasis, diaphoresis and fever after adding a TCA to a serotonergic agent is serotonin syndrome \u2014 the triad of cognitive, autonomic and neuromuscular signs (Katzung calls MAOI-serotonergic combinations the most serious antidepressant interaction). Anticholinergic delirium does not produce clonus, NMS requires a dopamine blocker with lead-pipe rigidity and bradyreflexia, and this is an interaction, not a discontinuation phenomenon."
+  },
+  {
+   "id": "maoi-moc-06",
+   "drugSlug": "moclobemide",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Foundation",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 70-year-old with ischaemic heart disease asks what to expect from newly started moclobemide. The correct counselling:",
+   "options": [
+    "Severe sedation is predictable \u2014 take the whole dose at bedtime",
+    "Marked weight gain is its hallmark adverse effect",
+    "Common effects are nausea, dizziness, headache and insomnia; it lacks the anticholinergic, sedative and cardiovascular load of TCAs and is safer in overdose \u2014 a good fit for elderly or cardiac patients",
+    "It carries the same anticholinergic burden as amitriptyline"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi's profile: moclobemide's adverse effects are nausea, dizziness, headache and insomnia, and it is explicitly free of the anticholinergic, sedative, cognitive, psychomotor and cardiovascular burdens of TCAs \u2014 and safer in overdose \u2014 making it a good option for the elderly and for heart-disease patients. Sedation and weight gain are the phenelzine profile, and an anticholinergic comparison with amitriptyline is exactly what moclobemide avoids."
+  },
+  {
+   "id": "maoi-moc-07",
+   "drugSlug": "moclobemide",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which washout summary is correct?",
+   "options": [
+    "Moclobemide \u2014 24-48 h; irreversible MAOIs \u2014 14 days; fluoxetine before an MAOI \u2014 about 5 weeks",
+    "Moclobemide \u2014 14 days; irreversible MAOIs \u2014 5 weeks; fluoxetine \u2014 1 day",
+    "All MAOIs including moclobemide require a uniform 14-day washout",
+    "Fluoxetine needs only 1 week because norfluoxetine is pharmacologically inactive"
+   ],
+   "correctIndex": 0,
+   "explanation": "The washout table has three rows: reversible moclobemide restores MAO activity in 1-2 days; irreversible MAOIs need 14 days before or after serotonergic drugs; and fluoxetine demands the longest gap (about 5 weeks) before an MAOI because active norfluoxetine lingers for weeks. Option B shuffles all three values, option C erases the RIMA advantage, and option D is wrong twice \u2014 norfluoxetine is active and 1 week is far too short."
+  },
+  {
+   "id": "maoi-moc-08",
+   "drugSlug": "moclobemide",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 28-year-old software professional with mild-moderate depression and social phobia travels constantly and is anxious about 'food restrictions'. She has no cardiac disease. The most fitting prescription and rationale:",
+   "options": [
+    "Phenelzine \u2014 cheapest in India and without dietary restrictions",
+    "Moclobemide \u2014 a well-tolerated RIMA for mild-moderate depression and social phobia, with minimal dietary burden and a 1-2 day washout",
+    "Tranylcypromine \u2014 the best MAOI for frequent travellers",
+    "Fluoxetine \u2014 because it has no serotonergic interaction liabilities"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi positions moclobemide as a well-tolerated alternative to TCAs in mild-moderate depression and social phobia, notable for absent dietary restrictions, lack of sedative/cardiovascular load and a 24-48-hour washout \u2014 ideal for this lifestyle. Phenelzine is precisely the heavily restricted option, tranylcypromine carries the class's tyramine risks plus insomnia, and fluoxetine has major serotonergic liabilities including the longest MAOI washout."
+  }
+,
+  {
+   "id": "maoi-mix-01",
+   "drugSlug": "mixed",
+   "domain": "Active Recall",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which statement about the MAOI/RIMA class is CORRECT?",
+   "options": [
+    "Selegiline retains MAO-B selectivity at every antidepressant dose and route",
+    "Phenelzine is the most activating MAOI and carries the lowest tyramine risk",
+    "Moclobemide's reversibility lets tyramine displace it from MAO-A \u2014 the smallest tyramine risk and the shortest washout in the class",
+    "A 14-day washout is needed only after stopping fluoxetine"
+   ],
+   "correctIndex": 2,
+   "explanation": "The correct statement pairs moclobemide's two flagship advantages: competitive displacability by tyramine and a 1-2 day washout versus 14 days for the irreversible drugs. Selegiline loses selectivity at antidepressant doses (the 6 mg/24 h patch is the retained-selectivity exception), phenelzine is the sedating, high-tyramine-risk MAOI, and the washout table is the reverse of option D \u2014 fluoxetine needs about 5 weeks, the others 14 days."
+  }
+ ]
+}

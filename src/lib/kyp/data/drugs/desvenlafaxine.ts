@@ -813,6 +813,110 @@ export const desvenlafaxine: Drug = {
       explanation: "For major depressive disorder: start 50 mg once daily, target 50 mg/day, maximum 100 mg/day (some go to 400 off-label). Therapeutic from the start; may increase to 100 mg after weeks",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "snri-des-01",
+      question: "Desvenlafaxine's relationship to venlafaxine is best described as:",
+      options: [
+        "It is the R-enantiomer of venlafaxine",
+        "It is a prodrug that converts to venlafaxine",
+        "It is chemically unrelated to venlafaxine",
+        "It is venlafaxine's principal active metabolite (O-desmethylvenlafaxine), marketed standalone"
+      ],
+      correctIndex: 3,
+      explanation: "Desvenlafaxine IS O-desmethylvenlafaxine — the active metabolite CYP2D6 generates from venlafaxine — commercialised on its own. The enantiomer story belongs to escitalopram/citalopram; a prodrug converts TO the parent, not the reverse. Recognising metabolite-drugs is a recurring exam trick (fluoxetine→norfluoxetine, venlafaxine→desvenlafaxine).",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "snri-des-02",
+      question: "Why is desvenlafaxine convenient in a patient already taking a strong CYP2D6 inhibitor such as fluoxetine?",
+      options: [
+        "Desvenlafaxine is already the active moiety and does not need CYP2D6 activation",
+        "CYP2D6 inhibitors accelerate its clearance",
+        "Desvenlafaxine is itself a potent CYP2D6 inhibitor",
+        "The combination eliminates serotonergic toxicity risk"
+      ],
+      correctIndex: 0,
+      explanation: "Because desvenlafaxine is the downstream metabolite, 2D6 blockade cannot meaningfully derail its levels — no activation step is required. It neither induces nor is cleared faster because of 2D6 inhibition, and combining serotonergic drugs always keeps serotonin-syndrome vigilance alive. This predictability is its flagship interaction advantage over parent venlafaxine.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "snri-des-03",
+      question: "A 66-year-old with diabetic nephropathy (eGFR 24 mL/min) needs an antidepressant. Desvenlafaxine is chosen. Correct dosing approach:",
+      options: [
+        "Standard dosing — no renal adjustment exists for this drug",
+        "Reduce the dose — approximately 50 mg/day maximum in severe renal impairment",
+        "Absolutely contraindicated below eGFR 30",
+        "Double the dose to compensate for reduced clearance"
+      ],
+      correctIndex: 1,
+      explanation: "Desvenlafaxine is substantially renally cleared, so severe impairment requires dose reduction (label guidance: about half the usual maximum, i.e. ~50 mg/day). Renal disease adjusts the dose — it does not forbid the drug, and certainly never justifies doubling. Forgetting renal adjustment for renally-cleared psychotropics (desvenlafaxine, milnacipran, lithium, gabapentin) is a classic exam trap.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "snri-des-04",
+      question: "Desvenlafaxine's FDA-approved label covers:",
+      options: [
+        "MDD, GAD and panic disorder",
+        "MDD and diabetic peripheral neuropathic pain",
+        "Major depressive disorder only",
+        "Fibromyalgia only"
+      ],
+      correctIndex: 2,
+      explanation: "Despite several attempted label expansions, desvenlafaxine's US label remains MDD alone — no anxiety or pain indication. GAD/panic labels belong to venlafaxine; DPNP to duloxetine; fibromyalgia to milnacipran and duloxetine. Exam writers love moving one indication across the SNRI family to test precision.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "snri-des-05",
+      question: "A 67-year-old woman, three weeks on desvenlafaxine and on hydrochlorothiazide, presents with confusion. Na+ 126 mEq/L, euvolaemic, low serum osmolality. Best explanation and step:",
+      options: [
+        "Pseudohyponatraemia — simply repeat the sample",
+        "Addisonian crisis — start steroids empirically",
+        "SNRI-induced SIADH — hold the drug, correct sodium by severity, then rechallenge cautiously or switch",
+        "Psychogenic polydipsia — fluid restrict and continue the drug"
+      ],
+      correctIndex: 2,
+      explanation: "SIADH-type hyponatraemia is an SSRI/SNRI class effect — the risk stack here is elderly + female + thiazide + recent antidepressant start, giving euvolaemic hypo-osmolar hyponatraemia. Exclude pseudohyponatraemia and adrenal insufficiency, hold the offending drug, correct by severity, and either rechallenge low or change class. Ignoring it risks seizures — and desvenlafaxine is not exempt just because it is an SNRI.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "snri-des-06",
+      question: "A 45-year-old stable on venlafaxine XR 150 mg wants a smoother regimen without dose-related BP worries. The intern proposes switching. Best assessment:",
+      options: [
+        "A two-week washout is required between the two drugs",
+        "Direct switch is reasonable — same active moiety; approximate equivalence is ~100 mg desvenlafaxine for 150 mg venlafaxine",
+        "Cross-taper through an MAOI first for safety",
+        "Switching from venlafaxine to its own metabolite is not permitted"
+      ],
+      correctIndex: 1,
+      explanation: "Because desvenlafaxine IS venlafaxine's active metabolite, a direct switch needs no washout — the clinical rule of equivalence (roughly 75 mg venlafaxine ≈ 50 mg desvenlafaxine) lets you convert straight across, often with less BP drift and a somewhat cleaner interaction profile. Washouts are for MAOI moves, and routing through an MAOI would be dangerous, not safe.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "snri-des-07",
+      question: "Desvenlafaxine's metabolic profile is best described as:",
+      options: [
+        "Primarily CYP2D6-dependent, like its parent drug",
+        "Primarily CYP1A2-dependent",
+        "Minimal CYP dependence — conjugation and renal excretion dominate",
+        "Requires CYP3A4 activation to become active"
+      ],
+      correctIndex: 2,
+      explanation: "Having skipped the parent's 2D6 gate, desvenlafaxine relies mainly on conjugation with minor 3A4 contribution and is largely renally cleared — hence its CYP-quiet reputation. The 2D6 story belongs to venlafaxine, 1A2 to duloxetine, and 3A4-activation claims are backwards (3A4 only plays a minor clearing role). This underpins the desvenlafaxine-in-polypharmacy answer.",
+      afterSectionId: "neural-pathways",
+    },
+    {
+      id: "snri-des-08",
+      question: "A 31-year-old stable on fluoxetine 40 mg for bulimia nervosa now needs an SNRI for a comorbid condition. Which SNRI gives the most predictable pharmacokinetics here?",
+      options: [
+        "Venlafaxine — 2D6 inhibition by fluoxetine makes its levels more predictable",
+        "Duloxetine — fluoxetine will raise its levels beneficially",
+        "Desvenlafaxine — predictable levels despite fluoxetine's 2D6 blockade",
+        "Milnacipran — FDA-approved to combine safely with fluoxetine"
+      ],
+      correctIndex: 2,
+      explanation: "Fluoxetine's potent, long-lived 2D6 inhibition makes parent-venlafaxine levels drift upward while ODV falls — workable but unpredictable, and duloxetine shares 2D6 (plus its own 1A2 issues). Desvenlafaxine sits downstream of the blocked step, so its levels stay steady. Milnacipran would also be reasonably CYP-quiet, but there is no such co-prescription label — the label claim in option D is the giveaway.",
+      afterSectionId: "neural-pathways",
+    },
   ],
   activeRecallQuestions: [
     {

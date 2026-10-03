@@ -836,6 +836,110 @@ export const tranylcypromine: Drug = {
       explanation: "For depression: start 10 mg twice daily (morning + midday), target 30-60 mg/day, maximum 60 mg/day. Increase by 10 mg/day every 1-2 weeks",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "maoi-tra-01",
+      question: "The structural feature of tranylcypromine that best explains its clinical personality is:",
+      options: [
+        "Hydrazine chemistry — it sequesters pyridoxine and causes neuropathy",
+        "An amphetamine-like structure — it is CNS-stimulating, producing activation and insomnia",
+        "A propargylamine structure conferring selective MAO-B inhibition",
+        "A tricyclic ring carrying strong anticholinergic and antihistaminic load"
+      ],
+      correctIndex: 1,
+      explanation: "Tranylcypromine chemically resembles amphetamine (Katzung classifies it as the nonhydrazine, amphetamine-like MAOI), which is why it is the most stimulating MAOI and commonly disturbs sleep. Hydrazine-B6 neuropathy is the phenelzine/isocarboxazid story, propargylamine-based selective MAO-B inhibition is selegiline/rasagiline, and the tricyclic anticholinergic description fits amitriptyline-type drugs.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "maoi-tra-02",
+      question: "Which drug-property pair is correct?",
+      options: [
+        "Phenelzine — the most activating MAOI",
+        "Isocarboxazid — the fastest onset among the MAOIs",
+        "Tranylcypromine — the most activating MAOI with the fastest antidepressant onset",
+        "Moclobemide — the MAOI with the longest washout period"
+      ],
+      correctIndex: 2,
+      explanation: "Tranylcypromine's amphetamine-like structure makes it the most stimulating of the class and gives it the quickest antidepressant effect; patients sedated by phenelzine are the classic switch candidates. Phenelzine is instead the more sedating MAOI, isocarboxazid is a rarely used hydrazine with no speed advantage, and moclobemide has the SHORTEST washout (1-2 days), not the longest.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "maoi-tra-03",
+      question: "A 27-year-old recently started on tranylcypromine 40 mg/day (last dose at 9 pm) complains of difficulty falling asleep, restlessness and an inner feeling of drive. The most appropriate adjustment:",
+      options: [
+        "Diagnose akathisia and start an antipsychotic",
+        "Double the evening dose so the sedation offsets the stimulation",
+        "Label it MAOI-induced hypomania and switch to lithium",
+        "Recognise amphetamine-like activation; take the last dose earlier in the day and avoid evening dosing"
+      ],
+      correctIndex: 3,
+      explanation: "Tranylcypromine's amphetamine-like action commonly causes insomnia and restlessness; the practical fix is scheduling — dose in the morning and early afternoon, never late in the day (activation and insomnia are listed MAOI adverse effects). There is no mood elevation to call hypomania, no objective motor restlessness to treat as drug-induced akathisia, and raising the evening dose would worsen the insomnia.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "maoi-tra-04",
+      question: "A man on tranylcypromine buys an over-the-counter cold remedy containing pseudoephedrine. The anticipated danger and its mechanism:",
+      options: [
+        "No interaction — decongestants act only on nasal alpha receptors",
+        "A hypertensive crisis — the indirectly acting sympathomimetic is normally degraded by MAO, which tranylcypromine has blocked",
+        "Serotonin syndrome — decongestants are strongly serotonergic",
+        "Hypotensive collapse — MAOIs potentiate the vasodilator effect of decongestants"
+      ],
+      correctIndex: 1,
+      explanation: "Cold and cough remedies containing ephedrine or pseudoephedrine are a classic MAOI hazard (Tripathi lists them as a mandatory warning): these indirectly acting sympathomimetics depend on MAO for their degradation, so blocked MAO leaves them free to discharge noradrenaline and spike blood pressure. Decongestants are not serotonergic, so serotonin syndrome is the wrong label, and they raise — not lower — blood pressure.",
+      afterSectionId: "neural-pathways",
+    },
+    {
+      id: "maoi-tra-05",
+      question: "Which statement about tranylcypromine's kinetics is correct?",
+      options: [
+        "Enzyme activity recovers within 24-48 hours because the inhibition is reversible",
+        "Its plasma half-life is about 5 weeks, and this dictates the washout",
+        "Its plasma half-life is short, yet MAO inhibition persists about 2 weeks — a 'hit and run' drug",
+        "Once-daily extended-release dosing is mandatory for sustained MAO inhibition"
+      ],
+      correctIndex: 2,
+      explanation: "Like the other irreversible MAOIs, tranylcypromine inactivates the enzyme itself; the drug clears quickly but MAO activity returns only when fresh enzyme is synthesised, roughly 2-3 weeks later — Tripathi's 'hit and run' description. The 24-48-hour recovery is the moclobemide (reversible) profile, and the 5-week figure belongs to fluoxetine's washout, not to tranylcypromine's half-life.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "maoi-tra-06",
+      question: "A woman stabilised on phenelzine complains of daytime sedation and a 6 kg weight gain; her psychiatrist switches her to tranylcypromine. Correct counselling:",
+      options: [
+        "Sedation and weight gain will become worse, so plan monthly weigh-ins",
+        "Expect more alertness and possible insomnia; tyramine precautions continue — tranylcypromine is among the most tyramine-sensitive MAOIs",
+        "Tyramine restrictions can be dropped because tranylcypromine inhibits only MAO-B",
+        "No washout is needed when moving between two MAOIs"
+      ],
+      correctIndex: 1,
+      explanation: "Phenelzine is the more sedating MAOI and tranylcypromine the more activating one, so patients often feel more awake — but may trade sedation for insomnia. Tyramine sensitivity does not lessen: tranylcypromine is an irreversible, nonselective MAO-A+B inhibitor and is regarded as highly tyramine-reactive. Switching between two irreversible MAOIs still demands a washout of about 2 weeks — overlapping them is forbidden.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "maoi-tra-07",
+      question: "A 41-year-old with treatment-resistant depression (three failed antidepressant trials, no cardiac disease) is planned for tranylcypromine. The most appropriate pre-treatment protocol:",
+      options: [
+        "Overlap it with the current SSRI for 2 weeks to maintain antidepressant cover",
+        "Begin at full dose immediately — MAOIs are safer than SSRIs in overdose",
+        "Co-prescribe tramadol for the comorbid fibromyalgia pain",
+        "Confirm a full 14-day washout since the last serotonergic drug (about 5 weeks for fluoxetine), counsel the low-tyramine diet, start low and titrate with BP monitoring"
+      ],
+      correctIndex: 3,
+      explanation: "MAOI initiation after treatment resistance is a specialist move that demands the washout table (14 days after most serotonergic drugs; about 5 weeks after fluoxetine), explicit dietary counselling and cautious titration with blood-pressure awareness for tyramine and sympathomimetic risks. SSRI-MAOI overlap risks lethal serotonin syndrome, MAOIs are not the safe-in-overdose class, and tramadol plus an MAOI is a contraindicated combination.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "maoi-tra-08",
+      question: "Which pair correctly matches an MAOI with its signature?",
+      options: [
+        "Tranylcypromine — amphetamine-like activation, insomnia, fastest onset of the class",
+        "Phenelzine — the most activating MAOI, causing insomnia and weight loss",
+        "Isocarboxazid — the safest MAOI to combine with pethidine",
+        "Moclobemide — an irreversible inhibitor needing the longest enzyme-recovery period"
+      ],
+      correctIndex: 0,
+      explanation: "Tranylcypromine owns the amphetamine-like, fastest-onset, most-activating profile. Phenelzine is the sedating, weight-gaining MAOI — the insomnia-anorexia tag is swapped onto it — isocarboxazid shares the class-wide pethidine contraindication rather than escaping it, and moclobemide is the reversible inhibitor with the SHORTEST recovery. Each distractor is a deliberately transplanted signature.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

@@ -42,7 +42,7 @@ describe("custom test — engine pool", () => {
     expect(new Set(ids).size).toBe(pool.length);
 
     const stats = getPoolStats(ALL_SLUGS);
-    expect(stats.authored).toBe(470); // 471 microQuizzes across 145 drugs minus the option-invalid zotepine entry (engine validity guard)
+    expect(stats.authored).toBe(1643); // 1,644 microQuizzes (471 original + 1,173 bank) minus the option-invalid zotepine entry (engine validity guard)
     expect(stats.total).toBeGreaterThan(300); // real generated availability
     expect(stats.total).toBe(pool.length);
 

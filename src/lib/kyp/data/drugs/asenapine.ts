@@ -913,6 +913,110 @@ export const asenapine: Drug = {
       explanation: "For schizophrenia: start 5 mg sublingual twice daily, target 5–10 mg twice daily, maximum 20 mg/day. Increase to 10 mg bid as needed",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "atp-ase-01",
+      question: "Asenapine's route of administration is critical because:",
+      options: [
+        "Only sublingual/buccal delivery works — a swallowed tablet yields near-zero bioavailability",
+        "It must be given as a weekly intramuscular depot",
+        "Oral absorption is excellent and doubled by fatty food",
+        "The drug is active only via transdermal patch"
+      ],
+      correctIndex: 0,
+      explanation: "Asenapine is formulated for sublingual/buccal absorption; if swallowed, first-pass metabolism destroys the dose and bioavailability approaches nil — the signature administration pearl. No depot exists, the food-doubling story is ziprasidone's, and the standard product is a sublingual tablet even though a transdermal system has been developed in some markets.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atp-ase-02",
+      question: "Asenapine's pharmacology that supports its schizophrenia and mania labels is best summarised as:",
+      options: [
+        "Pure 5-HT1A agonism without dopaminergic effect",
+        "High-affinity 5-HT2A and D2 antagonism with alpha-2 antagonism, cleared via minor 1A2/2D6 pathways",
+        "Selective mu-opioid antagonism combined with D3 partial agonism",
+        "GABA-A positive modulation with NMDA-channel blocking"
+      ],
+      correctIndex: 1,
+      explanation: "Asenapine blocks 5-HT2A and D2 with additional alpha-2 antagonism, and its clearance runs through minor CYP1A2/2D6 routes — a profile labelled for schizophrenia and manic/mixed bipolar episodes. Opioid, GABAergic or purely serotonergic mechanisms describe no antipsychotic in this batch.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "atp-ase-03",
+      question: "A manic inpatient is started on asenapine. Two weeks later he is no better; the nurse discovers he has been swallowing the tablet dry with water, or dissolving it in a cup and drinking it. The explanation for failure is:",
+      options: [
+        "Asenapine tolerance develops within two weeks",
+        "Antagonism between asenapine and his valproate",
+        "Swallowed asenapine is almost completely destroyed by first-pass metabolism",
+        "The dose is too low — asenapine needs 20 mg twice daily"
+      ],
+      correctIndex: 2,
+      explanation: "Asenapine works only when absorbed through the oral mucosa; swallowing the tablet delivers almost no drug, so his 'adherence' was pharmacologically a non-dose. The remedy is counselling on sublingual placement — dose escalation cannot rescue a destroyed dose, and no two-week tolerance or valproate antagonism exists.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-ase-04",
+      question: "Five days after starting asenapine, a patient reports a numb tongue and a bitter taste; the oral mucosa looks entirely normal. The best interpretation is:",
+      options: [
+        "The first sign of agranulocytosis with occult oral sepsis",
+        "Hypocalcaemia producing perioral tingling",
+        "A hypersensitivity reaction demanding permanent cessation",
+        "Recognised local effects of the sublingual formulation — oral hypoesthesia and dysgeusia"
+      ],
+      correctIndex: 3,
+      explanation: "Tongue hypoesthesia, oral numbness and unpleasant taste are known local effects of sublingual asenapine and rarely force withdrawal. Marrow toxicity presents as fever and neutropenia rather than isolated tongue numbness (a CBC settles it), hypocalcaemia tingles around the mouth and fingers, and allergy is not this pattern.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atp-ase-05",
+      question: "A 21-year-old man needs a drug covering both his first episode of schizophrenia and his recurrent acute manic/mixed episodes of bipolar I; previous oral tablets made him non-compliant and he accepts a melt-under-the-tongue form. The best-fitting agent is:",
+      options: [
+        "Asenapine",
+        "Amisulpride",
+        "Iloperidone",
+        "Zotepine"
+      ],
+      correctIndex: 0,
+      explanation: "Asenapine carries labels for schizophrenia and bipolar I manic/mixed episodes and is delivered sublingually (5–10 mg twice daily) — a combination unique in this batch. Amisulpride, iloperidone and zotepine are swallowed-tablet agents whose labels do not span both problems in this way.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-ase-06",
+      question: "A 24-year-old with bipolar I presents in a mixed episode; olanzapine previously caused 9 kg weight gain and quetiapine left her too sedated for work. A reasonable next choice with intermediate metabolic burden is:",
+      options: [
+        "Thioridazine",
+        "Asenapine",
+        "Clozapine",
+        "Zotepine"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung places asenapine and quetiapine at an intermediate weight-gain level — leaner than clozapine/olanzapine — and asenapine is labelled for manic/mixed episodes, fitting her history and work needs. Clozapine and zotepine are among the most metabolic agents of the class, and thioridazine adds QTc and retinal toxicity with no manic-label advantage.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-ase-07",
+      question: "Before discharge on asenapine, the nurse teaches administration technique. The correct instruction is:",
+      options: [
+        "Chew the tablet thoroughly before swallowing",
+        "Take the dose immediately after a hot beverage",
+        "Place the tablet under the tongue and avoid eating or drinking for about 10 minutes",
+        "Swallow the tablet with a full glass of water for faster effect"
+      ],
+      correctIndex: 2,
+      explanation: "The tablet must dissolve under the tongue (or against the gum for the buccal form) with food and drink withheld for roughly 10 minutes — mucosal absorption is the entire basis of its delivery. Swallowing or chewing destroys the dose, and a hot drink soon after dosing dissolves the tablet prematurely.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-ase-08",
+      question: "In exam rankings of antipsychotic route quirks, asenapine is the classic answer for:",
+      options: [
+        "The only antipsychotic dosed through an osmotic-pump tablet",
+        "The only antipsychotic requiring a 3-hour post-injection observation",
+        "The only antipsychotic needing weekly CBC for six months",
+        "The only antipsychotic delivered sublingually"
+      ],
+      correctIndex: 3,
+      explanation: "Asenapine is the class's only antipsychotic delivered sublingually — the 'swallowed tablet fails' pearl. The 3-hour post-injection observation is olanzapine pamoate's rule, the osmotic OROS shell is paliperidone's, and the weekly-count programme belongs to clozapine.",
+      afterSectionId: "knowledge-graph",
+    },
   ],
   activeRecallQuestions: [
     {

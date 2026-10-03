@@ -825,6 +825,110 @@ export const oxazepam: Drug = {
       explanation: "For anxiety / withdrawal (elder-friendly): start 10–20 mg three times daily, target 30–90 mg/day, maximum 120 mg/day. Adjust by response",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "bzd-oxa-01",
+      question: "The 'LOT' rule of benzodiazepine metabolism — which trio is glucuronidated directly without oxidative steps?",
+      options: [
+        "Lamotrigine, oxcarbazepine and topiramate",
+        "Levetiracetam, oxazepam and triazolam",
+        "Lorazepam, oxazepam and temazepam",
+        "Lorazepam, diazepam and clorazepate"
+      ],
+      correctIndex: 2,
+      explanation: "Lorazepam, oxazepam and temazepam are conjugated straight to glucuronides — no CYP oxidation, no active-metabolite chain — which is why they are the benzodiazepines of choice in hepatic disease and the elderly. The other trios mix oxidative drugs (diazepam, chlordiazepoxide, triazolam) or are not benzodiazepines at all.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "bzd-oxa-02",
+      question: "A 58-year-old with Child-Pugh B cirrhosis and severe generalised anxiety needs a benzodiazepine. The most appropriate choice is:",
+      options: [
+        "Diazepam 5 mg TDS",
+        "Chlordiazepoxide 25 mg TDS",
+        "Alprazolam 0.5 mg TDS",
+        "Oxazepam 10-15 mg TDS"
+      ],
+      correctIndex: 3,
+      explanation: "With hepatic impairment you want a drug that is glucuronidated directly and forms no active metabolites — oxazepam (or lorazepam). Diazepam, chlordiazepoxide and alprazolam all rely on hepatic oxidation and their long half-lives/active metabolites accumulate dangerously in cirrhosis, precipitating encephalopathy.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "bzd-oxa-03",
+      question: "Why does oxazepam have unusually low abuse appeal among benzodiazepines?",
+      options: [
+        "It is a GABA-A antagonist rather than an agonist",
+        "It cannot cross the blood-brain barrier at all",
+        "Its slow onset — from low lipid solubility — blunts the reinforcing rush",
+        "It blocks dopamine reuptake instead of potentiating GABA"
+      ],
+      correctIndex: 2,
+      explanation: "Oxazepam's poor lipid solubility slows absorption, so onset is delayed — and slow-onset sedatives are weak reinforcers because the user does not get the immediate 'hit'. It is a full GABA-A modulator, crosses into the brain fine, and has no dopaminergic action; the kinetics, not the receptor, explain the abuse profile.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "bzd-oxa-04",
+      question: "An 81-year-old needs only occasional, as-needed anxiolytic cover before stressful events. The safest benzodiazepine strategy:",
+      options: [
+        "Diazepam 5 mg PRN",
+        "Oxazepam 10 mg PRN with a hard limit on doses per week",
+        "Clonazepam 0.5 mg daily regardless of need",
+        "Flurazepam 15 mg nightly"
+      ],
+      correctIndex: 1,
+      explanation: "For an elderly patient, oxazepam PRN offers intermediate action without accumulation — diazepam and flurazepam pile up through active metabolites and cause falls, and continuous clonazepam invites dependence regardless of need. Intermittent use with dose limits is the geriatric principle.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "bzd-oxa-05",
+      question: "A woman who took oxazepam 15 mg TDS for six weeks stops abruptly and returns with insomnia, tremor and a racing heart by day 2. Best management:",
+      options: [
+        "Give propranolol and continue off-drug",
+        "Switch immediately to alprazolam at equivalent dose",
+        "Admit for electroconvulsive therapy",
+        "Reinstate oxazepam and taper slowly over weeks"
+      ],
+      correctIndex: 3,
+      explanation: "Six weeks is enough for benzodiazepine dependence — abrupt stop produces rebound insomnia, tremor and autonomic surging, with seizure risk if pushed further. The correct response is reinstatement followed by a planned weeks-to-months taper; beta-blockers only mask tremor, and switching to a shorter, higher-risk drug worsens the problem.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "bzd-oxa-06",
+      question: "Oxazepam's metabolite profile is best described as:",
+      options: [
+        "Converted to desmethyldiazepam, which persists for days",
+        "Oxidised to an active metabolite longer-lived than the parent",
+        "No active metabolites — glucuronide conjugates are inactive and renally excreted",
+        "Hydrolysed by plasma esterases within minutes"
+      ],
+      correctIndex: 2,
+      explanation: "Oxazepam exits as an inactive glucuronide — there is no active-metabolite relay, which is precisely why it does not accumulate. Desmethyldiazepam is the long-lived metabolite of diazepam, chlordiazepoxide and clorazepate; esterase hydrolysis describes the prodrug esters, not oxazepam.",
+      afterSectionId: "neural-pathways",
+    },
+    {
+      id: "bzd-oxa-07",
+      question: "A de-addiction unit plans detoxification for a 65-year-old with alcohol dependence whose LFTs are deranged. Which benzodiazepine strategy fits best?",
+      options: [
+        "Oxazepam-based symptom-triggered regimen — glucuronidation spares the injured liver",
+        "Standard chlordiazepoxide taper regardless of LFTs",
+        "Diazepam loading, since its half-life does not matter in withdrawal",
+        "Clonazepam drops three times daily"
+      ],
+      correctIndex: 0,
+      explanation: "In alcohol withdrawal with hepatic dysfunction, lorazepam or oxazepam is preferred because both rely on glucuronidation and lack active metabolites; the classic chlordiazepoxide or diazepam regimens assume a liver that can oxidise and then clear days of desmethyldiazepam. Symptom-triggered dosing shortens exposure further.",
+      afterSectionId: "top",
+    },
+    {
+      id: "bzd-oxa-08",
+      question: "A patient on oxazepam is started on omeprazole and antacids. The expected effect on oxazepam exposure:",
+      options: [
+        "Levels fall sharply — oxazepam needs gastric acid for conversion",
+        "Levels rise several-fold via CYP inhibition",
+        "Essentially unchanged — unlike clorazepate, oxazepam does not need gastric acid and is not CYP-cleared",
+        "Oxazepam is chelated and becomes unabsorbable"
+      ],
+      correctIndex: 2,
+      explanation: "Oxazepam neither depends on gastric acid (it is not a prodrug) nor on CYP oxidation (glucuronidation only), so acid-suppression barely moves it. The gastric-acid dependency belongs to clorazepate, whose decarboxylation to desmethyldiazepam is delayed by proton-pump inhibitors — that is the mirror fact this question tests.",
+      afterSectionId: "quick-facts",
+    },
   ],
   activeRecallQuestions: [
     {

@@ -827,6 +827,110 @@ export const iloperidone: Drug = {
       explanation: "For schizophrenia: start 1 mg twice daily × 3 days, target 12-24 mg/day, maximum 24 mg/day. Double the dose every 2 days to the target 6-12 mg bd (12-24 mg/day)",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "atp-ilo-01",
+      question: "Iloperidone's receptor signature and its most prominent clinical consequence are:",
+      options: [
+        "5-HT2A/D2 antagonism with strong alpha-1 blockade — orthostatic hypotension",
+        "Pure D2 antagonism — EPS in most patients",
+        "Strong muscarinic blockade — urinary retention",
+        "H1 plus 5-HT2C agonism — profound sedation"
+      ],
+      correctIndex: 0,
+      explanation: "Iloperidone couples 5-HT2A/D2 antagonism with substantial alpha-1 blockade, making orthostatic hypotension and tachycardia its tolerability signature, worst during titration. It is neither an EPS-heavy pure D2 blocker nor a muscarinic agent, and no antipsychotic agonises H1/5-HT2C for sedation.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "atp-ilo-02",
+      question: "CYP2D6 status matters for iloperidone dosing because:",
+      options: [
+        "Genotype exclusively determines QTc risk",
+        "Poor metabolisers reach higher iloperidone levels and need lower doses",
+        "Ultra-rapid metabolisers accumulate the drug dangerously",
+        "The drug works only in poor metabolisers"
+      ],
+      correctIndex: 1,
+      explanation: "Iloperidone is a CYP2D6 substrate; poor metabolisers attain steeply higher exposures, so the label roughly halves their target dose. QTc risk is real but modest and not dictated solely by genotype, and poor metabolisers are not the only responders.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atp-ilo-03",
+      question: "During the first week of iloperidone titration, a patient feels faint on rising from bed; standing BP is 88/56 versus 122/80 lying. The immediate management is:",
+      options: [
+        "Start fludrocortisone permanently",
+        "Switch to clozapine the same day",
+        "Slow the titration, counsel on rising gradually and review hydration",
+        "Double the titration pace to shorten exposure time"
+      ],
+      correctIndex: 2,
+      explanation: "Iloperidone's strong alpha-1 blockade makes orthostatic hypotension its dose-limiting problem, especially with rapid up-titration — the fix is slower titration, positional counselling and hydration review (why the label mandates gradual dose escalation). Accelerating titration invites falls, and fludrocortisone or a clozapine switch is unwarranted.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atp-ilo-04",
+      question: "Why did iloperidone, despite a clean EPS and metabolic profile, see limited clinical adoption?",
+      options: [
+        "It lacks any demonstrable antipsychotic efficacy signal",
+        "It requires weekly CBC monitoring like clozapine",
+        "It is restricted to Japan by regulation",
+        "The mandatory slow titration for orthostatic hypotension delays therapeutic effect, and it offered no clear edge over established drugs"
+      ],
+      correctIndex: 3,
+      explanation: "Iloperidone's mandatory slow titration for orthostatic hypotension delays its therapeutic effect by weeks, and the drug offered no clear edge over established atypicals — hence limited adoption despite low EPS and metabolic burden. Its efficacy is established, no blood-count programme exists (that is clozapine), and its niche restriction is cardiac caution rather than Japanese origin.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-ilo-05",
+      question: "Besides CYP2D6, iloperidone's other major clearance enzyme is:",
+      options: [
+        "CYP3A4",
+        "CYP1A2",
+        "CYP2C19",
+        "CYP2E1"
+      ],
+      correctIndex: 0,
+      explanation: "Iloperidone is cleared by both CYP2D6 and CYP3A4, so strong inhibitors of either enzyme — paroxetine-type 2D6 or ketoconazole-type 3A4 — raise levels and erode tolerability. The 1A2, 2C19 and 2E1 routes play no major part in its fate.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atp-ilo-06",
+      question: "A patient on iloperidone 12 mg twice daily begins paroxetine 20 mg for comorbid depression; days later he is dizzy, sedated and nearly faints on standing. The mechanism is:",
+      options: [
+        "Competition for plasma albumin-binding sites",
+        "Paroxetine's strong CYP2D6 inhibition raising iloperidone exposure",
+        "Additive serotonin toxicity producing autonomic instability",
+        "Paroxetine-induced CYP3A4 induction lowering iloperidone"
+      ],
+      correctIndex: 1,
+      explanation: "Paroxetine is among the strongest CYP2D6 inhibitors; with iloperidone being 2D6-cleared, exposure jumps and alpha-1 effects (dizziness, orthostasis) surface — managed by cutting the iloperidone dose. Serotonin toxicity would show clonus and hyperthermia, paroxetine induces nothing, and albumin competition is not the mechanism.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atp-ilo-07",
+      question: "A 26-year-old with schizophrenia has had severe EPS on risperidone and metabolic syndrome on olanzapine. A drug with low EPS and low metabolic burden is chosen, with counselling about slow titration. Which fits?",
+      options: [
+        "Sulpiride",
+        "Thioridazine",
+        "Iloperidone",
+        "Zotepine"
+      ],
+      correctIndex: 2,
+      explanation: "Iloperidone combines low EPS and low metabolic liability — the price being alpha-1 orthostasis that forces the slow titration just counselled. Zotepine is metabolically clozapine-like and seizure-prone, sulpiride drives prolactin up, and thioridazine adds QTc and retinal toxicity.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-ilo-08",
+      question: "In CYP2D6 poor metabolisers, iloperidone's label response is:",
+      options: [
+        "Double the dose to compensate for non-response",
+        "Add quinidine to normalise the metabolic phenotype",
+        "Switch permanently to IM ziprasidone",
+        "Roughly halve the target dose because exposure rises steeply in poor metabolisers"
+      ],
+      correctIndex: 3,
+      explanation: "Because iloperidone levels climb steeply in 2D6 poor metabolisers, the label halves their dose — a classic pharmacogenetic dose-adjustment hook. Quinidine itself blocks 2D6 and would worsen exposure, and doubling the dose amplifies orthostatic danger.",
+      afterSectionId: "knowledge-graph",
+    },
   ],
   activeRecallQuestions: [
     {

@@ -686,6 +686,110 @@ export const tasimelteon: Drug = {
       explanation: "For non-24-hour sleep-wake disorder: start 20 mg daily before bedtime, target 20 mg, maximum 20 mg. Same clock time daily; entrainment needs consistency",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "slp-tas-01",
+      question: "A 32-year-old totally blind man has had months of drifting sleep: on some nights he sleeps well, on others he is wide awake until dawn, and his daytime sleepiness keeps shifting across the clock. Which drug was developed specifically for his condition?",
+      options: [
+        "Tasimelteon, approved for non-24-hour sleep-wake disorder in totally blind individuals",
+        "Extended-release zolpidem, the Z-drug designed for circadian disorders",
+        "Suvorexant, the orexin antagonist labelled for circadian rhythm rebuilding",
+        "Diphenhydramine, because over-the-counter sedation resets the circadian pacemaker"
+      ],
+      correctIndex: 0,
+      explanation: "Tasimelteon is an MT1/MT2 melatonin receptor agonist approved for non-24-hour sleep-wake disorder (Katzung), the free-running rhythm that develops when totally blind individuals lose the light entrainment of the suprachiasmatic nucleus. Zolpidem and suvorexant are hypnotics for insomnia, not circadian entrainers, and diphenhydramine neither resets nor stabilises the pacemaker. The blind-patient vignette with drifting sleep is the exam hook for this orphan drug.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "slp-tas-02",
+      question: "Tasimelteon's pharmacology most closely resembles which agent, and through what target?",
+      options: [
+        "Hydroxyzine, through central H1 antagonism with anticholinergic sedation",
+        "Ramelteon, through agonism at MT1 and MT2 melatonin receptors with no direct GABAergic action",
+        "Zopiclone, through agonism at the benzodiazepine site of GABA-A receptors",
+        "Suvorexant, through antagonism at OX1 and OX2 orexin receptors"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung describes tasimelteon as similar to ramelteon, an orally active MT1/MT2 agonist with no direct effects on GABAergic neurotransmission, approved for non-24-hour sleep-wake disorder. The GABAergic, orexin and histamine descriptions map onto the Z-drugs, suvorexant and hydroxyzine respectively and are wrong for tasimelteon. Its melatonergic profile also predicts the absence of abuse liability.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "slp-tas-03",
+      question: "Why does a totally blind patient develop non-24-hour sleep-wake disorder, and how does tasimelteon help?",
+      options: [
+        "Permanent darkness raises orexin tone, and tasimelteon blocks orexin receptors to restore the rhythm",
+        "The disorder reflects loss of GABA-A receptors in the thalamus, and tasimelteon replaces the missing GABA input",
+        "Light no longer entrains the suprachiasmatic nucleus, so the pacemaker free-runs; tasimelteon's MT1/MT2 agonism supplies entraining input that stabilises the rhythm",
+        "The blind patient's pineal gland atrophies, and tasimelteon surgically restores melatonin output"
+      ],
+      correctIndex: 2,
+      explanation: "In total blindness, retinal light input cannot reach the suprachiasmatic nuclei, so the endogenous circadian pacemaker drifts on its intrinsic cycle of just over 24 hours; melatonin receptor agonism at MT1/MT2, the pathway through which darkness signals reach the SCN, is the handle tasimelteon uses to re-entrain the rhythm. The pineal is not surgically restorable, orexin is a wake-promoting system unrelated to light entrainment, and no GABA replacement occurs. Entrainment, not sedation, is the therapeutic concept.",
+      afterSectionId: "neural-pathways",
+    },
+    {
+      id: "slp-tas-04",
+      question: "Which statement about tasimelteon's regulatory niche is correct?",
+      options: [
+        "It is the first-line over-the-counter hypnotic for insomnia in India",
+        "It carries a boxed warning for complex sleep behaviours identical to zolpidem's",
+        "It is approved as an antipsychotic adjunct with a prolactin-lowering label",
+        "It is an orphan-drug niche agent approved specifically for non-24-hour sleep-wake disorder, not a first-line hypnotic for ordinary insomnia"
+      ],
+      correctIndex: 3,
+      explanation: "Tasimelteon occupies a narrow orphan niche, the treatment of non-24-hour sleep-wake disorder in the totally blind (Katzung: approved for non-24-hour sleep-wake disorder), rather than competing as a general insomnia hypnotic. It is not an over-the-counter product, has no zolpidem-style boxed warning for complex sleep behaviours, and has no antipsychotic or prolactin indication. The niche label is exactly what examiners test.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "slp-tas-05",
+      question: "A junior resident plans to prescribe tasimelteon for a sighted office worker with simple sleep-onset insomnia. What is the strongest objection?",
+      options: [
+        "Tasimelteon's approved evidence lies in non-24-hour disorder of the blind; for ordinary insomnia the evidence-based routes are agents such as ramelteon for sleep-onset latency and CBT-I",
+        "Tasimelteon is contraindicated in sighted people because light destroys the drug in the retina",
+        "Tasimelteon is a strong orexin blocker and will cause narcolepsy in sighted users",
+        "Tasimelteon requires daily ECGs because it prolongs the QT interval at therapeutic doses"
+      ],
+      correctIndex: 0,
+      explanation: "The teaching point is indication discipline: tasimelteon was developed and approved for non-24-hour sleep-wake disorder in totally blind individuals, and using it for garden-variety insomnia ignores the evidence base that supports ramelteon for sleep-onset latency and CBT-I as first-line therapy. Photosensitivity, iatrogenic narcolepsy and routine QT prolongation are invented hazards. Orphan drugs are not interchangeable with conventional hypnotics.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "slp-tas-06",
+      question: "Like ramelteon, tasimelteon's abuse and scheduling profile is best described as:",
+      options: [
+        "Scheduled as a Schedule X drug in India but unscheduled everywhere else",
+        "No abuse potential and no controlled-substance scheduling, in contrast to scheduled Z-drugs and benzodiazepines",
+        "Schedule II status requiring triplicate prescription because of euphoric effects",
+        "High abuse liability mediated by dopamine reuptake inhibition in the nucleus accumbens"
+      ],
+      correctIndex: 1,
+      explanation: "As a melatonergic agonist acting on circadian receptors rather than on reward or GABA pathways, tasimelteon shares ramelteon's absence of euphoria, dependence and scheduling, which is the class contrast examiners love against the scheduled Z-drugs and benzodiazepines. Dopamine-reuptake stimulant pharmacology describes amphetamine-like agents, not melatonergics, and there is no India-specific Schedule X status for it. The scheduled-versus-unscheduled ladder is a recurring KYP pearl.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "slp-tas-07",
+      question: "Which contrast between the two melatonin receptor agonists is correct?",
+      options: [
+        "Both are approved only for narcolepsy with cataplexy",
+        "Both are approved only as adjuncts to antipsychotics for drug-induced insomnia",
+        "Ramelteon is indicated for sleep-onset insomnia; tasimelteon for non-24-hour sleep-wake disorder in the blind",
+        "Tasimelteon is indicated for sleep-onset insomnia; ramelteon for non-24-hour disorder in the blind"
+      ],
+      correctIndex: 2,
+      explanation: "The pairing is symmetrical and memorable: ramelteon carries the sleep-onset insomnia label (Katzung: prescribed for difficulty falling asleep), while tasimelteon carries the non-24-hour sleep-wake disorder label for the totally blind. Neither is a narcolepsy drug, since narcolepsy reflects orexin loss and would point toward orexin agonism rather than antagonism, and neither has an antipsychotic-adjunct label. Swapping the two indications is the classic mirror trap.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "slp-tas-08",
+      question: "A blind patient starting tasimelteon asks how to take it. Which counselling is most appropriate?",
+      options: [
+        "Take it only on the nights when you cannot sleep, at whatever time suits, to preserve the drug effect",
+        "Take it at breakfast with strong tea to counteract daytime sleepiness",
+        "Take double the dose on weekends to reset the rhythm for the whole week",
+        "Take it at a fixed time before the intended bedtime every night, keeping a consistent dark, quiet sleep window"
+      ],
+      correctIndex: 3,
+      explanation: "Circadian entrainment therapy works only with a fixed nightly dosing time anchored to the intended sleep period; erratic, as-needed or weekend-doubling dosing defeats the very entrainment the drug is meant to provide. Morning dosing inverts the phase signal, and caffeine co-administration has no place. Consistency of the sleep-wake schedule is part of the treatment, not an optional extra.",
+      afterSectionId: "quick-facts",
+    },
   ],
   activeRecallQuestions: [
     {

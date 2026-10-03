@@ -756,6 +756,110 @@ export const ketamine: Drug = {
       explanation: "For treatment-resistant depression (iv, off-label protocol): start 0.5 mg/kg IV over 40 minutes, target 0.5 mg/kg × 6 (acute course), maximum Protocol-defined. Acute course: 2-3 infusions weekly × 2 weeks; response-guided maintenance at increasing intervals",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "spc-ket-01",
+      question: "Ketamine's primary pharmacological action, the one that underlies both its anaesthetic and its rapid antidepressant effects, is best described as:",
+      options: [
+        "Noncompetitive, use-dependent blockade of the NMDA-type glutamate receptor ion channel",
+        "Competitive antagonism at the GABA-A benzodiazepine site, lowering chloride influx",
+        "Inhibition of monoamine oxidase-A, raising synaptic serotonin and noradrenaline",
+        "Blockade of dopamine D2 receptors in the mesolimbic pathway"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung identifies ketamine as a phencyclidine derivative whose major effect is inhibition of the NMDA receptor complex — the shared basis of its dissociative anaesthesia and its rapid antidepressant action. GABA-A-site antagonism is a beta-carboline convulsant property, MAO-A inhibition describes phenelzine, and mesolimbic D2 blockade is haloperidol's territory — none belongs to ketamine.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "spc-ket-02",
+      question: "Receptor binding alone does not explain ketamine's speed. The downstream mechanism most often invoked to explain why a single sub-anaesthetic dose lifts depression within hours is:",
+      options: [
+        "Direct agonism at nicotinic acetylcholine receptors of the locus coeruleus",
+        "Enhanced AMPA-receptor trafficking with mTOR-driven synaptogenesis following NMDA disinhibition",
+        "Immediate irreversible inhibition of serotonin reuptake at SERT, like fluoxetine but faster",
+        "Rapid up-regulation of striatal D2 dopamine receptors"
+      ],
+      correctIndex: 1,
+      explanation: "The breakthrough mechanism story: NMDA blockade on interneurons disinhibits glutamate release, which drives AMPA-receptor insertion and mTOR-mediated synaptogenesis — structural changes measurable within hours, unlike the slow adaptive shifts that follow monoamine reuptake blockade. SERT blockade is not ketamine's action and is not irreversible, D2 up-regulation is an antipsychotic-tolerance concept, and nicotinic locus-coeruleus agonism is not part of the model.",
+      afterSectionId: "neurotransmitters",
+    },
+    {
+      id: "spc-ket-03",
+      question: "A 34-year-old schoolteacher with major depressive disorder has had no meaningful response to three adequate antidepressant trials and now describes active suicidal thinking with a plan. The team wants an intervention whose antidepressant effect begins within hours rather than weeks. The most appropriate choice is:",
+      options: [
+        "Adding fluoxetine at bedtime for its sedating profile",
+        "Starting lithium and waiting for its full augmentation effect",
+        "Intranasal esketamine under a REMS-style monitoring protocol",
+        "Increasing sertraline from 100 mg to 200 mg and reassessing at 6 weeks"
+      ],
+      correctIndex: 2,
+      explanation: "Treatment-resistant depression with acute suicidality is the signature indication for intranasal esketamine — ketamine's S-enantiomer — whose antidepressant effect begins within hours and whose dispensing follows a REMS-style monitoring protocol because of sedation, dissociation and transient blood-pressure rises (KYP anchor). Sertraline escalation and lithium augmentation need weeks, and fluoxetine is a nonsedating SSRI with a 2-4 week onset — none meets the urgency.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "spc-ket-04",
+      question: "A psychiatrist plans racemic ketamine for a severely depressed inpatient and is quizzed by a resident on dose logic. Which statement correctly separates the antidepressant use from the anaesthetic use?",
+      options: [
+        "Antidepressant and anaesthetic doses are identical; only the route differs",
+        "The antidepressant dose exceeds the anaesthetic dose to force a glutamate surge",
+        "Ketamine is dosed by body surface area for depression but by weight for anaesthesia",
+        "The antidepressant dose is sub-anaesthetic — roughly 0.5 mg/kg infused over 40 minutes, far below the 1-2 mg/kg intravenous induction dose"
+      ],
+      correctIndex: 3,
+      explanation: "Sub-anaesthetic dosing (about 0.5 mg/kg over 40 minutes in research protocols) is the antidepressant register, while anaesthetic induction uses 1-2 mg/kg IV or 4-6 mg/kg IM (Katzung) — pushing to anaesthetic levels in depression buys dissociation, not extra mood benefit. Weight-based dosing applies to both registers, so the remaining options misstate the dose relationship.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "spc-ket-05",
+      question: "Which statement about ketamine's pharmacokinetics is correct?",
+      options: [
+        "It is highly lipid-soluble with rapid onset; hepatic N-demethylation yields the active metabolite norketamine, one third to one fifth as potent",
+        "It is water-soluble, slowly brain-penetrating, and cleared unchanged by the kidney",
+        "Its metabolite norketamine is a pure NMDA antagonist several times more potent than the parent drug",
+        "Its bolus effect ends because of dose-dependent renal excretion of unchanged parent drug"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung: high lipid solubility gives rapid onset, a bolus effect ends by redistribution to inactive tissue sites, and liver N-demethylation produces norketamine — active but only one third to one fifth as potent, then hydroxylated and conjugated for urinary excretion. Calling norketamine more potent than the parent inverts the metabolite fact, and neither slow brain entry nor renal clearing of unchanged drug describes ketamine.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "spc-ket-06",
+      question: "A young adult receives intravenous ketamine for a painful dressing change. On emergence he is tearful and frightened, describing vivid out-of-body visions with distorted sounds. The team's best response is grounded in which fact?",
+      options: [
+        "The reaction means a 10-fold overdose occurred and mandates naloxone reversal",
+        "Unpleasant emergence reactions are the main factor limiting ketamine's use, and they can be blunted by benzodiazepine premedication",
+        "These reactions signal anaphylaxis and demand immediate adrenaline",
+        "Emergence delirium is unique to ketamine among anaesthetics and has no mitigating strategy"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung names vivid dreams, hallucinations and out-of-body experiences during emergence as the main dose-limiting problem, less frequent in children and blunted by benzodiazepine co-administration. Anaphylaxis is not the mechanism, and naloxone is useless here — ketamine has no opioid action, so the other options misread a predictable, manageable effect.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "spc-ket-07",
+      question: "A 24-year-old man who has used ketamine recreationally almost daily for three years now reports suprapubic pain, urinary frequency and haematuria; cystoscopy shows ulceration. The most likely explanation is:",
+      options: [
+        "Cyclophosphamide-induced haemorrhagic cystitis",
+        "Tuberculous cystitis from reactivated pulmonary infection",
+        "Ketamine-induced ulcerative cystitis, a documented toxicity of chronic heavy misuse",
+        "E. coli cystitis acquired from poor hygiene"
+      ],
+      correctIndex: 2,
+      explanation: "Chronic ketamine misuse is linked to a distinctive ulcerative cystitis with pelvic pain, frequency and haematuria, alongside cognitive problems — the reason its misuse profile matters beyond anaesthesia (KYP anchor). No immunosuppressant exposure supports cyclophosphamide cystitis, and an infective cystitis would rest on pyuria and positive culture rather than this drug history.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "spc-ket-08",
+      question: "A 6-year-old with severe status asthmaticus needs sedation for ventilation; the intensivist selects ketamine. The pharmacological rationale — and the caveat the same intensivist must respect — is:",
+      options: [
+        "Ketamine is the most potent respiratory depressant among intravenous anaesthetics, useful to quiet air hunger",
+        "Ketamine lowers systemic vascular resistance and intracranial pressure, ideal after head injury",
+        "Ketamine is contraindicated in asthma and is chosen only when no other drug exists",
+        "Ketamine preserves respiratory drive and relaxes bronchial smooth muscle, but raises blood pressure and cerebral blood flow"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung: ketamine relaxes bronchial smooth muscle and spares respiratory reflexes — a desirable adjunct in reactive airways — while centrally mediated sympathetic stimulation transiently raises blood pressure, heart rate and cardiac output, and it is a cerebral vasodilator increasing CBF and CMRO2, hence caution with raised intracranial pressure. The other options invert both the respiratory and the haemodynamic profile.",
+      afterSectionId: "knowledge-graph",
+    },
   ],
   activeRecallQuestions: [
     {

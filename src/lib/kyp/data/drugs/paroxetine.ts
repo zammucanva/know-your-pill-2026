@@ -1734,6 +1734,149 @@ export const paroxetine: Drug = {
       explanation: "Paroxetine 7.5mg CR (Brisdelle) is the ONLY non-hormonal FDA-approved drug for vasomotor symptoms (hot flushes) of menopause. This is a niche use — particularly useful in breast-cancer survivors who cannot take hormone replacement therapy (HRT). CRITICAL CAUTION: only use if the patient is NOT on tamoxifen (paroxetine is contraindicated with tamoxifen). If on tamoxifen, use venlafaxine instead (also effective for hot flushes, minimal CYP2D6 effect).",
       afterSectionId: "evidence-practice",
     },
+    {
+      id: "ssri-par-01",
+      question: "Paroxetine's pharmacokinetic signature and its main clinical consequence:",
+      options: [
+        "Longest half-life — allows weekly dosing",
+        "It forms the active metabolite norparoxetine",
+        "Shortest half-life in the class with no active metabolite — highest discontinuation-syndrome risk",
+        "Its kinetics are always linear across doses"
+      ],
+      correctIndex: 2,
+      explanation: "Paroxetine's half-life is about 21 hours with no active metabolite — the class's PK worst case for stopping: discontinuation syndrome is most frequent and severe. Kinetics also turn nonlinear at higher doses. Know Your Pill's tag: 'Shortest half-life (worst discontinuation)'. The long-half-life items describe fluoxetine; norfluoxetine is fluoxetine's metabolite.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "ssri-par-02",
+      question: "The strongest CYP2D6 inhibitor among the SSRIs is:",
+      options: [
+        "Escitalopram",
+        "Sertraline",
+        "Citalopram",
+        "Paroxetine"
+      ],
+      correctIndex: 3,
+      explanation: "Paroxetine (with fluoxetine) anchors 2D6 inhibition; paroxetine is conventionally cited as the strongest. Consequences: tamoxifen activation blocked, TCA and atomoxetine levels rise, codeine/tramadol analgesia blunted. Escitalopram, sertraline and citalopram are comparatively CYP-quiet.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "ssri-par-03",
+      question: "Paroxetine's tolerability signature within the SSRI class:",
+      options: [
+        "Most sedating and most anticholinergic, with weight gain — useful for anxious-insomniac adults, problematic in the elderly",
+        "Most activating and weight-neutral",
+        "Completely free of anticholinergic effects",
+        "Consistently causes weight loss"
+      ],
+      correctIndex: 0,
+      explanation: "Paroxetine has genuine muscarinic affinity — dry mouth, constipation, sedation — plus weight gain over months. That profile can suit an anxious, insomniac young adult but stacks risks in the elderly (Beers-criteria flag) and in glaucoma/BPH. 'Most activating' describes fluoxetine.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "ssri-par-04",
+      question: "A 34-year-old stops paroxetine 20 mg abruptly before her wedding. On day 3: dizziness, 'electric shock' sensations down her arms, flu-like aching and irritability. Diagnosis and management:",
+      options: [
+        "Relapse of depression — restart the full dose indefinitely",
+        "SSRI discontinuation syndrome — reinstate the drug and taper slowly (a fluoxetine bridge is an option)",
+        "Serotonin syndrome — give cyproheptadine",
+        "A viral illness — symptomatic care only"
+      ],
+      correctIndex: 1,
+      explanation: "The FINISH cluster — Flu-like, Insomnia, Nausea, Imbalance, Sensory shocks, Hyperarousal — three days after abrupt stop of the shortest-half-life SSRI is textbook discontinuation, not relapse (too fast) and not serotonin syndrome (no serotonergic load). Management: reinstate, then taper gradually; fluoxetine bridging exploits its long half-life.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "ssri-par-05",
+      question: "A 49-year-old on tamoxifen for breast cancer is prescribed paroxetine by her GP for hot flushes and low mood. Why flag this combination?",
+      options: [
+        "Paroxetine raises tamoxifen levels causing toxicity",
+        "There is no clinically relevant interaction",
+        "CYP2D6 inhibition reduces endoxifen formation — less tamoxifen efficacy and higher recurrence risk",
+        "The only concern is additive nausea"
+      ],
+      correctIndex: 2,
+      explanation: "Tamoxifen needs CYP2D6 to become endoxifen; paroxetine is its most potent clinical inhibitor. Population data (Kelly et al., BMJ 2010) linked paroxetine-plus-tamoxifen to higher breast-cancer mortality — the flagship pharmacogenomic SSRI interaction. Know Your Pill's paroxetine row: 'tamoxifen interaction'. Prefer a 2D6-neutral antidepressant.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "ssri-par-06",
+      question: "A 26-year-old woman with GAD is planning her first pregnancy within a year. Which SSRI should be avoided and why?",
+      options: [
+        "Sertraline — Category X",
+        "Escitalopram — proven teratogen in all trimesters",
+        "Fluoxetine — causes limb defects",
+        "Paroxetine — Category D; first-trimester cardiac septal-defect signal"
+      ],
+      correctIndex: 3,
+      explanation: "Paroxetine is the SSRI outlier in pregnancy — Category D with an early septal heart-defect signal (Know Your Pill: 'Category D'). Sertraline is the customary first choice when conceiving; escitalopram and fluoxetine have no such category. The key exam principle: planned, shared decision-making — never abrupt self-stopping.",
+      afterSectionId: "top",
+    },
+    {
+      id: "ssri-par-07",
+      question: "A 40-year-old with GAD, prominent insomnia and anxiety-driven weight loss is deliberately started on paroxetine 12.5 mg CR at night. Which counselling point matters MOST at initiation?",
+      options: [
+        "Early nausea and sedation are possible; full anxiolytic effect takes 2-6 weeks; weight gain and sexual effects can emerge over time",
+        "Anxiolysis will be immediate, within 48 hours",
+        "There is no sedation risk at any dose",
+        "It can be stopped any time without tapering"
+      ],
+      correctIndex: 0,
+      explanation: "Sedation may help his insomnia early, but honest expectations drive adherence: onset of anxiolytic benefit 2-6 weeks, early GI upset, later weight gain and sexual dysfunction, and a mandatory slow taper because of paroxetine's discontinuation profile. SSRIs never work in 48 hours; promising that sets up early abandonment.",
+      afterSectionId: "top",
+    },
+    {
+      id: "ssri-par-08",
+      question: "The paroxetine controlled-release (CR) formulation's main marketed advantage:",
+      options: [
+        "Complete elimination of the discontinuation syndrome",
+        "Smoother levels with less early nausea; positioned for panic disorder and PMDD",
+        "Enables once-weekly dosing",
+        "Stronger CYP2D6 inhibition as a therapeutic goal"
+      ],
+      correctIndex: 1,
+      explanation: "CR blunts peak-related early nausea — helpful in panic disorder (where GI sensitivity dominates) and PMDD, where it also carries a label. It does NOT abolish discontinuation (the long-term problem is the short half-life, not the peak), and weekly dosing exists only for fluoxetine. 'Stronger 2D6 inhibition' is a hazard here, never a goal.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "ssri-par-09",
+      question: "A 72-year-old with narrow-angle glaucoma risk, BPH and ongoing oxybutynin therapy needs an SSRI for GAD. Which one should be AVOIDED?",
+      options: [
+        "Escitalopram",
+        "Sertraline",
+        "Paroxetine — it stacks anticholinergic burden",
+        "Citalopram"
+      ],
+      correctIndex: 2,
+      explanation: "Paroxetine's muscarinic activity on top of oxybutynin invites acute angle closure and urinary retention in a predisposed elderly patient. Choose a CYP-quiet, low-anticholinergic agent (escitalopram or sertraline) and dose for age. This is the practical reason paroxetine tops 'avoid in elderly' lists.",
+      afterSectionId: "top",
+    },
+    {
+      id: "ssri-par-10",
+      question: "A patient has failed three gradual tapers off paroxetine with classic discontinuation each time. The advanced cross-taper strategy:",
+      options: [
+        "Abrupt stop with benzodiazepine cover alone",
+        "Double the paroxetine dose then stop cold",
+        "Switch directly to duloxetine the same day",
+        "Convert to fluoxetine, stabilise, then taper fluoxetine slowly over several weeks"
+      ],
+      correctIndex: 3,
+      explanation: "Fluoxetine's long half-life makes it a built-in self-taper — the standard bridge for discontinuation-prone paroxetine failures: switch to an equivalent fluoxetine dose, hold stable, then taper in weekly steps. Benzodiazepines mask symptoms without correcting the pharmacology, and same-day switches recreate the problem with a shorter half-life.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "ssri-par-11",
+      question: "The best-documented pharmacogenomic example of an SSRI–drug interaction affecting disease outcomes is:",
+      options: [
+        "CYP2D6 inhibition by paroxetine in tamoxifen-treated patients — higher breast-cancer recurrence and mortality",
+        "Citalopram–warfarin INR data",
+        "Escitalopram–clopidogrel via CYP2C19",
+        "Fluvoxamine–statin myopathy"
+      ],
+      correctIndex: 0,
+      explanation: "The paroxetine–tamoxifen CYP2D6 story (Kelly et al., BMJ 2010) is the canonical example: 2D6 inhibition reduced endoxifen and tracked with higher recurrence/mortality. It is cited in every pharmacogenomics lecture that touches psychopharmacology. The distractors describe real-but-minor or apocryphal interactions.",
+      afterSectionId: "neural-pathways",
+    },
   ],
 
   /* End-of-page active recall questions */

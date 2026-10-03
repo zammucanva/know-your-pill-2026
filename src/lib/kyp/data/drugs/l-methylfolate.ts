@@ -661,6 +661,110 @@ export const lMethylfolate: Drug = {
       explanation: "For depression augmentation: start 7.5 mg once daily, target 7.5-15 mg/day, maximum 15 mg/day. May increase to 15 mg",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "spc-lmf-01",
+      question: "L-methylfolate (L-5-MTHF) supports antidepressant response primarily because it:",
+      options: [
+        "Is the active circulating folate that donates methyl groups for methionine and SAM synthesis and feeds the tetrahydrobiopterin cofactor pathway of monoamine synthesis",
+        "Directly blocks the serotonin transporter with potency between fluoxetine and sertraline",
+        "Is a prodrug that the kidney converts to folic acid for erythropoiesis",
+        "Acts as a thyroid-hormone analogue that sensitises nuclear receptors"
+      ],
+      correctIndex: 0,
+      explanation: "L-5-MTHF is the reduced, active folate: it remethylates homocysteine to methionine for SAM-dependent monoamine metabolism and supports tetrahydrobiopterin, the cofactor for tyrosine and tryptophan hydroxylase — the biochemical rail behind its augmentation use. It has no SERT affinity, no renal activation to folic acid, and no thyroid-receptor action.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "spc-lmf-02",
+      question: "A 29-year-old on sertraline 200 mg daily for 10 weeks has only a partial response and refuses 'more chemicals'. She asks for the least burdensome, nonsedating add-on. Which augmentation fits her request?",
+      options: [
+        "Switching to paroxetine 40 mg daily",
+        "L-methylfolate as a prescription medical-food adjunct",
+        "Adding mirtazapine 30 mg at night",
+        "Adding olanzapine 5 mg daily"
+      ],
+      correctIndex: 1,
+      explanation: "L-methylfolate augmentation suits SSRI partial responders who want minimal burden: it carries essentially no adverse-effect or sedation load as a medical food (KYP anchor), whereas mirtazapine adds sedation and weight gain, olanzapine adds metabolic risk, and a paroxetine switch restarts the onset clock with a more anticholinergic, discontinuation-prone SSRI.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "spc-lmf-03",
+      question: "A patient holding a box of l-methylfolate asks the pharmacist: 'Is this a drug or a supplement?' The accurate regulatory-style answer:",
+      options: [
+        "It is a full prescription antidepressant approved as monotherapy for MDD",
+        "It is an investigational drug available only through clinical trials",
+        "It is marketed as a prescription medical food — a niche category for managing a distinct nutritional requirement, not a conventionally approved drug indication",
+        "It is an over-the-counter multivitamin with no prescription status"
+      ],
+      correctIndex: 2,
+      explanation: "The nutraceutical-adjacent exam oddity: l-methylfolate sits in the medical-food category used for augmentation in SSRI non-responders — a status distinct from OTC vitamins, from antidepressant drug approval, and from trial-only access. That label honesty also explains why its evidence standards differ from those of prescription drugs.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "spc-lmf-04",
+      question: "A patient with a reported MTHFR polymorphism asks why the psychiatrist chose L-methylfolate over plain folic acid. The pharmacokinetic answer:",
+      options: [
+        "Folic acid requires renal hydroxylation that l-methylfolate avoids",
+        "L-methylfolate is a prodrug converted by gastric acid, unlike folic acid",
+        "The polymorphism causes duodenal malabsorption of folic acid",
+        "Folic acid must be reduced to L-5-MTHF by MTHFR, a step the polymorphism can impair; L-methylfolate bypasses it entirely"
+      ],
+      correctIndex: 3,
+      explanation: "The enzyme step that folic acid needs — MTHFR-mediated reduction to L-5-MTHF — is exactly what C677T-style polymorphisms impair, so the active form skips the bottleneck and delivers methyl donors directly. Renal activation, gastric-acid conversion and duodenal malabsorption are invented steps; the separate methotrexate-rescue story uses folinic, not methyl, folate.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "spc-lmf-05",
+      question: "A strict vegetarian starting l-methylfolate augmentation has an unexamined borderline macrocytic picture on a routine smear. The pharmacologically wise counselling point is:",
+      options: [
+        "Folate can normalise the blood counts of B12 deficiency while neurological damage progresses — check B12 first",
+        "L-methylfolate cures pernicious anaemia and makes B12 testing unnecessary",
+        "The combination causes serotonin syndrome within days",
+        "Folate therapy reliably worsens depression and must be stopped if fatigue appears"
+      ],
+      correctIndex: 0,
+      explanation: "The classic haematology caution: methylfolate corrects the megaloblastic anaemia of B12 deficiency, masking it while subacute combined degeneration advances — hence B12 status is checked before or alongside folate. It neither treats the neurological component, nor interacts serotonergically, nor worsens depression.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "spc-lmf-06",
+      question: "How does l-methylfolate's interaction profile compare with other augmentation agents?",
+      options: [
+        "It raises lithium levels through NSAID-like renal competition",
+        "It has essentially no clinically important CYP-mediated interactions — a vitamin-like clearance with no enzyme induction or inhibition of note",
+        "It inhibits CYP2D6, raising paroxetine levels like fluoxetine",
+        "It induces CYP3A4, reducing quetiapine exposure like carbamazepine"
+      ],
+      correctIndex: 1,
+      explanation: "L-methylfolate's vitamin-like clearance leaves essentially no clinically important CYP-mediated interactions — no enzyme induction or inhibition of note — which is the contrast the examiner wants with lithium (NSAID/thiazide level-raising interactions), with inducers such as carbamazepine, and with 2D6-inhibiting SSRIs like fluoxetine. The three interaction claims in the other options belong to fluoxetine, carbamazepine and NSAIDs respectively, not to folate.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "spc-lmf-07",
+      question: "An Indian internist who routinely co-prescribes folic acid with methotrexate and phenytoin asks how l-methylfolate differs. The correct distinction is:",
+      options: [
+        "L-methylfolate is the preferred rescue agent after high-dose methotrexate",
+        "Folic acid crosses the blood-brain barrier freely while l-methylfolate does not",
+        "Folic-acid co-prescription there prevents antimetabolite and anticonvulsant folate deficiency, whereas L-methylfolate's niche is neuropsychiatric augmentation of antidepressants",
+        "They are the same molecule at different prices"
+      ],
+      correctIndex: 2,
+      explanation: "The leucovorin-style rescue and anticonvulsant folate-suppletion stories use folic/folinic acid; l-methylfolate's therapeutic identity is the active form augmenting antidepressant response in the brain. Equating the two ignores the MTHFR-bypass logic, methotrexate rescue uses folinic acid rather than the methyl form, and the barrier claim is backwards — the reduced form is the CNS-relevant one.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "spc-lmf-08",
+      question: "A postgraduate exam vignette asks a resident to rank augmentation 'speed lanes' for a partial SSRI responder: intranasal esketamine, adjunctive liothyronine, and adjunctive l-methylfolate. The correct ranking of onset is:",
+      options: [
+        "L-methylfolate fastest, then T3, then esketamine",
+        "All three act within 24-48 hours",
+        "All three require 6-8 weeks before any effect",
+        "Esketamine within hours; T3 within days to about two weeks; l-methylfolate over weeks"
+      ],
+      correctIndex: 3,
+      explanation: "The rapid-antidepressant framing: ketamine/esketamine act within hours (AMPA-trafficking story), T3 augmentation is the classic rapid adjunct acting over days to a couple of weeks, and l-methylfolate corrects a cofactor supply over weeks. The inverted ladder and the all-fast/all-slow extremes each misstate at least one lane.",
+      afterSectionId: "knowledge-graph",
+    },
   ],
   activeRecallQuestions: [
     {

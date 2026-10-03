@@ -641,6 +641,110 @@ export const lorcaserin: Drug = {
       explanation: "For chronic weight management (withdrawn): start 10 mg twice daily, target 20 mg/day, maximum —. —",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "spc-lrc-01",
+      question: "Lorcaserin produced weight loss through:",
+      options: [
+        "Selective 5-HT2C receptor agonism in hypothalamic appetite circuits, enhancing satiety",
+        "Nonselective 5-HT2B/2C agonism copied from fenfluramine",
+        "Orexin-receptor antagonism",
+        "Pancreatic lipase inhibition"
+      ],
+      correctIndex: 0,
+      explanation: "Lorcaserin was a selective 5-HT2C agonist — activation of POMC/CART satiety pathways in hypothalamic appetite circuits reduced food intake; its safety story hinged on selectivity OVER 5-HT2A/2B. Full 2B agonism is fenfluramine's mistake, orexin antagonism is suvorexant's sleep mechanism, and lipase inhibition is orlistat.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "spc-lrc-02",
+      question: "The receptor-selectivity point examiners test about lorcaserin is:",
+      options: [
+        "It blocked 5-HT2A to cause satiety, mirroring pimavanserin's antipsychotic design",
+        "Its 5-HT2C selectivity over 5-HT2A/2B was designed to avoid the cardiac valvulopathy and pulmonary hypertension linked to 2B agonism in the fenfluramine era",
+        "It was a pure 5-HT2B agonist, and that selectivity was its safety advantage",
+        "5-HT2C receptors exist only on heart valves, explaining its cardiac safety"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung records that the 5-HT2 agonists fenfluramine and dexfenfluramine caused pulmonary hypertension and cardiac valve defects and were withdrawn; lorcaserin's 2C-selectivity was the deliberate fix. Calling it a 2B agonist inverts the story, 2C is not a valvular receptor, and satiety came from 2C agonism — not from 2A blockade, which is pimavanserin's antipsychotic mechanism.",
+      afterSectionId: "neurotransmitters",
+    },
+    {
+      id: "spc-lrc-03",
+      question: "In 2018, an obese woman with prediabetes (BMI 33) is prescribed lorcaserin as an adjunct to diet and exercise. The correct dosing register then:",
+      options: [
+        "0.5 mg subcutaneous injection daily",
+        "60 mg orally once daily at bedtime",
+        "10 mg orally twice daily, adjusted to response and tolerance",
+        "100 mg orally once weekly before breakfast"
+      ],
+      correctIndex: 2,
+      explanation: "Lorcaserin's registered oral dosing was 10 mg twice daily as an adjunct to lifestyle measures in obesity (BMI >=30, or >=27 with a comorbidity such as prediabetes). Weekly 100 mg, once-daily 60 mg and a subcutaneous register were never its regimen — the injected GLP-1 analogue is the modern distractor.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "spc-lrc-04",
+      question: "A patient who took lorcaserin years ago asks why it disappeared from the market. The correct answer:",
+      options: [
+        "It was withdrawn for cardiac valvulopathy of the fenfluramine type",
+        "It was withdrawn for unacceptable hepatotoxicity",
+        "It lost patent protection and was reformulated",
+        "The FDA requested withdrawal in 2020 after its cardiovascular-outcomes trial signalled an increased cancer risk"
+      ],
+      correctIndex: 3,
+      explanation: "Lorcaserin was withdrawn at the FDA's request in 2020 when CAMELLIA-TIMI 61 — its cardiovascular safety trial — showed more cancers in the treated arm. Valvulopathy was the fenfluramine/dexfenfluramine story (a deliberate lookalike distractor), sibutramine was withdrawn for cardiovascular events, and hepatotoxicity or patent explanations are fabrications here.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "spc-lrc-05",
+      question: "A woman on fluoxetine 40 mg asks to add lorcaserin 'for the last 10 kg'. The correct caution:",
+      options: [
+        "Both are serotonergic — serotonin-syndrome risk warrants avoidance or caution with SSRIs, SNRIs and MAOIs",
+        "Lorcaserin is a strong CYP2D6 inhibitor and would raise fluoxetine levels",
+        "Fluoxetine blocks lorcaserin's renal excretion, causing hypoglycaemia",
+        "The combination is the approved way to speed weight loss"
+      ],
+      correctIndex: 0,
+      explanation: "Lorcaserin was serotonergic by design, and its label warned about serotonin syndrome with SSRIs, SNRIs and MAOIs — a pharmacodynamic interaction, not a metabolic one. CYP2D6 inhibition belongs to fluoxetine itself rather than lorcaserin, renal blocking is invented, and combination for speed was never an approval — it multiplies the risk.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "spc-lrc-06",
+      question: "Which statement about lorcaserin's drug-interaction identity is correct?",
+      options: [
+        "Grapefruit juice was contraindicated because lorcaserin inhibits CYP3A4",
+        "Its key interactions were pharmacodynamic — serotonergic caution with SSRI/SNRI/MAOI therapy and sulfonylurea/insulin hypoglycaemia risk in diabetics",
+        "It required INR monitoring because it strongly inhibited warfarin metabolism",
+        "It was safe to combine freely with MAOIs because its agonism is 2C-selective"
+      ],
+      correctIndex: 1,
+      explanation: "The interaction story is pharmacodynamic: serotonergic stacking, and additive hypoglycaemia when added to insulin or sulfonylureas (whose doses needed reduction). Warfarin-metabolism inhibition, MAOI safety and CYP3A4-inhibitor claims misassign mechanisms — 2C-selectivity never licensed MAOI combinations.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "spc-lrc-07",
+      question: "An Indian patient with obesity (BMI 31, no diabetes) asks for a prescription anti-obesity drug today. Which option is actually available and appropriate among the following?",
+      options: [
+        "Sibutramine sourced from neighbouring-market pharmacies",
+        "Rimonabant imported online",
+        "Orlistat — the peripheral lipase inhibitor that remains a standard pharmacotherapy option in India",
+        "Lorcaserin, recently reintroduced after 2020"
+      ],
+      correctIndex: 2,
+      explanation: "With lorcaserin withdrawn in 2020 and never an Indian mainstay, orlistat remains the accessible anti-obesity agent, acting peripherally on pancreatic lipase with GI effects rather than central serotonergic ones. Sibutramine was withdrawn globally for cardiovascular events and rimonabant for psychiatric risk — sourcing either online is exactly the hazard the withdrawal history teaches.",
+      afterSectionId: "top",
+    },
+    {
+      id: "spc-lrc-08",
+      question: "A patient with type 2 diabetes on gliclazide starts lorcaserin and two weeks later has sweating, tremor and confusion relieved by glucose. The mechanism-based management:",
+      options: [
+        "Gliclazide caused lactic acidosis; switch to metformin",
+        "The episodes are lorcaserin withdrawal symptoms; double its dose",
+        "This is diabetic gastroparesis delaying meals; add a prokinetic",
+        "Lorcaserin can enhance hypoglycaemia with insulin or sulfonylureas — reduce the antidiabetic doses and monitor glucose"
+      ],
+      correctIndex: 3,
+      explanation: "Lorcaserin's label warned of hypoglycaemia when combined with insulin or sulfonylureas, advising antidiabetic dose reduction and glucose monitoring — exactly this presentation. Lactic acidosis is a metformin concern (and metformin alone rarely causes hypoglycaemia), doubling the weight-loss drug is backwards, and gastroparesis does not produce reproducible post-dose hypoglycaemia.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

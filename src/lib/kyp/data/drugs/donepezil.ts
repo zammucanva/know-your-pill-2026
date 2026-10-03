@@ -777,6 +777,110 @@ export const donepezil: Drug = {
       explanation: "For alzheimer's disease: start 5 mg once daily at bedtime × 4 weeks, target 10 mg/day, maximum 23 mg/day (severe, cautious). Increase to 10 mg; 23 mg for severe in selected patients",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "stm-don-01",
+      question: "Donepezil's mechanism is best stated as:",
+      options: [
+        "Reversible, centrally selective acetylcholinesterase inhibition, raising cortical acetylcholine in surviving basal-forebrain projections (Tripathi)",
+        "Irreversible peripheral acetylcholinesterase inhibition",
+        "Competitive NMDA receptor blockade",
+        "Inhibition of acetylcholine release from nerve terminals"
+      ],
+      correctIndex: 0,
+      explanation: "Donepezil is the cerebroselective, reversible anti-AChE whose cortical acetylcholine elevation improves cognitive and daily-living scores; its peripheral enzyme inhibition is comparatively weak at therapeutic doses. Irreversible inhibition is organophosphate/echothiophate pharmacology, NMDA blockade is memantine's story, and blocking acetylcholine release is botulinum toxin territory.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "stm-don-02",
+      question: "A 76-year-old on donepezil 10 mg (also on metoprolol) has two episodes of near-syncope; Holter shows sinus pauses with heart rate 42. The pharmacological coupling is:",
+      options: [
+        "The two drugs are pharmacologically unrelated; the pauses are coincidental",
+        "Donepezil's cholinergic vagotonic effect (bradycardia) compounds the beta-blocker's — cholinesterase inhibitors carry bradycardia/syncope warnings, especially with beta-blockers or sick-sinus tendency",
+        "Donepezil causes hypertension that overdrives the beta-blockade",
+        "Metoprolol blocks donepezil's central effect but spares its cardiac effect"
+      ],
+      correctIndex: 1,
+      explanation: "Acetylcholinesterase inhibition amplifies muscarinic vagal tone, producing bradycardia and syncope risk that stacks with beta-blockade and is documented in sick-sinus-susceptible patients — the KYP cardiac anchor. The interaction is pharmacodynamic rather than receptor-selective as option D suggests, and dismissing it as coincidence is exactly how these syncope clusters get missed.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "stm-don-03",
+      question: "A 68-year-old with mild-to-moderate Alzheimer's starts donepezil. The dosing plan (Tripathi/KYP) is:",
+      options: [
+        "25 mg once weekly",
+        "2 mg twice daily forever, never increased",
+        "5 mg once daily at bedtime, increasing to 10 mg if tolerated — usable across severities, with once-daily dosing a key advantage",
+        "5 mg four times daily for 2 weeks then stop"
+      ],
+      correctIndex: 2,
+      explanation: "Donepezil's long half-life (~70 h, Tripathi) allows bedtime once-daily dosing, titrated from 5 to 10 mg, and it is used across severities — Tripathi notes it even suits relatively severe AD. Options D, A and B fabricate schedules that no cholinesterase-inhibitor label supports.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "stm-don-04",
+      question: "Donepezil's dosing convenience stems from:",
+      options: [
+        "Complete renal excretion allowing weekly dosing",
+        "An active metabolite lasting a month",
+        "A 1-hour half-life requiring TID dosing",
+        "A long plasma half-life (~70 h per Tripathi) enabling once-daily bedtime dosing — an advantage over rivastigmine and galantamine, which need twice-daily schedules"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi's ~70 h half-life is the pharmacokinetic reason donepezil is once-daily at bedtime while rivastigmine and galantamine are twice daily. The other options invent ultrashort, weekly or monthly kinetics that no cholinesterase inhibitor possesses.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "stm-don-05",
+      question: "A patient on donepezil reports trouble sleeping, unusually vivid dreams and nausea. The correct characterisation is:",
+      options: [
+        "Classic donepezil effects — cholinergic GI upset plus CNS effects such as insomnia and vivid dreams (Tripathi notes weird dreams) — usually manageable with timing and titration",
+        "Expected symptoms of worsening Alzheimer's unrelated to the drug",
+        "Symptoms of donepezil-induced parkinsonism needing levodopa",
+        "Signs of hepatic failure demanding tacrine substitution"
+      ],
+      correctIndex: 0,
+      explanation: "Tripathi's class adverse-effect line — GI symptoms, muscle pain and weird dreams — plus donepezil's insomnia matches this presentation; adjusting timing or titration usually manages it. Parkinsonism and liver failure are not donepezil liabilities (it is not hepatotoxic, unlike tacrine), and dismissing the symptoms ignores real, dose-related drug effects.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "stm-don-06",
+      question: "Donepezil is described as cerebroselective because:",
+      options: [
+        "It selectively inhibits butyrylcholinesterase in plasma",
+        "Therapeutic doses produce only weak peripheral AChE inhibition, so central cholinergic augmentation dominates while peripheral cholinergic effects stay mild",
+        "It acts only on nicotinic receptors inside the brain",
+        "It is completely excluded from peripheral tissues by P-glycoprotein"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi's phrasing — measurable central benefit with only weak peripheral enzyme inhibition at therapeutic doses — is the selectivity claim; it reflects a balance of enzymatic action, not absolute tissue exclusion. Nicotinic allosterism is galantamine's signature, P-glycoprotein exclusion is not the mechanism, and BuChE selectivity belongs to rivastigmine.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "stm-don-07",
+      question: "A 72-year-old with Alzheimer's has declined from moderate to severe impairment but still benefits from donepezil. The evidence-based position on continuing and on adding memantine is:",
+      options: [
+        "Switch to tacrine for advanced disease",
+        "Stop donepezil at the moderate stage because it works only in mild disease",
+        "Continue donepezil (benefit extends into severe AD) and add memantine for moderate-to-severe disease — combination use is common, though Katzung notes mixed results for the combination",
+        "Add memantine only after stopping all cholinergic therapy"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi allows donepezil even in relatively severe cases, and memantine is indicated for moderate-to-severe AD — to replace or supplement an anti-AChE; Katzung's honest caveat is that combination results are mixed, which still supports a trial. Option B imposes a false mild-only ceiling, option D inverts the add-on logic, and tacrine is long retired.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "stm-don-08",
+      question: "Why is donepezil — not tacrine — the flagship cholinesterase inhibitor in examinations?",
+      options: [
+        "It is the only cholinesterase inhibitor with central action",
+        "It is the only one that also inhibits monoamine oxidase",
+        "It is the only one available in India",
+        "It is non-hepatotoxic with a long half-life allowing once-daily dosing across severities — precisely the advantages that replaced tacrine (Katzung)"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung's replacement logic: donepezil keeps tacrine's (marginal) benefit without the hepatic toxicity, adds ~70 h once-daily pharmacokinetics and severity-spanning use. All the newer agents act centrally (option A false), MAO inhibition is not in the profile, and all three modern AChE inhibitors — DONECEPT, GALAMER, RIVAMER — are Indian-market brands per Tripathi.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

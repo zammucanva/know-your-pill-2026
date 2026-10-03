@@ -1856,6 +1856,110 @@ export const clomipramine: Drug = {
       explanation: "Clomipramine is an OFF-LABEL alternative for premature ejaculation — 25-50mg PRN 4-6 hours before intercourse, or daily. The strong serotonergic effect delays ejaculation. However, dapoxetine (on-demand SSRI, licensed for PE in India) is now FIRST-LINE. Behavioural techniques (squeeze, stop-start) should be combined with pharmacological treatment.",
       afterSectionId: "clinical-uses",
     },
+    {
+      id: "tca-clo-01",
+      question: "The MOST serotonergic of all the tricyclic antidepressants (SERT blockade predominating) is:",
+      options: [
+        "Clomipramine",
+        "Desipramine",
+        "Maprotiline",
+        "Trimipramine"
+      ],
+      correctIndex: 0,
+      explanation: "Clomipramine carries the highest SERT affinity in the TCA class, which is exactly why it works in OCD and panic and why it is the worst TCA for serotonergic sexual dysfunction. Desipramine and maprotiline sit at the noradrenergic pole, and trimipramine barely blocks either transporter. Relative transporter selectivity, not ring chemistry, predicts the indication — that is the transferable lesson here.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "tca-clo-02",
+      question: "Clomipramine is demethylated to desmethylclomipramine. Which statement about this metabolism is correct?",
+      options: [
+        "Desmethylclomipramine is inactive and abbreviates the clinical effect",
+        "Clomipramine is excreted largely unchanged in urine",
+        "The parent is the more serotonergic species while the desmethyl metabolite is more noradrenergic, and both contribute to the effect",
+        "Clomipramine bypasses hepatic metabolism entirely"
+      ],
+      correctIndex: 2,
+      explanation: "Like the imipramine-to-desipramine pattern, clomipramine's parent form is SERT-dominant while its desmethyl metabolite shifts toward NET — so the clinical profile is a blend of the two. The metabolite is pharmacologically active, hepatic metabolism is extensive with only about 5% of TCAs appearing unchanged in urine, and metabolites trickle out over 1-2 weeks. CYP2D6 inhibitors raise both species, which is why the interaction question never goes away.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "tca-clo-03",
+      question: "A 24-year-old with 4 hours a day of contamination obsessions and washing rituals has failed an adequate sertraline trial at full dose. He has no seizure history and a normal ECG. The best next serotonergic option is:",
+      options: [
+        "Fluoxetine — the only agent with evidence in resistant OCD",
+        "Clomipramine — the gold-standard TCA for OCD",
+        "Reboxetine — the noradrenergic option for OCD",
+        "Doxepin — the H1-based option for OCD"
+      ],
+      correctIndex: 1,
+      explanation: "Clomipramine is the most effective TCA in OCD and the historical reference treatment against which SSRIs were judged — the standard next step after an SSRI failure, provided ECG and seizure-threshold precautions are respected. Reboxetine is a selective NRI with no OCD credentials, doxepin is an H1-heavy sedative, and fluoxetine is a legitimate option but hardly the 'only' one. Indian texts record more than 25% improvement on OCD rating scales with the TCAs, clomipramine especially.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tca-clo-04",
+      question: "A 30-year-old on clomipramine for OCD has the dose escalated rapidly to 225 mg/day. Three weeks later he has a first-ever generalised tonic-clonic seizure. CT head is normal, sodium 138 mEq/L, no fever, no alcohol or other drugs. The best interpretation and step is:",
+      options: [
+        "Idiopathic epilepsy — start lifelong valproate and continue clomipramine unchanged",
+        "Psychogenic non-epileptic event — reassure and continue unchanged",
+        "SIADH with hyponatraemic seizure — definitely unrelated to the drug",
+        "Dose-related lowering of the seizure threshold by clomipramine — reduce or stop the drug and reconsider the strategy"
+      ],
+      correctIndex: 3,
+      explanation: "Clomipramine (with bupropion) has the highest seizure-precipitating potential among antidepressants in Indian texts, and the risk climbs with rapid titration and higher doses — this temporal pattern makes the drug the presumptive cause. Declaring idiopathic epilepsy after one seizure on an escalating proconvulsant over-treats, sodium is normal so SIADH is excluded by the data given, and continuing unchanged invites recurrence. Cut the dose or switch back to an SSRI and check an ECG while at it.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tca-clo-05",
+      question: "Why must clomipramine dosing be watched whenever fluoxetine or paroxetine is co-prescribed?",
+      options: [
+        "Both SSRIs induce CYP2D6 and halve clomipramine levels",
+        "Both SSRIs displace clomipramine from albumin, causing acute toxicity",
+        "Both are potent CYP2D6 inhibitors and can raise clomipramine and desmethylclomipramine levels several-fold, risking toxicity and seizures",
+        "Clomipramine inhibits the SSRIs' metabolism, causing serotonin syndrome by kinetic overload"
+      ],
+      correctIndex: 2,
+      explanation: "Fluoxetine and paroxetine are the two most potent 2D6-blocking SSRIs, and since 2D6 is the gateway for TCA clearance, levels of clomipramine and its metabolite can climb dramatically — the toxicity is anticholinergic, cardiac and seizure-related. Induction is the wrong direction, protein displacement is minor for drugs with huge volumes of distribution, and serotonin syndrome from this pair is a pharmacodynamic concern, not a kinetic one. If the combination is unavoidable, use low doses, slow titration and an ECG.",
+      afterSectionId: "neural-pathways",
+    },
+    {
+      id: "tca-clo-06",
+      question: "A 28-year-old man's OCD is well controlled on clomipramine, but he now reports delayed ejaculation and reduced libido and wants to stop the drug. The best statement is:",
+      options: [
+        "Sexual dysfunction is a recognised, dose-related effect of clomipramine — discuss dose adjustment or a switch rather than abrupt stopping",
+        "This signals disease relapse — the dose should be increased",
+        "Sexual effects are limited to SSRIs — clomipramine is exempt from this problem",
+        "This is permanent pelvic nerve damage — it will not reverse"
+      ],
+      correctIndex: 0,
+      explanation: "Sexual effects are common with the highly serotonergic TCAs — clomipramine is the class leader for delayed ejaculation, the same pharmacology that makes it a (slower, regular-use) option for premature ejaculation. Increasing the dose worsens the effect, SSRIs are not unique in causing it, and the effect reverses on dose reduction or discontinuation. Abrupt stopping of a working OCD regimen risks relapse — negotiate the change instead.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tca-clo-07",
+      question: "At a district hospital pharmacy, two brands are stocked for a patient's OCD prescription: CLOFRANIL 25 mg and ANAFRANIL 25 mg. Both brands contain:",
+      options: [
+        "Doxepin",
+        "Dothiepin",
+        "Lofepramine",
+        "Clomipramine"
+      ],
+      correctIndex: 3,
+      explanation: "CLOFRANIL (10/25/50 mg, 75 mg SR) and ANAFRANIL/CLONIL are the Indian clomipramine brands listed in standard Indian formularies — brand-generic mapping remains a live NEET-PG question format. The sedating alternatives carry different labels: PROTHIADEN/DOTHIN is dothiepin and DOXIN/SPECTRA is doxepin, while lofepramine has no standard Indian brand in the classic tables. Knowing the Indian brand landscape also protects against pharmacy substitution errors.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tca-clo-08",
+      question: "A postgraduate seminar asks: if clomipramine matches or beats SSRIs against placebo in OCD trials, why do SSRIs remain first line worldwide? A 19-year-old with OCD and a seizure history is waiting. The core reason is:",
+      options: [
+        "SSRIs work in days, whereas clomipramine needs months",
+        "SSRIs' far better tolerability and overdose safety outweigh any marginal efficacy edge of clomipramine",
+        "Clomipramine is contraindicated in all adults below 40",
+        "Clomipramine has never been formally tested against placebo"
+      ],
+      correctIndex: 1,
+      explanation: "Clomipramine brings anticholinergic load, weight gain, dose-related seizures, cardiac conduction risk and lethal overdose potential — a poor trade for a small efficacy margin, and a frankly poor choice for this seizure-history patient. Anti-OCD onset is similarly delayed (weeks to months) for both drug types, there is no under-40 contraindication, and clomipramine's placebo-controlled evidence is extensive. The transferable principle: first-line status in psychiatry is usually decided by the safety-tolerability column, not the efficacy column.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
 
   /* End-of-page active recall questions */

@@ -842,6 +842,110 @@ export const selegiline: Drug = {
       explanation: "For depression (patch): start 6 mg/24 h patch daily, target 6-12 mg/24 h, maximum 12 mg/24 h. May increase to 9-12 mg (diet cautions resume above 6)",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "maoi-sel-01",
+      question: "At the doses used in Parkinson's disease (5-10 mg/day), selegiline acts as:",
+      options: [
+        "A nonselective irreversible inhibitor of MAO-A and MAO-B",
+        "A reversible, selective inhibitor of MAO-A",
+        "A selective, irreversible inhibitor of MAO-B that retards intracerebral dopamine degradation — the basis of its antiparkinsonian benefit",
+        "A peripheral COMT inhibitor that blocks levodopa breakdown"
+      ],
+      correctIndex: 2,
+      explanation: "At 5-10 mg/day (5 mg with breakfast and 5 mg with lunch) selegiline selectively and irreversibly inhibits MAO-B, slowing central dopamine degradation — its antiparkinsonian rationale (Tripathi notes low doses spare peripheral dietary amine metabolism). Nonselective inhibition emerges only at higher doses; reversible MAO-A inhibition is moclobemide, and COMT inhibition is entacapone/tolcapone.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "maoi-sel-02",
+      question: "Which statement about selegiline's dose-dependent selectivity is CORRECT?",
+      options: [
+        "MAO-B selectivity is maintained at every dose and every route",
+        "As the dose rises into the antidepressant range, selegiline becomes selective for MAO-A",
+        "The transdermal patch loses selectivity faster than the oral tablet",
+        "Oral antidepressant doses (20-50 mg/day) lose MAO-B selectivity and become nonselective, whereas the 6 mg/24 h patch retains selectivity"
+      ],
+      correctIndex: 3,
+      explanation: "Selectivity is dose-dependent: 5-10 mg/day keeps selegiline on MAO-B, but antidepressant-range oral dosing also inhibits MAO-A, bringing back tyramine and serotonergic hazards. The 6 mg/24 h transdermal patch is the formulation that retains MAO-B selectivity because it bypasses gut and liver first-pass — which is why it carries fewer dietary restrictions than oral antidepressant dosing. Options A, B and C each reverse or ignore this dose dependence.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "maoi-sel-03",
+      question: "A 63-year-old with early Parkinson's disease on levodopa-carbidopa has begun to 'wear off' between doses. Selegiline is added. The expected benefit and one required adjustment:",
+      options: [
+        "It retards dopamine degradation and potentiates levodopa, allowing the levodopa dose to be reduced by about 20-30%",
+        "It blocks COMT in the periphery, smoothing the plasma levodopa curve",
+        "It is a D2 receptor agonist that works independently of levodopa",
+        "It is an anticholinergic that specifically reduces tremor"
+      ],
+      correctIndex: 0,
+      explanation: "Selegiline's MAO-B blockade prolongs central dopamine action; as a levodopa adjunct it benefits roughly half to two-thirds of patients, permits a 20-30% levodopa dose reduction and attenuates wearing-off (Tripathi). COMT inhibition is entacapone's mechanism, D2 agonism is pramipexole/ropinirole, and anticholinergics are a separate tremor-directed class.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "maoi-sel-04",
+      question: "Why does selegiline characteristically cause insomnia, and what is the practical response?",
+      options: [
+        "It elevates central acetylcholine, so doses should be taken at bedtime",
+        "It is metabolised to amphetamine-like compounds (L-amphetamine, L-methamphetamine) that are CNS-stimulating — give it early in the day",
+        "It blocks adenosine receptors like caffeine — split the dose at noon",
+        "Its metabolites are D-isomers identical to dexamphetamine, so seizures are expected"
+      ],
+      correctIndex: 1,
+      explanation: "Selegiline is N-demethylated to L-amphetamine and L-methamphetamine — sympathomimetic, stimulant metabolites responsible for insomnia and agitation (Tripathi) — hence morning/noon dosing and never late-evening dosing. The cholinergic and adenosine stories are wrong, and the isomer claim is inverted: selegiline yields the L-isomers, which are less stimulant than the D-amphetamine in dexamphetamine products.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "maoi-sel-05",
+      question: "A patient started on the selegiline transdermal system 6 mg/24 h for depression asks which foods to avoid. The correct answer at THIS dose:",
+      options: [
+        "The patch never produces tyramine reactions at any dose",
+        "Oral selegiline 20-40 mg/day also retains MAO-B selectivity, so only the patch needs care",
+        "At 6 mg/24 h the patch retains MAO-B selectivity, so routine dietary tyramine restrictions are not required at this dose",
+        "Dietary tyramine matters only if the patient is also taking levodopa"
+      ],
+      correctIndex: 2,
+      explanation: "The 6 mg/24 h patch bypasses gut and liver first-pass and keeps MAO-B selectivity, which is why labeling spares patients on THIS dose the routine tyramine-restricted diet (the no-dietary-restriction claim belongs to the 6 mg patch only). Higher patch doses — and oral antidepressant doses of 20-50 mg/day — lose selectivity and restore dietary risk. Levodopa co-use does not create the tyramine hazard; loss of MAO-A inhibition does.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "maoi-sel-06",
+      question: "A man with Parkinson's disease on selegiline 10 mg/day wants an over-the-counter dextromethorphan cough syrup. The correct advice:",
+      options: [
+        "Safe — dextromethorphan acts peripherally on cough receptors",
+        "Safe — interactions with selegiline occur only with levodopa",
+        "Safe if the syrup and selegiline are taken 2 hours apart",
+        "Avoid it — dextromethorphan is contraindicated with MAO-B inhibitors, as are meperidine and tramadol"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung's parkinsonism chapter is explicit: patients on MAO-B inhibitors must avoid meperidine, tramadol, methadone, propoxyphene, cyclobenzaprine, St John's wort and the antitussive dextromethorphan — indeed all over-the-counter cold preparations warrant caution. Dextromethorphan is a centrally acting NMDA/serotonergic agent, the hazard is not limited to levodopa, and spacing doses by hours does not remove a contraindication.",
+      afterSectionId: "neural-pathways",
+    },
+    {
+      id: "maoi-sel-07",
+      question: "A 45-year-old with well-controlled epilepsy and depression is being considered for the selegiline patch. The most appropriate assessment:",
+      options: [
+        "Selegiline is contraindicated in convulsive disorders — select another antidepressant",
+        "Only the oral form carries the epilepsy contraindication; the patch is exempt",
+        "The contraindication applies only when selegiline is used for parkinsonism",
+        "Add prophylactic levetiracetam and proceed with the patch"
+      ],
+      correctIndex: 0,
+      explanation: "Tripathi lists convulsive disorders as a contraindication to selegiline, so epilepsy is a reason to choose a different antidepressant rather than patch over the risk. The restriction is not formulation-specific or indication-specific, and layering a second anticonvulsant to force a contraindicated drug is not acceptable practice.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "maoi-sel-08",
+      question: "Which selegiline summary is correct?",
+      options: [
+        "Selegiline — a reversible MAO-A inhibitor with a 1-2 day washout",
+        "Selegiline — MAO-B selective at 5-10 mg/day, metabolised to L-amphetamine/L-methamphetamine, patch retains selectivity at 6 mg/24 h",
+        "Selegiline — the most sedating MAOI, best given at night for its weight-gain benefit",
+        "Selegiline — safe to combine with pethidine for post-operative analgesia"
+      ],
+      correctIndex: 1,
+      explanation: "Option B strings together selegiline's three real signatures: low-dose MAO-B selectivity, stimulant amphetamine (L-isomer) metabolites, and the 6 mg/24 h patch's retained selectivity. The reversible MAO-A description is moclobemide's, sedation-and-weight-gain belongs to phenelzine, and the pethidine combination is explicitly contraindicated with selegiline.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

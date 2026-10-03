@@ -739,6 +739,110 @@ export const zaleplon: Drug = {
       explanation: "For sleep onset: start 5–10 mg at bedtime (5 mg elderly/hepatic), target 5–20 mg, maximum 20 mg. Only as needed",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "slp-zal-01",
+      question: "A 30-year-old surgeon reliably wakes at 3 am and then takes more than 4 hours to fall asleep again; she must be sharp for a 7 am ward round. Which hypnotic best fits middle-of-the-night dosing?",
+      options: [
+        "Zaleplon, whose ultra-short half-life of about 1 hour allows dosing after middle-of-night awakening when at least 4 hours of sleep remain",
+        "Eszopiclone, because its 6-hour half-life guarantees continuous sleep until the alarm",
+        "Diazepam, whose long half-life smooths out the remaining hours of the night",
+        "Promethazine, because antihistamine sedation reliably clears before morning"
+      ],
+      correctIndex: 0,
+      explanation: "Zaleplon is the shortest-acting Z-drug (half-life about 1 hour, listed as under 1 to 2 hours in Katzung's table), which makes it the classic agent for middle-of-the-night dosing provided at least 4 hours remain before waking. Eszopiclone's 6-hour half-life and diazepam's long half-life guarantee hangover if taken at 3 am, and antihistamine sedation is prolonged with anticholinergic load. This pharmacokinetic niche is a standard exam question.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "slp-zal-02",
+      question: "Zaleplon's elimination half-life is approximately:",
+      options: [
+        "4 to 6 days, with an active metabolite persisting for weeks",
+        "1 hour, the shortest among the commonly used hypnotics",
+        "6 hours, the longest among the Z-drugs",
+        "22 to 36 hours, requiring once-daily daytime dosing"
+      ],
+      correctIndex: 1,
+      explanation: "Zaleplon is cleared with a half-life of roughly 1 hour (Katzung's table lists under 1 to 2 hours), the shortest of any standard hypnotic, which underlies its middle-of-the-night usability and minimal hangover. The 6-hour figure belongs to eszopiclone, the 22 to 36 hour range to sertraline, and the 4 to 6 day figure to fluoxetine; none of these apply to zaleplon.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "slp-zal-03",
+      question: "Zaleplon's structural family and receptor target are:",
+      options: [
+        "A cyclopyrrolone acting at orexin OX1 and OX2 receptors",
+        "An ethanolamine antihistamine acting at central H1 receptors",
+        "A pyrazolopyrimidine acting selectively at alpha-1-containing GABA-A (BZ1) receptors",
+        "An imidazopyridine acting at GABA-B receptors in the spinal cord"
+      ],
+      correctIndex: 2,
+      explanation: "Zaleplon is a pyrazolopyrimidine, one of the three non-benzodiazepine Z-drug skeletons (zolpidem is the imidazopyridine and zopiclone or eszopiclone the cyclopyrrolone), and like the others it binds the alpha-1 (BZ1) GABA-A subtype that mediates hypnosis. GABA-B, orexin and H1 targets are not part of its pharmacology, which is why it lacks anticonvulsant and muscle-relaxant actions. Katzung groups all three Z-drugs as selective alpha-1 agonists.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "slp-zal-04",
+      question: "A patient who stopped nightly zaleplon after 2 weeks is anxious about the terrible rebound insomnia she read about with sleeping pills. What should you tell her?",
+      options: [
+        "Rebound insomnia is guaranteed and must be pre-empted with a benzodiazepine taper",
+        "Withdrawal will produce seizures because zaleplon is a potent anticonvulsant",
+        "Withdrawal always includes vivid hallucinations requiring hospital admission",
+        "Zaleplon is associated with minimal rebound insomnia and no significant withdrawal at recommended doses"
+      ],
+      correctIndex: 3,
+      explanation: "Both Katzung and Tripathi record minimal rebound insomnia and no significant withdrawal or dependence with zaleplon at recommended doses, and its hypnotic effect does not fade on nightly use, though courses should still be short. Pre-emptive benzodiazepine tapers and seizure predictions describe the pharmacology of full GABAergic agonists, not this alpha-1-selective agent. Hallucinatory withdrawal is likewise not a zaleplon syndrome.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "slp-zal-05",
+      question: "A candidate preparing for a 6 am exam takes a hypnotic at 4 am after an anxious awakening at 2:30 am and needs zero next-morning impairment. Which agent is the most defensible pharmacokinetic choice?",
+      options: [
+        "Zaleplon, because its roughly 1-hour half-life leaves the least residual sedation of the standard hypnotics",
+        "Zopiclone, because a 5-hour half-life is fully gone by the second hour",
+        "Eszopiclone, because less day-after somnolence means zero impairment at any dose",
+        "Diphenhydramine, because over-the-counter agents never impair next-day performance"
+      ],
+      correctIndex: 0,
+      explanation: "When only a few hours of sleep remain, the shortest half-life wins, and zaleplon's roughly 1-hour clearance makes it the least hangover-prone prescription hypnotic. Zopiclone and eszopiclone would still be circulating at the alarm with their 5 to 6 hour half-lives, and diphenhydramine is notorious for next-day grogginess and anticholinergic load. Katzung does note that zaleplon and eszopiclone cause less day-after somnolence than zolpidem at usual doses, but less is not none for a 6-hour half-life drug taken at 4 am.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "slp-zal-06",
+      question: "Which dosing statement matches Indian zaleplon practice (ZAPLON / ZALEP / ZASO)?",
+      options: [
+        "5 to 10 mg three times daily for round-the-clock anxiolysis",
+        "5 to 10 mg at bedtime (maximum 20 mg); oral bioavailability reduced to about 30% by first-pass metabolism",
+        "50 to 100 mg at bedtime; bioavailability near 100% because it is an intramuscular formulation",
+        "1 to 3 mg at bedtime with mandatory weekly liver function tests"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi lists zaleplon at 5 to 10 mg at bedtime with a 20 mg maximum, and notes rapid absorption with only about 30% oral bioavailability due to first-pass metabolism. It is a single bedtime hypnotic, not a thrice-daily anxiolytic, and no liver-function monitoring schedule attaches to it; the 1 to 3 mg range belongs to eszopiclone. Its rapid clearance is what preserves the morning performance.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "slp-zal-07",
+      question: "A man on disulfiram for relapse prevention in alcohol dependence is given a friend's zaleplon and becomes unusually heavily sedated. What is the mechanism?",
+      options: [
+        "Disulfiram inhibits renal tubular secretion, so unchanged zaleplon accumulates in blood",
+        "Disulfiram sensitises GABA-A receptors, multiplying the effect of a normal zaleplon dose",
+        "Disulfiram inhibits aldehyde dehydrogenase, the enzyme that metabolises zaleplon, so exposure rises",
+        "Disulfiram induces CYP3A4, so zaleplon accumulates as toxic inactive metabolites"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung's pharmacokinetic table notes that zaleplon is metabolised via aldehyde dehydrogenase, so inhibitors of that enzyme such as disulfiram can raise its exposure and deepen sedation, a distinctive interaction among the hypnotics. Grapefruit juice and CYP3A4 are irrelevant to zaleplon, whose issue here is not renal handling, and there is no receptor-sensitisation mechanism. Asking every insomniac about disulfiram therapy is the practical takeaway.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "slp-zal-08",
+      question: "A 28-year-old woman has used zaleplon nightly for 3 weeks and reports that it still works like the first night. What is the correct counselling?",
+      options: [
+        "Efficacy persisting proves tolerance; the dose should now be doubled",
+        "Because it keeps working, nightly use for years is endorsed",
+        "It should be replaced immediately by a barbiturate for proven long-term safety",
+        "Its effect does not fade on nightly use, but courses should still be limited to about 1 to 2 weeks"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi notes that zaleplon's hypnotic effect does not fade on nightly use and that tolerance and dependence are unusual, but he still limits use to 1 to 2 weeks; short courses remain the rule for all hypnotics. Doubling the dose is precisely the escalation behaviour to avoid, and barbiturates are obsolete for insomnia with far worse overdose and dependence profiles. Katzung likewise warns that long-term hypnotic use is an irrational and dangerous practice.",
+      afterSectionId: "quick-facts",
+    },
   ],
   activeRecallQuestions: [
     {

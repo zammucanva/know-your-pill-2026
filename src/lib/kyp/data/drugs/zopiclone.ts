@@ -744,6 +744,110 @@ export const zopiclone: Drug = {
       explanation: "For insomnia: start 3.75–7.5 mg at bedtime (3.75 mg elderly), target 7.5 mg, maximum 7.5 mg. Only as needed; courses 2–4 weeks",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "slp-zop-01",
+      question: "A 38-year-old man started zopiclone 7.5 mg at bedtime a week ago and now complains that everything tastes of metal, even plain water. What is the correct interpretation?",
+      options: [
+        "Dysgeusia, the bitter metallic after-taste that is the characteristic adverse effect of zopiclone",
+        "Hyposmia from zopiclone-induced zinc deficiency, requiring zinc supplementation",
+        "Allergic stomatitis, mandating immediate antifungal lozenges",
+        "An olfactory hallucination of emerging psychosis, requiring an antipsychotic"
+      ],
+      correctIndex: 0,
+      explanation: "A bitter or metallic after-taste (dysgeusia) is the classic fingerprint of zopiclone, listed first among its side effects by Tripathi, and it is shared by its S-enantiomer eszopiclone. It is not a psychotic hallucination, not a deficiency state and not infective stomatitis, so supplementation and antifungals are misplaced. Dysgeusia is the commonest reason patients abandon the drug, so warning them in advance is good practice.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "slp-zop-02",
+      question: "Zopiclone's chemical class and receptor action are best described as:",
+      options: [
+        "A barbiturate derivative that directly opens the GABA-A chloride channel at high concentrations",
+        "A cyclopyrrolone non-benzodiazepine that acts as an agonist at the benzodiazepine-receptor subtype mediating hypnosis",
+        "A pyrazolopyrimidine that blocks melatonin reuptake from the synaptic cleft",
+        "A phenothiazine that blocks histamine H1 receptors to induce drowsiness"
+      ],
+      correctIndex: 1,
+      explanation: "Zopiclone was the first of the non-benzodiazepine hypnotics; it is a cyclopyrrolone acting as an agonist at the benzodiazepine receptor subtype involved in hypnotic action, with sleep effects resembling benzodiazepines. The pyrazolopyrimidine label belongs to zaleplon, and the antihistamine and barbiturate descriptions fit hydroxyzine and the historical barbiturates rather than zopiclone. Its alpha-1-preferring action explains the sparing of anticonvulsant and muscle-relaxant effects.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "slp-zop-03",
+      question: "Which prescribing pattern matches Indian zopiclone practice (ZOPITRAN / ZOPICON / ZOLIUM)?",
+      options: [
+        "7.5 mg three times daily after meals for generalised anxiety disorder",
+        "15 mg dissolved in milk at bedtime, repeated twice nightly if the patient wakes",
+        "One 7.5 mg tablet at bedtime for not more than 2 to 4 weeks; 3.75 mg in the elderly",
+        "One 75 mg tablet at bedtime, continued indefinitely until sleep normalises"
+      ],
+      correctIndex: 2,
+      explanation: "Indian brands supply zopiclone as a single 7.5 mg bedtime tablet, limited to short courses of roughly two to four weeks, with 3.75 mg recommended in the elderly because of slower clearance. It is not a thrice-daily anxiolytic, and doubling or repeating the dose at night invites next-morning impairment and dependence. The bitter taste is tolerated better at the lowest effective dose.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "slp-zop-04",
+      question: "A 60-year-old woman has taken alprazolam nightly for 3 years and wants to stop, but says she cannot sleep without it. Which hypnotic has traditionally been used to wean insomniacs off regular benzodiazepines?",
+      options: [
+        "Fluoxetine, because blocking serotonin reuptake restores benzodiazepine receptor sensitivity",
+        "Modafinil, to replace night-time sedation with daytime alertness",
+        "Propranolol, to block the rebound tremor of benzodiazepine withdrawal",
+        "Zopiclone"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi specifically notes that zopiclone has been used to wean insomniacs off regular benzodiazepine medication, bridging the hypnotic component while the benzodiazepine is tapered. Fluoxetine, modafinil and propranolol have no hypnotic bridging role and none of them addresses the receptor pharmacology that makes benzodiazepine withdrawal difficult. Its own course must still remain time-limited, because dependence, though milder, can occur.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "slp-zop-05",
+      question: "Which statement about zopiclone's pharmacokinetics and sleep architecture is correct?",
+      options: [
+        "Half-life of 5 to 6 hours, with preserved REM sleep and possible next-morning impairment",
+        "Half-life under 1 hour, which makes it ideal for middle-of-the-night dosing",
+        "Half-life of 2 to 5 days, requiring weekly dose titration",
+        "Complete REM suppression comparable to high-dose amitriptyline"
+      ],
+      correctIndex: 0,
+      explanation: "Zopiclone's half-life is about 5 to 6 hours (Tripathi), long enough to hold sleep through much of the night yet short enough to limit hangover; it does not disturb REM sleep and tends to prolong slow-wave stages 3 and 4, although some next-morning impairment can still occur. The sub-hour half-life belongs to zaleplon, no hypnotic here lasts for days, and REM is preserved rather than abolished.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "slp-zop-06",
+      question: "A 24-year-old woman who was given her aunt's zopiclone tablets over several weeks is found mildly drowsy after taking an unknown number. Which statement guides management?",
+      options: [
+        "Zopiclone overdose requires repeated activated charcoal every 4 hours for 48 hours",
+        "Zopiclone overdose is managed supportively like benzodiazepine overdose, with a comparatively benign outlook",
+        "Zopiclone overdose causes fulminant hepatic necrosis, so N-acetylcysteine is mandatory",
+        "Zopiclone overdose causes severe metabolic acidosis with high fatality, so dialysis is first-line"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi notes that zopiclone's safety in overdose is similar to that of the benzodiazepines: supportive care is the mainstay and most patients recover, with flumazenil available if sedation is severe. It is not a paracetamol-like hepatotoxin and does not produce the acidosis picture that would make dialysis first-line. Single-dose charcoal may be considered after a large ingestion, but prolonged repeat dosing is not standard.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "slp-zop-07",
+      question: "On polysomnography, how does zopiclone typically modify sleep architecture?",
+      options: [
+        "Conversion of stage 2 NREM into prolonged REM sleep throughout the night",
+        "No measurable effect on any sleep parameter except vivid nightmares",
+        "Effects resembling benzodiazepine hypnosis but without altering REM sleep, with a tendency to prolong stages 3 and 4",
+        "Complete suppression of slow-wave sleep with marked REM rebound on withdrawal"
+      ],
+      correctIndex: 2,
+      explanation: "Zopiclone's effect on sleep resembles that of benzodiazepines, but it is reported not to disturb REM sleep and it tends to deepen stages 3 and 4, a favourable profile cited by Tripathi. Marked slow-wave suppression with REM rebound is a feature of high-dose benzodiazepine or barbiturate use, not of zopiclone. It is a genuine hypnotic with documented sleep-architecture effects, not a nightmare-only drug.",
+      afterSectionId: "neurotransmitters",
+    },
+    {
+      id: "slp-zop-08",
+      question: "A patient with dysgeusia on zopiclone 7.5 mg is switched to eszopiclone 2 mg, but the metallic taste returns within days. What is the most likely explanation?",
+      options: [
+        "Eszopiclone is chemically unrelated to zopiclone, so this reaction must be a new allergy",
+        "The 2 mg dose exceeds eszopiclone's maximum permitted dose of 1 mg",
+        "The taste return proves the dispensed tablets were counterfeit zolpidem",
+        "Eszopiclone is the S-enantiomer of zopiclone, so the taste disturbance is shared by both molecules"
+      ],
+      correctIndex: 3,
+      explanation: "Eszopiclone is the active S-enantiomer of the zopiclone racemate, so the characteristic dysgeusia recurs because both are the same pharmacological entity at different stereochemical purity. An allergic reaction and counterfeit-drug speculation are unnecessary to explain the return of a shared adverse effect, and 1 to 3 mg is the standard eszopiclone range rather than a breach of any ceiling. This enantiomer link is a favourite exam pairing.",
+      afterSectionId: "quick-facts",
+    },
   ],
   activeRecallQuestions: [
     {

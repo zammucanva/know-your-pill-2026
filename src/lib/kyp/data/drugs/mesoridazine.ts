@@ -790,6 +790,110 @@ export const mesoridazine: Drug = {
       explanation: "For schizophrenia (historical): start 25–50 mg twice daily, target 100–400 mg/day, maximum 400 mg/day. Titrate to 100–400 mg/day with ECG",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "tap-mes-01",
+      question: "Mesoridazine's place in antipsychotic chemistry is correctly described as:",
+      options: [
+        "A thioxanthene prodrug of flupenthixol",
+        "A piperidine phenothiazine formed in the body from thioridazine",
+        "A benzamide metabolite of sulpiride",
+        "A diphenylbutylpiperidine prodrug of pimozide"
+      ],
+      correctIndex: 1,
+      explanation: "Mesoridazine is the piperidine phenothiazine derived from thioridazine by side-chain oxidation — Katzung's table lists it among the other piperidine phenothiazines. The prodrug claims in options A and D reverse known chemistry, and the benzamide family belongs to sulpiride.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "tap-mes-02",
+      question: "While auditing an old prescription file, a resident asks why mesoridazine vanished from practice. The historically correct reason is:",
+      options: [
+        "Pronounced QTc prolongation with torsades risk led to its withdrawal from most markets",
+        "Extrapyramidal rigidity made it intolerable",
+        "It caused severe weight loss",
+        "It triggered tyramine (cheese) hypertensive crises"
+      ],
+      correctIndex: 0,
+      explanation: "Mesoridazine shares thioridazine's repolarisation liability — pronounced QTc prolongation and ventricular arrhythmia risk — which drove its withdrawal from most markets. As a piperidine phenothiazine its EPS is comparatively low, and tyramine reactions are MAOI pharmacology, not phenothiazine.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-mes-03",
+      question: "A 54-year-old stable on old-stock mesoridazine presents with palpitations; the ECG shows a QTc of 540 ms with brief runs of polymorphic ventricular tachycardia. The correct response is:",
+      options: [
+        "Diagnose STEMI and arrange primary angioplasty",
+        "Diagnose sinus bradycardia and give atropine",
+        "Recognise mesoridazine-induced QTc prolongation with torsades — stop the drug, monitor on telemetry, and correct potassium and magnesium",
+        "Diagnose complete heart block and insert a pacemaker"
+      ],
+      correctIndex: 2,
+      explanation: "A QTc of 540 ms with polymorphic VT on a QT-prolonging antipsychotic is drug-induced torsades: stop the offender, monitor, and normalise electrolytes — the thioridazine and mesoridazine signature that made them the lethal exceptions among antipsychotic overdoses (Katzung). Nothing in the story suggests infarction, bradycardia or AV block.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-mes-04",
+      question: "A chart lists both thioridazine and mesoridazine for the same patient, and the intern assumes one is a typo. The true relationship is:",
+      options: [
+        "They are unrelated drugs from different chemical families",
+        "Mesoridazine is an active metabolite formed from thioridazine in the body",
+        "Thioridazine is the active metabolite of mesoridazine",
+        "Both are inactive until converted by liver esterases"
+      ],
+      correctIndex: 1,
+      explanation: "Mesoridazine is generated from thioridazine and is itself pharmacologically active — a parent-to-metabolite pairing, not a typo. Option C reverses the direction, the esterase story describes ester prodrugs such as the depot preparations, and both drugs share the same phenothiazine family.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "tap-mes-05",
+      question: "A patient on old-stock mesoridazine is started by cardiology on a rhythm drug; the pharmacist flags the combination as dangerous. Which co-prescription matches the flag?",
+      options: [
+        "Amoxicillin for dental prophylaxis",
+        "Metformin for prediabetes",
+        "Loratadine for allergic rhinitis",
+        "Quinidine, amiodarone, or sotalol — additive repolarisation delay and torsades risk"
+      ],
+      correctIndex: 3,
+      explanation: "Class IA and III antiarrhythmics prolong ventricular repolarisation, so stacking them on a QT-prolonging phenothiazine multiplies torsades risk — the same logic that keeps thioridazine and pimozide away from other QT-extending drugs (Katzung). Amoxicillin, metformin and loratadine are QT-neutral, and second-generation antihistamines were developed precisely to escape terfenadine's QT problem.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-mes-06",
+      question: "Mesoridazine's current clinical role is best stated as:",
+      options: [
+        "Historically used in schizophrenia; now essentially obsolete because of cardiac risk",
+        "First-line therapy for first-episode psychosis",
+        "The modern drug of choice for Tourette syndrome",
+        "Standard maintenance treatment for bipolar I disorder"
+      ],
+      correctIndex: 0,
+      explanation: "Mesoridazine had a historical place in schizophrenia treatment, but its pronounced QTc liability removed it from most markets — today it is a pharmacology exhibit rather than a prescription. Tic disorders belong to pimozide and haloperidol, and neither first-episode psychosis nor bipolar maintenance has any mesoridazine role.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-mes-07",
+      question: "An elderly patient on old-stock mesoridazine reports giddiness on standing and one recent fall at night. The most likely mechanism and counselling are:",
+      options: [
+        "Alpha-1 mediated orthostatic hypotension — rise slowly, hydrate, and review the need for the drug",
+        "Alpha-1 mediated hypertension — reduce dietary salt",
+        "Bronchospasm — avoid cold air",
+        "Hypoglycaemia — eat more sugar"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung lists orthostatic hypotension as a common complication with chlorpromazine or mesoridazine — alpha-adrenergic blockade plus central sympatholysis — a major fall risk in the elderly. The opposite haemodynamic claim, bronchospasm and hypoglycaemia are all foreign to this drug's profile.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-mes-08",
+      question: "Among antipsychotic overdoses, the ones Katzung singles out as potentially fatal — demanding management similar to tricyclic antidepressant poisoning — involve:",
+      options: [
+        "Haloperidol and trifluoperazine, via respiratory depression",
+        "Clozapine and olanzapine, via fulminant hepatic failure",
+        "Sulpiride and molindone, via status epilepticus",
+        "Mesoridazine and thioridazine, via ventricular tachyarrhythmias"
+      ],
+      correctIndex: 3,
+      explanation: "Antipsychotic poisonings are rarely fatal, with the exception of mesoridazine and thioridazine, whose lethal effects are ventricular tachyarrhythmias — managed like TCA overdose (Katzung). Fulminant hepatic failure is the nefazodone story, and the other pairs misattribute toxicities.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

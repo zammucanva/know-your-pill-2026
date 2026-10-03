@@ -688,6 +688,110 @@ export const ramelteon: Drug = {
       explanation: "For sleep-onset insomnia: start 8 mg within 30 min of bedtime, target 8 mg, maximum 8 mg. Same clock time nightly — the clock needs consistency",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "slp-ram-01",
+      question: "A 29-year-old man with alcohol-use disorder in stable recovery has chronic sleep-onset insomnia and refuses anything addictive. Which hypnotic is the most appropriate choice?",
+      options: [
+        "Ramelteon, a melatonergic agent with no demonstrated dependence potential and no controlled-substance scheduling",
+        "Zolpidem, because Z-drugs cannot produce dependence at any dose",
+        "Temazepam, because benzodiazepines are considered safe in recovered alcoholics",
+        "Diazepam, because it also covers alcohol-withdrawal prophylaxis"
+      ],
+      correctIndex: 0,
+      explanation: "Ramelteon's MT1/MT2 agonism produces no euphoria and no benzodiazepine-like dependence, it is not a scheduled drug, and both Tripathi and Katzung record no dependence or rebound, making it the classic answer for insomniacs with a substance-use history. Z-drugs and benzodiazepines are precisely the agents to avoid in this setting, and prescribing a benzodiazepine as withdrawal prophylaxis in a recovering alcoholic invites relapse. This vignette appears in some form in most exam banks.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "slp-ram-02",
+      question: "Ramelteon's mechanism of action is:",
+      options: [
+        "Irreversible inhibition of monoamine oxidase B, raising synaptic dopamine",
+        "Selective agonism at MT1 and MT2 melatonin receptors in the suprachiasmatic nucleus, with no direct effect on GABAergic transmission",
+        "Positive allosteric modulation of GABA-A receptors at the benzodiazepine site",
+        "Competitive antagonism at orexin OX1 and OX2 receptors in the lateral hypothalamus"
+      ],
+      correctIndex: 1,
+      explanation: "Ramelteon is a selective MT1/MT2 melatonin receptor agonist acting on the circadian pacemaker in the suprachiasmatic nuclei; Katzung emphasises that it has no direct effects on GABAergic neurotransmission. The GABA-A description fits the Z-drugs, orexin antagonism describes suvorexant, and MAO-B inhibition belongs to selegiline. This melatonergic mechanism is the basis of its absent abuse potential.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "slp-ram-03",
+      question: "A 61-year-old woman with OCD is on fluvoxamine and now asks for ramelteon for sleep-onset insomnia. What is the correct advice?",
+      options: [
+        "Halve the ramelteon dose and combine, since the interaction raises levels by only about 20%",
+        "Give both together but add flumazenil cover in case of over-sedation",
+        "Avoid the combination: fluvoxamine strongly inhibits CYP1A2 and can raise ramelteon plasma levels more than 50-fold",
+        "Combine freely, because fluvoxamine induces CYP1A2 and actually lowers ramelteon levels slightly"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung states that fluvoxamine can raise plasma concentrations of ramelteon and its active metabolite over 50-fold via CYP1A2 inhibition, making co-administration contraindicated rather than merely dose-adjusted. The enzyme is inhibited, not induced, and the magnitude dwarfs any 20% adjustment, while flumazenil has no role outside benzodiazepine and Z-drug sedation. Escitalopram for OCD or CBT-I approaches are safer routes to her sleep.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "slp-ram-04",
+      question: "A 26-year-old woman on ramelteon for shift-related sleep-onset insomnia reports that her last two menstrual periods were irregular; her prolactin is mildly elevated. What is the best interpretation?",
+      options: [
+        "Prolactin never rises on melatonergic drugs, so the result must be a laboratory error",
+        "The rise proves a prolactinoma, so urgent pituitary MRI is mandatory",
+        "The effect is due to ramelteon's dopamine agonism, which stimulates the lactotroph cells",
+        "Ramelteon may increase prolactin levels, and menstrual changes are a recognised hormonal adverse effect to monitor"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung notes that ramelteon may increase prolactin levels, and menstrual or hormonal effects are recognised, so a modest rise in this context is drug-attributable and monitored rather than proof of adenoma. The mechanism is inhibition of tuberoinfundibular dopamine pathways, which releases the brake on prolactin, not dopamine agonism; persistent marked hyperprolactinaemia would still warrant standard evaluation. The laboratory-error option ignores a documented class effect.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "slp-ram-05",
+      question: "Which prescription matches Indian ramelteon practice (ROZEREM)?",
+      options: [
+        "One 8 mg tablet taken about half an hour before going to bed",
+        "One 80 mg tablet at bedtime, titrated weekly to a maximum of 240 mg",
+        "8 mg three times daily with meals for daytime anxiety",
+        "A 0.8 mg intramuscular injection given at midnight in hospital only"
+      ],
+      correctIndex: 0,
+      explanation: "Tripathi lists ROZEREM as a single 8 mg tablet about half an hour before bedtime for sleep-onset insomnia and notes that the drug is approved in India as well as the USA. Ramelteon is neither a thrice-daily anxiolytic nor a high-dose titrated hypnotic, and it is an oral tablet rather than an injectable. Its sleep-latency effect is modest, so patients should take it in the pre-bed window rather than after lights out.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "slp-ram-06",
+      question: "A 55-year-old frequent traveller wants a hypnotic that he can use repeatedly when his sleep schedule flips. Which description of ramelteon is the honest selling point, together with its limitation?",
+      options: [
+        "It abolishes early-morning awakening and doubles total sleep time on polysomnography",
+        "It maintained its sleep-latency benefit in trials without rebound on stopping, but the reduction in sleep latency is modest",
+        "It produces deep sedation within 10 minutes, but rebound insomnia is severe",
+        "It shortens sleep latency dramatically like midazolam and is safe for years of unreviewed nightly use"
+      ],
+      correctIndex: 1,
+      explanation: "Trials showed ramelteon reduced latency to persistent sleep with no effects on sleep architecture, no rebound insomnia and no significant withdrawal (Katzung), and Tripathi records maintained benefit on continuous nightly use, but the size of the sleep-latency effect is modest rather than midazolam-like. It is not a deep sedative, does not abolish early-morning awakening, and does not massively increase total sleep time. Setting honest expectations prevents premature failure labels.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "slp-ram-07",
+      question: "A 47-year-old asthmatic on theophylline is offered ramelteon by a colleague. What pharmacokinetic point should the prescriber check first?",
+      options: [
+        "Ramelteon induces CYP1A2 and will halve theophylline levels, precipitating an asthma flare",
+        "There is no plausible interaction, because theophylline is metabolised purely by glucuronidation",
+        "Both drugs depend on CYP1A2, so co-prescription calls for watchfulness over theophylline levels and ramelteon exposure",
+        "Theophylline is a CYP2D6 substrate, so ramelteon's strong 2D6 inhibition will raise its levels"
+      ],
+      correctIndex: 2,
+      explanation: "CYP1A2 is mainly responsible for ramelteon's metabolism (with CYP2C9 also involved, per Katzung) and is likewise a major theophylline pathway, so shared 1A2 dependence is the checkpoint, and fluvoxamine-class 1A2 inhibitors remain an outright contraindication for ramelteon. Theophylline is not primarily a 2D6 substrate, ramelteon is not a 1A2 inducer, and theophylline has important oxidative 1A2 metabolism, not glucuronidation alone.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "slp-ram-08",
+      question: "Which pharmacokinetic profile belongs to ramelteon?",
+      options: [
+        "Near-complete oral bioavailability with a parent half-life of 6 hours and no metabolites",
+        "Negligible hepatic metabolism, with almost the whole dose excreted unchanged in urine within 24 hours",
+        "A half-life of 20 to 30 hours that makes morning hangover unavoidable",
+        "Extensive first-pass metabolism with low bioavailability; parent half-life 1 to 3 hours and an active metabolite of 2 to 5 hours"
+      ],
+      correctIndex: 3,
+      explanation: "Ramelteon undergoes extensive first-pass metabolism, so bioavailability is low and the elimination half-life is 1 to 3 hours (Tripathi), forming an active metabolite with a longer 2 to 5 hour half-life (Katzung). The 6-hour figure belongs to eszopiclone, near-total renal excretion of unchanged drug describes agents like desvenlafaxine, and a 20 to 30 hour half-life would contradict its no-next-morning-sedation profile.",
+      afterSectionId: "timeline",
+    },
   ],
   activeRecallQuestions: [
     {

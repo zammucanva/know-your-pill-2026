@@ -824,6 +824,110 @@ export const levetiracetam: Drug = {
       explanation: "For epilepsy: start 250-500 mg twice daily, target 1000-3000 mg/day, maximum 3000 mg/day (to 4000 specialist). Increase by 500 mg/week to 1000-1500 mg bd",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "mst-lev-01",
+      question: "Levetiracetam's mechanism of action is best stated as:",
+      options: [
+        "Selective binding to SV2A, a synaptic vesicle membrane protein, reducing glutamate release during high-frequency activity",
+        "Blockade of NMDA receptors at the glycine site",
+        "Positive allosteric modulation of the benzodiazepine site on GABA-A receptors",
+        "Inhibition of T-type calcium channels in thalamocortical neurons"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung describes levetiracetam binding selectively to SV2A on synaptic vesicles and reducing excitatory glutamate release — a piracetam analogue that is inactive in the classic maximal-electroshock and pentylenetetrazol screens. Benzodiazepine-site modulation defines the benzodiazepines and phenobarbital, T-channel blockade defines ethosuximide, and levetiracetam has no primary NMDA action.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "mst-lev-02",
+      question: "Two weeks after starting levetiracetam 1000 mg/day for focal seizures, a 26-year-old's family reports new irritability, argumentative behaviour and episodes of agitation; seizures are controlled. The best management is:",
+      options: [
+        "Diagnose bipolar disorder and start lithium immediately",
+        "Recognise the behavioural and psychiatric adverse-effect cluster of levetiracetam — reduce the dose or switch agents if it persists",
+        "Double the dose, since behavioural change signals underdosing in epilepsy",
+        "Add haloperidol and continue the same levetiracetam dose permanently"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung lists the less common but more serious levetiracetam effects as behavioural and mood changes — irritability, aggression, agitation, anger, anxiety, apathy, depression and emotional lability — which improve with dose reduction or a switch. Escalating the dose would worsen the effect, and a drug-attributable behavioural change is not evidence of bipolar disorder.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "mst-lev-03",
+      question: "A 47-year-old woman on warfarin, levothyroxine, an SSRI and a statin develops focal seizures. Which anticonvulsant is the most interaction-safe choice to initiate?",
+      options: [
+        "Valproate — protein-binding displacement is clinically negligible",
+        "Topiramate — its interactions are confined to other anticonvulsants",
+        "Levetiracetam — with no CYP metabolism (renal excretion plus blood-borne deamination) it is essentially free of drug-drug interactions",
+        "Carbamazepine — its enzyme induction is manageable by simple dose adjustment"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung calls the lack of drug-drug interactions a core reason levetiracetam is among the most prescribed antiseizure drugs: two-thirds is excreted unchanged renally and the remainder deaminated in the blood, with no CYP involvement. Carbamazepine's induction would endanger warfarin and the SSRI, valproate inhibits metabolism and displaces bound drugs, and topiramate can blunt oral contraceptives above 200 mg/day.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "mst-lev-04",
+      question: "A 50-year-old with decompensated cirrhosis and a history of portal-systemic encephalopathy needs long-term therapy for focal seizures. Which choice best fits his hepatic status?",
+      options: [
+        "Valproate — hepatic metabolism with level-guided dosing fully compensates for cirrhosis",
+        "Carbamazepine — its autoinduction makes coexisting hepatic disease irrelevant",
+        "Tiagabine — hepatic CYP3A clearance is unimportant in cirrhosis",
+        "Levetiracetam — no hepatic CYP metabolism at all (renal excretion plus deamination in blood)"
+      ],
+      correctIndex: 3,
+      explanation: "Levetiracetam's elimination bypasses the liver — Katzung notes two-thirds excreted unchanged in urine and the remainder deaminated in the blood — making it the natural pick in severe hepatic disease. Valproate carries idiosyncratic hepatotoxicity plus hepatic clearance, carbamazepine depends on hepatic oxidation, and Katzung notes hepatic impairment does decrease tiagabine clearance.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "mst-lev-05",
+      question: "A 16-year-old with juvenile myoclonic epilepsy needs a drug that covers myoclonic and generalized tonic-clonic seizures without interfering with her oral contraceptive. Which choice fits?",
+      options: [
+        "Levetiracetam — broad-spectrum coverage (focal, primary generalized tonic-clonic, and myoclonic seizures) with no enzyme effects on contraceptives",
+        "Carbamazepine — broad-spectrum and contraceptive-safe by virtue of its induction",
+        "Ethosuximide — covers myoclonic and tonic-clonic seizures alike",
+        "Tiagabine — approved for generalized epilepsies including JME"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung lists focal seizures in adults and children, primary generalized tonic-clonic seizures and the myoclonic seizures of juvenile myoclonic epilepsy as levetiracetam's approved coverage, and its renal, CYP-free elimination leaves contraceptives untouched. Carbamazepine induces contraceptive metabolism and can worsen myoclonus, ethosuximide treats absence seizures only, and tiagabine is contraindicated in the generalized epilepsies.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "mst-lev-06",
+      question: "A 34-year-old in benzodiazepine-refractory convulsive status epilepticus has hypotension (BP 88/50 mmHg) during a phenytoin infusion. Which second-line option provides intravenous dosing without adding hypotensive or enzyme-interaction burden?",
+      options: [
+        "IV tiagabine bolus at 16 mg",
+        "IV levetiracetam",
+        "Nasogastric carbamazepine loading at 20 mg/kg",
+        "IV zonisamide infusion at 400 mg"
+      ],
+      correctIndex: 1,
+      explanation: "Levetiracetam has an intravenous preparation (Katzung) with a favourable haemodynamic profile and essentially no interactions — a standard second-line choice in status epilepticus. Carbamazepine, zonisamide and tiagabine have no role in acute intravenous seizure control, and the oral carbamazepine route is far too slow for refractory status.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "mst-lev-07",
+      question: "Which exam pearl about levetiracetam is correctly stated?",
+      options: [
+        "It is the anticonvulsant most associated with weight gain and prolactin rise",
+        "It is contraindicated with SSRIs because of shared serotonergic metabolism",
+        "It combines a broad spectrum and interaction-free kinetics with a behavioural adverse-effect signature, and brivaracetam adds no benefit when given alongside it",
+        "It requires serum-level monitoring after every dose change"
+      ],
+      correctIndex: 2,
+      explanation: "The SV2A agent pairs broad coverage (focal, primary generalized, myoclonic) with renal, CYP-free elimination and a real behavioural and psychiatric AE cluster; Katzung notes brivaracetam provides no added therapeutic benefit alongside levetiracetam because both act on SV2A. Serum levels are not routinely monitored for levetiracetam, prolactin and weight belong to other classes, and no serotonergic interaction exists.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "mst-lev-08",
+      question: "Which Indian levetiracetam facts are correct?",
+      options: [
+        "LEVTAM 25 mg tablets titrated weekly to 200 mg BD as the standard adult regimen",
+        "LEVOREXA is an Indian levetiracetam-vigabatrin combination",
+        "Indian levetiracetam is licensed from birth in all formulations at 3 g/day",
+        "LEVOREXA, TORLEVA and LEVTAM 0.25/0.5/1.0 g tablets; usual adult dose 0.5 g BD increased up to 1 g BD (maximum 3 g/day), not approved below 4 years"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi lists levetiracetam as LEVOREXA, TORLEVA and LEVTAM 0.25, 0.5 and 1.0 g tablets, dosed 0.5 g BD increased up to 1 g BD (maximum 3 g/day), and notes it is not approved in children below 4 years. The 25 mg weekly titration scheme belongs to topiramate's Indian dosing, and no combination products exist.",
+      afterSectionId: "quick-facts",
+    },
   ],
   activeRecallQuestions: [
     {

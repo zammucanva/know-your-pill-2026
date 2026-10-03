@@ -684,6 +684,110 @@ export const prazosin: Drug = {
       explanation: "For ptsd nightmares: start 1 mg at bedtime, target 2-10 mg at night (mean effective ~10 in trials), maximum 15-20 mg/day split. Increase by 1-2 mg every 3-7 days (bedtime ± daytime dosing)",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "adj-prz-01",
+      question: "Prazosin's antihypertensive action rests on which receptor action?",
+      options: [
+        "Highly selective alpha-1 adrenoceptor blockade (about 1000-fold selective over alpha-2), dilating arterioles more than veins without increasing noradrenaline release",
+        "Non-selective alpha-1 and alpha-2 blockade that floods the synapse with noradrenaline and reflexly speeds the heart",
+        "Central alpha-2A agonism that reduces sympathetic outflow from the vasomotor centre",
+        "Beta-1 antagonism that lowers cardiac output and renin release"
+      ],
+      correctIndex: 0,
+      explanation: "Tripathi and Katzung both emphasise prazosin's alpha-1 selectivity of roughly 1000:1; because prejunctional alpha-2 autoreceptors are untouched, noradrenaline release is not increased and reflex tachycardia is mild — the key contrast with phentolamine. The non-selective alpha-1-and-alpha-2 description is phentolamine's profile, the central alpha-2A agonist description is clonidine's mechanism, and the beta-1-antagonism description is beta-blocker pharmacology.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "adj-prz-02",
+      question: "A 34-year-old army veteran with PTSD on sertraline still wakes nightly from violent nightmares. Prazosin is being added. Which counselling is essential at initiation?",
+      options: [
+        "Use terazosin instead — its longer half-life makes first-dose syncope impossible",
+        "Take the first dose at bedtime at a low starting dose — prazosin can cause first-dose hypotension with dizziness or syncope on standing",
+        "Start with 4 mg in the morning so that maximum alpha-blockade is reached from day one",
+        "Switch to clonidine, the established alpha-agonist choice for PTSD nightmares"
+      ],
+      correctIndex: 1,
+      explanation: "Prazosin is the signature PTSD-nightmare agent, layered onto the SSRI backbone rather than replacing it, and Tripathi's first-dose effect — postural dizziness and fainting — is minimised by starting at 0.5-1 mg at bedtime, with tolerance to this effect developing later. Morning dosing and a 4 mg start maximise rather than avoid the hazard, clonidine is the sympatholytic of opioid withdrawal rather than the nightmare drug, and terazosin shares the class first-dose effect despite its longer half-life.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "adj-prz-03",
+      question: "A 58-year-old man takes his first-ever 1 mg dose of prazosin at 8 am; thirty minutes later, standing at a bus stop, he collapses and faints. Which statement is correct?",
+      options: [
+        "This reflects prazosin-induced adrenal medullary discharge, so future doses require catecholamine-synthesis blockade",
+        "This proves phaeochromocytoma, since alpha-blockade unmasks catecholamine storms in every older hypertensive",
+        "This is the classic first-dose phenomenon of alpha-1 blockade — acute postural venous pooling, minimised by starting low at bedtime and waning with continued use",
+        "This is an anaphylactoid reaction to the quinazoline structure, mandating permanent avoidance of all alpha-blockers"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi describes the first-dose effect — postural hypotension with dizziness and fainting especially at initiation — minimised by a low starting dose taken at bedtime, with tolerance to this effect developing subsequently. It is a pharmacodynamic consequence of vasodilatation, not allergy, not adrenal discharge, and not proof of phaeochromocytoma (it is clonidine withdrawal that mimics one).",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "adj-prz-04",
+      question: "Prazosin's pharmacokinetic profile is best summarised as:",
+      options: [
+        "Complete renal excretion of unchanged drug with a half-life of 24-30 hours",
+        "Oral bioavailability near 90% with a half-life of 18-24 hours, allowing once-weekly dosing",
+        "Hepatic elimination with a half-life of 10-12 minutes, requiring continuous infusion",
+        "Oral bioavailability about 60%, extensive hepatic metabolism, plasma half-life 2-3 hours, single-dose effect lasting 6-8 hours"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi lists prazosin as about 60% orally bioavailable, highly protein-bound, hepatically metabolised and excreted mainly in bile, with a plasma half-life of 2-3 hours and a single-dose effect of 6-8 hours — hence BD-TDS oral dosing. The renal-unchanged profile fits no alpha-blocker in the class, the near-90% bioavailability borrows terazosin's figure without its real 12-hour half-life, and no alpha-blocker needs an infusion.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "adj-prz-05",
+      question: "A 62-year-old man with hypertension and bothersome prostatic obstructive symptoms (weak stream, residual urine) is considered for prazosin. What is the pharmacological rationale?",
+      options: [
+        "Prazosin blocks alpha-1 receptors in the bladder trigone and prostatic smooth muscle, improving urine flow, while its vascular alpha-1 blockade lowers the blood pressure",
+        "Prazosin shrinks the hyperplastic gland by inhibiting 5-alpha-reductase, as finasteride does",
+        "Prazosin relaxes prostatic smooth muscle by muscarinic blockade, as oxybutynin does",
+        "Prazosin stimulates alpha-1 receptors in the prostate to raise bladder-neck tone"
+      ],
+      correctIndex: 0,
+      explanation: "Tripathi notes prazosin blocks alpha-1 receptors in the bladder trigone and prostatic smooth muscle, improving flow and reducing residual urine, while the same vascular alpha-1 blockade treats the hypertension. The 5-alpha-reductase story is finasteride's androgen-synthesis mechanism, the muscarinic-blockade claim is antimuscarinic pharmacology that can actually worsen retention, and the alpha-1-stimulation claim reverses the direction of the drug's action.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "adj-prz-06",
+      question: "Why does prazosin produce far less reflex tachycardia than phentolamine, although both lower blood pressure?",
+      options: [
+        "Phentolamine acts directly on vascular smooth muscle, which never recruits baroreflexes",
+        "Prazosin's alpha-1 selectivity leaves prejunctional alpha-2 autoreceptors intact, so noradrenaline release is not increased; phentolamine also blocks alpha-2 and raises noradrenaline release",
+        "Prazosin is a beta-agonist that deliberately accelerates the heart in a controlled way",
+        "Prazosin stimulates vagal nuclei directly, more than doubling stroke volume"
+      ],
+      correctIndex: 1,
+      explanation: "Prazosin's 1000:1 alpha-1 selectivity (Tripathi; Katzung calls it typically 1000-fold less potent at alpha-2) spares the prejunctional alpha-2 autoreceptors that normally restrain noradrenaline release, whereas phentolamine's alpha-2 blockade removes that brake and tachycardia follows. Phentolamine is a competitive alpha-antagonist rather than a direct vasodilator, and prazosin neither stimulates beta-receptors nor vagal nuclei.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "adj-prz-07",
+      question: "An Indian hypertensive is prescribed MINIPRESS XL, one tablet at night. What is this formulation, and how is plain prazosin usually dosed?",
+      options: [
+        "MINIPRESS XL is clonidine 100 microgram in a weekly transdermal patch; oral clonidine runs 100-300 microgram three times daily",
+        "MINIPRESS XL is an atenolol-plus-chlorthalidone fixed-dose combination taken each morning",
+        "MINIPRESS XL is prazosin in a GITS (gastrointestinal therapeutic system) 2.5 and 5 mg once-daily tablet; plain prazosin (PRAZOPRES 0.5, 1, 2 mg) starts at 0.5-1 mg at bedtime, usual 1-4 mg BD-TDS",
+        "MINIPRESS XL is a sustained-release terazosin 5 mg tablet; plain terazosin starts at 10 mg twice daily"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi lists MINIPRESS XL as prazosin GITS 2.5 and 5 mg once daily, with conventional prazosin as PRAZOPRES 0.5, 1 and 2 mg — start 0.5-1 mg at bedtime, usual 1-4 mg BD or TDS. Terazosin is a separate molecule that is not marketed as MINIPRESS, the clonidine patch story is misplaced, and the atenolol combination is unrelated to this brand.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "adj-prz-08",
+      question: "Beyond postural hypotension, which adverse effects are recognised with prazosin as an alpha-1 blocker?",
+      options: [
+        "Mydriasis, dry cough and hyperkalaemia",
+        "Constipation, urinary retention and precipitation of angle-closure glaucoma",
+        "Bronchospasm, bradycardia and cold peripheries from beta-2 blockade",
+        "Miosis, nasal stuffiness and inhibition of ejaculation — milder than with non-selective alpha-blockers"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi lists miosis, nasal stuffiness and inhibition of ejaculation among the milder alpha-blocking effects of prazosin. The bronchospasm-bradycardia cluster is propranolol's beta-blocker signature, the constipation-retention-glaucoma cluster is the anticholinergic toxidrome of benztropine-like drugs, and hyperkalaemia with dry cough maps to entirely different drug classes.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

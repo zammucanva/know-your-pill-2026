@@ -696,6 +696,110 @@ export const memantine: Drug = {
       explanation: "For moderate-severe alzheimer's (titration): start 5 mg once daily week 1, target 10 mg bd / 20 mg XR daily, maximum 10 mg bd / 20 mg XR. 5 mg bd week 2; then 10 mg bd (or XR 20 mg daily)",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "stm-mem-01",
+      question: "Memantine's mechanism is best stated as:",
+      options: [
+        "Low-affinity, uncompetitive (use-dependent) NMDA-channel antagonism that dampens excessive tonic glutamatergic excitation while sparing normal transmission",
+        "Competitive orthosteric glutamate-site antagonism across all NMDA receptors",
+        "Positive allosteric modulation of GABA-B receptors",
+        "Acetylcholinesterase inhibition with nicotinic potentiation"
+      ],
+      correctIndex: 0,
+      explanation: "Memantine enters open NMDA channels in a use-dependent fashion and blocks noncompetitively (Katzung; Tripathi: noncompetitive and use-dependent), pruning pathological excitotoxic signalling while physiological transmission proceeds. Competitive blockade would wreck normal glutamatergic function, GABA-B modulation has no member in this set, and the cholinesterase-nicotinic description is galantamine's.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "stm-mem-02",
+      question: "A 74-year-old with moderate-to-severe Alzheimer's on donepezil 10 mg deteriorates in function. The staging-appropriate addition is:",
+      options: [
+        "Stop all cognition therapy since severe AD is untreatable",
+        "Add memantine — indicated for moderate-to-severe AD and commonly combined with donepezil (Tripathi: replace or supplement; Katzung: combination results mixed but used)",
+        "Add tacrine for extra cholinergic drive",
+        "Replace donepezil with methylphenidate"
+      ],
+      correctIndex: 1,
+      explanation: "Memantine is the NMDA-antagonist add-on for moderate-to-severe AD, layered on or substituted for a cholinesterase inhibitor — the staging pearl (AChE inhibitors earlier, memantine later). Tacrine is retired, methylphenidate is not an AD drug (Tripathi explicitly bars dementia use), and abandoning therapy contradicts current practice.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "stm-mem-03",
+      question: "Why does memantine spare physiological glutamatergic transmission while blocking excitotoxicity? The receptor-kinetic answer is:",
+      options: [
+        "It antagonises glutamate at metabotropic receptors instead",
+        "It increases glutamate reuptake by astrocytes",
+        "Low affinity and fast off-rate let the blocker clear during brief physiological channel openings but accumulate in persistently open channels under tonic pathological activation",
+        "It binds irreversibly only to receptors on diseased neurons"
+      ],
+      correctIndex: 2,
+      explanation: "The uncompetitive, use-dependent, low-affinity profile means memantine preferentially occupies channels that stay open too long (tonic/pathological) and exits quickly when pulses are brief — the kinetic rationale quoted in every mechanism lecture. Neuron-selective irreversible binding, metabotropic antagonism and astrocytic uptake effects are mechanisms it does not possess.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "stm-mem-04",
+      question: "Two weeks after starting memantine 10 mg twice daily, a patient has hallucinations, confusion and dizziness. The correct handling is:",
+      options: [
+        "They indicate a missed tacrine-style hepatic emergency",
+        "They are inevitable and untreatable",
+        "They prove cholinergic excess requiring atropine",
+        "These are recognised memantine adverse effects (Tripathi: dizziness, confusion; hallucinations occur) — assess, and reduce or stop if unacceptable, remembering renal dose adjustment"
+      ],
+      correctIndex: 3,
+      explanation: "Memantine's adverse-effect line — constipation, tiredness, headache, dizziness, drowsiness, with confusion and hallucinations recognised — is managed by dose review, not by organ-failure panic or antidotes. Hepatotoxicity is tacrine/pemoline's story, and the cholinergic-excess reading is backwards: memantine is the agent free of cholinergic burden.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "stm-mem-05",
+      question: "Memantine's indication and positioning are:",
+      options: [
+        "Moderate-to-severe Alzheimer's disease — to replace or supplement an anti-AChE (Tripathi); benefit in milder disease is unclear",
+        "Mild cognitive impairment as first-line",
+        "Mild AD only, before any AChE inhibitor",
+        "Delirium prophylaxis in the ICU"
+      ],
+      correctIndex: 0,
+      explanation: "The label anchors to moderate-to-severe AD (Tripathi: slows functional decline; Katzung: modest efficacy in moderate-to-severe disease), with replacement or supplementation of cholinesterase inhibitors as the positioning pearl. MCI and mild AD lack established benefit, and ICU delirium prophylaxis is not a memantine role.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "stm-mem-06",
+      question: "A 70-year-old with eGFR 28 mL/min is to start memantine. The PK-based counselling is:",
+      options: [
+        "Renal impairment mandates doubling the dose",
+        "Memantine is largely renally excreted unchanged, so renal impairment requires dose adjustment — the standard caution in moderate-to-severe impairment",
+        "Memantine is fully hepatically metabolised by CYP3A4, so renal function is irrelevant",
+        "Memantine is a prodrug activated in the kidney, so impairment speeds activation"
+      ],
+      correctIndex: 1,
+      explanation: "Renal excretion of largely unchanged drug is memantine's PK signature (contrast galantamine's CYP story), hence labelled renal dose adjustment in impairment. Options A, C and D invert or fabricate: no relevant 3A4 metabolism, no renal prodrug activation, and impairment reduces — never doubles — the dose.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "stm-mem-07",
+      question: "The classic memantine-versus-AChE-inhibitor cardiac-GI comparison in examinations is:",
+      options: [
+        "AChE inhibitors are cardiac-safe while memantine blocks cardiac sodium channels",
+        "Both classes share identical adverse-effect profiles",
+        "Memantine lacks the cholinergic cardiac (bradycardia/syncope) and GI (nausea/vomiting) burden that AChE inhibitors carry — its AEs are dizziness, confusion/hallucinations, constipation, headache",
+        "Memantine causes more bradycardia than donepezil"
+      ],
+      correctIndex: 2,
+      explanation: "The comparison hinges on pharmacology: cholinergic cardiac effects (bradycardia/syncope) and GI effects (nausea/vomiting) belong to acetylcholinesterase inhibition, and memantine — an NMDA antagonist — lacks both burdens, its own AEs being dizziness, confusion, hallucinations, constipation and headache. Option D inverts the teaching point, option A borrows antiarrhythmic pharmacology, and option B erases the contrast the question tests.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "stm-mem-08",
+      question: "An Indian family asks how memantine will be started and when it is judged futile. Tripathi's practice box says:",
+      options: [
+        "Start 25 mg OD and review monthly",
+        "The Indian brands are DONECEPT and GALAMER",
+        "Titrate to a fixed 40 mg/day target for all patients",
+        "Start 5 mg OD, titrate gradually to 10 mg BD (ADMENTA/MENTADEM 5/10 mg; ALMANTIN 5 mg), and stop if no clinical benefit after 6 months"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi's memantine box: 5 mg OD titrated to 10 mg BD, brands ADMENTA/MENTADEM/ALMANTIN, with a pragmatic stop-rule at 6 months without benefit. The 25 mg and 40 mg figures import no real Indian schedule, and DONECEPT/GALAMER are donepezil and galantamine brands.",
+      afterSectionId: "quick-facts",
+    },
   ],
   activeRecallQuestions: [
     {

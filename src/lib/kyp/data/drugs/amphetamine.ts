@@ -805,6 +805,110 @@ export const amphetamine: Drug = {
       explanation: "For adhd (ir): start 5 mg once or twice daily, target 10-30 mg/day divided, maximum 40 mg/day. Increase by 5 mg weekly",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "stm-amp-01",
+      question: "The most accurate statement of amphetamine's central mechanism (Katzung's transporter framework) is:",
+      options: [
+        "It reverses DAT and NET to push dopamine and noradrenaline out of the terminal and is a VMAT2 substrate that displaces amines from vesicles — an indirect releaser",
+        "It purely blocks DAT/NET reuptake without any effect on vesicular storage",
+        "It directly stimulates postsynaptic dopamine D2 receptors as a full agonist",
+        "It inhibits MAO-A within the synaptic cleft as its principal action"
+      ],
+      correctIndex: 0,
+      explanation: "Amphetamine enters the terminal via the transporters, reverses DAT/NET flux and, as a VMAT2 substrate, displaces stored monoamines into the cytosol for outward release — the classic indirect-acting displacer in Katzung's monoamine-transporter figure. Pure reuptake blockade without releaser activity is methylphenidate's and cocaine's signature, not amphetamine's; direct D2 agonism is bromocriptine-style pharmacology, and MAO inhibition is a minor auxiliary action at most.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "stm-amp-02",
+      question: "A patient who has ingested a large dose of amphetamine is found to have strongly acidic urine. How does this affect elimination?",
+      options: [
+        "Alkalinization would be required to achieve the same trapping effect",
+        "Acidification ionizes the weak-base amphetamine in the renal tubule, trapping it there and accelerating its urinary excretion",
+        "Urinary pH has no effect because amphetamine is almost completely protein-bound",
+        "Acidification increases reabsorption because only ionized drug crosses tubular membranes"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung's weak-base trapping figure uses methamphetamine/amphetamine as its example: in acidic urine the amine ionizes, the ionized fraction cannot diffuse back across the tubular membrane, and excretion is accelerated. Ionized drug is the NON-diffusible form, so option D inverts the principle; alkalinization would do the opposite; and pH trapping matters precisely because the drug is largely unbound and handled by pH-sensitive passive reabsorption.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "stm-amp-03",
+      question: "A 14-year-old boy with severe ADHD is about to start an amphetamine-class or methylphenidate regimen. Which pre-treatment assessment is specifically emphasized before prescribing stimulants?",
+      options: [
+        "Routine EEG to exclude subclinical epilepsy",
+        "Baseline serum prolactin and liver function tests",
+        "Careful cardiac history and examination with baseline blood pressure and heart rate, because stimulants raise both and structural cardiac disease raises sudden-death concern",
+        "Echocardiography is mandatory in every child before any ADHD drug"
+      ],
+      correctIndex: 2,
+      explanation: "The KYP ADHD safety anchor: screen with cardiac history, examination and baseline BP/HR before starting stimulants — raised BP and HR are real sympathomimetic effects and structural cardiac disease is the concern behind rare sudden-death reports. EEG is not routine, stimulants are not prolactin-raising agents, and echocardiography is reserved for abnormal findings rather than universal.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "stm-amp-04",
+      question: "A narcolepsy patient is choosing between amphetamine-class treatment and modafinil. Katzung's comparative point favouring modafinil in this condition is:",
+      options: [
+        "Modafinil is a more potent dopamine releaser than amphetamine",
+        "Amphetamine has no CNS effects at narcolepsy doses",
+        "Modafinil is Schedule II while amphetamine is unscheduled",
+        "Modafinil is claimed to have fewer disadvantages than amphetamine in narcolepsy — less excessive mood change, less insomnia and lower abuse potential"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung's narcolepsy note describes modafinil as a new amphetamine substitute claimed to have fewer disadvantages (excessive mood changes, insomnia, and abuse potential) than amphetamine in this condition. The releaser-potency claim is backwards, amphetamine is the prototypical CNS stimulant at therapeutic doses, and the schedules are the reverse of option C — amphetamine sits in Schedule II, modafinil in Schedule IV.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "stm-amp-05",
+      question: "A 19-year-old who has been escalating dexamphetamine doses recreationally is brought in paranoid, with stereotyped repetitive behaviour and skin-picking. The best pharmacological explanation is:",
+      options: [
+        "High-dose amphetamine intoxication can produce an amphetamine psychosis with stereotypy that closely mimics acute paranoid schizophrenia",
+        "He has developed catatonia from dopamine depletion",
+        "These are anticholinergic toxidrome features from tablet adulterants",
+        "This is a noradrenaline-withdrawal state from abrupt dose reduction"
+      ],
+      correctIndex: 0,
+      explanation: "Chronic high-dose amphetamine produces a dopaminergic psychosis with paranoia, stereotypy and formication — the classic examination contrast with schizophrenia. Withdrawal more typically yields fatigue, hypersomnia and depression rather than florid paranoia, the anticholinergic toxidrome shows dry skin, mydriasis and delirium instead of stereotypy, and catatonia is not the expected stimulant picture.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "stm-amp-06",
+      question: "The constellation of common peripheral and metabolic adverse effects of chronic amphetamine therapy is best captured as:",
+      options: [
+        "Cough, peripheral oedema and hyperkalaemia",
+        "Raised blood pressure and heart rate, insomnia, appetite suppression with weight loss, and childhood growth slowing",
+        "Hypotension, hypersomnia, weight gain and prolactin elevation",
+        "Sedation, constipation, urinary retention and blurred vision"
+      ],
+      correctIndex: 1,
+      explanation: "As an indirect sympathomimetic, amphetamine raises BP and heart rate, disrupts sleep, suppresses appetite and can slow childhood growth — hence monitoring of vitals, weight and height, with drug holidays a debated option. Option C is a mirror-image antisympathomimetic picture, option D is the anticholinergic toxidrome, and option A borrows unrelated cardiovascular-renal liabilities.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "stm-amp-07",
+      question: "A woman on phenelzine for atypical depression asks about starting an amphetamine-based ADHD agent. The correct counselling is:",
+      options: [
+        "The interaction matters only with reversible MAO-A inhibitors such as moclobemide",
+        "The combination is safe if the amphetamine dose is taken at night",
+        "Combining amphetamines with an MAO inhibitor is contraindicated — the releaser action on a MAO-blocked terminal risks severe hypertensive crisis and hyperthermia",
+        "Only the d-isomer interacts with MAO inhibitors"
+      ],
+      correctIndex: 2,
+      explanation: "Amphetamine is an indirect sympathomimetic releaser; MAO blockade prevents breakdown of the catecholamines it liberates, so the pair is a classic hypertensive-crisis and hyperthermia contraindication shared with tyramine. Dose timing and enantiomer choice do not rescue the interaction, and the risk is not confined to any one MAO inhibitor type — sympathomimetic avoidance is blanket policy.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "stm-amp-08",
+      question: "A prescription audit asks which of these are formal therapeutic uses of amphetamine-class stimulants today:",
+      options: [
+        "General stay-awake use in healthy students before examinations",
+        "Substitution treatment of opioid and alcohol dependence",
+        "Obesity and depression as first-line agents",
+        "ADHD and narcolepsy"
+      ],
+      correctIndex: 3,
+      explanation: "Amphetamine-class agents are anchored to ADHD and narcolepsy — the therapeutic pair Katzung lists for the CNS-active sympathomimetics. Appetite suppression never delivered proven long-term weight control and Tripathi bars their use for depression, dementia, obesity or keeping healthy people awake; they carry abuse potential rather than treating dependence, which is naltrexone and buprenorphine territory.",
+      afterSectionId: "quick-facts",
+    },
   ],
   activeRecallQuestions: [
     {

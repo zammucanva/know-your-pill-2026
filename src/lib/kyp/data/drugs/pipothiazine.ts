@@ -790,6 +790,110 @@ export const pipothiazine: Drug = {
       explanation: "For maintenance depot (palmitate): start 25 mg IM test dose, target 50 mg every 4 weeks, maximum 100 mg every 4 weeks. 25–100 mg every 4 weeks",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "tap-pip-01",
+      question: "Pipothiazine's subfamily position and what it implies are correctly stated as:",
+      options: [
+        "A piperidine-substituted phenothiazine — comparatively lower EPS within the phenothiazine family",
+        "A piperazine phenothiazine — the highest-EPS subfamily",
+        "An aliphatic phenothiazine — the most sedating subfamily",
+        "A thioxanthene — chemically identical to haloperidol"
+      ],
+      correctIndex: 0,
+      explanation: "Pipothiazine belongs to the piperidine phenothiazines — the thioridazine subfamily — which Katzung's structure-toxicity table places at the gentler EPS end compared with piperazine congeners such as fluphenazine. The aliphatic group (chlorpromazine) is the most sedating, and it is thiothixene, not any phenothiazine, that is haloperidol's structural cousin.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "tap-pip-02",
+      question: "A 28-year-old man in India with schizophrenia feels well on tablets but relapses whenever he stops them, and he now agrees to a long-acting injection. A fitting Indian option is:",
+      options: [
+        "Molindone tablets with directly observed daily dosing",
+        "Zuclopenthixol acetate weekly",
+        "Pipothiazine palmitate — a long-acting IM depot given about every 4 weeks",
+        "Cyamemazine syrup nightly"
+      ],
+      correctIndex: 2,
+      explanation: "Pipothiazine palmitate is the long-acting piperidine-phenothiazine depot designed for non-adherent patients, dosed at roughly 4-weekly intervals and available in India. Zuclopenthixol acetate is a days-scale acute ester, molindone is an oral-only drug whose US brand has been discontinued, and cyamemazine is a French-market anxiolytic-style phenothiazine.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-pip-03",
+      question: "The pharmacokinetic principle behind pipothiazine palmitate's weeks-long duration is:",
+      options: [
+        "The ester halves plasma protein binding to accelerate clearance",
+        "The lipophilic ester forms an intramuscular reservoir that is slowly hydrolysed by esterases, releasing drug over weeks",
+        "The ester is excreted unchanged in urine without hydrolysis",
+        "The ester bypasses the muscle entirely and acts from gut stores"
+      ],
+      correctIndex: 1,
+      explanation: "Depot esters work by slow physics: the highly lipophilic ester dissolves in the injected muscle and is hydrolysed gradually by esterases, releasing active pipothiazine across weeks — the same principle behind the fluphenazine and haloperidol decanoates Katzung recommends for maintenance. Accelerated clearance, renal excretion of intact ester and gut-based action are all false mechanisms.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "tap-pip-04",
+      question: "A 35-year-old on pipothiazine palmitate complains of new stiffness, occasional restlessness, mild daytime sleepiness and light-headedness on standing quickly. The best single explanation is:",
+      options: [
+        "Moderate EPS combined with alpha-1 blockade — sedation and postural dizziness fit the piperidine phenothiazine profile",
+        "Pimozide-type QTc prolongation needing an emergency ECG",
+        "Agranulocytosis presenting as fatigue",
+        "Molindone-type weight loss with insomnia"
+      ],
+      correctIndex: 0,
+      explanation: "As a piperidine phenothiazine, pipothiazine carries moderate EPS plus some alpha-1 mediated postural hypotension and sedation — exactly the composite picture here. QTc vigilance is the pimozide and thioridazine story, agranulocytosis is a clozapine-scale issue rather than a fatigue complaint, and pipothiazine does not cause weight loss with insomnia.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-pip-05",
+      question: "A farm worker on pipothiazine develops intense sunburn on his arms and face after a day in the field despite only modest exposure. The most likely drug-related explanation is:",
+      options: [
+        "Phenothiazine photosensitivity — counsel sun protection, clothing and sunscreen",
+        "Pellagra from niacin deficiency",
+        "Contact dermatitis from pesticide gloves",
+        "Drug-induced systemic lupus requiring steroids"
+      ],
+      correctIndex: 0,
+      explanation: "Photosensitivity is a classic phenothiazine hypersensitivity reaction (most famous with chlorpromazine), so bright sun plus a phenothiazine yields exaggerated sunburn — counsel protection. Pellagra and contact dermatitis lack the drug link, and phenothiazine-induced lupus is rare and would not present as simple sunburn.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-pip-06",
+      question: "A 66-year-old with Parkinson's disease on levodopa develops hallucinations, and pipothiazine is proposed for the psychosis. The main pharmacological objection is:",
+      options: [
+        "Pipothiazine potently induces levodopa metabolism, halting its benefit",
+        "Pipothiazine enhances levodopa's antiparkinsonian effect",
+        "Pipothiazine would dangerously worsen parkinsonism by blocking striatal D2 receptors and opposing levodopa",
+        "Pipothiazine is safe at full antipsychotic doses in parkinsonism"
+      ],
+      correctIndex: 2,
+      explanation: "Neuroleptics block the actions of levodopa and direct dopamine agonists (Tripathi): D2 blockade in the striatum aggravates rigidity and bradykinesia, which is why parkinsonian psychosis needs specialist-guided cautious strategies instead. There is no enzyme induction and no synergy, and full-dose safety is the opposite of the truth.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-pip-07",
+      question: "Which subfamily assignment is correct?",
+      options: [
+        "Pipothiazine — piperazine phenothiazine; fluphenazine — piperidine phenothiazine",
+        "Pipothiazine — butyrophenone; haloperidol — phenothiazine",
+        "Pipothiazine — piperidine phenothiazine; fluphenazine — piperazine phenothiazine",
+        "Pipothiazine — dibenzoxazepine; loxapine — phenothiazine"
+      ],
+      correctIndex: 2,
+      explanation: "Pipothiazine sits with thioridazine among the piperidine phenothiazines while fluphenazine heads the piperazine group — the mapping that predicts their differing EPS burdens. Options A and B swap families, and option D misfiles both loxapine (a dibenzoxazepine) and pipothiazine.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "tap-pip-08",
+      question: "Which statement about the depot esters in this batch is correct?",
+      options: [
+        "Pipothiazine acetate is the classic short-acting agitation ester",
+        "Flupenthixol has no depot preparation anywhere in the world",
+        "All depot esters in this batch must be given daily",
+        "Zuclopenthixol acetate is the short-acting agitation ester, while flupenthixol and pipothiazine depots serve 2-4 weekly maintenance"
+      ],
+      correctIndex: 3,
+      explanation: "The batch's ester map: zuclopenthixol acetate covers 24-72 hours of acute agitation, while flupenthixol decanoate and pipothiazine palmitate are weeks-scale maintenance depots. Option A moves the short-acting flag to pipothiazine, option B forgets Fluanxol Depot, and daily dosing would defeat every depot's purpose.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

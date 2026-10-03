@@ -916,6 +916,110 @@ export const ziprasidone: Drug = {
       explanation: "For schizophrenia (oral): start 20 mg twice daily with food, target 40–80 mg twice daily, maximum 160 mg/day. Increase by 20 mg bid at intervals of ≥ 2 days",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "atp-zip-01",
+      question: "Beyond D2 and 5-HT2A antagonism, ziprasidone's receptor and reuptake pharmacology includes:",
+      options: [
+        "5-HT1A agonism, 5-HT1D antagonism and moderately potent inhibition of 5-HT and NA reuptake",
+        "Pure D4 selectivity with no serotonergic activity at all",
+        "Irreversible monoamine-oxidase inhibition explaining antidepressant-type interactions",
+        "Strong muscarinic blockade accounting for dry mouth and constipation"
+      ],
+      correctIndex: 0,
+      explanation: "Tripathi describes ziprasidone as combining D2 and 5-HT2A/2C blockade with 5-HT1A agonism, 5-HT1D antagonism and moderate inhibition of serotonin and noradrenaline reuptake — a built-in anxiolytic-antidepressant flavour. It lacks antimuscarinic actions, and MAO inhibition plays no part in its profile.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "atp-zip-02",
+      question: "Oral ziprasidone's pharmacokinetic signature is:",
+      options: [
+        "Absorption so unreliable that serum levels are routinely measured",
+        "An elimination half-life near 8 hours mandating twice-daily dosing, with CYP3A4-dependent clearance",
+        "A 30-hour half-life permitting single nightly dosing",
+        "Renal excretion of unchanged parent drug"
+      ],
+      correctIndex: 1,
+      explanation: "Ziprasidone's t½ is roughly 8 hours (Tripathi), hence twice-daily dosing, and it is metabolised by CYP3A4 — ketoconazole-type inhibitors raise its levels. A 30-hour half-life belongs to agents like aripiprazole (75 h), renal unchanged excretion is amisulpride's route, and routine level monitoring is not practised — the practical check is the meal rule.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atp-zip-03",
+      question: "A student with schizophrenia improves on ziprasidone 80 mg twice daily. She stops eating breakfast and swallows her morning dose on an empty stomach before class; months later she relapses despite unchanged dose and adherence. The most likely contributor is:",
+      options: [
+        "Tachyphylaxis requiring permanent dose doubling",
+        "CYP1A2 induction caused by overnight fasting",
+        "Markedly reduced ziprasidone absorption when the dose is taken fasting",
+        "Autoimmune loss of D2 receptor responsiveness to ziprasidone"
+      ],
+      correctIndex: 2,
+      explanation: "Ziprasidone must be taken with a meal of roughly 500 kcal — on an empty stomach its bioavailability falls to about half the fed value, so fasting doses deliver far less drug and relapse follows despite 'adherence' (the class's signature food pearl). Tachyphylaxis is not the mechanism, and fasting does not induce CYP1A2.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-zip-04",
+      question: "Before starting ziprasidone in a 45-year-old man, the resident orders baseline investigations. Which test is most specifically required because of this drug's cardiac liability?",
+      options: [
+        "Serial serum troponins",
+        "Twenty-four-hour urinary catecholamines",
+        "Routine waking EEG",
+        "Baseline ECG with QTc measurement"
+      ],
+      correctIndex: 3,
+      explanation: "Ziprasidone carries the greatest QTc-prolonging risk among the atypical agents (Katzung), so a baseline ECG — repeated after dose changes, with electrolytes corrected — is the specific safety step. Troponins track myocardial injury rather than repolarisation, and catecholamines or EEG have no role in this liability.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atp-zip-05",
+      question: "A 36-year-old with schizophrenia on olanzapine has gained 14 kg with HbA1c 7.1%; a switch is planned with metabolic recovery as priority. Which trio correctly names the leanest metabolic tier of atypical antipsychotics?",
+      options: [
+        "Ziprasidone, aripiprazole and lurasidone",
+        "Clozapine, olanzapine and quetiapine",
+        "Risperidone, paliperidone and olanzapine",
+        "Zotepine and asenapine"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung calls ziprasidone the second-generation drug causing the least weight gain, with aripiprazole and lurasidone in the same small-increase group — the tier to choose in metabolic disease. Clozapine and olanzapine top the weight/diabetes league (with quetiapine and asenapine intermediate), risperidone-type agents carry prolactin issues, and zotepine behaves like clozapine metabolically.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-zip-06",
+      question: "An acutely agitated, violent patient in the emergency ward needs rapid control; the team prefers an atypical agent with minimal EPS in parenteral form. The best choice is:",
+      options: [
+        "Transdermal cariprazine patch",
+        "Intramuscular ziprasidone",
+        "Oral sertindole dissolved in water",
+        "Sublingual amisulpride"
+      ],
+      correctIndex: 1,
+      explanation: "IM ziprasidone improves acute agitation within 1–2 hours with fewer extrapyramidal symptoms than haloperidol (Katzung) — a standard emergency choice. Sertindole is oral-only and QTc-restricted, amisulpride has no sublingual form, and no cariprazine patch exists — the transdermal antipsychotic developed in Japan is blonanserin.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-zip-07",
+      question: "A man stable on ziprasidone is prescribed thioridazine 25 mg by a local practitioner for hiccups; he also takes amiodarone for paroxysmal fibrillation. The danger to flag first is:",
+      options: [
+        "Serotonin syndrome from a triple serotonergic load",
+        "Antimuscarinic crisis with hyperthermia",
+        "Additive QTc prolongation with torsades de pointes risk",
+        "Loss of ziprasidone efficacy from enzyme induction by both drugs"
+      ],
+      correctIndex: 2,
+      explanation: "Ziprasidone must not be combined with other QT-prolonging drugs — Katzung explicitly names thioridazine, pimozide and class IA/III antiarrhythmics such as amiodarone — because additive repolarisation delay invites torsades. Neither co-drug meaningfully induces metabolism, and ziprasidone's serotonergic actions are far too mild for serotonin syndrome.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atp-zip-08",
+      question: "The two antipsychotics whose oral absorption is meaningfully food-dependent — the classic 'must take with food' pair — are:",
+      options: [
+        "Olanzapine and quetiapine",
+        "Clozapine and asenapine",
+        "Risperidone with paliperidone (no meal requirement)",
+        "Ziprasidone and lurasidone"
+      ],
+      correctIndex: 3,
+      explanation: "Ziprasidone needs a ~500 kcal meal and lurasidone at least ~350 kcal for reliable absorption — the two food-dependent antipsychotics of the class, taught as mirror pearls. Clozapine and olanzapine are absorbed regardless of meals, asenapine's quirk is sublingual rather than dietary, and risperidone/paliperidone have no food stipulation.",
+      afterSectionId: "knowledge-graph",
+    },
   ],
   activeRecallQuestions: [
     {

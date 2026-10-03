@@ -1,0 +1,1574 @@
+{
+ "batch": "kyp-moodstab-mcq-batch-14",
+ "title": "Mood Stabiliser MCQ Batch 14 - Lithium, valproate, carbamazepine, lamotrigine & adjunct anticonvulsants",
+ "generated": "2026-10-02",
+ "examOrientation": "Indian exams (NEET PG / INI-CET) + USMLE-style vignettes",
+ "textbookAnchors": "Facts aligned with Katzung Basic & Clinical Pharmacology 14e (ch.29 lithium/mood stabilisers, ch.24 antiseizure drugs, Table 59-1 teratogens, Table 24-2 molecular targets), K.D. Tripathi Essentials of Medical Pharmacology 7e (ch.30 antiepileptics, ch.32 antimanic drugs) and USMLE board conventions; cross-checked against KYP monographs (lithium 0.6-0.8 maintenance vs 0.8-1.2 mania levels, NSAID/thiazide/ACE level-raising cluster, amiloride for nephrogenic DI, Ebstein anomaly; valproate 1-2% neural tube defects, hyperammonaemia with L-carnitine, hepatotoxicity <2 y on polytherapy, PCOS; carbamazepine autoinduction 36->8-12 h, HLA-B*15:02 SJS screen, OCP failure, trigeminal neuralgia DOC; lamotrigine bipolar-depression ownership, valproate-inhibited glucuronidation halving titration, slow 25->200 mg rash-safe titration; oxcarbazepine MHD prodrug without epoxide or autoinduction but hyponatraemia; topiramate dysnomia/stones/weight loss/acidosis; gabapentinoid alpha2-delta pair with saturable vs linear absorption; levetiracetam SV2A with interaction-free renal kinetics and behavioural AEs; tiagabine GAT-1 uniqueness; zonisamide sulfa cross-reactivity, ~60 h half-life). No copyrighted text reproduced.",
+ "schema": {
+  "core_fields": "id, question, options[4], correctIndex, explanation, afterSectionId - IDENTICAL to KYP microQuizzes",
+  "metadata_fields": "drugSlug, domain, difficulty (Foundation|Clinical|Advanced), style (vignette|recall) - batch extras",
+  "notes": [
+   "afterSectionId values are real section ids observed live on KYP mood-stabiliser pages: top, quick-facts, mechanism, timeline, neurotransmitters, neural-pathways, knowledge-graph, high-yield-summary, brain-regions.",
+   "Answer positions deliberately spread: A23 B22 C22 D22 (see stats.answerSpread).",
+   "QA gate: this batch passed scripts/mcq_4step_check.py after extending the fact table with mood-stabiliser/anticonvulsant data.",
+   "id pattern: mst-<3letter>-01..08 per drug (lit/val/cbz/ltg/oxc/tpm/gbp/pgb/lev/tgb/zns) + one mst-mix-01 class-summary at the end."
+  ]
+ },
+ "stats": {
+  "total": 89,
+  "byDrug": {
+   "lithium": 8,
+   "valproate": 8,
+   "carbamazepine": 8,
+   "lamotrigine": 8,
+   "oxcarbazepine": 8,
+   "topiramate": 8,
+   "gabapentin": 8,
+   "pregabalin": 8,
+   "levetiracetam": 8,
+   "tiagabine": 8,
+   "zonisamide": 8,
+   "mixed": 1
+  },
+  "byDifficulty": {
+   "Foundation": 21,
+   "Clinical": 48,
+   "Advanced": 20
+  },
+  "byStyle": {
+   "recall": 39,
+   "vignette": 50
+  },
+  "byDomain": {
+   "Mechanism & Neuroscience": 11,
+   "Pharmacokinetics": 13,
+   "Adverse Effects & Safety": 19,
+   "Drug Interactions": 8,
+   "Clinical Uses": 17,
+   "Indian Practice": 9,
+   "Exam Pearls": 10,
+   "Active Recall": 2
+  },
+  "answerSpread": {
+   "0": 23,
+   "1": 22,
+   "2": 22,
+   "3": 22
+  }
+ },
+ "questions": [
+  {
+   "id": "mst-lit-01",
+   "drugSlug": "lithium",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Lithium's accepted molecular mechanism of mood stabilisation centres on:",
+   "options": [
+    "Inhibition of inositol monophosphatase with depletion of intracellular inositol, plus direct inhibition of GSK-3 kinase",
+    "Competitive blockade of postsynaptic dopamine D2 receptors, exactly like haloperidol",
+    "Irreversible inhibition of GABA transaminase, raising brain GABA concentrations",
+    "Use-dependent blockade of voltage-gated sodium channels in their inactivated state"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung identifies two signal-transduction targets: inositol monophosphatase inhibition depletes free inositol and dampens overactive PIP2-linked signalling, while GSK-3 inhibition favours beta-catenin accumulation and neuroplasticity. D2 blockade defines the antipsychotics, GABA-transaminase inhibition is vigabatrin's mechanism, and inactivated-state sodium-channel blockade is the fingerprint of carbamazepine and lamotrigine \u2014 not lithium."
+  },
+  {
+   "id": "mst-lit-02",
+   "drugSlug": "lithium",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 68-year-old man with mild chronic kidney disease (eGFR 48 mL/min) is to start lithium for bipolar maintenance. His junior asks why the starting dose must be lower and the monitoring tighter than in a younger patient. The pharmacokinetic reason is:",
+   "options": [
+    "Lithium is hepatically metabolised to an inactive glucuronide whose clearance slows with age",
+    "Lithium is handled like sodium \u2014 nearly 80% of the filtered load is reabsorbed in the proximal tubule, and levels run higher in older patients and in renal insufficiency",
+    "Lithium is completely filtered with zero tubular reabsorption, so clearance always equals the GFR",
+    "Lithium is actively secreted by renal organic anion transporters, which age accelerates"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi details the renal handling: nearly 80% of filtered lithium is reabsorbed in the proximal convoluted tubule competing with sodium, renal clearance is only about one-fifth of creatinine clearance, and levels are explicitly higher in older patients and those with renal insufficiency. Lithium is neither protein bound nor metabolised, so the glucuronide and secretory options describe other molecules entirely."
+  },
+  {
+   "id": "mst-lit-03",
+   "drugSlug": "lithium",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 42-year-old man maintained on lithium reports three months of passing large volumes of pale urine with thirst of 4-5 L/day. Serum lithium is 0.7 mEq/L and urine osmolality fails to rise after desmopressin. The best next step is:",
+   "options": [
+    "Give an intravenous vasopressin infusion, the hormone missing in this condition",
+    "Start demeclocycline, which restores renal responsiveness to vasopressin",
+    "Start amiloride, which restores urinary concentrating ability in lithium-induced nephrogenic diabetes insipidus",
+    "Stop lithium permanently, since the renal concentrating lesion is irreversible"
+   ],
+   "correctIndex": 2,
+   "explanation": "Lithium produces a vasopressin-resistant nephrogenic diabetes insipidus; Katzung notes it responds to amiloride and Tripathi calls amiloride the drug of choice for lithium-induced diabetes insipidus. The lesion is reversible and occurs even at therapeutic levels, and demeclocycline is itself a recognised cause of drug-induced nephrogenic diabetes insipidus, so it would deepen the problem."
+  },
+  {
+   "id": "mst-lit-04",
+   "drugSlug": "lithium",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 55-year-old woman stable on lithium 900 mg/day buys over-the-counter ibuprofen for knee osteoarthritis. Two weeks later she has coarse tremor, giddiness, ataxia and confusion; serum lithium is 2.1 mEq/L. The most likely explanation is:",
+   "options": [
+    "Ibuprofen displaced lithium from plasma proteins, raising the free level",
+    "Ibuprofen induced hepatic metabolism of lithium to a neurotoxic metabolite",
+    "Ibuprofen caused sodium gain, driving lithium into cells and lowering serum levels",
+    "Ibuprofen reduced renal prostaglandin synthesis, cutting lithium clearance and causing accumulation"
+   ],
+   "correctIndex": 3,
+   "explanation": "NSAIDs that inhibit renal prostaglandin synthesis reduce lithium clearance \u2014 Katzung's interaction table lists NSAIDs, thiazide diuretics and ACE inhibitors among the classic level-raising offenders (aspirin and paracetamol are exceptions). Lithium is not protein bound and undergoes no metabolism, so displacement and metabolic theories cannot apply, and the presentation is toxicity rather than deficiency."
+  },
+  {
+   "id": "mst-lit-05",
+   "drugSlug": "lithium",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 60-year-old man on lithium with hydrochlorothiazide develops gastroenteritis with vomiting and poor fluid intake. He is found confused and ataxic with coarse tremor and slurred speech; serum lithium is 3.6 mEq/L and creatinine has doubled from baseline. The most appropriate management is:",
+   "options": [
+    "Stop lithium and arrange urgent haemodialysis, the preferred removal method in severe lithium toxicity",
+    "Give sodium bicarbonate infusion alone and observe, since levels reliably fall within hours",
+    "Give flumazenil to reverse the neurotoxicity and continue the same dosing",
+    "Double the lithium dose to overcome the renal resistance caused by dehydration"
+   ],
+   "correctIndex": 0,
+   "explanation": "Confusion, ataxia and a rising creatinine with a level above 2 mEq/L mean severe lithium toxicity \u2014 Katzung notes any value over 2 mEq/L must be considered likely toxic and that the small ion is readily dialysed, with haemodialysis preferred; Tripathi quotes levels above 4 mEq/L as a haemodialysis trigger. There is no specific antidote \u2014 supportive care, fluid and sodium correction and dialysis do the work."
+  },
+  {
+   "id": "mst-lit-06",
+   "drugSlug": "lithium",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 49-year-old woman two years into lithium maintenance reports fatigue, cold intolerance and 4 kg weight gain. TSH is 12 mIU/L with low free T4; she was euthyroid before lithium and her mood has been stable. The best course is:",
+   "options": [
+    "Stop lithium and start valproate, since thyroid failure is an absolute contraindication to all mood stabilisers",
+    "Continue lithium at the same dose and start levothyroxine \u2014 lithium-induced hypothyroidism does not mandate stopping the drug",
+    "Stop lithium immediately, because hypothyroidism signals the drug is accumulating towards toxicity",
+    "Add carbimazole to suppress the lithium-stimulated thyroid, then recheck in six weeks"
+   ],
+   "correctIndex": 1,
+   "explanation": "Lithium inhibits thyroid hormone release, producing compensated euthyroidism in most patients but frank hypothyroidism in a few \u2014 Tripathi reports goitre in about 4% and Katzung advises a TSH every 6-12 months. Goitre and hypothyroidism do not warrant stopping lithium and are managed with thyroid hormone supplementation, so the standard answer is levothyroxine with lithium continued."
+  },
+  {
+   "id": "mst-lit-07",
+   "drugSlug": "lithium",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 24-year-old woman on lithium for bipolar I disorder discovers she is 6 weeks pregnant. She has had two prior manic episodes and one suicide attempt. Which counselling best reflects the evidence?",
+   "options": [
+    "Lithium is an absolute teratogen in every trimester, so it must be stopped the same day in all patients",
+    "Lithium in pregnancy reliably causes foetal goitre that progresses to congenital hypothyroidism requiring surgery",
+    "Lithium's classic foetal association is Ebstein's anomaly of the tricuspid valve \u2014 rare overall \u2014 so with her relapse and suicide history, the plan needs specialist joint counselling rather than abrupt stopping",
+    "Lithium causes neural tube defects in 1-2% of exposures, so high-dose folate makes continued treatment safe"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung's Table 59-1 pairs lithium with Ebstein's anomaly (a tricuspid valve malformation) and neonatal toxicity after third-trimester exposure, while its text notes newer data suggest a relatively low absolute teratogenic risk. The neural tube defect story belongs to valproate, and abruptly stopping lithium in a patient with prior mania and suicidality risks relapse \u2014 lithium also reduces suicide risk, so decisions are gradual and shared."
+  },
+  {
+   "id": "mst-lit-08",
+   "drugSlug": "lithium",
+   "domain": "Indian Practice",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which pairing of Indian lithium products and dosing facts is correct?",
+   "options": [
+    "LITHOSUN is a lithium citrate syrup given by injection in acute mania",
+    "LICAB SR is given thrice daily at 2 g/day, with levels drawn immediately after the morning dose",
+    "Lithium is marketed in India as TEGRETOL and MAZETOL 300 mg tablets",
+    "LICAB and LITHOSUN 300 mg tablets (400 mg SR available), usually started at 600 mg/day and titrated to 600-1200 mg/day with the level drawn 12 hours after the last dose"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi lists lithium carbonate as LICAB and LITHOSUN 300 mg tablets with a 400 mg SR option, typical dosing 600-1200 mg/day, and specifies that the serum level is measured 12 hours after the last dose to reflect the steady state. TEGRETOL and MAZETOL are carbamazepine brands, and lithium citrate syrup is an oral formulation \u2014 lithium has no injectable antimanic role."
+  },
+  {
+   "id": "mst-val-01",
+   "drugSlug": "valproate",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Valproate's anticonvulsant and mood-stabilising actions are attributed to a combination of mechanisms. Which set is correct?",
+   "options": [
+    "Phenytoin-like prolongation of sodium-channel inactivation, weak T-type calcium current attenuation, and raised GABA by inhibiting GABA-transaminase",
+    "Selective T-type calcium channel blockade identical to ethosuximide, with no sodium-channel effect",
+    "Alpha2-delta subunit binding that reduces presynaptic calcium entry and glutamate release",
+    "SV2A synaptic vesicle binding that reduces glutamate release during high-frequency firing"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tripathi lists three actions \u2014 frequency-dependent sodium-channel inactivation, weak T-current attenuation (ethosuximide-like) and GABA augmentation via GABA-transaminase inhibition \u2014 with Katzung adding inositol depletion for the mood-stabilising effect. The selective-T-current-only claim is the single-mechanism story of ethosuximide, the alpha2-delta calcium-channel target belongs to the gabapentinoids, and SV2A synaptic-vesicle binding is levetiracetam's mechanism."
+  },
+  {
+   "id": "mst-val-02",
+   "drugSlug": "valproate",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 16-year-old on valproate for juvenile myoclonic epilepsy is brought in with three days of lethargy, vomiting and fluctuating confusion. Valproate level is 85 mcg/mL, ALT mildly raised, no focal neurological signs. The most appropriate next investigation and treatment are:",
+   "options": [
+    "Check serum ceruloplasmin and label the events psychogenic until proven otherwise",
+    "Measure blood ammonia and give L-carnitine, since valproate can cause hyperammonaemic encephalopathy even at therapeutic levels",
+    "Order an urgent MRI and add a second anticonvulsant for assumed drug-resistant epilepsy",
+    "Double the valproate dose to push the level above 100 mcg/mL and control the encephalopathy"
+   ],
+   "correctIndex": 1,
+   "explanation": "Valproate interferes with the conversion of ammonia to urea; Katzung notes lethargy with increased blood ammonia can occur at therapeutic concentrations and that fatal hyperammonaemic encephalopathy has occurred in patients with urea-cycle defects. A therapeutic valproate level with encephalopathy is the signature clue \u2014 ammonia is measured, L-carnitine given, and the dose reduced or the drug stopped, never escalated."
+  },
+  {
+   "id": "mst-val-03",
+   "drugSlug": "valproate",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "An 11-year-old girl has childhood absence epilepsy with occasional generalized tonic-clonic seizures. Which single drug best covers both seizure types?",
+   "options": [
+    "Carbamazepine",
+    "Phenytoin",
+    "Valproate",
+    "Ethosuximide"
+   ],
+   "correctIndex": 2,
+   "explanation": "Valproate is Tripathi's drug of choice for absence seizures and for myoclonic and atonic seizures, and Katzung prefers it when generalized tonic-clonic seizures accompany absence \u2014 a genuinely broad-spectrum agent. Ethosuximide covers absence but not tonic-clonic seizures, while carbamazepine and phenytoin can exacerbate absence and myoclonic seizures and are avoided in the generalized epilepsies."
+  },
+  {
+   "id": "mst-val-04",
+   "drugSlug": "valproate",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 26-year-old woman with generalized epilepsy has been seizure-free for two years on sodium valproate and wishes to conceive. What is the key counselling point?",
+   "options": [
+    "Valproate is safe in pregnancy provided the daily dose stays below 1000 mg and folate is taken",
+    "Valproate's main foetal risk is Ebstein anomaly of the tricuspid valve, unique to this drug",
+    "Valproate should simply be stopped on the day pregnancy is confirmed, with no interim plan",
+    "Valproate carries the highest teratogenic burden of the anticonvulsants \u2014 about 1-2% neural tube defect risk plus raised overall malformation and neurodevelopmental risk \u2014 so a planned switch to a safer agent is usually made before conception"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung quantifies first-trimester valproate neural tube defect risk at 1-2% (including spina bifida) with added cardiovascular, orofacial and digital anomalies and cognitive impairment in offspring, and Tripathi says the drug should be avoided in pregnancy. Ebstein anomaly is lithium's classic association, and abrupt withdrawal risks status epilepticus \u2014 changes are planned before conception."
+  },
+  {
+   "id": "mst-val-05",
+   "drugSlug": "valproate",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 9-year-old with nephrotic syndrome and marked hypoalbuminaemia is started on valproate, and within a week develops tremor and drowsiness although the total valproate level reads 65 mcg/mL. The best explanation is:",
+   "options": [
+    "Valproate is about 90% protein bound, so hypoalbuminaemia raises the free (active) fraction and toxicity can appear at a normal total level",
+    "Valproate is minimally protein bound, so the total level always mirrors pharmacological effect",
+    "The nephrotic syndrome induced autoinduction of valproate metabolism, lowering its clearance",
+    "Valproate levels fall in hypoalbuminaemia, so the dose must be doubled to reach effect"
+   ],
+   "correctIndex": 0,
+   "explanation": "Valproate is highly protein bound (about 90% per Tripathi) and largely confined to plasma with a small volume of distribution (about 0.15 L/kg per Katzung), so reduced albumin raises the free fraction and produces toxicity at a normal total concentration. There is no autoinduction \u2014 that is carbamazepine's signature \u2014 and the level would not fall with hypoalbuminaemia."
+  },
+  {
+   "id": "mst-val-06",
+   "drugSlug": "valproate",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 20-month-old boy with refractory epilepsy is to start valproate alongside two other anticonvulsants. The paediatrician warns the parents about the single most serious idiosyncratic risk of this plan. It is:",
+   "options": [
+    "Hirsutism and gum hypertrophy identical to phenytoin, requiring drug withdrawal in most children",
+    "Fulminant hepatic failure \u2014 the risk of valproate hepatotoxicity is greatest in children under 2 years on polytherapy, so liver function is monitored",
+    "Irreversible gingival hyperplasia, which appears within weeks in most toddlers",
+    "Peripheral neuropathy that develops in a majority of infants on polytherapy"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung notes valproate's rare but severe idiosyncratic hepatotoxicity has its greatest risk under 2 years of age and with multiple medications, with most fatalities within 4 months of starting \u2014 hence LFT monitoring. Gingival hyperplasia and hirsutism are phenytoin effects, and peripheral neuropathy is not the leading valproate hazard in infants."
+  },
+  {
+   "id": "mst-val-07",
+   "drugSlug": "valproate",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 7-year-old on phenobarbitone has valproate added for refractory seizures. A week later he is drowsy to the point of stupor. The most likely mechanism is:",
+   "options": [
+    "Valproate displaced phenobarbitone from albumin by saturating the glucuronidation of both drugs",
+    "The combination precipitated absence status, an interaction unique to this pair",
+    "Valproate inhibits phenobarbitone metabolism, steeply raising phenobarbitone levels",
+    "Phenobarbitone inhibits valproate metabolism, raising valproate into the toxic range"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung states valproate inhibits the metabolism of several drugs including phenobarbital, with levels that may rise steeply and cause stupor or coma; Tripathi lists the same interaction. Phenobarbitone is an inducer rather than an inhibitor, so the reverse direction is wrong, and the combination contraindicated with valproate in Tripathi is clonazepam (absence status), not phenobarbitone."
+  },
+  {
+   "id": "mst-val-08",
+   "drugSlug": "valproate",
+   "domain": "Indian Practice",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which statement about Indian valproate preparations and divalproex is correct?",
+   "options": [
+    "DEPAKOTE in India is the only valproate licensed for intravenous use in status epilepticus",
+    "VALPARIN CHRONO contains a fixed-dose combination of lamotrigine with valproate",
+    "Divalproex has half the bioavailability of sodium valproate but causes less weight gain",
+    "VALPARIN CHRONO and ENCORATE are sodium valproate brands, while divalproex (semisodium valproate, e.g. DEPAKOTE/VALANCE) is a 1:1 valproic acid-sodium valproate compound with better gastric tolerance"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi lists VALPARIN CHRONO and ENCORATE for sodium valproate and describes divalproex (DIPROEX, VALANCE, DEPAKOTE) as the 1:1 coordination compound with slower absorption but the same bioavailability and better gastric tolerance. Fixed-dose lamotrigine-valproate products do not exist, and divalproex does not halve bioavailability."
+  },
+  {
+   "id": "mst-cbz-01",
+   "drugSlug": "carbamazepine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Carbamazepine's mechanism and chemical identity are correctly described as:",
+   "options": [
+    "A tricyclic iminostilbene (dibenzazepine) related to imipramine that stabilises voltage-gated sodium channels in the inactivated state in a use-dependent manner",
+    "A sulfamate-substituted monosaccharide that blocks AMPA and kainate receptors",
+    "A phenyltriazine that reduces presynaptic glutamate release without sodium-channel effects",
+    "A benzodiazepine derivative acting as a positive allosteric modulator of GABA-A receptors"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung calls carbamazepine the prototypical sodium-channel-blocking antiseizure drug \u2014 an iminostilbene chemically akin to imipramine, though unlike tricyclic antidepressants it does not inhibit monoamine transporters and is not used as an antidepressant. The sulfamate-substituted monosaccharide describes topiramate, the phenyltriazine describes lamotrigine, and the GABA-A allosteric-modulator claim belongs to the benzodiazepines."
+  },
+  {
+   "id": "mst-cbz-02",
+   "drugSlug": "carbamazepine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 30-year-old with newly diagnosed focal epilepsy starts carbamazepine 400 mg/day and is seizure-free at week 2 with a trough level of 7 mcg/mL. At week 6 he returns after two breakthrough seizures; adherence is verified, and re-escalating the dose restores control. The best explanation for the week-6 failure is:",
+   "options": [
+    "Progressive renal clearance of the drug, which shortens its half-life in proportion to creatinine",
+    "Autoinduction \u2014 carbamazepine induces its own CYP3A4/2B6 metabolism, so levels fall over the first weeks and the dose must be re-escalated after stabilisation",
+    "Tolerance with receptor supersensitivity, requiring permanent dose reduction to avoid toxicity",
+    "Accumulation of an inhibitory metabolite that antagonises carbamazepine at the sodium channel"
+   ],
+   "correctIndex": 1,
+   "explanation": "Carbamazepine is a substrate and inducer of CYP3A4 (and CYP2B6): Katzung describes the half-life falling from about 36 hours after a first dose to 8-12 hours on continued therapy, with concentrations dropping after a few weeks \u2014 the classic autoinduction story Tripathi mirrors with 20-40 hours falling to 10-20 hours. Nothing in the mechanism involves antagonistic metabolites or renal clearance, and the textbook response is re-escalation, not dose reduction."
+  },
+  {
+   "id": "mst-cbz-03",
+   "drugSlug": "carbamazepine",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 24-year-old woman on an oral contraceptive takes carbamazepine 600 mg/day for trigeminal neuralgia. She returns pregnant at 8 weeks despite perfect pill compliance. The most likely explanation is:",
+   "options": [
+    "The contraceptive induced carbamazepine metabolism, raising its level and triggering a teratogenic interaction",
+    "Carbamazepine converted the contraceptive into an inert uterotrophic metabolite that failed to suppress ovulation",
+    "Carbamazepine's enzyme induction accelerated hepatic oestrogen metabolism and caused oral contraceptive failure",
+    "Carbamazepine blocked gastrointestinal absorption of the contraceptive steroid"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi lists oral contraceptives among the drugs whose efficacy carbamazepine reduces through enzyme induction (with haloperidol, lamotrigine, valproate and topiramate), and Katzung stresses CYP3A4 induction as the reason carbamazepine complicates combination therapy. Absorption is unaffected, and the induction runs from carbamazepine to the contraceptive, never the reverse."
+  },
+  {
+   "id": "mst-cbz-04",
+   "drugSlug": "carbamazepine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "Before starting carbamazepine in a 36-year-old man of Han Chinese ancestry for focal epilepsy, the resident should order:",
+   "options": [
+    "HLA-DQB1 typing, which predicts carbamazepine-induced hyponatraemia in Asian patients",
+    "Baseline serum osmolality, because Stevens-Johnson risk tracks directly with the sodium level",
+    "HLA-B*57:01 typing, which is mandatory before all aromatic anticonvulsants",
+    "HLA-B*15:02 typing, because carriers have a sharply higher risk of carbamazepine-induced Stevens-Johnson syndrome"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung notes Stevens-Johnson syndrome risk is significantly higher with the HLA-B*1502 allele and that Asians \u2014 with roughly a 10-fold higher incidence of carbamazepine-induced SJS \u2014 should be tested before starting the drug. HLA-B*57:01 is the abacavir screen, and hyponatraemia, while a real carbamazepine effect, has nothing to do with the SJS screen."
+  },
+  {
+   "id": "mst-cbz-05",
+   "drugSlug": "carbamazepine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A routine full blood count at six weeks of carbamazepine therapy shows WBC 3200/mm3 with neutrophils 1400/mm3; the patient is asymptomatic and afebrile with no mucosal ulceration. The best action is:",
+   "options": [
+    "Continue carbamazepine with CBC surveillance \u2014 mild leukopenia is common and usually benign, reserving withdrawal for counts that fall further or for agranulocytosis",
+    "Stop carbamazepine immediately, since any leukopenia on the drug means aplastic anaemia is imminent",
+    "Add lithium to boost the white count and continue the same carbamazepine dose without monitoring",
+    "Switch to clozapine, which is safer for the bone marrow in epileptic patients"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung notes a benign leukopenia occurs in many patients on carbamazepine and needs no intervention unless the neutrophil count falls below 1000/mm3; Tripathi likewise calls some degree of leucopenia common with agranulocytosis and aplastic anaemia rare \u2014 the reason periodic CBCs are the monitoring bundle. Clozapine is among the most marrow-toxic drugs available, not a safer alternative."
+  },
+  {
+   "id": "mst-cbz-06",
+   "drugSlug": "carbamazepine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 52-year-old woman describes recurrent 15-second electric-shock pains in the right cheek triggered by chewing and by a breeze on the face; neurological examination is normal. The drug of first choice is:",
+   "options": [
+    "Oxcarbazepine at the same dose as for mania",
+    "Carbamazepine",
+    "Paracetamol",
+    "Fluoxetine"
+   ],
+   "correctIndex": 1,
+   "explanation": "Lancinating, trigger-evoked facial pain with a normal examination is trigeminal neuralgia, for which carbamazepine is the drug of first choice \u2014 Katzung says it is usually first choice and Tripathi calls it the drug of choice, with about 60% of patients responding well and its action almost diagnostic. Paracetamol and fluoxetine have no role, and oxcarbazepine is explicitly noted by Katzung as not effective in mania with no trigeminal neuralgia first-choice status."
+  },
+  {
+   "id": "mst-cbz-07",
+   "drugSlug": "carbamazepine",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "Where does carbamazepine stand among antimanic drugs, and what teratogenic interaction must be remembered?",
+   "options": [
+    "It equals lamotrigine for bipolar depression and carries no teratogenic signal",
+    "It is contraindicated with valproate because the combination abolishes seizure control",
+    "It is second-line after lithium and valproate in acute mania \u2014 and combined use with valproate roughly doubles the teratogenic frequency",
+    "It is the first-line antimanic, with efficacy superior to lithium in rapid-cycling illness"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi notes carbamazepine is less effective than lithium or valproate in acute mania, needs gradual dose build-up, and is a valuable alternative or adjunct \u2014 Katzung reaches for it when lithium underperforms. The same chapter warns that carbamazepine with valproate doubles the teratogenic frequency, a classic counselling point; the seizure-control claim is the opposite of their real additive risk."
+  },
+  {
+   "id": "mst-cbz-08",
+   "drugSlug": "carbamazepine",
+   "domain": "Indian Practice",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which Indian brand-dose pairing for carbamazepine is correct?",
+   "options": [
+    "LAMITOR 200-400 mg TDS as the generic carbamazepine in India",
+    "TEGRETOL 600 mg SR tablets taken once at bedtime as the licensed mania regimen",
+    "MAZETOL is the Indian brand of oxcarbazepine sold as 150/300/600 mg tablets",
+    "TEGRETOL, MAZETOL and CARBATOL in 100/200/400 mg tablets, with sustained-release forms preferred and doses of 200-400 mg TDS"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi lists carbamazepine as TEGRETOL, MAZETOL (and CARBATOL) 100, 200 and 400 mg tablets with 200-400 mg TDS dosing, and notes SR/CR formulations are preferred to avoid high peaks and low troughs. LAMITOR is lamotrigine, and the 150/300/600 mg oxcarbazepine brands are OXETOL, OXCARB and OXEP."
+  },
+  {
+   "id": "mst-ltg-01",
+   "drugSlug": "lamotrigine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Lamotrigine's anticonvulsant and mood-stabilising pharmacology is best summarised as:",
+   "options": [
+    "A phenyltriazine that stabilises voltage-gated sodium channels in the inactivated state and suppresses presynaptic release of glutamate and aspartate",
+    "A direct agonist at GABA-B receptors that opens neuronal potassium channels",
+    "A partial agonist at 5-HT1A receptors with added dopamine D2 partial agonism",
+    "An inhibitor of inositol monophosphatase that depletes neuronal inositol"
+   ],
+   "correctIndex": 0,
+   "explanation": "Lamotrigine sits in the sodium-channel family \u2014 Katzung emphasises inactivated-state, use-dependent binding with reduced excitatory transmitter release, and Tripathi describes stabilisation of the presynaptic membrane preventing glutamate and aspartate release. Inositol monophosphatase inhibition is lithium's mechanism, and the 5-HT1A/D2 partial agonist profile belongs to aripiprazole."
+  },
+  {
+   "id": "mst-ltg-02",
+   "drugSlug": "lamotrigine",
+   "domain": "Clinical Uses",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 29-year-old woman with bipolar II disorder has recurrent disabling depressive episodes with only brief hypomanias; an antidepressant previously flipped her into hypomania. Which mood stabiliser is the most evidence-based choice for this phase pattern?",
+   "options": [
+    "Gabapentin",
+    "Lamotrigine",
+    "Lithium carbonate",
+    "Carbamazepine"
+   ],
+   "correctIndex": 1,
+   "explanation": "Lamotrigine owns bipolar depression: Tripathi gives it strong evidence for prophylaxis of depressive episodes in bipolar disorder, notes it is not effective for treating or preventing mania, and favours it in bipolar II because the risk of inducing mania is minimal. Lithium and carbamazepine are mania-weighted options, and Katzung states plainly that gabapentin is not effective in mania with no bipolar-depression label."
+  },
+  {
+   "id": "mst-ltg-03",
+   "drugSlug": "lamotrigine",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 27-year-old on valproate 1000 mg/day for mania prophylaxis is to start lamotrigine for breakthrough bipolar depression. The correct titration plan is:",
+   "options": [
+    "Double the usual lamotrigine titration rate, because valproate induces lamotrigine metabolism",
+    "Give a 200 mg loading dose on day 1, because the combination is synergistic and levels do not matter",
+    "Start 12.5-25 mg on alternate days and escalate slowly over several weeks to a maintenance near 100-200 mg/day \u2014 about half the usual dose, because valproate inhibits lamotrigine glucuronidation",
+    "Start the standard 25 mg daily and escalate weekly to 400 mg/day, since valproate has no effect on lamotrigine"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung quantifies the interaction \u2014 valproate roughly doubles lamotrigine's half-life and can raise blood levels correspondingly, adding rash risk \u2014 and gives the valproate-companion schedule: 12.5-25 mg every other day, increases every two weeks, maintenance 100-200 mg/day. Induction is the opposite of what happens (that is carbamazepine's effect), and lamotrigine loading doses are obsolete precisely because of SJS risk."
+  },
+  {
+   "id": "mst-ltg-04",
+   "drugSlug": "lamotrigine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "Three weeks after starting lamotrigine 25 mg daily for bipolar depression, a 35-year-old reports a spreading maculopapular rash without mucosal involvement. The safest immediate action is:",
+   "options": [
+    "Continue at the same dose and add an antihistamine, because lamotrigine rash is always benign in the first eight weeks",
+    "Double the dose to overcome a mild hypersensitivity response",
+    "Switch directly to carbamazepine, which carries no cross-rash risk",
+    "Stop lamotrigine and seek urgent assessment, since any early lamotrigine rash may herald Stevens-Johnson syndrome and rapid titration is the key avoidable risk"
+   ],
+   "correctIndex": 3,
+   "explanation": "Lamotrigine can produce a potentially fatal Stevens-Johnson syndrome; Katzung notes slow introduction diminishes rash risk, with children carrying the higher rates (0.3-0.8% versus 0.08-0.3% in adults) \u2014 which is exactly why the psychiatric titration creeps from 25 mg toward 200 mg over about six weeks. A new rash mandates stopping, not antihistamine cover, and carbamazepine itself carries the stronger SJS signal."
+  },
+  {
+   "id": "mst-ltg-05",
+   "drugSlug": "lamotrigine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A patient stabilised on lamotrigine asks why, unlike her friend on lithium, she never needs blood tests. The correct pharmacokinetic explanation is:",
+   "options": [
+    "Lamotrigine has linear kinetics with complete absorption and hepatic glucuronidation to an inactive glucuronide, and no therapeutic serum range was ever established \u2014 so monitoring is clinical",
+    "Lamotrigine levels must be checked monthly, since its narrow index mirrors lithium",
+    "Lamotrigine is excreted unchanged renally, so only creatinine needs monitoring",
+    "Lamotrigine has a 60-hour half-life, so a single baseline level suffices for life"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung: lamotrigine is almost completely absorbed with linear kinetics, metabolised by liver glucuronidation to the inactive 2-N-glucuronide, half-life about 24 hours (13-15 hours with enzyme inducers), and therapeutic serum levels have never been established \u2014 routine level monitoring is not required. Renal-unchanged excretion describes the gabapentinoids and levetiracetam, and the long half-life belongs to zonisamide."
+  },
+  {
+   "id": "mst-ltg-06",
+   "drugSlug": "lamotrigine",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "Which cluster correctly describes lamotrigine's tolerability fingerprint versus other mood stabilisers?",
+   "options": [
+    "Sedation with weight gain and hyperprolactinaemia as core effects",
+    "Weight-neutral, minimally sedating, cognition-sparing \u2014 but with paradoxical insomnia in some patients",
+    "Consistent weight loss with paresthesias and metabolic acidosis",
+    "Marked tremor, thirst and polyuria even at therapeutic levels"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung notes lamotrigine is generally well tolerated and weight-neutral with minimal sedation \u2014 it may paradoxically cause insomnia instead of sedation \u2014 and causes fewer cognitive effects than carbamazepine or topiramate, so it is cognition-sparing; Tripathi reports no negative cognitive effect. The weight-loss with paresthesias and acidosis cluster is topiramate, tremor-thirst-polyuria is lithium, and lamotrigine does not raise prolactin."
+  },
+  {
+   "id": "mst-ltg-07",
+   "drugSlug": "lamotrigine",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 40-year-old with epilepsy well controlled on lamotrigine 300 mg/day is started on carbamazepine for a new pain syndrome. Two weeks later he has breakthrough seizures. The most likely mechanism is:",
+   "options": [
+    "Lamotrigine induced carbamazepine metabolism, lowering carbamazepine's analgesic effect",
+    "The two sodium-channel blockers became antagonistic at the channel pore",
+    "Carbamazepine's enzyme induction shortened lamotrigine's half-life and lowered its levels",
+    "Carbamazepine displaced lamotrigine from albumin, simultaneously raising toxicity and reducing efficacy"
+   ],
+   "correctIndex": 2,
+   "explanation": "Lamotrigine's half-life falls to 13-15 hours with enzyme-inducing drugs (Katzung), and Tripathi notes phenytoin, carbamazepine and phenobarbitone cut it to roughly 16 hours \u2014 so levels drop and the lamotrigine dose needs upward titration. Induction runs from carbamazepine to lamotrigine, protein binding is only about 55% and displacement is not the mechanism, and there is no pore antagonism between these drugs."
+  },
+  {
+   "id": "mst-ltg-08",
+   "drugSlug": "lamotrigine",
+   "domain": "Indian Practice",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which Indian lamotrigine details are correct?",
+   "options": [
+    "LAMETOL SR 400 mg as the only licensed Indian lamotrigine, given once weekly",
+    "LAMITOR is the Indian brand of lormetazepam used as a hypnotic adjunct",
+    "Indian lamotrigine is sold only as 300 mg tablets with twice-weekly dosing",
+    "LAMETEC, LAMITOR and LAMIDUS 25/50/100 mg tablets; starting dose about 50 mg/day titrated as needed, with rash the key warning"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi's preparation list gives lamotrigine as LAMETEC, LAMITOR and LAMIDUS 25, 50 and 100 mg tablets, dosed 50 mg/day initially and increased up to 300 mg/day. The SR 400 mg tablet and weekly dosing are fabrications, and lormetazepam is a benzodiazepine unrelated to the LAMITOR brand."
+  },
+  {
+   "id": "mst-oxc-01",
+   "drugSlug": "oxcarbazepine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Oxcarbazepine differs from carbamazepine pharmacologically chiefly because:",
+   "options": [
+    "It is a 10-keto analogue rapidly reduced to active monohydroxy derivatives (MHD/licarbazepine), and cannot form the 10,11-epoxide metabolite",
+    "It blocks T-type calcium channels selectively, like ethosuximide",
+    "It is a prodrug whose activity resides entirely in the unchanged parent compound",
+    "It enhances GABA reuptake into glial cells, shortening inhibitory responses"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung identifies oxcarbazepine as the 10-keto analog of carbamazepine, rapidly converted to S(+)- and R(-)-licarbazepine (the monohydroxy derivatives, MHDs) that carry the antiseizure activity; it cannot form carbamazepine's 10,11-epoxide, the metabolite blamed for some adverse effects. Its sodium-channel action mirrors carbamazepine rather than a T-channel selectivity, and reuptake enhancement would be the opposite of tiagabine's pharmacology."
+  },
+  {
+   "id": "mst-oxc-02",
+   "drugSlug": "oxcarbazepine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A woman switched from carbamazepine to oxcarbazepine for focal seizures asks her pharmacist how the interaction profile changes, since she takes several other medicines. The correct answer is:",
+   "options": [
+    "It is excreted unchanged in urine with no metabolites, so interactions cannot occur at all",
+    "The parent half-life is only 1-2 hours (active MHD 8-12 hours), CYP induction is much weaker, and there is no autoinduction \u2014 though the enzyme effect is not zero",
+    "The half-life is longer than carbamazepine's and autoinduction is even faster",
+    "CYP3A4 is required to activate oxcarbazepine, so strong inhibitors abolish its effect"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung gives oxcarbazepine itself a 1-2 hour half-life with activity residing in the 8-12 hour MHDs, and notes it induces hepatic enzymes to a lesser extent, minimising drug interactions; Tripathi adds that interactions and autoinduction are less marked because it is a weak enzyme inducer. Reduction to MHD is a non-CYP reduction step, and the MHD glucuronide is renally excreted \u2014 so renal impairment still matters."
+  },
+  {
+   "id": "mst-oxc-03",
+   "drugSlug": "oxcarbazepine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 68-year-old on oxcarbazepine 900 mg/day for focal seizures develops two weeks of nausea, lethargy and two falls; serum sodium is 124 mEq/L with low plasma osmolality. The most likely explanation is:",
+   "options": [
+    "A salt-losing nephropathy unique to oxcarbazepine that requires urgent dialysis",
+    "Carbamazepine contamination of the oxcarbazepine tablet formulation",
+    "Oxcarbazepine-induced hyponatraemia \u2014 which occurs at least as often as, and may be more common than, with carbamazepine",
+    "Pure psychogenic polydipsia unrelated to any anticonvulsant"
+   ],
+   "correctIndex": 2,
+   "explanation": "Both books flag sodium with oxcarbazepine: Katzung notes hyponatraemia may occur more commonly than with carbamazepine, and Tripathi says the hyponatraemia risk is more even though hepatotoxicity risk is estimated lower \u2014 so sodium must still be monitored. The mechanism is ADH-enhancing water retention, not a unique nephropathy, and this dilutional hyponatraemia is an established anticonvulsant signal."
+  },
+  {
+   "id": "mst-oxc-04",
+   "drugSlug": "oxcarbazepine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 30-year-old developed Stevens-Johnson syndrome on carbamazepine three years ago and still has uncontrolled focal seizures. Which statement guides the next anticonvulsant choice?",
+   "options": [
+    "Oxcarbazepine is chemically unrelated to carbamazepine, so there is no skin-reactivity concern",
+    "Prior carbamazepine SJS guarantees lifelong tolerance of every other aromatic anticonvulsant",
+    "Only dose reduction, not avoidance, is needed because carbamazepine rash is always dose-dependent",
+    "Oxcarbazepine carries a quoted 25-30% cross-reactivity risk with carbamazepine hypersensitivity, so it is a cautious choice at best and structurally unrelated agents such as levetiracetam are usually preferred"
+   ],
+   "correctIndex": 3,
+   "explanation": "Cross-reactivity between carbamazepine and oxcarbazepine does not always occur but is clinically material \u2014 the KYP monograph quotes about 25-30% \u2014 so after SJS the safer route is a structurally unrelated drug like levetiracetam. Katzung's careful wording (cross-reactivity does not always occur) is exactly why the answer says cautious-at-best rather than impossible, and SJS is an idiosyncratic reaction, never a dose-dependent one."
+  },
+  {
+   "id": "mst-oxc-05",
+   "drugSlug": "oxcarbazepine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A resident proposes switching an acutely manic patient from carbamazepine to oxcarbazepine for better tolerability. What does the evidence say?",
+   "options": [
+    "Oxcarbazepine is not effective in acute mania despite being a carbamazepine congener, so the switch sacrifices the antimanic mechanism",
+    "Oxcarbazepine is the most potent antimanic available and doubles lithium's efficacy",
+    "Oxcarbazepine is FDA-approved for mania at 2400-3000 mg/day",
+    "Oxcarbazepine and carbamazepine are fully interchangeable in mania at identical doses"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung states plainly that oxcarbazepine is not effective for mania even though carbamazepine is; its bipolar use is off-label and unproven. It is also about 50% less potent dose-for-dose \u2014 Katzung notes clinical doses may need to be 50% higher than carbamazepine for equivalent seizure control \u2014 so identical-dose substitution is doubly wrong."
+  },
+  {
+   "id": "mst-oxc-06",
+   "drugSlug": "oxcarbazepine",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "Which row of the carbamazepine-versus-oxcarbazepine comparison table is correct?",
+   "options": [
+    "Oxcarbazepine: half the potency of carbamazepine with more hepatotoxicity",
+    "Oxcarbazepine: no epoxide metabolite, weaker enzyme induction, no autoinduction, similar-or-greater hyponatraemia risk",
+    "Oxcarbazepine: forms the 10,11-epoxide, stronger induction than carbamazepine, less hyponatraemia",
+    "Carbamazepine: no autoinduction, no enzyme induction, no haematological risk"
+   ],
+   "correctIndex": 1,
+   "explanation": "The book-verified row: Katzung notes no epoxide formation and weaker induction, and Tripathi adds less-marked interactions and autoinduction with a hyponatraemia risk that is actually more. Oxcarbazepine is about 1.5 times less potent (doses roughly 50% higher), and its hepatotoxicity risk is estimated lower than carbamazepine's, not higher."
+  },
+  {
+   "id": "mst-oxc-07",
+   "drugSlug": "oxcarbazepine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "An 8-year-old with inadequately controlled focal seizures is to be moved from carbamazepine to its better-tolerated congener. Which prescription matches Indian practice?",
+   "options": [
+    "Levetiracetam 3 g/day as a direct 1:1 substitution for carbamazepine",
+    "Oxcarbazepine as MAZETOL CR 400 mg twice daily, the sustained-release congener",
+    "Oxcarbazepine as OXETOL/OXCARB/OXEP 150/300/600 mg tablets, titrated with the expectation of needing a dose about 1.5 times the old carbamazepine dose",
+    "Oxcarbazepine as OXETOL 50 mg syrup three times daily at half the carbamazepine dose"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi lists oxcarbazepine in India as OXETOL, OXCARB and OXEP 150/300/600 mg tablets, states it is dose-to-dose 1.5 times less potent than carbamazepine, and shares carbamazepine's indications with possibly better tolerability. MAZETOL is carbamazepine itself, and no 1:1 substitution rule exists across anticonvulsant classes."
+  },
+  {
+   "id": "mst-oxc-08",
+   "drugSlug": "oxcarbazepine",
+   "domain": "Active Recall",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "Oxcarbazepine and eslicarbazepine acetate share which active metabolite?",
+   "options": [
+    "Carbamazepine-10,11-epoxide, the shared tricyclic metabolite",
+    "2-sulfamoylacetylphenol, the CYP3A4-derived phenol",
+    "9-hydroxyrisperidone, the common hydroxylated metabolite",
+    "S(+)-licarbazepine, the monohydroxy derivative (MHD) responsible for their sodium-channel activity"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung's Table 24-2 footnote describes oxcarbazepine as serving largely as a prodrug for licarbazepine (mainly the S form), and eslicarbazepine acetate is explicitly a prodrug of S(+)-licarbazepine \u2014 the monohydroxy derivative (MHD) that carries the sodium-channel activity in both drugs. The 10,11-epoxide is carbamazepine's metabolite, the sulfamoylacetylphenol is zonisamide's, and 9-hydroxyrisperidone is paliperidone \u2014 an antipsychotic metabolite, not an anticonvulsant one."
+  },
+  {
+   "id": "mst-tpm-01",
+   "drugSlug": "topiramate",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Topiramate's breadth of activity is explained by its multiple mechanisms. Which list is correct?",
+   "options": [
+    "Voltage-gated sodium-channel blockade, AMPA/kainate receptor antagonism, GABA-A potentiation and weak carbonic anhydrase inhibition",
+    "Selective T-type calcium-channel blockade combined with GABA-transaminase inhibition",
+    "Alpha2-delta binding with auxiliary sodium-channel opening",
+    "SV2A binding with selective NMDA receptor antagonism"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung lists voltage-gated sodium channels, GABA-A receptor subtypes and AMPA/kainate receptors as topiramate's main sites, with weak carbonic anhydrase II/IV inhibition that occasionally causes clinically important metabolic acidosis. T-channel blockade defines ethosuximide, alpha2-delta binding the gabapentinoids, and SV2A binding levetiracetam."
+  },
+  {
+   "id": "mst-tpm-02",
+   "drugSlug": "topiramate",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 34-year-old on topiramate for migraine prophylaxis reports two months of word-finding difficulty and mental slowing, and now presents with colicky left flank pain; urinalysis shows microscopic haematuria. The best explanation and management direction are:",
+   "options": [
+    "An anxiety disorder with somatisation; reassure and continue the same dose",
+    "Topiramate's dose-related cognitive effects (dysnomia, slowed processing) plus carbonic-anhydrase-driven nephrolithiasis \u2014 consider dose reduction or substitution",
+    "Early Alzheimer's disease needing cholinesterase inhibitors, with the stone unrelated to therapy",
+    "Lamotrigine toxicity referred from the neurology clinic, needing a serum level"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung describes topiramate's cognitive effects \u2014 impaired word-finding (dysnomia), diminished verbal fluency and slowed processing, often without sedation \u2014 as dose-related and a frequent reason for discontinuation, and urolithiasis occurs in 0.5-1.5% of long-term users, linked to carbonic anhydrase inhibition. Cognitive slowing plus a stone is the topiramate signature, so dose reduction or substitution beats reassurance."
+  },
+  {
+   "id": "mst-tpm-03",
+   "drugSlug": "topiramate",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "At follow-up after six months of topiramate, a 45-year-old notes 7 kg weight loss and pins-and-needles in the fingers; serum bicarbonate is 18 mEq/L with a normal anion gap. Which counselling bundle is correct?",
+   "options": [
+    "Paresthesias indicate a demyelinating neuropathy requiring nerve biopsy",
+    "Metabolic acidosis occurs only after deliberate overdose and cannot appear at therapeutic doses",
+    "Weight loss is an expected topiramate effect (about 85% of adults lose roughly 5% of body weight), paresthesias are common and often transient, and the hyperchloraemic non-anion-gap acidosis follows carbonic anhydrase inhibition",
+    "Weight loss signals malabsorption from the drug and mandates stopping it in all patients"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung reports 85% of adults on topiramate lose weight (about 5% of baseline, peaking at 12-18 months), paresthesias typically occur at initiation or high doses, and reduced serum bicarbonate from carbonic anhydrase inhibition is usually asymptomatic but real. The overdose-only claim is directly contradicted by the text, and weight loss here is the drug's expected metabolic action \u2014 topiramate is the only weight-losing mood stabiliser."
+  },
+  {
+   "id": "mst-tpm-04",
+   "drugSlug": "topiramate",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 28-year-old woman needs a prophylactic agent for frequent migraine that would also cover her newly diagnosed juvenile myoclonic epilepsy. Which drug fits both needs?",
+   "options": [
+    "Propranolol",
+    "Carbamazepine",
+    "Ethosuximide",
+    "Topiramate"
+   ],
+   "correctIndex": 3,
+   "explanation": "Topiramate is a broad-spectrum antiseizure drug (focal seizures, primary generalized tonic-clonic seizures, Lennox-Gastaut syndrome, and myoclonic epilepsy) that is also a standard migraine prophylaxis agent \u2014 Tripathi notes its approval for migraine prophylaxis when beta-blockers fail or are contraindicated. Propranolol helps migraine but not epilepsy, carbamazepine can worsen myoclonus, and ethosuximide treats absence seizures only."
+  },
+  {
+   "id": "mst-tpm-05",
+   "drugSlug": "topiramate",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which pharmacokinetic statement about topiramate is correct?",
+   "options": [
+    "About 80% bioavailable with minimal protein binding, 50-80% excreted unchanged in urine, half-life 20-30 hours (12-15 with enzyme inducers), and linear kinetics without autoinduction",
+    "Extensively albumin-bound with a small volume of distribution of 0.15 L/kg",
+    "Eliminated entirely by CYP3A4 to an active epoxide metabolite",
+    "Half-life of about 60 hours with saturable intestinal absorption"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung's topiramate pharmacokinetics: 80% bioavailable, only about 15% protein binding, half the dose excreted unchanged renally, monotherapy half-life 20-30 hours falling to 12-15 hours with inducers, and linear kinetics with no autoinduction. The 90%-bound, 0.15 L/kg profile is valproate; the epoxide story is carbamazepine; and the 60-hour once-daily profile is zonisamide."
+  },
+  {
+   "id": "mst-tpm-06",
+   "drugSlug": "topiramate",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "Rank the teratogenic signals of the mood stabilisers for a counselling vignette.",
+   "options": [
+    "Carbamazepine \u2014 no teratogenic signal, so it is preferred in women of childbearing age",
+    "Valproate \u2014 neural tube defects (1-2%) with cognitive impairment; carbamazepine \u2014 neural tube defects; topiramate \u2014 oral clefts (16-21-fold relative risk); lithium \u2014 Ebstein anomaly (rare)",
+    "Lithium \u2014 neural tube defects; valproate \u2014 Ebstein anomaly; carbamazepine \u2014 clefts only",
+    "Topiramate \u2014 the safest mood stabiliser in pregnancy"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung's text and Table 59-1 anchor the ranking: valproate carries the 1-2% neural tube defect risk plus neurodevelopmental effects, carbamazepine is listed for neural tube defects, topiramate shows first-trimester oral cleft risk of 16-21-fold, and lithium's Ebstein association is classic but rarer than popularly taught. Tripathi adds that valproate plus carbamazepine together double the teratogenic frequency."
+  },
+  {
+   "id": "mst-tpm-07",
+   "drugSlug": "topiramate",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 25-year-old on topiramate 100 mg/day for migraine is upgraded to 300 mg/day after poor control. What contraception counselling matters now?",
+   "options": [
+    "Contraceptive failure risk comes from topiramate's protein binding and is unchanged by dose",
+    "Oral contraceptives induce topiramate clearance, so only the topiramate dose needs doubling",
+    "Above 200 mg/day topiramate may reduce oral contraceptive efficacy, so alternative or higher-oestrogen (50 mcg ethinyl estradiol) contraception is advised",
+    "Topiramate affects contraception only below 100 mg/day, so no action is needed at 300 mg"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung notes birth control pills may be less effective in the presence of topiramate and recommends alternative contraception above 200 mg/day, with 50 mcg ethinyl estradiol pills possibly satisfactory. The dose threshold is the teaching point \u2014 the earlier 100 mg/day dose sat below it \u2014 and the mechanism is enzyme induction rather than protein binding, running from topiramate to the contraceptive."
+  },
+  {
+   "id": "mst-tpm-08",
+   "drugSlug": "topiramate",
+   "domain": "Indian Practice",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which Indian topiramate facts are correct?",
+   "options": [
+    "TOPEX is a 200 mg tablet approved for once-weekly migraine dosing",
+    "TOPAMATE is the Indian brand of topotecan, an anticancer drug",
+    "Indian topiramate starts at 400 mg/day to reach effect within three days",
+    "TOPEX, EPITOP, TOPAMATE and NEXTOP in 25/50/100 mg tablets; started low (about 25 mg once daily, increased weekly) to limit cognitive effects"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi lists topiramate as TOPEX, EPITOP, TOPAMATE and NEXTOP 25/50/100 mg tablets, dosed initially 25 mg once daily and increased weekly up to 100-200 mg BD; Katzung likewise recommends beginning at 25-50 mg/day and increasing slowly. Topotecan is a camptothecin cytotoxic, and fast high-dose initiation would trigger precisely the worst cognitive effects."
+  },
+  {
+   "id": "mst-gbp-01",
+   "drugSlug": "gabapentin",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Gabapentin was designed as a GABA analogue, but its actual mechanism is:",
+   "options": [
+    "Binding to the alpha2-delta auxiliary subunit of voltage-gated calcium channels, reducing calcium entry and transmitter release \u2014 with no direct action at GABA receptors",
+    "Full agonism at GABA-A receptors, opening neuronal chloride channels",
+    "Irreversible inhibition of GABA-transaminase, like vigabatrin",
+    "Blocking the GAT-1 transporter to prolong the synaptic action of GABA"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung is explicit: gabapentinoids are GABA-like molecules that do not act through GABA mechanisms \u2014 they bind avidly to alpha2-delta of voltage-gated calcium channels, possibly limiting glutamate release. GABA-transaminase inhibition is vigabatrin, GAT-1 blockade is tiagabine, and direct GABA-A agonism is exactly the trap the chemical structure sets."
+  },
+  {
+   "id": "mst-gbp-02",
+   "drugSlug": "gabapentin",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which indication set is correctly matched to gabapentin?",
+   "options": [
+    "Trigeminal neuralgia as the drug of first choice",
+    "Post-herpetic neuralgia, painful diabetic neuropathy, restless legs syndrome and adjunctive treatment of focal seizures",
+    "Childhood absence epilepsy and juvenile myoclonic epilepsy as monotherapy",
+    "Acute mania as a first-line mood stabiliser"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung lists focal seizures plus nonepilepsy uses \u2014 neuropathic pain (post-herpetic neuralgia, painful diabetic neuropathy), restless legs syndrome and anxiety disorders \u2014 and Tripathi calls gabapentin a first-line drug for neuralgic pain of diabetic neuropathy and post-herpetic neuralgia. It has no efficacy in the generalized epilepsies (and may aggravate absence and myoclonic seizures), Katzung states it is not effective in mania, and trigeminal neuralgia belongs to carbamazepine."
+  },
+  {
+   "id": "mst-gbp-03",
+   "drugSlug": "gabapentin",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Increasing gabapentin from 900 mg/day to 2400 mg/day produces a smaller rise in serum levels than the dose ratio predicts. The reason is:",
+   "options": [
+    "Increasing protein binding that reduces the free fraction at higher doses",
+    "Dose-dependent shortening of its half-life to under two hours",
+    "Saturable absorption via the l-amino acid transport system of the upper small intestine, so bioavailability falls as the dose climbs",
+    "Autoinduction of its own hepatic metabolism within two weeks"
+   ],
+   "correctIndex": 2,
+   "explanation": "Gabapentin is absorbed by the l-amino acid transporter found only in the upper small intestine; Katzung states oral bioavailability decreases with increasing dose because this system saturates, so dosing requires individualisation rather than arithmetic scaling. The drug is not metabolised (eliminated unchanged renally), is not protein bound, and pregabalin \u2014 used at much lower doses \u2014 largely escapes the saturation with linear absorption."
+  },
+  {
+   "id": "mst-gbp-04",
+   "drugSlug": "gabapentin",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 66-year-old diabetic man has burning allodynic pain four months after a thoracic zoster eruption; amitriptyline caused unacceptable sedation. A reasonable next first-line choice is:",
+   "options": [
+    "Carbamazepine, because post-herpetic neuralgia is a classic neuralgia responding to it",
+    "Imipramine, which shares amitriptyline's pharmacology with less sedation",
+    "Zonisamide, which is approved for post-herpetic neuralgia at 300 mg/day",
+    "Gabapentin, titrated gradually \u2014 a first-line agent for post-herpetic neuralgia with no hepatic interactions"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi lists gabapentin as a first-line drug for neuralgic pain due to post-herpetic neuralgia (and diabetic neuropathy), and its renal, non-CYP elimination keeps the interaction load minimal. Carbamazepine's neuralgia success is for trigeminal neuralgia \u2014 Tripathi explicitly notes it is not useful in diabetic and other forms of neuropathic pain \u2014 and imipramine would reproduce the anticholinergic sedation problem."
+  },
+  {
+   "id": "mst-gbp-05",
+   "drugSlug": "gabapentin",
+   "domain": "Clinical Uses",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 58-year-old woman with restless legs syndrome has developed intolerable dopaminergic augmentation on pramipexole. Which gabapentinoid-era option fits, and why?",
+   "options": [
+    "Gabapentin \u2014 an established agent for restless legs syndrome, with renal elimination and few interactions",
+    "Valproate \u2014 because restless legs responds to GABA-transaminase inhibition",
+    "Tiagabine \u2014 because raising synaptic GABA cures restless legs syndrome",
+    "Levetiracetam \u2014 because SV2A binding is the licensed mechanism for restless legs"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung names restless legs syndrome among the nonepilepsy indications of the gabapentinoids, and gabapentin (with its prodrug gabapentin enacarbil, developed specifically for RLS) carries the interaction-free renal profile these patients need. Valproate and tiagabine have no restless-legs role, and levetiracetam's SV2A mechanism is unrelated to licensed RLS therapy."
+  },
+  {
+   "id": "mst-gbp-06",
+   "drugSlug": "gabapentin",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 70-year-old man with diabetic neuropathy and CKD stage 4 (eGFR 22 mL/min) is to start gabapentin. What is the correct approach?",
+   "options": [
+    "Give a 3600 mg loading dose and maintain 3600 mg/day regardless of renal function",
+    "Use a reduced dose with cautious titration \u2014 gabapentin is excreted unchanged renally, so renal impairment prolongs accumulation",
+    "Give the standard 900 mg/day from day one, because hepatic clearance compensates for renal failure",
+    "Avoid gabapentin permanently, since it is contraindicated at any level of renal impairment"
+   ],
+   "correctIndex": 1,
+   "explanation": "Gabapentin is eliminated unchanged in the urine with no hepatic metabolism, so impaired renal function demands lower starting doses and slower titration \u2014 the mirror image of the hepatically cleared drugs. There is no compensatory hepatic route and no absolute contraindication, only dose adaptation."
+  },
+  {
+   "id": "mst-gbp-07",
+   "drugSlug": "gabapentin",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "Which newer safety signals have been attached to the gabapentinoids?",
+   "options": [
+    "Torsades de pointes requiring routine ECG surveillance",
+    "Irreversible peripheral neuropathy in a majority of long-term users",
+    "Recognised misuse and abuse potential (pregabalin is a US Schedule V controlled substance) and respiratory depression when combined with opioids or sedatives",
+    "Agranulocytosis requiring weekly CBC monitoring"
+   ],
+   "correctIndex": 2,
+   "explanation": "Gabapentin and pregabalin carry newer-documented misuse potential \u2014 anchored in pregabalin's US Schedule V status \u2014 plus regulatory warnings for respiratory depression with opioid co-use, both relevant in polypharmacy and addiction-history patients. Marrow toxicity and torsades belong to other classes entirely, and the gabapentinoids are not irreversibly neurotoxic."
+  },
+  {
+   "id": "mst-gbp-08",
+   "drugSlug": "gabapentin",
+   "domain": "Indian Practice",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which Indian gabapentin products are correct?",
+   "options": [
+    "GABAPIN 2 mg tablets used as an Indian risperidone substitute",
+    "NEURONTIN 600 mg syrup given once weekly for neuropathic pain",
+    "GABANTIN is the Indian brand of gabapentin enacarbil only, sold as 600 mg ER",
+    "NEURONTIN 300/400 mg capsules and GABANTIN/GABAPIN 100/300/400 mg capsules, started at 300 mg once daily and increased to 300-600 mg TDS"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi lists gabapentin as NEURONTIN 300 and 400 mg capsules and GABANTIN, GABAPIN 100/300/400 mg capsules, with a starting dose of 300 mg once daily titrated to 300-600 mg TDS. The 2 mg tablet and weekly syrup are inventions, and GABANTIN is plain gabapentin, not the enacarbil prodrug."
+  },
+  {
+   "id": "mst-pgb-01",
+   "drugSlug": "pregabalin",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Pregabalin's mechanism, compared with gabapentin's, is:",
+   "options": [
+    "The same alpha2-delta calcium-channel subunit binding, at higher potency \u2014 with no GABA-receptor action despite the GABA-like structure",
+    "A distinct GABA-A receptor site that gabapentin lacks",
+    "Selective sodium-channel inactivation like carbamazepine",
+    "Inhibition of GABA-transaminase combined with T-type calcium-channel blockade"
+   ],
+   "correctIndex": 0,
+   "explanation": "Pregabalin binds alpha2-delta just like gabapentin \u2014 Katzung treats them as one pharmacodynamic pair \u2014 producing reduced presynaptic calcium entry and glutamate release, but at higher potency and far lower doses. Neither drug touches GABA receptors, sodium channels, or GABA metabolism; Tripathi notes both modulate alpha2-delta-1-containing calcium channels."
+  },
+  {
+   "id": "mst-pgb-02",
+   "drugSlug": "pregabalin",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "The single most important pharmacokinetic difference between pregabalin and gabapentin is:",
+   "options": [
+    "Pregabalin is hepatically metabolised; gabapentin is not",
+    "Pregabalin's absorption is linear and dose-independent (bioavailability above 90%), while gabapentin's saturable transporter makes bioavailability fall as the dose rises",
+    "Pregabalin undergoes autoinduction; gabapentin does not",
+    "Pregabalin is extensively protein-bound; gabapentin circulates free"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung contrasts them directly: pregabalin exhibits linear absorption within the therapeutic dose range with dose-independent bioavailability exceeding 90%, whereas gabapentin's l-amino-acid transporter saturates. Neither is protein bound, neither is metabolised, and both are eliminated unchanged by the kidney."
+  },
+  {
+   "id": "mst-pgb-03",
+   "drugSlug": "pregabalin",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 55-year-old with painful diabetic peripheral neuropathy has inadequate relief on duloxetine 60 mg/day. Which add-on or switch is a first-line tier choice for this pain?",
+   "options": [
+    "Zonisamide \u2014 approved at 300 mg/day for diabetic neuropathy",
+    "Tiagabine \u2014 first-line for diabetic neuropathic pain",
+    "Pregabalin \u2014 a first-line agent for painful diabetic neuropathy (and fibromyalgia), titrated 75-150 mg BD up to 600 mg/day",
+    "Carbamazepine \u2014 the drug of choice for diabetic neuropathic pain"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi highlights gabapentin and pregabalin as first-line drugs for neuralgic pain of diabetic neuropathy and post-herpetic neuralgia, and pregabalin is the gabapentinoid carrying the fibromyalgia label. Tripathi explicitly notes carbamazepine is not useful in diabetic and other forms of neuropathic pain, and zonisamide and tiagabine hold no such labels."
+  },
+  {
+   "id": "mst-pgb-04",
+   "drugSlug": "pregabalin",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 32-year-old with a prior opioid misuse history is to start pregabalin for neuropathic pain. What safety counselling is evidence-based?",
+   "options": [
+    "Pregabalin is legally identical to paracetamol, with no abuse potential anywhere",
+    "Pregabalin is Schedule II like morphine, so outpatient prescribing is prohibited",
+    "Misuse risk applies only to intravenous formulations of pregabalin",
+    "Pregabalin has recognised misuse potential \u2014 it is a US Schedule V controlled substance \u2014 so it should be prescribed with monitoring, and abrupt stopping after high doses can cause withdrawal symptoms"
+   ],
+   "correctIndex": 3,
+   "explanation": "The gabapentinoids' newer recognition of misuse potential is anchored in pregabalin's US Schedule V status \u2014 a real but low scheduling tier, far from morphine's Schedule II \u2014 with documented withdrawal on abrupt discontinuation. There is no intravenous pregabalin; the risk lies with oral misuse, hence monitoring in addiction-history patients."
+  },
+  {
+   "id": "mst-pgb-05",
+   "drugSlug": "pregabalin",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 41-year-old woman has three months of widespread pain, unrefreshing sleep and fatigue; the tender-point examination is typical and thyroid tests are normal. Which drug has a specific regulatory approval for this condition?",
+   "options": [
+    "Pregabalin",
+    "Zonisamide",
+    "Levetiracetam",
+    "Lamotrigine"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung states pregabalin is approved for the treatment of fibromyalgia \u2014 the gabapentinoid with that label \u2014 alongside its neuropathic-pain uses. Zonisamide, levetiracetam and lamotrigine hold no fibromyalgia approval, which is what distinguishes the alpha2-delta mechanism here."
+  },
+  {
+   "id": "mst-pgb-06",
+   "drugSlug": "pregabalin",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "An 80-year-old woman with eGFR 28 mL/min starts pregabalin for post-herpetic neuralgia and reports day-3 dizziness and somnolence on 150 mg BD. The correct interpretation is:",
+   "options": [
+    "Pregabalin needs no renal adjustment, so the dose should be doubled for effect",
+    "Pregabalin accumulates in renal impairment because it is excreted unchanged by the kidney \u2014 reduce the dose and retitrate",
+    "The reaction is an idiosyncratic allergy to pregabalin requiring permanent avoidance",
+    "The symptoms indicate serotonin syndrome from pregabalin"
+   ],
+   "correctIndex": 1,
+   "explanation": "Pregabalin is excreted unchanged by the kidney, so renal impairment causes accumulation and the fix is to reduce the dose and retitrate \u2014 eGFR-based adjustment is standard for both gabapentinoids, which undergo no metabolism. Dizziness with somnolence is the commonest dose-related effect at initiation. The presentation is pharmacokinetic accumulation, not allergy or a serotonergic syndrome \u2014 pregabalin has no serotonergic action."
+  },
+  {
+   "id": "mst-pgb-07",
+   "drugSlug": "pregabalin",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "The gabapentinoid pair is a favourite exam mirror. Which pairing is correct?",
+   "options": [
+    "Both are hepatically metabolised to active metabolites",
+    "Pregabalin \u2014 lower potency than gabapentin, requiring tenfold higher doses",
+    "Gabapentin \u2014 saturable absorption with gram-scale dosing; pregabalin \u2014 linear absorption, higher potency, effective at 150-600 mg/day",
+    "Gabapentin \u2014 linear absorption; pregabalin \u2014 saturable absorption requiring fractionated dosing"
+   ],
+   "correctIndex": 2,
+   "explanation": "The exam fingerprint: gabapentin's transporter saturates (dose-dependent bioavailability, gram-scale dosing) while pregabalin's absorption is linear and dose-independent above 90%, so roughly 150-600 mg/day covers the same territory. Neither has active metabolites, and pregabalin is the more potent of the pair, not the less."
+  },
+  {
+   "id": "mst-pgb-08",
+   "drugSlug": "pregabalin",
+   "domain": "Indian Practice",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which Indian pregabalin facts are correct?",
+   "options": [
+    "PREGABA SR 300 mg once weekly as the licensed neuropathic-pain regimen",
+    "NEUGABA is the Indian brand of gabapentin enacarbil",
+    "TRUEGABA 600 mg tablets as a single daily dose for fibromyalgia",
+    "PREGABA, NEUGABA and TRUEGABA 75/150 mg capsules, dosed 75-150 mg BD with a maximum of 600 mg/day"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi lists pregabalin as PREGABA, NEUGABA and TRUEGABA 75 and 150 mg capsules at 75-150 mg BD with a maximum of 600 mg/day. Weekly SR dosing and the enacarbil attribution are inventions \u2014 enacarbil is the prodrug of gabapentin, not pregabalin."
+  },
+  {
+   "id": "mst-lev-01",
+   "drugSlug": "levetiracetam",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Levetiracetam's mechanism of action is best stated as:",
+   "options": [
+    "Selective binding to SV2A, a synaptic vesicle membrane protein, reducing glutamate release during high-frequency activity",
+    "Blockade of NMDA receptors at the glycine site",
+    "Positive allosteric modulation of the benzodiazepine site on GABA-A receptors",
+    "Inhibition of T-type calcium channels in thalamocortical neurons"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung describes levetiracetam binding selectively to SV2A on synaptic vesicles and reducing excitatory glutamate release \u2014 a piracetam analogue that is inactive in the classic maximal-electroshock and pentylenetetrazol screens. Benzodiazepine-site modulation defines the benzodiazepines and phenobarbital, T-channel blockade defines ethosuximide, and levetiracetam has no primary NMDA action."
+  },
+  {
+   "id": "mst-lev-02",
+   "drugSlug": "levetiracetam",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "Two weeks after starting levetiracetam 1000 mg/day for focal seizures, a 26-year-old's family reports new irritability, argumentative behaviour and episodes of agitation; seizures are controlled. The best management is:",
+   "options": [
+    "Diagnose bipolar disorder and start lithium immediately",
+    "Recognise the behavioural and psychiatric adverse-effect cluster of levetiracetam \u2014 reduce the dose or switch agents if it persists",
+    "Double the dose, since behavioural change signals underdosing in epilepsy",
+    "Add haloperidol and continue the same levetiracetam dose permanently"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung lists the less common but more serious levetiracetam effects as behavioural and mood changes \u2014 irritability, aggression, agitation, anger, anxiety, apathy, depression and emotional lability \u2014 which improve with dose reduction or a switch. Escalating the dose would worsen the effect, and a drug-attributable behavioural change is not evidence of bipolar disorder."
+  },
+  {
+   "id": "mst-lev-03",
+   "drugSlug": "levetiracetam",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 47-year-old woman on warfarin, levothyroxine, an SSRI and a statin develops focal seizures. Which anticonvulsant is the most interaction-safe choice to initiate?",
+   "options": [
+    "Valproate \u2014 protein-binding displacement is clinically negligible",
+    "Topiramate \u2014 its interactions are confined to other anticonvulsants",
+    "Levetiracetam \u2014 with no CYP metabolism (renal excretion plus blood-borne deamination) it is essentially free of drug-drug interactions",
+    "Carbamazepine \u2014 its enzyme induction is manageable by simple dose adjustment"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung calls the lack of drug-drug interactions a core reason levetiracetam is among the most prescribed antiseizure drugs: two-thirds is excreted unchanged renally and the remainder deaminated in the blood, with no CYP involvement. Carbamazepine's induction would endanger warfarin and the SSRI, valproate inhibits metabolism and displaces bound drugs, and topiramate can blunt oral contraceptives above 200 mg/day."
+  },
+  {
+   "id": "mst-lev-04",
+   "drugSlug": "levetiracetam",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 50-year-old with decompensated cirrhosis and a history of portal-systemic encephalopathy needs long-term therapy for focal seizures. Which choice best fits his hepatic status?",
+   "options": [
+    "Valproate \u2014 hepatic metabolism with level-guided dosing fully compensates for cirrhosis",
+    "Carbamazepine \u2014 its autoinduction makes coexisting hepatic disease irrelevant",
+    "Tiagabine \u2014 hepatic CYP3A clearance is unimportant in cirrhosis",
+    "Levetiracetam \u2014 no hepatic CYP metabolism at all (renal excretion plus deamination in blood)"
+   ],
+   "correctIndex": 3,
+   "explanation": "Levetiracetam's elimination bypasses the liver \u2014 Katzung notes two-thirds excreted unchanged in urine and the remainder deaminated in the blood \u2014 making it the natural pick in severe hepatic disease. Valproate carries idiosyncratic hepatotoxicity plus hepatic clearance, carbamazepine depends on hepatic oxidation, and Katzung notes hepatic impairment does decrease tiagabine clearance."
+  },
+  {
+   "id": "mst-lev-05",
+   "drugSlug": "levetiracetam",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 16-year-old with juvenile myoclonic epilepsy needs a drug that covers myoclonic and generalized tonic-clonic seizures without interfering with her oral contraceptive. Which choice fits?",
+   "options": [
+    "Levetiracetam \u2014 broad-spectrum coverage (focal, primary generalized tonic-clonic, and myoclonic seizures) with no enzyme effects on contraceptives",
+    "Carbamazepine \u2014 broad-spectrum and contraceptive-safe by virtue of its induction",
+    "Ethosuximide \u2014 covers myoclonic and tonic-clonic seizures alike",
+    "Tiagabine \u2014 approved for generalized epilepsies including JME"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung lists focal seizures in adults and children, primary generalized tonic-clonic seizures and the myoclonic seizures of juvenile myoclonic epilepsy as levetiracetam's approved coverage, and its renal, CYP-free elimination leaves contraceptives untouched. Carbamazepine induces contraceptive metabolism and can worsen myoclonus, ethosuximide treats absence seizures only, and tiagabine is contraindicated in the generalized epilepsies."
+  },
+  {
+   "id": "mst-lev-06",
+   "drugSlug": "levetiracetam",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 34-year-old in benzodiazepine-refractory convulsive status epilepticus has hypotension (BP 88/50 mmHg) during a phenytoin infusion. Which second-line option provides intravenous dosing without adding hypotensive or enzyme-interaction burden?",
+   "options": [
+    "IV tiagabine bolus at 16 mg",
+    "IV levetiracetam",
+    "Nasogastric carbamazepine loading at 20 mg/kg",
+    "IV zonisamide infusion at 400 mg"
+   ],
+   "correctIndex": 1,
+   "explanation": "Levetiracetam has an intravenous preparation (Katzung) with a favourable haemodynamic profile and essentially no interactions \u2014 a standard second-line choice in status epilepticus. Carbamazepine, zonisamide and tiagabine have no role in acute intravenous seizure control, and the oral carbamazepine route is far too slow for refractory status."
+  },
+  {
+   "id": "mst-lev-07",
+   "drugSlug": "levetiracetam",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "Which exam pearl about levetiracetam is correctly stated?",
+   "options": [
+    "It is the anticonvulsant most associated with weight gain and prolactin rise",
+    "It is contraindicated with SSRIs because of shared serotonergic metabolism",
+    "It combines a broad spectrum and interaction-free kinetics with a behavioural adverse-effect signature, and brivaracetam adds no benefit when given alongside it",
+    "It requires serum-level monitoring after every dose change"
+   ],
+   "correctIndex": 2,
+   "explanation": "The SV2A agent pairs broad coverage (focal, primary generalized, myoclonic) with renal, CYP-free elimination and a real behavioural and psychiatric AE cluster; Katzung notes brivaracetam provides no added therapeutic benefit alongside levetiracetam because both act on SV2A. Serum levels are not routinely monitored for levetiracetam, prolactin and weight belong to other classes, and no serotonergic interaction exists."
+  },
+  {
+   "id": "mst-lev-08",
+   "drugSlug": "levetiracetam",
+   "domain": "Indian Practice",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which Indian levetiracetam facts are correct?",
+   "options": [
+    "LEVTAM 25 mg tablets titrated weekly to 200 mg BD as the standard adult regimen",
+    "LEVOREXA is an Indian levetiracetam-vigabatrin combination",
+    "Indian levetiracetam is licensed from birth in all formulations at 3 g/day",
+    "LEVOREXA, TORLEVA and LEVTAM 0.25/0.5/1.0 g tablets; usual adult dose 0.5 g BD increased up to 1 g BD (maximum 3 g/day), not approved below 4 years"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi lists levetiracetam as LEVOREXA, TORLEVA and LEVTAM 0.25, 0.5 and 1.0 g tablets, dosed 0.5 g BD increased up to 1 g BD (maximum 3 g/day), and notes it is not approved in children below 4 years. The 25 mg weekly titration scheme belongs to topiramate's Indian dosing, and no combination products exist."
+  },
+  {
+   "id": "mst-tgb-01",
+   "drugSlug": "tiagabine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Tiagabine's unique mechanism among marketed anticonvulsants is:",
+   "options": [
+    "Selective inhibition of the GAT-1 GABA transporter, prolonging the synaptic action of released GABA and potentiating tonic (extrasynaptic) inhibition",
+    "Inhibition of GABA-transaminase, the enzyme that degrades GABA",
+    "Positive allosteric modulation of synaptic GABA-A receptors",
+    "Inhibition of GABA synthesis by blocking glutamic acid decarboxylase"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tiagabine is the only marketed drug acting at GAT-1 \u2014 Katzung describes a nipecotic-acid molecule with a lipophilic anchor that blocks GABA reuptake into neurons and glia, prolonging inhibitory synaptic responses and potentiating tonic inhibition. GABA-transaminase inhibition is vigabatrin, and allosteric GABA-A modulation is the benzodiazepine and phenobarbital mechanism."
+  },
+  {
+   "id": "mst-tgb-02",
+   "drugSlug": "tiagabine",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "Match each GABAergic mechanism to its drug \u2014 which row is fully correct?",
+   "options": [
+    "Tiagabine \u2014 SV2A binding; vigabatrin \u2014 GAT-1 blockade; benzodiazepines \u2014 glycine-site antagonism",
+    "Tiagabine \u2014 GAT-1 reuptake blockade; vigabatrin \u2014 GABA-transaminase inhibition; benzodiazepines \u2014 GABA-A allosteric potentiation",
+    "Tiagabine \u2014 GABA-transaminase inhibition; vigabatrin \u2014 GAT-1 blockade; benzodiazepines \u2014 T-channel blockade",
+    "Tiagabine \u2014 GABA-A receptor antagonism; vigabatrin \u2014 GABA reuptake blockade; ethosuximide \u2014 GABA-transaminase inhibition"
+   ],
+   "correctIndex": 1,
+   "explanation": "The GABAergic map: tiagabine blocks the GAT-1 transporter, vigabatrin inhibits GABA-transaminase, and benzodiazepines (with phenobarbital) are positive allosteric modulators of GABA-A receptors \u2014 Katzung's Table 24-2 assigns each mechanism exactly this way. Every swapped row grafts one drug's mechanism onto another, which is precisely how examiners set these traps."
+  },
+  {
+   "id": "mst-tgb-03",
+   "drugSlug": "tiagabine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 19-year-old with juvenile myoclonic epilepsy is prescribed tiagabine in error. What is the concern?",
+   "options": [
+    "Tiagabine's only limitation in JME is a need for double the usual dose",
+    "Tiagabine converts myoclonic seizures into absence seizures, which are easier to treat",
+    "Tiagabine is a second-line focal-seizure drug that is contraindicated in the generalized epilepsies and can worsen them",
+    "Tiagabine is the drug of choice for JME and the prescription is appropriate"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung labels tiagabine a second-line treatment for focal seizures and explicitly contraindicated in generalized onset epilepsies, and Tripathi confines it to add-on therapy of partial seizures. Giving it in JME risks worsening myoclonus \u2014 the same class of mismatch as carbamazepine in absence epilepsy."
+  },
+  {
+   "id": "mst-tgb-04",
+   "drugSlug": "tiagabine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 40-year-old without epilepsy receives tiagabine off-label for an anxiety disorder and develops increasing confusion and unresponsiveness without visible convulsions; EEG shows continuous spike-wave activity. The best interpretation is:",
+   "options": [
+    "A conversion reaction, since tiagabine has no CNS depressant properties",
+    "Anticholinergic delirium from tiagabine's muscarinic blockade",
+    "A normal tiagabine effect that requires doubling the dose",
+    "Non-convulsive status epilepticus \u2014 a reported hazard when tiagabine is used off-label, so GABA-reuptake blockade outside epilepsy carries real risk"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tiagabine can cause excessive CNS depression \u2014 confusion, somnolence, ataxia \u2014 and carries a documented history of non-convulsive status in off-label psychiatric use, which is why its use is confined to focal epilepsy. There is no antimuscarinic action, and continuous spike-wave on EEG is pathological by definition, never a dose target."
+  },
+  {
+   "id": "mst-tgb-05",
+   "drugSlug": "tiagabine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which pharmacokinetic statement about tiagabine is correct?",
+   "options": [
+    "High bioavailability (90-100%), linear kinetics, high protein binding, half-life 5-8 hours shortened by enzyme inducers, and dosing with food",
+    "Zero oral bioavailability unless given parenterally",
+    "Half-life of about 60 hours permitting weekly dosing",
+    "Renal excretion unchanged with dose-dependent saturable absorption"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung gives tiagabine 90-100% bioavailability, linear kinetics, high protein binding and a 5-8 hour half-life that enzyme-inducing drugs shorten; food lowers the peak concentration but not the total exposure, so the drug should be taken with food. It is hepatically oxidized by CYP3A with faecal elimination dominating \u2014 not a renal-unchanged story, and the long half-life belongs to zonisamide."
+  },
+  {
+   "id": "mst-tgb-06",
+   "drugSlug": "tiagabine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A patient without epilepsy took a relative's tiagabine tablets and then had a seizure. Is this plausible?",
+   "options": [
+    "Yes \u2014 but only after at least one year of continuous use",
+    "Yes \u2014 tiagabine can itself provoke seizures, notably in patients taking it for non-epilepsy indications",
+    "No \u2014 tiagabine's anticonvulsant action holds in every clinical setting, so tiagabine is excluded",
+    "No \u2014 seizures after tiagabine indicate a manufacturing impurity only"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung notes tiagabine can cause seizures in some patients, notably those taking the drug for other indications \u2014 a paradoxical proconvulsant signal worth knowing alongside its dizziness, nervousness, weakness and difficulty concentrating profile. The antiseizure label does not protect outside its approved context, and the risk is not time- or impurity-dependent."
+  },
+  {
+   "id": "mst-tgb-07",
+   "drugSlug": "tiagabine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Tiagabine's dosing pattern is best described as:",
+   "options": [
+    "Once-weekly 100 mg dosing because of the long half-life",
+    "Start at 1 g/day and reduce the dose toward effect",
+    "Start 4 mg/day with weekly increases of 4-8 mg/day to a usual total of 16-56 mg/day in divided doses",
+    "A fixed 400 mg/day from day one with no titration"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung's schedule: initial 4 mg/day, weekly increments of 4-8 mg/day, totals 16-56 mg/day, moving to three-to-four-times-daily division above 30-32 mg/day. Fixed high-dose initiation and gram-scale dosing belong to other drugs entirely, and the short half-life demands daily division, not weekly dosing."
+  },
+  {
+   "id": "mst-tgb-08",
+   "drugSlug": "tiagabine",
+   "domain": "Active Recall",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "Tiagabine is described as a rationally designed anticonvulsant because:",
+   "options": [
+    "It was found by serendipitous screening of sulfonamide antibiotics",
+    "It is a phenytoin derivative optimised for sodium-channel binding",
+    "It was designed as a prodrug of levetiracetam for better absorption",
+    "It was built on the knowledge that potentiating GABA action in the brain is a plausible antiseizure mechanism \u2014 a nipecotic acid moiety plus a lipophilic anchor to cross the blood-brain barrier"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung calls tiagabine a rationally designed antiseizure drug: the active nipecotic acid (a GABA uptake inhibitor inactive systemically) was given a lipophilic anchor so the molecule crosses the blood-brain barrier \u2014 mechanism-first design. There is no sulfonamide, phenytoin or levetiracetam lineage anywhere in its chemistry."
+  },
+  {
+   "id": "mst-zns-01",
+   "drugSlug": "zonisamide",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Zonisamide's pharmacological identity is best captured by:",
+   "options": [
+    "A sulfonamide-derived broad-spectrum anticonvulsant blocking voltage-gated sodium channels and T-type calcium currents, with weak carbonic-anhydrase inhibition",
+    "A benzisoxazole acting at SV2A synaptic vesicles",
+    "A phenyltriazine acting purely at AMPA receptors",
+    "A barbiturate derivative acting at the picrotoxin site of GABA-A receptors"
+   ],
+   "correctIndex": 0,
+   "explanation": "Zonisamide blocks sodium channels like carbamazepine and suppresses T-type calcium currents, with weak carbonic anhydrase inhibition inherited from its sulfonamide structure \u2014 Katzung details the sulfonamide chemistry and Tripathi notes maximal-electroshock and kindling activity without pentylenetetrazol antagonism. SV2A belongs to levetiracetam, the phenyltriazine is lamotrigine, and no barbiturate lineage exists."
+  },
+  {
+   "id": "mst-zns-02",
+   "drugSlug": "zonisamide",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 31-year-old with a documented severe rash from a sulfonamide antibiotic years ago needs an add-on anticonvulsant. A colleague suggests zonisamide. The correct caution is:",
+   "options": [
+    "Sulfonamide allergy predicts only nausea with zonisamide, never rash",
+    "Avoid zonisamide \u2014 it is a sulfonamide derivative and is to be avoided in sulfonamide-sensitive patients",
+    "Zonisamide is chemically a sulfamate, so sulfa allergy is irrelevant",
+    "Zonisamide allergy cross-talk applies only to topical sulfonamides"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi's verdict is explicit \u2014 zonisamide is to be avoided in patients sensitive to sulfonamides \u2014 and Katzung reinforces that zonisamide is a sulfonamide (whereas topiramate is strictly a sulfamate) with potentially serious skin rashes among its adverse effects. This sulfa cross-reactivity is the classic trick question of the anticonvulsant chapter."
+  },
+  {
+   "id": "mst-zns-03",
+   "drugSlug": "zonisamide",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 49-year-old on carbamazepine for focal seizures adds zonisamide 100 mg at night. Compared with the monotherapy literature, what should he expect?",
+   "options": [
+    "Carbamazepine doubles zonisamide levels by blocking its acetylation",
+    "Zonisamide's half-life lengthens with carbamazepine to about ten days",
+    "Zonisamide's long half-life (about 1-3 days, quoted around 60 hours) still permits once-daily dosing, but carbamazepine's CYP3A4 induction shortens it \u2014 so the dose may need to be higher",
+    "Zonisamide's half-life is 6-8 hours regardless of co-medication, so twice-daily dosing is mandatory"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung gives zonisamide a 1-3 day half-life enabling once-daily dosing, and notes carbamazepine, phenytoin and phenobarbital induce CYP3A4 to increase zonisamide clearance and shorten that half-life \u2014 potentially requiring a dose increase. Zonisamide has no clinically significant effect on other antiseizure drugs' kinetics; the interaction runs one way only."
+  },
+  {
+   "id": "mst-zns-04",
+   "drugSlug": "zonisamide",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 27-year-old on zonisamide for refractory focal seizures reports two weeks of brief episodes of smelling burning rubber with no concurrent ictal EEG change, plus 4 kg weight loss. The most likely attribution is:",
+   "options": [
+    "Topiramate, which is famous for olfactory hallucinations as its leading effect",
+    "Drug failure \u2014 the phenomena prove zonisamide is failing and the dose must double",
+    "A sinus infection causing anosmia, unrelated to any anticonvulsant",
+    "Zonisamide \u2014 olfactory hallucinations and psychotic phenomena are rarely reported, and weight loss is a recognised effect"
+   ],
+   "correctIndex": 3,
+   "explanation": "The KYP monograph lists olfactory hallucinations and psychosis as rare zonisamide phenomena, and Katzung adds drowsiness, cognitive impairment, renal stones and weight loss to its profile \u2014 so drug attribution with dose review comes before assuming treatment failure. Topiramate's signature is cognitive word-finding difficulty, not smell phenomena, and doubling a drug that may be causing psychosis would be unsafe."
+  },
+  {
+   "id": "mst-zns-05",
+   "drugSlug": "zonisamide",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A neurologist wants a broad-spectrum add-on for an adult with focal seizures evolving to bilateral tonic-clonic seizures who has failed two agents. Zonisamide is proposed. Which profile supports it?",
+   "options": [
+    "Broad-spectrum efficacy (focal and generalized tonic-clonic seizures, with reports in some myoclonic epilepsies and infantile spasms) at 200-400 mg/day, maximum 600 mg/day",
+    "Efficacy confined to childhood absence seizures at 15 mg/kg/day",
+    "A first-line monotherapy for trigeminal neuralgia at 800 mg/day",
+    "An approved curative therapy for Lennox-Gastaut status"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung calls zonisamide broad-spectrum \u2014 focal and generalized tonic-clonic seizures in adults and children with reported benefit in some myoclonic epilepsies and infantile spasms \u2014 at maintenance doses of 200-400 mg/day (maximum 600). Absence first-line status belongs to ethosuximide and valproate, and trigeminal neuralgia is carbamazepine territory."
+  },
+  {
+   "id": "mst-zns-06",
+   "drugSlug": "zonisamide",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Which interaction statement about zonisamide is correct?",
+   "options": [
+    "Valproate and zonisamide are contraindicated together because they share carbonic-anhydrase activity",
+    "Enzyme-inducing anticonvulsants (carbamazepine, phenytoin, phenobarbital) shorten zonisamide's half-life, while zonisamide itself has no clinically significant effect on other antiseizure drugs' kinetics",
+    "Zonisamide potently inhibits CYP3A4 and doubles carbamazepine levels",
+    "Zonisamide doubles warfarin levels by protein-binding displacement"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung: inducers of CYP3A4 raise zonisamide clearance and shorten its half-life (the dose may need increasing), while zonisamide has no clinically significant pharmacokinetic effect on other antiseizure drugs. No inhibition, no warfarin displacement and no shared-carbonic-anhydrase contraindication exist in the literature."
+  },
+  {
+   "id": "mst-zns-07",
+   "drugSlug": "zonisamide",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "The zonisamide-topiramate twin comparison \u2014 which row is book-accurate?",
+   "options": [
+    "Neither drug inhibits carbonic anhydrase, and neither affects weight",
+    "Zonisamide causes weight gain while topiramate causes weight loss \u2014 a mirror pair",
+    "Zonisamide is a sulfonamide; topiramate is strictly a sulfamate \u2014 both inhibit carbonic anhydrase, both cause weight loss, and both rarely cause kidney stones and oligohidrosis",
+    "Zonisamide is a sulfamate and topiramate a sulfonamide \u2014 and only topiramate causes weight loss"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung draws the distinction explicitly: zonisamide is a sulfonamide, topiramate contains the same sulfonamide structure but is strictly a sulfamate; both share carbonic-anhydrase inhibition (like acetazolamide), weight loss, and rare kidney stones and oligohidrosis. Weight loss on zonisamide is real, so the gain-versus-loss mirror is the trap."
+  },
+  {
+   "id": "mst-zns-08",
+   "drugSlug": "zonisamide",
+   "domain": "Indian Practice",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which Indian zonisamide facts are correct?",
+   "options": [
+    "ZONISEP 400 mg SR once monthly for refractory focal seizures",
+    "ZONIT is the Indian brand of zidovudine for HIV",
+    "Indian zonisamide starts at 600 mg/day with weekly doubling",
+    "ZONISEP, ZONICARE and ZONIT 50/100 mg capsules, dosed 25-100 mg BD, not to be given to children"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi lists zonisamide as ZONISEP, ZONICARE and ZONIT 50 and 100 mg capsules at 25-100 mg BD with an explicit paediatric caution. Katzung's adult maintenance range is 200-400 mg/day (maximum 600); the monthly SR product and the zidovudine attribution are inventions."
+  },
+  {
+   "id": "mst-mix-01",
+   "drugSlug": "mixed",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "The staging question of bipolar pharmacotherapy \u2014 which pairing is correct?",
+   "options": [
+    "Acute mania: lithium, valproate, carbamazepine (with atypical antipsychotics); bipolar depression and its prophylaxis: lamotrigine (with quetiapine-type options)",
+    "Acute mania: lamotrigine; bipolar depression: carbamazepine",
+    "Acute mania: gabapentin and topiramate; bipolar depression: lithium only",
+    "Acute mania: levetiracetam; bipolar depression: pregabalin"
+   ],
+   "correctIndex": 0,
+   "explanation": "The book-anchored staging: lithium is the standard antimanic and mood stabiliser with valproate and carbamazepine as its anticonvulsant alternatives (Katzung ch.29), while lamotrigine is not effective for mania and owns depressive-episode prophylaxis (Tripathi), with quetiapine completing the bipolar-depression tier. Gabapentin is explicitly not effective in mania, and neither levetiracetam nor pregabalin carries mood-stabiliser labels."
+  }
+ ]
+}

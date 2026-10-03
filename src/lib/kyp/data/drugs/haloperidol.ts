@@ -992,6 +992,110 @@ export const haloperidol: Drug = {
       explanation: "For psychosis (oral, moderate): start 1–2 mg twice daily, target 2–10 mg/day, maximum 20 mg/day (expert settings). Titrate by 2–4 mg/day to response",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "tap-hal-01",
+      question: "Haloperidol's rank order of receptor affinity explains why extrapyramidal symptoms dominate its side-effect profile. That rank order is:",
+      options: [
+        "Alpha-1 = 5-HT2A > D2 > D1",
+        "D2 > alpha-1 > D4 > 5-HT2A > D1 > H1",
+        "5-HT2A > D2 > alpha-1 > muscarinic",
+        "H1 > muscarinic > alpha-1 > D2"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung lists haloperidol as D2 > alpha-1 > D4 > 5-HT2A > D1 > H1: a high-potency butyrophenone with maximal D2 occupancy, so nigrostriatal blockade (acute dystonia, akathisia, parkinsonism, tardive dyskinesia) is the price of its antipsychotic effect, while H1 and muscarinic effects are minimal. Option A is chlorpromazine's profile, option C resembles an atypical agent, and option D describes an essentially antihistaminic drug.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "tap-hal-02",
+      question: "A 22-year-old man started haloperidol 10 days ago for first-episode psychosis. He arrives with his neck twisted to the left, jaw clenched and eyes rolled upward, and is terrified. The most appropriate immediate treatment is:",
+      options: [
+        "Increase the haloperidol dose and observe",
+        "Start oral propranolol",
+        "Switch to fluphenazine decanoate injections",
+        "Give IM promethazine or IM benztropine"
+      ],
+      correctIndex: 3,
+      explanation: "This is an acute dystonic reaction (torticollis, trismus, oculogyric crisis), typically within the first week or two in a young male started on a high-potency D2 blocker; the standard rescue is a parenteral antihistamine (promethazine/diphenhydramine) or anticholinergic (benztropine). Raising the dose or switching to another high-potency agent worsens the dystonia, and propranolol is the drug for akathisia, not dystonia.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-hal-03",
+      question: "An ICU team starts an intravenous haloperidol infusion for a 66-year-old man with agitated delirium. Which monitoring is mandatory with this drug and route?",
+      options: [
+        "Hourly capillary blood glucose",
+        "Weekly CBC for agranulocytosis",
+        "ECG surveillance for QTc prolongation and torsades de pointes",
+        "Daily serum prolactin levels"
+      ],
+      correctIndex: 2,
+      explanation: "Intravenous haloperidol, widely used for ICU delirium, carries a QTc-prolongation and torsades warning; Katzung notes QTc monitoring is meaningful once values exceed about 500 ms on rhythm strips or Holter recordings. Agranulocytosis surveillance belongs to clozapine, prolactin rise is a chronic-therapy issue, and glucose monitoring is an atypical-antipsychotic metabolic concern - none is the ICU haloperidol emergency.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-hal-04",
+      question: "Five days after his haloperidol dose was stepped up, a 40-year-old man with schizophrenia develops fever of 39.6 degrees C, lead-pipe rigidity, fluctuating BP and tachycardia; CK is 2400 U/L. The correct management is:",
+      options: [
+        "Stop haloperidol immediately and treat with cooling, IV dantrolene and bromocriptine",
+        "Add benztropine and continue the same haloperidol dose",
+        "Cross over to a higher dose of fluphenazine",
+        "Give IM chlorpromazine for sedation and reassess the next day"
+      ],
+      correctIndex: 0,
+      explanation: "Rigidity plus hyperthermia plus autonomic instability plus rising muscle-type CK after a D2 blocker is neuroleptic malignant syndrome (NMS): the offending neuroleptic must be stopped at once, with physical cooling, IV dantrolene for the rigidity and the dopamine agonist bromocriptine (Tripathi notes anticholinergics are of NO help here). Continuing or substituting another potent D2 blocker is dangerous, and sedation alone misses a medical emergency.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-hal-05",
+      question: "Haloperidol decanoate as long-term maintenance therapy is typically given:",
+      options: [
+        "Orally, once daily",
+        "Every 2-3 days by deep IM injection",
+        "Every 4 weeks as a depot injection, with oral cover during the loading phase",
+        "Every 6 months"
+      ],
+      correctIndex: 2,
+      explanation: "The decanoate ester releases haloperidol slowly, giving a roughly once-a-month (4-weekly) depot for patients who will not or cannot take oral medication (fluphenazine decanoate runs 2-4 weekly). Katzung warns that long-acting injectables continue to block D2 receptors for 3-6 months after the last injection, which is why oral cover is needed while the depot loads - and why switching afterwards is unhurried.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "tap-hal-06",
+      question: "A 28-year-old stable on haloperidol 15 mg/day says: 'For three weeks I have felt driven to keep moving; my legs will not let me sit.' Psychotic symptoms remain controlled. The best next step is:",
+      options: [
+        "Akathisia - add propranolol or reduce the haloperidol dose; do NOT raise the antipsychotic",
+        "Relapse of psychosis - increase haloperidol",
+        "Tardive dyskinesia - start valbenazine",
+        "Drug-induced parkinsonism - add levodopa"
+      ],
+      correctIndex: 0,
+      explanation: "Subjective inner restlessness with preserved insight, on a stable antipsychotic dose, is akathisia - the classic trap is mistaking it for relapse and escalating the D2 blocker, which worsens it. Tripathi: a benzodiazepine or propranolol (most effective) with dose reduction or switch to an atypical is the management. Tardive dyskinesia shows involuntary orofacial movements, and levodopa is contraindicated with neuroleptics.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-hal-07",
+      question: "A 9-year-old boy has had motor tics plus vocalisations (grunts, sudden words) for over a year, worsening at school and distressing the family. Which antipsychotic is the classic named preferred drug for this disorder?",
+      options: [
+        "Chlorpromazine",
+        "Thioridazine",
+        "Trifluoperazine",
+        "Haloperidol"
+      ],
+      correctIndex: 3,
+      explanation: "Haloperidol is the named preferred drug for Gilles de la Tourette syndrome (along with Huntington's disease and acute schizophrenia) in Tripathi; its potent D2 blockade suppresses tic severity, with risperidone and aripiprazole as modern alternatives. Low-potency phenothiazines such as chlorpromazine and thioridazine are not the classic choice here, and trifluoperazine is framed for withdrawn-apathetic psychosis rather than tic disorders.",
+      afterSectionId: "top",
+    },
+    {
+      id: "tap-hal-08",
+      question: "A 26-year-old woman on haloperidol 10 mg/day reports amenorrhoea for 4 months with milky nipple discharge; pregnancy test is negative and serum prolactin is 110 ng/mL. The mechanism is:",
+      options: [
+        "Direct destruction of pituitary lactotrope cells",
+        "Blockade of D2 receptors on lactotropes, removing tonic dopaminergic inhibition of prolactin secretion",
+        "Direct stimulation of prolactin gene transcription",
+        "Blockade of prolactin receptors on breast duct epithelium"
+      ],
+      correctIndex: 1,
+      explanation: "Dopamine acting on tuberoinfundibular D2 receptors tonically inhibits prolactin release; haloperidol removes that brake, so prolactin rises, producing the amenorrhoea-galactorrhoea syndrome and infertility in women (loss of libido, impotence in men) - Katzung suggests switching to a prolactin-neutral atypical such as aripiprazole if dose reduction fails. Options A and C are fabricated mechanisms, and option D would reduce lactation, not cause it.",
+      afterSectionId: "neurotransmitters",
+    },
   ],
   activeRecallQuestions: [
     {

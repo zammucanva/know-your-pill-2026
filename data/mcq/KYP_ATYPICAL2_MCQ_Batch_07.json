@@ -1,0 +1,888 @@
+{
+ "batch": "kyp-atypical2-mcq-batch-07",
+ "title": "Atypical Antidepressant MCQ Batch 07 - Vilazodone / Vortioxetine / Agomelatine / Tianeptine / Reboxetine / Atomoxetine",
+ "generated": "2026-10-02",
+ "examOrientation": "Indian exams (NEET PG / INI-CET) + USMLE-style vignettes",
+ "textbookAnchors": "Facts aligned with Katzung Basic & Clinical Pharmacology 14e Ch.30 (vortioxetine as a 5-HT1A/1B agonist-partial agonist, 5-HT3/5-HT7 antagonist and allosteric SERT inhibitor not classified as an SSRI, with European and US approval for cognitive dysfunction associated with depression and CYP2D6/2B6 substrate kinetics requiring dose halving with fluoxetine or bupropion; vilazodone as potent SERT inhibitor plus 5-HT1A partial agonist with fatty-meal-enhanced absorption, CYP3A4 metabolism, ketoconazole raising levels by 50% or more, and GI upset exceeding SSRI rates; agomelatine as an MT1/MT2 agonist and 5-HT2C antagonist approved in Europe for major depressive disorder) and K.D. Tripathi 7e (tianeptine introduced by its serotonin-uptake-enhancing description with 12.5 mg BD-TDS Stablon dosing for anxiodepressive states; reboxetine as a selective NA reuptake blocker with weak 5-HT effect, minimal antimuscarinic/sedative actions, noradrenergic side-effect cluster, 4 mg BD or 8 mg OD Narebox dosing; atomoxetine with CYP2D6 hydroxylation and extensive/poor metaboliser polymorphism, fluoxetine/paroxetine/quinidine level-raising interactions, dyspepsia-anorexia adverse effects, rare hepatotoxicity and suicidal thoughts, Attentrol/Axepta brands, glaucoma and MAOI contraindications). Mu-opioid agonism of tianeptine, agomelatine LFT monitoring schedule, vilazodone food-bioavailability rule, vortioxetine 20 mg interaction cap, reboxetine meta-analytic efficacy doubts and atomoxetine boxed warning anchored to the KYP monograph facts. Verified by targeted search of both book texts; no copyrighted text reproduced.",
+ "schema": {
+  "core_fields": "id, question, options[4], correctIndex, explanation, afterSectionId - IDENTICAL to KYP microQuizzes",
+  "metadata_fields": "drugSlug, domain, difficulty (Foundation|Clinical|Advanced), style (vignette|recall) - batch extras",
+  "notes": [
+   "afterSectionId values are real section ids from the live KYP section set (top, quick-facts, mechanism, timeline, neurotransmitters, knowledge-graph, high-yield-summary used in this batch).",
+   "Answer positions deliberately spread: A12 B13 C12 D12 (see stats.answerSpread).",
+   "QA gate: passed scripts/mcq_4step_check.py after extending the fact table with atypical-II data (vilazodone/vortioxetine/agomelatine/tianeptine/reboxetine/atomoxetine)."
+  ]
+ },
+ "stats": {
+  "total": 49,
+  "byDrug": {
+   "vilazodone": 8,
+   "vortioxetine": 8,
+   "agomelatine": 8,
+   "tianeptine": 8,
+   "reboxetine": 8,
+   "atomoxetine": 8,
+   "mixed": 1
+  },
+  "byDifficulty": {
+   "Foundation": 11,
+   "Clinical": 28,
+   "Advanced": 10
+  },
+  "byStyle": {
+   "vignette": 27,
+   "recall": 22
+  },
+  "byDomain": {
+   "Mechanism & Neuroscience": 9,
+   "Pharmacokinetics": 4,
+   "Clinical Uses": 10,
+   "Adverse Effects & Safety": 12,
+   "Drug Interactions": 4,
+   "Indian Practice": 3,
+   "Exam Pearls": 4,
+   "Active Recall": 3
+  },
+  "answerSpread": {
+   "0": 12,
+   "1": 13,
+   "2": 12,
+   "3": 12
+  }
+ },
+ "questions": [
+  {
+   "id": "atd-vil-01",
+   "drugSlug": "vilazodone",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Vilazodone's pharmacological profile — the basis of its \"SPARI\" label — is best described as:",
+   "options": [
+    "Potent serotonin reuptake inhibition combined with partial agonism at the 5-HT1A receptor",
+    "Balanced blockade of SERT and NET with additional 5-HT2A antagonism",
+    "Pure norepinephrine reuptake blockade with no serotonergic activity",
+    "MT1/MT2 melatonin receptor agonism with 5-HT2C antagonism"
+   ],
+   "correctIndex": 0,
+   "explanation": "Vilazodone is a potent SERT inhibitor and a partial agonist at the 5-HT1A receptor — hence the coined term SPARI (serotonin partial agonist reuptake inhibitor), the 5-HT1A limb being shared with buspirone. Balanced SERT/NET with 5-HT2A antagonism mixes SNRI and trazodone pharmacology, pure NET blockade describes reboxetine/atomoxetine, and melatonin agonism with 5-HT2C antagonism is agomelatine's signature. Exam pearl: the 5-HT1A partial agonism is the offered rationale for vilazodone's low sexual-dysfunction burden."
+  },
+  {
+   "id": "atd-vil-02",
+   "drugSlug": "vilazodone",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which statement about vilazodone's approved indications is correct?",
+   "options": [
+    "It is approved for major depression, generalized anxiety disorder, and fibromyalgia",
+    "It is approved for major depressive disorder in adults — its label is MDD-only",
+    "It carries approvals for obsessive-compulsive disorder and panic disorder like other serotonergic agents",
+    "It is a first-line approved drug for smoking cessation and seasonal affective disorder"
+   ],
+   "correctIndex": 1,
+   "explanation": "Vilazodone's regulatory label is confined to adult major depressive disorder — an MDD-only label, a recurring theme among the newer atypicals (vilazodone, vortioxetine, desvenlafaxine). Generalized anxiety and fibromyalgia labels belong to duloxetine/SNRIs, OCD and panic to the SSRIs, and smoking cessation with seasonal affective disorder is bupropion territory, so none of the other triplets is defensible."
+  },
+  {
+   "id": "atd-vil-03",
+   "drugSlug": "vilazodone",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 34-year-old man has taken vilazodone 40 mg each morning on an empty stomach for 5 weeks with no improvement in his depressive symptoms; he admits he skips breakfast because the tablet makes him queasy. The most likely pharmacokinetic explanation for his non-response is:",
+   "options": [
+    "CYP3A4 autoinduction by vilazodone has accelerated its own clearance",
+    "A saturable first-pass effect has made the tablet ineffective after the first week",
+    "Food markedly increases vilazodone absorption, so fasting doses roughly halve its bioavailability",
+    "Vilazodone accumulates in the body only when it is taken with dairy products"
+   ],
+   "correctIndex": 2,
+   "explanation": "Vilazodone must be taken with food — absorption rises sharply with a fatty meal (Katzung), and on an empty stomach bioavailability falls by roughly half, so an apparent non-responder may simply be underdosed. Restoring the breakfast habit recovers exposure before the drug is declared a failure. Autoinduction and dairy-dependent accumulation are invented mechanisms; the real pearl is that this is the signature food-effect antidepressant."
+  },
+  {
+   "id": "atd-vil-04",
+   "drugSlug": "vilazodone",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "Two weeks after starting vilazodone, a 29-year-old woman reports loose stools and queasiness but wants to continue because her mood is \"finally lifting.\" The most appropriate advice is:",
+   "options": [
+    "These gastrointestinal effects are the drug's most common adverse effects and usually settle; take each dose with food and review shortly",
+    "Stop immediately — diarrhoea on vilazodone signals emerging hepatotoxicity",
+    "The symptoms indicate a serotonergic excess emergency requiring cyproheptadine",
+    "Split the dose into two daily halves to eliminate gastrointestinal effects permanently"
+   ],
+   "correctIndex": 0,
+   "explanation": "Diarrhoea and nausea are vilazodone's leading adverse effects — Katzung notes gastrointestinal upset at somewhat higher rates than with the SSRIs — and they are typically mild and transient, so food co-administration and short-interval review are correct. Hepatotoxicity monitoring is agomelatine's duty, serotonin syndrome requires multiple serotonergic drugs with autonomic instability, and no dosing trick abolishes GI effects."
+  },
+  {
+   "id": "atd-vil-05",
+   "drugSlug": "vilazodone",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "knowledge-graph",
+   "question": "A 41-year-old man stable on vilazodone is prescribed oral ketoconazole; the psychiatrist should anticipate:",
+   "options": [
+    "A fall in vilazodone levels requiring double the antidepressant dose",
+    "No interaction — vilazodone is cleared almost entirely by the kidney as unchanged drug",
+    "Toxic accumulation of ketoconazole because vilazodone potently inhibits CYP3A4",
+    "Rising vilazodone exposure, because strong CYP3A4 inhibitors can raise its serum concentration by 50% or more"
+   ],
+   "correctIndex": 3,
+   "explanation": "Vilazodone is extensively metabolised by CYP3A4 (with minor 2C19 and 2D6 contribution), and strong 3A4 inhibitors such as ketoconazole raise its serum concentration by half or more — Katzung's explicit figure — so the combination demands dose caution. The interaction runs from inhibitor to substrate, only about 1% of vilazodone is excreted unchanged renally, and vilazodone is neither a potent inhibitor nor a strong inducer of any CYP enzyme (it may mildly induce 2C19), so it does not raise ketoconazole levels."
+  },
+  {
+   "id": "atd-vil-06",
+   "drugSlug": "vilazodone",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 26-year-old woman is about to start vilazodone for a first episode of major depression. Which titration plan matches the standard product labelling?",
+   "options": [
+    "Begin at 25 mg daily and continue unchanged; the food requirement replaces any titration",
+    "Start 10 mg daily for 7 days, then 20 mg daily for 7 days, then target the usual 40 mg daily maintenance dose",
+    "Start 15 mg daily and step up every 3 days to 80 mg twice daily",
+    "Start 150 mg daily and double weekly to a 450 mg ceiling"
+   ],
+   "correctIndex": 1,
+   "explanation": "Vilazodone is titrated 10 mg to 20 mg to 40 mg, each step held about a week before reaching the 40 mg usual maintenance dose — a built-in ramp that blunts the nausea and dizziness of initiation. Claiming the food rule replaces titration inverts the logic (food affects absorption, not dose escalation), 80 mg twice daily exceeds the label, and 150-to-450 mg is bupropion dosing territory."
+  },
+  {
+   "id": "atd-vil-07",
+   "drugSlug": "vilazodone",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 30-year-old man in full remission on sertraline asks to switch antidepressants because of distressing sexual dysfunction and 4 kg of weight gain. Which feature of vilazodone is most relevant to his request?",
+   "options": [
+    "It is the antidepressant most strongly associated with weight loss and blood-pressure reduction",
+    "It blocks muscarinic receptors, so sexual side effects are simply replaced by dry mouth",
+    "It combines SERT inhibition with 5-HT1A partial agonism and is associated with a low rate of sexual dysfunction",
+    "It has proven efficacy for premature ejaculation at a low nightly dose"
+   ],
+   "correctIndex": 2,
+   "explanation": "Vilazodone's 5-HT1A partial-agonist limb is the proposed reason its sexual-dysfunction rate stays low despite potent SERT blockade — a classic counselling point when an SSRI must be swapped for sexual side effects. Weight change is not its heralded advantage, it is not meaningfully anticholinergic, and dapoxetine — not vilazodone — is the serotonergic drug labelled for premature ejaculation."
+  },
+  {
+   "id": "atd-vil-08",
+   "drugSlug": "vilazodone",
+   "domain": "Active Recall",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Which statement about vilazodone is FALSE?",
+   "options": [
+    "Its metabolism is mainly via CYP3A4, with minor contributions from CYP2C19 and CYP2D6",
+    "Only about 1% of an oral dose is excreted unchanged in the urine",
+    "It is a potent inhibitor of CYP2D6 and is contraindicated with tamoxifen",
+    "Absorption is substantially increased when the dose is taken with a fatty meal"
+   ],
+   "correctIndex": 2,
+   "explanation": "The tamoxifen claim is the false one: vilazodone is a CYP substrate, not a potent inhibitor — Katzung states it is neither a potent inhibitor nor a strong inducer of any isoenzyme (it may mildly induce CYP2C19). The strong-2D6-inhibitor warning that matters for tamoxifen belongs to paroxetine and fluoxetine. The other statements are all correct: 3A4-dominant metabolism with minor 2C19/2D6 contribution, roughly 1% renal excretion unchanged, and sharply increased absorption with a fatty meal."
+  },
+  {
+   "id": "atd-vor-01",
+   "drugSlug": "vortioxetine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Vortioxetine's \"multimodal\" pharmacology consists of:",
+   "options": [
+    "NET blockade plus 5-HT2A antagonism plus weak D2 blockade",
+    "Alpha-2 autoreceptor antagonism plus potent H1 blockade",
+    "Monoamine oxidase-A inhibition plus 5-HT3 antagonism",
+    "SERT inhibition, 5-HT1A agonism, and 5-HT3 antagonism"
+   ],
+   "correctIndex": 3,
+   "explanation": "Vortioxetine inhibits SERT (allosterically), acts as an agonist or partial agonist at 5-HT1A and 5-HT1B, and blocks 5-HT3 and 5-HT7 receptors — the receptor spread that earned the \"multimodal\" tag and keeps it out of the SSRI class. NET with 5-HT2A is trazodone-flavoured pharmacology, alpha-2 plus H1 defines mirtazapine (NaSSA), and MAO-A inhibition is the RIMA/MAOI territory."
+  },
+  {
+   "id": "atd-vor-02",
+   "drugSlug": "vortioxetine",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Vortioxetine's regulatory label is best summarised as:",
+   "options": [
+    "Approved for major depression, obsessive-compulsive disorder, and post-traumatic stress disorder",
+    "Approved for major depressive disorder, with approval in Europe and the USA extending to cognitive dysfunction associated with depression",
+    "Approved only for attention deficit hyperactivity disorder in children over 6 years",
+    "Approved for fibromyalgia and diabetic neuropathic pain"
+   ],
+   "correctIndex": 1,
+   "explanation": "Vortioxetine is an MDD drug, and its claim to regulatory fame is approval in Europe and the USA for cognitive dysfunction associated with depression — the antidepressant marketed around cognition (Katzung). OCD and PTSD labels belong to the SSRIs, ADHD belongs to atomoxetine, and fibromyalgia with neuropathic pain belongs to duloxetine and pregabalin."
+  },
+  {
+   "id": "atd-vor-03",
+   "drugSlug": "vortioxetine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 47-year-old executive with recurrent depression complains that although her mood has partly recovered on fluoxetine, she still cannot process information fast enough at work and her thinking feels \"foggy.\" Which property makes vortioxetine a rational next option?",
+   "options": [
+    "Its studied benefit on processing speed and executive function in MDD, beyond mood symptoms alone",
+    "Its potent CYP2D6 inhibition, which would raise the fluoxetine level",
+    "Its strong antihistamine sedation, which would calm her residual agitation",
+    "Its proven efficacy for diabetic neuropathy, suggesting nerve-protective effects"
+   ],
+   "correctIndex": 0,
+   "explanation": "Vortioxetine was studied for cognitive domains — processing speed and executive function — in MDD, and that cognition data is its claim to fame when \"brain fog\" outlasts mood recovery. It is not a CYP2D6 inhibitor (it is a 2D6 substrate, so the interaction runs the other way), it is not meaningfully sedating or antihistaminic, and pain labels belong to duloxetine, not vortioxetine."
+  },
+  {
+   "id": "atd-vor-04",
+   "drugSlug": "vortioxetine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "Three days after starting vortioxetine 10 mg, a 25-year-old woman phones the clinic about persistent nausea. The most appropriate counselling is:",
+   "options": [
+    "Nausea is a rare sign of hepatotoxicity; stop the drug and check liver enzymes",
+    "Nausea proves she is a CYP2D6 poor metaboliser and must stop the drug permanently",
+    "Nausea is the leading adverse effect and is dose-dependent; taking it with food and giving it time usually helps",
+    "Switch immediately to paroxetine, which has no gastrointestinal effects"
+   ],
+   "correctIndex": 2,
+   "explanation": "Serotonergic gastrointestinal effects — nausea above all — are vortioxetine's most common adverse effects, they are dose-dependent (higher doses raise both GI and sexual side-effect rates, per Katzung), and they typically attenuate with time; food co-administration and reassurance come first. Hepatotoxicity monitoring belongs to agomelatine, 2D6 phenotype is not diagnosed by nausea, and paroxetine is itself a GI-offending SSRI with the worst discontinuation burden in the class."
+  },
+  {
+   "id": "atd-vor-05",
+   "drugSlug": "vortioxetine",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "knowledge-graph",
+   "question": "A 39-year-old man on sustained-release bupropion 300 mg daily is switched from sertraline to vortioxetine for residual cognitive complaints. What dose adjustment is required?",
+   "options": [
+    "Increase the vortioxetine dose, because bupropion induces its metabolism",
+    "Halve the maximum vortioxetine dose to 20 mg, because bupropion is a strong CYP2D6 inhibitor",
+    "No change is needed — vortioxetine and bupropion share no metabolic pathway",
+    "Separate the two doses by 12 hours to avoid serotonin syndrome"
+   ],
+   "correctIndex": 1,
+   "explanation": "Vortioxetine is a CYP2D6 (and 2B6) substrate, and strong 2D6 inhibitors — bupropion, fluoxetine, paroxetine — force the maximum dose down to 20 mg, exactly the halving Katzung recommends for coadministration with fluoxetine or bupropion. Bupropion inhibits rather than induces 2D6, the pair plainly does interact, and serotonin syndrome is not the feared outcome here — altered vortioxetine exposure is."
+  },
+  {
+   "id": "atd-vor-06",
+   "drugSlug": "vortioxetine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which pharmacokinetic statement about vortioxetine is correct?",
+   "options": [
+    "It is extensively oxidised by CYP2D6 (with CYP2B6 involvement), is not a potent inhibitor of CYP enzymes, and shows linear, dose-proportional kinetics",
+    "It is a potent CYP3A4 inhibitor like nefazodone",
+    "Its elimination is exclusively renal as unchanged drug",
+    "It has a non-linear half-life that rises steeply above 20 mg"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung's profile: vortioxetine is extensively oxidised via CYP2D6 and other isoenzymes followed by glucuronidation, is tightly protein-bound, has linear dose-proportional kinetics, and is not a potent CYP inhibitor — a clean substrate profile. Potent 3A4 inhibition is nefazodone's fingerprint, exclusive renal excretion fits nothing in this class (vilazodone is about 99% metabolised), and non-linear accumulation is not its pattern."
+  },
+  {
+   "id": "atd-vor-07",
+   "drugSlug": "vortioxetine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "neurotransmitters",
+   "question": "Despite inhibiting SERT, vortioxetine is not classified as an SSRI because:",
+   "options": [
+    "Its SERT affinity is too weak to reach clinical potency",
+    "It also inhibits NET, which excludes the SSRI definition",
+    "It irreversibly phosphorylates the serotonin transporter",
+    "Its clinical actions are not primarily related to SERT inhibition — the receptor-level 5-HT modulation (1A/1B agonism, 3/7 antagonism) defines the drug"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung's classification point: vortioxetine's actions are not primarily related to SERT inhibition, so it sits among the 5-HT receptor modulators even though SERT blockade contributes — an allosteric SERT interaction plus 5-HT1A/1B agonism and 5-HT3/5-HT7 antagonism. Its SERT inhibition is clinically potent, it has no meaningful NET activity, and irreversible transporter phosphorylation exists for no antidepressant."
+  },
+  {
+   "id": "atd-vor-08",
+   "drugSlug": "vortioxetine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 28-year-old woman with MDD on vortioxetine 20 mg asks about pregnancy planning. Which reproductive-safety statement is most accurate?",
+   "options": [
+    "It is absolutely contraindicated throughout pregnancy, like isotretinoin",
+    "Human teratogenicity data are limited and unestablished; like most antidepressants it is treated as a Category C agent, so risks and benefits are weighed case by case",
+    "Large controlled human trials have proven it safe at all stages of pregnancy",
+    "It causes neural tube defects, so folic acid cannot mitigate the risk"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung: vortioxetine's teratogenic risks are not known, but like most other antidepressants it is handled as a Category C agent — no proven human teratogenicity, no clean guarantee either — so planning means an individualised risk-benefit discussion rather than automatic withdrawal. Absolute contraindication overstates the data (isotretinoin or warfarin territory), no antidepressant has trial-proven all-trimester safety, and neural-tube-defect causation is not an antidepressant phenomenon."
+  },
+  {
+   "id": "atd-ago-01",
+   "drugSlug": "agomelatine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Agomelatine's defining receptor pharmacology is:",
+   "options": [
+    "Agonism at MT1 and MT2 melatonin receptors with antagonism at 5-HT2C receptors",
+    "Blockade of melatonin receptors with direct 5-HT2C receptor agonism",
+    "Selective inhibition of SERT with partial 5-HT1A agonism",
+    "Reversible inhibition of monoamine oxidase-A"
+   ],
+   "correctIndex": 0,
+   "explanation": "Agomelatine combines MT1/MT2 melatonergic agonism with 5-HT2C antagonism (Katzung) — the pairing that phase-advances circadian rhythms and disinhibits frontal catecholamines. The mirror option flips every receptor action (a favourite trap), SERT plus 5-HT1A partial agonism is vilazodone, and reversible MAO-A inhibition is moclobemide's RIMA definition."
+  },
+  {
+   "id": "atd-ago-02",
+   "drugSlug": "agomelatine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "neurotransmitters",
+   "question": "Blockade of 5-HT2C receptors by agomelatine produces which downstream effect relevant to its antidepressant action?",
+   "options": [
+    "Suppression of REM sleep and motor restlessness",
+    "Increased prolactin and cortisol secretion",
+    "Disinhibition of dopamine and norepinephrine release in the frontal cortex",
+    "Direct blockade of D2 receptors in the mesolimbic pathway"
+   ],
+   "correctIndex": 2,
+   "explanation": "5-HT2C receptors tonically restrain frontal dopaminergic and noradrenergic pathways; agomelatine's 5-HT2C antagonism releases that brake, disinhibiting dopamine and norepinephrine release in the frontal cortex — a catecholaminergic limb that explains antidepressant efficacy without D2 blockade, hence no parkinsonism or hyperprolactinaemia. REM suppression and prolactin/cortisol rises are not its documented signature, and D2 blockade is amoxapine/antipsychotic territory."
+  },
+  {
+   "id": "atd-ago-03",
+   "drugSlug": "agomelatine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 38-year-old night-shift nurse has depression with severely delayed sleep onset, morning fatigue and a body clock that \"never resets\"; she fears morning sedation because she operates machinery. Which antidepressant best matches her profile?",
+   "options": [
+    "Fluoxetine, because its long half-life guarantees overnight cover",
+    "Agomelatine, because melatonergic phase-advancing improves sleep architecture without a daytime hangover",
+    "Reboxetine, because noradrenergic arousal restores the circadian rhythm",
+    "Mirtazapine, because H1 blockade guarantees dreamless sleep"
+   ],
+   "correctIndex": 1,
+   "explanation": "Agomelatine was built for exactly this vignette: MT1/MT2 agonism entrains circadian phase and improves sleep continuity, while 5-HT2C antagonism adds antidepressant action — all without a next-morning hangover, which matters for her machinery work. Fluoxetine's long half-life more often fragments sleep, reboxetine causes insomnia, and mirtazapine's H1 sedation is precisely the daytime fog she fears."
+  },
+  {
+   "id": "atd-ago-04",
+   "drugSlug": "agomelatine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "The single most important laboratory safety duty when prescribing agomelatine is:",
+   "options": [
+    "Monthly serum prolactin measurement",
+    "Weekly full blood counts for the first 3 months",
+    "Serial serum electrolytes and ECG every 6 weeks",
+    "Liver function tests at baseline and periodically during the first months of treatment"
+   ],
+   "correctIndex": 3,
+   "explanation": "Agomelatine can cause transaminase elevations and rare serious hepatotoxicity, so LFTs (ALT/AST) are checked at baseline and then at protocolised intervals during the early months of treatment — any rise above normal limits means stopping the drug. Prolactin surveillance is for D2-blocking drugs, CBC schedules belong to clozapine and mianserin, and electrolyte/ECG routines belong to other classes entirely."
+  },
+  {
+   "id": "atd-ago-05",
+   "drugSlug": "agomelatine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 45-year-old woman starts agomelatine 25 mg at bedtime for MDD with insomnia. What is the correct LFT monitoring schedule she should be booked into?",
+   "options": [
+    "Baseline, then around weeks 3, 6, 12 and 24 of treatment",
+    "Baseline only — no further testing unless jaundice appears",
+    "Weekly LFTs for 1 year, then yearly thereafter",
+    "LFTs only after 2 years of continuous therapy"
+   ],
+   "correctIndex": 0,
+   "explanation": "The agomelatine monitoring contract is baseline LFTs repeated at approximately 3, 6, 12 and 24 weeks — the windows in which drug-induced transaminase rises declare themselves — with prompt withdrawal if ALT/AST exceed the normal limits. Testing once at baseline defeats the purpose (the injury develops on-drug), weekly-for-a-year is clozapine-grade overkill no label demands, and waiting years ignores that the risk front-loads in the first months."
+  },
+  {
+   "id": "atd-ago-06",
+   "drugSlug": "agomelatine",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 31-year-old woman rejects sertraline (anorgasmia last time) and mirtazapine (7 kg weight gain) and asks for an antidepressant with \"no sexual problems, no weight gain, no withdrawal when I stop, and no morning fog.\" Which option's tolerability fingerprint fits her demands?",
+   "options": [
+    "Reboxetine — a pure NRI guaranteed free of any sexual or weight effects",
+    "Agomelatine — no sexual dysfunction, weight-neutral, no discontinuation syndrome, no daytime hangover",
+    "Tianeptine — an opioid-agonist antidepressant with no misuse potential",
+    "Nefazodone — hepatotoxicity is its only meaningful concern"
+   ],
+   "correctIndex": 1,
+   "explanation": "Agomelatine's tolerability card is exactly her list: absent sexual dysfunction, weight neutrality, no discontinuation syndrome and no daytime hangover — the trade is vigilant LFT monitoring. Reboxetine is noradrenergic (insomnia, palpitations, urinary hesitancy) with no guarantee of a clean sexual profile, tianeptine's mu-opioid agonism is precisely why misuse potential exists, and nefazodone's sexual sparing came bundled with the black-box hepatotoxicity that pushed it out of routine use."
+  },
+  {
+   "id": "atd-ago-07",
+   "drugSlug": "agomelatine",
+   "domain": "Indian Practice",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "top",
+   "question": "Which statement about agomelatine's availability and regulatory status is correct?",
+   "options": [
+    "It has been FDA-approved since 2009 for MDD with insomnia",
+    "It is available only in the United States",
+    "It is a Schedule IV controlled substance in India",
+    "It is approved in Europe and marketed in countries including India and Australia, but has never been FDA-approved"
+   ],
+   "correctIndex": 3,
+   "explanation": "Agomelatine is the classic \"approved in Europe, never in the USA\" antidepressant — Katzung notes European approval for MDD, and the drug is marketed in India (and Australia/UK), so any FDA claim is the trap. It is not a controlled substance, and \"US-only\" inverts the true geography of its use."
+  },
+  {
+   "id": "atd-ago-08",
+   "drugSlug": "agomelatine",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "knowledge-graph",
+   "question": "A 52-year-old man on agomelatine for MDD develops obsessive-compulsive symptoms, and fluvoxamine 200 mg daily is added. The most important consequence is:",
+   "options": [
+    "Additive melatonergic sedation requiring the agomelatine dose to be halved",
+    "A beneficial rise in agomelatine levels improving both disorders",
+    "A contraindicated combination — fluvoxamine, a potent CYP1A2 inhibitor, can multiply agomelatine exposure many-fold, raising hepatotoxicity risk",
+    "Serotonin syndrome from the combined 5-HT2C antagonism"
+   ],
+   "correctIndex": 2,
+   "explanation": "Agomelatine is cleared mainly by CYP1A2 (with minor 2C9/2C19 contribution), and potent 1A2 inhibitors such as fluvoxamine multiply its exposure many-fold — the combination is contraindicated on the European label, not least because higher levels raise the hepatotoxicity stakes of a drug already on LFT probation. Sedation is not the feared outcome, \"more drug means more benefit\" inverts the danger, and 5-HT2C antagonism is not a serotonin-syndrome mechanism."
+  },
+  {
+   "id": "atd-tia-01",
+   "drugSlug": "tianeptine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Tianeptine's mechanism of antidepressant action is currently best described as:",
+   "options": [
+    "Potent inhibition of serotonin reuptake at SERT",
+    "Alpha-2 autoreceptor antagonism combined with H1 blockade",
+    "Monoamine oxidase inhibition combined with dopamine reuptake blockade",
+    "Mu-opioid receptor agonism — though the drug was historically labelled a \"serotonin reuptake enhancer\""
+   ],
+   "correctIndex": 3,
+   "explanation": "Tianeptine was introduced with the paradoxical label of enhancing (rather than inhibiting) 5-HT uptake — Tripathi still introduces it that way — but its better-supported modern mechanism is agonism at the mu-opioid receptor, which also explains the euphoria and dependence seen with misuse. Alpha-2 plus H1 is mirtazapine, MAO inhibition defines the MAOIs, and potent SERT inhibition would make it an SSRI — the opposite of its historical tag."
+  },
+  {
+   "id": "atd-tia-02",
+   "drugSlug": "tianeptine",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Tripathi positions tianeptine for which clinical picture?",
+   "options": [
+    "Anxiodepressive states, particularly with psychosomatic symptoms, as well as endogenous depression",
+    "Treatment-resistant psychosis with prominent mood symptoms",
+    "Attention deficit hyperactivity disorder in children over 6 years",
+    "Bulimia nervosa with purging behaviour"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tripathi's tianeptine entry is specifically anxiodepressive states, particularly with psychosomatic symptoms, alongside endogenous depression — an anxious-depressed, body-symptom-heavy phenotype. Psychotic depression points to amoxapine or an antipsychotic combination, ADHD belongs to atomoxetine and methylphenidate, and bulimia is a contraindication to bupropion, not a tianeptine use."
+  },
+  {
+   "id": "atd-tia-03",
+   "drugSlug": "tianeptine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 40-year-old on tianeptine 12.5 mg once daily says the tablet \"seems to wear off by afternoon — my anxiety returns every evening.\" The pharmacokinetic explanation and the labelled fix are:",
+   "options": [
+    "Enzyme induction is clearing it faster each week, so double the single daily dose",
+    "It has a very long half-life, so switch to once-weekly dosing",
+    "The drug accumulates across the week, so skip two days each week",
+    "It has a short half-life of a few hours, so the labelled regimen is 12.5 mg two to three times daily"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tianeptine's short elimination half-life (roughly 2.5 hours) means once-daily dosing leaves long troughs — matching Tripathi's labelled regimen of 12.5 mg BD-TDS (brand Stablon), which spreads exposure across the day. Doubling one daily dose only overshoots peaks, \"long half-life\" is the opposite of the truth (a favourite mirror distractor), and intermittent skipping has no pharmacological basis."
+  },
+  {
+   "id": "atd-tia-04",
+   "drugSlug": "tianeptine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 27-year-old with depression on tianeptine has been requesting early refills, was found buying tablets from three pharmacies, and admits crushing and snorting doses \"for a buzz.\" The best pharmacological explanation is:",
+   "options": [
+    "A serotonergic discontinuation syndrome driven by 5-HT uptake enhancement",
+    "Mu-opioid receptor agonism producing euphoria and dependence — tianeptine carries real abuse potential",
+    "Paradoxical catecholamine release identical to amphetamine",
+    "An anticholinergic craving pattern typical of the tricyclics"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tianeptine misuse is the exam hook: its mu-opioid agonism produces opioid-type euphoria and dependence, and escalating use, doctor-shopping and snorting/injecting are documented — hence caution or avoidance in substance-use history and careful refill control. An SSRI-type discontinuation narrative mislabels the syndrome, amphetamine-like release is bupropion/methylphenidate territory, and anticholinergic craving is not a recognised TCA phenomenon."
+  },
+  {
+   "id": "atd-tia-05",
+   "drugSlug": "tianeptine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Which adverse-effect cluster matches tianeptine as described in Tripathi?",
+   "options": [
+    "Marked weight gain, sedation and anticholinergic constipation",
+    "Agranulocytosis, hepatitis and priapism",
+    "Dry mouth, epigastric pain, flatulence, drowsiness or insomnia, tremor and bodyache",
+    "Extrapyramidal rigidity, hyperprolactinaemia and galactorrhoea"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi lists tianeptine's side effects as dry mouth, epigastric pain, flatulence, drowsiness/insomnia, tremor and bodyache — a mild, largely GI-autonomic profile in a drug that is neither sedative nor stimulant. Weight gain with anticholinergic sedation is TCA/mirtazapine territory, blood dyscrasias and priapism map to mianserin and trazodone respectively, and EPS with hyperprolactinaemia is D2-blocker (amoxapine/antipsychotic) pharmacology."
+  },
+  {
+   "id": "atd-tia-06",
+   "drugSlug": "tianeptine",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "A patient in Delhi asks why his Stablon (tianeptine 12.5 mg) prescription cannot simply be continued during a planned 2-year stay in the United States. The correct explanation is:",
+   "options": [
+    "Tianeptine is not FDA-approved and is unavailable in US pharmacies; he needs a locally available alternative and must be warned against internet imports",
+    "Tianeptine is sold over the counter in the US without a prescription",
+    "FDA approval exists, but the brand Stablon is trademark-protected in the US",
+    "US doctors may continue it only at triple the Indian dose"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tianeptine is available in India and Europe but has never been FDA-approved, so a US pharmacy cannot fill it — the practical plan is switching to a locally available antidepressant plus an explicit warning that internet imports are how most US tianeptine misuse cases began. OTC status, trademark-only barriers and dose tripling are all invented obstacles."
+  },
+  {
+   "id": "atd-tia-07",
+   "drugSlug": "tianeptine",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Which exam contrast about tianeptine is correct?",
+   "options": [
+    "It increases 5-HT uptake and therefore causes a classical serotonergic discontinuation syndrome",
+    "It is neither sedative nor stimulant, yet produces profound anticholinergic toxicity in overdose",
+    "Its efficacy equals clomipramine's in obsessive-compulsive disorder, its other key label",
+    "It is described as neither sedative nor stimulant, and its \"serotonin reuptake enhancer\" tag is the historical oddity among antidepressants"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tianeptine's exam identity is the odd-one-out: Tripathi notes it reportedly increases rather than inhibits 5-HT uptake while being neither sedative nor stimulant, useful in anxiodepressive and endogenous depression — but the modern mu-opioid mechanism and abuse potential have redefined the drug. A discontinuation syndrome driven by \"enhanced uptake\" is not a real entity, profound anticholinergic overdose toxicity is TCA behaviour, and OCD is clomipramine/SSRI ground, not tianeptine's."
+  },
+  {
+   "id": "atd-tia-08",
+   "drugSlug": "tianeptine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 33-year-old man with major depression has a 5-year history of opioid dependence in remission on buprenorphine maintenance. Which antidepressant should be avoided largely because of its mu-opioid agonism and misuse profile?",
+   "options": [
+    "Tianeptine",
+    "Escitalopram",
+    "Agomelatine",
+    "Mirtazapine"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tianeptine's mu-opioid agonism gives it genuine euphoriant and dependence potential, and reactivating opioid-use disorder is exactly the feared outcome in a buprenorphine-maintained patient — choose a non-opioidergic agent. Escitalopram (SERT), agomelatine (MT1/MT2 plus 5-HT2C) and mirtazapine (alpha-2 plus H1) have no opioidergic action and no misuse liability of this kind."
+  },
+  {
+   "id": "atd-reb-01",
+   "drugSlug": "reboxetine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Reboxetine's pharmacological signature is:",
+   "options": [
+    "Selective inhibition of the norepinephrine transporter, with only a weak effect on 5-HT reuptake",
+    "Balanced SERT and NET inhibition from the first dose",
+    "Selective SERT inhibition with 5-HT3 antagonism",
+    "Inhibition of both monoamine oxidase-A and monoamine oxidase-B"
+   ],
+   "correctIndex": 0,
+   "explanation": "Reboxetine is the textbook pure NRI: selective NET blockade with a weak serotonergic effect (Tripathi), producing a noradrenergic rather than serotonergic adverse-effect fingerprint. Balanced dual reuptake from dose one defines the SNRIs, SERT plus 5-HT3 is vortioxetine's multimodal profile, and MAO-A/B inhibition is the MAOI family."
+  },
+  {
+   "id": "atd-reb-02",
+   "drugSlug": "reboxetine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "neurotransmitters",
+   "question": "Which statement about reboxetine's pharmacology is FALSE?",
+   "options": [
+    "It produces minimal antimuscarinic and sedative effects compared with the TCAs",
+    "It may be safer in overdose than the older tricyclics",
+    "It potently inhibits both SERT and NET, matching duloxetine's profile",
+    "It is used mainly for major depressive disorder"
+   ],
+   "correctIndex": 2,
+   "explanation": "The false claim is the dual-transporter one: reboxetine is a selective NET blocker with only a weak 5-HT effect — the balanced SERT-plus-NET description belongs to SNRIs like duloxetine. Tripathi confirms its minimal antimuscarinic and sedative actions and its relative overdose safety versus TCAs, while Katzung places it (investigational in the USA) as a drug used mainly for major depression."
+  },
+  {
+   "id": "atd-reb-03",
+   "drugSlug": "reboxetine",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Reboxetine's regulatory status is best described as:",
+   "options": [
+    "FDA-approved for MDD since 1997 with a boxed warning",
+    "FDA-approved only for ADHD in children over 6 years",
+    "Withdrawn worldwide for hepatotoxicity",
+    "Approved and marketed in Europe and India (brand Narebox) but never FDA-approved — investigational in the USA"
+   ],
+   "correctIndex": 3,
+   "explanation": "Reboxetine never crossed the FDA line — Katzung calls it investigational in the USA — while it is marketed in Europe and India (Narebox 4 and 8 mg per Tripathi). The ADHD-only approval describes atomoxetine, no global hepatotoxicity withdrawal exists (that stigma belongs to nefazodone), and an FDA approval with a boxed warning is the opposite of its true status."
+  },
+  {
+   "id": "atd-reb-04",
+   "drugSlug": "reboxetine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 45-year-old man 3 weeks into reboxetine therapy reports trouble falling asleep, a \"racing heart,\" dry mouth and new difficulty initiating urination (he has mild prostatic enlargement). The best explanation is:",
+   "options": [
+    "A serotonergic syndrome variant; creatine kinase should be checked and all antidepressants stopped",
+    "Antihistaminic sedation causing bladder atony",
+    "Drug-induced parkinsonism from D2 blockade in the basal ganglia",
+    "Noradrenergic over-drive — NET blockade produces insomnia, tachycardia, dry mouth and urinary hesitancy, aggravated by his prostatic pathology"
+   ],
+   "correctIndex": 3,
+   "explanation": "Reboxetine's adverse effects are the noradrenergic cluster Tripathi lists: insomnia, palpitation, dry mouth, constipation and urinary symptoms — and hesitancy is amplified in prostatic hypertrophy, where sympathetic tone contracts bladder-neck smooth muscle. No serotonergic syndrome exists here, antihistaminic effects are precisely what reboxetine lacks, and D2 blockade is amoxapine/antipsychotic biology."
+  },
+  {
+   "id": "atd-reb-05",
+   "drugSlug": "reboxetine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A patient on reboxetine asks which of the following effects he is LEAST likely to experience with this drug:",
+   "options": [
+    "Insomnia and palpitations",
+    "Daytime sedation and significant weight gain",
+    "Dry mouth and constipation",
+    "Urinary hesitancy"
+   ],
+   "correctIndex": 1,
+   "explanation": "Sedation and weight gain are the least reboxetine-like effects — Tripathi stresses its minimal sedative action, and the drug's profile is activating rather than calming. Insomnia with palpitations, dry mouth with constipation, and urinary hesitancy are all classic noradrenergic reboxetine effects. Exam pearl: TCAs and mirtazapine sedate and fatten, while the NRIs stimulate."
+  },
+  {
+   "id": "atd-reb-06",
+   "drugSlug": "reboxetine",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "A recurring exam point from the meta-analytic literature on reboxetine is that:",
+   "options": [
+    "Its efficacy has been questioned — pooled analyses raised doubts about effectiveness and flagged an unfavourable risk-benefit balance",
+    "It is the most effective antidepressant for treatment-resistant depression",
+    "It shows uniquely superior efficacy in bipolar depression",
+    "It is the only antidepressant proven safe in pregnancy"
+   ],
+   "correctIndex": 0,
+   "explanation": "Reboxetine's efficacy has been publicly challenged — pooled analyses (the 2010 controversy is the citable classic) found effectiveness unproven against placebo and SSRIs with an unfavourable harm profile, which is why it faded from guidelines despite its clean pharmacology. Superlative claims about treatment resistance, bipolar depression and pregnancy safety are unsupported distractors."
+  },
+  {
+   "id": "atd-reb-07",
+   "drugSlug": "reboxetine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 50-year-old long-haul lorry driver with major depression cannot tolerate sertraline because of daytime drowsiness, and any sedation would endanger his job. Which property makes reboxetine a candidate?",
+   "options": [
+    "Potent H1 antagonism that paradoxically improves alertness",
+    "Melatonin-receptor agonism that normalises his sleep-wake cycle",
+    "Minimal antimuscarinic and sedative actions (Tripathi), with an activating noradrenergic profile — dosed in the morning",
+    "Strong dopamine reuptake blockade, producing a licensed stimulant effect"
+   ],
+   "correctIndex": 2,
+   "explanation": "For a patient who must stay alert, reboxetine's minimal sedation is the selling point — Tripathi explicitly notes antimuscarinic and sedative actions are minimal — with morning dosing to dodge noradrenergic insomnia. H1 antagonism sedates (doxepin), melatonergic agonism is agomelatine's mechanism, and reboxetine is not a dopamine reuptake blocker or a licensed stimulant."
+  },
+  {
+   "id": "atd-reb-08",
+   "drugSlug": "reboxetine",
+   "domain": "Active Recall",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "A colleague lists four facts about reboxetine; which one needs CORRECTION?",
+   "options": [
+    "The dose is 4 mg twice daily or 8 mg once daily (brand Narebox in India)",
+    "It is a selective NA reuptake blocker with a weak effect on 5-HT reuptake",
+    "Usual side effects include insomnia, palpitation, dry mouth, constipation and urinary symptoms",
+    "It carries a marked sedative and anticholinergic burden similar to amitriptyline"
+   ],
+   "correctIndex": 3,
+   "explanation": "The correction target is the last claim: reboxetine's minimal sedative and anticholinergic burden is its contrast with TCAs like amitriptyline, not a similarity. Tripathi's entry confirms the 4 mg BD or 8 mg OD dose (Narebox), the selective NA reuptake with weak 5-HT effect, and the side-effect list of insomnia, palpitation, dry mouth, constipation, sexual distress and urinary symptoms."
+  },
+  {
+   "id": "atd-ato-01",
+   "drugSlug": "atomoxetine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "vignette",
+   "afterSectionId": "mechanism",
+   "question": "Parents of an 8-year-old boy with ADHD refuse methylphenidate because a neighbour told them it causes dependence. Which feature of atomoxetine should the paediatrician highlight to address their fear?",
+   "options": [
+    "It is a weak amphetamine derivative, so dependence risk is negligible",
+    "It is a non-stimulant norepinephrine reuptake inhibitor that does not produce dependence and is not a controlled substance",
+    "It is a sedative antihistamine that calms hyperactivity directly",
+    "It blocks dopamine D2 receptors, shutting down the reward pathway like an antipsychotic"
+   ],
+   "correctIndex": 1,
+   "explanation": "Atomoxetine is a selective NET inhibitor, chemically unrelated to amphetamine, with no dopamine-releasing stimulant action — Tripathi stresses it causes no dependence, and it is not a scheduled drug, which directly answers the family's stimulant worry. Calling it a weak amphetamine concedes the premise wrongly, antihistamine sedation is not its action, and D2 blockade is antipsychotic/amoxapine territory, not ADHD pharmacology."
+  },
+  {
+   "id": "atd-ato-02",
+   "drugSlug": "atomoxetine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "Parents of a 9-year-old with ADHD start atomoxetine and phone after 5 days: \"the old medicine (methylphenidate) worked the same afternoon; this one has done nothing.\" The correct counselling is:",
+   "options": [
+    "Atomoxetine is failing; switch back to methylphenidate immediately",
+    "Double the atomoxetine dose today to force a response",
+    "Atomoxetine's benefit builds over weeks, unlike the stimulant's same-day effect — continue and review as planned",
+    "Atomoxetine only works in adults, so stop it"
+   ],
+   "correctIndex": 2,
+   "explanation": "The signature counselling point: atomoxetine is a non-stimulant whose clinical effect emerges over several weeks of noradrenergic adaptation, in contrast to methylphenidate's same-day action — day 5 is far too early to judge. Early dose-doubling and abandonment are the classic management errors, and atomoxetine is approved for children (above 6 years) as well as adults."
+  },
+  {
+   "id": "atd-ato-03",
+   "drugSlug": "atomoxetine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 9-year-old on the standard atomoxetine dose develops marked tremor, tachycardia and poor intake after a routine increase; testing later shows he is a CYP2D6 poor metaboliser. What is the pharmacokinetic basis of his reaction?",
+   "options": [
+    "Atomoxetine induces CYP3A4, increasing formation of a toxic metabolite",
+    "Atomoxetine is hydroxylated by CYP2D6, and poor metabolisers clear it slowly, so levels and toxicity rise at standard doses",
+    "It is excreted unchanged by the kidney, so his renal function must be failing",
+    "It is a prodrug requiring CYP1A2 activation that has failed"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi's PK entry: oral atomoxetine is hydroxylated by CYP2D6 and excreted mainly as glucuronide, with extensive- and poor-metaboliser polymorphism — poor metabolisers accumulate drug at normal doses, and 2D6 inhibitors (fluoxetine, paroxetine, quinidine) create the same picture pharmacologically. Induction, renal-unchanged excretion and prodrug activation are all false for this drug."
+  },
+  {
+   "id": "atd-ato-04",
+   "drugSlug": "atomoxetine",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "knowledge-graph",
+   "question": "A 10-year-old with ADHD and comorbid anxiety is on fluoxetine 20 mg; atomoxetine is added. The most important pharmacokinetic consequence is:",
+   "options": [
+    "Fluoxetine lowers atomoxetine levels via CYP2D6 induction",
+    "No interaction — the two drugs use entirely different enzymes",
+    "Atomoxetine reduces fluoxetine levels, causing anxiety rebound",
+    "Fluoxetine, a strong CYP2D6 inhibitor, increases atomoxetine levels and toxicity risk"
+   ],
+   "correctIndex": 3,
+   "explanation": "Fluoxetine and its long-lived metabolite norfluoxetine potently inhibit CYP2D6, the enzyme that hydroxylates atomoxetine — Tripathi names fluoxetine, paroxetine and quinidine as level-raising inhibitors — so slower titration and lower targets apply when the two are combined. Induction is the wrong direction, the enzymes are not \"entirely different,\" and atomoxetine does not meaningfully alter fluoxetine kinetics."
+  },
+  {
+   "id": "atd-ato-05",
+   "drugSlug": "atomoxetine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 10-year-old girl with ADHD on atomoxetine develops queasiness, dyspepsia and poor appetite, and has lost 1.5 kg over 6 weeks; her parents want to stop the drug. The most appropriate advice is:",
+   "options": [
+    "Stop immediately — these symptoms indicate hepatotoxicity",
+    "These are the drug's most common adverse effects (dyspepsia, anorexia, other abdominal symptoms); give with food, monitor weight and growth, and review tolerability before abandoning therapy",
+    "Switch to dextroamphetamine, which has no appetite effects",
+    "Give the dose at bedtime to eliminate the gastrointestinal effects"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi's common atomoxetine adverse effects are dyspepsia, anorexia and other abdominal symptoms, with growth retardation possible in children — so structured monitoring (weight, height, appetite strategies, food co-administration) precedes any switch. Frank hepatotoxicity is rare and announces itself with jaundice and dark urine, stimulants are the worse appetite offenders, and bedtime dosing does not abolish GI effects."
+  },
+  {
+   "id": "atd-ato-06",
+   "drugSlug": "atomoxetine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 12-year-old boy on atomoxetine for 4 months develops dark urine, scleral icterus and pruritus. The most appropriate action is:",
+   "options": [
+    "Reassure — this is benign hyperbilirubinaemia of adolescence",
+    "Increase the dose to suppress the autoimmune component",
+    "Suspect rare atomoxetine hepatotoxicity: stop the drug and evaluate liver function urgently",
+    "Add ursodeoxycholic acid and continue atomoxetine unchanged"
+   ],
+   "correctIndex": 2,
+   "explanation": "Atomoxetine carries a rare-but-real hepatotoxicity warning — Tripathi lists hepatotoxicity among its uncommon effects — and jaundice with dark urine on the drug is a stop-and-evaluate scenario, as with any suspected drug-induced liver injury. Reassurance, dose escalation, or continuing under ursodiol cover all ignore a potentially progressive injury."
+  },
+  {
+   "id": "atd-ato-07",
+   "drugSlug": "atomoxetine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "The mother of a 15-year-old newly started on atomoxetine has read online about a \"suicide warning\" and demands the drug be stopped. The most accurate counselling is:",
+   "options": [
+    "A boxed warning for suicidal ideation exists for this age group; the plan is monitoring and early follow-up rather than automatic discontinuation",
+    "No warning exists — she has confused it with an antibiotic",
+    "The warning applies only to patients above 65 years",
+    "The warning concerns completed suicide, which is impossible on this drug"
+   ],
+   "correctIndex": 0,
+   "explanation": "Atomoxetine carries the antidepressant-class boxed warning for suicidal ideation in children and young adults — Tripathi notes rarely suicidal thoughts — and the regulatory response is structured monitoring and early review, not reflexive stopping, since untreated ADHD carries its own serious risks. The warning is real, focused on the young, and concerns emergent ideation that requires assessment."
+  },
+  {
+   "id": "atd-ato-08",
+   "drugSlug": "atomoxetine",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "top",
+   "question": "Which statement about atomoxetine in Indian practice is correct?",
+   "options": [
+    "It is marketed in India only as an injection for acute agitation",
+    "Indian brands include Attentrol and Axepta; it is indicated in children above 6 years and in adults, and is contraindicated in glaucoma and with MAOIs",
+    "It is available in India as Narebox 4 mg and 8 mg tablets",
+    "It is a Schedule X drug in India and cannot be refilled"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi's Indian entries: Attentrol and Axepta capsules, an ADHD indication in children over 6 years and adults (0.5-1.2 mg/kg/day, adults 40 mg up to a 100 mg ceiling), with glaucoma a contraindication and MAOI co-use prohibited. Narebox is reboxetine's brand, no injectable acute-agitation formulation exists for atomoxetine, and it is not a controlled substance — its freedom from abuse potential is exactly why it suits stimulant-wary families."
+  },
+  {
+   "id": "atd-mix-b07-01",
+   "drugSlug": "mixed",
+   "domain": "Active Recall",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "Match each atypical antidepressant to its signature hallmark — which option contains only correct pairings?",
+   "options": [
+    "Vilazodone — mandatory LFT monitoring; Vortioxetine — must be taken with food; Agomelatine — studied for cognition in MDD",
+    "Tianeptine — pure NRI never FDA-approved; Reboxetine — mu-opioid agonism with abuse potential; Atomoxetine — melatonin agonism for shift-work depression",
+    "Vilazodone — must be taken with food; Vortioxetine — studied for cognition in MDD, dose halved with strong CYP2D6 inhibitors; Agomelatine — MT1/MT2 agonism with mandatory LFT monitoring",
+    "Tianeptine — first-line ADHD therapy in children; Reboxetine — potent 5-HT3 antagonism; Atomoxetine — serotonin reuptake enhancer"
+   ],
+   "correctIndex": 2,
+   "explanation": "The six signatures in one line: vilazodone = food-dependent absorption (the SPARI), vortioxetine = cognition with 2D6-driven dose halving, agomelatine = melatonin receptors plus LFT surveillance, tianeptine = mu-opioid agonism and abuse, reboxetine = pure NRI never FDA-approved, atomoxetine = non-stimulant ADHD therapy. Each wrong option swaps a hallmark onto a neighbouring drug — the standard tag-swap trap."
+  }
+ ]
+}

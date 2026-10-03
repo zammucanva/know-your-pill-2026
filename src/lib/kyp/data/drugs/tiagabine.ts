@@ -778,6 +778,110 @@ export const tiagabine: Drug = {
       explanation: "For epilepsy adjunct: start 4 mg once daily × 1 week, target 32-56 mg/day, maximum 56 mg/day (adults, divided). Increase by 4-8 mg/week to 32-56 mg/day divided with food",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "mst-tgb-01",
+      question: "Tiagabine's unique mechanism among marketed anticonvulsants is:",
+      options: [
+        "Selective inhibition of the GAT-1 GABA transporter, prolonging the synaptic action of released GABA and potentiating tonic (extrasynaptic) inhibition",
+        "Inhibition of GABA-transaminase, the enzyme that degrades GABA",
+        "Positive allosteric modulation of synaptic GABA-A receptors",
+        "Inhibition of GABA synthesis by blocking glutamic acid decarboxylase"
+      ],
+      correctIndex: 0,
+      explanation: "Tiagabine is the only marketed drug acting at GAT-1 — Katzung describes a nipecotic-acid molecule with a lipophilic anchor that blocks GABA reuptake into neurons and glia, prolonging inhibitory synaptic responses and potentiating tonic inhibition. GABA-transaminase inhibition is vigabatrin, and allosteric GABA-A modulation is the benzodiazepine and phenobarbital mechanism.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "mst-tgb-02",
+      question: "Match each GABAergic mechanism to its drug — which row is fully correct?",
+      options: [
+        "Tiagabine — SV2A binding; vigabatrin — GAT-1 blockade; benzodiazepines — glycine-site antagonism",
+        "Tiagabine — GAT-1 reuptake blockade; vigabatrin — GABA-transaminase inhibition; benzodiazepines — GABA-A allosteric potentiation",
+        "Tiagabine — GABA-transaminase inhibition; vigabatrin — GAT-1 blockade; benzodiazepines — T-channel blockade",
+        "Tiagabine — GABA-A receptor antagonism; vigabatrin — GABA reuptake blockade; ethosuximide — GABA-transaminase inhibition"
+      ],
+      correctIndex: 1,
+      explanation: "The GABAergic map: tiagabine blocks the GAT-1 transporter, vigabatrin inhibits GABA-transaminase, and benzodiazepines (with phenobarbital) are positive allosteric modulators of GABA-A receptors — Katzung's Table 24-2 assigns each mechanism exactly this way. Every swapped row grafts one drug's mechanism onto another, which is precisely how examiners set these traps.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "mst-tgb-03",
+      question: "A 19-year-old with juvenile myoclonic epilepsy is prescribed tiagabine in error. What is the concern?",
+      options: [
+        "Tiagabine's only limitation in JME is a need for double the usual dose",
+        "Tiagabine converts myoclonic seizures into absence seizures, which are easier to treat",
+        "Tiagabine is a second-line focal-seizure drug that is contraindicated in the generalized epilepsies and can worsen them",
+        "Tiagabine is the drug of choice for JME and the prescription is appropriate"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung labels tiagabine a second-line treatment for focal seizures and explicitly contraindicated in generalized onset epilepsies, and Tripathi confines it to add-on therapy of partial seizures. Giving it in JME risks worsening myoclonus — the same class of mismatch as carbamazepine in absence epilepsy.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "mst-tgb-04",
+      question: "A 40-year-old without epilepsy receives tiagabine off-label for an anxiety disorder and develops increasing confusion and unresponsiveness without visible convulsions; EEG shows continuous spike-wave activity. The best interpretation is:",
+      options: [
+        "A conversion reaction, since tiagabine has no CNS depressant properties",
+        "Anticholinergic delirium from tiagabine's muscarinic blockade",
+        "A normal tiagabine effect that requires doubling the dose",
+        "Non-convulsive status epilepticus — a reported hazard when tiagabine is used off-label, so GABA-reuptake blockade outside epilepsy carries real risk"
+      ],
+      correctIndex: 3,
+      explanation: "Tiagabine can cause excessive CNS depression — confusion, somnolence, ataxia — and carries a documented history of non-convulsive status in off-label psychiatric use, which is why its use is confined to focal epilepsy. There is no antimuscarinic action, and continuous spike-wave on EEG is pathological by definition, never a dose target.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "mst-tgb-05",
+      question: "Which pharmacokinetic statement about tiagabine is correct?",
+      options: [
+        "High bioavailability (90-100%), linear kinetics, high protein binding, half-life 5-8 hours shortened by enzyme inducers, and dosing with food",
+        "Zero oral bioavailability unless given parenterally",
+        "Half-life of about 60 hours permitting weekly dosing",
+        "Renal excretion unchanged with dose-dependent saturable absorption"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung gives tiagabine 90-100% bioavailability, linear kinetics, high protein binding and a 5-8 hour half-life that enzyme-inducing drugs shorten; food lowers the peak concentration but not the total exposure, so the drug should be taken with food. It is hepatically oxidized by CYP3A with faecal elimination dominating — not a renal-unchanged story, and the long half-life belongs to zonisamide.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "mst-tgb-06",
+      question: "A patient without epilepsy took a relative's tiagabine tablets and then had a seizure. Is this plausible?",
+      options: [
+        "Yes — but only after at least one year of continuous use",
+        "Yes — tiagabine can itself provoke seizures, notably in patients taking it for non-epilepsy indications",
+        "No — tiagabine's anticonvulsant action holds in every clinical setting, so tiagabine is excluded",
+        "No — seizures after tiagabine indicate a manufacturing impurity only"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung notes tiagabine can cause seizures in some patients, notably those taking the drug for other indications — a paradoxical proconvulsant signal worth knowing alongside its dizziness, nervousness, weakness and difficulty concentrating profile. The antiseizure label does not protect outside its approved context, and the risk is not time- or impurity-dependent.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "mst-tgb-07",
+      question: "Tiagabine's dosing pattern is best described as:",
+      options: [
+        "Once-weekly 100 mg dosing because of the long half-life",
+        "Start at 1 g/day and reduce the dose toward effect",
+        "Start 4 mg/day with weekly increases of 4-8 mg/day to a usual total of 16-56 mg/day in divided doses",
+        "A fixed 400 mg/day from day one with no titration"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung's schedule: initial 4 mg/day, weekly increments of 4-8 mg/day, totals 16-56 mg/day, moving to three-to-four-times-daily division above 30-32 mg/day. Fixed high-dose initiation and gram-scale dosing belong to other drugs entirely, and the short half-life demands daily division, not weekly dosing.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "mst-tgb-08",
+      question: "Tiagabine is described as a rationally designed anticonvulsant because:",
+      options: [
+        "It was found by serendipitous screening of sulfonamide antibiotics",
+        "It is a phenytoin derivative optimised for sodium-channel binding",
+        "It was designed as a prodrug of levetiracetam for better absorption",
+        "It was built on the knowledge that potentiating GABA action in the brain is a plausible antiseizure mechanism — a nipecotic acid moiety plus a lipophilic anchor to cross the blood-brain barrier"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung calls tiagabine a rationally designed antiseizure drug: the active nipecotic acid (a GABA uptake inhibitor inactive systemically) was given a lipophilic anchor so the molecule crosses the blood-brain barrier — mechanism-first design. There is no sulfonamide, phenytoin or levetiracetam lineage anywhere in its chemistry.",
+      afterSectionId: "knowledge-graph",
+    },
   ],
   activeRecallQuestions: [
     {

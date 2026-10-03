@@ -871,6 +871,110 @@ export const midazolam: Drug = {
       explanation: "For procedural sedation (iv): start 0.5–1 mg IV titrated, target 2–5 mg typical total, maximum Titration-limited; monitored setting. Repeat 0.25–0.5 mg increments every 2–3 min",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "bzd-mid-01",
+      question: "Among these agents, the benzodiazepine with the shortest elimination half-life and fastest IV onset is:",
+      options: [
+        "Diazepam (~20-100 hours effective)",
+        "Temazepam (~10-15 hours)",
+        "Midazolam (~1.5-3 hours)",
+        "Eszopiclone (~6 hours)"
+      ],
+      correctIndex: 2,
+      explanation: "Midazolam's imidazole ring makes it water-soluble for injection, giving rapid IV onset with a 1.5-3 hour half-life — the pharmacokinetic basis of its procedural-sedation dominance. Diazepam's long active tail, temazepam's intermediate span and eszopiclone's 6-hour Z-drug half-life are each an order of magnitude off.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "bzd-mid-02",
+      question: "A gastroenterology unit wants sedation for endoscopy in a cooperative adult with good reserves, plus reliable lack of recall of the procedure. The standard agent is:",
+      options: [
+        "Chlordiazepoxide 50 mg orally",
+        "Temazepam 20 mg orally",
+        "Titred IV midazolam — sedation plus anterograde amnesia",
+        "Zolpidem 10 mg orally"
+      ],
+      correctIndex: 2,
+      explanation: "IV midazolam titration is the endoscopy standard — rapid onset, short offset, and anterograde amnesia that spares patients the memory of the procedure. Oral chlordiazepoxide or temazepam cannot be titrated intra-procedurally, and zolpidem is a hypnotic without procedural-sedation credentials.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "bzd-mid-03",
+      question: "A 4-year-old in active convulsion at home; the paramedic needs a route that works without an IV. The evidence-based benzodiazepine move:",
+      options: [
+        "Oral diazepam tablets crushed in water",
+        "Buccal or intranasal midazolam",
+        "IM haloperidol",
+        "Rectal loflazepate"
+      ],
+      correctIndex: 1,
+      explanation: "Buccal or intranasal midazolam is the out-of-hospital standard for paediatric status epilepticus — rapid mucosal absorption without an IV line, and trials show it matches or beats rectal diazepam. Oral diazepam is unsafe and slow in an actively seizing child, haloperidol is not an anticonvulsant, and rectal loflazepate is not a thing.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "bzd-mid-04",
+      question: "During endoscopy, a patient given midazolam plus fentanyl becomes apnoeic and cyanotic. The immediate pharmacological response:",
+      options: [
+        "Give a benzodiazepine bolus to deepen sedation",
+        "Wait for spontaneous recovery while observing",
+        "Double the fentanyl to restore comfort",
+        "Support airway/ventilation and give flumazenil — with naloxone ready for the opioid"
+      ],
+      correctIndex: 3,
+      explanation: "Benzodiazepine-plus-opioid is the classic procedural respiratory-depression stack; management is airway support plus flumazenil for the benzodiazepine component, anticipating that the opioid half needs naloxone. Deepening sedation or adding fentanyl is precisely backwards, and observation alone ignores a peri-arrest airway.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "bzd-mid-05",
+      question: "Midazolam's formulation advantage over diazepam for IV use is:",
+      options: [
+        "It is an ester prodrug activated in plasma",
+        "It contains propylene glycol only",
+        "Water-soluble at injection pH — less venous irritation, faster onset",
+        "It bypasses the blood-brain barrier by active transport"
+      ],
+      correctIndex: 2,
+      explanation: "Midazolam's pH-dependent ring opening makes it water-soluble in the vial and lipophilic at physiological pH — comfortable veins and rapid CNS entry. Diazepam's lipid vehicle causes thrombophlebitis. Propylene glycol is the solvent of the parenteral lorazepam/diazepam world (irritant in prolonged infusions), and no benzodiazepine uses active transport to cross the BBB.",
+      afterSectionId: "neural-pathways",
+    },
+    {
+      id: "bzd-mid-06",
+      question: "Which co-medication most dangerously prolongs midazolam sedation?",
+      options: [
+        "Ranitidine",
+        "Metformin",
+        "Ketoconazole or clarithromycin — strong CYP3A4 inhibitors",
+        "Amlodipine"
+      ],
+      correctIndex: 2,
+      explanation: "Midazolam is a prototypical CYP3A4 substrate; strong inhibitors (ketoconazole, clarithromycin, ritonavir) can turn a routine dose into prolonged apnoea-prone sedation. Ranitidine barely touches CYP, and metformin and amlodipine are pharmacologically irrelevant here — the exam point is that LOT drugs escape this, oxidative benzodiazepines do not.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "bzd-mid-07",
+      question: "Before endoscopy a patient asks why he will not remember the procedure. The correct pharmacological explanation:",
+      options: [
+        "The drug erases old long-term memories retrogradely",
+        "Benzodiazepines prevent consolidation of NEW (anterograde) memories around the procedure — a desired effect, not a complication",
+        "The amnesia is psychogenic anxiety",
+        "Midazolam blocks sensory input at the spinal cord"
+      ],
+      correctIndex: 1,
+      explanation: "Benzodiazepines impair anterograde memory consolidation via GABA-A modulation in the hippocampal circuit — events after dosing are not stored, which is exactly why midazolam is prized in procedures. Retrograde amnesia is not a benzodiazepine effect, and sensory pathways remain intact — patients feel, they just do not file.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "bzd-mid-08",
+      question: "In Indian district-hospital practice, a child presents with an ongoing febrile seizure and no IV access. The practical benzodiazepine route the guidelines push:",
+      options: [
+        "Intranasal or buccal midazolam",
+        "Oral clobazam sachets",
+        "IM fluphenazine",
+        "IV diazepam infusion at full speed"
+      ],
+      correctIndex: 0,
+      explanation: "Without IV access, intranasal or buccal midazolam is the recommended route for terminating prolonged febrile seizures — rapid mucosal uptake, single-administration kits, and no cannulation struggle. Oral routes fail in a seizing child, antipsychotics are irrelevant, and rapid IV diazepam without a line is a non-option.",
+      afterSectionId: "top",
+    },
   ],
   activeRecallQuestions: [
     {

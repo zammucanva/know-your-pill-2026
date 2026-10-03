@@ -605,6 +605,110 @@ export const caprylidene: Drug = {
       explanation: "For medical food (dietary management): start One 40 g scoop daily with food, target 40 g/day, maximum 40 g/day. Titrate GI tolerance over a week",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "spc-cpd-01",
+      question: "Caprylidene's (medium-chain triglyceride) therapeutic idea in Alzheimer's disease is:",
+      options: [
+        "Hepatic conversion of medium-chain triglycerides to ketone bodies that cross the blood-brain barrier as alternative neuronal fuel, bypassing impaired glucose utilisation",
+        "Direct stimulation of neuronal glucose transporters to push glucose into neurons",
+        "Reversible inhibition of acetylcholinesterase to raise synaptic acetylcholine",
+        "Blocking NMDA receptors to reduce excitotoxic cell loss"
+      ],
+      correctIndex: 0,
+      explanation: "The MCT-ketogenic concept: caprylidene's fats are oxidised to ketone bodies that enter the brain via monocarboxylate transporters, supplying fuel when cerebral glucose utilisation is impaired in Alzheimer's disease. Glucose-transporter stimulation is not an established drug action, acetylcholinesterase inhibition is donepezil's mechanism, and memantine holds the NMDA slot.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "spc-cpd-02",
+      question: "A family brings their 68-year-old with mild Alzheimer's disease, already on donepezil, and asks whether caprylidene should replace the 'chemical' with something natural. The best-positioned answer:",
+      options: [
+        "Caprylidene reverses amyloid plaques and cures the disease",
+        "Caprylidene is a medical-food energy adjunct that may be added to standard cholinesterase-inhibitor therapy, not a replacement for it",
+        "Stop donepezil; caprylidene alone is proven superior",
+        "Caprylidene is indicated only in vascular dementia"
+      ],
+      correctIndex: 1,
+      explanation: "The medical-food niche positions caprylidene as an adjunctive brain-fuel strategy alongside, not instead of, cholinesterase inhibitors or memantine, with only modest clinical gains expected. The superiority, vascular-only and plaque-reversal claims are unsupported — the evidence for this agent is itself modest and debated.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "spc-cpd-03",
+      question: "The adverse-effect profile that dominates caprylidene's label is:",
+      options: [
+        "Hyperkalaemia with arrhythmia risk",
+        "Tardive dyskinesia after months of use",
+        "Gastrointestinal upset — nausea, diarrhoea and flatulence",
+        "Rhabdomyolysis with rising creatine kinase"
+      ],
+      correctIndex: 2,
+      explanation: "MCT-oil style products classically cause nausea, loose stools and flatulence — dose-related GI intolerance is the main tolerability issue, managed by taking with food and splitting doses. Rhabdomyolysis is a statin/fibrate concern, hyperkalaemia belongs to RAAS blockers, and tardive dyskinesia is a dopamine-antagonist legacy — none applies here.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "spc-cpd-04",
+      question: "Which pharmacokinetic feature lets caprylidene raise blood ketones effectively without a strict full ketogenic diet?",
+      options: [
+        "Caprylidene is hydrolysed by gastric acid to acetoacetate before absorption",
+        "It is excreted unchanged by the kidney and filtered into the cerebrospinal fluid",
+        "It concentrates selectively in neurons by dopamine-transporter uptake",
+        "Medium-chain fatty acids are absorbed directly into portal blood and rapidly oxidised to ketones, unlike long-chain fats that need chylomicron-carnitine handling"
+      ],
+      correctIndex: 3,
+      explanation: "Medium-chain fatty acids are absorbed directly into portal blood and rapidly oxidised to ketones — unlike long-chain fats that need chylomicron-carnitine handling — which is the pharmacokinetic basis of the ketogenic effect without demanding full dietary restriction. Gastric generation of ketones, renal-to-CSF transport and dopamine-transporter uptake are fabricated routes.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "spc-cpd-05",
+      question: "A sceptical resident asks what 'medical food' status actually means for caprylidene. The label-honesty answer:",
+      options: [
+        "It is sold under the medical-food framework, which does not require the same efficacy demonstration as an approved drug, and its trial evidence is modest and controversial",
+        "It passed the same phase III efficacy standard as donepezil and memantine",
+        "It is a controlled substance because of ketogenic misuse potential",
+        "It is an FDA-approved anti-amyloid antibody in oral form"
+      ],
+      correctIndex: 0,
+      explanation: "The exam trap is category honesty: medical foods address the distinctive nutritional requirements of disease and do not carry the full drug-approval efficacy burden; caprylidene's Alzheimer's evidence is modest and contested. Equating it with cholinesterase-inhibitor trials, controlled scheduling or anti-amyloid antibodies misstates both its status and its mechanism.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "spc-cpd-06",
+      question: "An Indian family has spent heavily on an imported 'brain fuel' MCT product advertised online for their father's dementia and asks your opinion. The most defensible counselling:",
+      options: [
+        "Warn that MCT products cause kidney failure in the elderly",
+        "Continue evidence-based dementia therapy; caprylidene is safe but only modestly and controversially effective, so judge the cost against the benefit",
+        "Stop donepezil and memantine; the MCT product replaces both",
+        "Advise doubling the MCT dose to accelerate plaque dissolution"
+      ],
+      correctIndex: 1,
+      explanation: "The honest line: it is not a proven disease-modifier — the evidence is modest and controversial — so standard pharmacotherapy continues and the family weighs cost against benefit; the main harms are gastrointestinal. Replacement claims and dose doubling lack any basis, and renal failure is not its toxicity (GI upset is), making the kidney warning false counselling.",
+      afterSectionId: "top",
+    },
+    {
+      id: "spc-cpd-07",
+      question: "A 70-year-old started on caprylidene reports nausea and loose stools within the first week; he takes it on an empty stomach each morning. The most appropriate first step:",
+      options: [
+        "Add ondansetron and loperamide permanently as co-therapy",
+        "Switch to home intravenous lipid emulsion",
+        "Take it with food and split the daily dose to improve GI tolerance",
+        "Stop all dementia drugs immediately"
+      ],
+      correctIndex: 2,
+      explanation: "MCT-related GI upset is dose-related and manageable — taking the product with meals and splitting the daily dose usually settles the nausea and loose stools. Stopping all therapy over a manageable effect is disproportionate, permanent antidiarrhoeal cover ignores the fixable cause, and home IV lipid emulsions are not a dementia therapy.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "spc-cpd-08",
+      question: "Which pairing of agent and signature identity is correct?",
+      options: [
+        "Caprylidene — selective 5-HT2A inverse agonist for Parkinson's psychosis",
+        "Caprylidene — sigma-1 agonist antitussive with misuse potential",
+        "Caprylidene — NMDA-antagonist anaesthetic and rapid antidepressant",
+        "Caprylidene — medium-chain triglyceride ketogenic medical food for Alzheimer's"
+      ],
+      correctIndex: 3,
+      explanation: "The MCT-ketogenic medical-food identity belongs to caprylidene; the 5-HT2A inverse agonist is pimavanserin, the sigma-1 antitussive is dextromethorphan, and the NMDA-antagonist anaesthetic/rapid antidepressant is ketamine — each swapped identity is a real signature of another drug in this batch, mislabelled onto caprylidene.",
+      afterSectionId: "top",
+    },
   ],
   activeRecallQuestions: [
     {

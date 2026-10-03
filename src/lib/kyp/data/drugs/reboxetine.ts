@@ -668,6 +668,110 @@ export const reboxetine: Drug = {
       explanation: "For major depressive disorder: start 4 mg twice daily, target 8-10 mg/day, maximum 12 mg/day. Increase to 6 mg bd after 3-4 weeks",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "atd-reb-01",
+      question: "Reboxetine's pharmacological signature is:",
+      options: [
+        "Selective inhibition of the norepinephrine transporter, with only a weak effect on 5-HT reuptake",
+        "Balanced SERT and NET inhibition from the first dose",
+        "Selective SERT inhibition with 5-HT3 antagonism",
+        "Inhibition of both monoamine oxidase-A and monoamine oxidase-B"
+      ],
+      correctIndex: 0,
+      explanation: "Reboxetine is the textbook pure NRI: selective NET blockade with a weak serotonergic effect (Tripathi), producing a noradrenergic rather than serotonergic adverse-effect fingerprint. Balanced dual reuptake from dose one defines the SNRIs, SERT plus 5-HT3 is vortioxetine's multimodal profile, and MAO-A/B inhibition is the MAOI family.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "atd-reb-02",
+      question: "Which statement about reboxetine's pharmacology is FALSE?",
+      options: [
+        "It produces minimal antimuscarinic and sedative effects compared with the TCAs",
+        "It may be safer in overdose than the older tricyclics",
+        "It potently inhibits both SERT and NET, matching duloxetine's profile",
+        "It is used mainly for major depressive disorder"
+      ],
+      correctIndex: 2,
+      explanation: "The false claim is the dual-transporter one: reboxetine is a selective NET blocker with only a weak 5-HT effect — the balanced SERT-plus-NET description belongs to SNRIs like duloxetine. Tripathi confirms its minimal antimuscarinic and sedative actions and its relative overdose safety versus TCAs, while Katzung places it (investigational in the USA) as a drug used mainly for major depression.",
+      afterSectionId: "neurotransmitters",
+    },
+    {
+      id: "atd-reb-03",
+      question: "Reboxetine's regulatory status is best described as:",
+      options: [
+        "FDA-approved for MDD since 1997 with a boxed warning",
+        "FDA-approved only for ADHD in children over 6 years",
+        "Withdrawn worldwide for hepatotoxicity",
+        "Approved and marketed in Europe and India (brand Narebox) but never FDA-approved — investigational in the USA"
+      ],
+      correctIndex: 3,
+      explanation: "Reboxetine never crossed the FDA line — Katzung calls it investigational in the USA — while it is marketed in Europe and India (Narebox 4 and 8 mg per Tripathi). The ADHD-only approval describes atomoxetine, no global hepatotoxicity withdrawal exists (that stigma belongs to nefazodone), and an FDA approval with a boxed warning is the opposite of its true status.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atd-reb-04",
+      question: "A 45-year-old man 3 weeks into reboxetine therapy reports trouble falling asleep, a \"racing heart,\" dry mouth and new difficulty initiating urination (he has mild prostatic enlargement). The best explanation is:",
+      options: [
+        "A serotonergic syndrome variant; creatine kinase should be checked and all antidepressants stopped",
+        "Antihistaminic sedation causing bladder atony",
+        "Drug-induced parkinsonism from D2 blockade in the basal ganglia",
+        "Noradrenergic over-drive — NET blockade produces insomnia, tachycardia, dry mouth and urinary hesitancy, aggravated by his prostatic pathology"
+      ],
+      correctIndex: 3,
+      explanation: "Reboxetine's adverse effects are the noradrenergic cluster Tripathi lists: insomnia, palpitation, dry mouth, constipation and urinary symptoms — and hesitancy is amplified in prostatic hypertrophy, where sympathetic tone contracts bladder-neck smooth muscle. No serotonergic syndrome exists here, antihistaminic effects are precisely what reboxetine lacks, and D2 blockade is amoxapine/antipsychotic biology.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atd-reb-05",
+      question: "A patient on reboxetine asks which of the following effects he is LEAST likely to experience with this drug:",
+      options: [
+        "Insomnia and palpitations",
+        "Daytime sedation and significant weight gain",
+        "Dry mouth and constipation",
+        "Urinary hesitancy"
+      ],
+      correctIndex: 1,
+      explanation: "Sedation and weight gain are the least reboxetine-like effects — Tripathi stresses its minimal sedative action, and the drug's profile is activating rather than calming. Insomnia with palpitations, dry mouth with constipation, and urinary hesitancy are all classic noradrenergic reboxetine effects. Exam pearl: TCAs and mirtazapine sedate and fatten, while the NRIs stimulate.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atd-reb-06",
+      question: "A recurring exam point from the meta-analytic literature on reboxetine is that:",
+      options: [
+        "Its efficacy has been questioned — pooled analyses raised doubts about effectiveness and flagged an unfavourable risk-benefit balance",
+        "It is the most effective antidepressant for treatment-resistant depression",
+        "It shows uniquely superior efficacy in bipolar depression",
+        "It is the only antidepressant proven safe in pregnancy"
+      ],
+      correctIndex: 0,
+      explanation: "Reboxetine's efficacy has been publicly challenged — pooled analyses (the 2010 controversy is the citable classic) found effectiveness unproven against placebo and SSRIs with an unfavourable harm profile, which is why it faded from guidelines despite its clean pharmacology. Superlative claims about treatment resistance, bipolar depression and pregnancy safety are unsupported distractors.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atd-reb-07",
+      question: "A 50-year-old long-haul lorry driver with major depression cannot tolerate sertraline because of daytime drowsiness, and any sedation would endanger his job. Which property makes reboxetine a candidate?",
+      options: [
+        "Potent H1 antagonism that paradoxically improves alertness",
+        "Melatonin-receptor agonism that normalises his sleep-wake cycle",
+        "Minimal antimuscarinic and sedative actions (Tripathi), with an activating noradrenergic profile — dosed in the morning",
+        "Strong dopamine reuptake blockade, producing a licensed stimulant effect"
+      ],
+      correctIndex: 2,
+      explanation: "For a patient who must stay alert, reboxetine's minimal sedation is the selling point — Tripathi explicitly notes antimuscarinic and sedative actions are minimal — with morning dosing to dodge noradrenergic insomnia. H1 antagonism sedates (doxepin), melatonergic agonism is agomelatine's mechanism, and reboxetine is not a dopamine reuptake blocker or a licensed stimulant.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atd-reb-08",
+      question: "A colleague lists four facts about reboxetine; which one needs CORRECTION?",
+      options: [
+        "The dose is 4 mg twice daily or 8 mg once daily (brand Narebox in India)",
+        "It is a selective NA reuptake blocker with a weak effect on 5-HT reuptake",
+        "Usual side effects include insomnia, palpitation, dry mouth, constipation and urinary symptoms",
+        "It carries a marked sedative and anticholinergic burden similar to amitriptyline"
+      ],
+      correctIndex: 3,
+      explanation: "The correction target is the last claim: reboxetine's minimal sedative and anticholinergic burden is its contrast with TCAs like amitriptyline, not a similarity. Tripathi's entry confirms the 4 mg BD or 8 mg OD dose (Narebox), the selective NA reuptake with weak 5-HT effect, and the side-effect list of insomnia, palpitation, dry mouth, constipation, sexual distress and urinary symptoms.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

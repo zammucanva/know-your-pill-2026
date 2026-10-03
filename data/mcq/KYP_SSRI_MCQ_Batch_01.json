@@ -1,0 +1,841 @@
+{
+ "batch": "kyp-ssri-mcq-batch-01",
+ "title": "SSRI MCQ Batch 01 - Sertraline / Fluoxetine / Escitalopram / Paroxetine",
+ "generated": "2026-10-02",
+ "qa": {
+  "reviewed": "2026-10-02",
+  "process": "4-step check: (1) structural integrity (schema, IDs, bounds, uniqueness), (2) relevance & medical accuracy vs monograph facts, (3) distractor-quality scan (lexical Jaccard/Levenshtein proximity, numeric closeness, near-duplicate options, plus full manual semantic pass), (4) answer-key audit (explanation justification, stats reconciliation, answer-spread verification)",
+  "result": "46/46 pass. Fixes applied: ssri-ser-03 explanation cross-reference corrected (option B, was C); ssri-ser-10 distractor D replaced (Paroxetine CR duplicated option A's drug; now Fluvoxamine) with explanation updated.",
+  "distractorNotes": "Close-but-intentional pairs verified and kept: ssri-flu-01 mirror-image PK distractor (longest vs shortest half-life); ssri-flu-02 fluoxetine/fluvoxamine name-confusion pair (classic exam technique); ssri-flu-08 CYP 2D6 vs 1A2 (enzyme specificity is the test point); ssri-esc-03 dose sets each map to a real drug's range (citalopram 20/40, sertraline 50/200)."
+ },
+ "examOrientation": "Indian exams (NEET PG / INI-CET)",
+ "schema": {
+  "core_fields": "id, question, options[4], correctIndex, explanation, afterSectionId - IDENTICAL to KYP microQuizzes (verified from live site flight data)",
+  "metadata_fields": "drugSlug, domain, difficulty (Foundation|Clinical|Advanced), style (vignette|recall) - batch extras for the self-test bank; delete if your bank derives them",
+  "notes": [
+   "afterSectionId values are limited to section ids observed live on drug pages: top, quick-facts, objectives, knowledge-graph, mechanism, brain, neurotransmitters, pathways, timeline - remap freely if sections differ per drug.",
+   "Answer positions are deliberately spread (see stats.answerSpread) - shuffle again at build time if your engine re-shuffles.",
+   "All facts anchored to KYP monograph data: sertraline 22-36h/CYP2B6, fluoxetine norfluoxetine/bulimia/paediatric>=8, escitalopram S-enantiomer/lowest CYP/QTc watch/10-20mg, paroxetine shortest half-life/strongest 2D6/Category D/tamoxifen.",
+   "Crisis resources used (112, Tele-MANAS 14416, Poison 1800-222-2222) match the site's crisis strip."
+  ]
+ },
+ "stats": {
+  "total": 46,
+  "byDrug": {
+   "sertraline": 12,
+   "fluoxetine": 11,
+   "escitalopram": 11,
+   "paroxetine": 11,
+   "mixed": 1
+  },
+  "byDifficulty": {
+   "Foundation": 12,
+   "Clinical": 24,
+   "Advanced": 10
+  },
+  "byStyle": {
+   "recall": 20,
+   "vignette": 26
+  },
+  "byDomain": {
+   "Mechanism & Neuroscience": 5,
+   "Pharmacokinetics": 4,
+   "Clinical Uses": 15,
+   "Adverse Effects & Safety": 6,
+   "Indian Practice": 4,
+   "Drug Interactions": 8,
+   "Exam Pearls": 3,
+   "Active Recall": 1
+  },
+  "answerSpread": {
+   "0": 12,
+   "1": 12,
+   "2": 11,
+   "3": 11
+  }
+ },
+ "questions": [
+  {
+   "id": "ssri-ser-01",
+   "drugSlug": "sertraline",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "In 'SSRI', the word 'selective' refers to which property of sertraline?",
+   "options": [
+    "Much greater affinity for SERT than for NET or DAT",
+    "Selective action only on 5-HT1A receptors",
+    "Selective metabolism by one single CYP enzyme",
+    "Selective distribution only to serotonergic neurons"
+   ],
+   "correctIndex": 0,
+   "explanation": "Selectivity refers to SERT over NET and DAT affinity \u2014 sertraline blocks serotonin reuptake far more potently than norepinephrine or dopamine reuptake. It does NOT mean receptor-subtype selectivity, single-enzyme metabolism, or selective brain distribution. Sertraline's target is SERT (SLC6A4) on the presynaptic neuron."
+  },
+  {
+   "id": "ssri-ser-02",
+   "drugSlug": "sertraline",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Sertraline's half-life is 22-36 hours. The practical clinical implication is:",
+   "options": [
+    "Twice-daily dosing is required",
+    "Once-daily dosing, with steady state in roughly a week",
+    "Once-weekly dosing is sufficient",
+    "Routine serum level monitoring is mandatory"
+   ],
+   "correctIndex": 1,
+   "explanation": "A 22-36 hour half-life supports once-daily dosing; steady state arrives after about 4-5 half-lives (5-7 days). Weekly dosing is a fluoxetine trick (longest half-life), not sertraline. Serum levels are never routinely monitored for SSRIs."
+  },
+  {
+   "id": "ssri-ser-03",
+   "drugSlug": "sertraline",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "brain-regions",
+   "question": "A patient started on sertraline 50 mg calls at day 7: 'I feel no different \u2014 should I double the dose?' The best explanation for the delayed benefit is:",
+   "options": [
+    "The dose is subtherapeutic and should be doubled now",
+    "Sertraline takes 4-6 weeks just to reach steady-state levels",
+    "5-HT1A somatodendritic autoreceptors are still braking serotonergic firing; they desensitise over 1-2 weeks, with full benefit at 4-6 weeks",
+    "Receptor tolerance has already developed"
+   ],
+   "correctIndex": 2,
+   "explanation": "SERT blockade raises synaptic serotonin within hours, but 5-HT1A autoreceptors in the raphe nuclei detect the rise and inhibit firing. Their desensitisation removes the brake over 1-2 weeks; downstream neuroadaptation (BDNF, neurogenesis) completes at 4-6 weeks. Steady state is only about a week \u2014 so option B confuses PK with pharmacodynamics. Doubling at week 1 only adds side effects."
+  },
+  {
+   "id": "ssri-ser-04",
+   "drugSlug": "sertraline",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 26-year-old woman starts sertraline 50 mg for her first depressive episode. Ten days later she reports nausea, loose stools and mild jitteriness but is sleeping and functioning. She has no red-flag symptoms. Best management:",
+   "options": [
+    "Stop sertraline and switch to a different class",
+    "Add ondansetron routinely for the first month",
+    "Double the dose to push through the side effects",
+    "Reassure, advise taking the dose with food \u2014 early GI effects are usually transient"
+   ],
+   "correctIndex": 3,
+   "explanation": "Early GI upset and jitteriness are the commonest sertraline effects in weeks 1-2 and usually attenuate; taking it with food helps. Doubling the dose during the titration window amplifies adverse effects without speeding response. Routine antiemetics are not needed; switching class this early abandons a well-chosen drug."
+  },
+  {
+   "id": "ssri-ser-05",
+   "drugSlug": "sertraline",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "A 62-year-old man, 2 weeks after STEMI with EF 40%, screens positive for moderate depression (PHQ-9 = 14). Which antidepressant has the best evidence for safety in this setting?",
+   "options": [
+    "Sertraline",
+    "Amitriptyline",
+    "Fluoxetine",
+    "Paroxetine"
+   ],
+   "correctIndex": 0,
+   "explanation": "Sertraline has the strongest cardiac safety data among antidepressants after MI (SADHART trial) and minimal effect on conduction or QTc. TCAs are arrhythmogenic in ischaemic heart disease; paroxetine adds strong CYP2D6 interactions and anticholinergic burden; fluoxetine is activating with 2D6 inhibition. This 'safest SSRI in cardiac disease' identity is a recurring NEET PG/INI-CET theme."
+  },
+  {
+   "id": "ssri-ser-06",
+   "drugSlug": "sertraline",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 24-year-old man on sertraline 100 mg takes over-the-counter tramadol for dental pain. Six hours later: agitation, sweating, tremor, inducible clonus, hyperreflexia, temperature 38.2 C. What is the diagnosis and first step?",
+   "options": [
+    "Neuroleptic malignant syndrome \u2014 start bromocriptine",
+    "Serotonin syndrome \u2014 stop both serotonergic drugs and give supportive care with a benzodiazepine",
+    "Anticholinergic toxidrome \u2014 give physostigmine",
+    "Malignant hyperthermia \u2014 give dantrolene"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tramadol is serotonergic; stacked on an SSRI it produces serotonin syndrome \u2014 neuromuscular hyperactivity (clonus, hyperreflexia, myoclonus) with autonomic instability. NMS differs: lead-pipe rigidity, marked hyperthermia, slower onset over days. Management: stop the serotonergic agents, supportive care, benzodiazepines for agitation; cyproheptadine in severe cases (Hunter criteria)."
+  },
+  {
+   "id": "ssri-ser-07",
+   "drugSlug": "sertraline",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "A 28-year-old woman stable on sertraline 100 mg discovers she is 8 weeks pregnant. Her husband is worried the drug will harm the baby. The best counsel:",
+   "options": [
+    "Stop sertraline immediately \u2014 it is teratogenic in the first trimester",
+    "Switch to paroxetine \u2014 it is the safest SSRI in pregnancy",
+    "Continue sertraline \u2014 it has among the better reproductive-safety data; abrupt stoppage risks relapse; weigh risks and benefits together",
+    "Switch to fluoxetine because it is approved for pregnancy-related disorders"
+   ],
+   "correctIndex": 2,
+   "explanation": "Untreated perinatal depression itself carries maternal and fetal risk. Sertraline has favourable reproductive-safety data and is a preferred SSRI in pregnancy. Paroxetine is the outlier to avoid (Category D, cardiac septal-defect signal). Abrupt discontinuation risks relapse and discontinuation symptoms \u2014 any change should be planned with prescriber input."
+  },
+  {
+   "id": "ssri-ser-08",
+   "drugSlug": "sertraline",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which set correctly lists sertraline's FDA-approved indications (the broadest label in the SSRI class)?",
+   "options": [
+    "MDD and OCD only",
+    "MDD, OCD, bulimia nervosa, panic disorder",
+    "MDD, GAD, PTSD, PMDD",
+    "MDD, OCD, panic disorder, PTSD, social anxiety disorder, PMDD"
+   ],
+   "correctIndex": 3,
+   "explanation": "Sertraline carries six labelled indications: MDD, OCD, panic disorder, PTSD, social anxiety disorder and PMDD \u2014 the broadest SSRI label. Bulimia nervosa belongs to fluoxetine; GAD is labelled for paroxetine and escitalopram, not sertraline. Examiners love trading one indication between drugs to test precision."
+  },
+  {
+   "id": "ssri-ser-09",
+   "drugSlug": "sertraline",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "A 55-year-old man with cirrhosis (Child-Pugh B) needs treatment for MDD. Sertraline is chosen. Appropriate dosing approach:",
+   "options": [
+    "Start 25 mg and titrate cautiously \u2014 hepatic clearance is reduced",
+    "Standard 50 mg starting dose",
+    "Sertraline is absolutely contraindicated in liver disease",
+    "Double the initial dose to compensate for hypoalbuminaemia"
+   ],
+   "correctIndex": 0,
+   "explanation": "Sertraline is often the preferred SSRI in hepatic and cardiac disease (low CYP inhibition, no QTc signal), but clearance falls in cirrhosis \u2014 start at 25 mg and titrate slowly in Child-Pugh B/C. 'Absolutely contraindicated' overstates it; dose adjustment, not avoidance, is the answer."
+  },
+  {
+   "id": "ssri-ser-10",
+   "drugSlug": "sertraline",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 58-year-old woman on tamoxifen for ER-positive breast cancer develops MDD. Which SSRI should be PREFERRED?",
+   "options": [
+    "Paroxetine",
+    "Escitalopram",
+    "Fluoxetine",
+    "Fluvoxamine"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tamoxifen is a prodrug activated to endoxifen mainly by CYP2D6. Paroxetine and fluoxetine are potent 2D6 inhibitors and reduce endoxifen levels, associated with higher recurrence risk. Fluvoxamine brings its own CYP burden (1A2/2C19) and no advantage here. Escitalopram has the lowest CYP-interaction burden in the class (KYP class table), making it the preferred co-prescription."
+  },
+  {
+   "id": "ssri-ser-11",
+   "drugSlug": "sertraline",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "neural-pathways",
+   "question": "A 31-year-old on sertraline is admitted for MRSA cellulitis and the intern adds linezolid. What serotonergic risk exists and why?",
+   "options": [
+    "None \u2014 linezolid is a plain antibiotic with no CNS activity",
+    "Linezolid directly inhibits SERT like fluoxetine",
+    "Linezolid is a weak, reversible MAO inhibitor \u2014 combined with an SSRI it can precipitate serotonin syndrome",
+    "The only relevant risk is additive QTc prolongation"
+   ],
+   "correctIndex": 2,
+   "explanation": "Linezolid is a weak, reversible, non-selective MAO inhibitor \u2014 an easily forgotten monoamine-oxidase effect. With an SSRI on board it can contribute to serotonergic excess; counsel the team, monitor for agitation, clonus and autonomic instability, and prefer an alternative antibiotic when feasible. QTc is not the issue here."
+  },
+  {
+   "id": "ssri-ser-12",
+   "drugSlug": "sertraline",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "top",
+   "question": "A distressed college student discloses hopelessness but refuses to visit an emergency room. Which number is India's national Tele-MANAS tele-mental-health helpline that you can hand them?",
+   "options": [
+    "104",
+    "181",
+    "1097",
+    "14416"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tele-MANAS \u2014 the Government of India's national tele-mental-health service \u2014 runs on 14416, with crisis care escalatable to 112. Know Your Pill's crisis strip carries exactly this trio: 112 (emergency), 14416 (Tele-MANAS), 1800-222-2222 (Poison Control). 104 is the general health helpline, 181 the women's helpline, 1097 the AIDS helpline."
+  },
+  {
+   "id": "ssri-flu-01",
+   "drugSlug": "fluoxetine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Fluoxetine's distinctive pharmacokinetic feature and its metabolite are:",
+   "options": [
+    "Longest effective half-life in the class; norfluoxetine, an active metabolite",
+    "Shortest half-life in the class; inactive metabolite",
+    "Half-life that shrinks with repeated dosing",
+    "Purely renal clearance with no metabolites"
+   ],
+   "correctIndex": 0,
+   "explanation": "Fluoxetine's half-life is 2-4 days (longer with chronic dosing) and its demethylated metabolite norfluoxetine persists 7-15 days \u2014 the longest effective half-life of any SSRI. This single fact explains three exam favourites: rarest discontinuation syndrome, feasibility of weekly dosing, and the 5-week washout before an MAOI."
+  },
+  {
+   "id": "ssri-flu-02",
+   "drugSlug": "fluoxetine",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "The ONLY SSRI carrying FDA approval for bulimia nervosa is:",
+   "options": [
+    "Sertraline",
+    "Fluoxetine",
+    "Escitalopram",
+    "Fluvoxamine"
+   ],
+   "correctIndex": 1,
+   "explanation": "Fluoxetine is the only SSRI approved for bulimia nervosa (60 mg/day). Fluvoxamine's niche label is OCD \u2014 Know Your Pill's class table tags it 'OCD-only FDA indication'. Mixing these two niche labels is a classic distractor pair."
+  },
+  {
+   "id": "ssri-flu-03",
+   "drugSlug": "fluoxetine",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "For paediatric major depressive disorder, the SSRI approved for the youngest age group is:",
+   "options": [
+    "Sertraline \u2014 approved from age 6 years",
+    "Escitalopram \u2014 approved from age 6 years",
+    "Fluoxetine \u2014 approved from age 8 years",
+    "Paroxetine \u2014 approved from age 12 years"
+   ],
+   "correctIndex": 2,
+   "explanation": "Fluoxetine is approved for paediatric MDD from age 8 \u2014 the youngest in the class (escitalopram's MDD label starts at 12; sertraline and paroxetine have no paediatric MDD label). Paroxetine is actively avoided in young patients. Know Your Pill's comparison table tags fluoxetine 'paediatric >=8yr'."
+  },
+  {
+   "id": "ssri-flu-04",
+   "drugSlug": "fluoxetine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "A 22-year-old woman has MDD with hypersomnia, leaden paralysis, hyperphagia and low daytime energy that is costing her classes. Which SSRI fits this presentation best?",
+   "options": [
+    "Paroxetine",
+    "Sertraline",
+    "Citalopram",
+    "Fluoxetine"
+   ],
+   "correctIndex": 3,
+   "explanation": "Atypical depressive features with hypersomnia and fatigue call for an activating agent \u2014 fluoxetine's stimulating profile is the classic match and it can worsen insomnia if dosed late. Paroxetine sits at the opposite pole (most sedating, most weight gain), compounding hyperphagia."
+  },
+  {
+   "id": "ssri-flu-05",
+   "drugSlug": "fluoxetine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 34-year-old stable on fluoxetine 40 mg goes on a three-week trek and misses every single dose. What should she expect on return?",
+   "options": [
+    "No meaningful discontinuation \u2014 the norfluoxetine reservoir effectively self-tapers",
+    "Severe discontinuation syndrome \u2014 the drug must be reinstated urgently",
+    "A hypertensive crisis from rebound monoamine release",
+    "Guaranteed immediate relapse of depression"
+   ],
+   "correctIndex": 0,
+   "explanation": "Fluoxetine's long half-life means missed doses barely dent plasma levels \u2014 the drug tapers itself. Discontinuation syndrome is rarest with fluoxetine and worst with paroxetine (shortest half-life, no active metabolite). This contrast is one of the highest-yield SSRI PK facts."
+  },
+  {
+   "id": "ssri-flu-06",
+   "drugSlug": "fluoxetine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "A 29-year-old woman has severe PMDD \u2014 mood collapse, irritability and functional impairment in the luteal phase every cycle. The evidence-based SSRI and dosing strategy:",
+   "options": [
+    "Paroxetine CR \u2014 once-weekly dosing",
+    "Fluoxetine \u2014 continuous dosing or luteal-phase (intermittent) dosing",
+    "Sertraline \u2014 a monthly depot injection",
+    "Escitalopram \u2014 dosing only during menses"
+   ],
+   "correctIndex": 1,
+   "explanation": "Fluoxetine carries a PMDD label and uniquely supports BOTH continuous dosing and luteal-phase (roughly 2-week intermittent) dosing \u2014 a favourite exam twist. Paroxetine CR also has a PMDD label but not weekly dosing; there is no SSRI depot. Know Your Pill tags fluoxetine with PMDD among its FDA indications."
+  },
+  {
+   "id": "ssri-flu-07",
+   "drugSlug": "fluoxetine",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Minimum washout period before starting an MAOI in a patient who has just stopped fluoxetine:",
+   "options": [
+    "14 days",
+    "7 days",
+    "5 weeks",
+    "24 hours"
+   ],
+   "correctIndex": 2,
+   "explanation": "Because norfluoxetine lingers for weeks, the washout between fluoxetine and an MAOI is 5 weeks \u2014 versus 14 days for every other SSRI. Getting this backwards in either direction risks serotonin syndrome. (MAOI to any SSRI is 14 days.) The 5-week fluoxetine rule is a perennial exam item."
+  },
+  {
+   "id": "ssri-flu-08",
+   "drugSlug": "fluoxetine",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Fluoxetine's principal CYP450 footprint is:",
+   "options": [
+    "Potent CYP1A2 inhibition",
+    "CYP3A4 induction",
+    "No clinically significant CYP effects",
+    "Potent CYP2D6 inhibition"
+   ],
+   "correctIndex": 3,
+   "explanation": "Fluoxetine (via itself and norfluoxetine) is a potent CYP2D6 inhibitor \u2014 raising levels of TCAs, atomoxetine, metoprolol and undermining tamoxifen activation; pimozide is contraindicated. The 1A2-inhibitor niche belongs to fluvoxamine (tizanidine contraindication). Know Your Pill tags fluoxetine 'longest half-life; only SSRI for bulimia; paediatric >=8yr' and its interactions flow from 2D6."
+  },
+  {
+   "id": "ssri-flu-09",
+   "drugSlug": "fluoxetine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "A 21-year-old woman with moderate bulimia nervosa (normal electrolytes today) is to start pharmacotherapy. The correct drug and dose:",
+   "options": [
+    "Fluoxetine 60 mg/day",
+    "Sertraline 50 mg daily",
+    "Escitalopram 10 mg daily",
+    "Ondansetron 8 mg three times daily"
+   ],
+   "correctIndex": 0,
+   "explanation": "Fluoxetine 60 mg/day is the only SSRI regimen with an FDA label for bulimia nervosa and reduces binge-purge frequency. Lower doses lack the evidence; ondansetron is not established therapy here. Clinical practice still requires electrolyte and ECG surveillance given purge behaviour."
+  },
+  {
+   "id": "ssri-flu-10",
+   "drugSlug": "fluoxetine",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A psychiatrist plans fluoxetine for a patient already on pimozide for Tourette disorder. The correct assessment:",
+   "options": [
+    "No interaction of note",
+    "Contraindicated \u2014 additive QTc prolongation plus CYP2D6-mediated rise in pimozide levels",
+    "Acceptable if doses are separated by two hours",
+    "Concern limited to reduced fluoxetine concentrations"
+   ],
+   "correctIndex": 1,
+   "explanation": "The fluoxetine label contraindicates pimozide on two stacked mechanisms: both prolong QTc, and potent 2D6 inhibition raises pimozide exposure \u2014 torsadogenic risk. Spacing doses does nothing to either mechanism. Pimozide + SSRIs is a classic 'spot the contraindication' item."
+  },
+  {
+   "id": "ssri-flu-11",
+   "drugSlug": "fluoxetine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "A 19-year-old with panic disorder starts fluoxetine 10 mg in the morning. On day 3 she calls: 'I feel more wired, anxious and I cannot sleep.' Best response:",
+   "options": [
+    "Stop immediately \u2014 this is a drug allergy",
+    "Double the dose to push past the jitteriness",
+    "Reassure and continue: early activation is a known, usually transient fluoxetine effect; keep the dose low and take it in the morning",
+    "Switch to paroxetine the same day"
+   ],
+   "correctIndex": 2,
+   "explanation": "Fluoxetine's activating profile can transiently amplify anxiety and panic in the first 1-2 weeks \u2014 counselled BEFORE starting, managed by low starting dose, morning administration and reassurance. Paroxetine would sedate rather than activate but carries its own baggage (worst discontinuation, anticholinergic load). Abrupt stopping and dose-doubling both backfire."
+  },
+  {
+   "id": "ssri-esc-01",
+   "drugSlug": "escitalopram",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Escitalopram's relationship to citalopram is best described as:",
+   "options": [
+    "Its active metabolite",
+    "The R-enantiomer of citalopram",
+    "A prodrug that converts to citalopram",
+    "The S-enantiomer \u2014 the pharmacologically active half of racemic citalopram"
+   ],
+   "correctIndex": 3,
+   "explanation": "Escitalopram is the pure S-enantiomer of racemic citalopram \u2014 the component responsible for most SERT inhibition. It is not a metabolite or prodrug. Bonus: R-citalopram actually antagonises escitalopram's allosteric SERT action, which is why removing it produces a cleaner drug (Know Your Pill: 'S-enantiomer of citalopram')."
+  },
+  {
+   "id": "ssri-esc-02",
+   "drugSlug": "escitalopram",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "The exam-pearl feature of escitalopram's binding to SERT is:",
+   "options": [
+    "It additionally binds an allosteric site that stabilises and prolongs SERT inhibition",
+    "It binds only the orthosteric site, like every other SSRI",
+    "It binds SERT irreversibly and covalently",
+    "It requires metabolic activation before binding SERT"
+   ],
+   "correctIndex": 0,
+   "explanation": "Escitalopram shows two-point binding: classical orthosteric SERT inhibition PLUS allosteric-site binding that stabilises the complex. This allosteric component underpins its high selectivity and potency \u2014 and R-citalopram interferes with exactly this effect. The rest of the class binds only the orthosteric site."
+  },
+  {
+   "id": "ssri-esc-03",
+   "drugSlug": "escitalopram",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Standard adult escitalopram dosing:",
+   "options": [
+    "20 mg starting dose, maximum 40 mg",
+    "10 mg starting dose, maximum 20 mg (10 mg in the elderly and hepatic impairment)",
+    "50 mg starting dose, maximum 200 mg",
+    "5 mg starting dose, maximum 5 mg"
+   ],
+   "correctIndex": 1,
+   "explanation": "Escitalopram runs 10 mg start, 20 mg maximum; halve to a 10 mg cap in patients 65+ and in hepatic impairment. The 20/40 numbers belong to citalopram (with its own 40 mg QTc cap). Escitalopram's identity: most selective SSRI with the lowest CYP-interaction burden."
+  },
+  {
+   "id": "ssri-esc-04",
+   "drugSlug": "escitalopram",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "A 76-year-old on amlodipine, metformin, atorvastatin and tamsulosin develops MDD. Which SSRI is the most interaction-averse choice for this polypharmacy?",
+   "options": [
+    "Fluoxetine",
+    "Paroxetine",
+    "Escitalopram",
+    "Fluvoxamine"
+   ],
+   "correctIndex": 2,
+   "explanation": "Escitalopram has the lowest CYP-interaction profile of the class (Know Your Pill's distinguishing line) \u2014 minimal displacement of the existing regimen. Fluoxetine and paroxetine inhibit 2D6 (tamsulosin/other substrates), and fluvoxamine inhibits 1A2 (tizanidine is contraindicated; theophylline, clozapine rise). Elderly dosing still applies: 10 mg cap."
+  },
+  {
+   "id": "ssri-esc-05",
+   "drugSlug": "escitalopram",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "An 82-year-old with baseline QTc 470 ms was mistakenly started on escitalopram 20 mg. Correct action:",
+   "options": [
+    "Continue unchanged \u2014 SSRIs carry no QTc concern",
+    "Switch to citalopram 40 mg",
+    "Give prophylactic IV magnesium",
+    "Reduce to 10 mg (age-appropriate maximum), obtain ECG follow-up, and consider an alternative if QTc climbs"
+   ],
+   "correctIndex": 3,
+   "explanation": "Escitalopram carries a dose-dependent QTc signal (smaller than citalopram's, which is why citalopram is capped) and the geriatric cap is 10 mg. A baseline near 470 ms leaves little headroom \u2014 correct the dose, re-ECG, and switch class if QTc extends. Magnesium treats, not prevents, torsade."
+  },
+  {
+   "id": "ssri-esc-06",
+   "drugSlug": "escitalopram",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 71-year-old woman, three weeks on escitalopram and on indapamide, presents with confusion and lethargy. Na+ 124 mEq/L, euvolaemic, serum osmolality low. Best explanation and step:",
+   "options": [
+    "SSRI-induced SIADH \u2014 hold the SSRI, manage hyponatraemia by severity, then rechallenge cautiously or switch agents",
+    "Psychogenic polydipsia \u2014 fluid restrict and continue the SSRI",
+    "Addisonian crisis \u2014 start steroids empirically",
+    "Pseudohyponatraemia \u2014 simply repeat the sample"
+   ],
+   "correctIndex": 0,
+   "explanation": "SSRIs cause SIADH-type hyponatraemia; classic risk stack = elderly + female + thiazide-like diuretic (indapamide). Euvolaemic hypo-osmolar hyponatraemia after a recent SSRI start is the fingerprint: check osmolality, thyroid and cortisol, hold the drug, correct by severity, and either rechallenge at lower dose or change class. Ignoring it risks seizures."
+  },
+  {
+   "id": "ssri-esc-07",
+   "drugSlug": "escitalopram",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "A 30-year-old responds well to escitalopram 15 mg for MDD but develops anorgasmia and is losing motivation to continue. He has read that 'drug holidays are unreliable with my drug's half-life'. Best evidence-based plan:",
+   "options": [
+    "Schedule weekend drug holidays",
+    "Continue escitalopram and address the sexual effect directly: consider dose reduction, switching to bupropion, or adding a PDE5 inhibitor",
+    "Stop antidepressant treatment altogether",
+    "Switch to paroxetine \u2014 it causes fewer sexual side effects"
+   ],
+   "correctIndex": 1,
+   "explanation": "Sexual dysfunction is the most common reason patients abandon SSRIs (Know Your Pill's own micro-quiz point). Real options: wait for tolerance, reduce dose if safe, switch to a pro-sexual agent (bupropion, mirtazapine), or augment with a PDE5 inhibitor. Drug holidays are unreliable for intermediate-half-life drugs, and paroxetine is among the WORST for sexual dysfunction, not better."
+  },
+  {
+   "id": "ssri-esc-08",
+   "drugSlug": "escitalopram",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "A 30-year-old primigravida at 34 weeks has continued escitalopram through pregnancy. Perinatal counselling for the delivery team should include:",
+   "options": [
+    "Assurance that the newborn will have no effects at all",
+    "Mandatory NICU admission for every SSRI-exposed newborn",
+    "Possible poor neonatal adaptation \u2014 transient jitteriness, feeding or respiratory difficulty \u2014 usually self-limiting with monitoring",
+    "Starting the baby on an SSRI after birth"
+   ],
+   "correctIndex": 2,
+   "explanation": "Late-pregnancy SSRI exposure carries a small risk of poor neonatal adaptation (transient jitteriness, tachypnoea, feeding difficulty) that resolves over days with observation \u2014 plan delivery where the baby can be monitored. It does not justify stopping maternal treatment at term; relapse risk is the bigger danger. Sertraline is the class's preferred reproductive-safety pick; paroxetine is the one to avoid (Category D)."
+  },
+  {
+   "id": "ssri-esc-09",
+   "drugSlug": "escitalopram",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "neural-pathways",
+   "question": "Why is citalopram capped at 40 mg/day (20 mg in elderly, 20 mg in CYP2C19 poor metabolisers) while escitalopram is not capped the same way?",
+   "options": [
+    "Citalopram triggers serotonin syndrome above 60 mg",
+    "Escitalopram is renally cleared and cannot accumulate",
+    "It is purely a historical marketing decision",
+    "Citalopram shows dose-dependent QTc prolongation; escitalopram's QTc signal is small at therapeutic doses"
+   ],
+   "correctIndex": 3,
+   "explanation": "The FDA's 2011 citalopram warning tied dose to QTc \u2014 hence the 40/20 caps. Escitalopram retains a modest QTc signal worth watching in risk stacks (Know Your Pill: 'QTc watch'), but no equivalent cap. Know Your Pill's citalopram line: 'QTc dose-dependent; 40mg cap'."
+  },
+  {
+   "id": "ssri-esc-10",
+   "drugSlug": "escitalopram",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "neural-pathways",
+   "question": "An inpatient on escitalopram is prescribed moxifloxacin for pneumonia and ondansetron as needed. The intern asks about combined risk. Best answer:",
+   "options": [
+    "Additive QTc prolongation \u2014 get a baseline ECG, correct potassium and magnesium, review whether each QTc drug is necessary",
+    "None \u2014 the drugs come from unrelated classes",
+    "Additive serotonergic toxicity",
+    "Additive seizure threshold lowering"
+   ],
+   "correctIndex": 0,
+   "explanation": "This is the classic QTc stack: SSRI + fluoroquinolone + 5-HT3 antagonist. None is serotonergic, so serotonin syndrome is wrong. Manage by baseline ECG, electrolyte correction (K+, Mg2+), and pruning avoidable QTc drugs. Expecting inpatients on escitalopram to meet moxifloxacin or ondansetron makes this a practical ward question."
+  },
+  {
+   "id": "ssri-esc-11",
+   "drugSlug": "escitalopram",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "brain-regions",
+   "question": "How does R-citalopram interact with escitalopram's action at SERT?",
+   "options": [
+    "It enhances escitalopram's allosteric binding",
+    "It antagonises the allosteric component \u2014 the basis for the S-isomer's superiority",
+    "It has no interaction at SERT whatsoever",
+    "It chemically converts escitalopram back to citalopram"
+   ],
+   "correctIndex": 1,
+   "explanation": "In the two-point binding model, R-citalopram allosterically counteracts escitalopram's stabilising effect on SERT \u2014 stripping it away produces a cleaner, more selective inhibitor. This is the mechanistic justification behind escitalopram's identity as the most selective SSRI and pairs with its 'lowest CYP interactions' tag."
+  },
+  {
+   "id": "ssri-par-01",
+   "drugSlug": "paroxetine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Paroxetine's pharmacokinetic signature and its main clinical consequence:",
+   "options": [
+    "Longest half-life \u2014 allows weekly dosing",
+    "It forms the active metabolite norparoxetine",
+    "Shortest half-life in the class with no active metabolite \u2014 highest discontinuation-syndrome risk",
+    "Its kinetics are always linear across doses"
+   ],
+   "correctIndex": 2,
+   "explanation": "Paroxetine's half-life is about 21 hours with no active metabolite \u2014 the class's PK worst case for stopping: discontinuation syndrome is most frequent and severe. Kinetics also turn nonlinear at higher doses. Know Your Pill's tag: 'Shortest half-life (worst discontinuation)'. The long-half-life items describe fluoxetine; norfluoxetine is fluoxetine's metabolite."
+  },
+  {
+   "id": "ssri-par-02",
+   "drugSlug": "paroxetine",
+   "domain": "Drug Interactions",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "The strongest CYP2D6 inhibitor among the SSRIs is:",
+   "options": [
+    "Escitalopram",
+    "Sertraline",
+    "Citalopram",
+    "Paroxetine"
+   ],
+   "correctIndex": 3,
+   "explanation": "Paroxetine (with fluoxetine) anchors 2D6 inhibition; paroxetine is conventionally cited as the strongest. Consequences: tamoxifen activation blocked, TCA and atomoxetine levels rise, codeine/tramadol analgesia blunted. Escitalopram, sertraline and citalopram are comparatively CYP-quiet."
+  },
+  {
+   "id": "ssri-par-03",
+   "drugSlug": "paroxetine",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Paroxetine's tolerability signature within the SSRI class:",
+   "options": [
+    "Most sedating and most anticholinergic, with weight gain \u2014 useful for anxious-insomniac adults, problematic in the elderly",
+    "Most activating and weight-neutral",
+    "Completely free of anticholinergic effects",
+    "Consistently causes weight loss"
+   ],
+   "correctIndex": 0,
+   "explanation": "Paroxetine has genuine muscarinic affinity \u2014 dry mouth, constipation, sedation \u2014 plus weight gain over months. That profile can suit an anxious, insomniac young adult but stacks risks in the elderly (Beers-criteria flag) and in glaucoma/BPH. 'Most activating' describes fluoxetine."
+  },
+  {
+   "id": "ssri-par-04",
+   "drugSlug": "paroxetine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 34-year-old stops paroxetine 20 mg abruptly before her wedding. On day 3: dizziness, 'electric shock' sensations down her arms, flu-like aching and irritability. Diagnosis and management:",
+   "options": [
+    "Relapse of depression \u2014 restart the full dose indefinitely",
+    "SSRI discontinuation syndrome \u2014 reinstate the drug and taper slowly (a fluoxetine bridge is an option)",
+    "Serotonin syndrome \u2014 give cyproheptadine",
+    "A viral illness \u2014 symptomatic care only"
+   ],
+   "correctIndex": 1,
+   "explanation": "The FINISH cluster \u2014 Flu-like, Insomnia, Nausea, Imbalance, Sensory shocks, Hyperarousal \u2014 three days after abrupt stop of the shortest-half-life SSRI is textbook discontinuation, not relapse (too fast) and not serotonin syndrome (no serotonergic load). Management: reinstate, then taper gradually; fluoxetine bridging exploits its long half-life."
+  },
+  {
+   "id": "ssri-par-05",
+   "drugSlug": "paroxetine",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 49-year-old on tamoxifen for breast cancer is prescribed paroxetine by her GP for hot flushes and low mood. Why flag this combination?",
+   "options": [
+    "Paroxetine raises tamoxifen levels causing toxicity",
+    "There is no clinically relevant interaction",
+    "CYP2D6 inhibition reduces endoxifen formation \u2014 less tamoxifen efficacy and higher recurrence risk",
+    "The only concern is additive nausea"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tamoxifen needs CYP2D6 to become endoxifen; paroxetine is its most potent clinical inhibitor. Population data (Kelly et al., BMJ 2010) linked paroxetine-plus-tamoxifen to higher breast-cancer mortality \u2014 the flagship pharmacogenomic SSRI interaction. Know Your Pill's paroxetine row: 'tamoxifen interaction'. Prefer a 2D6-neutral antidepressant."
+  },
+  {
+   "id": "ssri-par-06",
+   "drugSlug": "paroxetine",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "A 26-year-old woman with GAD is planning her first pregnancy within a year. Which SSRI should be avoided and why?",
+   "options": [
+    "Sertraline \u2014 Category X",
+    "Escitalopram \u2014 proven teratogen in all trimesters",
+    "Fluoxetine \u2014 causes limb defects",
+    "Paroxetine \u2014 Category D; first-trimester cardiac septal-defect signal"
+   ],
+   "correctIndex": 3,
+   "explanation": "Paroxetine is the SSRI outlier in pregnancy \u2014 Category D with an early septal heart-defect signal (Know Your Pill: 'Category D'). Sertraline is the customary first choice when conceiving; escitalopram and fluoxetine have no such category. The key exam principle: planned, shared decision-making \u2014 never abrupt self-stopping."
+  },
+  {
+   "id": "ssri-par-07",
+   "drugSlug": "paroxetine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "A 40-year-old with GAD, prominent insomnia and anxiety-driven weight loss is deliberately started on paroxetine 12.5 mg CR at night. Which counselling point matters MOST at initiation?",
+   "options": [
+    "Early nausea and sedation are possible; full anxiolytic effect takes 2-6 weeks; weight gain and sexual effects can emerge over time",
+    "Anxiolysis will be immediate, within 48 hours",
+    "There is no sedation risk at any dose",
+    "It can be stopped any time without tapering"
+   ],
+   "correctIndex": 0,
+   "explanation": "Sedation may help his insomnia early, but honest expectations drive adherence: onset of anxiolytic benefit 2-6 weeks, early GI upset, later weight gain and sexual dysfunction, and a mandatory slow taper because of paroxetine's discontinuation profile. SSRIs never work in 48 hours; promising that sets up early abandonment."
+  },
+  {
+   "id": "ssri-par-08",
+   "drugSlug": "paroxetine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "The paroxetine controlled-release (CR) formulation's main marketed advantage:",
+   "options": [
+    "Complete elimination of the discontinuation syndrome",
+    "Smoother levels with less early nausea; positioned for panic disorder and PMDD",
+    "Enables once-weekly dosing",
+    "Stronger CYP2D6 inhibition as a therapeutic goal"
+   ],
+   "correctIndex": 1,
+   "explanation": "CR blunts peak-related early nausea \u2014 helpful in panic disorder (where GI sensitivity dominates) and PMDD, where it also carries a label. It does NOT abolish discontinuation (the long-term problem is the short half-life, not the peak), and weekly dosing exists only for fluoxetine. 'Stronger 2D6 inhibition' is a hazard here, never a goal."
+  },
+  {
+   "id": "ssri-par-09",
+   "drugSlug": "paroxetine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "A 72-year-old with narrow-angle glaucoma risk, BPH and ongoing oxybutynin therapy needs an SSRI for GAD. Which one should be AVOIDED?",
+   "options": [
+    "Escitalopram",
+    "Sertraline",
+    "Paroxetine \u2014 it stacks anticholinergic burden",
+    "Citalopram"
+   ],
+   "correctIndex": 2,
+   "explanation": "Paroxetine's muscarinic activity on top of oxybutynin invites acute angle closure and urinary retention in a predisposed elderly patient. Choose a CYP-quiet, low-anticholinergic agent (escitalopram or sertraline) and dose for age. This is the practical reason paroxetine tops 'avoid in elderly' lists."
+  },
+  {
+   "id": "ssri-par-10",
+   "drugSlug": "paroxetine",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A patient has failed three gradual tapers off paroxetine with classic discontinuation each time. The advanced cross-taper strategy:",
+   "options": [
+    "Abrupt stop with benzodiazepine cover alone",
+    "Double the paroxetine dose then stop cold",
+    "Switch directly to duloxetine the same day",
+    "Convert to fluoxetine, stabilise, then taper fluoxetine slowly over several weeks"
+   ],
+   "correctIndex": 3,
+   "explanation": "Fluoxetine's long half-life makes it a built-in self-taper \u2014 the standard bridge for discontinuation-prone paroxetine failures: switch to an equivalent fluoxetine dose, hold stable, then taper in weekly steps. Benzodiazepines mask symptoms without correcting the pharmacology, and same-day switches recreate the problem with a shorter half-life."
+  },
+  {
+   "id": "ssri-par-11",
+   "drugSlug": "paroxetine",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "neural-pathways",
+   "question": "The best-documented pharmacogenomic example of an SSRI\u2013drug interaction affecting disease outcomes is:",
+   "options": [
+    "CYP2D6 inhibition by paroxetine in tamoxifen-treated patients \u2014 higher breast-cancer recurrence and mortality",
+    "Citalopram\u2013warfarin INR data",
+    "Escitalopram\u2013clopidogrel via CYP2C19",
+    "Fluvoxamine\u2013statin myopathy"
+   ],
+   "correctIndex": 0,
+   "explanation": "The paroxetine\u2013tamoxifen CYP2D6 story (Kelly et al., BMJ 2010) is the canonical example: 2D6 inhibition reduced endoxifen and tracked with higher recurrence/mortality. It is cited in every pharmacogenomics lecture that touches psychopharmacology. The distractors describe real-but-minor or apocryphal interactions."
+  },
+  {
+   "id": "ssri-mix-01",
+   "drugSlug": "mixed",
+   "domain": "Active Recall",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which drug\u2013distinguishing feature pair is CORRECT (per the Know Your Pill SSRI class comparison)?",
+   "options": [
+    "Fluoxetine \u2014 shortest half-life; worst withdrawal",
+    "Escitalopram \u2014 lowest CYP interaction burden; QTc watch",
+    "Paroxetine \u2014 the only SSRI approved for bulimia",
+    "Sertraline \u2014 strongest CYP2D6 inhibitor"
+   ],
+   "correctIndex": 1,
+   "explanation": "Know Your Pill's class table: escitalopram = 'S-enantiomer of citalopram; lowest CYP interactions; QTc watch'. Fluoxetine owns 'longest half-life; only SSRI for bulimia; paediatric >=8yr'; paroxetine owns 'shortest half-life, worst discontinuation; Category D; tamoxifen interaction'; sertraline owns the broadest label and cardiac safety. Swapping any one tag between drugs is how this question is examined."
+  }
+ ]
+}

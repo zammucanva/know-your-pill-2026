@@ -947,6 +947,110 @@ export const nortriptyline: Drug = {
       explanation: "For depression: start 25 mg at bedtime, target 75-150 mg/day, maximum 150 mg/day (level-limited). Increase by 25 mg every 3-7 days",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "tca-nor-01",
+      question: "Compared with its parent amitriptyline, nortriptyline is best described as:",
+      options: [
+        "Pharmacologically identical — they are effectively the same molecule",
+        "More anticholinergic and more sedating",
+        "Stronger at SERT and weaker at NET",
+        "A secondary-amine TCA with predominantly NET blockade — less sedation, less anticholinergic load than the parent"
+      ],
+      correctIndex: 3,
+      explanation: "N-demethylation of amitriptyline produces the secondary amine nortriptyline, whose profile shifts toward norepinephrine-transporter blockade with milder muscarinic, alpha-1 and H1 effects — the biochemical basis of its cleaner tolerability. The identical-molecule claim is false, the direction of the receptor shifts is inverted in the other two distractors. This parent-to-metabolite pharmacology shift is the template for the whole class (imipramine to desipramine mirrors it).",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "tca-nor-02",
+      question: "Why are nortriptyline plasma levels unusually reliable for guiding dosing?",
+      options: [
+        "It is not bound to plasma proteins at all",
+        "Secondary-amine TCAs like nortriptyline have fairly linear kinetics, no further active metabolites, and serum levels predict both response and toxicity",
+        "It undergoes no hepatic metabolism whatsoever",
+        "Renal excretion is its sole elimination route, making levels dose-proportional"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung's kinetic point: the secondary amine TCAs (desipramine, nortriptyline) have linear kinetics, no further active metabolites and a wide therapeutic window, so a measured level genuinely predicts clinical state. TCAs are highly protein bound and hepatically metabolised, and only about 5% leaves the body unchanged in urine — the renal claim is backwards. This is the kinetic foundation of nortriptyline's unique level-guided dosing.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "tca-nor-03",
+      question: "A 38-year-old has taken nortriptyline 25 mg nightly for 4 weeks for depression: no benefit, no side effects. Plasma level is 38 ng/mL. The most appropriate step is:",
+      options: [
+        "Declare nortriptyline a failure and stop all treatment",
+        "Add fluoxetine to push the level up conveniently",
+        "Increase the dose — the level is below the 50-150 ng/mL therapeutic window, so nortriptyline has not yet been truly trialled",
+        "Switch to imipramine, which has a much wider therapeutic window"
+      ],
+      correctIndex: 2,
+      explanation: "Nortriptyline is the one antidepressant with a genuinely established therapeutic window of roughly 50-150 ng/mL; a level of 38 ng/mL means the trial was under-dosed, so titrating upward is correct before declaring failure. Using fluoxetine as a 'level booster' is the unpredictable 2D6 hack — dangerous and not a dosing strategy. Pearl: window logic cuts both ways — levels above the window carry toxicity, not extra benefit.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "tca-nor-04",
+      question: "A 60-year-old man 6 weeks after an uncomplicated MI develops a moderate depressive episode and has not responded adequately to an SSRI. If a TCA must be used, the best cardiac choice is:",
+      options: [
+        "Amitriptyline",
+        "Dothiepin",
+        "Nortriptyline",
+        "Doxepin — its H1 blockade protects the myocardium"
+      ],
+      correctIndex: 2,
+      explanation: "Among TCAs, nortriptyline showed the best cardiac tolerability in post-MI cohorts — the least conduction and arrhythmia trouble — making it the default TCA when heart disease constrains the choice (with ECG monitoring still mandatory). Amitriptyline and dothiepin sit at the dangerous end for cardiac and overdose risk, and H1 blockade offers no myocardial protection whatsoever. Pearl: even the 'safest' TCA is still second-line after revascularisation-era SSRIs — avoid TCAs in the acute post-MI phase.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tca-nor-05",
+      question: "Adding paroxetine to a stable nortriptyline regimen will predictably:",
+      options: [
+        "Lower nortriptyline levels by enzyme induction",
+        "Raise nortriptyline levels — paroxetine is a potent CYP2D6 inhibitor",
+        "Leave levels unchanged — the two drugs use different enzyme systems",
+        "Raise levels only in ultrarapid 2D6 metabolisers"
+      ],
+      correctIndex: 1,
+      explanation: "Paroxetine (with fluoxetine) is the strongest SSRI inhibitor of CYP2D6, the enzyme that clears nortriptyline — levels rise dramatically and sometimes unpredictably, so the combination needs dose cuts, level checks or avoidance. Induction is the wrong direction, 2D6 is exactly the shared system, and the interaction matters across phenotypes, not only in ultrarapid metabolisers. This single pair explains a large share of real-world TCA toxicity reports.",
+      afterSectionId: "neural-pathways",
+    },
+    {
+      id: "tca-nor-06",
+      question: "A 45-year-old on nortriptyline 100 mg (plasma level 185 ng/mL) reports dry mouth, fine tremor and palpitations. ECG shows QTc 440 ms and QRS 90 ms, rhythm sinus. The best management is:",
+      options: [
+        "Continue the same dose — the level is acceptable",
+        "Double the dose to convert non-response into response",
+        "Reduce the dose — the level is above the 50-150 ng/mL window and toxicity signs are present",
+        "Give immediate IV sodium bicarbonate"
+      ],
+      correctIndex: 2,
+      explanation: "A level above the therapeutic window plus clinical anticholinergic-adrenergic signs is the textbook indication for dose reduction and a recheck — more drug means more toxicity, not more benefit. Bicarbonate is the overdose antidote for widened conduction; at QRS 90 ms with stable rhythm there is no such indication, and calling the level 'acceptable' ignores both the number and the symptoms. This is the mirror image of the under-dosed level question — window logic in the toxic direction.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tca-nor-07",
+      question: "A 70-year-old woman on amitriptyline 25 mg for chronic pain has daytime sedation, constipation and a near-fall. Her physician wants to retain TCA efficacy with less anticholinergic and orthostatic burden. The best switch is to:",
+      options: [
+        "Nortriptyline",
+        "Trimipramine",
+        "Dothiepin",
+        "Clomipramine"
+      ],
+      correctIndex: 0,
+      explanation: "Moving from a tertiary amine (amitriptyline) to its secondary-amine metabolite nortriptyline keeps most of the analgesic-antidepressant action while shedding muscarinic, sedative and orthostatic load — Indian texts note postural hypotension is less severe with the desipramine-like (secondary amine) drugs. Trimipramine and dothiepin are more sedating, and clomipramine adds anticholinergic and seizure concerns. This metabolite-switch is the standard geriatric manoeuvre in TCA-based pain management.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tca-nor-08",
+      question: "The one antidepressant for which therapeutic plasma-level monitoring is genuinely established in routine practice is:",
+      options: [
+        "Sertraline",
+        "Fluoxetine",
+        "Venlafaxine",
+        "Nortriptyline (with desipramine the other level-measurable secondary amine)"
+      ],
+      correctIndex: 3,
+      explanation: "Nortriptyline's defined 50-150 ng/mL window plus its linear kinetics make level-guided dosing genuinely useful — the flagship exception to 'antidepressants are never level-monitored'. SSRIs and SNRIs have flat dose-response curves and wide windows, so their levels add nothing actionable. Exam contrast to remember: TCAs are measurable because of their window and kinetics; modern antidepressants are not because of theirs.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

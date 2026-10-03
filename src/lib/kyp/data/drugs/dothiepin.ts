@@ -899,6 +899,110 @@ export const dothiepin: Drug = {
       explanation: "For depression (historic): start 25-50 mg at bedtime, target 75-150 mg/day, maximum 225 mg/day. Increase to 75-150 mg",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "tca-dot-01",
+      question: "Dothiepin (dosulepin) pharmacology in one line is:",
+      options: [
+        "Selective D2 antagonism with mild serotonergic action",
+        "Pure SERT blockade",
+        "Norepinephrine and serotonin reuptake inhibition with strong sedative action",
+        "Irreversible MAO inhibition"
+      ],
+      correctIndex: 2,
+      explanation: "Indian classification places dothiepin in the NA + 5-HT reuptake inhibitor group, and clinically it is among the most sedating TCAs — the combination that made it popular for depressed patients with insomnia. D2 antagonism would make it an antipsychotic (only amoxapine among antidepressants does that), no TCA is a pure SERT blocker (that is the SSRI definition), and irreversible MAO inhibition is the phenelzine world. Its sedation is H1-mediated, exactly like its class-mates.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "tca-dot-02",
+      question: "Dothiepin's standing in India and the UK is best described as:",
+      options: [
+        "First-line drug for paediatric OCD",
+        "A US-labelled hypnotic",
+        "Restricted to research settings",
+        "A widely dispensed sedating TCA in India and the UK for depression with anxiety and insomnia"
+      ],
+      correctIndex: 3,
+      explanation: "PROTHIADEN and DOTHIN remain familiar Indian brands, and dosulepin was for decades one of the most-dispensed TCAs in UK general practice — its niche being depressed patients who need sedation. It has no paediatric OCD role (clomipramine/SSRIs own that), no US hypnotic label (that is low-dose doxepin), and its research-only description is the opposite of its history. Its later reputation — overdose lethality — is what the next questions address.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tca-dot-03",
+      question: "A 34-year-old with depression and recent suicidal ideation is to be managed as an outpatient. The team decides to try a TCA for cost reasons. Which TCA tops the fatal-toxicity tables and should specifically be avoided in this setting?",
+      options: [
+        "Lofepramine",
+        "Dothiepin",
+        "Nortriptyline",
+        "Desipramine"
+      ],
+      correctIndex: 1,
+      explanation: "Dosulepin consistently ranks at or near the top of TCA lethality tables — Indian texts pair it with amitriptyline as the overdose-dangerous members — so it is precisely the wrong TCA for an outpatient with active suicidal thinking. Lofepramine is the safe-side answer, nortriptyline is comparatively cardiac-tolerated, and desipramine, though feared for arrhythmia, does not top the lethality rankings. The general rule: live suicide risk plus TCA means choosing the least-lethal member or, better, no TCA at all.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tca-dot-04",
+      question: "A 42-year-old woman in India has moderate depression with marked insomnia and anxiety; SSRIs caused intolerable agitation. The clinic pharmacy stocks standard Indian TCA brands. A sensible choice is:",
+      options: [
+        "Dothiepin 25-50 mg at night (PROTHIADEN/DOTHIN)",
+        "Protriptyline at night",
+        "Desipramine at night",
+        "Maprotiline at night"
+      ],
+      correctIndex: 0,
+      explanation: "Her symptom cluster (insomnia, anxiety) is the classic indication for a sedating TCA, and dothiepin is both strongly sedating and reliably stocked in Indian pharmacies under PROTHIADEN/DOTHIN. Protriptyline and desipramine are the activating TCAs and would worsen her agitation and sleeplessness, and maprotiline brings the class's worst seizure risk without sedative advantage. Note the dosing logic: start low at night and titrate — TCAs are not loading-dose drugs.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tca-dot-05",
+      question: "A 78-year-old on dothiepin 50 mg at night adds an over-the-counter diphenhydramine sleep syrup and oxybutynin for urinary urgency. Three days later the family reports acute confusion, a dry tongue and failed urination. The best explanation is:",
+      options: [
+        "Additive anticholinergic burden — antimuscarinic toxicity from the TCA, antihistamine and oxybutynin together",
+        "Serotonin syndrome",
+        "Dothiepin-induced SIADH alone",
+        "Opioid withdrawal"
+      ],
+      correctIndex: 0,
+      explanation: "Three anticholinergics stacked in an elderly man produce the classic antimuscarinic delirium with retention — dry skin and tongue, confusion, blocked bladder — the textbook geriatric polypharmacy trap that every 'avoid in elderly' list warns about. There is no serotonergic drug load for serotonin syndrome, SIADH causes hyponatraemia rather than retention with a dry tongue, and nothing about the picture suggests opioid withdrawal. Before adding any drug to a TCA, count the anticholinergic burden first.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tca-dot-06",
+      question: "A rural patient collects PROTHIADEN 25 mg for depression with insomnia. The pharmacist's most important counselling points are:",
+      options: [
+        "Take at bedtime; expect drowsiness — avoid driving and machinery, avoid alcohol, and report urinary retention or a racing heartbeat",
+        "Take it in the morning with tea for energy",
+        "Stop as soon as mood improves, usually within 3-4 days",
+        "Combine it freely with over-the-counter cold remedies for congestion"
+      ],
+      correctIndex: 0,
+      explanation: "Dothiepin counselling is the TCA triad: sedation (no driving, no alcohol), anticholinergic warnings (retention, constipation) and cardiac warning signs, with bedtime dosing to exploit the drowsiness. Morning dosing fights the pharmacology, stopping at day 3-4 both ignores the 1-2 week onset and invites relapse (effective treatment continues for months), and cold remedies add sympathomimetic and anticholinergic interactions. Indian exam formats increasingly test pharmacist-level counselling points, not just mechanisms.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tca-dot-07",
+      question: "A 58-year-old man with coronary artery disease (stented two years ago) is prescribed dothiepin for depression with insomnia. Which monitoring or precaution matters most?",
+      options: [
+        "Baseline and follow-up ECG — TCAs slow intraventricular conduction and are arrhythmogenic, especially in ischaemic heart disease",
+        "Weekly serum sodium measurement",
+        "Monthly prolactin levels",
+        "Annual vitamin B12 levels"
+      ],
+      correctIndex: 0,
+      explanation: "TCA arrhythmias cluster in patients with ischaemic heart disease — Indian texts call arrhythmia the effect that can cause sudden death in these patients — so baseline ECG and cardiac review precede the prescription, and the acute post-MI phase is a reason to avoid TCAs entirely. Sodium monitoring is a real but secondary issue for antidepressants (SIADH), and prolactin and B12 have no place in TCA monitoring. Cardiac disease gates TCA prescribing the way hepatic disease gates duloxetine.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "tca-dot-08",
+      question: "Dosulepin's notorious distinction in antidepressant safety data is:",
+      options: [
+        "The highest risk of tardive dyskinesia among antidepressants",
+        "The most hepatotoxic antidepressant in routine use",
+        "Among the most lethal TCAs in overdose — a key reason prescribers moved to SSRIs",
+        "The only antidepressant that causes hypertension"
+      ],
+      correctIndex: 2,
+      explanation: "UK fatal-toxicity analyses put dosulepin at the head of the TCA lethality table, and Indian texts pair it with amitriptyline as particularly dangerous in overdose — the single biggest clinical argument that displaced TCAs from first-line use. Tardive dyskinesia is dopamine-blockade territory (antipsychotics, amoxapine), hepatotoxicity fame belongs to duloxetine and the MAOI hydrazines historically, and venlafaxine's dose-related hypertension is real but neither unique nor dosulepin's. One number-free superlative, endlessly examined: dosulepin = most lethal TCA.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

@@ -1761,6 +1761,110 @@ export const fluvoxamine: Drug = {
       explanation: "OCD takes 8–12 weeks for full SSRI response — LONGER than depression's 4–6 weeks. Declaring failure at 4 weeks (and switching) means stopping before the drug has had a chance to work. Continue at adequate dose (200–300mg/day for fluvoxamine) for at least 12 weeks before declaring failure. Counsel patience at initiation.",
       afterSectionId: "evidence-practice",
     },
+    {
+      id: "ssri-flv-01",
+      question: "Which single psychiatric indication carries the US FDA label for fluvoxamine?",
+      options: [
+        "Major depressive disorder",
+        "Obsessive-compulsive disorder",
+        "Generalised anxiety disorder",
+        "Bulimia nervosa"
+      ],
+      correctIndex: 1,
+      explanation: "KYP tags fluvoxamine 'OCD-only FDA indication', matching Katzung's note that it is approved only for obsessive-compulsive behaviour. Social anxiety is a recognised off-label niche, and Indian texts (Tripathi) also recommend it for GAD — but the FDA label remains OCD alone. MDD is labelled across the other SSRIs, and bulimia belongs to fluoxetine exclusively. Knowing which SSRI holds which niche label is a guaranteed exam point.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "ssri-flv-02",
+      question: "A 52-year-old with spinal spasticity on fluvoxamine 100 mg/day is offered tizanidine 4 mg for muscle spasm. The pharmacist flags the combination because:",
+      options: [
+        "Both drugs are alpha-2 agonists — additive bradycardia and hypotension",
+        "Fluvoxamine potently inhibits CYP1A2, the enzyme that clears tizanidine — the pair is contraindicated",
+        "Tizanidine induces CYP2D6, crashing fluvoxamine levels",
+        "Tizanidine is a strong 2D6 inhibitor that will raise SSRI exposure"
+      ],
+      correctIndex: 1,
+      explanation: "Tizanidine is a CYP1A2 substrate; fluvoxamine is the class's prototypical potent 1A2 inhibitor and multiplies tizanidine exposure, producing severe hypotension and sedation — hence a contraindication, not a mere caution. Alpha-2 agonism is tizanidine's mechanism alone (fluvoxamine has none), and options C and D both invert the pharmacology, since tizanidine neither induces nor inhibits the relevant enzymes. The 1A2 owner of the SSRI class is always fluvoxamine.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "ssri-flv-03",
+      question: "A 31-year-old stable on clozapine 300 mg develops disabling OCD rituals and is started on fluvoxamine. Two weeks later: excessive sedation, pooling saliva and a generalised seizure. The most likely explanation:",
+      options: [
+        "Fluvoxamine's CYP1A2 inhibition has pushed clozapine into toxic concentrations",
+        "Serotonin syndrome — clozapine plus SSRI serotonergic loading",
+        "Additive anticholinergic burden producing a cholinergic crisis",
+        "Clozapine has induced fluvoxamine's metabolism, causing SSRI withdrawal"
+      ],
+      correctIndex: 0,
+      explanation: "Clozapine is cleared substantially by CYP1A2; fluvoxamine's potent 1A2 blockade raises clozapine levels — hence sedation, hypersalivation and dose-related seizures (the same logic as the fluvoxamine–theophylline pair). Some units exploit this deliberately as a low-dose 'clozapine booster', but as an unplanned add-on it is straightforward toxicity. Clozapine blocks rather than loads 5-HT2A, so serotonin syndrome does not fit; a 'cholinergic crisis' is the opposite of anticholinergic excess; and the induction story runs the wrong way.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "ssri-flv-04",
+      question: "Fluvoxamine's pharmacokinetic fingerprint is best described as:",
+      options: [
+        "Half-life about 18 hours with no active metabolite; a once-nightly CR formulation exists",
+        "Half-life about 33 hours with a long-lived active metabolite",
+        "Half-life 4-6 days; parent and nor-metabolite both active",
+        "Half-life about 5 hours; the O-desmethyl metabolite carries the effect"
+      ],
+      correctIndex: 0,
+      explanation: "Tripathi lists fluvoxamine's half-life as ~18 hours with no active metabolite — immediate-release dosing is typically twice daily, and the CR tablet exploits its tolerability for once-nightly dosing. The 33-hour claim belongs to citalopram (also without an active metabolite, so option B fails twice), 4-6 days with an active nor-metabolite is fluoxetine, and the 5-hour/O-desmethyl pattern is venlafaxine→desvenlafaxine. PK fingerprints like these are reliable SSRI distractor material.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "ssri-flv-05",
+      question: "A 44-year-old on fluvoxamine is given linezolid for suspected MRSA cellulitis. On day 3 she is agitated and diaphoretic, with hyperreflexia, inducible clonus and temperature 38.4°C. Diagnosis and management:",
+      options: [
+        "Neuroleptic malignant syndrome — start bromocriptine and cool aggressively",
+        "Cellulitis with early sepsis — escalate antibiotics and continue all current drugs",
+        "Serotonin syndrome from the fluvoxamine–linezolid pair — hold the offending drugs and give supportive care (± cyproheptadine)",
+        "Fluvoxamine discontinuation syndrome — restart the SSRI and taper later"
+      ],
+      correctIndex: 2,
+      explanation: "Linezolid is a weak MAOI; stacked on fluvoxamine — a strongly serotonergic SSRI — it is the textbook serotonin-syndrome setup: clonus, hyperreflexia, hyperthermia and agitation. NMS shows lead-pipe rigidity and evolves over days to weeks, sepsis does not produce inducible clonus, and discontinuation symptoms appear after stopping rather than adding a serotonergic agent. Hold both drugs, support actively, and reserve cyproheptadine for significant cases.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "ssri-flv-06",
+      question: "Three weeks into fluvoxamine 50 mg at night for OCD, a 28-year-old feels 'drugged' until mid-morning and still queasy, though her rituals have eased. Best next step:",
+      options: [
+        "Switch to fluoxetine — it is the sedating SSRI and will suit her better",
+        "Stop fluvoxamine — sedation proves she cannot tolerate the SSRI class",
+        "Add morning modafinil to pharmacologically cancel the sedation",
+        "Reassure and optimise timing: fluvoxamine is the more sedating-feeling SSRI, so keep the whole dose at bedtime and let the nausea settle"
+      ],
+      correctIndex: 3,
+      explanation: "KYP flags fluvoxamine as the more sedating-feeling SSRI, with nausea its commonest GI complaint — the fix is timing (the full dose at bedtime, matching the once-nightly CR design) and time, not abandonment, especially while her OCD is responding. Fluoxetine is the most activating of the class, sedation is not class intolerance, and adding a stimulant to solve a scheduling problem stacks a second drug's risks onto the first.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "ssri-flv-07",
+      question: "Fluvoxamine's signature drug-interaction liability is inhibition of which CYP isoform?",
+      options: [
+        "CYP2D6 — the enzyme behind tamoxifen activation failure",
+        "CYP2C9 — the warfarin and phenytoin route",
+        "CYP2E1 — the alcohol-inducible enzyme",
+        "CYP1A2 — the route for theophylline, clozapine and tizanidine"
+      ],
+      correctIndex: 3,
+      explanation: "Fluvoxamine is the class's prototypical CYP1A2 inhibitor — hence rising levels of theophylline, clozapine, duloxetine and the contraindicated tizanidine. 2D6 is fluoxetine's and paroxetine's territory (fluvoxamine is only a weak 2D6 inhibitor — a favourite Katzung contrast), 2C9 belongs to fluconazole, and 2E1 is alcohol metabolism. Pair each SSRI with its CYP fingerprint: fluvoxamine→1A2, fluoxetine/paroxetine→2D6, citalopram/escitalopram→modest.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "ssri-flv-08",
+      question: "A 58-year-old on duloxetine 60 mg for painful diabetic neuropathy is started on fluvoxamine for OCD-spectrum rituals. Ten days later she has severe nausea, tremor and sweating. The most likely mechanism:",
+      options: [
+        "Fluvoxamine inhibits CYP1A2, one of duloxetine's clearance routes — duloxetine levels rise and serotonergic load climbs",
+        "Duloxetine induces fluvoxamine's metabolism, triggering SSRI withdrawal",
+        "Additive noradrenergic toxicity causing a hypertensive emergency",
+        "Both drugs are strong 2D6 inhibitors — additive blockade causes a neuroleptic-malignant-like state"
+      ],
+      correctIndex: 0,
+      explanation: "Duloxetine is cleared by CYP1A2 and 2D6; fluvoxamine's potent 1A2 inhibition raises duloxetine exposure, stacking serotonergic toxicity (nausea, tremor, sweating) on top — exactly the pair KYP flags for caution. Neither drug is a paroxetine-class 2D6 inhibitor, the induction story runs backwards, and a hypertensive emergency is an MAOI/tyramine or noradrenergic-overdose picture, not this combination.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
 
   /* End-of-page active recall questions */

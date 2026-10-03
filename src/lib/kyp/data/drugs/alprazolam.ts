@@ -878,6 +878,110 @@ export const alprazolam: Drug = {
       explanation: "For panic disorder (ir): start 0.25–0.5 mg three times daily, target 1–4 mg/day (up to 6), maximum 4 mg/day (10 mg exceptional, short-term). Increase by ≤ 0.5 mg/day every 3–4 days",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "bzd-alp-01",
+      question: "Alprazolam's chemical identity within the benzodiazepine family is best described as:",
+      options: [
+        "A 1,4-benzodiazepine with a triazole ring fused at the 1,2-position — the triazolobenzodiazepine chemistry it shares with triazolam",
+        "An imidazopyridine structurally unrelated to benzodiazepines but active at the same site",
+        "A 1,5-benzodiazepine distinguished by nitrogen substitution at the ring's 5-position",
+        "A beta-carboline inverse agonist at the benzodiazepine site"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung notes the structures of alprazolam and triazolam add a triazole ring at the 1,2-position of the 1,4-benzodiazepine nucleus — the triazolobenzodiazepine subfamily. Option B is zolpidem's imidazopyridine chemistry, option C describes clobazam (the 1,5-isomer), and option D names beta-carbolines such as DMCM, which are inverse agonists and convulsants, not anxiolytics.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "bzd-alp-02",
+      question: "A 27-year-old woman reports recurrent unexpected panic attacks with palpitations, choking sensation and fear of dying, now with agoraphobic avoidance. Her physician wants rapid control of attacks while an SSRI is being titrated. The classic benzodiazepine choice here is:",
+      options: [
+        "Oxazepam",
+        "Flurazepam",
+        "Buspirone",
+        "Alprazolam"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung states alprazolam appears more selective in panic disorder and agoraphobia than other benzodiazepines, and Tripathi documents good response in panic disorder with severe autonomic symptoms (0.25-1 mg TDS, up to 6 mg/day). Buspirone is not a benzodiazepine, takes 3-4 weeks to act and is less effective in panic; flurazepam is an obsolete hypnotic; oxazepam is the short-lasting-anxiety agent, not the classic panic drug.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "bzd-alp-03",
+      question: "A 35-year-old man on alprazolam 0.5 mg three times daily for generalised anxiety says each dose calms him but anxiety 'comes roaring back' in the gaps between doses. The pharmacokinetic explanation and the practical fix are:",
+      options: [
+        "An excessively long half-life causes trough accumulation — the fix is once-weekly dosing",
+        "Enterogastric recirculation dumps the drug into the gut at each meal — take it with antacids",
+        "A short-intermediate half-life (about 12 hours) creates troughs of interdose rebound — a sustained-release (SR/XR) formulation can smooth them",
+        "An active metabolite competes with the parent drug — switch to a metabolite-free agent at higher TDS dosing"
+      ],
+      correctIndex: 2,
+      explanation: "Alprazolam's plasma half-life is about 12 hours (Tripathi's table; 12-15 hours in Katzung), so TDS dosing leaves troughs where rebound anxiety — a mini-withdrawal — emerges; Tripathi specifically recommends sustained-release tablets to obviate this interdose anxiety. Weekly dosing is fluoxetine-style pharmacology, not alprazolam's, and the recirculation and metabolite-competition stories describe mechanisms the drug does not have.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "bzd-alp-04",
+      question: "A patient who took alprazolam 1 mg three times daily for 8 months ran out of tablets 3 days ago and now has intense anxiety, insomnia, tremor and photophobia. The correct management principle is:",
+      options: [
+        "Reinstate the drug and taper slowly over weeks to months — abrupt cessation of a short-half-life high-potency benzodiazepine can cause severe withdrawal with rare seizures",
+        "Stop definitively and give a beta-blocker alone for two days",
+        "Switch immediately to full-dose zolpidem, a safer benzodiazepine agonist, then stop it after one week",
+        "Give a single intravenous flumazenil infusion to clear residual drug faster"
+      ],
+      correctIndex: 0,
+      explanation: "Tripathi warns alprazolam's discontinuation withdrawal is relatively more marked than with other BZDs, and Katzung notes abrupt discontinuance of short-half-life sedative-hypnotics causes rebound and withdrawal — the standard response is reinstate-then-taper over weeks to months. Zolpidem is an alpha-1-selective nonbenzodiazepine, not a safe swap, and flumazenil in a dependent patient can precipitate an abstinence syndrome with seizures instead of treating withdrawal.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "bzd-alp-05",
+      question: "Alprazolam's clearance depends chiefly on which metabolic pathway, making it vulnerable to which inhibitor pair?",
+      options: [
+        "Direct glucuronidation — probenecid and valproate raise levels",
+        "CYP3A4 oxidative metabolism — ketoconazole and erythromycin raise levels and deepen sedation",
+        "Renal filtration of unchanged drug — trimethoprim and cimetidine raise levels",
+        "CYP2D6 hydroxylation — fluoxetine and paroxetine raise levels"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi names ketoconazole and erythromycin among CYP3A4 inhibitors that prolong benzodiazepine action, and Katzung highlights alprazolam (with diazepam, midazolam and triazolam) as a P450-sensitive agent. The glucuronidation-only pathway is the LOT signature (lorazepam-oxazepam-temazepam), renal excretion of unchanged benzodiazepine fits no member, and 2D6 belongs to tricyclics and codeine rather than alprazolam.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "bzd-alp-06",
+      question: "Within the benzodiazepine half-life spectrum, alprazolam's elimination half-life is best matched by which figure?",
+      options: [
+        "About 2-3 hours — the ultrashort end of the class",
+        "About 12 hours — a short-intermediate half-life that explains interdose rebound on TDS dosing",
+        "About 50-100 hours including active metabolites — the long end of the class",
+        "About 30-60 hours of effective cover with marked tissue redistribution"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi's table lists alprazolam at about 12 hours and Katzung at 12-15 hours — squarely short-intermediate, which is exactly why interdose rebound and marked withdrawal occur with TDS anxiolytic dosing. The 2-3 hour figure is triazolam's, 50-100 hours belongs to flurazepam/clorazepate territory, and 30-60 hours with redistribution mirrors diazepam — each a deliberate mirror the answer rejects.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "bzd-alp-07",
+      question: "A Delhi psychiatrist starts a patient on 0.5 mg TDS of a high-potency anxiolytic dispensed as ALPRAX, then switches to ALPRAX-SR when interdose anxiety appears. Which drug and Indian brand family is in play?",
+      options: [
+        "Lorazepam — LARPOSE/ATIVAN 1 and 2 mg tablets",
+        "Alprazolam — ALPRAX/ALZOLAM/RESTYL with 0.25-1 mg tablets and 0.5-1.5 mg SR/CR forms",
+        "Chlordiazepoxide — LIBRIUM 10 and 25 mg tablets",
+        "Diazepam — CALMPOSE/PLACIDOX 2, 5, 10 mg tablets"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi lists alprazolam in India as ALPRAX, ALZOLAM and RESTYL in 0.25, 0.5, 1 mg tablets with SR/CR versions at 0.5, 1, 1.5 mg, dosed 0.25-1 mg TDS up to 6 mg/day in panic disorder. The other brand families belong to batch-mates: LARPOSE/ATIVAN to lorazepam, LIBRIUM to chlordiazepoxide, and CALMPOSE/PLACIDOX to diazepam.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "bzd-alp-08",
+      question: "A 40-year-old with persistent anxiety plus low-grade depressive features (low mood, easy fatigability, no psychotic symptoms) is referred for a benzodiazepine trial. Which member is classically noted for some mood-elevating action in mild depression alongside its anxiolytic effect?",
+      options: [
+        "Oxazepam",
+        "Clonazepam",
+        "Flurazepam",
+        "Alprazolam"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi describes alprazolam as a high-potency anxiolytic that in addition has some mood-elevating action in mild depression, making it classically useful in anxiety associated with depression. Oxazepam is the short-lasting/elderly anxiolytic, clonazepam is primarily an anticonvulsant, and flurazepam is an obsolete hypnotic — none carries the mood-elevating tag.",
+      afterSectionId: "quick-facts",
+    },
   ],
   activeRecallQuestions: [
     {

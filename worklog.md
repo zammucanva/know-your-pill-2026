@@ -2093,3 +2093,25 @@ Work Log:
 Stage Summary:
 - COMPLETE: 145 monographs / ~174k lines / 101/101 book drugs / 178 MCQs live at github.com/zammucanva/KYP-STALHS-NOTES
 - Remaining manual step for user: set default branch to main (PAT permission limit)
+
+---
+Task ID: mcq-bank-1191-release
+Agent: Main agent (Super Z)
+Task: MCQ BANK 1,191 — final verification + release (feat/mcq-bank-1191 → main)
+
+Work Log:
+- Phase 0: branch did not exist on know-your-pill-2026; delivery located on KYP-STALHS-NOTES branch mcq-bank-delivery (c0a9945) as a git-am patch (171 files). Old clone polluted by another session → fresh clean clone at /home/z/my-project/kyp-mcq. Applied patch on origin/main (099567d) → bd9b66a, pushed feat/mcq-bank-1191. HANDOFF.md read in full before any decision.
+- Phase 1: 18 batch JSONs, 1,191 total (1,173 drug + 18 mixed), 145 monographs, mixed parked with drugSlug="mixed" in batches + identical copies in mixed-unassigned.json; no id duplicates.
+- Phase 2+3 (runtime): 1,644 microQuizzes in drug files (471 original + 1,173 bank), exactly 6 fields on every object, zero forbidden fields, zero text mismatches vs JSON sources; single pre-existing zotepine quiz-side-effects duplicate-options defect (present on main, engine-excluded, documented) — NOT a bank defect.
+- Phase 4: tsc exit 0; quiz-import-check pass with exact expected values (sertraline 18/alprazolam 11/lithium 11/clozapine 11/fluvoxamine 14); build exit 0; merge script idempotent: inserted=0 skipped=1173.
+- Phase 5: 4-step gate exit 0 on all 18 batches; 16 clean; Batch_01's 3 S2 flags verified as regex false positives (distractor/cross-drug text); Batch_09's 80 S2 flags = QA-script FACTS table lacks the 10 second-tier typicals (tooling gap, not content).
+- Phase 6/7: page.tsx + types.ts zero diff vs main; authored pool 1,643 at engine level (1,644 − documented zotepine exclusion), no duplicate identities; sertraline authored pool 18.
+- Phase 8 (browser, production server): sertraline 6 inline quizzes (originals unchanged), answer+explanation flow works; Custom Test full cycle (setup→18 questions→scoring→retest of incorrect) works, weak-area tracking live; SSRI class page 410-question aggregate = exact engine pool (97 authored + 313 generated). Zero console/page errors on all three routes.
+- DEFECT FOUND + FIXED (mission Phase 3 "no invalid afterSectionId"): 15 bank questions anchored to sections the drug page does not render ('brain' ×2, 'pathways' ×13 — proven absent in rendered HTML), breaking the NOW-N6 deep-link contract. Corrective fix: brain→brain-regions, pathways→neural-pathways in both source batches (surgical text edit, formatting preserved) and merged drug files. No ids/text/options/answers/explanations touched; merge idempotency re-verified (inserted=0 skipped=1173).
+- Phase 11: initial suite run 5 failures — 4 stale hardcoded counts (477/470) + the NOW-N6 anchor defect. Fixed counts in custom-test/question-depth/content-lock tests (1,650 total, 1,643 pool); regenerated content-lock baseline (165 files, counts 145/1/3/1650/340) + medical-data snapshot; value-level proof: 0 non-quiz drug-value changes, 0 original quizzes altered, delta exactly +1,173.
+- Final: tsc 0, import-check pass, build 0, merge inserted=0, bun test 1,426 pass / 0 fail, content-lock PASS, medical-data UNCHANGED, OSV 0 production advisories.
+
+Stage Summary:
+- Bank released for PR: 1,191 questions (1,173 drug + 18 mixed parked), pool 1,644 authored (1,643 after documented pre-existing exclusion).
+- One data defect corrected (15 placement anchors), gates re-locked to new state. No bank content rewritten; MicroQuiz schema exactly 6 fields.
+- Phase 2 UI work NOT performed (explicitly out of scope).

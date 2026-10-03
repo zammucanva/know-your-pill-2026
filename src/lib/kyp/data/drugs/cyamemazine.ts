@@ -805,6 +805,110 @@ export const cyamemazine: Drug = {
       explanation: "For anxiety states: start 25 mg twice daily, target 50–150 mg/day, maximum 200 mg/day. Titrate to 50–150 mg/day",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "tap-cya-01",
+      question: "Cyamemazine's pharmacological identity is best described as:",
+      options: [
+        "A high-potency butyrophenone with intense EPS",
+        "A low-potency, sedating phenothiazine",
+        "A partial D2 agonist of the aripiprazole type",
+        "A selective serotonin reuptake inhibitor"
+      ],
+      correctIndex: 1,
+      explanation: "Cyamemazine is a classic low-potency phenothiazine whose sedation follows the chlorpromazine and thioridazine pattern — strong H1, alpha-1 and muscarinic actions with comparatively little EPS. Butyrophenones, partial D2 agonists and SSRIs describe entirely different receptor strategies.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "tap-cya-02",
+      question: "In countries where it is marketed (notably France), cyamemazine's characteristic niche is:",
+      options: [
+        "Low-dose anxiolytic-style use in anxiety states, with few EPS",
+        "First-line parenteral treatment of acute mania",
+        "Reversal of opioid overdose",
+        "Suppression of tics in Tourette disorder"
+      ],
+      correctIndex: 0,
+      explanation: "Cyamemazine is used anxiolytic-style at low doses in French practice — the sedating low-potency phenothiazine profile delivers calm without much EPS. Acute mania calls for high-potency or atypical agents, opioid reversal is naloxone's job, and tic suppression is pimozide and haloperidol territory.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-cya-03",
+      question: "A patient prescribed low-dose cyamemazine for anxiety asks why the cardiologist insists on an ECG for a calming tablet. The best answer is:",
+      options: [
+        "Low potency reduces EPS but does not remove QTc caution — phenothiazines can prolong repolarisation, so cardiac risk factors warrant an ECG",
+        "The ECG is needed because cyamemazine lowers serum potassium",
+        "Low-potency phenothiazines carry the greatest torsades risk of all psychotropics",
+        "The ECG monitors for weight gain"
+      ],
+      correctIndex: 0,
+      explanation: "The lesson of thioridazine applies across the family: low EPS and low potency are not cardiac immunity, and cyamemazine carries sedation plus QTc caution as its watch-items. Cyamemazine does not waste potassium, and option C overstates the family — the notorious torsades names are thioridazine, mesoridazine and pimozide.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-cya-04",
+      question: "Which adverse-effect pairing across the potency spectrum is correct?",
+      options: [
+        "Both low- and high-potency phenothiazines produce identical adverse-effect profiles",
+        "Cyamemazine — more EPS; haloperidol — more agranulocytosis",
+        "Cyamemazine — more EPS with no sedation; haloperidol — profound sedation",
+        "Cyamemazine — more sedation and orthostatic dizziness with fewer EPS; haloperidol — more EPS with less sedation"
+      ],
+      correctIndex: 3,
+      explanation: "Potency logic: low-potency phenothiazines (chlorpromazine, thioridazine, cyamemazine) trade more sedation, alpha-blockade and anticholinergic load for less EPS, while high-potency drugs (haloperidol, fluphenazine, pimozide, thiothixene) invert the trade. Agranulocytosis is a clozapine issue, not a haloperidol one.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "tap-cya-05",
+      question: "A 34-year-old with disabling anxiety has failed two SSRIs due to intolerable effects. In a setting where cyamemazine is available, the prescribing professor describes its realistic role as:",
+      options: [
+        "A sedating low-potency phenothiazine with anxiolytic-style use — a short-term option, mindful of sedation and QTc",
+        "An activating NDRI suited to anxious insomniacs",
+        "A prolactin-sparing partial D2 agonist",
+        "A benzodiazepine-receptor antagonist for dependence cases"
+      ],
+      correctIndex: 0,
+      explanation: "Cyamemazine's realistic niche is exactly that: a low-potency sedating phenothiazine used anxiolytic-style, with counselling for daytime sedation and attention to QTc. Bupropion is the activating NDRI without an anxiolytic label, aripiprazole is the partial agonist, and flumazenil is the benzodiazepine antagonist.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-cya-06",
+      question: "A patient on cyamemazine for anxiety is also started on citalopram by a general practitioner. The interaction most worth flagging is:",
+      options: [
+        "Additive QTc prolongation from the combination",
+        "A tyramine (cheese) reaction with aged cheese",
+        "Acute renal failure when combined with NSAIDs",
+        "Complete loss of oral contraceptive efficacy"
+      ],
+      correctIndex: 0,
+      explanation: "Both drugs can delay ventricular repolarisation, so the combination invites additive QTc prolongation — check the ECG and the rest of the QT list rather than assume a low-potency phenothiazine is electrically harmless. Cheese reactions are MAOI territory, and neither renal failure with NSAIDs nor contraceptive failure is an established cyamemazine interaction.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-cya-07",
+      question: "The best mechanistic explanation for cyamemazine's low EPS burden compared with haloperidol is:",
+      options: [
+        "Selective striatal D4 receptor blockade",
+        "Partial agonism at D2 receptors shielding the striatum",
+        "Weaker overall D2 receptor blockade, so less interference with nigrostriatal dopamine",
+        "Inhibition of dopamine reuptake in the basal ganglia"
+      ],
+      correctIndex: 2,
+      explanation: "Low-potency phenothiazines block D2 less avidly, so nigrostriatal dopamine signalling is less disturbed — the simple basis of their gentler EPS profile. D4 selectivity is the clozapine-era hypothesis, partial agonism is aripiprazole's device, and dopamine reuptake inhibition would raise rather than lower striatal dopaminergic tone.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "tap-cya-08",
+      question: "Which availability statement about cyamemazine is accurate?",
+      options: [
+        "It is among the most prescribed antipsychotics in India",
+        "It is available in India as Clopixol",
+        "It is a US first-line antipsychotic",
+        "It is marketed mainly in France and is not a standard Indian antipsychotic"
+      ],
+      correctIndex: 3,
+      explanation: "Cyamemazine's market is essentially France and some European countries; Indian and US formularies do not stock it as a standard option. Clopixol is zuclopenthixol's brand, and the other two claims are simply false.",
+      afterSectionId: "quick-facts",
+    },
   ],
   activeRecallQuestions: [
     {

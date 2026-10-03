@@ -804,6 +804,110 @@ export const pimozide: Drug = {
       explanation: "For tourette's: start 0.5–1 mg once daily, target 1–4 mg/day (0.1 mg/kg in children), maximum 10 mg/day. Increase by 0.5–1 mg every few days (ECG-checked)",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "tap-pim-01",
+      question: "Pimozide's chemical family and receptor profile are best described as:",
+      options: [
+        "A diphenylbutylpiperidine that blocks dopamine D2 receptors with minimal alpha-adrenergic or muscarinic blockade",
+        "A thioxanthene congener whose D2 blockade closely resembles haloperidol",
+        "A dibenzoxazepine metabolised to a tetracyclic antidepressant",
+        "A substituted benzamide with equal D2 and D3 affinity"
+      ],
+      correctIndex: 0,
+      explanation: "Pimozide belongs to the diphenylbutylpiperidines, structurally related to the butyrophenones, and is a selective D2 antagonist with little alpha-adrenergic or cholinergic action (Tripathi). Option B describes thiothixene, option C describes loxapine, and option D describes sulpiride. Selective D2 blockade with a low autonomic load is the classic exam fingerprint of pimozide.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "tap-pim-02",
+      question: "A 9-year-old boy has had both motor and vocal tics for over a year, with marked school disruption despite behavioural therapy. Which classic antipsychotic is traditionally chosen to suppress such tics?",
+      options: [
+        "Chlorpromazine",
+        "Pimozide",
+        "Molindone",
+        "Trifluoperazine"
+      ],
+      correctIndex: 1,
+      explanation: "Dopamine receptor blockers such as pimozide, haloperidol and fluphenazine, plus the depleter tetrabenazine, are the classic tic-suppressing drugs, reducing tic frequency and intensity by about 60% (Katzung), and pimozide is a time-honoured option in Gilles de la Tourette syndrome. Chlorpromazine is too low-potency and sedating for tic control, and molindone and trifluoperazine were never standard tic therapies.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-pim-03",
+      question: "A patient with Tourette disorder is stable on once-daily pimozide and asks why his antipsychotic needs only one dose while a friend's chlorpromazine is taken several times a day. The pharmacokinetic reason is:",
+      options: [
+        "Pimozide undergoes complete renal excretion unchanged",
+        "Pimozide has the shortest half-life among antipsychotics",
+        "Pimozide has a long elimination half-life of roughly 48-60 hours, so its action lasts for days",
+        "Pimozide is a prodrug converted slowly by esterases"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi gives pimozide an elimination half-life of 48-60 hours with a duration of action of several days after a single oral dose — the basis of once-daily maintenance dosing. The same long action is why pimozide suits maintenance rather than acute agitation. Renal excretion of unchanged drug and esterase-activated prodrugs describe other molecules entirely, not pimozide.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "tap-pim-04",
+      question: "Before starting pimozide for tics in a 12-year-old, the physician reviews the family history and orders a baseline test that will be repeated during follow-up. Which test, and why?",
+      options: [
+        "Weekly CBC — pimozide causes dose-related agranulocytosis",
+        "Monthly LFTs — pimozide is strongly hepatotoxic",
+        "ECG — pimozide prolongs the QTc and can trigger ventricular arrhythmias",
+        "Serum prolactin — pimozide uniquely lowers prolactin"
+      ],
+      correctIndex: 2,
+      explanation: "Pimozide prolongs myocardial repolarisation: Tripathi specifically links it to QT prolongation and arrhythmia risk, and Katzung notes cardiac rhythm irregularities — hence a baseline and periodic ECG, with congenital long-QT an absolute contraindication. Weekly CBC monitoring belongs to clozapine, and pimozide raises (never lowers) prolactin like other D2 blockers.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-pim-05",
+      question: "A 12-year-old with Tourette disorder is well controlled on pimozide. Obsessive-compulsive symptoms emerge, and a general practitioner adds fluoxetine. Within two weeks the boy reports palpitations and dizziness. The most likely mechanism is:",
+      options: [
+        "Serotonergic excess, since pimozide shares fluoxetine's serotonergic action",
+        "Accelerated hepatic clearance of pimozide causing tic rebound",
+        "Fluoxetine-triggered acute dystonia",
+        "Rising pimozide levels from CYP2D6 inhibition, with additive QTc prolongation risking torsades"
+      ],
+      correctIndex: 3,
+      explanation: "Fluoxetine is a strong CYP2D6 inhibitor, pimozide depends on CYP2D6/3A4 for clearance, and the combination is contraindicated because pimozide levels rise while repolarisation delay becomes additive — Katzung repeatedly lists pimozide among the QT-critical interaction victims. Pimozide has no serotonergic action of its own, and dystonia is an EPS event, not an SSRI effect.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-pim-06",
+      question: "A 10-year-old with severe motor and vocal tics is to start an antipsychotic that classically requires ECG monitoring; his baseline ECG is normal. Which drug fits this plan?",
+      options: [
+        "Sertraline",
+        "Pimozide",
+        "Carbamazepine",
+        "Methylphenidate"
+      ],
+      correctIndex: 1,
+      explanation: "Pimozide is the classic dopamine-antagonist tic suppressant whose QTc liability mandates ECG vigilance; Katzung describes starting at 1 mg/day and titrating by 1 mg every 5 days, with most patients needing 7-16 mg/day. Sertraline is an SSRI for comorbid obsessive symptoms, not a tic suppressant, methylphenidate is a stimulant, and carbamazepine is an anticonvulsant with no tic indication.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-pim-07",
+      question: "The so-called QTc 'club' of antipsychotics — the drugs taught together as carrying the greatest torsades concern — is best matched by:",
+      options: [
+        "Haloperidol, trifluoperazine, and fluphenazine",
+        "Clozapine, olanzapine, and quetiapine",
+        "Pimozide, thioridazine, and mesoridazine",
+        "Sulpiride, molindone, and loxapine"
+      ],
+      correctIndex: 2,
+      explanation: "Pimozide shares the repolarisation story of the piperidine phenothiazines thioridazine and mesoridazine: Tripathi names thioridazine, pimozide and ziprasidone for QT-prolongation risk, and Katzung lists pimozide with thioridazine among the drugs ziprasidone must not meet. The piperazine group of option A is the EPS club rather than the QTc club, and option B names drugs notorious for metabolic, not electrical, toxicity.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "tap-pim-08",
+      question: "Which Indian preparation list correctly matches pimozide?",
+      options: [
+        "Loxapac capsules of 10, 25, 50 mg",
+        "Fluanxol tablets of 0.5, 1, 3 mg",
+        "Sulpitac tablets of 50, 100, 200 mg",
+        "Orap, Neurap, Pimodac tablets of 2 and 4 mg"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi's preparation table lists pimozide in India as ORAP, NEURAP and PIMODAC 2 and 4 mg tablets. Loxapac is loxapine, Fluanxol is flupenthixol, and Sulpitac is sulpiride — each a real brand of a different batch-mate drug. Small-milligram tablets suit pimozide's high potency and 1 mg/day style titration.",
+      afterSectionId: "quick-facts",
+    },
   ],
   activeRecallQuestions: [
     {

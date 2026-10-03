@@ -815,6 +815,110 @@ export const varenicline: Drug = {
       explanation: "For smoking cessation (standard): start 0.5 mg once daily × 3 days, then 0.5 mg twice daily × 4 days, target 1 mg twice daily, maximum 1 mg twice daily. Quit smoking on day 8; then 1 mg twice daily for 12 weeks",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "sud-var-01",
+      question: "Varenicline's alpha4beta2 nicotinic partial agonism translates into which dual clinical benefit in smoking cessation?",
+      options: [
+        "Enough agonist activity to ease craving and withdrawal, while blocking full nicotine from producing its dopamine reward burst",
+        "Complete blockade of all nicotinic receptor subtypes, abolishing withdrawal symptoms at once",
+        "Irreversible occupation of nicotinic receptors, allowing once-weekly dosing",
+        "Upregulation of dopamine transporters that accelerates dopamine clearance from the synapse"
+      ],
+      correctIndex: 0,
+      explanation: "Because nicotine's reinforcing action runs through alpha4beta2 receptors in the mesolimbic system, varenicline's partial agonism substitutes enough activity to dampen craving and withdrawal while its persistent antagonist component blocks the reward of smoked nicotine (Tripathi ch.30; Katzung ch.7). Full blockade would worsen withdrawal rather than ease it, the receptor binding is high-affinity but not irreversible, and dopamine-transporter upregulation is not part of its mechanism.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "sud-var-02",
+      question: "A 36-year-old smoker with depression in remission asks to start varenicline. The correct, current counselling is:",
+      options: [
+        "Bupropion must be stopped first, because the pair causes serotonin syndrome together",
+        "Nausea is the commonest effect (take each dose with food and a full glass of water); monitor mood, since neuropsychiatric events carried a boxed warning from 2008 that was removed in 2016 after the EAGLES trial",
+        "Varenicline is permanently contraindicated in anyone with any past history of depression",
+        "Sertraline must be co-prescribed with every varenicline course to prevent relapse of depression"
+      ],
+      correctIndex: 1,
+      explanation: "Nausea leads varenicline's adverse-effect list and is mitigated by food and water; the neuropsychiatric boxed warning added in 2008 was removed in 2016 after EAGLES found no significant increase in neuropsychiatric events, so monitoring - not a ban - is today's standard (KYP anchor; Katzung 14e notes low reported incidence with continued surveillance). Bupropion plus varenicline is an used combination rather than a serotonin-toxicity risk, and no rule demands prophylactic SSRI cover.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "sud-var-03",
+      question: "A 45-year-old smoking 30 cigarettes daily has failed two structured courses of the nicotine patch. Asking for 'the most effective single tablet', you advise:",
+      options: [
+        "Cytisine - the Indian-marketed compound with proven superiority over varenicline",
+        "Clonidine - the first-line central alpha2 agonist for tobacco dependence",
+        "Varenicline - head-to-head trials showed efficacy superior to bupropion, using a 0.5 mg once-daily titration up to 1 mg twice daily over about 12 weeks",
+        "Nortriptyline - the first-line pharmacotherapy for smokers with comorbid insomnia"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung 14e states varenicline's efficacy is superior to bupropion's, and Tripathi gives the 0.5 mg once daily titrated to 1 mg twice daily schedule for up to 12 weeks before tapering - the evidence-based choice after patch failure. Nortriptyline is a second-line antidepressant option rather than first-line, cytisine is varenicline's natural laburnum-flower analog without Indian market superiority, and clonidine is an off-label adjunct, not a first-line agent.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "sud-var-04",
+      question: "The most common adverse effect of varenicline, and its standard mitigation, is:",
+      options: [
+        "Diarrhoea - reduced by taking the dose with dairy products",
+        "Constipation - reduced by a high-fibre diet and osmotic laxatives",
+        "Weight gain - reduced by structured calorie counting during therapy",
+        "Nausea - reduced by taking each dose with food and a full glass of water"
+      ],
+      correctIndex: 3,
+      explanation: "Nausea (with insomnia and abnormal dreams) is the adverse effect that limits varenicline use, and taking it with food and water is the label-level mitigation (Katzung ch.7; KYP anchor). Diarrhoea is acamprosate's GI signature rather than varenicline's, constipation is not its profile, and post-cessation weight gain is a withdrawal phenomenon the drug does not cause - it is, if anything, the weight-gain-reduction point made for naltrexone.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "sud-var-05",
+      question: "A 58-year-old diabetic smoker with diabetic nephropathy (eGFR 25 mL/min) wants to quit with varenicline. The correct dose advice is:",
+      options: [
+        "Reduce the dose - varenicline is cleared by the kidneys with minimal CYP metabolism, so renal impairment raises its exposure",
+        "Use the full standard dose, because no smoking-cessation drug ever needs renal adjustment",
+        "Avoid varenicline and use full-dose bupropion, which is inherently safer in renal failure",
+        "Double the varenicline dose to compensate for loss of the drug during dialysis sessions"
+      ],
+      correctIndex: 0,
+      explanation: "Varenicline is renally excreted and not meaningfully CYP-metabolised, so the label calls for dose reduction in renal impairment (KYP anchor) - the same renal-clearance logic that governs acamprosate dosing. The blanket no-adjustment claim is false, bupropion's metabolites accumulate in renal impairment so 'inherently safer at full dose' is wrong, and doubling for dialysis invents kinetics that do not exist.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "sud-var-06",
+      question: "An elderly smoker on cimetidine for peptic ulcer disease starts varenicline and reports disproportionate nausea. The pharmacokinetic explanation is:",
+      options: [
+        "The pair forms an insoluble chelate in the gut that destroys both molecules",
+        "Cimetidine inhibits the renal tubular transporter that secretes varenicline, raising its plasma exposure",
+        "Cimetidine induces CYP3A4, lowering varenicline levels and triggering craving-driven overuse",
+        "Varenicline inhibits cimetidine's renal secretion, causing ulcer flare and secondary nausea"
+      ],
+      correctIndex: 1,
+      explanation: "Varenicline's clearance is largely renal tubular secretion, and cimetidine inhibits that transporter, raising varenicline exposure and its nausea (KYP anchor; consistent with its non-CYP profile). Induction is the wrong direction for an inhibitor like cimetidine, varenicline does not slow cimetidine clearance, and gut chelation is the tetracycline-antacid interaction, not this pair.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "sud-var-07",
+      question: "A 40-year-old in treatment for alcohol-use disorder who also smokes heavily asks whether the anti-smoking tablet will help or harm his drinking. The evidence-based answer is:",
+      options: [
+        "Varenicline reduces alcohol craving but predictably worsens smoking outcomes in dual users",
+        "Varenicline is the approved first-line drug for alcohol dependence in India",
+        "Varenicline can reduce alcohol consumption in heavy-drinking smokers, so treating his tobacco dependence now is reasonable with monitoring",
+        "Varenicline is contraindicated in any patient with alcohol-use disorder"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung's alcoholism section cites trial evidence that varenicline decreases alcohol consumption in heavy-drinking smokers, so dual-dependence treatment is evidence-supported rather than forbidden. There is no alcohol-use-disorder contraindication, smoking outcomes are not worsened in dual users, and first-line approval for alcohol dependence belongs to naltrexone, acamprosate and disulfiram - not varenicline.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "sud-var-08",
+      question: "The partial-agonist teaching point that varenicline shares with aripiprazole is that:",
+      options: [
+        "Both are competitive antagonists at the same receptor family, differing only in dose",
+        "Both induce their own receptors over weeks, mandating automatic dose escalation",
+        "Both act exclusively on presynaptic autoreceptors, leaving postsynaptic signalling untouched",
+        "Both use partial agonism to provide baseline receptor activity while blocking overstimulation by the full agonist, whether nicotine or dopamine"
+      ],
+      correctIndex: 3,
+      explanation: "Varenicline at alpha4beta2 nicotinic receptors and aripiprazole at D2 receptors apply the same stabiliser logic - partial agonism supplies enough signal to prevent deficits yet caps the full agonist's overshoot; this cross-class parallel is a favourite INI-CET connection. Calling either drug a competitive antagonist destroys the concept, receptor self-induction is not part of either story, and neither is exclusively an autoreceptor agent.",
+      afterSectionId: "mechanism",
+    },
   ],
   activeRecallQuestions: [
     {

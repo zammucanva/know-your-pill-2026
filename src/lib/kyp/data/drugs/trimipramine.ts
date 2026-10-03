@@ -907,6 +907,110 @@ export const trimipramine: Drug = {
       explanation: "For depression: start 25-50 mg at bedtime, target 100-200 mg/day, maximum 300 mg/day (inpatient). Increase to 100-200 mg",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "tca-tri-01",
+      question: "Trimipramine's defining pharmacology among the TCAs is:",
+      options: [
+        "Essentially no NET or SERT reuptake inhibition — its actions come from strong H1 (plus muscarinic, alpha-1 and 5-HT2) receptor blockade",
+        "The strongest SERT blockade in the class",
+        "The strongest NET blockade in the class",
+        "Selective reversible inhibition of MAO-A"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung's receptor table rates trimipramine at or near zero for both transporters while giving it class-maximum H1 blockade — the unique 'non-reuptake TCA' whose clinical personality (sedation, appetite gain) is entirely receptor-driven. SERT supremacy is clomipramine's, NET supremacy is desipramine's, and reversible MAO-A inhibition defines moclobemide. Trimipramine is the standing proof that reuptake blockade is not the only route to antidepressant activity.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "tca-tri-02",
+      question: "The clinical niche where trimipramine is most at home is:",
+      options: [
+        "Depression with distressing weight gain requiring appetite suppression",
+        "Depressed patients with prominent insomnia and weight loss",
+        "OCD that has failed SSRIs",
+        "First-line therapy for diabetic neuropathic pain"
+      ],
+      correctIndex: 1,
+      explanation: "Trimipramine's H1-driven sedation and appetite stimulation make it the natural fit for the depressed patient who cannot sleep and is losing weight — the side effects become the treatment. Its appetite effect would aggravate an already weight-gaining patient, OCD wants clomipramine or SSRIs, and diabetic neuropathy's first-line options are amitriptyline, duloxetine or pregabalin. Matching drug 'side effects' to symptom deficits is the TCA-era selection skill this batch keeps testing.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tca-tri-03",
+      question: "A 39-year-old woman on trimipramine 75 mg at bedtime reports sleeping 10 hours, morning sluggishness and 4 kg weight gain over six weeks — though her insomnia has resolved. The best counselling is:",
+      options: [
+        "These effects mean the drug is failing — stop it immediately",
+        "Weight gain signals imminent diabetes — start metformin now",
+        "These effects are permanent and must be accepted",
+        "Sedation and weight gain are expected, dose-related H1-mediated effects — review dose timing, diet and the benefit-risk balance"
+      ],
+      correctIndex: 3,
+      explanation: "Deep sedation and appetite-driven weight gain are the signature H1 effects of trimipramine — dose-related, reversible and manageable through dose timing, reduction and lifestyle work rather than alarm. Her sleep improvement shows the drug is working, not failing; metformin is not an automatic prescription for drug-induced weight gain; and nothing about H1 pharmacology is permanent. Set expectations early — this pair of effects is the most common reason patients quietly stop TCAs.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tca-tri-04",
+      question: "How can trimipramine still act as an antidepressant despite negligible monoamine reuptake blockade?",
+      options: [
+        "It is a prodrug converted into desipramine overnight",
+        "It releases monoamines the way amphetamine does",
+        "Receptor blockade (H1/5-HT2) triggers the same delayed downstream neuroplastic adaptations — reuptake blockade is not the only road to antidepressant change",
+        "Its antidepressant effect is purely a placebo phenomenon"
+      ],
+      correctIndex: 2,
+      explanation: "Antidepressant change ultimately reflects downstream signalling and neuroplastic remodelling, which receptor blockade can initiate just as transporter blockade can — trimipramine carries trial evidence for efficacy despite a near-zero reuptake score. It is not a prodrug to desipramine (its demethylated metabolite is its own), it has no amphetamine-like releasing action, and dismissing the effect as placebo contradicts the trial record. Advanced framing: the monoamine hypothesis describes entry points, not the endpoint.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "tca-tri-05",
+      question: "A 47-year-old depressed after job loss has severe initial insomnia, a 6 kg weight loss and anxious ruminations. SSRIs were not tolerated and a TCA is planned. The best fit is:",
+      options: [
+        "Protriptyline in the morning",
+        "Trimipramine at bedtime",
+        "Desipramine in the morning",
+        "Maprotiline at night in high dose"
+      ],
+      correctIndex: 1,
+      explanation: "A sedating, appetite-restoring TCA taken at bedtime matches his insomnia, weight loss and anxiety — trimipramine's receptor profile is being prescribed as therapy. Protriptyline and desipramine are the activating options and would worsen sleeplessness and jitteriness, and maprotiline adds serious seizure liability without any specific appetite benefit. This is the same symptom-matching principle tested for amitriptyline, taken one drug deeper into the class.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tca-tri-06",
+      question: "An epileptic patient on carbamazepine starts trimipramine for depression, and the response at usual doses is poor. The best explanation is:",
+      options: [
+        "Carbamazepine displaces trimipramine from plasma proteins, increasing free drug and toxicity",
+        "Trimipramine accelerates the clearance of carbamazepine",
+        "Carbamazepine blocks trimipramine's central receptors",
+        "Carbamazepine, a strong enzyme inducer, accelerates TCA metabolism and lowers tricyclic levels"
+      ],
+      correctIndex: 3,
+      explanation: "Enzyme inducers — carbamazepine, phenytoin, phenobarbitone — enhance TCA metabolism and can drop levels below the therapeutic range, exactly what Indian texts warn for tricyclics. Protein displacement would cause transient toxicity rather than non-response, the induction direction in the second option is reversed, and receptor blockade is invented. Double warning for this patient: the interaction lowers efficacy while the TCA simultaneously lowers his seizure threshold — a specialist-level combination.",
+      afterSectionId: "neural-pathways",
+    },
+    {
+      id: "tca-tri-07",
+      question: "SURMONTIL 10 and 25 mg tablets, listed in Indian formularies, contain:",
+      options: [
+        "Doxepin",
+        "Imipramine",
+        "Trimipramine",
+        "Nortriptyline"
+      ],
+      correctIndex: 2,
+      explanation: "SURMONTIL is the trimipramine brand in the Indian comparative-properties table — the sedating, reuptake-weak TCA. The neighbours are worth memorising together: DEPSONIL/ANTIDEP is imipramine, DOXIN/SPECTRA/DOXETAR is doxepin, SAROTENA/TRYPTOMER is amitriptyline. Brand-to-generic mapping questions survive in Indian exams precisely because formulary substitution errors are real-world events.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tca-tri-08",
+      question: "A junior resident argues that a trimipramine overdose should be nearly harmless 'because it barely blocks reuptake'. The correct response is:",
+      options: [
+        "Wrong — muscarinic, alpha-1 and H1 blockade plus class 1A-like sodium-channel effects still make it cardiotoxic and potentially lethal in overdose",
+        "Correct — weak reuptake blockade means weak toxicity",
+        "Only its metabolite is dangerous; the parent is safe",
+        "Its overdose toxicity is limited to sedation"
+      ],
+      correctIndex: 0,
+      explanation: "Overdose danger comes from the same receptor actions and myocardial sodium-channel blockade that produce side effects — none of which requires reuptake inhibition — so trimipramine overdose still demands ECG monitoring and bicarbonate if conduction widens. 'Weak reuptake, weak toxicity' is the seductive trap this question exists to kill; the metabolite claim and the sedation-only claim are both false. Class membership, not transporter potency, sets the overdose protocol.",
+      afterSectionId: "timeline",
+    },
   ],
   activeRecallQuestions: [
     {

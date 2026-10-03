@@ -888,6 +888,110 @@ export const topiramate: Drug = {
       explanation: "For migraine prophylaxis: start 25 mg at night, target 50-100 mg/day, maximum 200 mg/day. Increase by 25 mg weekly to 50-100 mg/day",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "mst-tpm-01",
+      question: "Topiramate's breadth of activity is explained by its multiple mechanisms. Which list is correct?",
+      options: [
+        "Voltage-gated sodium-channel blockade, AMPA/kainate receptor antagonism, GABA-A potentiation and weak carbonic anhydrase inhibition",
+        "Selective T-type calcium-channel blockade combined with GABA-transaminase inhibition",
+        "Alpha2-delta binding with auxiliary sodium-channel opening",
+        "SV2A binding with selective NMDA receptor antagonism"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung lists voltage-gated sodium channels, GABA-A receptor subtypes and AMPA/kainate receptors as topiramate's main sites, with weak carbonic anhydrase II/IV inhibition that occasionally causes clinically important metabolic acidosis. T-channel blockade defines ethosuximide, alpha2-delta binding the gabapentinoids, and SV2A binding levetiracetam.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "mst-tpm-02",
+      question: "A 34-year-old on topiramate for migraine prophylaxis reports two months of word-finding difficulty and mental slowing, and now presents with colicky left flank pain; urinalysis shows microscopic haematuria. The best explanation and management direction are:",
+      options: [
+        "An anxiety disorder with somatisation; reassure and continue the same dose",
+        "Topiramate's dose-related cognitive effects (dysnomia, slowed processing) plus carbonic-anhydrase-driven nephrolithiasis — consider dose reduction or substitution",
+        "Early Alzheimer's disease needing cholinesterase inhibitors, with the stone unrelated to therapy",
+        "Lamotrigine toxicity referred from the neurology clinic, needing a serum level"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung describes topiramate's cognitive effects — impaired word-finding (dysnomia), diminished verbal fluency and slowed processing, often without sedation — as dose-related and a frequent reason for discontinuation, and urolithiasis occurs in 0.5-1.5% of long-term users, linked to carbonic anhydrase inhibition. Cognitive slowing plus a stone is the topiramate signature, so dose reduction or substitution beats reassurance.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "mst-tpm-03",
+      question: "At follow-up after six months of topiramate, a 45-year-old notes 7 kg weight loss and pins-and-needles in the fingers; serum bicarbonate is 18 mEq/L with a normal anion gap. Which counselling bundle is correct?",
+      options: [
+        "Paresthesias indicate a demyelinating neuropathy requiring nerve biopsy",
+        "Metabolic acidosis occurs only after deliberate overdose and cannot appear at therapeutic doses",
+        "Weight loss is an expected topiramate effect (about 85% of adults lose roughly 5% of body weight), paresthesias are common and often transient, and the hyperchloraemic non-anion-gap acidosis follows carbonic anhydrase inhibition",
+        "Weight loss signals malabsorption from the drug and mandates stopping it in all patients"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung reports 85% of adults on topiramate lose weight (about 5% of baseline, peaking at 12-18 months), paresthesias typically occur at initiation or high doses, and reduced serum bicarbonate from carbonic anhydrase inhibition is usually asymptomatic but real. The overdose-only claim is directly contradicted by the text, and weight loss here is the drug's expected metabolic action — topiramate is the only weight-losing mood stabiliser.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "mst-tpm-04",
+      question: "A 28-year-old woman needs a prophylactic agent for frequent migraine that would also cover her newly diagnosed juvenile myoclonic epilepsy. Which drug fits both needs?",
+      options: [
+        "Propranolol",
+        "Carbamazepine",
+        "Ethosuximide",
+        "Topiramate"
+      ],
+      correctIndex: 3,
+      explanation: "Topiramate is a broad-spectrum antiseizure drug (focal seizures, primary generalized tonic-clonic seizures, Lennox-Gastaut syndrome, and myoclonic epilepsy) that is also a standard migraine prophylaxis agent — Tripathi notes its approval for migraine prophylaxis when beta-blockers fail or are contraindicated. Propranolol helps migraine but not epilepsy, carbamazepine can worsen myoclonus, and ethosuximide treats absence seizures only.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "mst-tpm-05",
+      question: "Which pharmacokinetic statement about topiramate is correct?",
+      options: [
+        "About 80% bioavailable with minimal protein binding, 50-80% excreted unchanged in urine, half-life 20-30 hours (12-15 with enzyme inducers), and linear kinetics without autoinduction",
+        "Extensively albumin-bound with a small volume of distribution of 0.15 L/kg",
+        "Eliminated entirely by CYP3A4 to an active epoxide metabolite",
+        "Half-life of about 60 hours with saturable intestinal absorption"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung's topiramate pharmacokinetics: 80% bioavailable, only about 15% protein binding, half the dose excreted unchanged renally, monotherapy half-life 20-30 hours falling to 12-15 hours with inducers, and linear kinetics with no autoinduction. The 90%-bound, 0.15 L/kg profile is valproate; the epoxide story is carbamazepine; and the 60-hour once-daily profile is zonisamide.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "mst-tpm-06",
+      question: "Rank the teratogenic signals of the mood stabilisers for a counselling vignette.",
+      options: [
+        "Carbamazepine — no teratogenic signal, so it is preferred in women of childbearing age",
+        "Valproate — neural tube defects (1-2%) with cognitive impairment; carbamazepine — neural tube defects; topiramate — oral clefts (16-21-fold relative risk); lithium — Ebstein anomaly (rare)",
+        "Lithium — neural tube defects; valproate — Ebstein anomaly; carbamazepine — clefts only",
+        "Topiramate — the safest mood stabiliser in pregnancy"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung's text and Table 59-1 anchor the ranking: valproate carries the 1-2% neural tube defect risk plus neurodevelopmental effects, carbamazepine is listed for neural tube defects, topiramate shows first-trimester oral cleft risk of 16-21-fold, and lithium's Ebstein association is classic but rarer than popularly taught. Tripathi adds that valproate plus carbamazepine together double the teratogenic frequency.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "mst-tpm-07",
+      question: "A 25-year-old on topiramate 100 mg/day for migraine is upgraded to 300 mg/day after poor control. What contraception counselling matters now?",
+      options: [
+        "Contraceptive failure risk comes from topiramate's protein binding and is unchanged by dose",
+        "Oral contraceptives induce topiramate clearance, so only the topiramate dose needs doubling",
+        "Above 200 mg/day topiramate may reduce oral contraceptive efficacy, so alternative or higher-oestrogen (50 mcg ethinyl estradiol) contraception is advised",
+        "Topiramate affects contraception only below 100 mg/day, so no action is needed at 300 mg"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung notes birth control pills may be less effective in the presence of topiramate and recommends alternative contraception above 200 mg/day, with 50 mcg ethinyl estradiol pills possibly satisfactory. The dose threshold is the teaching point — the earlier 100 mg/day dose sat below it — and the mechanism is enzyme induction rather than protein binding, running from topiramate to the contraceptive.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "mst-tpm-08",
+      question: "Which Indian topiramate facts are correct?",
+      options: [
+        "TOPEX is a 200 mg tablet approved for once-weekly migraine dosing",
+        "TOPAMATE is the Indian brand of topotecan, an anticancer drug",
+        "Indian topiramate starts at 400 mg/day to reach effect within three days",
+        "TOPEX, EPITOP, TOPAMATE and NEXTOP in 25/50/100 mg tablets; started low (about 25 mg once daily, increased weekly) to limit cognitive effects"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi lists topiramate as TOPEX, EPITOP, TOPAMATE and NEXTOP 25/50/100 mg tablets, dosed initially 25 mg once daily and increased weekly up to 100-200 mg BD; Katzung likewise recommends beginning at 25-50 mg/day and increasing slowly. Topotecan is a camptothecin cytotoxic, and fast high-dose initiation would trigger precisely the worst cognitive effects.",
+      afterSectionId: "quick-facts",
+    },
   ],
   activeRecallQuestions: [
     {

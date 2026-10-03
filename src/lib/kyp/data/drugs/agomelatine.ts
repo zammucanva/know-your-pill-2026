@@ -677,6 +677,110 @@ export const agomelatine: Drug = {
       explanation: "For major depressive disorder: start 25 mg once daily at bedtime, target 25-50 mg at night, maximum 50 mg/day. Increase to 50 mg after 2 weeks if needed",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "atd-ago-01",
+      question: "Agomelatine's defining receptor pharmacology is:",
+      options: [
+        "Agonism at MT1 and MT2 melatonin receptors with antagonism at 5-HT2C receptors",
+        "Blockade of melatonin receptors with direct 5-HT2C receptor agonism",
+        "Selective inhibition of SERT with partial 5-HT1A agonism",
+        "Reversible inhibition of monoamine oxidase-A"
+      ],
+      correctIndex: 0,
+      explanation: "Agomelatine combines MT1/MT2 melatonergic agonism with 5-HT2C antagonism (Katzung) — the pairing that phase-advances circadian rhythms and disinhibits frontal catecholamines. The mirror option flips every receptor action (a favourite trap), SERT plus 5-HT1A partial agonism is vilazodone, and reversible MAO-A inhibition is moclobemide's RIMA definition.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "atd-ago-02",
+      question: "Blockade of 5-HT2C receptors by agomelatine produces which downstream effect relevant to its antidepressant action?",
+      options: [
+        "Suppression of REM sleep and motor restlessness",
+        "Increased prolactin and cortisol secretion",
+        "Disinhibition of dopamine and norepinephrine release in the frontal cortex",
+        "Direct blockade of D2 receptors in the mesolimbic pathway"
+      ],
+      correctIndex: 2,
+      explanation: "5-HT2C receptors tonically restrain frontal dopaminergic and noradrenergic pathways; agomelatine's 5-HT2C antagonism releases that brake, disinhibiting dopamine and norepinephrine release in the frontal cortex — a catecholaminergic limb that explains antidepressant efficacy without D2 blockade, hence no parkinsonism or hyperprolactinaemia. REM suppression and prolactin/cortisol rises are not its documented signature, and D2 blockade is amoxapine/antipsychotic territory.",
+      afterSectionId: "neurotransmitters",
+    },
+    {
+      id: "atd-ago-03",
+      question: "A 38-year-old night-shift nurse has depression with severely delayed sleep onset, morning fatigue and a body clock that \"never resets\"; she fears morning sedation because she operates machinery. Which antidepressant best matches her profile?",
+      options: [
+        "Fluoxetine, because its long half-life guarantees overnight cover",
+        "Agomelatine, because melatonergic phase-advancing improves sleep architecture without a daytime hangover",
+        "Reboxetine, because noradrenergic arousal restores the circadian rhythm",
+        "Mirtazapine, because H1 blockade guarantees dreamless sleep"
+      ],
+      correctIndex: 1,
+      explanation: "Agomelatine was built for exactly this vignette: MT1/MT2 agonism entrains circadian phase and improves sleep continuity, while 5-HT2C antagonism adds antidepressant action — all without a next-morning hangover, which matters for her machinery work. Fluoxetine's long half-life more often fragments sleep, reboxetine causes insomnia, and mirtazapine's H1 sedation is precisely the daytime fog she fears.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atd-ago-04",
+      question: "The single most important laboratory safety duty when prescribing agomelatine is:",
+      options: [
+        "Monthly serum prolactin measurement",
+        "Weekly full blood counts for the first 3 months",
+        "Serial serum electrolytes and ECG every 6 weeks",
+        "Liver function tests at baseline and periodically during the first months of treatment"
+      ],
+      correctIndex: 3,
+      explanation: "Agomelatine can cause transaminase elevations and rare serious hepatotoxicity, so LFTs (ALT/AST) are checked at baseline and then at protocolised intervals during the early months of treatment — any rise above normal limits means stopping the drug. Prolactin surveillance is for D2-blocking drugs, CBC schedules belong to clozapine and mianserin, and electrolyte/ECG routines belong to other classes entirely.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atd-ago-05",
+      question: "A 45-year-old woman starts agomelatine 25 mg at bedtime for MDD with insomnia. What is the correct LFT monitoring schedule she should be booked into?",
+      options: [
+        "Baseline, then around weeks 3, 6, 12 and 24 of treatment",
+        "Baseline only — no further testing unless jaundice appears",
+        "Weekly LFTs for 1 year, then yearly thereafter",
+        "LFTs only after 2 years of continuous therapy"
+      ],
+      correctIndex: 0,
+      explanation: "The agomelatine monitoring contract is baseline LFTs repeated at approximately 3, 6, 12 and 24 weeks — the windows in which drug-induced transaminase rises declare themselves — with prompt withdrawal if ALT/AST exceed the normal limits. Testing once at baseline defeats the purpose (the injury develops on-drug), weekly-for-a-year is clozapine-grade overkill no label demands, and waiting years ignores that the risk front-loads in the first months.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atd-ago-06",
+      question: "A 31-year-old woman rejects sertraline (anorgasmia last time) and mirtazapine (7 kg weight gain) and asks for an antidepressant with \"no sexual problems, no weight gain, no withdrawal when I stop, and no morning fog.\" Which option's tolerability fingerprint fits her demands?",
+      options: [
+        "Reboxetine — a pure NRI guaranteed free of any sexual or weight effects",
+        "Agomelatine — no sexual dysfunction, weight-neutral, no discontinuation syndrome, no daytime hangover",
+        "Tianeptine — an opioid-agonist antidepressant with no misuse potential",
+        "Nefazodone — hepatotoxicity is its only meaningful concern"
+      ],
+      correctIndex: 1,
+      explanation: "Agomelatine's tolerability card is exactly her list: absent sexual dysfunction, weight neutrality, no discontinuation syndrome and no daytime hangover — the trade is vigilant LFT monitoring. Reboxetine is noradrenergic (insomnia, palpitations, urinary hesitancy) with no guarantee of a clean sexual profile, tianeptine's mu-opioid agonism is precisely why misuse potential exists, and nefazodone's sexual sparing came bundled with the black-box hepatotoxicity that pushed it out of routine use.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atd-ago-07",
+      question: "Which statement about agomelatine's availability and regulatory status is correct?",
+      options: [
+        "It has been FDA-approved since 2009 for MDD with insomnia",
+        "It is available only in the United States",
+        "It is a Schedule IV controlled substance in India",
+        "It is approved in Europe and marketed in countries including India and Australia, but has never been FDA-approved"
+      ],
+      correctIndex: 3,
+      explanation: "Agomelatine is the classic \"approved in Europe, never in the USA\" antidepressant — Katzung notes European approval for MDD, and the drug is marketed in India (and Australia/UK), so any FDA claim is the trap. It is not a controlled substance, and \"US-only\" inverts the true geography of its use.",
+      afterSectionId: "top",
+    },
+    {
+      id: "atd-ago-08",
+      question: "A 52-year-old man on agomelatine for MDD develops obsessive-compulsive symptoms, and fluvoxamine 200 mg daily is added. The most important consequence is:",
+      options: [
+        "Additive melatonergic sedation requiring the agomelatine dose to be halved",
+        "A beneficial rise in agomelatine levels improving both disorders",
+        "A contraindicated combination — fluvoxamine, a potent CYP1A2 inhibitor, can multiply agomelatine exposure many-fold, raising hepatotoxicity risk",
+        "Serotonin syndrome from the combined 5-HT2C antagonism"
+      ],
+      correctIndex: 2,
+      explanation: "Agomelatine is cleared mainly by CYP1A2 (with minor 2C9/2C19 contribution), and potent 1A2 inhibitors such as fluvoxamine multiply its exposure many-fold — the combination is contraindicated on the European label, not least because higher levels raise the hepatotoxicity stakes of a drug already on LFT probation. Sedation is not the feared outcome, \"more drug means more benefit\" inverts the danger, and 5-HT2C antagonism is not a serotonin-syndrome mechanism.",
+      afterSectionId: "knowledge-graph",
+    },
   ],
   activeRecallQuestions: [
     {

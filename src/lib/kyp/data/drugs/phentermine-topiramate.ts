@@ -722,6 +722,110 @@ export const phentermineTopiramate: Drug = {
       explanation: "For chronic weight management: start 3.75/23 mg daily × 14 days, target 7.5/46 mg daily, maximum 15/92 mg daily. Increase to 7.5/46 mg; escalate to 11.25/69 → 15/92 mg only if ≥ 3% loss at 12 weeks",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "spc-ptp-01",
+      question: "The mechanistic logic of the phentermine-topiramate combination for weight management is:",
+      options: [
+        "Phentermine, a sympathomimetic amine, suppresses appetite via noradrenergic signalling, while topiramate adds satiety and weight effects through its anticonvulsant actions",
+        "Both components are opioid antagonists acting on hedonic eating",
+        "Phentermine inhibits pancreatic lipase while topiramate blocks fat absorption",
+        "Topiramate is an SSRI and phentermine a 5-HT2C agonist"
+      ],
+      correctIndex: 0,
+      explanation: "The pairing unites noradrenergic appetite suppression (phentermine, an amphetamine-mimic) with topiramate's weight-losing anticonvulsant pharmacology — the combination registered for chronic weight management (Katzung lists it among approved obesity agents). Opioid antagonism plus NDRI describes naltrexone-bupropion, lipase inhibition is orlistat's peripheral act, and the SSRI-plus-5-HT2C-agonist receptor labels belong to no component of this combination — pure swapped nonsense.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "spc-ptp-02",
+      question: "Which regulatory/status statement about phentermine-topiramate is correct?",
+      options: [
+        "It is sold in India as an OTC ayurvedic-nutraceutical combination",
+        "It is a controlled substance (US Schedule IV) because of phentermine's amphetamine-like sympathomimetic pharmacology and abuse potential",
+        "It is unscheduled worldwide because topiramate is an anticonvulsant",
+        "It is US Schedule II, identical to methamphetamine"
+      ],
+      correctIndex: 1,
+      explanation: "The phentermine component's amphetamine-mimic pharmacology places the combination in Schedule IV — controlled but below amphetamine's Schedule II — and demands misuse vigilance. Unscheduling ignores phentermine's abuse liability, Schedule II overstates the class, and no OTC Indian ayurvedic version exists; it is prescription-only where marketed.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "spc-ptp-03",
+      question: "A 30-year-old woman with BMI 34 asks for weight-loss tablets; she mentions she is trying to conceive. The correct response about phentermine-topiramate:",
+      options: [
+        "It is safe if stopped after the first missed period",
+        "It is contraindicated only in men planning fatherhood",
+        "It is contraindicated — topiramate carries an orofacial-cleft teratogenic boxed warning, so pregnancy must be avoided with reliable contraception",
+        "It is safe in pregnancy; only valproate is teratogenic"
+      ],
+      correctIndex: 2,
+      explanation: "The combination is contraindicated in pregnancy: topiramate's first-trimester orofacial-cleft risk is boxed, and phentermine's sympathomimetic fetal exposure adds nothing safe, so pregnancy planning demands deferral and contraception. Valproate is not the sole teratogen in pharmacology, and stopping 'after a missed period' is too late for structures closing early in the first trimester.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "spc-ptp-04",
+      question: "A 42-year-old on phentermine-topiramate for four months returns complaining of tingling fingers and toes, word-finding difficulty and a racing heart. The unified explanation:",
+      options: [
+        "He has developed Guillain-Barre syndrome from the topiramate",
+        "These are definitive signs of serotonin syndrome",
+        "The symptoms indicate hypothyroidism induced by phentermine",
+        "The combination's recognised effects — topiramate-type paraesthesia and cognitive slowing plus phentermine-type tachycardia and blood-pressure rise"
+      ],
+      correctIndex: 3,
+      explanation: "Paraesthesia and word-finding difficulty are classic topiramate effects (carbonic-anhydrase inhibition and cognitive slowing), while palpitations and blood-pressure rise track phentermine's sympathomimetic action — a combined profile that may force dose reduction or discontinuation. Guillain-Barre is an ascending-paralysis diagnosis, serotonin syndrome needs serotonergic drugs, and phentermine does not induce hypothyroidism (the listed endocrine contraindication is hyperthyroidism).",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "spc-ptp-05",
+      question: "Which comorbidity makes phentermine-topiramate an outright inappropriate choice?",
+      options: [
+        "Narrow-angle (angle-closure) glaucoma — a listed contraindication",
+        "Treated hypothyroidism on stable replacement",
+        "Osteoarthritis of the knees",
+        "Seasonal allergic rhinitis"
+      ],
+      correctIndex: 0,
+      explanation: "Glaucoma is among the labelled contraindications — topiramate itself can provoke acute myopia and angle-closure, and sympathomimetics raise intraocular-pressure risk — alongside hyperthyroidism, pregnancy and recent MAOI use. Stable hypothyroid replacement, osteoarthritis and rhinitis are not contraindications; note the deliberate hyper/hypothyroid mirror in the distractor.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "spc-ptp-06",
+      question: "Which pharmacokinetic statement about the phentermine-topiramate combination is correct?",
+      options: [
+        "Topiramate reliably raises the efficacy of combined oral contraceptives",
+        "Topiramate is long-acting (half-life roughly 20-30 hours), enabling once-daily extended-release dosing, and can reduce oral-contraceptive reliability by enzyme induction",
+        "Topiramate's half-life of about 2 hours mandates thrice-daily dosing",
+        "Phentermine is filtered intact into the cerebrospinal fluid, obviating hepatic metabolism"
+      ],
+      correctIndex: 1,
+      explanation: "Topiramate's 20-30-hour monotherapy half-life supports extended-release once-daily escalation, and its enzyme-inducing potential is the classic oral-contraceptive caution (the Batch-14 cross-link). The 2-hour figure is a triazolam-style number, CSF filtration is not a clearance route, and the contraceptive effect is the opposite direction — reduced reliability, not enhancement.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "spc-ptp-07",
+      question: "An Indian corporate executive with BMI 32 wants 'the American weight-loss pill' without changing his diet. The clinically honest counselling:",
+      options: [
+        "Anti-obesity drugs are prescribed in India without any screening",
+        "Weight-loss drugs are safe to combine freely with each other",
+        "Pharmacotherapy is an adjunct to structured diet, activity and behavioural change, and only after screening for pregnancy plans, glaucoma, hyperthyroidism and MAOI use",
+        "The tablet substitutes for diet and exercise"
+      ],
+      correctIndex: 2,
+      explanation: "The Indian-practice reality mirrors global guidance: lifestyle intervention is the foundation, drugs are adjuncts, and the contraindication screen (pregnancy or plans, glaucoma, hyperthyroidism, recent MAOIs) plus the controlled-substance status must precede any prescription. Substitution for lifestyle, no-screen prescribing and drug stacking are each unsafe myths.",
+      afterSectionId: "top",
+    },
+    {
+      id: "spc-ptp-08",
+      question: "Which pairing of anti-obesity agent and mechanism/status is correct?",
+      options: [
+        "Naltrexone-bupropion — selective 5-HT2C agonist withdrawn for cancer",
+        "Liraglutide (high-dose) — noradrenergic appetite suppressant with Schedule IV status",
+        "Orlistat — central serotonergic satiety agent with a glaucoma warning",
+        "Phentermine-topiramate — noradrenergic appetite suppression plus anticonvulsant satiety effect; teratogenic, controlled substance"
+      ],
+      correctIndex: 3,
+      explanation: "Phentermine-topiramate's dual sympathomimetic-plus-anticonvulsant design, its teratogenicity and its Schedule IV status are correctly paired. Naltrexone-bupropion is the opioid-antagonist/NDRI combination (the 2C agonist withdrawn for cancer is lorcaserin), liraglutide is an injected GLP-1 agonist, and orlistat is the peripheral lipase inhibitor — every other pairing mislabels a real drug.",
+      afterSectionId: "top",
+    },
   ],
   activeRecallQuestions: [
     {

@@ -716,6 +716,110 @@ export const hydroxyzine: Drug = {
       explanation: "For anxiety (short-term): start 25-50 mg up to four times daily, target 50-100 mg/day divided, maximum 400 mg/day (short-term exceptional). Lowest effective dose; intermittent use preferred",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "slp-hyd-01",
+      question: "Hydroxyzine's pharmacological family and sedative mechanism are:",
+      options: [
+        "A first-generation piperazine H1 antihistamine whose marked central H1 blockade produces sedation",
+        "A second-generation H1 antihistamine restricted to peripheral receptors by P-glycoprotein efflux",
+        "A benzodiazepine-site partial agonist acting at the alpha-2 subunit",
+        "A 5-HT3 antiemetic used in chemotherapy that incidentally sedates"
+      ],
+      correctIndex: 0,
+      explanation: "Hydroxyzine is a first-generation piperazine antihistamine, grouped by both textbooks with the markedly sedating H1 agents, and it crosses the blood-brain barrier to block central H1 receptors, producing the sedation exploited for sleep and anxiety. Second-generation antihistamines such as cetirizine, its own metabolite, penetrate the CNS poorly, and the GABA-A and 5-HT3 descriptions belong to the Z-drugs and ondansetron respectively.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "slp-hyd-02",
+      question: "A 35-year-old woman with generalised anxiety with prominent autonomic symptoms also has chronic urticaria. Which single prescription addresses both problems without dependence risk?",
+      options: [
+        "Diphenhydramine, which is contraindicated in urticaria but anxiolytic",
+        "Hydroxyzine, an anxiolytic and antipruritic first-generation antihistamine that is non-scheduled",
+        "Alprazolam, which covers anxiety and urticaria through mast-cell stabilisation",
+        "Zolpidem, because Z-drugs treat both anxiety and histamine-mediated itching"
+      ],
+      correctIndex: 1,
+      explanation: "Hydroxyzine is the classic non-scheduled anxiolytic for anxiety with autonomic manifestations (Tripathi) and retains full H1 antipruritic and urticarial activity, giving one prescription for two problems with no dependence liability. Alprazolam has no antihistamine action and carries dependence risk, zolpidem is a hypnotic without anxiolytic or antipruritic labels, and diphenhydramine is in fact a standard antipruritic rather than a contraindicated one, though its anticholinergic load makes it the poorer anxiolytic.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "slp-hyd-03",
+      question: "Which metabolite relationship is a favourite exam question for hydroxyzine?",
+      options: [
+        "Hydroxyzine is the active metabolite of cetirizine, formed by hepatic oxidation",
+        "Desloratadine is hydroxyzine's only metabolite and is more sedating",
+        "Cetirizine is an active metabolite of hydroxyzine, marketed separately for allergic disorders",
+        "Fexofenadine is the active metabolite of hydroxyzine"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung lists cetirizine as the active metabolite of hydroxyzine (just as fexofenadine is the metabolite of terfenadine and desloratadine of loratadine), and Tripathi repeats that cetirizine is a hydroxyzine metabolite with marked peripheral H1 affinity and poor brain penetration. The parent-metabolite direction is reversed in the claim that hydroxyzine itself is formed from cetirizine, and fexofenadine and desloratadine belong to terfenadine and loratadine respectively.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "slp-hyd-04",
+      question: "A 74-year-old man with benign prostatic hyperplasia and narrow-angle glaucoma is prescribed hydroxyzine 25 mg for night-time agitation. What is the key safety concern?",
+      options: [
+        "Hydroxyzine is a cholinergic agonist, so retention and glaucoma are impossible",
+        "The main risk is hypoglycaemia from H1-mediated insulin release",
+        "First-generation antihistamines lower intraocular pressure protectively in glaucoma",
+        "The anticholinergic burden of first-generation antihistamines can precipitate urinary retention and worsen glaucoma"
+      ],
+      correctIndex: 3,
+      explanation: "First-generation antihistamines carry classic antimuscarinic effects, so in a man with prostatic enlargement they risk urinary retention, and in narrow-angle glaucoma they can precipitate an acute attack by increasing intraocular pressure; the anticholinergic cluster is documented in both textbooks. Hydroxyzine is anticholinergic, not cholinergic, and there is no insulin-mediated hypoglycaemia. This is exactly why antihistamines are discouraged in elderly patients with these comorbidities.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "slp-hyd-05",
+      question: "A 48-year-old woman on hydroxyzine for anxiety has a prolonged QTc on a pre-operative ECG; she also takes escitalopram and ondansetron. What is the best interpretation and action?",
+      options: [
+        "Hydroxyzine carries a QTc-prolongation warning in certain situations; review its continuation given the other QT-relevant co-medication",
+        "QTc effects are unique to ondansetron, so hydroxyzine can continue unreviewed",
+        "Hydroxyzine shortens the QT interval, so escitalopram must be stopped instead",
+        "Antihistamines cannot affect the ECG, so the finding is anxiety-related artefact"
+      ],
+      correctIndex: 0,
+      explanation: "Hydroxyzine's label carries a QT-prolongation warning for use in certain situations, and stacking it with escitalopram and ondansetron, two other QT-relevant drugs, is exactly the scenario where the KYP monograph advises caution and review. Ondansetron is not the only QT offender in this list, hydroxyzine does not shorten the QT interval, and a documented ECG change is not dismissed as artefact. A sedative without QT liability should be sought.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "slp-hyd-06",
+      question: "Which prescription matches Indian hydroxyzine practice (ATARAX)?",
+      options: [
+        "A 5 mg sublingual spray, licensed only for insomnia in children",
+        "25 to 50 mg orally or intramuscularly, available as 10 and 25 mg tablets, syrup and injection",
+        "250 to 500 mg orally, available only as 100 mg capsules",
+        "A 0.5 mg injection, restricted to anaesthesia use"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi lists hydroxyzine as ATARAX 10 and 25 mg tablets, syrup, drops and a 25 mg/ml injection, dosed at 25 to 50 mg by mouth or intramuscularly for anxiety, pruritus and sedation. The 250 to 500 mg range and capsule-only format are invented, it is not an anaesthesia-restricted injection, and there is no sublingual paediatric insomnia licence. The 10 and 25 mg tablet strengths are the direct recall item.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "slp-hyd-07",
+      question: "Why does hydroxyzine sedate robustly while its metabolite cetirizine causes only mild somnolence?",
+      options: [
+        "Hydroxyzine sedates through dopamine D2 blockade in the chemoreceptor trigger zone",
+        "Cetirizine is an inverse agonist at the benzodiazepine site, keeping patients awake",
+        "Hydroxyzine readily crosses the blood-brain barrier to block central H1 receptors, whereas cetirizine penetrates the brain poorly",
+        "Cetirizine is a more potent central H1 blocker but is simply given at one-tenth the dose"
+      ],
+      correctIndex: 2,
+      explanation: "The sedation difference is anatomical: hydroxyzine, like other first-generation antihistamines, crosses the BBB and blocks central H1, while its metabolite cetirizine penetrates the brain poorly (Tripathi records only mild sedation), a property shared with the second-generation agents. Dose arithmetic is not the mechanism, D2-blockade at the chemoreceptor trigger zone is promethazine-class antiemetic pharmacology, and no benzodiazepine-site action exists for either drug.",
+      afterSectionId: "neurotransmitters",
+    },
+    {
+      id: "slp-hyd-08",
+      question: "A 28-year-old woman at 10 weeks of pregnancy with severe nocturnal urticaria asks about the hydroxyzine left from her previous prescription. What is the correct advice?",
+      options: [
+        "It is the safest sedating antihistamine in pregnancy and can be used freely throughout",
+        "It is mandatory in pregnancy because uncontrolled urticaria threatens the fetus",
+        "It is an absolute abortifacient and is banned outright in every trimester",
+        "Avoid it: hydroxyzine is teratogenic in animals, so caution is exercised with antihistamines in pregnancy"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi notes that hydroxyzine, cyclizine and fexofenadine are teratogenic in animals and that caution is exercised in prescribing any antihistaminic during pregnancy, even without proven excess malformations in humans. Calling it the safest choice overstates the data, urticaria does not compel its use, and the abortifacient claim overstates the evidence in the opposite direction. A dermatology-guided safer alternative is the right route.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

@@ -1,0 +1,257 @@
+{
+ "note": "Class-summary questions with no single drug home. Candidate placements: class page quiz section, spaced-repetition mixed deck, or Custom Test 'mixed set'.",
+ "questions": [
+  {
+   "source": "KYP_ADJUNCT_MCQ_Batch_16b.json",
+   "id": "adj-mix-01",
+   "question": "Match each drug-induced movement or autonomic problem to its classic remedy (the KYP EPS-treatment map): 1. Acute dystonia. 2. Antipsychotic-induced akathisia. 3. Drug-induced parkinsonism. 4. Tardive dyskinesia.",
+   "options": [
+    "1-IM/IV benztropine or promethazine; 2-propranolol; 3-oral trihexyphenidyl or amantadine; 4-valbenazine or deutetrabenazine, with anticholinergics AVOIDED",
+    "1-propranolol; 2-IM benztropine; 3-valbenazine; 4-oral trihexyphenidyl",
+    "1-oral trihexyphenidyl; 2-valbenazine; 3-propranolol; 4-IM benztropine",
+    "1-valbenazine; 2-amantadine; 3-IM benztropine; 4-propranolol"
+   ],
+   "correctIndex": 0,
+   "explanation": "The map is fixed: acute dystonia gets a parenteral anticholinergic (benztropine or promethazine) within minutes; akathisia is the propranolol (or benzodiazepine) problem; established drug-induced parkinsonism takes an oral anticholinergic or occasional amantadine; and tardive dyskinesia — the trap where anticholinergics worsen movements — needs VMAT2 inhibition. Each distractor deliberately rotates these pairings; only the correct pairing reproduces the map exactly.",
+   "afterSectionId": "knowledge-graph"
+  },
+  {
+   "source": "KYP_ATYPICAL2_MCQ_Batch_07.json",
+   "id": "atd-mix-b07-01",
+   "question": "Match each atypical antidepressant to its signature hallmark — which option contains only correct pairings?",
+   "options": [
+    "Vilazodone — mandatory LFT monitoring; Vortioxetine — must be taken with food; Agomelatine — studied for cognition in MDD",
+    "Tianeptine — pure NRI never FDA-approved; Reboxetine — mu-opioid agonism with abuse potential; Atomoxetine — melatonin agonism for shift-work depression",
+    "Vilazodone — must be taken with food; Vortioxetine — studied for cognition in MDD, dose halved with strong CYP2D6 inhibitors; Agomelatine — MT1/MT2 agonism with mandatory LFT monitoring",
+    "Tianeptine — first-line ADHD therapy in children; Reboxetine — potent 5-HT3 antagonism; Atomoxetine — serotonin reuptake enhancer"
+   ],
+   "correctIndex": 2,
+   "explanation": "The six signatures in one line: vilazodone = food-dependent absorption (the SPARI), vortioxetine = cognition with 2D6-driven dose halving, agomelatine = melatonin receptors plus LFT surveillance, tianeptine = mu-opioid agonism and abuse, reboxetine = pure NRI never FDA-approved, atomoxetine = non-stimulant ADHD therapy. Each wrong option swaps a hallmark onto a neighbouring drug — the standard tag-swap trap.",
+   "afterSectionId": "knowledge-graph"
+  },
+  {
+   "source": "KYP_ATYPICALAP2_MCQ_Batch_11.json",
+   "id": "atp-mix-b11-01",
+   "question": "Signature-feature matching across this atypical-antipsychotic class — which pairing is correct?",
+   "options": [
+    "Asenapine — sublingual only, since swallowed tablets are destroyed by first-pass metabolism",
+    "Ziprasidone — the highest weight-gain agent of the class",
+    "Cariprazine — the shortest effective half-life in the class",
+    "Amisulpride — FDA-approved in the USA for bipolar depression"
+   ],
+   "correctIndex": 0,
+   "explanation": "Asenapine is sublingual only because swallowed tablets are destroyed by first-pass metabolism — the swallow-kills-bioavailability pearl. Ziprasidone is instead among the LEANEST metabolic agents, cariprazine has the class's longest effective half-life (~1–3 weeks with its didesmethyl metabolite), and amisulpride is not FDA-approved (EU/India availability, Katzung). Every distractor inverts a real signature.",
+   "afterSectionId": "high-yield-summary"
+  },
+  {
+   "source": "KYP_ATYPICALAP_MCQ_Batch_10.json",
+   "id": "atp-mix-01",
+   "question": "Which drug—signature-liability pair from the 'big five' atypical antipsychotics is correctly matched?",
+   "options": [
+    "Risperidone — the most prolactin-elevating atypical of the group",
+    "Quetiapine — highest EPS liability among the five",
+    "Aripiprazole — the highest weight-gain and diabetes risk",
+    "Olanzapine — the lowest metabolic liability in the class"
+   ],
+   "correctIndex": 0,
+   "explanation": "Risperidone (with paliperidone) stands apart for prolactin elevation — galactorrhoea, amenorrhoea, gynaecomastia and long-term osteoporosis risk — the defining class-contrast pearl. Quetiapine is actually the EPS-sparing one (alongside clozapine), aripiprazole is the leanest of the five, and olanzapine shares the metabolic top with clozapine — each of the other options deliberately swaps the superlative onto the wrong drug.",
+   "afterSectionId": "high-yield-summary"
+  },
+  {
+   "source": "KYP_ATYPICAL_MCQ_Batch_06.json",
+   "id": "atd-mix-01",
+   "question": "Match each atypical antidepressant to its signature safety red flag — which mapping is correct?",
+   "options": [
+    "Bupropion — agranulocytosis; mirtazapine — seizures; trazodone — weight gain; nefazodone — priapism",
+    "Bupropion — weight gain; mirtazapine — insomnia; mianserin — sexual dysfunction; trazodone — hypertension",
+    "Bupropion — dose-related seizures; mirtazapine — sedation and weight gain; mianserin — blood dyscrasias; trazodone — priapism; nefazodone — hepatotoxicity",
+    "Bupropion — priapism; mirtazapine — hepatotoxicity; mianserin — seizures; trazodone — agranulocytosis"
+   ],
+   "correctIndex": 2,
+   "explanation": "The one-line safety map every exam wants: bupropion = dose-related seizures (avoid eating disorders and seizure history), mirtazapine = sedation with appetite/weight gain, mianserin = blood dyscrasias (fever/sore throat demands a CBC), trazodone = priapism and orthostatic hypotension, nefazodone = black-box hepatotoxicity. Every other row has shifted a red flag onto the wrong drug.",
+   "afterSectionId": "knowledge-graph"
+  },
+  {
+   "source": "KYP_BZD_MCQ_Batch_12.json",
+   "id": "bzd-mix-01",
+   "question": "Which benzodiazepine–signature pair is CORRECT?",
+   "options": [
+    "Diazepam — the safest benzodiazepine in cirrhosis",
+    "Triazolam — the preferred agent for middle-of-the-night dosing",
+    "Flunitrazepam — an FDA-approved first-line hypnotic",
+    "Midazolam — shortest half-life; procedural sedation with anterograde amnesia; buccal route for paediatric status"
+   ],
+   "correctIndex": 3,
+   "explanation": "Midazolam owns the ultra-short/procedural/amnesia/buccal-status signature. The swapped tags: cirrhosis-safety belongs to lorazepam or oxazepam (glucuronidation, no metabolites), middle-of-the-night dosing to zaleplon, and flunitrazepam is unapproved in the US with assault-misuse infamy. Swapping one tag between drugs is how class questions are built — and defeated.",
+   "afterSectionId": "quick-facts"
+  },
+  {
+   "source": "KYP_MAOI_MCQ_Batch_05.json",
+   "id": "maoi-mix-01",
+   "question": "Which statement about the MAOI/RIMA class is CORRECT?",
+   "options": [
+    "Selegiline retains MAO-B selectivity at every antidepressant dose and route",
+    "Phenelzine is the most activating MAOI and carries the lowest tyramine risk",
+    "Moclobemide's reversibility lets tyramine displace it from MAO-A — the smallest tyramine risk and the shortest washout in the class",
+    "A 14-day washout is needed only after stopping fluoxetine"
+   ],
+   "correctIndex": 2,
+   "explanation": "The correct statement pairs moclobemide's two flagship advantages: competitive displacability by tyramine and a 1-2 day washout versus 14 days for the irreversible drugs. Selegiline loses selectivity at antidepressant doses (the 6 mg/24 h patch is the retained-selectivity exception), phenelzine is the sedating, high-tyramine-risk MAOI, and the washout table is the reverse of option D — fluoxetine needs about 5 weeks, the others 14 days.",
+   "afterSectionId": "quick-facts"
+  },
+  {
+   "source": "KYP_MOODSTAB_MCQ_Batch_14.json",
+   "id": "mst-mix-01",
+   "question": "The staging question of bipolar pharmacotherapy — which pairing is correct?",
+   "options": [
+    "Acute mania: lithium, valproate, carbamazepine (with atypical antipsychotics); bipolar depression and its prophylaxis: lamotrigine (with quetiapine-type options)",
+    "Acute mania: lamotrigine; bipolar depression: carbamazepine",
+    "Acute mania: gabapentin and topiramate; bipolar depression: lithium only",
+    "Acute mania: levetiracetam; bipolar depression: pregabalin"
+   ],
+   "correctIndex": 0,
+   "explanation": "The book-anchored staging: lithium is the standard antimanic and mood stabiliser with valproate and carbamazepine as its anticonvulsant alternatives (Katzung ch.29), while lamotrigine is not effective for mania and owns depressive-episode prophylaxis (Tripathi), with quetiapine completing the bipolar-depression tier. Gabapentin is explicitly not effective in mania, and neither levetiracetam nor pregabalin carries mood-stabiliser labels.",
+   "afterSectionId": "knowledge-graph"
+  },
+  {
+   "source": "KYP_SLEEP_MCQ_Batch_13.json",
+   "id": "slp-mix-01",
+   "question": "Which row correctly matches each sleep agent to its primary molecular target?",
+   "options": [
+    "Ramelteon at MT1/MT2 receptors; suvorexant at OX1/OX2 receptors; zolpidem at alpha-1 GABA-A; diphenhydramine at central H1",
+    "Ramelteon at OX1/OX2 receptors; suvorexant at central H1; zolpidem at MT1/MT2 receptors; diphenhydramine at alpha-1 GABA-A",
+    "Ramelteon at alpha-1 GABA-A; suvorexant at MT1/MT2 receptors; zolpidem at OX1/OX2 receptors; diphenhydramine at central H1",
+    "Ramelteon at central H1; suvorexant at alpha-1 GABA-A; zolpidem at OX1/OX2 receptors; diphenhydramine at MT1/MT2 receptors"
+   ],
+   "correctIndex": 0,
+   "explanation": "The KYP mechanism ladder runs on four independent rungs: melatonergics (ramelteon and tasimelteon) at MT1/MT2, dual orexin antagonism (suvorexant) at OX1/OX2, alpha-1-selective GABA-A modulation (zolpidem and the other Z-drugs) and central H1 blockade (hydroxyzine and diphenhydramine). Each wrong row is a full rotation of the correct ladder, the classic matching-question trap, and only one row keeps every drug on its own target. Suvorexant is the newest rung, antagonising wake-drive neuropeptides rather than enhancing inhibitory tone.",
+   "afterSectionId": "high-yield-summary"
+  },
+  {
+   "source": "KYP_SNRI_MCQ_Batch_02.json",
+   "id": "snri-mix-01",
+   "question": "Which SNRI–signature pair is CORRECT (per the Know Your Pill class comparison)?",
+   "options": [
+    "Venlafaxine — dose-dependent blood-pressure rise and the worst discontinuation syndrome among antidepressants",
+    "Duloxetine — the safest SNRI in alcoholic liver disease",
+    "Milnacipran — FDA-approved in the US for major depressive disorder",
+    "Levomilnacipran — the most serotonergic of the SNRIs"
+   ],
+   "correctIndex": 0,
+   "explanation": "KYP's SNRI table: venlafaxine owns dose-dependent BP elevation and the worst discontinuation (short parent half-life + dual-mechanism withdrawal). The other three swap signatures: duloxetine carries the hepatotoxicity warning (worst in alcoholic liver, not safest), milnacipran's US label is fibromyalgia, and levomilnacipran is the most NORadrenergic, not serotonergic. Swapping one tag between drugs is the standard way class-table questions are examined.",
+   "afterSectionId": "quick-facts"
+  },
+  {
+   "source": "KYP_SPECIAL_MCQ_Batch_16c.json",
+   "id": "spc-mix-01",
+   "question": "Match each special agent to its single most exam-relevant signature:",
+   "options": [
+    "Ketamine — hours-fast NMDA-antagonist antidepressant; lorcaserin — withdrawn 2020 for a cancer signal; pimavanserin — Parkinson's psychosis with zero D2 blockade; flibanserin — bedtime dosing, alcohol contraindicated",
+    "Ketamine — withdrawn for cancer; lorcaserin — D2-sparing Parkinson's antipsychotic; pimavanserin — alcohol-contraindicated satiety drug; flibanserin — hours-fast NMDA antidepressant",
+    "Ketamine — bedtime-dosed antitussive; lorcaserin — sigma-1 agonist antitussive; pimavanserin — MCT ketogenic medical food; flibanserin — withdrawn 2020 for cancer",
+    "Ketamine — MCT ketogenic medical food; lorcaserin — hours-fast NMDA antidepressant; pimavanserin — antitussive with CYP2D6-probe status; flibanserin — Parkinson's psychosis drug with zero D2 blockade"
+   ],
+   "correctIndex": 0,
+   "explanation": "Only the first row preserves all four signatures: ketamine/esketamine's hour-scale NMDA-antagonist antidepressant action, lorcaserin's 2020 cancer-signal withdrawal, pimavanserin's D2-sparing Parkinson's-psychosis design with ECG vigilance, and flibanserin's bedtime-only, alcohol-contraindicated register. Every other row grafts one agent's signature onto a neighbour — the batch's cross-drug audit in a single question.",
+   "afterSectionId": "top"
+  },
+  {
+   "source": "KYP_SSRI_MCQ_Batch_01.json",
+   "id": "ssri-mix-01",
+   "question": "Which drug–distinguishing feature pair is CORRECT (per the Know Your Pill SSRI class comparison)?",
+   "options": [
+    "Fluoxetine — shortest half-life; worst withdrawal",
+    "Escitalopram — lowest CYP interaction burden; QTc watch",
+    "Paroxetine — the only SSRI approved for bulimia",
+    "Sertraline — strongest CYP2D6 inhibitor"
+   ],
+   "correctIndex": 1,
+   "explanation": "Know Your Pill's class table: escitalopram = 'S-enantiomer of citalopram; lowest CYP interactions; QTc watch'. Fluoxetine owns 'longest half-life; only SSRI for bulimia; paediatric >=8yr'; paroxetine owns 'shortest half-life, worst discontinuation; Category D; tamoxifen interaction'; sertraline owns the broadest label and cardiac safety. Swapping any one tag between drugs is how this question is examined.",
+   "afterSectionId": "quick-facts"
+  },
+  {
+   "source": "KYP_SSRI_MCQ_Batch_03.json",
+   "id": "ssri-mix-b03-01",
+   "question": "Which drug–signature pair is CORRECT for the six-member SSRI class (per the Know Your Pill class comparison)?",
+   "options": [
+    "Fluvoxamine — the class's potent CYP1A2 inhibitor, with OCD as its only FDA-labelled indication",
+    "Paroxetine — the SSRI of choice to co-prescribe with tamoxifen in breast cancer",
+    "Escitalopram — the SSRI carrying the 40 mg/day QTc-driven dose cap",
+    "Fluoxetine — the shortest-half-life SSRI with the worst discontinuation syndrome"
+   ],
+   "correctIndex": 0,
+   "explanation": "Fluvoxamine owns two signatures — potent CYP1A2 inhibition and the OCD-only FDA label — so this pair is correct. The other three swap tags: paroxetine is avoided with tamoxifen (strong 2D6 blockade starves endoxifen formation; it is also Category D), the 40/20 mg QTc cap belongs to citalopram, and the shortest-half-life/worst-discontinuation crown belongs to paroxetine, whereas fluoxetine actually has the longest half-life and the smoothest withdrawal. The remaining clean pairs to memorise: sertraline (broadest label + cardiac safety) and escitalopram (lowest CYP burden, S-enantiomer).",
+   "afterSectionId": "quick-facts"
+  },
+  {
+   "source": "KYP_STIMCOG_MCQ_Batch_15.json",
+   "id": "stm-mix-01",
+   "question": "Which drug-mechanism pair from the Know Your Pill stimulant-cognition comparison is CORRECT?",
+   "options": [
+    "Galantamine — acetylcholinesterase inhibition plus allosteric potentiation of nicotinic receptors",
+    "Memantine — pseudo-irreversible dual AChE/BuChE carbamate",
+    "Lisdexamfetamine — low-affinity uncompetitive NMDA channel antagonist",
+    "Methylphenidate — an indirect releaser that reverses DAT/NET and VMAT2"
+   ],
+   "correctIndex": 0,
+   "explanation": "The KYP class table assigns each signature exactly once, and galantamine owns acetylcholinesterase inhibition plus allosteric potentiation of nicotinic receptors. Option D is amphetamine's releaser signature (methylphenidate is the pure reuptake blocker), option B is rivastigmine's carbamate profile (memantine is the NMDA antagonist), and option C is memantine's mechanism (lisdexamfetamine is the prodrug releaser) — three deliberate signature swaps.",
+   "afterSectionId": "high-yield-summary"
+  },
+  {
+   "source": "KYP_SUD_MCQ_Batch_16a.json",
+   "id": "sud-mix-01",
+   "question": "Class-summary capstone: which mechanism-to-drug pairing across the substance-use-disorder armamentarium is CORRECT?",
+   "options": [
+    "Disulfiram - irreversible aldehyde dehydrogenase inhibition that creates acetaldehyde aversion to alcohol",
+    "Naltrexone - partial mu agonism with a ceiling effect on respiratory depression",
+    "Acamprosate - alpha4beta2 nicotinic partial agonism that blunts tobacco reward",
+    "Sodium oxybate - pure mu-opioid antagonism used to cut alcohol craving"
+   ],
+   "correctIndex": 0,
+   "explanation": "The correct row is disulfiram - irreversible ALDH inhibition and acetaldehyde aversion (Tripathi ch.28). The swapped tags are the class's favourite confusions: partial mu agonism with a respiratory-depression ceiling is buprenorphine's profile, not naltrexone's antagonist action; alpha4beta2 nicotinic partial agonism is varenicline; and pure mu-antagonism for alcohol craving is naltrexone (or nalmefene), while sodium oxybate is the GABAB-acting narcolepsy drug. One correct anchor, three deliberate mis-pairings.",
+   "afterSectionId": "knowledge-graph"
+  },
+  {
+   "source": "KYP_TCA_MCQ_Batch_04.json",
+   "id": "tca-mix-01",
+   "question": "Which TCA-signature pair is CORRECT (per the Know Your Pill class comparison)?",
+   "options": [
+    "Clomipramine — the most serotonergic TCA and the gold-standard TCA for OCD",
+    "Desipramine — the most sedating TCA with the strongest anticholinergic effects",
+    "Doxepin — the most activating TCA, historically used for narcolepsy",
+    "Maprotiline — the safest antidepressant in patients with epilepsy"
+   ],
+   "correctIndex": 0,
+   "explanation": "Clomipramine owns both tags in the correct row — maximal SERT blockade and the reference TCA for OCD. The distractors swap signatures: desipramine is the most NORadrenergic with the LEAST anticholinergic burden, doxepin is the H1 champion while protriptyline is the activating one, and maprotiline is the most seizure-prone antidepressant, the opposite of epilepsy-safe. Swapping one tag between class-mates is how every class-table question is built — verify each pairing individually.",
+   "afterSectionId": "quick-facts"
+  },
+  {
+   "source": "KYP_TYPICALAP2_MCQ_Batch_09.json",
+   "id": "tap-mix-b09-01",
+   "question": "Which four-way mapping across this batch's drugs is entirely correct?",
+   "options": [
+    "Pimozide — safest choice in congenital long QT; zuclopenthixol acetate — 2-4 weekly maintenance depot; molindone — worst weight gain; sulpiride — prolactin-sparing",
+    "Pimozide — Tourette tics with ECG duty; zuclopenthixol acetate — 24-72 h acute-agitation ester; molindone — least weight gain by classic teaching; sulpiride — marked hyperprolactinaemia",
+    "Loxapine — purely serotonergic with no D2 blockade; flupenthixol decanoate — 24-72 h acute ester; mesoridazine — current first choice for schizophrenia; cyamemazine — highest EPS of the batch",
+    "Thiothixene — thioxanthene with low EPS; pipothiazine — dihydroindolone; loxapine — metabolised to maprotiline; pimozide — benzamide chemistry"
+   ],
+   "correctIndex": 1,
+   "explanation": "Every anchor in one row: pimozide is the Tourette drug with mandatory ECG duty, zuclopenthixol acetate is the 24-72 hour acute ester (the decanoate is the maintenance depot), molindone is the classic least-weight-gain agent, and sulpiride is the batch's strongest prolactin elevator. Each rival row shifts a red flag onto the wrong drug — pimozide is contraindicated in congenital long QT, loxapine is a D2 blocker that yields amoxapine, flupenthixol decanoate runs on weeks, mesoridazine is withdrawn, cyamemazine is a low-EPS phenothiazine, thiothixene is high-EPS, pipothiazine is a phenothiazine, and pimozide is a diphenylbutylpiperidine.",
+   "afterSectionId": "knowledge-graph"
+  },
+  {
+   "source": "KYP_TYPICALAP_MCQ_Batch_08.json",
+   "id": "tap-mix-01",
+   "question": "Class-summary: which pairing of typical antipsychotic with its signature long-term toxicity is CORRECT?",
+   "options": [
+    "Thioridazine - retinal pigmentary degeneration; chlorpromazine - corneal and lenticular deposits",
+    "Chlorpromazine - retinal degeneration; thioridazine - corneal and lenticular deposits",
+    "Haloperidol - cholestatic jaundice; thioridazine - maximal EPS",
+    "Trifluoperazine - strongest sedation; fluphenazine - most orthostatic hypotension"
+   ],
+   "correctIndex": 0,
+   "explanation": "The two ocular signatures must not be swapped: thioridazine alone causes RETINAL deposits (retinitis-pigmentosa-like, browning of vision), while chlorpromazine causes corneal and lenticular deposits with slate-grey skin pigmentation. Option B mirrors them wrongly. Haloperidol rarely causes jaundice and produces MAXIMAL EPS (option C inverts both), and the high-potency piperazines trifluoperazine and fluphenazine are the least sedating and least hypotensive of the class (option D inverts the potency axis).",
+   "afterSectionId": "high-yield-summary"
+  }
+ ]
+}

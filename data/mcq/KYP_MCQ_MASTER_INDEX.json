@@ -1,0 +1,424 @@
+{
+ "project": "Know Your Pill — MCQ Bank for all 145 medications",
+ "generated": "2026-10-02",
+ "schema": "microQuizzes-compatible: id, question, options[4], correctIndex, explanation, afterSectionId + drugSlug, domain, difficulty, style",
+ "qualityGate": "Every batch passed the 4-step check (structural / fact-anchors / distractor-quality / answer-key) — scripts/mcq_4step_check.py — plus manual semantic review. Sources: KYP monographs + Katzung 14e + K.D. Tripathi 7e + Oxford/USMLE-style conventions (facts aligned, no copyrighted text reproduced).",
+ "batches": [
+  {
+   "file": "KYP_ADJUNCT_MCQ_Batch_16b.json",
+   "title": "Adjunct MCQ Batch 16b - Buspirone / Propranolol / Prazosin / Clonidine / Guanfacine / Flumazenil / Benztropine / Trihexyphenidyl",
+   "questions": 65,
+   "drugs": 8,
+   "answerSpread": {
+    "0": 17,
+    "1": 16,
+    "2": 16,
+    "3": 16
+   },
+   "difficulty": {
+    "Foundation": 16,
+    "Clinical": 36,
+    "Advanced": 13
+   },
+   "vignetteRecall": {
+    "vignette": 36,
+    "recall": 29
+   },
+   "status": "QA PASS"
+  },
+  {
+   "file": "KYP_ATYPICAL2_MCQ_Batch_07.json",
+   "title": "Atypical Antidepressant MCQ Batch 07 - Vilazodone / Vortioxetine / Agomelatine / Tianeptine / Reboxetine / Atomoxetine",
+   "questions": 49,
+   "drugs": 6,
+   "answerSpread": {
+    "0": 12,
+    "1": 13,
+    "2": 12,
+    "3": 12
+   },
+   "difficulty": {
+    "Foundation": 11,
+    "Clinical": 28,
+    "Advanced": 10
+   },
+   "vignetteRecall": {
+    "vignette": 27,
+    "recall": 22
+   },
+   "status": "QA PASS"
+  },
+  {
+   "file": "KYP_ATYPICALAP2_MCQ_Batch_11.json",
+   "title": "Atypical Antipsychotic MCQ Batch 11 - Clozapine / Ziprasidone / Lurasidone / Asenapine / Cariprazine / Brexpiprazole / Iloperidone / Sertindole / Zotepine / Blonanserin / Perospirone / Amisulpride",
+   "questions": 97,
+   "drugs": 12,
+   "answerSpread": {
+    "0": 25,
+    "1": 24,
+    "2": 24,
+    "3": 24
+   },
+   "difficulty": {
+    "Foundation": 24,
+    "Clinical": 53,
+    "Advanced": 20
+   },
+   "vignetteRecall": {
+    "vignette": 52,
+    "recall": 45
+   },
+   "status": "QA PASS"
+  },
+  {
+   "file": "KYP_ATYPICALAP_MCQ_Batch_10.json",
+   "title": "Atypical Antipsychotic MCQ Batch 10 - Risperidone / Paliperidone / Olanzapine / Quetiapine / Aripiprazole",
+   "questions": 41,
+   "drugs": 5,
+   "answerSpread": {
+    "0": 11,
+    "1": 10,
+    "2": 10,
+    "3": 10
+   },
+   "difficulty": {
+    "Foundation": 10,
+    "Clinical": 23,
+    "Advanced": 8
+   },
+   "vignetteRecall": {
+    "vignette": 22,
+    "recall": 19
+   },
+   "status": "QA PASS"
+  },
+  {
+   "file": "KYP_ATYPICAL_MCQ_Batch_06.json",
+   "title": "Atypical Antidepressant MCQ Batch 06 - Bupropion / Mirtazapine / Mianserin / Trazodone / Nefazodone",
+   "questions": 41,
+   "drugs": 5,
+   "answerSpread": {
+    "0": 10,
+    "1": 10,
+    "2": 11,
+    "3": 10
+   },
+   "difficulty": {
+    "Foundation": 10,
+    "Clinical": 23,
+    "Advanced": 8
+   },
+   "vignetteRecall": {
+    "vignette": 22,
+    "recall": 19
+   },
+   "status": "QA PASS"
+  },
+  {
+   "file": "KYP_BZD_MCQ_Batch_12.json",
+   "title": "Benzodiazepine MCQ Batch 12 - 15 agents from alprazolam to loflazepate",
+   "questions": 121,
+   "drugs": 15,
+   "answerSpread": {
+    "0": 31,
+    "1": 30,
+    "2": 30,
+    "3": 30
+   },
+   "difficulty": {
+    "Foundation": 26,
+    "Clinical": 66,
+    "Advanced": 29
+   },
+   "vignetteRecall": {
+    "vignette": 59,
+    "recall": 62
+   },
+   "status": "QA PASS"
+  },
+  {
+   "file": "KYP_MAOI_MCQ_Batch_05.json",
+   "title": "MAOI MCQ Batch 05 - Phenelzine / Tranylcypromine / Isocarboxazid / Selegiline / Moclobemide",
+   "questions": 41,
+   "drugs": 5,
+   "answerSpread": {
+    "0": 10,
+    "1": 10,
+    "2": 11,
+    "3": 10
+   },
+   "difficulty": {
+    "Foundation": 10,
+    "Clinical": 23,
+    "Advanced": 8
+   },
+   "vignetteRecall": {
+    "vignette": 22,
+    "recall": 19
+   },
+   "status": "QA PASS"
+  },
+  {
+   "file": "KYP_MOODSTAB_MCQ_Batch_14.json",
+   "title": "Mood Stabiliser MCQ Batch 14 - Lithium, valproate, carbamazepine, lamotrigine & adjunct anticonvulsants",
+   "questions": 89,
+   "drugs": 11,
+   "answerSpread": {
+    "0": 23,
+    "1": 22,
+    "2": 22,
+    "3": 22
+   },
+   "difficulty": {
+    "Foundation": 21,
+    "Clinical": 48,
+    "Advanced": 20
+   },
+   "vignetteRecall": {
+    "vignette": 50,
+    "recall": 39
+   },
+   "status": "QA PASS"
+  },
+  {
+   "file": "KYP_SLEEP_MCQ_Batch_13.json",
+   "title": "Sleep Agent MCQ Batch 13 - Z-drugs, melatonergics, orexin antagonist, antihistamines",
+   "questions": 73,
+   "drugs": 9,
+   "answerSpread": {
+    "0": 19,
+    "1": 18,
+    "2": 18,
+    "3": 18
+   },
+   "difficulty": {
+    "Clinical": 39,
+    "Foundation": 19,
+    "Advanced": 15
+   },
+   "vignetteRecall": {
+    "vignette": 41,
+    "recall": 32
+   },
+   "status": "QA PASS"
+  },
+  {
+   "file": "KYP_SNRI_MCQ_Batch_02.json",
+   "title": "SNRI MCQ Batch 02 - Venlafaxine / Desvenlafaxine / Duloxetine / Milnacipran / Levomilnacipran",
+   "questions": 41,
+   "drugs": 5,
+   "answerSpread": {
+    "0": 10,
+    "1": 10,
+    "2": 11,
+    "3": 10
+   },
+   "difficulty": {
+    "Foundation": 11,
+    "Clinical": 21,
+    "Advanced": 9
+   },
+   "vignetteRecall": {
+    "vignette": 18,
+    "recall": 23
+   },
+   "status": "QA PASS"
+  },
+  {
+   "file": "KYP_SPECIAL_MCQ_Batch_16c.json",
+   "title": "Special Agent MCQ Batch 16c - Ketamine / Dextromethorphan / L-methylfolate / Triiodothyronine / Caprylidene / Pimavanserin / Flibanserin / Lorcaserin / Phentermine-topiramate",
+   "questions": 73,
+   "drugs": 9,
+   "answerSpread": {
+    "0": 19,
+    "1": 18,
+    "2": 18,
+    "3": 18
+   },
+   "difficulty": {
+    "Foundation": 18,
+    "Advanced": 15,
+    "Clinical": 40
+   },
+   "vignetteRecall": {
+    "vignette": 41,
+    "recall": 32
+   },
+   "status": "QA PASS"
+  },
+  {
+   "file": "KYP_SSRI_MCQ_Batch_01.json",
+   "title": "SSRI MCQ Batch 01 - Sertraline / Fluoxetine / Escitalopram / Paroxetine",
+   "questions": 46,
+   "drugs": 4,
+   "answerSpread": {
+    "0": 12,
+    "1": 12,
+    "2": 11,
+    "3": 11
+   },
+   "difficulty": {
+    "Foundation": 12,
+    "Clinical": 24,
+    "Advanced": 10
+   },
+   "vignetteRecall": {
+    "vignette": 26,
+    "recall": 20
+   },
+   "status": "QA PASS"
+  },
+  {
+   "file": "KYP_SSRI_MCQ_Batch_03.json",
+   "title": "SSRI MCQ Batch 03 - Citalopram / Fluvoxamine (SSRI class completion)",
+   "questions": 17,
+   "drugs": 2,
+   "answerSpread": {
+    "0": 5,
+    "1": 4,
+    "2": 4,
+    "3": 4
+   },
+   "difficulty": {
+    "Foundation": 4,
+    "Clinical": 9,
+    "Advanced": 4
+   },
+   "vignetteRecall": {
+    "vignette": 9,
+    "recall": 8
+   },
+   "status": "QA PASS"
+  },
+  {
+   "file": "KYP_STIMCOG_MCQ_Batch_15.json",
+   "title": "Stimulant & Cognition MCQ Batch 15 - Amphetamines, methylphenidate, modafinil class, AChE inhibitors, memantine",
+   "questions": 105,
+   "drugs": 13,
+   "answerSpread": {
+    "0": 27,
+    "1": 26,
+    "2": 26,
+    "3": 26
+   },
+   "difficulty": {
+    "Foundation": 26,
+    "Advanced": 22,
+    "Clinical": 57
+   },
+   "vignetteRecall": {
+    "vignette": 57,
+    "recall": 48
+   },
+   "status": "QA PASS"
+  },
+  {
+   "file": "KYP_SUD_MCQ_Batch_16a.json",
+   "title": "SUD Treatment MCQ Batch 16a - Naltrexone / Buprenorphine / Acamprosate / Disulfiram / Varenicline / Nalmefene / Naltrexone-bupropion / Sodium oxybate",
+   "questions": 65,
+   "drugs": 8,
+   "answerSpread": {
+    "0": 17,
+    "1": 16,
+    "2": 16,
+    "3": 16
+   },
+   "difficulty": {
+    "Foundation": 16,
+    "Clinical": 36,
+    "Advanced": 13
+   },
+   "vignetteRecall": {
+    "vignette": 36,
+    "recall": 29
+   },
+   "status": "QA PASS"
+  },
+  {
+   "file": "KYP_TCA_MCQ_Batch_04.json",
+   "title": "TCA MCQ Batch 04 - Tricyclic & tetracyclic antidepressants (12 drugs)",
+   "questions": 97,
+   "drugs": 12,
+   "answerSpread": {
+    "0": 25,
+    "1": 24,
+    "2": 24,
+    "3": 24
+   },
+   "difficulty": {
+    "Foundation": 24,
+    "Clinical": 53,
+    "Advanced": 20
+   },
+   "vignetteRecall": {
+    "vignette": 53,
+    "recall": 44
+   },
+   "status": "QA PASS"
+  },
+  {
+   "file": "KYP_TYPICALAP2_MCQ_Batch_09.json",
+   "title": "Typical Antipsychotic MCQ Batch 09 - Pimozide / Thiothixene / Loxapine / Flupenthixol / Zuclopenthixol / Pipothiazine / Molindone / Mesoridazine / Cyamemazine / Sulpiride",
+   "questions": 81,
+   "drugs": 10,
+   "answerSpread": {
+    "0": 21,
+    "1": 20,
+    "2": 20,
+    "3": 20
+   },
+   "difficulty": {
+    "Foundation": 19,
+    "Clinical": 46,
+    "Advanced": 16
+   },
+   "vignetteRecall": {
+    "vignette": 45,
+    "recall": 36
+   },
+   "status": "QA PASS"
+  },
+  {
+   "file": "KYP_TYPICALAP_MCQ_Batch_08.json",
+   "title": "Typical Antipsychotic MCQ Batch 08 - Chlorpromazine / Haloperidol / Fluphenazine / Trifluoperazine / Perphenazine / Thioridazine",
+   "questions": 49,
+   "drugs": 6,
+   "answerSpread": {
+    "0": 13,
+    "1": 12,
+    "2": 12,
+    "3": 12
+   },
+   "difficulty": {
+    "Foundation": 12,
+    "Clinical": 28,
+    "Advanced": 9
+   },
+   "vignetteRecall": {
+    "vignette": 27,
+    "recall": 22
+   },
+   "status": "QA PASS"
+  }
+ ],
+ "totals": {
+  "batches": 18,
+  "questions": 1191,
+  "drugsCovered": 145,
+  "answerSpread": {
+   "0": 307,
+   "1": 295,
+   "2": 296,
+   "3": 293
+  },
+  "style": {
+   "vignette": 643,
+   "recall": 548
+  },
+  "difficulty": {
+   "Foundation": 289,
+   "Clinical": 653,
+   "Advanced": 249
+  }
+ }
+}

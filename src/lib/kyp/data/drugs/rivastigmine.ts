@@ -757,6 +757,110 @@ export const rivastigmine: Drug = {
       explanation: "For alzheimer's (patch): start 4.6 mg/24 h patch daily, target 9.5 mg/24 h patch, maximum 13.3 mg/24 h patch. After ≥ 1 month may increase to 9.5 mg/24 h; 13.3 for severe (regions)",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "stm-riv-01",
+      question: "Rivastigmine's mechanism that distinguishes it within the AD class is:",
+      options: [
+        "Pseudo-irreversible carbamate inhibition of BOTH acetylcholinesterase and butyrylcholinesterase (dual cholinesterase), with brain G1-isoform preference",
+        "Reversible inhibition of acetylcholinesterase only, at a single peripheral isoform",
+        "Irreversible organophosphate-style aging of AChE",
+        "Selective nicotinic receptor agonism without any enzyme action"
+      ],
+      correctIndex: 0,
+      explanation: "Rivastigmine is the carbamate that carbamylates both AChE and BuChE (Tripathi: both enzymes, with G1-isoform selectivity in brain), the enzyme reactivating slowly over hours — hence pseudo-irreversible. Option B describes donepezil's narrower profile, true irreversible aging is organophosphate pharmacology, and pure receptor agonism without enzyme action matches nothing in this class — even galantamine keeps its enzyme inhibition.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "stm-riv-02",
+      question: "A 71-year-old with Parkinson's disease develops progressive dementia with hallucinations. Which AD drug carries a specific label for Parkinson's disease dementia, and in which formulation is GI tolerability best?",
+      options: [
+        "Galantamine XR, labelled for Lewy body dementias",
+        "Rivastigmine — the unique PDD label — preferably as a transdermal patch to reduce GI adverse effects",
+        "Tacrine tablets — the oldest agent with the broadest label",
+        "Memantine liquid, labelled specifically for PDD"
+      ],
+      correctIndex: 1,
+      explanation: "Rivastigmine holds the distinctive Parkinson's-disease-dementia indication (KYP anchor), and its patch trades spiky systemic levels for much less cholinergic GI upset. Tacrine is long withdrawn, memantine's claim is moderate-to-severe AD rather than a PDD label, and galantamine's labels stop at Alzheimer's.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "stm-riv-03",
+      question: "Rivastigmine's plasma half-life is only about 2 h, yet cholinesterase inhibition spans the whole dosing interval. The explanation is:",
+      options: [
+        "The drug accumulates in plasma to 100-fold levels with repeated dosing",
+        "Its active metabolite has a 1-week half-life",
+        "The carbamylated enzyme stays inhibited for up to ~10 hours despite the 2 h plasma t-half — pharmacodynamic duration decoupled from plasma PK (Tripathi)",
+        "Rivastigmine forms a permanent covalent bond that never reverses"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi's elegant PK-PD split: the carbamyl residue dissociates slowly, so cerebral AChE remains inhibited for up to 10 hours while plasma levels vanish — duration reflects enzyme reactivation, not plasma presence. True irreversibility is organophosphate aging, plasma accumulation is absent, and no week-long metabolite exists.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "stm-riv-04",
+      question: "A Parkinson's-disease-dementia patient on oral rivastigmine has severe nausea and vomiting. The formulation-savvy response is:",
+      options: [
+        "Switch to oral tacrine for better GI tolerance",
+        "Stop all AD therapy permanently",
+        "Add loperamide chronically to mask the cholinergic diarrhoea",
+        "Switch to the rivastigmine transdermal patch, which smooths levels and markedly reduces GI adverse effects, while continuing weight monitoring"
+      ],
+      correctIndex: 3,
+      explanation: "The patch is rivastigmine's signature tolerability solution — steadier absorption with far less GI cholinergic burden (KYP anchor) — with weight-loss monitoring still required. Tacrine would worsen everything including the liver, permanent cessation abandons a treatable patient, and masking symptoms without changing dose or formulation ignores the mechanism.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "stm-riv-05",
+      question: "During rivastigmine titration (1.5 mg BD upward every 2 weeks per Tripathi; EXELON/RIVAMER), the family reports anorexia and weight loss. The correct framing is:",
+      options: [
+        "Slow the titration, give with food and formally monitor weight — expected cholinergic class effects, with rivastigmine labels emphasising weight-loss surveillance",
+        "Unrelated aging effects needing no monitoring",
+        "Evidence of tacrine-style hepatotoxicity",
+        "Proof of overdose requiring permanent cessation"
+      ],
+      correctIndex: 0,
+      explanation: "Tripathi's stepwise titration (1.5 mg BD up to 6 mg BD) exists precisely to limit the cholinergic GI/anorexic effects, and KYP adds structured weight monitoring as a label obligation. Liver toxicity is tacrine/pemoline territory, titration effects rarely mandate permanent stoppage, and no-monitoring contradicts the label.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "stm-riv-06",
+      question: "Rivastigmine's indication set (per current labels; Tripathi's 7e text predates part of it) is:",
+      options: [
+        "Frontotemporal dementia and narcolepsy",
+        "Alzheimer's disease AND Parkinson's disease dementia — the unique dual-dementia label",
+        "Alzheimer's disease only, explicitly excluding any parkinsonian dementia",
+        "Vascular dementia exclusively"
+      ],
+      correctIndex: 1,
+      explanation: "The distinguishing feature is the Parkinson's-disease-dementia label layered on the Alzheimer label — the examination's rivastigmine signature. Option C reflects Tripathi's 7e-era text (mild-to-moderate AD), but misses the label the KYP anchor emphasises; vascular and frontotemporal dementias were never its labelled niches.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "stm-riv-07",
+      question: "Pseudo-irreversible inhibition, as applied to rivastigmine, precisely means:",
+      options: [
+        "The inhibition lasts only minutes because the plasma t-half is 2 h",
+        "Rivastigmine binds only the anionic site non-covalently, like tacrine",
+        "The carbamate covalently carbamylates the enzyme's esteratic site but hydrolyses back over hours, so inhibition is long-lasting yet reversible — unlike true organophosphate aging",
+        "The inhibition is irreversible, with activity returning only by new enzyme synthesis"
+      ],
+      correctIndex: 2,
+      explanation: "The carbamate chemistry: slow decarbamoylation over hours gives long-acting but recoverable inhibition — the pharmacodynamic half-life that outstrips the ~2 h plasma value. Option D describes organophosphates (and even then, aging is the irreversible step), option A confuses plasma PK with enzyme PD, and option B is tacrine's non-covalent anionic-site binding per Tripathi.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "stm-riv-08",
+      question: "An Indian caregiver asks which rivastigmine brands and forms exist locally. The accurate answer (Tripathi) is:",
+      options: [
+        "Rivastigmine is sold in India only by injection",
+        "The Indian brands are ADMENTA and ALMANTIN",
+        "Only a 20 mg sustained-release capsule exists in India",
+        "EXELON and RIVAMER capsules in 1.5/3/4.5/6 mg with 1.5 mg BD starting titration up to 6 mg BD; a transdermal patch also exists"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi's Indian list — EXELON/RIVAMER 1.5, 3, 4.5, 6 mg capsules, starting 1.5 mg BD and titrated to 6 mg BD — matches the oral forms, with the patch available alongside. Option B's brands (ADMENTA/MENTADEM/ALMANTIN) belong to memantine, and no injectable rivastigmine exists in Indian practice.",
+      afterSectionId: "quick-facts",
+    },
   ],
   activeRecallQuestions: [
     {

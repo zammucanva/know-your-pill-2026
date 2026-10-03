@@ -697,6 +697,110 @@ export const triiodothyronine: Drug = {
       explanation: "For depression augmentation: start 25 mcg once daily, target 25-50 mcg/day, maximum 50 mcg/day (augmentation). May increase to 50 mcg after 2-4 weeks",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "spc-t3-01",
+      question: "Triiodothyronine (T3, liothyronine) produces its physiological and antidepressant-augmentation effects by:",
+      options: [
+        "Binding nuclear thyroid-hormone receptors that regulate gene transcription — it is roughly 3-4 times more potent than T4",
+        "Activating the TSH receptor GPCR on thyroid follicular cells",
+        "Opening ligand-gated chloride channels in the brain",
+        "Binding cytosolic cortisol receptors after 5-alpha reduction"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung: T3 is three to four times more potent than levothyroxine and acts through nuclear TRalpha/TRbeta regulation of transcription. TSH-receptor activation is the job of TSH itself (and its stimulating immunoglobulins), chloride-channel opening is benzodiazepine/barbiturate territory, and 5-alpha-reduced steroid binding describes dihydrotestosterone, not T3.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "spc-t3-02",
+      question: "The half-life contrast between liothyronine and levothyroxine, and its dosing consequence, is:",
+      options: [
+        "Both persist for months after depot injections, making them the longest-acting of the two hormones",
+        "T3 about 1 day versus T4 about 7 days — so T3 needs multiple daily doses and is harder to monitor",
+        "T3 about 7 days versus T4 about 1 day — so T3 suits once-weekly dosing",
+        "Both about 2 hours, demanding continuous intravenous infusion"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung gives liothyronine a shorter half-life (about 24 hours) requiring multiple daily doses and making adequacy harder to monitor, versus levothyroxine's long (about 7-day) half-life permitting once-daily dosing. The swapped T3/T4 half-life figure is the deliberate mirror-image trap, and the 2-hour and multi-month figures fit no thyroid preparation.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "spc-t3-03",
+      question: "A 41-year-old woman with a partial response to imipramine is given adjunctive liothyronine. Ten days later she returns with palpitations, fine tremor, sweating and insomnia. The best interpretation is:",
+      options: [
+        "Tardive dyskinesia emerging from the antidepressant",
+        "Hypothyroid relapse caused by antidepressant overdose",
+        "Hyperthyroid symptom burden from T3 augmentation — check pulse and ECG, then reduce or stop the T3",
+        "Imipramine-induced hyponatraemia causing autonomic surges"
+      ],
+      correctIndex: 2,
+      explanation: "T3 augmentation carries the hyperthyroid symptom package — palpitations, tremor, sweating, insomnia — and cardiac arrhythmia risk is precisely why Tripathi notes liothyronine's higher cardiac hazard versus T4; the response is dose reduction or withdrawal with monitoring. Hyponatraemia presents with confusion more than tremor, tardive dyskinesia is an antipsychotic syndrome, and 'hypothyroid relapse from antidepressant overdose' is a contradiction in terms.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "spc-t3-04",
+      question: "A patient with a 60% response to sertraline wants something that works 'quickly, without switching drugs'. The psychiatrist proposes the classic rapid augmentation. Which option matches that plan?",
+      options: [
+        "Replacing sertraline with desipramine to speed the onset",
+        "Adding levothyroxine (T4) at full replacement dose as a metabolic accelerator",
+        "Starting T3 as monotherapy for the depression",
+        "Adding small-dose liothyronine (T3) to the existing antidepressant — the traditional rapid-augmentation trick"
+      ],
+      correctIndex: 3,
+      explanation: "Triiodothyronine augmentation of an ongoing TCA or SSRI is the classic rapid augmentation (historically favoured, e.g., in women with low-T3 profiles). Switching antidepressants restarts the onset, T4 is not the classic rapid adjunct, and T3 is never chronic monotherapy for depression — Katzung's meta-analysis view is that even as an adjunct its benefit is modest and inconclusive.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "spc-t3-05",
+      question: "A 55-year-old has taken self-purchased thyroid tablets alongside her antidepressant for two years with high-normal TSH suppression. She asks about long-term dangers. The textbook-correct concerns are:",
+      options: [
+        "Accelerated bone loss with long-term use plus cardiac arrhythmia and angina risk",
+        "Weight gain and cold intolerance from a slowed metabolism",
+        "Agranulocytosis requiring weekly blood counts",
+        "Irreversible hypoparathyroidism"
+      ],
+      correctIndex: 0,
+      explanation: "Supraphysiological thyroid exposure produces the hyperthyroid symptom constellation and, with prolonged use, bone resorption and osteoporosis risk; Tripathi specifically ties liothyronine to a higher risk of cardiac arrhythmias and angina. Weight gain and cold intolerance are hypothyroid findings, agranulocytosis is the antithyroid-drug (carbimazole) hazard, and hypoparathyroidism is unrelated to T3 therapy.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "spc-t3-06",
+      question: "A 62-year-old on warfarin for atrial fibrillation is started on adjunctive T3 for antidepressant augmentation. Two weeks later she has gum bleeding and a rising INR. The interaction is:",
+      options: [
+        "Warfarin induces T3 metabolism, and the bleeding reflects warfarin overdosing",
+        "Thyroid hormone potentiates warfarin — hyperthyroidism augments warfarin's effect by increasing clotting-factor catabolism",
+        "T3 displaces warfarin from albumin in a clinically decisive way",
+        "T3 inhibits CYP2C9, blocking S-warfarin clearance"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung lists hyperthyroidism among the states that augment warfarin's effects — thyroid hormone speeds the breakdown of vitamin-K-dependent clotting factors, so adding T3 demands INR monitoring and dose reduction. Albumin displacement and CYP2C9 inhibition are not the mechanism here, and induction of T3 metabolism would do the opposite of what happened.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "spc-t3-07",
+      question: "Per Tripathi, the place of liothyronine in Indian practice is:",
+      options: [
+        "The drug of choice for Graves' disease in pregnancy",
+        "Available over the counter as a weight-loss tonic",
+        "Not freely available; occasionally used IV with T4 in myxoedema coma, while l-thyroxine remains preferred for all routine indications",
+        "The routine first-line replacement hormone across India"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi notes liothyronine is not freely available in India and is occasionally given intravenously (with T4) in myxoedema coma; levothyroxine is preferred for all indications for its more sustained, uniform action and lower arrhythmia risk. First-line replacement is T4, Graves' management uses antithyroid drugs (propylthiouracil in pregnancy), and thyroid hormones must not be used for obesity.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "spc-t3-08",
+      question: "The honest evidence summary an examiner expects for T3 antidepressant augmentation is:",
+      options: [
+        "An approved disease-modifying therapy for depression with normal thyroid function",
+        "Proof of cure in treatment-resistant depression regardless of thyroid status",
+        "Absolutely contraindicated in any patient taking an antidepressant",
+        "Some meta-analytic signal of benefit but inconclusive overall; thyroid hormones should not be given for depression when thyroid levels are normal without a specific augmentation plan"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung states that a meta-analysis of T3 co-administered with antidepressants showed some benefit but inconclusive results, and that thyroid hormones are ineffective and potentially detrimental in depression with normal thyroid levels — the Wilson's-era staple framing. Overclaiming approval or cure is wrong, and there is no absolute bar to monitored T3-antidepressant combination.",
+      afterSectionId: "knowledge-graph",
+    },
   ],
   activeRecallQuestions: [
     {

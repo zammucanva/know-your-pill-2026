@@ -848,6 +848,110 @@ export const disulfiram: Drug = {
       explanation: "For alcohol dependence (deterrence): start 250 mg once daily (range 125-500), target 250 mg/day, maximum 500 mg/day. Start ≥ 12 h after last alcohol; build deterrence education before the first dose",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "sud-dis-01",
+      question: "Disulfiram produces alcohol aversion through which mechanism?",
+      options: [
+        "Irreversible inhibition of aldehyde dehydrogenase, so ingested alcohol accumulates acetaldehyde",
+        "Competitive inhibition of alcohol dehydrogenase, slowing the conversion of ethanol to acetaldehyde",
+        "Blockade of mu-opioid receptors that mediate the reward of alcohol",
+        "Induction of CYP2E1, which generates toxic ethanol metabolites more rapidly"
+      ],
+      correctIndex: 0,
+      explanation: "Disulfiram inhibits aldehyde dehydrogenase (irreversibly, per Tripathi, so fresh enzyme must be synthesised), alcohol metabolises as usual but acetaldehyde piles up and produces the distressing aldehyde syndrome (Katzung ch.23; Tripathi ch.28). Inhibiting alcohol dehydrogenase would push in the opposite direction by reducing acetaldehyde formation, mu-opioid blockade is naltrexone's reward mechanism, and CYP2E1 induction is chronic-alcohol pharmacology rather than a disulfiram action.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "sud-dis-02",
+      question: "A man three weeks into disulfiram aversion therapy rinses with an alcohol-based mouthwash at 9 am. By 10 am he is flushed, throbbing-headed, vomiting, with BP 90/60. The correct interpretation and management is:",
+      options: [
+        "An evolving ischaemic stroke, warranting urgent thrombolysis referral",
+        "A disulfiram-ethanol reaction from hidden alcohol - supportive care with IV fluids, antiemetics and monitoring, plus counselling about mouthwash, sauces, cough syrups and vinegar",
+        "Anaphylaxis to disulfiram, requiring immediate intramuscular adrenaline",
+        "A hypertensive emergency, requiring sublingual nifedipine at once"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung warns against any alcohol-containing medication including nonprescription products, and Tripathi's aldehyde syndrome - flushing, throbbing headache, vomiting, hypotension over 1-4 hours - is treated supportively with fluids and antiemetics; hidden-alcohol counselling is mandatory teaching. There is no urticaria or bronchospasm to support anaphylaxis, the problem here is hypotension rather than hypertension, and the toxic syndrome is far more classic than a stroke.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "sud-dis-03",
+      question: "The standard disulfiram aversion-therapy regimen and its preconditions (as taught from Tripathi) are:",
+      options: [
+        "50 mg daily started 7-10 days after the last drink, with monthly liver tests",
+        "0.5-1 mg twice daily for 12 weeks, then tapered off",
+        "500 mg daily for one week, then 250 mg daily, only in well-motivated subjects who have taken no alcohol for at least 12 hours",
+        "666 mg three times daily begun the day after the last drink, lifelong"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi gives disulfiram 500 mg/day for one week followed by 250 mg daily, insisting on motivated abstinent subjects alcohol-free for 12 hours, with sensitisation peaking around 12 hours after the first dose. The 666 mg three-times-daily schedule is acamprosate, 50 mg after an opioid-free window describes naltrexone's start rules, and the 0.5-1 mg twice-daily 12-week course belongs to varenicline, not to disulfiram.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "sud-dis-04",
+      question: "A patient stops disulfiram 'just for one day' before a wedding, drinks at the reception, and still develops a violent reaction. The pharmacokinetic explanation is:",
+      options: [
+        "Disulfiram induces aldehyde dehydrogenase, and the induction fades within 24 hours",
+        "The reaction that day proves disulfiram was never absorbed from his gut",
+        "Alcohol dehydrogenase was inhibited, so ethanol elimination is delayed for a week",
+        "Aldehyde dehydrogenase inhibition is irreversible, so activity returns only as fresh enzyme is synthesised - sensitisation lasts about 7-14 days after the last dose"
+      ],
+      correctIndex: 3,
+      explanation: "Because disulfiram's inhibition of aldehyde dehydrogenase is irreversible, Tripathi teaches that sensitisation begins 2-3 hours after the first dose, peaks near 12 hours, and persists 7-14 days after stopping; Katzung adds that drug action may linger for several days after the last dose. Induction is the exact opposite of the truth, a reaction on schedule proves sensitisation persisted rather than failed, and alcohol dehydrogenase is not disulfiram's enzyme.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "sud-dis-05",
+      question: "An epileptic alcoholic maintained on phenytoin is started on disulfiram; on day 8 he develops ataxia, nystagmus and slurred speech. The mechanism is:",
+      options: [
+        "Disulfiram inhibits several CYP enzymes including those clearing phenytoin, raising phenytoin levels into the toxic range",
+        "Disulfiram displaces phenytoin from plasma albumin, causing transient peak spikes",
+        "Phenytoin induces disulfiram metabolism, so alcohol sensitisation fails",
+        "Pure additive cerebellar toxicity of the two drugs at otherwise normal plasma levels"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung lists disulfiram among inhibitors of the metabolism of phenytoin, oral anticoagulants and isoniazid; Tripathi generalises it to several CYP isoenzymes with prolongation of many drugs' half-lives - so day-8 phenytoin toxicity is textbook. Displacement is a transient effect that does not build over a week, induction runs in the wrong direction, and 'additive at normal levels' is not a mechanism anyone can verify.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "sud-dis-06",
+      question: "A severe disulfiram-ethanol reaction with vomiting, flushing and circulatory collapse arrives in the emergency room. The correct management is:",
+      options: [
+        "Immediate haemodialysis to clear disulfiram from the circulation",
+        "Supportive and symptomatic care - IV fluids, antiemetics, oxygen and haemodynamic monitoring, with no specific antidote for the reaction",
+        "Naloxone 0.4 mg intravenously, because acetaldehyde acts as an endogenous opioid agonist",
+        "Fomepizole, which reverses the inhibition of aldehyde dehydrogenase"
+      ],
+      correctIndex: 1,
+      explanation: "The disulfiram-ethanol reaction is managed supportively - fluids, antiemetics, monitoring - exactly as one manages the metronidazole-alcohol reaction that mimics it; there is no specific antidote (KYP anchor; Tripathi describes the syndrome as self-limited over 1-4 hours). Naloxone addresses opioid overdose and acetaldehyde is not an opioid agonist, fomepizole inhibits alcohol dehydrogenase in methanol poisoning and does not reverse aldehyde dehydrogenase, and haemodialysis is not part of this syndrome's care.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "sud-dis-07",
+      question: "Among the following patients seeking alcohol-relapse prevention, disulfiram should NOT be prescribed to:",
+      options: [
+        "An abstinent patient whose spouse will supervise each dose at home",
+        "A motivated abstinent patient who has been counselled about hidden alcohol in foods and medicines",
+        "A patient who is still physically dependent on alcohol and drinking daily, awaiting detoxification",
+        "A well-motivated abstinent professional with no cardiac disease who wants a deterrent"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi is explicit that disulfiram should not be used in patients who are physically dependent on alcohol - aversion therapy is only for abstinent, motivated subjects after the dependence has been treated. Supervised dosing by a family member, intact motivation, and hidden-alcohol counselling are all standard, favourable features of disulfiram therapy, not contraindications.",
+      afterSectionId: "top",
+    },
+    {
+      id: "sud-dis-08",
+      question: "Which pair of drugs is classically taught to produce disulfiram-like reactions with alcohol?",
+      options: [
+        "Paracetamol and ondansetron",
+        "Metformin and glimepiride",
+        "Amoxicillin and azithromycin",
+        "Metronidazole and procarbazine"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi teaches a disulfiram-like intolerance to alcohol with metronidazole (manufacturers advise against drinking during therapy) and describes hot flushing with a disulfiram-like reaction when procarbazine meets alcohol - the classic exam pair. Paracetamol, ondansetron, the antidiabetics and the plain beta-lactam/macrolide antibiotics carry no such alcohol-reaction teaching, making each distractor a real drug but wrong for this question.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

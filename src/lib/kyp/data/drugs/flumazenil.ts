@@ -690,6 +690,110 @@ export const flumazenil: Drug = {
       explanation: "For procedural reversal (iv): start 0.2 mg IV over 15 s, target 0.2–1 mg, maximum 1 mg per episode (3 mg/h max). Repeat 0.2 mg every 1 min to max 1 mg",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "adj-flm-01",
+      question: "Flumazenil's mechanism of action is:",
+      options: [
+        "Competitive antagonism at the benzodiazepine site on the GABA-A receptor (alpha/gamma interface), with essentially no intrinsic effect in subjects who have not taken benzodiazepines",
+        "Inverse agonism at the benzodiazepine site, driving chloride channels shut and provoking seizures at usual doses",
+        "Barbiturate-site blockade that also reverses ethanol and opioid sedation",
+        "Enhancement of GABA reuptake by glial transporters, lowering synaptic GABA"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung classifies flumazenil among 1,4-benzodiazepine derivatives with high affinity for the benzodiazepine binding site acting as competitive antagonists, and Tripathi notes it has little intrinsic activity with practically no effect in normal subjects. Inverse agonists are the beta-carboline family, and flumazenil does not reverse ethanol, opioids or general anaesthetics — it has neither a barbiturate-site action nor a reuptake effect.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "adj-flm-02",
+      question: "A young woman found drowsy after ingesting her mother's diazepam is given IV flumazenil in the emergency room and wakes promptly — but two hours later she is deeply drowsy again. Why?",
+      options: [
+        "The first dose was purely a placebo effect; a true antagonist would sedate permanently",
+        "Flumazenil's half-life (about 0.7-1.3 hours) is far shorter than diazepam's effective half-life measured in days, so the antagonist wears off first and sedation recurs — requiring monitored observation with repeated boluses or infusion if needed",
+        "She has metabolised all the diazepam, and the new drowsiness is hypoglycaemia needing 50% dextrose",
+        "Flumazenil induces hepatic enzymes that convert residual diazepam into a more sedating metabolite"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung gives flumazenil a short half-life of 0.7-1.3 hours from rapid hepatic clearance and explicitly warns that because all benzodiazepines outlast it, sedation commonly recurs and repeated administration is required; Tripathi records reversal lasting 1-2 hours. Diazepam's long active-metabolite half-life guarantees this race, enzyme induction is a fiction, and observation for resedation is the standard post-reversal rule.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "adj-flm-03",
+      question: "A 45-year-old man has taken prescribed clonazepam 2 mg daily for 6 years. He is brought obtunded after a suspected extra dose, and a colleague gives IV flumazenil. Minutes later he is violently agitated, sweating, and then seizes. The best explanation is:",
+      options: [
+        "Clonazepam turned into a convulsant metabolite under flumazenil's enzymatic induction",
+        "The seizure proves the original ingestion was not a benzodiazepine at all",
+        "In a benzodiazepine-dependent patient flumazenil can precipitate a severe acute abstinence syndrome including seizures — a key reason it is not routine in unknown coma",
+        "Flumazenil triggered a pseudoallergic mast-cell reaction, and the seizure was anaphylaxis-related"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung warns flumazenil may cause a severe precipitated abstinence syndrome in patients with physiological benzodiazepine dependence, and Tripathi's overdose teaching restricts its use accordingly — a 6-year chronic user is exactly the risk group. Allergy, enzyme induction and the claim that a seizure excludes benzodiazepines are not the mechanism; provocation of withdrawal in a dependent brain is.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "adj-flm-04",
+      question: "An unresponsive adolescent arrives with QRS widening on the ECG; the parents mention an empty amitriptyline strip and their own unfinished diazepam bottle. Which action is WRONG?",
+      options: [
+        "Starting IV sodium bicarbonate for the wide QRS",
+        "Securing the airway before any antidote discussion",
+        "Preparing continuous cardiac monitoring and seizure precautions",
+        "Giving IV flumazenil — in mixed benzodiazepine-tricyclic ingestion flumazenil can precipitate seizures and cardiac arrhythmias; the TCA itself needs sodium bicarbonate and supportive care"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung records that when benzodiazepines are ingested with tricyclic antidepressants, seizures and cardiac arrhythmias may follow flumazenil administration — the therapeutic-index-reversal hazard that makes mixed overdoses a contraindication-in-spirit. Bicarbonate for QRS widening, airway first and cardiac monitoring are all correct TCA-overdose steps; the flumazenil bolus is the wrong step.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "adj-flm-05",
+      question: "Which pharmacokinetic statement about flumazenil is correct?",
+      options: [
+        "Given intravenously it acts within seconds to minutes, its elimination half-life is roughly 1 hour from rapid hepatic clearance, and oral use is impractical (bioavailability around 16%)",
+        "It is a long-acting oral antagonist with a half-life of 24-36 hours, ideal for home tapering",
+        "It requires hepatic activation to an active sulfoxide, delaying onset to 6 hours",
+        "It is eliminated by glomerular filtration of unchanged drug with a half-life of 4-6 days"
+      ],
+      correctIndex: 0,
+      explanation: "Tripathi records IV onset within seconds, action lasting 1-2 hours and an elimination half-life of 1 hour from rapid metabolism; Katzung's range is 0.7-1.3 hours, and oral bioavailability near 16% is why it is injection-only. A 24-36 hour antagonist does not exist, no hepatic activation is needed, and renal filtration plays no major role.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "adj-flm-06",
+      question: "Which sedative-hypnotic group's CNS effects does flumazenil reverse, and which does it not?",
+      options: [
+        "It reverses general anaesthetics only during procedural sedation",
+        "It reverses benzodiazepines and the Z-drugs acting at the benzodiazepine site (zolpidem, zaleplon, eszopiclone), but NOT ethanol, barbiturates, opioids or general anaesthetics",
+        "It reverses ethanol and barbiturates but not benzodiazepines",
+        "It reverses opioids fully, serving as an alternative to naloxone"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung's flumazenil box states it blocks the actions of benzodiazepines, zolpidem, zaleplon and eszopiclone but does not antagonise the CNS effects of other sedative-hypnotics, ethanol, opioids or general anaesthetics; Tripathi confirms the zolpidem-like non-benzodiazepines are covered. Naloxone handles opioids, and ethanol or barbiturate reversal needs supportive care.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "adj-flm-07",
+      question: "An unconscious man of unknown history is brought to a small hospital; pupils 3 mm, respiratory rate 14. Should flumazenil be given routinely?",
+      options: [
+        "Yes — flumazenil is the universal sedative antidote covering ethanol, opioids and benzodiazepines alike",
+        "No — flumazenil is contraindicated in every setting because it causes permanent amnesia",
+        "No — in undifferentiated coma flumazenil is selective, not routine: airway and supportive care come first, and empirical use risks seizures in dependent or mixed (especially TCA) ingestions; if given, sedation unresponsive to 5 mg suggests a non-benzodiazepine depressant",
+        "Yes — every undifferentiated coma deserves empirical flumazenil and naloxone with no further work-up"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi's differential-diagnosis pearl is that sedation not abolished by 5 mg of flumazenil is due to a non-benzodiazepine depressant, and Katzung's teaching limits flumazenil to known benzodiazepine overdose or procedural reversal precisely because of precipitated withdrawal and TCA-arrhythmia risk. Blind empirical antidote cocktails skip essential assessment, the universal-antidote claim is false, and amnesia is not its hazard.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "adj-flm-08",
+      question: "After an upper-GI endoscopy under IV midazolam, a patient remains excessively drowsy 30 minutes later and cannot be discharged. The appropriate reversal agent and dose approach is:",
+      options: [
+        "IV naloxone 0.4 mg, repeated every 2 minutes until alertness returns",
+        "Oral flumazenil 10 mg daily for three days, then stop",
+        "IV caffeine 250 mg as the approved benzodiazepine reversal stimulant",
+        "IV flumazenil titrated in small increments (Tripathi: 0.2 mg per minute until consciousness returns) — an approved use for hastening recovery from benzodiazepine sedation, with the patient still observed for resedation"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung lists reversal of benzodiazepine sedation in anesthetic and diagnostic procedures among flumazenil's approvals, and Tripathi's titration is 0.2 mg per minute IV until the patient regains consciousness. Naloxone is the opioid antidote and does nothing here, flumazenil is not used orally, and caffeine reverses nothing at the benzodiazepine receptor — observation for resedation continues regardless.",
+      afterSectionId: "quick-facts",
+    },
   ],
   activeRecallQuestions: [
     {

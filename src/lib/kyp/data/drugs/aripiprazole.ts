@@ -1135,6 +1135,110 @@ export const aripiprazole: Drug = {
       explanation: "For schizophrenia (adults): start 10–15 mg once daily, target 10–15 mg/day, maximum 30 mg/day. Can start at 10 mg without titration; increase after 2 weeks if needed",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "atp-ari-01",
+      question: "Aripiprazole's unique mechanism is best described as:",
+      options: [
+        "D2 partial agonism ('dopamine system stabiliser') plus 5-HT1A partial agonism and 5-HT2A antagonism",
+        "Irreversible D2 antagonism with strong H1 blockade",
+        "Full D2 agonism with anticholinergic activity",
+        "Pure 5-HT2A antagonism without any dopaminergic action"
+      ],
+      correctIndex: 0,
+      explanation: "Aripiprazole is the prototype D2 partial agonist with high affinity but low intrinsic activity — functional antagonism in hyperdopaminergic states, stabilising tone in hypodopaminergic ones — combined with 5-HT1A partial agonism and 5-HT2A antagonism (Tripathi; Katzung). No antipsychotic binds irreversibly, full agonism would be psychotomimetic rather than therapeutic, and pure 5-HT2A antagonism without dopaminergic action is pimavanserin's profile, not an antipsychotic's.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "atp-ari-02",
+      question: "Six weeks after starting aripiprazole 15 mg/day, a 22-year-old with schizophrenia paces the ward, cannot keep his legs still and describes constant 'inner restlessness'; hallucinations have not returned. The most likely diagnosis is:",
+      options: [
+        "Neuroleptic malignant syndrome",
+        "Akathisia — the most common adverse effect of aripiprazole",
+        "Relapse of psychosis requiring dose escalation",
+        "Tardive dyskinesia from years of exposure"
+      ],
+      correctIndex: 1,
+      explanation: "Subjective inner restlessness with an inability to sit still, weeks into aripiprazole therapy and without returning psychosis, is akathisia — the drug's signature and most common adverse effect; management is dose reduction, propranolol or switching, since escalating the dose would worsen it. Relapse presents with positive symptoms rather than motor restlessness, tardive dyskinesia needs prolonged exposure and looks choreoathetoid rather than restless, and NMS brings rigidity, hyperthermia and autonomic instability.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-ari-03",
+      question: "Which elimination statement fits aripiprazole?",
+      options: [
+        "Half-life under 2 hours, best given by continuous infusion",
+        "Half-life about 6 hours, requiring twice-daily dosing",
+        "Half-life about 75 hours (~3 days) — long-acting, so dose changes take weeks to stabilise",
+        "Half-life 24-30 hours with purely renal clearance"
+      ],
+      correctIndex: 2,
+      explanation: "Aripiprazole's half-life is roughly 75 hours (Tripathi: about 3 days), explaining once-daily dosing, the availability of LAIs and the advice to adjust the dose only after about 2 weeks on a change. The 6-hour figure is quetiapine IR, the 24-30 hour one is olanzapine — which is hepatically cleared, not renally — and infusion dosing describes nothing in this class.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atp-ari-04",
+      question: "A man stable on aripiprazole 15 mg/day starts carbamazepine for trigeminal neuralgia. According to Tripathi's dosing guidance, the aripiprazole dose should be:",
+      options: [
+        "Stopped immediately and replaced by lithium",
+        "Halved",
+        "Unchanged — no interaction exists",
+        "Doubled"
+      ],
+      correctIndex: 3,
+      explanation: "Aripiprazole is metabolised by CYP3A4 and CYP2D6; carbamazepine's 3A4 induction cuts its exposure, so the aripiprazole dose should be doubled (Tripathi's dosing guidance). Halving is the rule for 3A4/2D6 inhibitors such as ketoconazole or quinidine — the opposite pharmacology — there is clearly an interaction to manage, and lithium substitution is unnecessary when a dose adjustment solves it.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atp-ari-05",
+      question: "A 9-year-old boy with autism spectrum disorder has severe irritability with aggression despite behavioural intervention. Which statement about aripiprazole is accurate?",
+      options: [
+        "Aripiprazole is approved for irritability associated with autism",
+        "Aripiprazole is approved for autism-related speech delay",
+        "Aripiprazole is approved only for Tourette syndrome in children",
+        "Aripiprazole is contraindicated below 18 years for any use"
+      ],
+      correctIndex: 0,
+      explanation: "Aripiprazole (like risperidone) is approved for irritability associated with autistic disorder — alongside its labels for schizophrenia, bipolar mania, MDD augmentation and Tourette disorder (Katzung notes aripiprazole and risperidone in this paediatric context). There is no blanket paediatric contraindication, speech delay is not a labelled indication, and claiming Tourette exclusivity ignores its other approved uses.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atp-ari-06",
+      question: "Regarding aripiprazole's metabolic and endocrine profile, the correct statement is:",
+      options: [
+        "It commonly causes hyperprolactinaemia with galactorrhoea",
+        "It is weight- and prolactin-sparing, and can even lower prolactin in hyperprolactinaemic patients",
+        "It predictably causes the highest weight gain among the big five atypicals",
+        "It carries a high risk of new-onset diabetes similar to clozapine"
+      ],
+      correctIndex: 1,
+      explanation: "Aripiprazole shows minimal weight, metabolic and prolactin burden (Katzung: small increases in weight and lipids; no or minimal prolactin rise), and its partial D2 agonism can reduce prolactin — hence its use to reverse antipsychotic-induced hyperprolactinaemia. Galactorrhoea is risperidone/paliperidone territory, and the extreme weight-gain and diabetes claims transplant olanzapine/clozapine liabilities onto the wrong drug.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-ari-07",
+      question: "PET studies show aripiprazole achieves very high striatal D2 occupancy, yet it causes little EPS. The reconciliation is:",
+      options: [
+        "Simultaneous strong M1 muscarinic blockade masks the parkinsonism",
+        "Its short half-life prevents sustained receptor blockade",
+        "Partial agonism — high-affinity binding with low intrinsic activity preserves basal dopaminergic tone",
+        "Occupancy data are artefactual because aripiprazole never reaches the brain"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung's PET discussion notes that aripiprazole shows very high D2 occupancy without EPS because it is a partial D2-receptor agonist: it occupies receptors but its low intrinsic activity leaves residual dopaminergic tone, unlike full antagonists where occupancy near 80% brings parkinsonism. The drug obviously reaches the brain, aripiprazole lacks the strong antimuscarinic action that would mask EPS, and its 75-hour half-life is the opposite of brief.",
+      afterSectionId: "neurotransmitters",
+    },
+    {
+      id: "atp-ari-08",
+      question: "A 19-year-old college student in Pune with first-episode psychosis is starting treatment; he fears sedation and weight gain during examinations and already sleeps 10 hours nightly. Which initial antipsychotic fits his goals best?",
+      options: [
+        "Clozapine — first-line for all first-episode psychosis in India",
+        "Quetiapine IR 200 mg three times daily — its stimulating profile aids study",
+        "Olanzapine 20 mg — its metabolic effects improve concentration",
+        "Aripiprazole — non-sedating (may even cause insomnia), minimal weight and prolactin effects"
+      ],
+      correctIndex: 3,
+      explanation: "For a function-focused young patient, aripiprazole's profile — non-sedating, may even cause insomnia (Tripathi), with little weight gain and no significant hyperprolactinaemia — matches his priorities. Olanzapine brings sedation plus the class's worst metabolic liability, clozapine is reserved for refractory illness after two adequate trials, and quetiapine is sedating (H1-driven), not stimulating.",
+      afterSectionId: "top",
+    },
   ],
   activeRecallQuestions: [
     {

@@ -1561,6 +1561,162 @@ export const sertraline: Drug = {
       explanation: "Sertraline is the SSRI of choice in pregnancy — lowest placental transfer, lowest milk/plasma ratio (~0.5), infant serum levels usually undetectable. IPS concurs with international guidelines. Avoid paroxetine (Category D — cardiac defects). Never stop sertraline abruptly if a patient becomes pregnant.",
       afterSectionId: "evidence-practice",
     },
+    {
+      id: "ssri-ser-01",
+      question: "In 'SSRI', the word 'selective' refers to which property of sertraline?",
+      options: [
+        "Much greater affinity for SERT than for NET or DAT",
+        "Selective action only on 5-HT1A receptors",
+        "Selective metabolism by one single CYP enzyme",
+        "Selective distribution only to serotonergic neurons"
+      ],
+      correctIndex: 0,
+      explanation: "Selectivity refers to SERT over NET and DAT affinity — sertraline blocks serotonin reuptake far more potently than norepinephrine or dopamine reuptake. It does NOT mean receptor-subtype selectivity, single-enzyme metabolism, or selective brain distribution. Sertraline's target is SERT (SLC6A4) on the presynaptic neuron.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "ssri-ser-02",
+      question: "Sertraline's half-life is 22-36 hours. The practical clinical implication is:",
+      options: [
+        "Twice-daily dosing is required",
+        "Once-daily dosing, with steady state in roughly a week",
+        "Once-weekly dosing is sufficient",
+        "Routine serum level monitoring is mandatory"
+      ],
+      correctIndex: 1,
+      explanation: "A 22-36 hour half-life supports once-daily dosing; steady state arrives after about 4-5 half-lives (5-7 days). Weekly dosing is a fluoxetine trick (longest half-life), not sertraline. Serum levels are never routinely monitored for SSRIs.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "ssri-ser-03",
+      question: "A patient started on sertraline 50 mg calls at day 7: 'I feel no different — should I double the dose?' The best explanation for the delayed benefit is:",
+      options: [
+        "The dose is subtherapeutic and should be doubled now",
+        "Sertraline takes 4-6 weeks just to reach steady-state levels",
+        "5-HT1A somatodendritic autoreceptors are still braking serotonergic firing; they desensitise over 1-2 weeks, with full benefit at 4-6 weeks",
+        "Receptor tolerance has already developed"
+      ],
+      correctIndex: 2,
+      explanation: "SERT blockade raises synaptic serotonin within hours, but 5-HT1A autoreceptors in the raphe nuclei detect the rise and inhibit firing. Their desensitisation removes the brake over 1-2 weeks; downstream neuroadaptation (BDNF, neurogenesis) completes at 4-6 weeks. Steady state is only about a week — so option B confuses PK with pharmacodynamics. Doubling at week 1 only adds side effects.",
+      afterSectionId: "brain-regions",
+    },
+    {
+      id: "ssri-ser-04",
+      question: "A 26-year-old woman starts sertraline 50 mg for her first depressive episode. Ten days later she reports nausea, loose stools and mild jitteriness but is sleeping and functioning. She has no red-flag symptoms. Best management:",
+      options: [
+        "Stop sertraline and switch to a different class",
+        "Add ondansetron routinely for the first month",
+        "Double the dose to push through the side effects",
+        "Reassure, advise taking the dose with food — early GI effects are usually transient"
+      ],
+      correctIndex: 3,
+      explanation: "Early GI upset and jitteriness are the commonest sertraline effects in weeks 1-2 and usually attenuate; taking it with food helps. Doubling the dose during the titration window amplifies adverse effects without speeding response. Routine antiemetics are not needed; switching class this early abandons a well-chosen drug.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "ssri-ser-05",
+      question: "A 62-year-old man, 2 weeks after STEMI with EF 40%, screens positive for moderate depression (PHQ-9 = 14). Which antidepressant has the best evidence for safety in this setting?",
+      options: [
+        "Sertraline",
+        "Amitriptyline",
+        "Fluoxetine",
+        "Paroxetine"
+      ],
+      correctIndex: 0,
+      explanation: "Sertraline has the strongest cardiac safety data among antidepressants after MI (SADHART trial) and minimal effect on conduction or QTc. TCAs are arrhythmogenic in ischaemic heart disease; paroxetine adds strong CYP2D6 interactions and anticholinergic burden; fluoxetine is activating with 2D6 inhibition. This 'safest SSRI in cardiac disease' identity is a recurring NEET PG/INI-CET theme.",
+      afterSectionId: "top",
+    },
+    {
+      id: "ssri-ser-06",
+      question: "A 24-year-old man on sertraline 100 mg takes over-the-counter tramadol for dental pain. Six hours later: agitation, sweating, tremor, inducible clonus, hyperreflexia, temperature 38.2 C. What is the diagnosis and first step?",
+      options: [
+        "Neuroleptic malignant syndrome — start bromocriptine",
+        "Serotonin syndrome — stop both serotonergic drugs and give supportive care with a benzodiazepine",
+        "Anticholinergic toxidrome — give physostigmine",
+        "Malignant hyperthermia — give dantrolene"
+      ],
+      correctIndex: 1,
+      explanation: "Tramadol is serotonergic; stacked on an SSRI it produces serotonin syndrome — neuromuscular hyperactivity (clonus, hyperreflexia, myoclonus) with autonomic instability. NMS differs: lead-pipe rigidity, marked hyperthermia, slower onset over days. Management: stop the serotonergic agents, supportive care, benzodiazepines for agitation; cyproheptadine in severe cases (Hunter criteria).",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "ssri-ser-07",
+      question: "A 28-year-old woman stable on sertraline 100 mg discovers she is 8 weeks pregnant. Her husband is worried the drug will harm the baby. The best counsel:",
+      options: [
+        "Stop sertraline immediately — it is teratogenic in the first trimester",
+        "Switch to paroxetine — it is the safest SSRI in pregnancy",
+        "Continue sertraline — it has among the better reproductive-safety data; abrupt stoppage risks relapse; weigh risks and benefits together",
+        "Switch to fluoxetine because it is approved for pregnancy-related disorders"
+      ],
+      correctIndex: 2,
+      explanation: "Untreated perinatal depression itself carries maternal and fetal risk. Sertraline has favourable reproductive-safety data and is a preferred SSRI in pregnancy. Paroxetine is the outlier to avoid (Category D, cardiac septal-defect signal). Abrupt discontinuation risks relapse and discontinuation symptoms — any change should be planned with prescriber input.",
+      afterSectionId: "top",
+    },
+    {
+      id: "ssri-ser-08",
+      question: "Which set correctly lists sertraline's FDA-approved indications (the broadest label in the SSRI class)?",
+      options: [
+        "MDD and OCD only",
+        "MDD, OCD, bulimia nervosa, panic disorder",
+        "MDD, GAD, PTSD, PMDD",
+        "MDD, OCD, panic disorder, PTSD, social anxiety disorder, PMDD"
+      ],
+      correctIndex: 3,
+      explanation: "Sertraline carries six labelled indications: MDD, OCD, panic disorder, PTSD, social anxiety disorder and PMDD — the broadest SSRI label. Bulimia nervosa belongs to fluoxetine; GAD is labelled for paroxetine and escitalopram, not sertraline. Examiners love trading one indication between drugs to test precision.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "ssri-ser-09",
+      question: "A 55-year-old man with cirrhosis (Child-Pugh B) needs treatment for MDD. Sertraline is chosen. Appropriate dosing approach:",
+      options: [
+        "Start 25 mg and titrate cautiously — hepatic clearance is reduced",
+        "Standard 50 mg starting dose",
+        "Sertraline is absolutely contraindicated in liver disease",
+        "Double the initial dose to compensate for hypoalbuminaemia"
+      ],
+      correctIndex: 0,
+      explanation: "Sertraline is often the preferred SSRI in hepatic and cardiac disease (low CYP inhibition, no QTc signal), but clearance falls in cirrhosis — start at 25 mg and titrate slowly in Child-Pugh B/C. 'Absolutely contraindicated' overstates it; dose adjustment, not avoidance, is the answer.",
+      afterSectionId: "top",
+    },
+    {
+      id: "ssri-ser-10",
+      question: "A 58-year-old woman on tamoxifen for ER-positive breast cancer develops MDD. Which SSRI should be PREFERRED?",
+      options: [
+        "Paroxetine",
+        "Escitalopram",
+        "Fluoxetine",
+        "Fluvoxamine"
+      ],
+      correctIndex: 1,
+      explanation: "Tamoxifen is a prodrug activated to endoxifen mainly by CYP2D6. Paroxetine and fluoxetine are potent 2D6 inhibitors and reduce endoxifen levels, associated with higher recurrence risk. Fluvoxamine brings its own CYP burden (1A2/2C19) and no advantage here. Escitalopram has the lowest CYP-interaction burden in the class (KYP class table), making it the preferred co-prescription.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "ssri-ser-11",
+      question: "A 31-year-old on sertraline is admitted for MRSA cellulitis and the intern adds linezolid. What serotonergic risk exists and why?",
+      options: [
+        "None — linezolid is a plain antibiotic with no CNS activity",
+        "Linezolid directly inhibits SERT like fluoxetine",
+        "Linezolid is a weak, reversible MAO inhibitor — combined with an SSRI it can precipitate serotonin syndrome",
+        "The only relevant risk is additive QTc prolongation"
+      ],
+      correctIndex: 2,
+      explanation: "Linezolid is a weak, reversible, non-selective MAO inhibitor — an easily forgotten monoamine-oxidase effect. With an SSRI on board it can contribute to serotonergic excess; counsel the team, monitor for agitation, clonus and autonomic instability, and prefer an alternative antibiotic when feasible. QTc is not the issue here.",
+      afterSectionId: "neural-pathways",
+    },
+    {
+      id: "ssri-ser-12",
+      question: "A distressed college student discloses hopelessness but refuses to visit an emergency room. Which number is India's national Tele-MANAS tele-mental-health helpline that you can hand them?",
+      options: [
+        "104",
+        "181",
+        "1097",
+        "14416"
+      ],
+      correctIndex: 3,
+      explanation: "Tele-MANAS — the Government of India's national tele-mental-health service — runs on 14416, with crisis care escalatable to 112. Know Your Pill's crisis strip carries exactly this trio: 112 (emergency), 14416 (Tele-MANAS), 1800-222-2222 (Poison Control). 104 is the general health helpline, 181 the women's helpline, 1097 the AIDS helpline.",
+      afterSectionId: "top",
+    },
   ],
 
   /* End-of-page active recall questions */

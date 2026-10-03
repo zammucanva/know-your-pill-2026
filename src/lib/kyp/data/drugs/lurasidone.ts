@@ -895,6 +895,110 @@ export const lurasidone: Drug = {
       explanation: "For schizophrenia: start 40 mg once daily with evening meal, target 40–160 mg/day, maximum 160 mg/day. Increase to 80–120 mg as needed",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "atp-lur-01",
+      question: "Lurasidone's mechanism is best described as:",
+      options: [
+        "D2 and 5-HT2A antagonism with 5-HT7 antagonism and 5-HT1A partial agonism",
+        "Irreversible D2 antagonism with strong H1 and muscarinic blockade",
+        "Selective D3 partial agonism without serotonergic actions",
+        "Combined MAO-B inhibition and dopamine release"
+      ],
+      correctIndex: 0,
+      explanation: "Lurasidone pairs D2 with 5-HT2A blockade, adds 5-HT7 antagonism and behaves as a 5-HT1A partial agonist — a receptor set linked to efficacy in schizophrenia and bipolar depression with a lean metabolic hand. Strong antimuscarinic/H1 loading is clozapine-style, and selective D3 partial agonism defines cariprazine, not lurasidone.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "atp-lur-02",
+      question: "Which statement about lurasidone's metabolism is correct?",
+      options: [
+        "It undergoes rapid plasma ester hydrolysis",
+        "It is a CYP3A4 substrate; strong 3A4 inhibitors (ketoconazole, ritonavir) and inducers (rifampicin, carbamazepine) are contraindicated",
+        "It is cleared purely by glomerular filtration, unaffected by any enzyme inhibitor",
+        "It is a CYP1A2 substrate whose levels collapse in tobacco smokers"
+      ],
+      correctIndex: 1,
+      explanation: "Lurasidone depends on CYP3A4, so potent inhibitors such as ketoconazole or ritonavir and inducers such as rifampicin or carbamazepine are outright contraindicated — the constraint is absolute, not a dose-tweak. Glomerular-filtration clearance describes amisulpride, and tobacco-driven 1A2 induction is the clozapine/olanzapine story.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atp-lur-03",
+      question: "A woman stable on lurasidone develops cutaneous candidiasis and her GP starts ketoconazole tablets. The correct response is:",
+      options: [
+        "Continue both unchanged with weekly ECGs as the safeguard",
+        "Stop lurasidone permanently and switch to haloperidol",
+        "Avoid the combination — choose a non-3A4-inhibiting antifungal, because lurasidone levels will rise",
+        "Double the lurasidone dose to cover induction losses"
+      ],
+      correctIndex: 2,
+      explanation: "Ketoconazole is a potent CYP3A4 inhibitor; co-prescription with the 3A4-substrate lurasidone is contraindicated because lurasidone exposure climbs — a topical agent or non-inhibiting antifungal is the fix. Doubling the antipsychotic worsens toxicity, ECGs do not mitigate a PK interaction, and abandoning an effective drug for haloperidol invites EPS.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atp-lur-04",
+      question: "A 28-year-old woman with bipolar I disorder presents in a moderate depressive episode without psychosis; her weight is high-normal and she fears the metabolic price of olanzapine-fluoxetine. Which single-agent antipsychotic is the evidence-based choice here?",
+      options: [
+        "Haloperidol",
+        "Zotepine",
+        "Thioridazine",
+        "Lurasidone"
+      ],
+      correctIndex: 3,
+      explanation: "Lurasidone is approved as monotherapy for bipolar depressive episodes — the class's classic bipolar-depression antipsychotic (Katzung groups it with quetiapine and olanzapine-fluoxetine for this indication) — with the least metabolic cost. Haloperidol has no depressive-episode claim, and zotepine or thioridazine are not bipolar-depression options at all.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-lur-05",
+      question: "A ward nurse gives lurasidone at 8 am; the patient eats nothing until a 2 pm canteen meal. The pharmacist's correction should state:",
+      options: [
+        "Lurasidone needs a meal of at least ~350 kcal with the dose, or absorption falls short",
+        "Lurasidone must be taken strictly on an empty stomach",
+        "Any fluid, even plain water, doubles lurasidone levels",
+        "Doses above 80 mg of lurasidone need no food"
+      ],
+      correctIndex: 0,
+      explanation: "Lurasidone must be swallowed with food of at least ~350 kcal; fasting administration cuts exposure enough to undermine efficacy — the second food-dependent antipsychotic after ziprasidone's ~500 kcal rule. Empty-stomach dosing is exactly backwards, water changes nothing, and no dose escapes the meal requirement.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-lur-06",
+      question: "Three weeks after starting lurasidone, a patient reports an inability to keep her legs still and a compulsion to pace the corridor; weight and fasting glucose are unchanged. The best interpretation is:",
+      options: [
+        "A withdrawal syndrome proving covert non-adherence",
+        "Akathisia — lurasidone's signature adverse effect, against an otherwise benign metabolic backdrop",
+        "Drug-induced parkinsonism requiring permanent drug withdrawal",
+        "Restless legs from iron deficiency, unrelated to the antipsychotic"
+      ],
+      correctIndex: 1,
+      explanation: "Inner restlessness with pacing early in lurasidone therapy is akathisia, its commonest complaint, while the unchanged weight and glucose reflect its lowest-tier metabolic burden (Katzung places it in the small-increase group). Dose reduction or symptomatic cover usually suffices; iron studies are reasonable, but the timing after drug start is the giveaway.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atp-lur-07",
+      question: "A 39-year-old with schizophrenia on olanzapine develops 12 kg weight gain, HbA1c 6.9% and triglycerides of 320 mg/dL, yet remains partly psychotic, so a switch is planned with metabolic recovery first. The most suitable single next agent is:",
+      options: [
+        "Zotepine, for its noradrenergic antidepressant flavour",
+        "Thioridazine, to sidestep diabetic liability",
+        "Lurasidone, for its minimal weight and lipid impact",
+        "Clozapine, because it outperforms all others in difficult illness"
+      ],
+      correctIndex: 2,
+      explanation: "With metabolic syndrome dominating the picture, lurasidone's lowest-tier weight and lipid profile makes it the rational switch (Katzung: least weight gain with ziprasidone; lurasidone in the small-increase tier). Clozapine and zotepine would aggravate diabetes and dyslipidaemia, and thioridazine adds QTc and retinal danger without any metabolic rescue.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-lur-08",
+      question: "Which co-prescription makes lurasidone therapy outright contraindicated by slashing its levels?",
+      options: [
+        "Paroxetine, a strong CYP2D6 inhibitor",
+        "Omeprazole, a CYP2C19 inhibitor",
+        "Propranolol, a CYP2D6 inhibitor",
+        "Rifampicin, a powerful CYP3A4 inducer"
+      ],
+      correctIndex: 3,
+      explanation: "Strong CYP3A4 inducers — rifampicin, carbamazepine — are contraindicated with lurasidone because induced metabolism drops exposure below therapeutic range: the mirror image of the ketoconazole interaction. Paroxetine's 2D6 inhibition is the brexpiprazole issue, and omeprazole's 2C19 effect is irrelevant to this drug.",
+      afterSectionId: "timeline",
+    },
   ],
   activeRecallQuestions: [
     {

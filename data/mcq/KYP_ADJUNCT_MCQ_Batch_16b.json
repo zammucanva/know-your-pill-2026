@@ -1,0 +1,1163 @@
+{
+ "batch": "kyp-adjunct-mcq-batch-16b",
+ "title": "Adjunct MCQ Batch 16b - Buspirone / Propranolol / Prazosin / Clonidine / Guanfacine / Flumazenil / Benztropine / Trihexyphenidyl",
+ "generated": "2026-10-02",
+ "examOrientation": "Indian exams (NEET PG / INI-CET) + USMLE-style vignettes",
+ "textbookAnchors": "Facts aligned with Katzung Basic & Clinical Pharmacology 14e (ch.10 beta blockers, ch.11 alpha-2 agonists/prazosin, ch.22 buspirone box + flumazenil box, ch.28 opioid-withdrawal clonidine use, ch.29 EPS treatment and antiparkinsonism table), K.D. Tripathi Essentials of Medical Pharmacology 7e (ch.10 propranolol, ch.19/20 prazosin-clonidine, ch.29 buspirone-flumazenil, ch.32 trihexyphenidyl/promethazine, ch.33 anxiety treatment), Oxford Handbook of Psychiatry, and USMLE board conventions; cross-checked against KYP monographs (buspirone 5-HT1A partial agonist, 2-4-week onset, no GABA action or dependence, 3A4/grapefruit, SSRI augmentation; propranolol non-selective beta-blocker for akathisia/lithium tremor/somatic-only performance anxiety with asthma-diabetes cautions; prazosin alpha-1 blocker for PTSD nightmares with first-dose bedtime warning; clonidine central alpha-2 agonist for opioid detox/ADHD/tics with rebound-hypertension signature; guanfacine selective alpha-2A, Intuniv XR, less rebound, 3A4 caution; flumazenil competitive BZD-site antagonist, ~1 h half-life resedation, dependent-user and TCA co-ingestion hazards; benztropine treats dystonia/parkinsonism but worsens tardive dyskinesia; trihexyphenidyl central anticholinergic with misuse potential and levodopa-never pearl). No copyrighted text reproduced.",
+ "schema": {
+  "core_fields": "id, question, options[4], correctIndex, explanation, afterSectionId - IDENTICAL to KYP microQuizzes",
+  "metadata_fields": "drugSlug, domain, difficulty (Foundation|Clinical|Advanced), style (vignette|recall) - batch extras",
+  "notes": [
+   "afterSectionId values are real section ids observed live on KYP pages: top, quick-facts, mechanism, timeline, neurotransmitters, neural-pathways, knowledge-graph, high-yield-summary, brain-regions.",
+   "Answer positions deliberately spread: A17 B16 C16 D16 (see stats.answerSpread).",
+   "QA gate: this batch passed scripts/mcq_4step_check.py after extending the fact table with adjunct/autonomic-agent data.",
+   "id pattern: adj-<code>-01..08 per drug (bus/pro/prz/cld/gfc/flm/bnz/tpx) + one adj-mix-01 class-summary at the end."
+  ]
+ },
+ "stats": {
+  "total": 65,
+  "byDrug": {
+   "buspirone": 8,
+   "propranolol": 8,
+   "prazosin": 8,
+   "clonidine": 8,
+   "guanfacine": 8,
+   "flumazenil": 8,
+   "benztropine": 8,
+   "trihexyphenidyl": 8,
+   "mixed": 1
+  },
+  "byDifficulty": {
+   "Foundation": 16,
+   "Clinical": 36,
+   "Advanced": 13
+  },
+  "byStyle": {
+   "recall": 29,
+   "vignette": 36
+  },
+  "byDomain": {
+   "Mechanism & Neuroscience": 8,
+   "Clinical Uses": 17,
+   "Pharmacokinetics": 6,
+   "Adverse Effects & Safety": 14,
+   "Exam Pearls": 10,
+   "Indian Practice": 6,
+   "Drug Interactions": 3,
+   "Active Recall": 1
+  },
+  "answerSpread": {
+   "0": 17,
+   "1": 16,
+   "2": 16,
+   "3": 16
+  }
+ },
+ "questions": [
+  {
+   "id": "adj-bus-01",
+   "drugSlug": "buspirone",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Which statement best describes buspirone's receptor pharmacology?",
+   "options": [
+    "Partial agonist at presynaptic and postsynaptic 5-HT1A receptors, with no direct interaction with GABA-A or the benzodiazepine site",
+    "Allosteric positive modulator at the benzodiazepine site of GABA-A receptors, raising chloride-channel opening frequency",
+    "Full agonist at the barbiturate site of GABA-A receptors, prolonging channel-opening duration",
+    "Competitive 5-HT2A receptor antagonist combined with potent SERT inhibition"
+   ],
+   "correctIndex": 0,
+   "explanation": "Buspirone is the prototype azapirone \u2014 a 5-HT1A partial agonist that dampens dorsal-raphe serotonergic firing via presynaptic 5-HT1A autoreceptors; Katzung stresses it does not interact directly with GABAergic systems and has no anticonvulsant or muscle-relaxant properties. The benzodiazepine-site and barbiturate-site descriptions belong to other sedative-hypnotic classes, and the 5-HT2A-plus-SERT profile is trazodone-like SARI pharmacology, not buspirone's."
+  },
+  {
+   "id": "adj-bus-02",
+   "drugSlug": "buspirone",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 32-year-old software engineer has two years of generalised anxiety and worry. He became dependent on alprazolam in the past and now wants a daily anxiolytic that will not hook him again. He is started on buspirone and telephones on day 4 saying it is doing nothing. The essential counselling point is:",
+   "options": [
+    "Buspirone is only useful when combined with a benzodiazepine, since it potentiates GABA and deepens sedation",
+    "Buspirone's anxiolytic effect takes 2-4 weeks to become established, so it is continued for chronic GAD despite minimal early benefit \u2014 it is non-sedating with no dependence or withdrawal liability",
+    "Buspirone acts within 30-60 minutes like a benzodiazepine, so the dose should be doubled immediately to gain rapid control",
+    "Buspirone must be tapered off within 2 weeks because tolerance and physical dependence develop quickly"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung states buspirone's anxiolytic effects may take 3-4 weeks to become established, making it unsuitable for acute anxiety but ideal for chronic GAD, and Tripathi records maximum benefit delayed up to 2 weeks \u2014 the 2-4-week KYP window is the counselling pearl. It has minimal abuse liability with no rebound anxiety or withdrawal on abrupt stop and no alcohol cross-tolerance, which is exactly why it suits this ex-dependent patient. Rapid-onset claims describe benzodiazepines, and buspirone neither touches the GABA system nor potentiates sedative-hypnotics."
+  },
+  {
+   "id": "adj-bus-03",
+   "drugSlug": "buspirone",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 40-year-old woman stable on buspirone 10 mg three times daily starts drinking two glasses of grapefruit juice each day and develops marked dizziness, headache and light-headedness. The mechanism is:",
+   "options": [
+    "Grapefruit juice displaces buspirone from plasma albumin, flooding the brain with free drug",
+    "Grapefruit juice blocks renal tubular secretion, so unchanged buspirone accumulates in blood",
+    "Grapefruit juice inhibits intestinal CYP3A4, sharply raising buspirone plasma levels of this extensively first-pass metabolised drug",
+    "Grapefruit juice induces hepatic CYP2D6, accelerating conversion of buspirone into a sedating metabolite"
+   ],
+   "correctIndex": 2,
+   "explanation": "Buspirone undergoes extensive first-pass metabolism (oral bioavailability under 5% per Tripathi) via CYP3A4, and Katzung lists grapefruit juice alongside erythromycin, ketoconazole and nefazodone as 3A4 inhibitors that can markedly increase its plasma levels. Rifampin is the classic inducer that shortens buspirone's half-life and weakens it, and neither albumin displacement nor renal secretion explains this interaction."
+  },
+  {
+   "id": "adj-bus-04",
+   "drugSlug": "buspirone",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "The characteristic adverse-effect and safety profile of buspirone includes:",
+   "options": [
+    "Profound sedation, respiratory depression and high liability for tolerance and physical dependence",
+    "Dose-related extrapyramidal rigidity and tremor needing anticholinergic cover",
+    "Weight gain, hyperprolactinaemia and galactorrhoea from D2-receptor antagonism",
+    "Headache, dizziness, nausea and nervousness, with preserved alertness, no psychomotor impairment and minimal abuse liability"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung notes buspirone causes less psychomotor impairment than benzodiazepines, does not affect driving skills, and lists nonspecific chest pain, tachycardia, dizziness, headache and tinnitus among its effects; Tripathi's minor side-effect list is dizziness, nausea, headache and light-headedness, and unlike the category-D benzodiazepines it is an FDA pregnancy category B drug. Deep sedation with dependence describes benzodiazepines, and although buspirone has weak D2 affinity it produces no antipsychotic, extrapyramidal or prolactin effects."
+  },
+  {
+   "id": "adj-bus-05",
+   "drugSlug": "buspirone",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 26-year-old man presents during a panic attack with palpitations and fear of dying; a colleague suggests starting buspirone 5 mg three times daily as the anxiolytic of choice here. Why is this plan unsound?",
+   "options": [
+    "Buspirone's anxiolytic action is too slow in onset (2-4 weeks) and it is ineffective in panic disorder, where an SSRI with short-term benzodiazepine cover (or alprazolam) is preferred",
+    "Buspirone is contraindicated in panic disorder because it causes dose-dependent pupillary dilatation and raises intraocular pressure",
+    "Buspirone would trigger immediate severe rebound hypertension by sensitising central adrenoceptors",
+    "Buspirone is a potent respiratory depressant and would worsen the hyperventilation of panic attacks"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung explicitly notes the anxiolytic effect of buspirone may take 3-4 weeks to become established, making the drug unsuitable for acute anxiety states, and that it is less effective in panic disorder; Tripathi adds it is ineffective in severe anxiety, panic reaction and OCD \u2014 the signature exam pearl. It actually causes pupillary constriction rather than dilatation, the MAO-inhibitor combination rather than panic is what raises blood pressure, and it does not depress respiration."
+  },
+  {
+   "id": "adj-bus-06",
+   "drugSlug": "buspirone",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 29-year-old woman on sertraline 100 mg for major depression has residual anxiety, low energy and troubling sexual dysfunction. Which augmentation strategy matches buspirone's documented role?",
+   "options": [
+    "Adding buspirone to reverse sertraline-induced prolactin elevation and galactorrhoea",
+    "Adding buspirone to augment the SSRI for residual symptoms, its dopamine-facilitating activity offering a chance of offsetting SSRI-induced sexual dysfunction",
+    "Adding buspirone as a sedative-hypnotic to restore GABA tone depleted by sertraline",
+    "Adding buspirone to block sertraline's conversion into its active metabolite and soften side effects"
+   ],
+   "correctIndex": 1,
+   "explanation": "Buspirone is the classic serotonergic augmentation agent for residual depressive and anxiety symptoms, and KYP's teaching point is that its dopamine-facilitating activity may offset SSRI-associated sexual dysfunction; Tripathi records a mild mood-elevating action attributed to central noradrenergic facilitation. Buspirone has no GABA action, sertraline needs no metabolic help from it, and prolactin reversal is aripiprazole-type partial-agonist work rather than a buspirone claim."
+  },
+  {
+   "id": "adj-bus-07",
+   "drugSlug": "buspirone",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A Chennai psychiatrist prescribes an azapirone dispensed as BUSPIN 5 mg tablets, to be titrated up to three times daily. Which drug and Indian dosing range are in play?",
+   "options": [
+    "Lorazepam \u2014 1-4 mg per day; LARPOSE and ATIVAN 1 and 2 mg tablets",
+    "Alprazolam \u2014 0.25-1 mg three times daily; ALPRAX 0.25, 0.5 and 1 mg tablets",
+    "Buspirone \u2014 5-15 mg per day in divided doses (OD-TDS); ANXIPAR, BUSPIN and BUSCALM 5 and 10 mg tablets",
+    "Hydroxyzine \u2014 50-200 mg per day; ATARAX 10 and 25 mg tablets and syrup"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi introduces buspirone as the first azapirone at 5-15 mg OD-TDS, marketed in India as ANXIPAR, BUSPIN and BUSCALM 5 and 10 mg tablets. The 50-200 mg/day range with ATARAX belongs to hydroxyzine, LARPOSE and ATIVAN are the lorazepam family, and ALPRAX is the high-potency benzodiazepine from the alprazolam monograph \u2014 all anxiolytics, but none is the non-sedating azapirone."
+  },
+  {
+   "id": "adj-bus-08",
+   "drugSlug": "buspirone",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A patient on phenelzine 45 mg per day for atypical depression is additionally given buspirone 10 mg three times daily by a colleague for persistent anxiety. Three days later he is hypertensive, flushed and sweating. What happened?",
+   "options": [
+    "Buspirone competitively inhibits MAO-A itself, so phenelzine rose to toxic concentrations",
+    "Buspirone converted phenelzine into a false transmitter that depleted catecholamine stores",
+    "Buspirone antagonised phenelzine at the benzodiazepine receptor, triggering a withdrawal reaction",
+    "Buspirone combined with an MAO inhibitor can significantly elevate blood pressure \u2014 Katzung flags this interaction, so the pair must be avoided"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung warns that blood pressure may be significantly elevated in patients receiving MAO inhibitors together with buspirone \u2014 the recognised hypertensive interaction that this scenario reproduces. Buspirone has no MAO-inhibiting action of its own, phenelzine is an irreversible enzyme inhibitor rather than a substrate for such a conversion, and buspirone does not bind the benzodiazepine receptor at all."
+  },
+  {
+   "id": "adj-pro-01",
+   "drugSlug": "propranolol",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Which receptor profile defines propranolol?",
+   "options": [
+    "Non-selective competitive antagonism at both beta-1 and beta-2 adrenoceptors (weak beta-3 activity) without intrinsic sympathomimetic activity",
+    "Cardioselective beta-1-only antagonism, as with metoprolol and atenolol",
+    "Combined beta-blockade plus alpha-1 blockade, the profile of carvedilol and labetalol",
+    "Beta-2 agonism that relaxes bronchial smooth muscle and lowers airway resistance"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tripathi presents propranolol as the prototype first-generation non-selective beta-blocker (beta-1 and beta-2, weak beta-3), an inverse agonist with no intrinsic sympathomimetic activity. Beta-1 selectivity defines the second-generation agents, additional alpha-1 blockade defines the third-generation vasodilating blockers, and beta-2 agonism is salbutamol's action \u2014 the very receptor propranolol blocks."
+  },
+  {
+   "id": "adj-pro-02",
+   "drugSlug": "propranolol",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 21-year-old medical student develops a racing heart, trembling hands and sweating before every seminar presentation, though she is free of worry once the event passes. The best pharmacological aid for the performance itself is:",
+   "options": [
+    "A tapering 2-week alprazolam course after each performance to prevent anticipatory fear",
+    "A single dose of propranolol about an hour before the event \u2014 it blunts the peripheral somatic symptoms but does not touch the psychological worry",
+    "A single dose of buspirone about an hour before the event \u2014 it calms somatic and psychological symptoms together",
+    "Fluoxetine started on the morning of the seminar for immediate anxiolysis"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi notes propranolol and other non-selective beta-blockers help anxious patients troubled by palpitation, rise in BP, shaking and sweating by cutting the sympathetic vicious cycle \u2014 valuable in acutely stressful situations such as examination fear and public appearances \u2014 while leaving the psychological symptoms of worry, tension and fear untouched. Buspirone takes weeks to act and is useless acutely, fluoxetine needs weeks as well, and repeated benzodiazepine courses invite dependence."
+  },
+  {
+   "id": "adj-pro-03",
+   "drugSlug": "propranolol",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 35-year-old man started on haloperidol 10 mg per day reports unbearable inner restlessness: he paces, cannot sit still, and describes motor restlessness without any abnormal involuntary movements. The team wants an agent that will not add another sedating anticholinergic. The best choice is:",
+   "options": [
+    "Valbenazine \u2014 the VMAT2 inhibitor approved for drug-induced akathisia",
+    "Amantadine \u2014 the dopaminergic agent that abolishes akathisia in most patients",
+    "Propranolol \u2014 the classic non-anticholinergic remedy for antipsychotic-induced akathisia",
+    "Benztropine \u2014 the first-line drug for akathisia because akathisia is an acute dystonia variant"
+   ],
+   "correctIndex": 2,
+   "explanation": "Akathisia \u2014 subjective inner restlessness with an inability to sit still \u2014 is the extrapyramidal syndrome for which propranolol is the classic beta-blocker remedy (KYP's exam anchor; Tripathi notes it is more effective and may be given to non-responsive cases). Benztropine is the dystonia and parkinsonism drug, valbenazine is the tardive-dyskinesia VMAT2 agent, and amantadine is only an occasional parkinsonism alternative \u2014 none is the classic akathisia answer."
+  },
+  {
+   "id": "adj-pro-04",
+   "drugSlug": "propranolol",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 24-year-old asthmatic with stage fright asks to reuse his friend's propranolol tablets before an audition. Why must this be discouraged?",
+   "options": [
+    "Propranolol causes dose-dependent hyperglycaemia that destabilises airway inflammation",
+    "Propranolol induces CYP3A4 and raises levels of most inhaled corticosteroids",
+    "Propranolol thickens airway mucus through muscarinic receptor blockade",
+    "Propranolol's beta-2 blockade can precipitate severe bronchospasm in asthma \u2014 a non-selective beta-blocker is relatively contraindicated in asthmatics"
+   ],
+   "correctIndex": 3,
+   "explanation": "Blocking bronchial beta-2 receptors removes sympathetically mediated bronchodilatation and can trigger life-threatening bronchospasm \u2014 the classic caution that confines non-selective beta-blockers in asthma (Tripathi groups propranolol among the non-selective agents). The other liabilities are wrong-direction claims: propranolol masks hypoglycaemia in diabetics rather than causing hyperglycaemia, induces no 3A4, and has no muscarinic action."
+  },
+  {
+   "id": "adj-pro-05",
+   "drugSlug": "propranolol",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Propranolol is highly lipophilic. The clinical consequence most relevant to psychiatric practice is:",
+   "options": [
+    "CNS penetration causing fatigue, sleep disturbance with vivid nightmares and light-headedness",
+    "Inability to cross the blood-brain barrier, confining effects to peripheral tissues",
+    "Mandatory dose escalation in renal failure because the kidney is its sole elimination route",
+    "Selective adipose-tissue accumulation that abolishes its cardiac effects"
+   ],
+   "correctIndex": 0,
+   "explanation": "As a lipophilic beta-blocker propranolol crosses into the brain, and Katzung lists fatigue, sleep disturbances including nightmares, depression and light-headedness among its CNS adverse effects; wide inter-individual variation in clearance further explains its variable response. The blood-brain-barrier-impermeable description fits hydrophilic agents such as atenolol, propranolol is hepatically metabolised rather than renally cleared, and fat accumulation does not abolish cardiac effects."
+  },
+  {
+   "id": "adj-pro-06",
+   "drugSlug": "propranolol",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which pharmacokinetic statement about propranolol is correct?",
+   "options": [
+    "It follows zero-order saturable kinetics across its whole therapeutic range",
+    "It undergoes extensive first-pass hepatic metabolism with wide inter-individual variation in clearance, so oral doses must be individually titrated",
+    "It is excreted virtually unchanged by the kidney, so fixed dosing by GFR suffices",
+    "Its oral bioavailability is nearly 100% because it bypasses hepatic metabolism"
+   ],
+   "correctIndex": 1,
+   "explanation": "Propranolol undergoes extensive first-pass hepatic metabolism \u2014 Katzung's textbook example of a high-extraction drug with wide inter-individual variation in clearance, and Tripathi lists it among blood-flow-limited drugs \u2014 so oral doses must be individually titrated rather than fixed. Renal excretion of unchanged drug and near-complete bioavailability are the false claims, and propranolol behaves with linear first-order kinetics in the usual range."
+  },
+  {
+   "id": "adj-pro-07",
+   "drugSlug": "propranolol",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "In a patient with generalised anxiety disorder already on an SSRI, adding propranolol produces which specific change?",
+   "options": [
+    "Complete control of psychological and somatic symptoms, making it adequate monotherapy for GAD",
+    "Prevention of panic attacks, which is why it is first-line in panic disorder",
+    "Relief of somatic symptoms \u2014 tremor, palpitation and sweating \u2014 while worry, tension and fear continue to need the serotonergic core treatment",
+    "Abolition of cognitive worry and anticipatory fear, allowing the SSRI to be stopped within a week"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi states beta-blockers do not affect the psychological symptoms of anxiety \u2014 worry, tension and fear \u2014 and provide only symptomatic relief of sympathetic overactivity; KYP's anxiety-toolkit layering keeps propranolol as a somatic-only adjunct, never the core. It is not first-line in panic disorder, and stopping the SSRI within a week contradicts all maintenance teaching."
+  },
+  {
+   "id": "adj-pro-08",
+   "drugSlug": "propranolol",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A bipolar patient in Pune on lithium develops a coarse postural tremor that embarrasses him at work; his psychiatrist adds a beta-blocker dispensed as CIPLAR 10 mg tablets. Which drug has been added?",
+   "options": [
+    "Metoprolol \u2014 a cardioselective beta-1 blocker presented as the first-choice beta-blocker for lithium-induced tremor",
+    "Primidone \u2014 an anticonvulsant marketed as the first-line drug for lithium-induced tremor",
+    "Trihexyphenidyl \u2014 PACITANE 2 mg tablets, the anticholinergic given for coarse parkinsonian tremor",
+    "Propranolol \u2014 INDERAL and CIPLAR 10, 40 and 80 mg tablets, the beta-blocker used for lithium-induced tremor and performance anxiety"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi lists propranolol in India as INDERAL and CIPLAR 10, 40 and 80 mg tablets, and lithium-induced postural tremor is a recognised propranolol use (Katzung groups lithium among the drugs causing postural tremor treated this way). PACITANE is trihexyphenidyl for drug-induced parkinsonism, primidone belongs to essential tremor rather than lithium tremor, and cardioselective metoprolol is not the classic choice here."
+  },
+  {
+   "id": "adj-prz-01",
+   "drugSlug": "prazosin",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Prazosin's antihypertensive action rests on which receptor action?",
+   "options": [
+    "Highly selective alpha-1 adrenoceptor blockade (about 1000-fold selective over alpha-2), dilating arterioles more than veins without increasing noradrenaline release",
+    "Non-selective alpha-1 and alpha-2 blockade that floods the synapse with noradrenaline and reflexly speeds the heart",
+    "Central alpha-2A agonism that reduces sympathetic outflow from the vasomotor centre",
+    "Beta-1 antagonism that lowers cardiac output and renin release"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tripathi and Katzung both emphasise prazosin's alpha-1 selectivity of roughly 1000:1; because prejunctional alpha-2 autoreceptors are untouched, noradrenaline release is not increased and reflex tachycardia is mild \u2014 the key contrast with phentolamine. The non-selective alpha-1-and-alpha-2 description is phentolamine's profile, the central alpha-2A agonist description is clonidine's mechanism, and the beta-1-antagonism description is beta-blocker pharmacology."
+  },
+  {
+   "id": "adj-prz-02",
+   "drugSlug": "prazosin",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 34-year-old army veteran with PTSD on sertraline still wakes nightly from violent nightmares. Prazosin is being added. Which counselling is essential at initiation?",
+   "options": [
+    "Use terazosin instead \u2014 its longer half-life makes first-dose syncope impossible",
+    "Take the first dose at bedtime at a low starting dose \u2014 prazosin can cause first-dose hypotension with dizziness or syncope on standing",
+    "Start with 4 mg in the morning so that maximum alpha-blockade is reached from day one",
+    "Switch to clonidine, the established alpha-agonist choice for PTSD nightmares"
+   ],
+   "correctIndex": 1,
+   "explanation": "Prazosin is the signature PTSD-nightmare agent, layered onto the SSRI backbone rather than replacing it, and Tripathi's first-dose effect \u2014 postural dizziness and fainting \u2014 is minimised by starting at 0.5-1 mg at bedtime, with tolerance to this effect developing later. Morning dosing and a 4 mg start maximise rather than avoid the hazard, clonidine is the sympatholytic of opioid withdrawal rather than the nightmare drug, and terazosin shares the class first-dose effect despite its longer half-life."
+  },
+  {
+   "id": "adj-prz-03",
+   "drugSlug": "prazosin",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 58-year-old man takes his first-ever 1 mg dose of prazosin at 8 am; thirty minutes later, standing at a bus stop, he collapses and faints. Which statement is correct?",
+   "options": [
+    "This reflects prazosin-induced adrenal medullary discharge, so future doses require catecholamine-synthesis blockade",
+    "This proves phaeochromocytoma, since alpha-blockade unmasks catecholamine storms in every older hypertensive",
+    "This is the classic first-dose phenomenon of alpha-1 blockade \u2014 acute postural venous pooling, minimised by starting low at bedtime and waning with continued use",
+    "This is an anaphylactoid reaction to the quinazoline structure, mandating permanent avoidance of all alpha-blockers"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi describes the first-dose effect \u2014 postural hypotension with dizziness and fainting especially at initiation \u2014 minimised by a low starting dose taken at bedtime, with tolerance to this effect developing subsequently. It is a pharmacodynamic consequence of vasodilatation, not allergy, not adrenal discharge, and not proof of phaeochromocytoma (it is clonidine withdrawal that mimics one)."
+  },
+  {
+   "id": "adj-prz-04",
+   "drugSlug": "prazosin",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Prazosin's pharmacokinetic profile is best summarised as:",
+   "options": [
+    "Complete renal excretion of unchanged drug with a half-life of 24-30 hours",
+    "Oral bioavailability near 90% with a half-life of 18-24 hours, allowing once-weekly dosing",
+    "Hepatic elimination with a half-life of 10-12 minutes, requiring continuous infusion",
+    "Oral bioavailability about 60%, extensive hepatic metabolism, plasma half-life 2-3 hours, single-dose effect lasting 6-8 hours"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi lists prazosin as about 60% orally bioavailable, highly protein-bound, hepatically metabolised and excreted mainly in bile, with a plasma half-life of 2-3 hours and a single-dose effect of 6-8 hours \u2014 hence BD-TDS oral dosing. The renal-unchanged profile fits no alpha-blocker in the class, the near-90% bioavailability borrows terazosin's figure without its real 12-hour half-life, and no alpha-blocker needs an infusion."
+  },
+  {
+   "id": "adj-prz-05",
+   "drugSlug": "prazosin",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 62-year-old man with hypertension and bothersome prostatic obstructive symptoms (weak stream, residual urine) is considered for prazosin. What is the pharmacological rationale?",
+   "options": [
+    "Prazosin blocks alpha-1 receptors in the bladder trigone and prostatic smooth muscle, improving urine flow, while its vascular alpha-1 blockade lowers the blood pressure",
+    "Prazosin shrinks the hyperplastic gland by inhibiting 5-alpha-reductase, as finasteride does",
+    "Prazosin relaxes prostatic smooth muscle by muscarinic blockade, as oxybutynin does",
+    "Prazosin stimulates alpha-1 receptors in the prostate to raise bladder-neck tone"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tripathi notes prazosin blocks alpha-1 receptors in the bladder trigone and prostatic smooth muscle, improving flow and reducing residual urine, while the same vascular alpha-1 blockade treats the hypertension. The 5-alpha-reductase story is finasteride's androgen-synthesis mechanism, the muscarinic-blockade claim is antimuscarinic pharmacology that can actually worsen retention, and the alpha-1-stimulation claim reverses the direction of the drug's action."
+  },
+  {
+   "id": "adj-prz-06",
+   "drugSlug": "prazosin",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Why does prazosin produce far less reflex tachycardia than phentolamine, although both lower blood pressure?",
+   "options": [
+    "Phentolamine acts directly on vascular smooth muscle, which never recruits baroreflexes",
+    "Prazosin's alpha-1 selectivity leaves prejunctional alpha-2 autoreceptors intact, so noradrenaline release is not increased; phentolamine also blocks alpha-2 and raises noradrenaline release",
+    "Prazosin is a beta-agonist that deliberately accelerates the heart in a controlled way",
+    "Prazosin stimulates vagal nuclei directly, more than doubling stroke volume"
+   ],
+   "correctIndex": 1,
+   "explanation": "Prazosin's 1000:1 alpha-1 selectivity (Tripathi; Katzung calls it typically 1000-fold less potent at alpha-2) spares the prejunctional alpha-2 autoreceptors that normally restrain noradrenaline release, whereas phentolamine's alpha-2 blockade removes that brake and tachycardia follows. Phentolamine is a competitive alpha-antagonist rather than a direct vasodilator, and prazosin neither stimulates beta-receptors nor vagal nuclei."
+  },
+  {
+   "id": "adj-prz-07",
+   "drugSlug": "prazosin",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "An Indian hypertensive is prescribed MINIPRESS XL, one tablet at night. What is this formulation, and how is plain prazosin usually dosed?",
+   "options": [
+    "MINIPRESS XL is clonidine 100 microgram in a weekly transdermal patch; oral clonidine runs 100-300 microgram three times daily",
+    "MINIPRESS XL is an atenolol-plus-chlorthalidone fixed-dose combination taken each morning",
+    "MINIPRESS XL is prazosin in a GITS (gastrointestinal therapeutic system) 2.5 and 5 mg once-daily tablet; plain prazosin (PRAZOPRES 0.5, 1, 2 mg) starts at 0.5-1 mg at bedtime, usual 1-4 mg BD-TDS",
+    "MINIPRESS XL is a sustained-release terazosin 5 mg tablet; plain terazosin starts at 10 mg twice daily"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi lists MINIPRESS XL as prazosin GITS 2.5 and 5 mg once daily, with conventional prazosin as PRAZOPRES 0.5, 1 and 2 mg \u2014 start 0.5-1 mg at bedtime, usual 1-4 mg BD or TDS. Terazosin is a separate molecule that is not marketed as MINIPRESS, the clonidine patch story is misplaced, and the atenolol combination is unrelated to this brand."
+  },
+  {
+   "id": "adj-prz-08",
+   "drugSlug": "prazosin",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Beyond postural hypotension, which adverse effects are recognised with prazosin as an alpha-1 blocker?",
+   "options": [
+    "Mydriasis, dry cough and hyperkalaemia",
+    "Constipation, urinary retention and precipitation of angle-closure glaucoma",
+    "Bronchospasm, bradycardia and cold peripheries from beta-2 blockade",
+    "Miosis, nasal stuffiness and inhibition of ejaculation \u2014 milder than with non-selective alpha-blockers"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi lists miosis, nasal stuffiness and inhibition of ejaculation among the milder alpha-blocking effects of prazosin. The bronchospasm-bradycardia cluster is propranolol's beta-blocker signature, the constipation-retention-glaucoma cluster is the anticholinergic toxidrome of benztropine-like drugs, and hyperkalaemia with dry cough maps to entirely different drug classes."
+  },
+  {
+   "id": "adj-cld-01",
+   "drugSlug": "clonidine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "The antihypertensive and sympatholytic effect of clonidine follows from:",
+   "options": [
+    "Partial agonism at central alpha-2A receptors (especially the brainstem vasomotor centre), reducing sympathetic outflow, with imidazoline-receptor activation contributing",
+    "Competitive blockade of peripheral alpha-1 receptors on vascular smooth muscle",
+    "Inhibition of noradrenaline reuptake at peripheral sympathetic nerve terminals",
+    "Ganglion blockade that cuts all autonomic transmission to the heart and vessels"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tripathi describes clonidine as an imidazoline derivative acting as a partial agonist with high intrinsic activity at alpha-2A receptors in the brainstem vasomotor centre \u2014 sympathetic outflow falls and plasma noradrenaline declines \u2014 with medullary imidazoline receptors adding to the effect. Alpha-1 blockade is prazosin's mechanism, reuptake inhibition is tricyclic/cocaine pharmacology, and ganglion blockade describes the obsolete hexamethonium-style agents."
+  },
+  {
+   "id": "adj-cld-02",
+   "drugSlug": "clonidine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 28-year-old opioid-dependent man in a detoxification unit has lacrimation, yawning, abdominal cramps, diarrhoea, sweating and gooseflesh 18 hours after his last heroin dose. Clonidine is prescribed. The rationale is:",
+   "options": [
+    "Clonidine accelerates renal clearance of residual opioids from the body",
+    "Central alpha-2 agonism damps the hyperadrenergic surge of opioid withdrawal, relieving sweating, cramps and diarrhoea, though it does not abolish craving",
+    "Clonidine acts as a mu-opioid receptor agonist, substituting for heroin exactly as methadone does",
+    "Clonidine antagonises NMDA receptors, erasing the conditioned withdrawal memory"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung records that opioid withdrawal reflects hyperactivity of central adrenergic systems and that the alpha-2 agonist clonidine has been used with some success to attenuate withdrawal \u2014 clonidine-assisted detox for sweating, cramps and diarrhoea is the classic exam answer. It is not an opioid agonist like methadone or buprenorphine, has no NMDA antagonism, and does not change opioid pharmacokinetics."
+  },
+  {
+   "id": "adj-cld-03",
+   "drugSlug": "clonidine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 50-year-old hypertensive on clonidine 300 microgram three times daily for years runs out of tablets; two days later he arrives anxious, sweating, tachycardic, with headache and a blood pressure far above his pretreatment level. What is happening and what is the fix?",
+   "options": [
+    "A hypertensive emergency from clonidine accumulation, treated by immediate haemodialysis",
+    "A panic attack with coincidental hypertension, best left untreated and observed",
+    "Clonidine-withdrawal hypertension \u2014 sudden loss of central sympathetic inhibition with catecholamine surge and receptor supersensitivity, resembling phaeochromocytoma; treat by reinstituting clonidine (or alpha-plus-beta-blockade) and thereafter tapering slowly",
+    "Phaeochromocytoma unmasked by clonidine, cured by urgent adrenalectomy before any drug is restarted"
+   ],
+   "correctIndex": 2,
+   "explanation": "Both Katzung and Tripathi warn that abrupt clonidine withdrawal \u2014 missed doses for just 1-2 days, risk highest above 1 mg/day \u2014 produces an alarming BP rise with tachycardia, sweating, headache and anxiety, a phaeochromocytoma-like state from removed central inhibition plus peripheral adrenergic supersensitivity. Treatment is clonidine reinstatement or combined alpha-beta-blockade, followed by gradual taper with substituted agents; haemodialysis is irrelevant and this is not a panic attack."
+  },
+  {
+   "id": "adj-cld-04",
+   "drugSlug": "clonidine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 9-year-old with ADHD has a partial response to methylphenidate but develops evening tics and sleep-onset trouble. Which addition is the classic sympatholytic move?",
+   "options": [
+    "Add weight-adjusted propranolol to suppress the tics at their central origin",
+    "Switch to modafinil, which Katzung confirms is FDA-approved for paediatric ADHD",
+    "Add bedtime dextroamphetamine to counteract the stimulant's rebound",
+    "Add clonidine extended release (Kapvay-style) \u2014 the alpha-2 agonist used as ADHD monotherapy or stimulant adjunct, particularly useful when tics or sleep problems coexist"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung notes slow or continuous-release preparations of clonidine (and guanfacine) are effective in children with ADHD, and clonidine reduces tics in roughly half of treated children \u2014 making it the natural adjunct when tics or sleep-onset trouble complicate stimulant therapy (KYP's Kapvay XR anchor). Propranolol is not an antitic drug, modafinil was never FDA-approved for ADHD with paediatric safety undefined, and a bedtime amphetamine would worsen sleep."
+  },
+  {
+   "id": "adj-cld-05",
+   "drugSlug": "clonidine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Foundation",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A patient beginning clonidine for opioid detox asks what to expect from the drug itself. Which cluster is the classic clonidine adverse-effect profile?",
+   "options": [
+    "Sedation with dry mouth and eyes, constipation, bradycardia and impotence",
+    "Insomnia with diarrhoea, tachycardia and priapism",
+    "Hypertension with mydriasis and profuse sweating throughout treatment",
+    "Hyperkalaemia with coarse facial hair and gum hypertrophy"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tripathi's clonidine list \u2014 sedation, disturbed sleep, dryness of mouth, nose and eyes, constipation, impotence, bradycardia and mostly asymptomatic postural hypotension \u2014 flows directly from central sympatholysis and antisecretory actions. The insomnia-diarrhoea-tachycardia cluster inverts the real directions (constipation, not diarrhoea; bradycardia, not tachycardia), hypertension belongs to the withdrawal syndrome rather than steady treatment, and the gum-hypertrophy cluster is phenytoin's."
+  },
+  {
+   "id": "adj-cld-06",
+   "drugSlug": "clonidine",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Which co-prescription can abolish clonidine's antihypertensive effect?",
+   "options": [
+    "Atorvastatin, via induction of intestinal alpha-2 receptor synthesis",
+    "Tricyclic antidepressants (and chlorpromazine) \u2014 their alpha-receptor blockade interferes with clonidine's own alpha-receptor action",
+    "Selective serotonin reuptake inhibitors, via serotonin-mediated alpha-2 potentiation",
+    "Metformin, through competition for renal tubular transport"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi states tricyclic antidepressants and chlorpromazine abolish the antihypertensive action of clonidine by blocking the alpha receptors on which it acts, and Katzung records the same TCA interaction. SSRIs, metformin and statins have no such alpha-receptor mechanism \u2014 and because TCAs can also blunt the antihypertensive cover, the pair demands monitoring."
+  },
+  {
+   "id": "adj-cld-07",
+   "drugSlug": "clonidine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which pharmacokinetic-dosing statement about clonidine is correct?",
+   "options": [
+    "Completely bioavailable with a half-life of 3-4 days, allowing weekly oral dosing",
+    "Activated only after hepatic conversion to methylnorepinephrine, the way alpha-methyldopa works",
+    "Well absorbed orally (peak 2-4 hours), half-life 8-12 hours, roughly half the dose excreted unchanged in urine; a transdermal patch delivers cover for about a week",
+    "Erratically absorbed with bioavailability under 5% and a half-life of 2 hours, mandating TDS-only dosing"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi gives clonidine good oral absorption with peak at 2-4 hours, a plasma half-life of 8-12 hours and half to two-thirds excreted unchanged in urine; the weekly transdermal patch is a signature formulation (Katzung mentions the clonidine patch for ADHD comorbidity). The prodrug-to-methylnorepinephrine story is alpha-methyldopa's, and the other numbers belong to no sympatholytic."
+  },
+  {
+   "id": "adj-cld-08",
+   "drugSlug": "clonidine",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Beyond hypertension, opioid withdrawal and ADHD, clonidine has documented benefit in which additional psychiatry-relevant niche?",
+   "options": [
+    "Acute dystonic reactions, where intravenous clonidine is the emergency remedy of choice",
+    "Tardive dyskinesia, where clonidine is the only approved VMAT2 inhibitor",
+    "Benzodiazepine overdose, where clonidine reverses sedation at the GABA-A receptor",
+    "Gilles de la Tourette syndrome \u2014 reducing motor and vocal tics in roughly half of children, plus menopausal hot flushes and reduced craving in smokers and narcotic users"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung states clonidine reduces motor or vocal tics in about 50% of children with Tourette syndrome, and also documents hot-flush relief, diminished craving for narcotics and cigarettes, and benefit in diabetic diarrhoea. Acute dystonia belongs to parenteral antimuscarinics, tardive dyskinesia to valbenazine and deutetrabenazine, and benzodiazepine reversal is flumazenil's job."
+  },
+  {
+   "id": "adj-gfc-01",
+   "drugSlug": "guanfacine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "What distinguishes guanfacine's pharmacology from clonidine's?",
+   "options": [
+    "Guanfacine is a more selective alpha-2A agonist acting on prefrontal noradrenergic circuits that tune working memory and impulse control, with less vascular alpha-2B and imidazoline activity",
+    "Guanfacine is an alpha-1 antagonist with additional beta-2 agonism, making it bronchodilating",
+    "Guanfacine is a norepinephrine reuptake inhibitor that raises prefrontal noradrenaline by blocking the transporter",
+    "Guanfacine is a dopamine D1 agonist selective for prefrontal mesocortical projections"
+   ],
+   "correctIndex": 0,
+   "explanation": "KYP anchors guanfacine as the selective alpha-2A agonist whose prefrontal noradrenergic tuning underlies its ADHD benefit, in contrast to clonidine's broader alpha-2 plus imidazoline receptor profile. NET blockade is atomoxetine's mechanism, D1 agonism is investigational pharmacology, and the alpha-1-plus-beta-2 combination describes no marketed ADHD drug."
+  },
+  {
+   "id": "adj-gfc-02",
+   "drugSlug": "guanfacine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 10-year-old with ADHD plus chronic motor tics and separation anxiety cannot tolerate methylphenidate \u2014 the tics worsen and sleep suffers. The non-stimulant sympatholytic chosen is:",
+   "options": [
+    "Fluoxetine, which treats ADHD core symptoms by serotonin reuptake blockade",
+    "Guanfacine extended release (Intuniv) \u2014 as monotherapy or stimulant adjunct, favoured when tics and anxiety complicate ADHD",
+    "Atomoxetine, which suppresses tics within 48 hours through striatal D2 blockade",
+    "Modafinil, the wakefulness-promoting stimulant with proven antitic efficacy"
+   ],
+   "correctIndex": 1,
+   "explanation": "Guanfacine XR (Intuniv) is the alpha-2A agonist approved for ADHD as monotherapy or adjunct to stimulants, with particular appeal when tics and anxiety are comorbid (KYP anchor; Katzung groups clonidine and guanfacine as effective in children with ADHD). Atomoxetine is a genuine non-stimulant but acts over weeks via the norepinephrine transporter rather than within 48 hours or via D2, modafinil lacks paediatric ADHD approval, and fluoxetine is not an ADHD drug."
+  },
+  {
+   "id": "adj-gfc-03",
+   "drugSlug": "guanfacine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "The adverse-effect profile that most limits guanfacine is:",
+   "options": [
+    "Hyperprolactinaemia with galactorrhoea and menstrual irregularity",
+    "Mydriasis with urinary hesitancy from alpha-1 stimulation",
+    "Somnolence, fatigue, hypotension and bradycardia \u2014 the expected sympatholytic cluster, worst early or after dose increases",
+    "Akathisia with inner restlessness and a high EPS rate"
+   ],
+   "correctIndex": 2,
+   "explanation": "Guanfacine's alpha-2A agonism produces the sympatholytic cluster \u2014 sedation, fatigue, lowered blood pressure, bradycardia and dry mouth (KYP anchor; in the clonidine class Katzung names sedation as the commonest adverse effect). Akathisia is an antipsychotic EPS, prolactin rise is risperidone and amisulpride territory, and mydriasis with urinary hesitancy reverses the drug's actual autonomic direction."
+  },
+  {
+   "id": "adj-gfc-04",
+   "drugSlug": "guanfacine",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "The clonidine-versus-guanfacine discontinuation comparison, as taught for exams, is:",
+   "options": [
+    "Guanfacine causes explosive rebound hypertension within hours while clonidine has no discontinuation syndrome at all",
+    "Neither drug produces any withdrawal phenomenon because central sympatholysis simply fades",
+    "Rebound occurs only if the drugs are tapered slowly, never after abrupt stoppage",
+    "Both sympatholytics can produce rebound hypertension on abrupt stop, but rebound is distinctly less prominent with guanfacine \u2014 and both should still be tapered, never stopped suddenly"
+   ],
+   "correctIndex": 3,
+   "explanation": "Clonidine's abrupt withdrawal is the classic hypertensive-crisis scenario (missed doses for 1-2 days can suffice, per Tripathi); guanfacine, with its more selective alpha-2A action, is taught as carrying LESS rebound \u2014 but the safe rule for both is gradual taper with substituted cover. The explosive-rebound and no-withdrawal claims invert or deny the pharmacology, and the only-on-tapering claim reverses the actual risk pattern."
+  },
+  {
+   "id": "adj-gfc-05",
+   "drugSlug": "guanfacine",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A boy stable on guanfacine extended release is started on ketoconazole for tinea capitis; the family reports new drowsiness and light-headedness on standing. The explanation is:",
+   "options": [
+    "Ketoconazole is a strong CYP3A4 inhibitor that raises guanfacine exposure, deepening its sedative and hypotensive effects \u2014 strong 3A4 inhibitors should be avoided or the dose adjusted",
+    "Ketoconazole is a strong CYP2D6 inhibitor, so toxic guanfacine levels accumulate within hours",
+    "Ketoconazole displaces guanfacine from skeletal-muscle binding sites",
+    "Ketoconazole induces guanfacine's metabolism, causing withdrawal hypertension"
+   ],
+   "correctIndex": 0,
+   "explanation": "KYP's interaction anchor for guanfacine is avoidance of strong CYP3A4 inhibitors (ketoconazole-type agents) because guanfacine exposure rises with added sedation and hypotension. The 2D6 label is wrong for this pair, muscle-displacement is not a real mechanism, and induction causing withdrawal inverts the direction of an inhibitor's effect."
+  },
+  {
+   "id": "adj-gfc-06",
+   "drugSlug": "guanfacine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which dosing-PK statement fits guanfacine's current psychiatric use?",
+   "options": [
+    "It is given as a monthly depot injection after a single oral loading dose",
+    "It is given as a once-daily extended-release tablet (Intuniv-type) titrated gradually; the older immediate-release antihypertensive offered no advantage over clonidine and fell into disuse",
+    "It requires thrice-daily immediate-release dosing with mandatory weekly ECGs",
+    "It is administered by weekly transdermal patch, the only approved route in psychiatry"
+   ],
+   "correctIndex": 1,
+   "explanation": "Guanfacine's psychiatric renaissance rides on the once-daily extended-release formulation (KYP's Intuniv anchor), while Katzung notes the old guanfacine antihypertensive offered no advantage over clonidine and is rarely used. There is no ECG requirement, the weekly patch is clonidine's formulation story, and no depot exists."
+  },
+  {
+   "id": "adj-gfc-07",
+   "drugSlug": "guanfacine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 12-year-old with Tourette syndrome plus impulsive aggression is offered a non-antipsychotic option before risperidone is considered. Which drug's evidence supports BOTH tics and impulsive-aggression control?",
+   "options": [
+    "Fluvoxamine, the SSRI with proven antitic efficacy in Tourette syndrome",
+    "Lithium, the mood stabiliser with primary approval for tic suppression",
+    "Clonidine or guanfacine \u2014 each reduces tics in about half of children and may particularly help behavioural problems such as impulse-control difficulty",
+    "Haloperidol, which is free of EPS at the low doses used for tics"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung states clonidine reduces motor or vocal tics in about 50% of children, that guanfacine has also been used, and that both may particularly help behavioural symptoms such as impulse-control disorders \u2014 exactly the comorbidity in the stem. Haloperidol reduces tic frequency but is far from EPS-free, SSRIs target the OCD comorbidity rather than tics, and lithium has no tic indication."
+  },
+  {
+   "id": "adj-gfc-08",
+   "drugSlug": "guanfacine",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "In Indian practice, why might a child psychiatrist favour guanfacine extended release over escalating methylphenidate for a small child whose family fears that daily tablets will make him an addict?",
+   "options": [
+    "Guanfacine is itself a scheduled stimulant in India, so prescribing it removes stigma while working identically to methylphenidate",
+    "Guanfacine carries no adverse effects, needing no monitoring of pulse or blood pressure",
+    "Guanfacine acts within 2 hours like methylphenidate, so no counselling about gradual titration is needed",
+    "Guanfacine is a non-stimulant alpha-2A agonist without abuse potential or narcotic scheduling, avoiding dependence fears tied to stimulants \u2014 provided the family accepts sedation and pulse/BP monitoring instead"
+   ],
+   "correctIndex": 3,
+   "explanation": "The non-stimulant, unscheduled nature of guanfacine is the counselling advantage when families fear stimulant dependence \u2014 but its cost is the sympatholytic adverse-effect cluster requiring pulse and BP vigilance with slow titration. It is not a stimulant, its adverse effects are real, and its onset is gradual rather than methylphenidate-fast."
+  },
+  {
+   "id": "adj-flm-01",
+   "drugSlug": "flumazenil",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Flumazenil's mechanism of action is:",
+   "options": [
+    "Competitive antagonism at the benzodiazepine site on the GABA-A receptor (alpha/gamma interface), with essentially no intrinsic effect in subjects who have not taken benzodiazepines",
+    "Inverse agonism at the benzodiazepine site, driving chloride channels shut and provoking seizures at usual doses",
+    "Barbiturate-site blockade that also reverses ethanol and opioid sedation",
+    "Enhancement of GABA reuptake by glial transporters, lowering synaptic GABA"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung classifies flumazenil among 1,4-benzodiazepine derivatives with high affinity for the benzodiazepine binding site acting as competitive antagonists, and Tripathi notes it has little intrinsic activity with practically no effect in normal subjects. Inverse agonists are the beta-carboline family, and flumazenil does not reverse ethanol, opioids or general anaesthetics \u2014 it has neither a barbiturate-site action nor a reuptake effect."
+  },
+  {
+   "id": "adj-flm-02",
+   "drugSlug": "flumazenil",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A young woman found drowsy after ingesting her mother's diazepam is given IV flumazenil in the emergency room and wakes promptly \u2014 but two hours later she is deeply drowsy again. Why?",
+   "options": [
+    "The first dose was purely a placebo effect; a true antagonist would sedate permanently",
+    "Flumazenil's half-life (about 0.7-1.3 hours) is far shorter than diazepam's effective half-life measured in days, so the antagonist wears off first and sedation recurs \u2014 requiring monitored observation with repeated boluses or infusion if needed",
+    "She has metabolised all the diazepam, and the new drowsiness is hypoglycaemia needing 50% dextrose",
+    "Flumazenil induces hepatic enzymes that convert residual diazepam into a more sedating metabolite"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung gives flumazenil a short half-life of 0.7-1.3 hours from rapid hepatic clearance and explicitly warns that because all benzodiazepines outlast it, sedation commonly recurs and repeated administration is required; Tripathi records reversal lasting 1-2 hours. Diazepam's long active-metabolite half-life guarantees this race, enzyme induction is a fiction, and observation for resedation is the standard post-reversal rule."
+  },
+  {
+   "id": "adj-flm-03",
+   "drugSlug": "flumazenil",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 45-year-old man has taken prescribed clonazepam 2 mg daily for 6 years. He is brought obtunded after a suspected extra dose, and a colleague gives IV flumazenil. Minutes later he is violently agitated, sweating, and then seizes. The best explanation is:",
+   "options": [
+    "Clonazepam turned into a convulsant metabolite under flumazenil's enzymatic induction",
+    "The seizure proves the original ingestion was not a benzodiazepine at all",
+    "In a benzodiazepine-dependent patient flumazenil can precipitate a severe acute abstinence syndrome including seizures \u2014 a key reason it is not routine in unknown coma",
+    "Flumazenil triggered a pseudoallergic mast-cell reaction, and the seizure was anaphylaxis-related"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung warns flumazenil may cause a severe precipitated abstinence syndrome in patients with physiological benzodiazepine dependence, and Tripathi's overdose teaching restricts its use accordingly \u2014 a 6-year chronic user is exactly the risk group. Allergy, enzyme induction and the claim that a seizure excludes benzodiazepines are not the mechanism; provocation of withdrawal in a dependent brain is."
+  },
+  {
+   "id": "adj-flm-04",
+   "drugSlug": "flumazenil",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "An unresponsive adolescent arrives with QRS widening on the ECG; the parents mention an empty amitriptyline strip and their own unfinished diazepam bottle. Which action is WRONG?",
+   "options": [
+    "Starting IV sodium bicarbonate for the wide QRS",
+    "Securing the airway before any antidote discussion",
+    "Preparing continuous cardiac monitoring and seizure precautions",
+    "Giving IV flumazenil \u2014 in mixed benzodiazepine-tricyclic ingestion flumazenil can precipitate seizures and cardiac arrhythmias; the TCA itself needs sodium bicarbonate and supportive care"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung records that when benzodiazepines are ingested with tricyclic antidepressants, seizures and cardiac arrhythmias may follow flumazenil administration \u2014 the therapeutic-index-reversal hazard that makes mixed overdoses a contraindication-in-spirit. Bicarbonate for QRS widening, airway first and cardiac monitoring are all correct TCA-overdose steps; the flumazenil bolus is the wrong step."
+  },
+  {
+   "id": "adj-flm-05",
+   "drugSlug": "flumazenil",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which pharmacokinetic statement about flumazenil is correct?",
+   "options": [
+    "Given intravenously it acts within seconds to minutes, its elimination half-life is roughly 1 hour from rapid hepatic clearance, and oral use is impractical (bioavailability around 16%)",
+    "It is a long-acting oral antagonist with a half-life of 24-36 hours, ideal for home tapering",
+    "It requires hepatic activation to an active sulfoxide, delaying onset to 6 hours",
+    "It is eliminated by glomerular filtration of unchanged drug with a half-life of 4-6 days"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tripathi records IV onset within seconds, action lasting 1-2 hours and an elimination half-life of 1 hour from rapid metabolism; Katzung's range is 0.7-1.3 hours, and oral bioavailability near 16% is why it is injection-only. A 24-36 hour antagonist does not exist, no hepatic activation is needed, and renal filtration plays no major role."
+  },
+  {
+   "id": "adj-flm-06",
+   "drugSlug": "flumazenil",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which sedative-hypnotic group's CNS effects does flumazenil reverse, and which does it not?",
+   "options": [
+    "It reverses general anaesthetics only during procedural sedation",
+    "It reverses benzodiazepines and the Z-drugs acting at the benzodiazepine site (zolpidem, zaleplon, eszopiclone), but NOT ethanol, barbiturates, opioids or general anaesthetics",
+    "It reverses ethanol and barbiturates but not benzodiazepines",
+    "It reverses opioids fully, serving as an alternative to naloxone"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung's flumazenil box states it blocks the actions of benzodiazepines, zolpidem, zaleplon and eszopiclone but does not antagonise the CNS effects of other sedative-hypnotics, ethanol, opioids or general anaesthetics; Tripathi confirms the zolpidem-like non-benzodiazepines are covered. Naloxone handles opioids, and ethanol or barbiturate reversal needs supportive care."
+  },
+  {
+   "id": "adj-flm-07",
+   "drugSlug": "flumazenil",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "An unconscious man of unknown history is brought to a small hospital; pupils 3 mm, respiratory rate 14. Should flumazenil be given routinely?",
+   "options": [
+    "Yes \u2014 flumazenil is the universal sedative antidote covering ethanol, opioids and benzodiazepines alike",
+    "No \u2014 flumazenil is contraindicated in every setting because it causes permanent amnesia",
+    "No \u2014 in undifferentiated coma flumazenil is selective, not routine: airway and supportive care come first, and empirical use risks seizures in dependent or mixed (especially TCA) ingestions; if given, sedation unresponsive to 5 mg suggests a non-benzodiazepine depressant",
+    "Yes \u2014 every undifferentiated coma deserves empirical flumazenil and naloxone with no further work-up"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi's differential-diagnosis pearl is that sedation not abolished by 5 mg of flumazenil is due to a non-benzodiazepine depressant, and Katzung's teaching limits flumazenil to known benzodiazepine overdose or procedural reversal precisely because of precipitated withdrawal and TCA-arrhythmia risk. Blind empirical antidote cocktails skip essential assessment, the universal-antidote claim is false, and amnesia is not its hazard."
+  },
+  {
+   "id": "adj-flm-08",
+   "drugSlug": "flumazenil",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "After an upper-GI endoscopy under IV midazolam, a patient remains excessively drowsy 30 minutes later and cannot be discharged. The appropriate reversal agent and dose approach is:",
+   "options": [
+    "IV naloxone 0.4 mg, repeated every 2 minutes until alertness returns",
+    "Oral flumazenil 10 mg daily for three days, then stop",
+    "IV caffeine 250 mg as the approved benzodiazepine reversal stimulant",
+    "IV flumazenil titrated in small increments (Tripathi: 0.2 mg per minute until consciousness returns) \u2014 an approved use for hastening recovery from benzodiazepine sedation, with the patient still observed for resedation"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung lists reversal of benzodiazepine sedation in anesthetic and diagnostic procedures among flumazenil's approvals, and Tripathi's titration is 0.2 mg per minute IV until the patient regains consciousness. Naloxone is the opioid antidote and does nothing here, flumazenil is not used orally, and caffeine reverses nothing at the benzodiazepine receptor \u2014 observation for resedation continues regardless."
+  },
+  {
+   "id": "adj-bnz-01",
+   "drugSlug": "benztropine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Benztropine improves antipsychotic-induced extrapyramidal symptoms by:",
+   "options": [
+    "Central muscarinic receptor blockade in the striatum, partially restoring the dopamine-acetylcholine balance that D2 blockade disrupted",
+    "Direct dopamine D2 receptor stimulation in the nigrostriatal pathway",
+    "Irreversible inhibition of monoamine oxidase-B, raising striatal dopamine",
+    "Blockade of 5-HT2A receptors, which is itself the main antipsychotic action sought"
+   ],
+   "correctIndex": 0,
+   "explanation": "Antipsychotic D2 blockade tips the striatum toward cholinergic dominance; benztropine, a centrally acting antimuscarinic, rebalances it \u2014 Katzung lists it among the antimuscarinic antiparkinsonism drugs (2 mg IV in acute dystonia; 1-6 mg/day usual range). D2 stimulation would counter the antipsychotic itself, MAO-B inhibition is selegiline's pharmacology, and 5-HT2A blockade is the antipsychotic mechanism, not the EPS remedy."
+  },
+  {
+   "id": "adj-bnz-02",
+   "drugSlug": "benztropine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "Five days after starting haloperidol, a 22-year-old man develops sustained torticollis and upward eye deviation (oculogyric crisis) that frightens him. The fastest correct treatment is:",
+   "options": [
+    "Extra haloperidol to deepen D2 blockade and stop the dystonia",
+    "Parenteral benztropine (or promethazine/diphenhydramine) \u2014 IM or IV antimuscarinic, typically relieving the dystonia within minutes",
+    "Oral trihexyphenidyl 10 mg with review after a week",
+    "IV flumazenil 1 mg to reset GABAergic tone"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung's teaching for acute dystonic reactions after the first few antipsychotic doses is a parenteral antimuscarinic \u2014 benztropine 2 mg IV, diphenhydramine 50 mg IV or biperiden IM \u2014 with relief in minutes. Slow oral dosing is too weak for the emergency, flumazenil is irrelevant, and more D2 blockade worsens the dystonia; afterwards, oral anticholinergic cover with dose review prevents recurrence."
+  },
+  {
+   "id": "adj-bnz-03",
+   "drugSlug": "benztropine",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 60-year-old woman on long-term trifluoperazine has orofacial choreiform movements (lip smacking, tongue rolling) present for months \u2014 tardive dyskinesia. A junior increases her benztropine to treat the movements. Why is this wrong?",
+   "options": [
+    "Tardive dyskinesia is an acute dystonia variant, so parenteral benztropine is ideal",
+    "Anticholinergics cure tardive dyskinesia by restoring a cholinergic deficit",
+    "Anticholinergics do not treat tardive dyskinesia and can worsen it; the direction is VMAT2 inhibition (valbenazine, deutetrabenazine), antipsychotic dose reduction or atypical switch",
+    "Benztropine is correct, but the dose must exceed 10 mg per day for tardive movements"
+   ],
+   "correctIndex": 2,
+   "explanation": "This is the classic trap: the anticholinergic that rescues acute dystonia does not help tardive dyskinesia and can aggravate it (Katzung frames TD as a relative cholinergic deficiency with dopamine supersensitivity), so the direction is VMAT2 inhibition or antipsychotic adjustment. The parenteral-benztropine remedy is for EARLY EPS such as dystonia, not the late choreoathetosis \u2014 a favourite distractor pairing in NEET-PG and USMLE alike."
+  },
+  {
+   "id": "adj-bnz-04",
+   "drugSlug": "benztropine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 74-year-old man on benztropine 4 mg per day for drug-induced parkinsonism develops confusion, a distended bladder and dry flushed skin; he also has early cataract with a shallow anterior chamber. The unifying diagnosis is:",
+   "options": [
+    "Neuroleptic malignant syndrome, proven by the urinary retention",
+    "Normal-pressure hydrocephalus, unrelated to the new drug",
+    "A hyperthyroid crisis triggered by antipsychotic dose changes",
+    "Central and peripheral anticholinergic toxicity from benztropine \u2014 confusion, urinary retention, dry skin and the risk of precipitating angle-closure glaucoma; reduce or stop and consider alternatives"
+   ],
+   "correctIndex": 3,
+   "explanation": "Benztropine's central anticholinergic burden causes confusion and memory impairment in the elderly, and its peripheral muscarinic blockade produces urinary retention, dry skin and the danger of precipitating angle-closure glaucoma in predisposed eyes (KYP anchor). NMS presents with rigidity, fever and autonomic instability rather than this purely anticholinergic picture, and the other diagnoses ignore the temporal drug link."
+  },
+  {
+   "id": "adj-bnz-05",
+   "drugSlug": "benztropine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which extrapyramidal situations are appropriate for benztropine?",
+   "options": [
+    "Acute dystonic reactions (parenterally) and antipsychotic-induced parkinsonism (orally), including prophylaxis when a high-EPS antipsychotic is unavoidable; not tardive dyskinesia",
+    "Tardive dyskinesia and akathisia, where it is the modern first-line agent",
+    "Only neuroleptic malignant syndrome, as a muscle-relaxant substitute for dantrolene",
+    "Only idiopathic Parkinson's disease, never the drug-induced forms"
+   ],
+   "correctIndex": 0,
+   "explanation": "The EPS-treatment map places benztropine at acute dystonia (IM/IV) and drug-induced parkinsonism (oral, Katzung's 1-6 mg/day range), with prophylactic cover when high-EPS antipsychotics cannot be avoided; tardive dyskinesia needs VMAT2 inhibition and akathisia responds better to propranolol-type measures. NMS belongs to dantrolene-bromocriptine care, and excluding drug-induced parkinsonism inverts its main psychiatric use."
+  },
+  {
+   "id": "adj-bnz-06",
+   "drugSlug": "benztropine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "In overdose, and in combination with tricyclic antidepressants, benztropine's main contribution is:",
+   "options": [
+    "Direct hepatotoxicity with fulminant hepatic failure",
+    "Additive anticholinergic toxicity \u2014 delirium, mydriasis, tachycardia, urinary retention and hyperthermia; Katzung explicitly lists benztropine among agents whose anticholinergic effects add to TCAs",
+    "Additive QT prolongation culminating in torsades de pointes",
+    "Selective serotonin toxicity through SERT inhibition"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung notes TCAs combined with agents sharing anticholinergic properties \u2014 benztropine, diphenhydramine \u2014 produce additive anticholinergic effects, and the antimuscarinic toxidrome (hot, dry, flushed, delirious, tachycardic, blocked bladder) defines the overdose picture. Torsades is thioridazine and ziprasidone territory, serotonin toxicity needs serotonergic activity benztropine lacks, and fulminant hepatic failure is not its signature."
+  },
+  {
+   "id": "adj-bnz-07",
+   "drugSlug": "benztropine",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A patient's haloperidol has been replaced with an atypical and his drug-induced parkinsonism has fully resolved on benztropine 2 mg per day. The senior's advice is:",
+   "options": [
+    "Double the benztropine dose for another year, then stop abruptly without review",
+    "Switch to lifelong levodopa-carbidopa as the standard maintenance for drug-induced parkinsonism",
+    "Attempt withdrawal of the antiparkinsonism drug every 3-4 months, since drug-induced parkinsonism is often self-limiting \u2014 rather than continuing anticholinergic cover indefinitely",
+    "Continue benztropine for life, since drug-induced parkinsonism always becomes permanent"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung states parkinsonism may be self-limiting and recommends an attempt to withdraw antiparkinsonism drugs every 3-4 months \u2014 the antidote to indefinite anticholinergic burden in the elderly. Permanence is not the rule, escalate-then-abruptly-stop invites both toxicity and relapse, and levodopa should never be used in these patients because the blocked D2 receptor leaves it nothing to act on."
+  },
+  {
+   "id": "adj-bnz-08",
+   "drugSlug": "benztropine",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "In an Indian district hospital, IV benztropine is out of stock when a young man on trifluoperazine presents with acute torticollis. Which Tripathi-listed alternative is appropriate?",
+   "options": [
+    "Metoclopramide, which treats dystonia through dopamine agonism",
+    "Oral diazepam 10 mg as the first-line remedy for every dystonia",
+    "Ondansetron, which blocks 5-HT3 receptors and relaxes neck muscles",
+    "Promethazine \u2014 the phenothiazine with central anticholinergic action listed among the antiparkinsonism alternatives (25-75 mg per day; PHENERGAN), effective IM for acute dystonia"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi lists promethazine (PHENERGAN 10 and 25 mg tablets, 25-75 mg/day) among the central-anticholinergic-type drugs for drug-induced EPS, and Katzung's acute-dystonia paragraph allows parenteral antihistamines like diphenhydramine alongside benztropine. Metoclopramide is a dopamine BLOCKER that causes dystonia, diazepam is only an occasional secondary IV option, and ondansetron has no antidystonic role."
+  },
+  {
+   "id": "adj-tpx-01",
+   "drugSlug": "trihexyphenidyl",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Trihexyphenidyl exerts its antiparkinsonian effect by:",
+   "options": [
+    "Blocking central muscarinic receptors to reduce striatal cholinergic overactivity \u2014 a tertiary amine that penetrates the blood-brain barrier",
+    "Blocking dopamine D2 receptors in the striatum, mirroring antipsychotic action",
+    "Inhibiting catechol-O-methyltransferase peripherally to raise levodopa levels",
+    "Stimulating nicotinic receptors at the neuromuscular junction"
+   ],
+   "correctIndex": 0,
+   "explanation": "Trihexyphenidyl acts by blocking central muscarinic receptors, reducing striatal cholinergic overactivity as a tertiary amine that penetrates the blood-brain barrier \u2014 Katzung lists it among antimuscarinic agents with CNS effects used for drug-induced parkinsonism, and Tripathi calls it the most commonly used such drug in India. D2 blockade would cause parkinsonism rather than cure it, COMT inhibition is entacapone's peripheral role, and nicotinic stimulation is unrelated."
+  },
+  {
+   "id": "adj-tpx-02",
+   "drugSlug": "trihexyphenidyl",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 30-year-old woman on risperidone 6 mg develops bradykinesia, cogwheel rigidity and a mask-like face over 3 weeks. After antipsychotic dose reduction, oral cover is planned. The classic choice is:",
+   "options": [
+    "Flumazenil, which unmasks residual GABAergic tone",
+    "Trihexyphenidyl, started at the lowest dose and titrated \u2014 the standard oral anticholinergic for antipsychotic-induced parkinsonism",
+    "Levodopa-carbidopa, which restores striatal dopamine directly",
+    "Propranolol, which reverses rigidity through beta-2-mediated muscle relaxation"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi calls trihexyphenidyl the most commonly used antiparkinsonian drug here \u2014 start with the lowest dose in 2-3 divided doses (2-10 mg/day range) \u2014 and Katzung endorses conventional antimuscarinic antiparkinsonism drugs or, rarely, amantadine for antipsychotic parkinsonism. Levodopa should never be used in these patients because the blocked D2 receptor makes it futile, propranolol is the akathisia drug, and flumazenil has no role."
+  },
+  {
+   "id": "adj-tpx-03",
+   "drugSlug": "trihexyphenidyl",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "An Indian prescription reads PACITANE 2 mg, one tablet at night, to be gradually increased to twice-thrice daily. Which drug and dose range is this?",
+   "options": [
+    "Procyclidine \u2014 50-100 mg per day; PARBENZ 2 mg tablets",
+    "Biperiden \u2014 100-150 mg per day; PACITANE 5 mg injection only",
+    "Trihexyphenidyl (benzhexol) \u2014 2-10 mg per day; PACITANE and PARBENZ 2 mg tablets",
+    "Benztropine mesylate \u2014 6-20 mg per day; PACITANE 2 mg tablets"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi lists trihexyphenidyl (benzhexol) at 2-10 mg per day as PACITANE and PARBENZ 2 mg tablets \u2014 the most commonly used drug for drug-induced parkinsonism in India. Benztropine's usual range is 1-6 mg/day (Katzung) and it is not PACITANE, procyclidine runs 5-20 mg/day (KEMADRIN), and biperiden is 2-10 mg/day (DYSKINON), so the inflated numbers are wrong."
+  },
+  {
+   "id": "adj-tpx-04",
+   "drugSlug": "trihexyphenidyl",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 24-year-old on PACITANE for haloperidol-induced parkinsonism asks for early refills, reports feeling high and confident on extra tablets, and says friends have asked him for pills. What is going on?",
+   "options": [
+    "This is the expected therapeutic effect, so increase the dose freely",
+    "The euphoria proves anticholinergic toxicity, and an extra dose is the treatment",
+    "Trihexyphenidyl is an opioid agonist, and this is early opioid dependence",
+    "Trihexyphenidyl has recognised euphoriant and misuse potential \u2014 dose escalation for euphoria and diversion are documented; restrict the prescription, taper to need and review the indication"
+   ],
+   "correctIndex": 3,
+   "explanation": "KYP's safety anchor flags euphoria and misuse potential with trihexyphenidyl \u2014 a recognised curiosity of Indian practice where diversion and street use have been reported; the correct response is restriction, dose minimisation and indication review. Euphoria is not therapeutic, more drug deepens anticholinergic toxicity, and its pharmacology is muscarinic rather than opioid."
+  },
+  {
+   "id": "adj-tpx-05",
+   "drugSlug": "trihexyphenidyl",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "The anticholinergic adverse-effect cluster of trihexyphenidyl includes:",
+   "options": [
+    "Dry mouth, blurred vision, constipation, urinary hesitancy, and confusion or memory impairment especially in the elderly",
+    "Diarrhoea, miosis, salivation and hypothermia",
+    "Weight gain, hyperprolactinaemia and galactorrhoea",
+    "Bronchodilatation, beta-2-mediated tachycardia and peripheral oedema"
+   ],
+   "correctIndex": 0,
+   "explanation": "Trihexyphenidyl shares the classic belladonna-type antimuscarinic cluster \u2014 dry mouth, blurred vision, constipation, urinary retention \u2014 with central effects of confusion and memory impairment that are disproportionately troublesome in the elderly (KYP anchor; Katzung's toxic-confusional-state warning applies to antimuscarinic-heavy regimens). The diarrhoea-miosis-salivation-hypothermia set reverses the autonomic directions \u2014 mydriasis, dryness and hyperthermia are expected \u2014 and prolactin or beta-2 effects belong to other classes."
+  },
+  {
+   "id": "adj-tpx-06",
+   "drugSlug": "trihexyphenidyl",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Why is levodopa-carbidopa not used for antipsychotic-induced parkinsonism?",
+   "options": [
+    "Levodopa antagonises anticholinergics at the muscarinic receptor",
+    "The antipsychotic occupies and blocks striatal D2 receptors, so levodopa's dopamine has little receptor to act on while risking psychotic relapse \u2014 Katzung states levodopa should never be used in these patients",
+    "Levodopa is too expensive in India compared with trihexyphenidyl",
+    "Levodopa irreversibly destroys the remaining nigral neurons"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung is explicit that levodopa should never be used in antipsychotic-treated patients: the D2 blockade that causes the parkinsonism also blocks levodopa's target, and unmasking psychosis is the added danger \u2014 antimuscarinics or rare amantadine are the remedies. Cost, neuronal destruction and muscarinic antagonism are not the mechanism."
+  },
+  {
+   "id": "adj-tpx-07",
+   "drugSlug": "trihexyphenidyl",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "For antipsychotic-induced parkinsonism and the wider EPS map, which statement correctly places the drug options?",
+   "options": [
+    "Propranolol is the standard drug for rigidity and bradykinesia",
+    "Valbenazine is the first-line remedy for drug-induced parkinsonism",
+    "Oral antimuscarinics such as trihexyphenidyl (or benztropine) are conventional, amantadine is an occasional alternative, and akathisia is the movement disorder where propranolol fits",
+    "Amantadine is first-line for all EPS including acute dystonia, replacing injectable anticholinergics"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung treats antipsychotic parkinsonism with conventional antimuscarinic antiparkinsonism drugs or, in rare cases, amantadine; the wider EPS map puts propranolol at akathisia, parenteral anticholinergics at acute dystonia and VMAT2 inhibitors at tardive dyskinesia. Amantadine is not the acute-dystonia emergency drug, propranolol does not touch rigidity, and valbenazine belongs to the tardive column."
+  },
+  {
+   "id": "adj-tpx-08",
+   "drugSlug": "trihexyphenidyl",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 70-year-old on haloperidol plus trihexyphenidyl 6 mg per day is found disoriented at night with new urinary retention; cognition was normal before the anticholinergic was added. The best next step is:",
+   "options": [
+    "Add a second anticholinergic (procyclidine) to balance the receptor profile",
+    "Increase trihexyphenidyl to 10 mg per day to counteract the urinary retention",
+    "Start terazosin 5 mg for the retention and continue full-dose trihexyphenidyl unchanged",
+    "Reduce or withdraw the anticholinergic (a withdrawal attempt is reasonable since drug-induced parkinsonism may be self-limiting), lower or switch the antipsychotic, and treat the retention \u2014 rather than adding to the anticholinergic load"
+   ],
+   "correctIndex": 3,
+   "explanation": "Elderly patients tolerate central anticholinergics poorly \u2014 confusion plus urinary retention mandates de-prescribing; Katzung's 3-4-monthly withdrawal attempt and Tripathi's start-lowest-dose principle point the same way, with antipsychotic dose lowering as the root-cause fix. Adding more anticholinergic deepens the toxidrome, and while an alpha-blocker could ease prostatic retention, it ignores the iatrogenic cause."
+  },
+  {
+   "id": "adj-mix-01",
+   "drugSlug": "mixed",
+   "domain": "Active Recall",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "Match each drug-induced movement or autonomic problem to its classic remedy (the KYP EPS-treatment map): 1. Acute dystonia. 2. Antipsychotic-induced akathisia. 3. Drug-induced parkinsonism. 4. Tardive dyskinesia.",
+   "options": [
+    "1-IM/IV benztropine or promethazine; 2-propranolol; 3-oral trihexyphenidyl or amantadine; 4-valbenazine or deutetrabenazine, with anticholinergics AVOIDED",
+    "1-propranolol; 2-IM benztropine; 3-valbenazine; 4-oral trihexyphenidyl",
+    "1-oral trihexyphenidyl; 2-valbenazine; 3-propranolol; 4-IM benztropine",
+    "1-valbenazine; 2-amantadine; 3-IM benztropine; 4-propranolol"
+   ],
+   "correctIndex": 0,
+   "explanation": "The map is fixed: acute dystonia gets a parenteral anticholinergic (benztropine or promethazine) within minutes; akathisia is the propranolol (or benzodiazepine) problem; established drug-induced parkinsonism takes an oral anticholinergic or occasional amantadine; and tardive dyskinesia \u2014 the trap where anticholinergics worsen movements \u2014 needs VMAT2 inhibition. Each distractor deliberately rotates these pairings; only the correct pairing reproduces the map exactly."
+  }
+ ]
+}

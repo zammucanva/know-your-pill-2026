@@ -1161,6 +1161,110 @@ export const clozapine: Drug = {
       explanation: "For treatment-resistant schizophrenia: start 12.5 mg once or twice daily, target 300–450 mg/day (divided, then consolidated), maximum 900 mg/day. Increase by 12.5–25 mg/day or every 2 days as tolerated; slower in the elderly",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "atp-clo-01",
+      question: "A patient on clozapine for a year has never had a single extrapyramidal day, and her serum prolactin has stayed at baseline despite excellent psychosis control. Which pharmacological description explains this?",
+      options: [
+        "Weak, loosely bound D2 antagonism combined with broad 5-HT2A, D4, alpha-1, H1 and muscarinic blockade",
+        "Potent, sustained D2 occupancy of the nigrostriatal pathway with selective D1 blockade",
+        "Irreversible covalent binding to striatal D2 receptors that spares 5-HT systems",
+        "Dopamine-store depletion at nigrostriatal terminals, tetrabenazine-style"
+      ],
+      correctIndex: 0,
+      explanation: "Clozapine engages D2 loosely and transiently while covering 5-HT2A, D4, alpha-1, H1 and muscarinic receptors — Tripathi stresses that prolactin does not rise and EPS is few or absent, precisely because of this loose D2 grip. Sustained nigrostriatal D2 occupancy is the haloperidol fingerprint, not clozapine's, and the drug neither depletes dopamine stores nor binds receptors irreversibly.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "atp-clo-02",
+      question: "Clozapine's metabolic fate is correctly characterised as:",
+      options: [
+        "Exclusive glucuronidation to fully inactive products",
+        "CYP1A2-led oxidation (with 2C19/3A4 contribution) to active norclozapine, elimination t½ about 12 hours",
+        "Pure renal excretion of unchanged parent drug with no hepatic step",
+        "Plasma esterase hydrolysis completed within an hour of absorption"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi assigns clozapine to CYP1A2, 2C19 and 3A4 with an average t½ near 12 hours, and its N-desmethyl product norclozapine is pharmacologically active. Renal excretion of unchanged drug is amisulpride's route, and neither ultra-short ester hydrolysis nor pure inactive glucuronidation describes clozapine.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atp-clo-03",
+      question: "A 34-year-old man with schizophrenia has shown no meaningful response to two adequate trials — risperidone 6 mg/day for 8 weeks, then olanzapine 20 mg/day for 8 weeks. His CBC is normal and he consents to blood monitoring. The most appropriate next step is:",
+      options: [
+        "Combine risperidone and olanzapine at full doses indefinitely",
+        "Add fluoxetine to the current olanzapine and observe for 12 weeks",
+        "Start clozapine under its mandated blood-monitoring schedule",
+        "Switch to haloperidol decanoate and reassess after another year"
+      ],
+      correctIndex: 2,
+      explanation: "The correct move is to start clozapine under its mandated ANC blood-monitoring schedule — after two failed adequate trials it is the gold standard for treatment-resistant schizophrenia, and Katzung notes 30–50% of previously refractory patients respond (300–900 mg/day, response judged over up to 6 months). More switching or full-dose polypharmacy merely delays the only drug with proven refractory benefit, and antidepressant addition does not treat core psychosis.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-clo-04",
+      question: "Eighteen days into clozapine therapy, a young man develops low-grade fever, tachycardia of 118/min and pleuritic chest pain; ESR and CRP are high with mildly raised troponin. The most likely diagnosis is:",
+      options: [
+        "Aspiration pneumonia secondary to sedation",
+        "Neuroleptic malignant syndrome",
+        "A dose-related clozapine seizure",
+        "Clozapine-induced myocarditis, a first-month emergency requiring drug discontinuation"
+      ],
+      correctIndex: 3,
+      explanation: "Clozapine myocarditis characteristically appears within the first month as fever, tachycardia, chest pain and raised inflammatory markers, and Katzung states the drug must be discontinued if myocarditis manifests — later cardiomyopathy is the chronic counterpart. NMS brings rigidity with marked hyperthermia rather than pleuritic pain, and pneumonia would show radiological consolidation.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atp-clo-05",
+      question: "A patient stable on clozapine 450 mg/day reports two weeks of worsening constipation, now with abdominal distension, vomiting and absent bowel sounds on the ward. The immediate concern is:",
+      options: [
+        "Clozapine-induced paralytic ileus — a potentially fatal emergency demanding urgent review",
+        "Simple dietary fibre deficiency treatable with a bulk laxative alone",
+        "Somatic delusion of early psychotic relapse",
+        "Sialorrhoea causing dehydration and electrolyte loss"
+      ],
+      correctIndex: 0,
+      explanation: "Clozapine's potent antimuscarinic action can drive severe constipation into paralytic ileus and bowel ischaemia — the signature, potentially fatal gastrointestinal emergency of this drug, requiring urgent imaging, bowel rest and drug hold. Dismissing it as fibre deficiency or a somatic complaint can be lethal, and sialorrhoea is the opposite problem of excess drooling.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atp-clo-06",
+      question: "A man stable on clozapine 300 mg/day for two years has smoked 20 cigarettes daily for a decade; he quits abruptly and three days later is found oversedated, drooling and dizzy. The best explanation is:",
+      options: [
+        "Nicotine cessation triggering clozapine myocarditis",
+        "Loss of tobacco-driven CYP1A2 induction, so clozapine levels rise into the toxic range",
+        "Nicotine competing at clozapine's receptors and precipitating withdrawal psychosis",
+        "Cigarette smoke blocking the liver enzyme that normally clears clozapine"
+      ],
+      correctIndex: 1,
+      explanation: "Tobacco smoke potently induces CYP1A2, the principal clozapine-clearing enzyme; quitting reverses that induction and clozapine levels climb, producing sedation, hypersalivation, seizures or collapse — a toxicity emergency needing dose reduction. Nicotine is not a receptor competitor here, smoke induces rather than inhibits the enzyme, and myocarditis bears no relation to cessation.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atp-clo-07",
+      question: "The adverse-effect constellation that underlies clozapine's restricted, monitored-access dispensing is:",
+      options: [
+        "Irreversible tardive dystonia appearing within weeks of initiation",
+        "Hypothyroidism with nephrogenic diabetes insipidus needing lithium-style serum monitoring",
+        "Agranulocytosis (weekly counts initially), first-month myocarditis, paralytic ileus and dose-related seizures",
+        "Corneal and lenticular deposits with retinal degeneration mandating six-monthly eye checks"
+      ],
+      correctIndex: 2,
+      explanation: "Clozapine's guard-rails exist for agranulocytosis (≈0.8% incidence, weekly CBC early, ANC thresholds), myocarditis and cardiomyopathy, severe constipation progressing to ileus, and seizures at higher doses (risk climbs above ~600 mg/day) — a safety package no other antipsychotic carries. Ocular deposits belong to chlorpromazine/thioridazine lore, dystonia is neither typical nor guaranteed, and thyroid plus water-balance monitoring is lithium's burden.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "atp-clo-08",
+      question: "A patient on clozapine soaks two pillows nightly with drooled saliva; the oral cavity is healthy. This symptom is best described as:",
+      options: [
+        "An early marrow-failure sign demanding immediate withdrawal",
+        "Xerostomia from antimuscarinic blockade, best managed with sugar-free gum",
+        "A dose-dependent prodrome of clozapine seizures",
+        "Sialorrhoea — a paradoxical clozapine hallmark attributed to central mechanisms, manageable without abandoning the drug"
+      ],
+      correctIndex: 3,
+      explanation: "Hypersalivation (sialorrhoea) is a characteristic paradox of clozapine — despite antimuscarinic properties, Tripathi notes it induces hypersalivation, attributed to central actions and impaired nocturnal swallowing — and it is managed supportively rather than by stopping an otherwise working drug. Marrow failure announces itself as fever and neutropenia, dry mouth is the opposite complaint, and drooling is no seizure prodrome.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

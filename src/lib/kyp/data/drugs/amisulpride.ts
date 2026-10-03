@@ -893,6 +893,110 @@ export const amisulpride: Drug = {
       explanation: "For schizophrenia (positive symptoms): start 400 mg once or twice daily, target 400-800 mg/day, maximum 1200 mg/day. Increase to 400-800 mg/day",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "atp-ams-01",
+      question: "Amisulpride's mechanism distinguishing it from most other atypicals is:",
+      options: [
+        "Limbic-preferring D2/D3 blockade as a substituted benzamide, with low 5-HT2 affinity",
+        "5-HT2A-predominant blockade with negligible D2 affinity",
+        "D3-preferring partial agonism",
+        "Reversible MAO-A inhibition"
+      ],
+      correctIndex: 0,
+      explanation: "Amisulpride is a substituted benzamide (sulpiride congener) with high-affinity D2/D3 blockade showing limbic preference and low 5-HT2 affinity (Tripathi) — explaining its negative-symptom interest and few EPS at moderate doses. 5-HT2A-predominant profiles are risperidone-type, D3 partial agonism is cariprazine, and moclobemide — not amisulpride — is the reversible inhibitor of MAO-A.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "atp-ams-02",
+      question: "Amisulpride's pharmacokinetics, per Tripathi, are:",
+      options: [
+        "Absorption requiring a 500 kcal meal",
+        "Orally absorbed, excreted largely unchanged in urine (t½ ~12 h) — renal function dictates dosing",
+        "Completely hepatic CYP3A4 metabolism with no renal component",
+        "Sublingual absorption mandatory"
+      ],
+      correctIndex: 1,
+      explanation: "Amisulpride is absorbed orally and mainly excreted unchanged in urine with a t½ near 12 hours, so renal impairment forces dose reduction. It has no meaningful CYP story, no sublingual form, and the meal rule belongs to ziprasidone/lurasidone.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atp-ams-03",
+      question: "A 22-year-old woman on amisulpride 400 mg/day for three months reports milky bilateral nipple discharge with irregular menses; serum prolactin is 120 ng/mL. The best next step is:",
+      options: [
+        "Order pituitary MRI immediately in every such case before any drug change",
+        "Reassure — amisulpride does not affect prolactin",
+        "Recognise amisulpride's marked hyperprolactinaemia — reduce the dose or switch to a prolactin-sparing antipsychotic",
+        "Start bromocriptine and continue the same amisulpride dose"
+      ],
+      correctIndex: 2,
+      explanation: "Amisulpride sits in the top prolactin tier (Tripathi: hyperprolactinaemia like the typical neuroleptics; Katzung notes the sulpiride class raises prolactin markedly), so galactorrhoea with amenorrhoea points to the drug — manage by dose cut or a prolactin-sparing switch. Bromocriptine while continuing the culprit is backwards, and MRI follows endocrine work-up rather than preceding it.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atp-ams-04",
+      question: "A psychiatrist plans low-dose amisulpride (~50 mg/day) for a patient whose illness is dominated by anxiety and depressive features rather than frank psychosis. The pharmacological rationale is:",
+      options: [
+        "Low doses selectively block 5-HT2A receptors only",
+        "Dose changes merely alter sedation intensity",
+        "Only intramuscular dosing below 25 mg has any effect",
+        "Low doses preferentially block presynaptic dopamine autoreceptors, producing anxiolytic/antidepressant-type effects unlike standard antipsychotic dosing"
+      ],
+      correctIndex: 3,
+      explanation: "At ~50–100 mg/day, amisulpride preferentially blocks presynaptic D2/D3 autoreceptors (dopamine disinhibition — the anxiolytic/antidepressant-adjacent trick), while standard doses deliver full antipsychotic efficacy with strong negative-symptom claims (Tripathi: 50–300 mg/day for predominant negative symptoms; 200–400 mg BD in acute psychosis). Sedation is irrelevant — amisulpride is not a sedative at any dose.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-ams-05",
+      question: "A 30-year-old man with schizophrenia has predominant negative symptoms — avolition, alogia, flat affect — with modest positive symptoms; renal function is normal. Which drug and dose-range logic fits best?",
+      options: [
+        "Amisulpride at lower-range dosing, credited with negative-symptom benefit",
+        "Amisulpride 800 mg/day",
+        "Haloperidol 20 mg/day",
+        "Clozapine 50 mg/day"
+      ],
+      correctIndex: 0,
+      explanation: "Amisulpride is the classic agent for predominant negative symptoms — Tripathi gives 50–300 mg/day in two doses for that purpose, with strong negative-symptom efficacy claims. High-dose amisulpride targets positive symptoms instead, clozapine is the refractory-illness drug rather than a low-dose option, and haloperidol's EPS burden can worsen secondary negative symptoms.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-ams-06",
+      question: "A 68-year-old with ischaemic heart disease starts amisulpride; he is not sedated but complains of insomnia and palpitations, and the ECG shows QTc 480 ms. The correct interpretation is:",
+      options: [
+        "Impossible — benzamide drugs cannot change the QTc",
+        "Expected profile — amisulpride is non-sedating (insomnia/anxiety common) and QT prolongation is a recognised risk, especially in predisposed elderly",
+        "An atypical presentation of drug-induced myocarditis",
+        "Proof that amisulpride stimulates cardiac beta-1 receptors"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi notes amisulpride is not a sedative — insomnia, anxiety and agitation are its common effects — and that QT prolongation occurs, especially in predisposed elderly patients, so both complaints fit the drug. Myocarditis is clozapine's story, beta-1 stimulation is no part of benzamide pharmacology, and the QTc claim is documented.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atp-ams-07",
+      question: "A man stable on amisulpride 400 mg/day develops stage-4 CKD (eGFR 22 mL/min). The pharmacologically correct action is:",
+      options: [
+        "Switch to paliperidone without any adjustment",
+        "Add probenecid to boost renal clearance",
+        "Reduce the amisulpride dose — it is excreted largely unchanged by the kidneys",
+        "Double the dose to compensate for poor absorption"
+      ],
+      correctIndex: 2,
+      explanation: "Amisulpride leaves the body mainly unchanged in urine (t½ ~12 h), so renal failure slows elimination and the dose must fall to avoid accumulation — with QTc and prolactin problems compounding otherwise. Doubling doses and probenecid (which blocks tubular secretion) worsen retention, and paliperidone is also renally dependent.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atp-ams-08",
+      question: "Rank the antipsychotic prolactin tiers correctly:",
+      options: [
+        "Aripiprazole raises prolactin more than amisulpride",
+        "Ziprasidone and aripiprazole are the highest-prolactin agents",
+        "All antipsychotics raise prolactin identically",
+        "Amisulpride/sulpiride and risperidone sit in the highest tier; aripiprazole-type agents sit lowest and can even normalise prolactin"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi and Katzung agree: amisulpride and sulpiride (with risperidone) drive marked hyperprolactinaemia, while aripiprazole-type partial agonists cause no or minimal rise and can normalise elevated prolactin — the exam-favourite contrast. Uniform prolactin behaviour across the class is false.",
+      afterSectionId: "knowledge-graph",
+    },
   ],
   activeRecallQuestions: [
     {

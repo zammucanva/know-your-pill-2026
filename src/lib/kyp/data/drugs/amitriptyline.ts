@@ -1814,6 +1814,110 @@ export const amitriptyline: Drug = {
       explanation: "Fluoxetine (and paroxetine) are potent CYP2D6 inhibitors — they raise TCA levels 2-5 fold, causing toxicity (QRS widening, anticholinergic toxidrome). Additionally, both are serotonergic → serotonin syndrome risk. When switching from fluoxetine to a TCA, wait at least 5 weeks (long half-life of norfluoxetine), then start TCA at low dose with level monitoring.",
       afterSectionId: "interactions",
     },
+    {
+      id: "tca-ami-01",
+      question: "Among the tricyclic antidepressants, the one with the strongest anticholinergic activity, the deepest sedation and the most weight gain is:",
+      options: [
+        "Desipramine",
+        "Protriptyline",
+        "Amitriptyline",
+        "Nortriptyline"
+      ],
+      correctIndex: 2,
+      explanation: "Amitriptyline is the maximally 'dirty' TCA: top-grade muscarinic and H1 blockade plus alpha-1 effects give dry mouth, constipation, sedation and appetite-driven weight gain. The secondary amines nortriptyline and desipramine are far less anticholinergic, and protriptyline is the class's activating pole — the exact mirror image. Matching each TCA to its receptor-blockade rank is the fastest way to answer a third of TCA questions.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "tca-ami-02",
+      question: "The relationship between amitriptyline and nortriptyline is best described as:",
+      options: [
+        "Hepatic demethylation converts amitriptyline into nortriptyline, an active metabolite that predominantly blocks norepinephrine reuptake",
+        "Nortriptyline is an inactive metabolite that shortens the effect",
+        "Aromatic hydroxylation converts amitriptyline into nortriptyline",
+        "They are enantiomers of the same molecule"
+      ],
+      correctIndex: 0,
+      explanation: "Amitriptyline is demethylated in the liver to nortriptyline — an active secondary-amine metabolite whose preference for NET makes it the better-tolerated twin. Hydroxylation is a later inactivation step, the enantiomer story belongs to citalopram/escitalopram, and nortriptyline is very much pharmacologically active. With parent half-lives of 16-24 hours for amitriptyline, once-daily bedtime dosing is practicable.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "tca-ami-03",
+      question: "A 26-year-old woman has 8 migraine days per month. Propranolol was stopped for fatigue and wheeze (asthma), and topiramate caused word-finding trouble. She also has sleep-onset difficulty. A classic next prophylactic choice is:",
+      options: [
+        "Daily oral sumatriptan for prophylaxis",
+        "Twice-weekly rizatriptan to prevent attacks",
+        "Daily ergotamine through the month",
+        "Low-dose amitriptyline at night"
+      ],
+      correctIndex: 3,
+      explanation: "Amitriptyline has solid prophylactic value in migraine — especially mixed tension-migraine patterns — and its sedation conveniently treats her insomnia at 10-25 mg at night. Triptans and ergotamine are acute-abortive drugs; using them as daily prophylaxis invites medication-overuse headache rather than prevention. Pearl: the sedation and weight gain that are 'side effects' in depression become the therapeutic payload in prophylaxis — though the migraine use remains off-label.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tca-ami-04",
+      question: "A 74-year-old man has been on amitriptyline 50 mg at night, started years ago for sleep. He reports worsening constipation, blurred vision and a fall last week; his family feels he has become more confused. The best action is:",
+      options: [
+        "Double the dose for better sleep",
+        "Add lactulose and continue the amitriptyline unchanged",
+        "Stop and taper the amitriptyline — anticholinergic burden in the elderly causes confusion, constipation, retention and falls",
+        "Add donepezil to counter the central anticholinergic effects"
+      ],
+      correctIndex: 2,
+      explanation: "Strongly anticholinergic TCAs are on every 'avoid in elderly' list — the constellation of cognitive dulling, constipation, blurred vision and falls is the anticholinergic burden itself, so the drug must go, not the symptoms be patched. Doubling the dose deepens every element of the syndrome, lactulose ignores the cause, and routinely pitting donepezil against a TCA is not standard practice. Taper gradually — cholinergic rebound makes abrupt stops unpleasant.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tca-ami-05",
+      question: "A 55-year-old with painful diabetic neuropathy has burning feet that wreck his sleep despite optimised glycaemic control. The best initial drug for his pain is:",
+      options: [
+        "Amitriptyline 10-25 mg at night",
+        "Fluoxetine — an SSRI with proven neuropathic analgesia",
+        "Protriptyline in the morning for its activating profile",
+        "As-needed ibuprofen"
+      ],
+      correctIndex: 0,
+      explanation: "Low-dose amitriptyline at night is the classic TCA for diabetic neuropathic pain and post-herpetic neuralgia (relieving roughly half of PHN patients per Indian texts), hitting pain and sleep together. SSRIs are clearly less effective than TCAs for neuropathic pain, protriptyline is an activating agent with no analgesic niche, and NSAIDs do not address a neuropathic mechanism. Pearl: every TCA pain use is off-label in the US — duloxetine owns the pain labels — yet amitriptyline remains the exam default for PHN and diabetic neuropathy.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tca-ami-06",
+      question: "A patient on phenelzine for atypical depression self-starts a relative's amitriptyline tablets for insomnia. He arrives with a pounding occipital headache, BP 204/112, agitation and sweating. The correct diagnosis and immediate priority is:",
+      options: [
+        "Migraine — give sumatriptan",
+        "Anxiety attack — reassure and discharge",
+        "Serotonin syndrome — cyproheptadine before anything else",
+        "TCA-MAOI hypertensive crisis — stop the TCA and control BP urgently (an alpha-blocker such as phentolamine)"
+      ],
+      correctIndex: 3,
+      explanation: "Combining a TCA with an MAOI produces the notorious hypertensive crisis with excitement and hallucinations — MAOIs must be stopped two weeks before a TCA is started (longer for fluoxetine). Sumatriptan is contraindicated within MAOI use and would compound the pressor response; dismissing it as anxiety is dangerous; serotonin syndrome is a different pharmacodynamic clash with a different dominant picture. This interaction is the headline reason TCAs and MAOIs are never freely combined.",
+      afterSectionId: "neural-pathways",
+    },
+    {
+      id: "tca-ami-07",
+      question: "A 45-year-old man has a depressive episode dominated by severe insomnia, agitation and anxious ruminations. A TCA is planned. Which TCA best fits his symptom profile?",
+      options: [
+        "Protriptyline in the morning",
+        "Amitriptyline at bedtime",
+        "Desipramine at bedtime",
+        "Maprotiline in divided daytime doses"
+      ],
+      correctIndex: 1,
+      explanation: "The more sedative TCAs suit depressed patients with anxiety and agitation, and amitriptyline is the most sedating of all — its side effect profile is being used as therapy here. Protriptyline and desipramine sit at the activating end and would worsen insomnia and jitteriness, while maprotiline is only moderately sedating and carries the class's worst seizure liability. Symptom-directed selection — 'sedate the agitated, activate the retarded' — is the TCA-era art being tested.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tca-ami-08",
+      question: "Which pairing of TCA superlatives is CORRECT?",
+      options: [
+        "Strongest anticholinergic — desipramine; most activating — amitriptyline",
+        "Most sedating — protriptyline; strongest NET blockade — clomipramine",
+        "Strongest anticholinergic — amitriptyline; most activating — protriptyline",
+        "Most serotonergic — doxepin; strongest NET blockade — trimipramine"
+      ],
+      correctIndex: 2,
+      explanation: "Amitriptyline owns the anticholinergic/sedation/weight-gain superlatives and protriptyline owns 'most activating' — the correct row simply refuses to swap them. Desipramine, not clomipramine, is the NET-heavy agent (clomipramine is the SERT champion), and trimipramine is the reuptake-weak one, making both other rows deliberate tag-swaps. Superlative shuffling between class-mates is the single most common way TCA tables are examined.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
 
   /* End-of-page active recall questions */

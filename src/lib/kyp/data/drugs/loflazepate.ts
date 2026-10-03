@@ -820,6 +820,110 @@ export const loflazepate: Drug = {
       explanation: "For anxiety (japan): start 1 mg twice daily, target 1–3 mg/day, maximum 3 mg/day. Adjust to 2–3 mg/day",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "bzd-lfp-01",
+      question: "Loflazepate's pharmacokinetic identity is:",
+      options: [
+        "An inactive metabolite of diazepam",
+        "A glucuronidated ultra-short hypnotic",
+        "A direct-acting antagonist at GABA-A",
+        "An ester PRODRUG rapidly converted in the body to desmethyldiazepam"
+      ],
+      correctIndex: 3,
+      explanation: "Loflazepate (dipotassium clorazepate's chemical cousin in the prodrug club) is an ester that hydrolyses to desmethyldiazepam — the long-lived active benzodiazepine. It is a prodrug, not a metabolite, not an ultra-short agent, and certainly not an antagonist.",
+      afterSectionId: "neural-pathways",
+    },
+    {
+      id: "bzd-lfp-02",
+      question: "Because of its prodrug-to-desmethyldiazepam design, loflazepate's dosing pattern is:",
+      options: [
+        "Once daily — the long active-moiety half-life covers the day",
+        "Six times daily",
+        "Continuous IV infusion",
+        "Weekly depot injection"
+      ],
+      correctIndex: 0,
+      explanation: "Once the ester converts to desmethyldiazepam, the effective half-life is measured in days — so loflazepate is a once-daily anxiolytic with steady cover and no interdose rebound. Multiple daily dosing fits short-half-life drugs, and there is no benzodiazepine depot.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "bzd-lfp-03",
+      question: "Which set lists the benzodiazepine PRODRUGS?",
+      options: [
+        "Chlordiazepoxide, clorazepate, loflazepate — all yielding desmethyldiazepam",
+        "Lorazepam, oxazepam, temazepam",
+        "Midazolam, triazolam, alprazolam",
+        "Zolpidem, eszopiclone, zaleplon"
+      ],
+      correctIndex: 0,
+      explanation: "The prodrug trio — chlordiazepoxide, clorazepate and loflazepate — all funnel into desmethyldiazepam before further oxidation to oxazepam. The LOT trio are active parents, the triazolobenzodiazepines are active parents, and the last option is the Z-drug class.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "bzd-lfp-04",
+      question: "An 82-year-old on loflazepate for chronic anxiety develops day-time confusion and two falls over a fortnight. The pharmacological reason and action:",
+      options: [
+        "The prodrug's desmethyldiazepam load accumulates in old age — taper off and use non-pharmacological anxiety care",
+        "The drug is too short-acting, causing withdrawal between doses — increase frequency",
+        "It is an idiosyncratic allergy — continue with antihistamine cover",
+        "Nothing — confusion at 82 is expected"
+      ],
+      correctIndex: 0,
+      explanation: "Old age plus a days-long active moiety equals accumulation: confusion and falls. The response is a slow taper off with behavioural anxiety strategies — not more drug, not antihistamines, and never dismissing an iatrogenic fall cluster.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "bzd-lfp-05",
+      question: "A key difference between clorazepate's and loflazepate's prodrug activation:",
+      options: [
+        "Clorazepate's decarboxylation requires gastric acid (delayed by PPIs); loflazepate's ester hydrolysis is not acid-dependent",
+        "Both need IV activation",
+        "Loflazepate needs gastric acid; clorazepate does not",
+        "Neither is ever converted — both act unchanged"
+      ],
+      correctIndex: 0,
+      explanation: "Clorazepate's decarboxylation to desmethyldiazepam happens in the acidic stomach — proton-pump inhibitors measurably delay its absorption — whereas loflazepate's ester hydrolysis proceeds without acid dependency. Both ultimately yield the same active moiety; only the activation chemistry differs.",
+      afterSectionId: "neural-pathways",
+    },
+    {
+      id: "bzd-lfp-06",
+      question: "A patient with generalised anxiety stable on loflazepate once daily asks why she never feels 'waves' of anxiety between doses. The explanation:",
+      options: [
+        "The drug's active moiety (desmethyldiazepam) has a days-long half-life, smoothing levels across the day",
+        "The drug permanently rewires anxiety circuits",
+        "It accumulates in fat forever, never leaving",
+        "Loflazepate is actually an SSRI"
+      ],
+      correctIndex: 0,
+      explanation: "Interdose rebound is a short-half-life benzodiazepine problem; a days-long active moiety keeps receptor occupancy steady — that is the pharmacological answer. Permanent rewiring and irreversible fat storage are myths, and loflazepate is no SSRI.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "bzd-lfp-07",
+      question: "Which statement about loflazepate's interaction profile is correct?",
+      options: [
+        "It is immune to all drug interactions because it is a prodrug",
+        "Once converted to desmethyldiazepam it follows the class pattern — CYP inhibition (ketoconazole, cimetidine) and CNS depressants still matter",
+        "It activates only in the presence of alcohol",
+        "It potently induces CYP3A4 like carbamazepine"
+      ],
+      correctIndex: 1,
+      explanation: "Prodrug status changes activation, not destiny: the resulting desmethyldiazepam is an oxidatively-cleared benzodiazepine subject to CYP inhibition and additive CNS depression. No benzodiazepine needs alcohol to activate, and no benzodiazepine meaningfully induces CYP enzymes.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "bzd-lfp-08",
+      question: "In Indian formularies, loflazepate is positioned as:",
+      options: [
+        "An emergency anticonvulsant IV agent",
+        "A first-line antipsychotic",
+        "A weight-loss adjunct",
+        "A long-acting anxiolytic for generalised anxiety, with the usual dependence cautions"
+      ],
+      correctIndex: 3,
+      explanation: "Loflazepate's Indian niche is long-acting anxiolysis — the prodrug-to-desmethyldiazepam design fits once-daily anxiety cover — always with the class-wide dependence and taper warnings. It has no IV emergency, antipsychotic or weight-loss role.",
+      afterSectionId: "top",
+    },
   ],
   activeRecallQuestions: [
     {

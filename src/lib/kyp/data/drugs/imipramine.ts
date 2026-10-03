@@ -938,6 +938,110 @@ export const imipramine: Drug = {
       explanation: "For depression (outpatient): start 25 mg at bedtime, target 150-200 mg/day, maximum 300 mg/day (inpatient). Increase by 25 mg every 3-7 days; bedtime-weighted",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "tca-imi-01",
+      question: "Imipramine, the prototype tricyclic antidepressant, produces its antidepressant effect chiefly by:",
+      options: [
+        "Increasing GABA release in the amygdala",
+        "Blocking the norepinephrine and serotonin transporters (NET and SERT), potentiating NA and 5-HT signalling",
+        "Blocking D2 receptors in the mesolimbic pathway",
+        "Acting as a full agonist at presynaptic 5-HT1A autoreceptors"
+      ],
+      correctIndex: 1,
+      explanation: "Imipramine inhibits NET and SERT — the defining uptake blockade of TCAs — while its additional muscarinic, alpha-1 and H1 receptor blockade generates side effects, not benefit. D2 blockade is antipsychotic territory (amoxapine being the lone antidepressant exception), 5-HT1A agonism is buspirone/vilazodone pharmacology, and the GABA claim belongs to benzodiazepines. Classic pearl: uptake blockade starts within hours, yet the antidepressant effect needs 2-3 weeks of downstream adaptation.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "tca-imi-02",
+      question: "Imipramine's principal metabolite and its pharmacological character are best described as:",
+      options: [
+        "An inactive glucuronide that terminates the antidepressant effect",
+        "Hydroxyimipramine — equally serotonergic with a longer half-life",
+        "Nortriptyline, produced by aromatic hydroxylation",
+        "Desipramine — an active metabolite that predominantly blocks norepinephrine reuptake"
+      ],
+      correctIndex: 3,
+      explanation: "Demethylation of imipramine produces desipramine, which is more potent and more selective at NET than the parent; its half-life is longer than imipramine's, so the metabolite carries much of the clinical effect. Nortriptyline comes from amitriptyline, not imipramine — the classic swap trap. The metabolites of TCAs are excreted in urine over 1-2 weeks, which is why abrupt stops behave unpredictably.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "tca-imi-03",
+      question: "A 7-year-old boy wets the bed 4-5 nights a week despite an enuresis alarm, fluid restriction and a normal urinalysis. The family requests drug therapy. The classic pharmacological choice is:",
+      options: [
+        "Desmopressin — the only drug ever proven effective for enuresis",
+        "Sertraline — SSRIs are now first-line for paediatric enuresis",
+        "Imipramine 25 mg at bedtime",
+        "Amitriptyline 75 mg at bedtime"
+      ],
+      correctIndex: 2,
+      explanation: "Imipramine 25 mg at bedtime is the exam-classic drug for enuresis in children above 5 years (Indian formularies list DEPSONIL/ANTIDEP for this), though bedwetting tends to return when the drug is stopped. Desmopressin is a real alternative but claiming it is the only proven drug is false, SSRIs have no enuresis role, and 75 mg of a strongly anticholinergic TCA is an inappropriate paediatric dose. Non-drug alarm therapy remains the first-line approach before any tablet.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tca-imi-04",
+      question: "A 68-year-old woman started imipramine 75 mg at night for depression. On day 5 she reports giddiness on standing; lying BP is 132/84 and standing BP is 100/62. The best explanation and step is:",
+      options: [
+        "Anticholinergic tachycardia — add propranolol",
+        "Alpha-1 adrenergic blockade causing postural hypotension — advise slow position change and review the dose",
+        "H1-mediated sedation — switch the dose to morning",
+        "SIADH — check serum sodium and add fluid restriction"
+      ],
+      correctIndex: 1,
+      explanation: "TCAs block vascular alpha-1 receptors and dampen cardiovascular reflexes, producing the classic orthostatic drop — elderly patients are the most susceptible, and tolerance develops over weeks. Propranolol does not correct an alpha-1-mediated pressure fall, sedation is not the mechanism here, and the lying-to-standing gradient points at posture rather than SIADH. TCAs plus old age is the classic falls combination examiners test.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tca-imi-05",
+      question: "A 32-year-old man has recurrent unexpected panic attacks with a superimposed depressive episode. He refuses SSRIs after a cousin developed sexual dysfunction on one. Cardiac examination is normal. A reasonable classic alternative is:",
+      options: [
+        "Protriptyline — the best TCA for panic disorder",
+        "Maprotiline — licensed for panic disorder",
+        "Imipramine — has proven efficacy in panic disorder and depression",
+        "Trimipramine — antipanic effect via H1 blockade"
+      ],
+      correctIndex: 2,
+      explanation: "Imipramine is the historically first and still classic antipanic TCA — Indian texts list TCAs as highly effective in panic (clomipramine reduces panic attacks in over 75% of patients), and imipramine covers his depression simultaneously. Protriptyline is an activating agent with no antipanic pedigree, maprotiline has no panic license and adds seizure risk, and H1 blockade has nothing to do with panic circuitry. Counsel that TCAs can also cause sexual dysfunction — the class, not just SSRIs.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tca-imi-06",
+      question: "A 40-year-old stable on imipramine 150 mg is started on fluoxetine 20 mg by a different prescriber. Ten days later he reports dry mouth, constipation, tremor and palpitations. The best explanation is:",
+      options: [
+        "Additive serotonin toxicity — this is full serotonin syndrome",
+        "Fluoxetine potently inhibits CYP2D6, raising imipramine and desipramine concentrations and producing anticholinergic-cardiac toxicity",
+        "Fluoxetine induces CYP3A4, accelerating imipramine clearance and causing withdrawal effects",
+        "Imipramine displaces fluoxetine from plasma proteins, raising SSRI levels"
+      ],
+      correctIndex: 1,
+      explanation: "Fluoxetine (and paroxetine) are potent CYP2D6 inhibitors, and 2D6 is the main handle on TCA levels — co-prescription can raise tricyclic concentrations dramatically and unpredictably, giving anticholinergic and cardiac toxicity within 1-2 weeks. The presentation here is anticholinergic-adrenergic, not the neuromuscular hyperactivity of serotonin syndrome; fluoxetine inhibits rather than induces; and protein displacement is trivial for drugs with volumes of distribution around 20 L/kg. Stop or cut the TCA and get an ECG.",
+      afterSectionId: "neural-pathways",
+    },
+    {
+      id: "tca-imi-07",
+      question: "A 17-year-old girl is brought to casualty 2 hours after swallowing her grandmother's imipramine tablets. She is drowsy, has had two generalised seizures, BP is 86/58, and the ECG shows sinus tachycardia with QRS 128 ms. The single most important drug to give now is:",
+      options: [
+        "IV flumazenil to reverse sedation",
+        "IV propranolol for the tachycardia",
+        "IV phenytoin loading for the seizures",
+        "IV sodium bicarbonate — it displaces the TCA from cardiac sodium channels"
+      ],
+      correctIndex: 3,
+      explanation: "The overdose triad of coma, convulsions and cardiac conduction failure is on display, and QRS widening beyond 100 ms is the trigger for IV sodium bicarbonate — alkalinisation displaces the tricyclic from myocardial sodium channels and is the definitive antidote. Flumazenil can precipitate seizures, beta-blockade does not fix sodium-channel blockade, and class IA/IC antiarrhythmics or phenytoin-style agents that also block sodium channels can worsen conduction. Remember that roughly 1500 mg of imipramine or amitriptyline (under a week's supply) can be lethal in an adult.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tca-imi-08",
+      question: "Imipramine blocks monoamine transporters within hours, yet antidepressant benefit takes 2-3 weeks. The best-supported explanation is:",
+      options: [
+        "Time-dependent desensitisation of presynaptic alpha-2 and 5-HT1A autoreceptors with downstream receptor adaptations",
+        "Slow accumulation of drug in brain tissue over several weeks",
+        "Gradual conversion of imipramine into a more potent metabolite only after 2 weeks",
+        "Delayed induction of the hepatic enzymes that synthesise monoamines"
+      ],
+      correctIndex: 0,
+      explanation: "Uptake blockade is immediate, but the surge of synaptic monoamine initially fires presynaptic alpha-2 and 5-HT1A autoreceptors that suppress neurone firing; only after these desensitise — and receptors remodel — does mood lift, typically after 2-3 weeks. Brain levels stabilise within days, desipramine forms within hours-to-days, and hepatic enzyme induction is irrelevant to amine synthesis. This lag is also why relapse prevention continues at about 100 mg imipramine/day equivalent for months, with withdrawal considered only after 6-12 months of remission.",
+      afterSectionId: "timeline",
+    },
   ],
   activeRecallQuestions: [
     {

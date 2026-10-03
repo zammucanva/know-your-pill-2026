@@ -718,6 +718,110 @@ export const sodiumOxybate: Drug = {
       explanation: "For narcolepsy (adults): start 2.25 g at bedtime (in bed), target 4.5-6 g/night (split), maximum 9 g/night. Second equal dose 2.5-4 h later (alarm); titrate to 3-7.5 g/night total",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "sud-sob-01",
+      question: "Sodium oxybate's chemical identity and principal receptor mediator are:",
+      options: [
+        "The sodium salt of gamma-hydroxybutyrate (GHB), acting chiefly through GABAB receptors",
+        "A benzodiazepine-site agonist that restores GABAA chloride-channel function",
+        "A selective orexin OX2 receptor agonist that replaces lost orexin signalling",
+        "A 5-HT2A receptor agonist that suppresses abnormal REM intrusions"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung defines GHB's salt form as sodium oxybate and, on knockout-mouse evidence, concludes GABAB receptors are the sole mediators of its pharmacological action. Benzodiazepine-site agonism is the Z-drug mechanism, an orexin agonist does not exist clinically (suvorexant is the antagonist), and a 5-HT2A story fits no narcolepsy therapy.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "sud-sob-02",
+      question: "A 24-year-old with narcolepsy and daily cataplexy has failed modafinil and asks about 'the night medicine given in two doses'. The correct response is:",
+      options: [
+        "Methylphenidate 60 mg at bedtime, which consolidates night sleep and prevents cataplexy",
+        "Sodium oxybate - two divided night doses consolidate night sleep, reducing both cataplexy and daytime sleepiness, and it is dispensed only through a restricted-distribution programme",
+        "Zolpidem 10 mg twice nightly, which deepens sleep and abolishes cataplexy",
+        "Suvorexant 20 mg nightly, which replaces the lost orexin neurons"
+      ],
+      correctIndex: 1,
+      explanation: "Sodium oxybate treats narcolepsy with cataplexy by consolidating night sleep, decreasing daytime sleepiness and cataplexy episodes, under restricted-access distribution because of its abuse potential (Katzung ch.32; KYP anchor REMS). Z-drugs neither treat cataplexy nor carry that programme, suvorexant is an orexin antagonist and is contraindicated in narcolepsy rather than a neuron replacement, and bedtime stimulants worsen the night sleep that oxybate is designed to fix.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "sud-sob-03",
+      question: "A newly treated narcolepsy patient asks how to actually take sodium oxybate. The correct administration counselling is:",
+      options: [
+        "Three equal doses taken at breakfast, lunch and dinner",
+        "One loading dose every Sunday night, repeated weekly",
+        "First dose at bedtime, then a second dose 2.5-4 hours later after waking briefly to an alarm - the total nightly dose is always split in two, and the patient stays in bed",
+        "A single dose every morning to cover the daytime sleepiness"
+      ],
+      correctIndex: 2,
+      explanation: "The drug's design is two divided night doses - one at bedtime and one 2.5-4 hours later - so that night-sleep consolidation is achieved while the patient remains in bed (KYP anchor; the mandated counselling vignette). Morning or daytime dosing inverts a night-hypnotic into a daytime sedative, three-meal dosing abolishes the sleep design, and no weekly loading schedule exists.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "sud-sob-04",
+      question: "A narcolepsy patient stable on sodium oxybate attends a party, drinks heavily and takes a friend's alprazolam. The principal danger is:",
+      options: [
+        "Hepatotoxicity, because ethanol and oxybate compete for alcohol dehydrogenase",
+        "Acute parkinsonism from GABAB-dopamine antagonism in the basal ganglia",
+        "Hypertensive crisis from combined GABAergic blockade",
+        "Additive respiratory depression that can be fatal - alcohol and sedative-hypnotics must be strictly avoided on oxybate nights"
+      ],
+      correctIndex: 3,
+      explanation: "Sodium oxybate's fatal interaction is respiratory depression with alcohol and other CNS depressants (KYP anchor) - the same narrow safety margin that made GHB unusable as a general anaesthetic (Katzung ch.32). Competition for alcohol dehydrogenase is disulfiram-ethanol logic misapplied, parkinsonism is not a GABAB phenomenon, and the expected haemodynamic problem is depression, not a crisis.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "sud-sob-05",
+      question: "A pharmacy student asks why sodium oxybate is dispensed through a restricted-distribution system at all. The correct answer is:",
+      options: [
+        "Because GHB has major abuse potential - euphoria, enhanced perception, amnesia and sedation - with a notorious date-rape history, so supply is tightly controlled",
+        "Because it causes agranulocytosis, requiring neutrophil monitoring like clozapine",
+        "Because it is an orexin agonist that could trigger insomnia epidemics if diverted",
+        "Because it binds GABAB receptors irreversibly, causing permanent sedation after one dose"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung describes GHB's euphoria, sensory enhancement and amnesia that made it a popular club drug ('liquid ecstasy', 'date rape drug'), which is why prescribed sodium oxybate sits under restricted-access rules (ch.32; KYP anchor REMS). Neutrophil monitoring is clozapine's programme, orexin agonism is not its mechanism, and GABAB binding is competitive and short-lived, not irreversible.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "sud-sob-06",
+      question: "Which pharmacokinetic fingerprint belongs to GHB (sodium oxybate)?",
+      options: [
+        "Peak effect at 24 hours with an elimination half-life of 8-10 days",
+        "Rapid absorption with peak plasma levels 20-30 minutes after a 10-20 mg/kg dose, and an elimination half-life of about 30 minutes",
+        "Slow absorption over 6 hours with a terminal half-life of about 40 hours",
+        "Complete first-pass destruction, so it must be given sublingually"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung's GHB section gives rapid absorption, maximal plasma concentration 20-30 minutes after a 10-20 mg/kg ingestion, and an elimination half-life of about 30 minutes - the short, sharp PK that explains both its club-drug appeal and its two-dose night regimen. The 40-hour half-life is buprenorphine's number, sublingual-first-pass logic is buprenorphine's route story, and a 24-hour peak with multi-day persistence belongs to no sedative here.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "sud-sob-07",
+      question: "A 20-year-old is found collapsed at a party, briefly comatose, and wakes within 2-3 hours confused but essentially intact; friends say his drink was spiked with 'liquid ecstasy'. The receptor-biology correlate is:",
+      options: [
+        "LSD intoxication - 5-HT2A agonism producing a 12-hour psychosis",
+        "Cannabis intoxication - CB1 agonism producing 24-hour amnesia",
+        "GHB intoxication - VTA GABA neurons are an order of magnitude more sensitive to GHB than dopamine neurons, producing sedation and amnesia with reinforcing potential",
+        "Cocaine intoxication - dopamine neurons are hyperpolarised by transporter blockade"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung ties 'liquid ecstasy' and the date-rape profile to GHB, whose low-affinity site is the GABAB receptor and whose EC50s show VTA GABA neurons about tenfold more sensitive than dopamine neurons - the basis of sedation-amnesia plus addiction liability (ch.32). Cocaine blocks the transporter and increases dopamine firing rather than hyperpolarising, the LSD duration and cannabis time-course fit neither the brief coma nor the rapid recovery.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "sud-sob-08",
+      question: "The 'dual identity' exam framing of sodium oxybate is that it is:",
+      options: [
+        "A first-line antiepileptic for absence seizures that doubles as a hypnotic",
+        "An orexin-replacement drug approved for insomnia with cataplexy",
+        "A pure peripheral muscle relaxant licensed for spasticity",
+        "An orphan narcolepsy therapy under restricted programmes, yet the same molecule (GHB) is an abused club drug with an amnesic, sedative misuse heritage"
+      ],
+      correctIndex: 3,
+      explanation: "One molecule, two worlds: prescribed sodium oxybate for narcolepsy under restricted access, and street GHB with euphoria-amnesia misuse and date-rape notoriety (Katzung ch.32; KYP anchor) - the dual-identity line examiners love. It is not an antiepileptic, orexin replacement does not exist, and the spasticity GABAB agent is baclofen, whose identity this distractor borrows.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

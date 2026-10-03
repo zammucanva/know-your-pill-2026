@@ -889,6 +889,110 @@ export const methylphenidate: Drug = {
       explanation: "For adhd (ir): start 5 mg twice daily (morning + midday), target 20-30 mg/day divided, maximum 60 mg/day. Increase by 5-10 mg/day weekly",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "stm-mph-01",
+      question: "The precise mechanistic contrast between methylphenidate and amphetamine (Katzung's transporter framework) is:",
+      options: [
+        "Methylphenidate blocks DAT/NET-mediated reuptake of released transmitter, while amphetamine reverses the transporters and displaces vesicular stores as a releaser",
+        "Methylphenidate directly agonizes D1 receptors while amphetamine agonizes D2",
+        "Methylphenidate is a vesicular releaser while amphetamine blocks reuptake",
+        "Both are equally potent VMAT2 substrates"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung's monoamine-transporter figure places methylphenidate with cocaine as a reuptake blocker and amphetamine as the substrate-displacer (releaser) — the releaser-versus-blocker distinction is this batch's headline mechanism pearl. Option C swaps the labels exactly as examinations love to test, VMAT2 substrate activity is amphetamine's privilege, and neither drug acts as a direct receptor agonist.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "stm-mph-02",
+      question: "A 9-year-old on immediate-release methylphenidate is fine at school but explosively irritable and hungry at 4 pm, before the next dose. The phenomenon and remedy are:",
+      options: [
+        "Paradoxical intoxication — double the afternoon dose",
+        "Wear-off/rebound as the short half-life effect fades — switch to an extended-release system such as the OROS osmotic pump or adjust dose timing",
+        "Growth-hormone deficiency — start an endocrine workup first",
+        "Serotonin discontinuation syndrome — add fluoxetine"
+      ],
+      correctIndex: 1,
+      explanation: "Methylphenidate's short plasma half-life (Tripathi 7e: 4-6 h, with the central effect lasting longer but still fading by late afternoon) produces the classic wear-off rebound of irritability and hunger; sustained-release systems such as OROS smooth the coverage. Doubling the dose worsens evening insomnia, SSRIs answer a different neurotransmitter story, and growth deceleration is a separate monitored issue rather than the driver of late-afternoon swings.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "stm-mph-03",
+      question: "Tripathi ranks methylphenidate ahead of amphetamine for childhood ADHD mainly because:",
+      options: [
+        "It has a longer half-life than any amphetamine product",
+        "It is not a scheduled/controlled substance",
+        "It causes less tachycardia and less growth retardation at effective ADHD doses",
+        "It is a more potent dopamine releaser"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi's verdict — superior to amphetamine for ADHD because of lesser tachycardia and growth retardation, with behaviour and learning improved in about 3 of 4 children — explains methylphenidate's first-line status. It is mechanistically a reuptake blocker rather than a stronger releaser, its half-life is short rather than long, and it is as firmly Schedule II as amphetamine in the US.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "stm-mph-04",
+      question: "Beyond ADHD, the other classic established indication for methylphenidate is:",
+      options: [
+        "Migraine prophylaxis",
+        "Obsessive-compulsive disorder",
+        "Alzheimer's disease dementia",
+        "Narcolepsy"
+      ],
+      correctIndex: 3,
+      explanation: "The two standing indications of methylphenidate are ADHD and narcolepsy — the same pair as the amphetamine family. Tripathi explicitly warns against employing it for depression, dementia or obesity, OCD belongs to SSRI/SRI territory, and migraine prophylaxis runs through beta-blockers, amitriptyline, topiramate and CGRP agents.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "stm-mph-05",
+      question: "A mother notes her 10-year-old on methylphenidate has crossed two percentile lines downward in weight and height. The evidence-based response is:",
+      options: [
+        "Monitor height/weight charting, optimise calories and dose timing, and consider dose reduction or drug holidays — though the benefit of holidays is debated",
+        "Only pemoline causes growth suppression among ADHD drugs",
+        "Growth suppression is irreversible and mandates immediate permanent discontinuation",
+        "Stimulants actually accelerate growth, so the chart is an error"
+      ],
+      correctIndex: 0,
+      explanation: "Growth and weight suppression is a real, monitored stimulant effect; the standard response is charting, nutritional support and dose/timing adjustment, with drug holidays an option whose benefit is debated in current evidence. Panic discontinuation is unwarranted, the effect runs the opposite way to acceleration claims, and growth slowing is shared across the stimulant class rather than unique to pemoline.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "stm-mph-06",
+      question: "A 16-year-old is found to have mild aortic stenosis during ADHD evaluation. How should this shape stimulant prescribing?",
+      options: [
+        "Only modafinil is contraindicated in structural cardiac disease",
+        "Structural cardiac disease is a specific caution for methylphenidate/amphetamine therapy — obtain cardiology input, record baseline BP/HR, and avoid or use great caution with stimulants",
+        "Cardiac disease is irrelevant because stimulants have no cardiovascular effects",
+        "Stimulants are the drugs of choice in aortic stenosis"
+      ],
+      correctIndex: 1,
+      explanation: "The KYP safety anchor: stimulants raise BP and heart rate, and structural cardiac disease is the setting for the rare sudden-death concerns — hence cardiac screening before starting and cardiology input when disease is found. Option C denies real sympathomimetic haemodynamics, option D inverts the truth, and modafinil's mild pressor effect does not make it uniquely contraindicated.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "stm-mph-07",
+      question: "Which formulation/half-life pairing for methylphenidate is CORRECT?",
+      options: [
+        "Immediate-release requires 6-hourly dosing day and night",
+        "OROS capsules must be taken four times daily to work",
+        "Plasma t-half about 4-6 h (Tripathi) with the central effect outlasting it — IR tablets need morning and noon dosing, OROS gives once-daily cover, and a transdermal patch exists",
+        "Plasma t-half about 40 h, allowing thrice-weekly dosing"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi's 4-6 h plasma half-life with a longer central effect is why IR methylphenidate is dosed morning and noon (children 0.25-1 mg/kg/day; adults 5-10 mg BD), while OROS (Concerta) and a Daytrana-type patch exist precisely to extend the short-PK cover. A 40 h half-life is fantasy, and options A and B misstate the very dosing schedules those formulations were designed to fix.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "stm-mph-08",
+      question: "An Indian postgraduate lists the ADHD options actually available in India. Which statement is accurate?",
+      options: [
+        "Adderall and Dexedrine are the standard first-line ADHD drugs in India",
+        "Methylphenidate is banned in India",
+        "Lisdexamfetamine has been the mainstay of Indian ADHD care since 1990",
+        "Methylphenidate (RETALIN) is marketed in India in 5/10/20/30 mg tablets and is the classic ADHD mainstay, while amphetamine/dexamphetamine products have no standard Indian ADHD role"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi lists RETALIN 5, 10, 20, 30 mg as the Indian methylphenidate brand, and Indian ADHD practice centres on methylphenidate (plus atomoxetine), with amphetamine-class products lacking a standard role here. Options A and C import US-market products into India, and option B is the opposite of the actual availability.",
+      afterSectionId: "quick-facts",
+    },
   ],
   activeRecallQuestions: [
     {

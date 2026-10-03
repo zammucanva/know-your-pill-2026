@@ -913,6 +913,110 @@ export const mianserin: Drug = {
       explanation: "For depression: start 10 mg at bedtime, target 30-60 mg/day, maximum 90 mg/day. Increase to 30-60 mg at night",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "atd-mia-01",
+      question: "Mianserin's antidepressant mechanism is best described as:",
+      options: [
+        "Potent SERT inhibition with additional 5-HT2A antagonism",
+        "Dopamine and noradrenaline reuptake inhibition",
+        "Presynaptic alpha-2 blockade raising NA release, with 5-HT2 and H1 antagonism — no uptake inhibition",
+        "GABA-A positive allosteric modulation"
+      ],
+      correctIndex: 2,
+      explanation: "Mianserin, the tetracyclic NaSSA-type agent, does not inhibit NA or 5-HT uptake at all; its effect comes from blocking presynaptic alpha-2 autoreceptors (increasing NA release and turnover) plus 5-HT2 and H1 antagonism — the pharmacological ancestor of mirtazapine's profile. Uptake blockade defines TCAs, SSRIs, SNRIs and bupropion, and GABAergic modulation is not its action.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "atd-mia-02",
+      question: "A patient four weeks into mianserin therapy develops fever and a sore throat. The most appropriate immediate step is:",
+      options: [
+        "Reassure — this is a known benign antihistaminic effect",
+        "Double the mianserin dose to cover infection",
+        "Add paracetamol and continue the drug unchanged",
+        "Send an urgent CBC for agranulocytosis and hold the drug pending results"
+      ],
+      correctIndex: 3,
+      explanation: "Fever with sore throat (or mouth ulceration) on mianserin is agranulocytosis until proven otherwise — blood dyscrasias are its signature warning and the reason its use is restricted; the response is an urgent white-cell count and stopping the drug if confirmed. Dismissing the sign or dosing through it risks a fatal neutropenic infection; it is not a benign antihistaminic effect.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atd-mia-03",
+      question: "Which statement reflects mianserin's positioning in Indian pharmacology textbooks (Tripathi) and current Indian practice?",
+      options: [
+        "A sedative antidepressant with minimal anticholinergic and cardiac effects, still available in India",
+        "The antidepressant of choice in cardiac conduction disease because of strong NA-uptake blockade",
+        "A stimulant antidepressant preferred in retarded depression with hypersomnia",
+        "An MAO inhibitor requiring tyramine dietary counselling"
+      ],
+      correctIndex: 0,
+      explanation: "Mianserin retains a niche in India as a sedating antidepressant whose anticholinergic and cardiac burden is far lower than the TCAs — its drawback being blood dyscrasias and liver dysfunction. It sedates rather than stimulates, it has no uptake blockade at all (so no strong-NA-blockade rationale), and it is not an MAO inhibitor.",
+      afterSectionId: "top",
+    },
+    {
+      id: "atd-mia-04",
+      question: "A pharmacology tutor asks which pair of drugs shares the alpha-2-blockade plus 5-HT2-antagonism signature — the NaSSA-type profile without uptake inhibition:",
+      options: [
+        "Trazodone and nefazodone",
+        "Mirtazapine and mianserin",
+        "Bupropion and amoxapine",
+        "Fluoxetine and fluvoxamine"
+      ],
+      correctIndex: 1,
+      explanation: "Mirtazapine and mianserin are the NaSSA-type pair — alpha-2 auto/heteroreceptor blockade with 5-HT2 antagonism, sedation, appetite effects and no monoamine uptake inhibition. Trazodone-nefazodone are SARIs (5-HT2A antagonism WITH weak SERT inhibition), bupropion is the NDRI, and the fluoxetine-fluvoxamine pair are plain SSRIs.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "atd-mia-05",
+      question: "The classic treatment-limiting toxicities that restricted mianserin's worldwide use are:",
+      options: [
+        "QT prolongation and torsades de pointes",
+        "Hypertensive crises with tyramine-containing foods",
+        "Blood dyscrasias (agranulocytosis) and liver dysfunction",
+        "Extrapyramidal symptoms and tardive dyskinesia"
+      ],
+      correctIndex: 2,
+      explanation: "Haematological toxicity (agranulocytosis-type blood dyscrasias) and hepatic dysfunction are the two famous mianserin toxicities that curtailed its use — hence CBC vigilance with fever/sore-throat warnings. QT/torsades is the citalopram-and-TCA message, tyramine crises belong to MAO inhibitors, and extrapyramidal syndromes are antipsychotic (or amoxapine) territory.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atd-mia-06",
+      question: "A 74-year-old with depression, poor sleep and symptomatic prostatic enlargement needs an antidepressant with negligible anticholinergic burden. Among older agents available in India, a reasonable pick is:",
+      options: [
+        "Amitriptyline",
+        "Imipramine",
+        "Phenelzine",
+        "Mianserin"
+      ],
+      correctIndex: 3,
+      explanation: "Mianserin's anticholinergic and cardiac side effects are characteristically less prominent than the TCAs, making it the reasonable older-agent option in an elderly man with prostatism — amitriptyline and imipramine would aggravate urinary hesitancy, and an MAO inhibitor like phenelzine adds tyramine and interaction hazards. Keep the CBC warning in mind: blood dyscrasias remain its Achilles heel.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atd-mia-07",
+      question: "One-line differentiators — which pairing is CORRECT?",
+      options: [
+        "Mianserin — blood dyscrasias; mirtazapine — sedation and weight gain",
+        "Mianserin — dose-related seizures at therapeutic doses; mirtazapine — agranulocytosis",
+        "Mirtazapine — significant sexual dysfunction; mianserin — SSRI-like nausea",
+        "Mirtazapine — strong CYP3A4 inhibition; mianserin — black-box hepatotoxicity"
+      ],
+      correctIndex: 0,
+      explanation: "The clean split: mirtazapine's trade-offs are sedation and appetite/weight gain with a benign interaction profile (a substrate of several CYPs, but no strong inhibition); mianserin's red flag is haematological — blood dyscrasias demanding CBC vigilance. The other rows swap each drug's problem onto the wrong agent; therapeutic-dose seizures are not mianserin's pattern (overdose only), and the strong-3A4-inhibitor/black-box labels belong to nefazodone.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "atd-mia-08",
+      question: "A young woman is brought in after taking an overdose of her mother's mianserin tablets. Which statement should guide the emergency management?",
+      options: [
+        "Anticipate fatal arrhythmias as in TCA overdose",
+        "Overdose fatality is characteristically low, though seizures can occur — manage supportively",
+        "Naloxone is the specific antidote",
+        "Forced acid diuresis enhances elimination"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi's key point: mianserin has caused seizures in overdose, but its overdose fatality is low — management is supportive, in sharp contrast to TCA overdose with QRS-widening arrhythmias. There is no specific antidote for mianserin and diuresis plays no role; the contrast with TCAs is exactly what the exam is testing.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

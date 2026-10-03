@@ -931,6 +931,110 @@ export const lorazepam: Drug = {
       explanation: "For anxiety (short course): start 0.5–1 mg twice daily, target 1–4 mg/day, maximum Up to 4 mg/day (outpatient). Lowest effective dose; 2–4 week course",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "bzd-lor-01",
+      question: "A 24-year-old man has been in continuous generalised tonic-clonic seizure activity for 10 minutes when the emergency team arrives. The current first-choice drug and regimen are:",
+      options: [
+        "Intravenous lorazepam 4 mg (0.1 mg/kg) injected at 2 mg/min, repeatable once after 10 minutes — effective in 75-90% with a 6-12 hour sustained effect",
+        "Oral clonazepam 2 mg, repeated every 15 minutes",
+        "Intramuscular diazepam 20 mg, repeated every 5 minutes",
+        "Intravenous phenytoin 1 g loaded over 60 minutes as the immediate first measure"
+      ],
+      correctIndex: 0,
+      explanation: "Tripathi's status epilepticus algorithm makes IV lorazepam 0.1 mg/kg (about 4 mg) at no more than 2 mg/min, repeated once after 10 minutes, the first-choice drug — its lower lipid solubility gives a more sustained anticonvulsant effect (6-12 hours) and less thrombophlebitis than diazepam. Oral clonazepam has no emergency role, IM diazepam is erratically absorbed, and phenytoin is second-line because it acts far too slowly to be the initial abortive agent.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "bzd-lor-02",
+      question: "A 55-year-old man with early alcoholic cirrhosis needs an anxiolytic. The resident proposes lorazepam, explaining it is 'metabolism-proof' for his liver. The pharmacokinetic basis of that claim is:",
+      options: [
+        "Lorazepam is excreted unchanged by the kidneys, so liver status is irrelevant",
+        "Lorazepam is conjugated directly with glucuronic acid to an inactive metabolite, bypassing the oxidative pathway, so no active metabolites accumulate in liver disease",
+        "Lorazepam is a prodrug activated by gastric acid, so it works even in severe liver failure",
+        "Lorazepam induces its own metabolism, so levels self-correct over two weeks"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi and Katzung both list lorazepam among the agents metabolised directly to inactive glucuronides with no active metabolites — the LOT trio with oxazepam and temazepam — which is why it is preferred in the elderly and in liver disease. Renal excretion of unchanged drug is false for lorazepam, gastric-acid activation is clorazepate's prodrug story, and benzodiazepines do not self-induce their metabolism.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "bzd-lor-03",
+      question: "A 50-year-old woman with chronic liver disease is severely agitated and cannulating her is proving impossible; the team wants an anxiolytic with reliable INTRAMUSCULAR absorption. The textbook benzodiazepine answer is:",
+      options: [
+        "Diazepam — a deep gluteal injection gives prompt, predictable levels",
+        "Lorazepam — regarded as the only benzodiazepine recommended for IM use, with minor injection-site complications",
+        "Chlordiazepoxide — designed specifically for intramuscular emergency use",
+        "Clorazepate — its IM prodrug formulation converts rapidly at the injection site"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi's monograph states lorazepam is the only BZD recommended for IM use, with minor injection-site problems — which is why it doubles as the agitated-patient and preoperative agent. Diazepam and chlordiazepoxide both carry erratic IM bioavailability (Katzung's table comments), and clorazepate has no injection form at all — it is an oral prodrug activated by gastric acid.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "bzd-lor-04",
+      question: "A 34-year-old is scheduled for upper GI endoscopy tomorrow evening. The physician wants a benzodiazepine given the night before that provides tranquillity plus marked perioperative amnesia, without next-day hangover from metabolite accumulation. The best fit is:",
+      options: [
+        "Diazepam — its desmethyldiazepam metabolite shortens recovery and clears hangover",
+        "Triazolam — its 2-3 hour half-life guarantees amnesia across the whole procedure day",
+        "Flurazepam — its long half-life ensures smooth sedation with a clear-headed wake-up",
+        "Lorazepam — intermediate half-life, no active metabolites, and pronounced amnesia when injected"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi highlights lorazepam's capability of producing marked amnesia when injected (loss of recall of perioperative events, especially with lorazepam) and its glucuronidation-only, metabolite-free profile avoids next-day hangover. Diazepam's active metabolite is the hangover source rather than an advantage, triazolam is too ultrashort to cover a procedure day, and flurazepam is the classic hangover hypnotic.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "bzd-lor-05",
+      question: "A 38-year-old has taken lorazepam 2 mg three times daily for two years after a bereavement and now wants to stop because she feels 'blunted'; she asks to simply quit. The correct counsel is:",
+      options: [
+        "Stop immediately; benzodiazepine withdrawal is always trivial",
+        "Stop lorazepam and immediately start full-dose buspirone to block withdrawal",
+        "Taper gradually over weeks to months — abrupt stoppage risks rebound anxiety, insomnia and, rarely, convulsions",
+        "Stop lorazepam and start an SSRI at double dose for one week to cover withdrawal"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi describes the benzodiazepine withdrawal syndrome (anxiety, insomnia, restlessness, malaise, bad dreams; occasionally agitation, panic, delirium; rarely convulsions) and Katzung confirms abrupt discontinuance causes rebound — hence tapering over weeks to months. Buspirone is explicitly ineffective in blocking sedative-hypnotic withdrawal, and no sedative withdrawal is covered by a rapid SSRI ramp.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "bzd-lor-06",
+      question: "A patient with onychomycosis on oral ketoconazole is started on diazepam for muscle spasm and becomes excessively sedated; his physician switches him to lorazepam. The rationale is:",
+      options: [
+        "Ketoconazole blocks gastric-acid activation of diazepam, whereas lorazepam needs no acid",
+        "Ketoconazole displaces lorazepam from plasma proteins, lowering its levels and its side effects",
+        "Lorazepam induces the oxidative enzymes, restoring diazepam's clearance",
+        "Ketoconazole blocks the microsomal oxidative pathway that diazepam depends on, while lorazepam's glucuronidation bypasses that blockade entirely"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi names ketoconazole (with erythromycin) among the inhibitors that prolong the action of oxidatively cleared benzodiazepines; lorazepam is conjugated directly with glucuronic acid, so the interaction is sidestepped — a core LOT teaching point. Gastric-acid activation belongs to clorazepate, protein displacement is not how ketoconazole acts, and lorazepam does not induce drug-metabolising enzymes.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "bzd-lor-07",
+      question: "Which Indian preparation list correctly belongs to lorazepam?",
+      options: [
+        "LIBRIUM 10 and 25 mg tablets",
+        "LARPOSE and ATIVAN 1, 2 mg tablets; CALMESE 1, 2 mg tablets with 4 mg/2 ml injection",
+        "VALIUM and CALMPOSE 2, 5, 10 mg tablets",
+        "ALPRAX and RESTYL 0.25, 0.5, 1 mg tablets"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi's preparation table lists lorazepam as LARPOSE and ATIVAN (1, 2 mg tablets) and CALMESE (1, 2 mg tablets; 4 mg/2 ml injection) at a daily dose of 1-6 mg. LIBRIUM belongs to chlordiazepoxide, VALIUM/CALMPOSE to diazepam, and ALPRAX/RESTYL to alprazolam.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "bzd-lor-08",
+      question: "Compared with intravenous diazepam for status epilepticus, lorazepam's documented advantages are best captured by:",
+      options: [
+        "Instant seizure control within 60 seconds with a 1-hour effect, allowing same-day discharge",
+        "Equal efficacy but uniquely lower cost because lorazepam needs no refrigeration",
+        "Superior control because lorazepam additionally blocks NMDA receptors at anticonvulsant doses",
+        "Seizure control in 75-90% of cases with a single regimen, a more sustained 6-12 hour effect from slower redistribution, and less thrombophlebitis"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi quantifies lorazepam in status epilepticus: effective in 75-90% of cases, anticonvulsant effect lasting 6-12 hours due to lower lipid solubility and slower redistribution, with less thrombophlebitis than diazepam. The remaining options attach wrong numbers or invented mechanisms — lorazepam acts at the GABA-A benzodiazepine site, not at NMDA receptors.",
+      afterSectionId: "knowledge-graph",
+    },
   ],
   activeRecallQuestions: [
     {

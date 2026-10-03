@@ -827,6 +827,110 @@ export const clorazepate: Drug = {
       explanation: "For anxiety / withdrawal: start 7.5 mg twice daily, target 15–60 mg/day, maximum 90 mg/day (withdrawal, short-term). Increase as needed",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "bzd-crz-01",
+      question: "Clorazepate is best described pharmacokinetically as:",
+      options: [
+        "An active drug excreted unchanged by the kidneys within hours",
+        "An inactive prodrug decarboxylated by gastric acid in the stomach to desmethyldiazepam (nordiazepam), which carries the pharmacological effect",
+        "A benzodiazepine antagonist that blocks desmethyldiazepam at its receptor",
+        "An inverse agonist requiring enzymatic inactivation"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung states clorazepate is a prodrug converted to its active form desmethyldiazepam by acid hydrolysis in the stomach — the pharmacology, and the 50-100 hour half-life in Katzung's table, belongs to the metabolite. The other options misdescribe it as an active, renal or antagonistic molecule.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "bzd-crz-02",
+      question: "A 70-year-old on omeprazole for reflux is started on clorazepate for anxiety. After four days she reports it 'barely seems to do anything'. The most pharmacologically consistent explanation is:",
+      options: [
+        "Acid suppression has raised gastric pH, slowing the acid-mediated conversion of clorazepate to desmethyldiazepam and delaying its effect",
+        "Omeprazole induces the oxidative enzymes and clears desmethyldiazepam too rapidly",
+        "Omeprazole blocks the benzodiazepine binding site allosterically",
+        "Clorazepate requires a specific microsomal enzyme for activation, which omeprazole inhibits"
+      ],
+      correctIndex: 0,
+      explanation: "Clorazepate depends on gastric acid for its decarboxylation to desmethyldiazepam (Katzung), so proton-pump inhibition delays activation and blunts the onset — a niche KYP pearl. The drug is not a CYP-dependent prodrug, and omeprazole neither induces the oxidative machinery nor touches the benzodiazepine site.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "bzd-crz-03",
+      question: "Clorazepate's effective elimination half-life, counting its active form, is:",
+      options: [
+        "About 50-100 hours — long-acting territory, since desmethyldiazepam's half-life exceeds 40 hours",
+        "About 2-3 hours",
+        "About 10-20 hours with no metabolite carryover",
+        "About 20-30 minutes because of instant renal clearing"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung's pharmacokinetic table gives clorazepate 50-100 hours (nordiazepam), reflecting an activation product whose elimination half-life exceeds 40 hours. The 2-3 hour figure is triazolam's, 10-20 hours matches lorazepam/oxazepam, and minutes-long clearing fits no benzodiazepine.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "bzd-crz-04",
+      question: "Clorazepate's label-level uses include:",
+      options: [
+        "Monotherapy for acute status epilepticus",
+        "Reversal of benzodiazepine overdose",
+        "Induction of surgical anaesthesia",
+        "Anxiety states and adjunctive antiseizure therapy — Katzung notes clorazepate dipotassium is approved for use alongside other antiseizure drugs"
+      ],
+      correctIndex: 3,
+      explanation: "Clorazepate is used for anxiety and as an adjunct antiseizure agent (Katzung's antiepileptic chapter), consistent with its long desmethyldiazepam effect. Status epilepticus needs intravenous lorazepam or diazepam, overdose reversal is flumazenil's job, and no benzodiazepine induces surgical anaesthesia as a sole agent.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "bzd-crz-05",
+      question: "A patient on clorazepate tells her doctor: 'This tablet feels slow to start but keeps working for days.' The combined pharmacokinetic explanation is:",
+      options: [
+        "Slow gastric conversion plus rapid renal elimination creates a pulse-then-pause pattern",
+        "Instant absorption with irreversible receptor binding produces the days-long effect",
+        "Gastric-acid conversion delays the onset, while desmethyldiazepam's long half-life (50-100 hours) sustains and accumulates the effect",
+        "A long-acting antagonist is released first, then the agonist metabolite"
+      ],
+      correctIndex: 2,
+      explanation: "Both halves of her observation are clorazepate's signature: acid-dependent activation delays the onset (worse with PPIs), and desmethyldiazepam's more-than-40-hour half-life sustains and accumulates the effect (Katzung). The other options weld together mechanisms the drug does not possess.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "bzd-crz-06",
+      question: "Once converted, clorazepate's active moiety acts by:",
+      options: [
+        "Increasing the frequency of GABA-gated chloride channel opening at the benzodiazepine site — facilitatory, not GABA-mimetic",
+        "Increasing the duration of each channel opening, like a barbiturate, with direct channel activation",
+        "Directly opening chloride channels as a full GABA agonist",
+        "Blocking chloride channels to moderately raise neuronal excitability"
+      ],
+      correctIndex: 0,
+      explanation: "Desmethyldiazepam is a benzodiazepine-site agonist: Tripathi and Katzung both describe frequency enhancement of GABA-gated chloride openings without direct channel activation — the class's lower-ceiling safety hinge. Duration increase and direct opening are barbiturate actions, and channel blockade is picrotoxin's convulsant mechanism.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "bzd-crz-07",
+      question: "A 78-year-old has taken clorazepate nightly for three weeks and now has daytime grogginess and a bathroom fall at 2 AM. Her physician's best switch is toward:",
+      options: [
+        "A higher clorazepate dose taken in the morning instead",
+        "Adding flumazenil at bedtime to clear the metabolite",
+        "Switching to nightly intravenous midazolam at home",
+        "A glucuronidation-only, short-to-intermediate agent such as oxazepam or lorazepam, avoiding active-metabolite accumulation"
+      ],
+      correctIndex: 3,
+      explanation: "Long-acting, active-metabolite benzodiazepines accumulate with repeated dosing (Katzung: cumulative and residual effects), producing exactly this hangover-and-falls picture in the elderly; the fix is a metabolite-free, glucuronidated agent. Raising the dose worsens accumulation, flumazenil is an emergency antagonist that would cause agitation and rebound, and home IV midazolam is unsafe nonsense.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "bzd-crz-08",
+      question: "Which sequence correctly traces clorazepate's metabolic fate?",
+      options: [
+        "Clorazepate (inactive) undergoes gastric-acid decarboxylation to desmethyldiazepam, which is then slowly oxidised to oxazepam and excreted as a glucuronide",
+        "Clorazepate is cleaved by gastric esterases to temazepam, which is excreted directly by the kidney",
+        "Clorazepate is oxidised by microsomal enzymes to flurazepam-like metabolites excreted in bile",
+        "Clorazepate is filtered unchanged and actively reabsorbed in the renal tubule"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung's biotransformation map sends inactive clorazepate to desmethyldiazepam (as for diazepam, prazepam and chlordiazepoxide), which then oxidises to oxazepam and exits as a glucuronide. Temazepam and flurazepam sit on unrelated metabolic branches, and unchanged renal handling fits no benzodiazepine.",
+      afterSectionId: "knowledge-graph",
+    },
   ],
   activeRecallQuestions: [
     {

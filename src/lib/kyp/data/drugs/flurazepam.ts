@@ -798,6 +798,110 @@ export const flurazepam: Drug = {
       explanation: "For insomnia (historic): start 15 mg at bedtime, target 15–30 mg, maximum 30 mg. Short courses only",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "bzd-flz-01",
+      question: "Which hypnotic has the longest effective half-life — the classic next-day hangover agent?",
+      options: [
+        "Zaleplon",
+        "Triazolam",
+        "Flurazepam",
+        "Temazepam"
+      ],
+      correctIndex: 2,
+      explanation: "Flurazepam's active metabolite desalkylflurazepam accumulates with an effective half-life of 30-100 hours — nights of dosing build day-time sedation, the textbook hangover hypnotic. Zaleplon (1 h) and triazolam (2-4 h) clear fastest, and temazepam sits mid-table at 10-15 hours.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "bzd-flz-02",
+      question: "A 74-year-old on flurazepam 30 mg nightly for 'sleep' has day-time somnolence, unsteadiness and a hip bruise from a night-time fall. The correct action:",
+      options: [
+        "Increase to 60 mg for stronger sleep",
+        "Add a morning stimulant to counter the hangover",
+        "Taper and stop flurazepam; use CBT-I and address sleep hygiene — accumulation in the elderly causes falls and fractures",
+        "Switch to diphenhydramine OTC"
+      ],
+      correctIndex: 2,
+      explanation: "Flurazepam's multi-day metabolite tail accumulates exactly in the patients who can least afford it — falls, hip fractures and pseudo-dementia. Tapering off with CBT-I is the geriatric standard; raising the dose or layering a stimulant compounds the harm, and OTC antihistamines are their own Beers-criteria hazard.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "bzd-flz-03",
+      question: "Flurazepam has largely fallen out of use because:",
+      options: [
+        "It is too short-acting to maintain sleep",
+        "It has no effect on sleep architecture",
+        "It is not sedating at any dose",
+        "Its long half-life causes cumulative next-day impairment and falls"
+      ],
+      correctIndex: 3,
+      explanation: "The same property that maintained sleep — a very long active-moiety half-life — is what retired the drug: accumulation produces hangover, cognitive dulling and fall risk, especially beyond middle age. It is not short-acting, it is plainly sedating, and it does alter sleep architecture.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "bzd-flz-04",
+      question: "The pharmacokinetic reason flurazepam hangs over into the next day is:",
+      options: [
+        "Its parent drug is irreversibly bound to GABA-A receptors",
+        "Renal excretion of unchanged drug is the only route",
+        "Its lipophilic active metabolite (desalkylflurazepam) accumulates over nights",
+        "It induces its own metabolism slowly"
+      ],
+      correctIndex: 2,
+      explanation: "Desalkylflurazepam, the long-lived active metabolite, is lipophilic and builds up with repeated nightly dosing — hangover is pharmacokinetics, not receptor lock-in. No benzodiazepine binds irreversibly, unchanged renal excretion fits gabapentin, and autoinduction is a carbamazepine story.",
+      afterSectionId: "neural-pathways",
+    },
+    {
+      id: "bzd-flz-05",
+      question: "Contrasting the two obsolete-era hypnotics: flurazepam's signature harm versus triazolam's signature harm:",
+      options: [
+        "Flurazepam — amnesia; triazolam — hangover",
+        "Both cause identical harms at identical half-lives",
+        "Flurazepam — seizures on discontinuation only; triazolam — weight gain",
+        "Flurazepam — next-day hangover from accumulation; triazolam — rebound insomnia and anterograde amnesia"
+      ],
+      correctIndex: 3,
+      explanation: "The pair is a half-life lesson: flurazepam's 30-100 hour tail buys hangover, triazolam's 2-4 hour burst buys rebound insomnia and amnesia — opposite failure modes at opposite half-life extremes. Exam options routinely swap the two signatures, so anchor each to its half-life.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "bzd-flz-06",
+      question: "In which patient would flurazepam accumulation be MOST dangerous?",
+      options: [
+        "A young adult with sleep-onset insomnia and normal lungs",
+        "A COPD patient with hypercapnia — accumulating sedative deepens respiratory depression",
+        "A bodybuilder with insomnia",
+        "A shift-worker with normal spirometry"
+      ],
+      correctIndex: 1,
+      explanation: "Chronic respiratory disease with CO2 retention is the classic danger zone for long-acting sedatives: blunted hypoxic drive plus accumulating drug risks respiratory failure. Healthy young adults tolerate the hangover, and shift-work insomnia is a kinetics problem, not a respiratory one.",
+      afterSectionId: "top",
+    },
+    {
+      id: "bzd-flz-07",
+      question: "A 40-year-old needs a hypnotic for short-term sleep-onset insomnia but must drive at 7 am daily. Which prescription best fits?",
+      options: [
+        "Flurazepam 30 mg",
+        "Diazepam 10 mg",
+        "Zolpidem 5-10 mg (short course) — minimal carryover versus long-acting benzodiazepines",
+        "Clonazepam 2 mg"
+      ],
+      correctIndex: 2,
+      explanation: "For a driver needing a clear 7 am, short-half-life agents are the fit — zolpidem's 2-3 hour span minimises morning carryover for short courses. Flurazepam and diazepam guarantee next-day impairment, and 2 mg clonazepam builds dependence fast.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "bzd-flz-08",
+      question: "Which pair correctly groups the LONG-acting benzodiazepines?",
+      options: [
+        "Midazolam and triazolam",
+        "Oxazepam and lorazepam",
+        "Flurazepam and diazepam",
+        "Zaleplon and eszopiclone"
+      ],
+      correctIndex: 2,
+      explanation: "Flurazepam and diazepam (via desmethyldiazepam) head the long-acting tier. Midazolam/triazolam are ultra-short, lorazepam/oxazepam intermediate (the glucuronidation pair), and zaleplon/ezopiclone are Z-drugs, not benzodiazepines at all — the last option is a class-identity trap.",
+      afterSectionId: "knowledge-graph",
+    },
   ],
   activeRecallQuestions: [
     {

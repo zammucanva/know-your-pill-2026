@@ -822,6 +822,110 @@ export const flunitrazepam: Drug = {
       explanation: "For severe insomnia (strict-control markets): start 1 mg at bedtime, target 1–2 mg, maximum 2 mg. Under regulation only",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "bzd-fnz-01",
+      question: "Flunitrazepam is internationally better known by which street identity and class?",
+      options: [
+        "'Special K' — an NMDA antagonist",
+        "'Ecstasy' — a serotonin releaser",
+        "'Roofies' / Rohypnol — a potent long-acting benzodiazepine",
+        "'Speed' — an amphetamine"
+      ],
+      correctIndex: 2,
+      explanation: "Flunitrazepam is Rohypnol — the 'date-rape drug' — a 1-2 mg benzodiazepine roughly ten times diazepam's potency with pronounced amnesia. Special K, ecstasy and speed are ketamine, MDMA and amphetamine respectively — different classes with different toxidromes.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "bzd-fnz-02",
+      question: "A 21-year-old presents after a night she cannot remember; friends report sudden profound sedation after one drink, and she fears drink-spiking. The correct work-up includes:",
+      options: [
+        "Serum prolactin only",
+        "Brain MRI the same night",
+        "Immediate urine drug screen for benzodiazepines (plus standard assault care) — benzodiazepines are detectable for ~48-72 hours",
+        "Reassurance and discharge without testing"
+      ],
+      correctIndex: 2,
+      explanation: "Suspected chemical submission calls for timely urine toxicology — flunitrazepam and metabolites remain detectable in urine for roughly two to three days — alongside standard assault medical and psychological care. Prolactin and MRI answer nothing here, and dismissal abandons both forensics and the patient.",
+      afterSectionId: "top",
+    },
+    {
+      id: "bzd-fnz-03",
+      question: "The pharmacological properties that make flunitrazepam a substance-assault agent are:",
+      options: [
+        "Potency, rapid sedation, anterograde amnesia and enhancement of alcohol's effect",
+        "Stimulation and euphoria at low doses",
+        "Analgesia without sedation",
+        "A distinctive colour and odour that victims detect"
+      ],
+      correctIndex: 0,
+      explanation: "Flunitrazepam combines high potency, fast deep sedation, reliable anterograde amnesia and synergy with alcohol — the assault-toolkit pharmacology. It is a sedative, not a stimulant or analgesic, and modern tablets are formulated to dissolve inconspicuously — the opposite of a warning sign.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "bzd-fnz-04",
+      question: "Flunitrazepam's elimination profile:",
+      options: [
+        "Half-life under 1 hour — cleared before evidence is lost",
+        "Half-life of one week",
+        "Excreted unchanged by kidneys within 2 hours",
+        "Half-life around 18-26 hours with active metabolites — sedation can persist into the next day"
+      ],
+      correctIndex: 3,
+      explanation: "Flunitrazepam's 18-26 hour half-life plus active metabolites means victims can remain sedated and impaired well into the following day — and clinicians may mistake the residue for intoxication with another agent. The ultra-short options describe zaleplon, not this drug.",
+      afterSectionId: "neural-pathways",
+    },
+    {
+      id: "bzd-fnz-05",
+      question: "Flunitrazepam's regulatory status is best stated as:",
+      options: [
+        "FDA-approved Schedule II hypnotic",
+        "Not approved in the US; internationally controlled (Schedule IV convention) and illicit in many countries",
+        "Available over the counter worldwide",
+        "A prescription-free Ayurvedic preparation"
+      ],
+      correctIndex: 1,
+      explanation: "The US never approved flunitrazepam; it is controlled under the international psychotropic conventions and carries heavy illicit-trade restrictions — a favourite regulatory-status exam point. The other options are simply wrong.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "bzd-fnz-06",
+      question: "An Indian ED receives a comatose young woman with pin-gauge-normal vitals and smell of alcohol; friends mention 'someone put something in her drink'. In addition to standard coma care, the specific antidote that can reverse benzodiazepine sedation is:",
+      options: [
+        "Naloxone",
+        "Flumazenil — used cautiously given unknown co-ingestions and seizure risk",
+        "N-acetylcysteine",
+        "Atropine"
+      ],
+      correctIndex: 1,
+      explanation: "Flumazenil reverses benzodiazepine sedation but must be used cautiously in unknown co-ingestions — in chronic benzodiazepine users or TCA-poisoned patients it can precipitate seizures — hence airway-first care with judicious antidote use. Naloxone targets opioids, NAC paracetamol, and atropine anticholinergic bradycardia.",
+      afterSectionId: "top",
+    },
+    {
+      id: "bzd-fnz-07",
+      question: "Why is co-ingestion of flunitrazepam with alcohol more dangerous than either alone?",
+      options: [
+        "They compete for the same CYP enzyme, leaving one unmetabolised",
+        "Both potentiate GABA-A and CNS depression — additive respiratory and consciousness impairment",
+        "Alcohol converts flunitrazepam into a barbiturate",
+        "They have no interaction — the fear is folklore"
+      ],
+      correctIndex: 1,
+      explanation: "Alcohol and benzodiazepines converge on GABA-A inhibition — the additivity is the danger — producing disproportionate respiratory depression and unconsciousness, the mechanism behind most sedative overdose deaths. Enzyme competition is minor here, no chemical conversion occurs, and the folklore framing is exactly the myth the exam kills.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "bzd-fnz-08",
+      question: "Contrasting two triazolobenzodiazepine-family agents: flunitrazepam versus triazolam:",
+      options: [
+        "Both are ultra-short with identical half-lives",
+        "Flunitrazepam is long-acting (18-26 h) with assault-misuse notoriety; triazolam is ultra-short (2-4 h) with rebound-insomnia notoriety",
+        "Flunitrazepam is ultra-short; triazolam long-acting",
+        "Both are prodrugs of oxazepam"
+      ],
+      correctIndex: 1,
+      explanation: "The pair share a chemistry family (triazolo/benzodiazepine platform) but sit at opposite half-life poles with opposite notorieties — long-acting amnesic misuse for flunitrazepam, ultra-short rebound and amnesia for triazolam. Neither is a prodrug of oxazepam.",
+      afterSectionId: "knowledge-graph",
+    },
   ],
   activeRecallQuestions: [
     {

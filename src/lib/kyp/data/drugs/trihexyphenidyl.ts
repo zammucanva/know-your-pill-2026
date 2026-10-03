@@ -710,6 +710,110 @@ export const trihexyphenidyl: Drug = {
       explanation: "For drug-induced parkinsonism: start 1 mg once or twice daily, target 5-15 mg/day, maximum 15 mg/day (exceptional). Increase by 1 mg every 1-2 days to 5-15 mg/day divided",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "adj-tpx-01",
+      question: "Trihexyphenidyl exerts its antiparkinsonian effect by:",
+      options: [
+        "Blocking central muscarinic receptors to reduce striatal cholinergic overactivity — a tertiary amine that penetrates the blood-brain barrier",
+        "Blocking dopamine D2 receptors in the striatum, mirroring antipsychotic action",
+        "Inhibiting catechol-O-methyltransferase peripherally to raise levodopa levels",
+        "Stimulating nicotinic receptors at the neuromuscular junction"
+      ],
+      correctIndex: 0,
+      explanation: "Trihexyphenidyl acts by blocking central muscarinic receptors, reducing striatal cholinergic overactivity as a tertiary amine that penetrates the blood-brain barrier — Katzung lists it among antimuscarinic agents with CNS effects used for drug-induced parkinsonism, and Tripathi calls it the most commonly used such drug in India. D2 blockade would cause parkinsonism rather than cure it, COMT inhibition is entacapone's peripheral role, and nicotinic stimulation is unrelated.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "adj-tpx-02",
+      question: "A 30-year-old woman on risperidone 6 mg develops bradykinesia, cogwheel rigidity and a mask-like face over 3 weeks. After antipsychotic dose reduction, oral cover is planned. The classic choice is:",
+      options: [
+        "Flumazenil, which unmasks residual GABAergic tone",
+        "Trihexyphenidyl, started at the lowest dose and titrated — the standard oral anticholinergic for antipsychotic-induced parkinsonism",
+        "Levodopa-carbidopa, which restores striatal dopamine directly",
+        "Propranolol, which reverses rigidity through beta-2-mediated muscle relaxation"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi calls trihexyphenidyl the most commonly used antiparkinsonian drug here — start with the lowest dose in 2-3 divided doses (2-10 mg/day range) — and Katzung endorses conventional antimuscarinic antiparkinsonism drugs or, rarely, amantadine for antipsychotic parkinsonism. Levodopa should never be used in these patients because the blocked D2 receptor makes it futile, propranolol is the akathisia drug, and flumazenil has no role.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "adj-tpx-03",
+      question: "An Indian prescription reads PACITANE 2 mg, one tablet at night, to be gradually increased to twice-thrice daily. Which drug and dose range is this?",
+      options: [
+        "Procyclidine — 50-100 mg per day; PARBENZ 2 mg tablets",
+        "Biperiden — 100-150 mg per day; PACITANE 5 mg injection only",
+        "Trihexyphenidyl (benzhexol) — 2-10 mg per day; PACITANE and PARBENZ 2 mg tablets",
+        "Benztropine mesylate — 6-20 mg per day; PACITANE 2 mg tablets"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi lists trihexyphenidyl (benzhexol) at 2-10 mg per day as PACITANE and PARBENZ 2 mg tablets — the most commonly used drug for drug-induced parkinsonism in India. Benztropine's usual range is 1-6 mg/day (Katzung) and it is not PACITANE, procyclidine runs 5-20 mg/day (KEMADRIN), and biperiden is 2-10 mg/day (DYSKINON), so the inflated numbers are wrong.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "adj-tpx-04",
+      question: "A 24-year-old on PACITANE for haloperidol-induced parkinsonism asks for early refills, reports feeling high and confident on extra tablets, and says friends have asked him for pills. What is going on?",
+      options: [
+        "This is the expected therapeutic effect, so increase the dose freely",
+        "The euphoria proves anticholinergic toxicity, and an extra dose is the treatment",
+        "Trihexyphenidyl is an opioid agonist, and this is early opioid dependence",
+        "Trihexyphenidyl has recognised euphoriant and misuse potential — dose escalation for euphoria and diversion are documented; restrict the prescription, taper to need and review the indication"
+      ],
+      correctIndex: 3,
+      explanation: "KYP's safety anchor flags euphoria and misuse potential with trihexyphenidyl — a recognised curiosity of Indian practice where diversion and street use have been reported; the correct response is restriction, dose minimisation and indication review. Euphoria is not therapeutic, more drug deepens anticholinergic toxicity, and its pharmacology is muscarinic rather than opioid.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "adj-tpx-05",
+      question: "The anticholinergic adverse-effect cluster of trihexyphenidyl includes:",
+      options: [
+        "Dry mouth, blurred vision, constipation, urinary hesitancy, and confusion or memory impairment especially in the elderly",
+        "Diarrhoea, miosis, salivation and hypothermia",
+        "Weight gain, hyperprolactinaemia and galactorrhoea",
+        "Bronchodilatation, beta-2-mediated tachycardia and peripheral oedema"
+      ],
+      correctIndex: 0,
+      explanation: "Trihexyphenidyl shares the classic belladonna-type antimuscarinic cluster — dry mouth, blurred vision, constipation, urinary retention — with central effects of confusion and memory impairment that are disproportionately troublesome in the elderly (KYP anchor; Katzung's toxic-confusional-state warning applies to antimuscarinic-heavy regimens). The diarrhoea-miosis-salivation-hypothermia set reverses the autonomic directions — mydriasis, dryness and hyperthermia are expected — and prolactin or beta-2 effects belong to other classes.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "adj-tpx-06",
+      question: "Why is levodopa-carbidopa not used for antipsychotic-induced parkinsonism?",
+      options: [
+        "Levodopa antagonises anticholinergics at the muscarinic receptor",
+        "The antipsychotic occupies and blocks striatal D2 receptors, so levodopa's dopamine has little receptor to act on while risking psychotic relapse — Katzung states levodopa should never be used in these patients",
+        "Levodopa is too expensive in India compared with trihexyphenidyl",
+        "Levodopa irreversibly destroys the remaining nigral neurons"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung is explicit that levodopa should never be used in antipsychotic-treated patients: the D2 blockade that causes the parkinsonism also blocks levodopa's target, and unmasking psychosis is the added danger — antimuscarinics or rare amantadine are the remedies. Cost, neuronal destruction and muscarinic antagonism are not the mechanism.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "adj-tpx-07",
+      question: "For antipsychotic-induced parkinsonism and the wider EPS map, which statement correctly places the drug options?",
+      options: [
+        "Propranolol is the standard drug for rigidity and bradykinesia",
+        "Valbenazine is the first-line remedy for drug-induced parkinsonism",
+        "Oral antimuscarinics such as trihexyphenidyl (or benztropine) are conventional, amantadine is an occasional alternative, and akathisia is the movement disorder where propranolol fits",
+        "Amantadine is first-line for all EPS including acute dystonia, replacing injectable anticholinergics"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung treats antipsychotic parkinsonism with conventional antimuscarinic antiparkinsonism drugs or, in rare cases, amantadine; the wider EPS map puts propranolol at akathisia, parenteral anticholinergics at acute dystonia and VMAT2 inhibitors at tardive dyskinesia. Amantadine is not the acute-dystonia emergency drug, propranolol does not touch rigidity, and valbenazine belongs to the tardive column.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "adj-tpx-08",
+      question: "A 70-year-old on haloperidol plus trihexyphenidyl 6 mg per day is found disoriented at night with new urinary retention; cognition was normal before the anticholinergic was added. The best next step is:",
+      options: [
+        "Add a second anticholinergic (procyclidine) to balance the receptor profile",
+        "Increase trihexyphenidyl to 10 mg per day to counteract the urinary retention",
+        "Start terazosin 5 mg for the retention and continue full-dose trihexyphenidyl unchanged",
+        "Reduce or withdraw the anticholinergic (a withdrawal attempt is reasonable since drug-induced parkinsonism may be self-limiting), lower or switch the antipsychotic, and treat the retention — rather than adding to the anticholinergic load"
+      ],
+      correctIndex: 3,
+      explanation: "Elderly patients tolerate central anticholinergics poorly — confusion plus urinary retention mandates de-prescribing; Katzung's 3-4-monthly withdrawal attempt and Tripathi's start-lowest-dose principle point the same way, with antipsychotic dose lowering as the root-cause fix. Adding more anticholinergic deepens the toxidrome, and while an alpha-blocker could ease prostatic retention, it ignores the iatrogenic cause.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

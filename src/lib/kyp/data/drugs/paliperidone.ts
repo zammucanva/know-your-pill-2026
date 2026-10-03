@@ -911,6 +911,110 @@ export const paliperidone: Drug = {
       explanation: "For schizophrenia (oral oros): start 6 mg once daily, target 3–12 mg/day, maximum 12 mg/day. Adjust ±3 mg at intervals of ≥ 5 days",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "atp-pal-01",
+      question: "Paliperidone is best described as:",
+      options: [
+        "9-hydroxyrisperidone — the active metabolite of risperidone marketed as a standalone drug",
+        "A butyrophenone congener of haloperidol with purely D2 activity",
+        "A prodrug requiring hepatic conversion to risperidone",
+        "An inactive risperidone metabolite with no antipsychotic action"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung states it plainly: paliperidone is 9-hydroxyrisperidone, the active metabolite of risperidone, marketed in its own right and sharing the D2 + 5-HT2A profile. The prodrug direction is backwards — risperidone converts to paliperidone, not vice versa — the metabolite is active rather than inactive, and paliperidone is a benzisoxazole relative of risperidone, not a butyrophenone.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "atp-pal-02",
+      question: "A 55-year-old woman with diabetic nephropathy (eGFR 35 mL/min/1.73 m2) is to start paliperidone ER for schizophrenia. The key dosing principle is:",
+      options: [
+        "The dose should be doubled to overcome renal loss",
+        "Dose reduction is required because paliperidone is predominantly renally excreted",
+        "Paliperidone is contraindicated at any level of renal impairment",
+        "No adjustment is needed because elimination is entirely hepatic via CYP3A4"
+      ],
+      correctIndex: 1,
+      explanation: "Paliperidone is cleared predominantly unchanged by the kidney, so renal impairment mandates dose reduction — this is its principal practical distinction from risperidone and a favourite exam angle. Entirely hepatic CYP3A4 clearance describes drugs like quetiapine, doubling the dose would invite toxicity, and the label calls for adjustment rather than absolute prohibition in CKD.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atp-pal-03",
+      question: "A patient on once-daily paliperidone ER telephones the clinic, alarmed that he has passed an intact-looking 'tablet' in his stool. The correct counselling is:",
+      options: [
+        "Chewable tablets should be used from now on to avoid the problem",
+        "The dose failed and must be repeated immediately",
+        "It is the inert osmotic-pump shell of the OROS delivery system; the drug has already been absorbed",
+        "This indicates drug resistance and the antipsychotic should be changed"
+      ],
+      correctIndex: 2,
+      explanation: "Paliperidone ER uses OROS osmotic-push delivery; the insoluble shell can pass in the stool after the active drug has been absorbed — a classic counselling point that prevents unnecessary dose repetition (which risks overdose). There is no 'drug resistance' signal here, and tablets must be swallowed intact; no chewable equivalent exists.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atp-pal-04",
+      question: "Paliperidone long-acting injectable (LAI) formulations are characterised by:",
+      options: [
+        "Two-weekly intervals only",
+        "Weekly self-administered subcutaneous injections",
+        "Availability only as an oral solution",
+        "Monthly and 3-monthly injection intervals"
+      ],
+      correctIndex: 3,
+      explanation: "Paliperidone LAIs come in monthly and 3-monthly versions, the 3-monthly option being a distinctive selling point in maintenance therapy; Katzung includes paliperidone among the newer LAI second-generation antipsychotics. Two-weekly dosing is the risperidone microsphere schedule, weekly self-injection is not an antipsychotic delivery model, and the LAIs are by definition injectable, not oral solutions.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atp-pal-05",
+      question: "A 38-year-old man on monthly paliperidone LAI for schizophrenia reports bilateral nipple discharge; serum prolactin is 85 ng/mL (laboratory upper limit about 15). Which counselling point is correct?",
+      options: [
+        "Paliperidone, like risperidone, raises prolactin despite being an atypical",
+        "Only the oral formulation, never the LAI, can raise prolactin",
+        "Paliperidone never affects prolactin, so another cause must be sought",
+        "Paliperidone lowers prolactin through partial agonism"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung groups paliperidone with risperidone among the prolactin-elevating agents, so galactorrhoea on paliperidone is drug-induced hyperprolactinaemia — a favourite trap, since most other atypicals are prolactin-sparing. Partial agonism lowering prolactin is aripiprazole's trick, 'never affects prolactin' is factually wrong, and the effect is not formulation-limited — oral and LAI paliperidone behave alike.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-pal-06",
+      question: "A 40-year-old man well controlled on paliperidone ER develops a depressive episode needing paroxetine. What is the most accurate statement about this combination?",
+      options: [
+        "Paroxetine predictably doubles paliperidone levels, mandating a halved dose",
+        "Minimal pharmacokinetic interaction — paliperidone is largely renally cleared and far less 2D6-dependent than risperidone",
+        "Paroxetine is contraindicated with all antipsychotics",
+        "The combination causes serotonin syndrome in most patients"
+      ],
+      correctIndex: 1,
+      explanation: "Unlike risperidone, whose activation to 9-hydroxyrisperidone depends on CYP2D6, paliperidone bypasses heavy CYP metabolism (renal excretion dominates), so even a strong 2D6 inhibitor such as paroxetine barely moves its levels — the intended advantage of giving the metabolite directly. The dose-doubling warning fits the risperidone-plus-2D6-inhibitor scenario, a blanket contraindication does not exist, and serotonin syndrome is a concern with serotonergic stacks (MAOIs, linezolid), not with antipsychotic pharmacokinetics.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atp-pal-07",
+      question: "Which statement best characterises paliperidone and QTc?",
+      options: [
+        "Paliperidone causes marked QTc prolongation and is the worst offender in the class",
+        "Paliperidone has no cardiac signal at any dose",
+        "QTc prolongation is modest, but ECG care is advised when combined with other QTc-prolonging drugs",
+        "QTc monitoring is required only with the 3-monthly LAI"
+      ],
+      correctIndex: 2,
+      explanation: "Paliperidone carries a modest QTc-prolonging tendency — clinically relevant chiefly when stacked with other QTc drugs (thioridazine, ziprasidone, macrolides, diuretic-driven hypokalaemia). 'Worst offender' language belongs to drugs like thioridazine and ziprasidone, claiming no signal at all overstates safety, and the caution applies equally to oral and LAI therapy.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-pal-08",
+      question: "The strongest pharmacokinetic rationale for prescribing paliperidone ER instead of risperidone is:",
+      options: [
+        "A shorter half-life allowing twice-daily flexibility",
+        "Greater potency at D2 receptors permitting quarter-strength dosing",
+        "Inherent protection from prolactin elevation",
+        "Escape from CYP2D6 polymorphism — renally cleared, once-daily OROS delivery gives steadier exposure"
+      ],
+      correctIndex: 3,
+      explanation: "Paliperidone's appeal is kinetic: minimal CYP dependence (predominantly renal clearance) removes the 2D6 poor-metaboliser variability that complicates risperidone, and OROS once-daily delivery steadies exposure. It is not shorter-acting, it is not more potent at D2, and it still raises prolactin — endocrine neutrality is precisely what it does not offer.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

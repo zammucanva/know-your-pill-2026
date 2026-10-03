@@ -1712,6 +1712,110 @@ export const mirtazapine: Drug = {
       explanation: "Agranulocytosis is a rare (~1 in 1000) but serious complication of mirtazapine. ANY patient on mirtazapine presenting with sore throat, fever, mouth ulcers, or other signs of infection should STOP the drug and have an urgent CBC. Do not assume 'just a cold' — the consequence of missing agranulocytosis is sepsis and potentially death.",
       afterSectionId: "monitoring",
     },
+    {
+      id: "atd-mir-01",
+      question: "Mirtazapine's mechanism (NaSSA) is best summarized as:",
+      options: [
+        "Selective serotonin reuptake inhibition with additional 5-HT3 antagonism",
+        "Noradrenaline and dopamine reuptake inhibition",
+        "Irreversible MAO-A inhibition raising all monoamines",
+        "Alpha-2 auto- and heteroreceptor blockade increasing NE and 5-HT release, plus 5-HT2/5-HT3/H1 antagonism"
+      ],
+      correctIndex: 3,
+      explanation: "Mirtazapine blocks presynaptic alpha-2 autoreceptors on noradrenergic neurones and heteroreceptors on serotonergic neurones, disinhibiting NE and 5-HT release; additional 5-HT2, 5-HT3 and potent H1 antagonism produce its sedative, appetite-stimulating, nausea-free profile. Reuptake inhibition — serotonergic or NDRI — is the wrong family, and MAO inhibition is a different class entirely.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "atd-mir-02",
+      question: "A 68-year-old widow has three months of low mood, early insomnia, marked loss of appetite with 5 kg weight loss, and she is fearful after reading about antidepressant sexual side effects. The best antidepressant choice is:",
+      options: [
+        "Mirtazapine",
+        "Bupropion",
+        "Fluoxetine",
+        "Venlafaxine"
+      ],
+      correctIndex: 0,
+      explanation: "Mirtazapine is the textbook match for the depressed patient who is underweight and sleepless: H1 blockade restores sleep, 5-HT2C blockade stimulates appetite and weight gain, and it is essentially free of serotonergic sexual dysfunction. Bupropion would aggravate insomnia and weight loss, while fluoxetine and venlafaxine tend to suppress appetite and disturb sleep further.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atd-mir-03",
+      question: "A patient heavily sedated on mirtazapine 15 mg at night is uptitrated to 30 mg — and paradoxically reports less morning hangover. The commonly taught explanation is:",
+      options: [
+        "The sedation at 15 mg was a withdrawal phenomenon",
+        "At low doses the antihistaminic (H1) effect dominates; as noradrenergic activation grows with dose, relative sedation lessens",
+        "Higher doses induce hepatic enzymes that clear mirtazapine faster",
+        "Sedation comes from 5-HT3 blockade, which is dose-limited"
+      ],
+      correctIndex: 1,
+      explanation: "The classically taught (if debated) mirtazapine quirk: potent H1 antagonism dominates at low doses producing maximal sedation, while dose-driven alpha-2 blockade and rising noradrenergic activation increasingly counteract drowsiness at higher doses — the reverse of most antidepressants. Enzyme induction is not its mechanism, and sedation is H1-, not 5-HT3-, mediated.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atd-mir-04",
+      question: "Which adverse-effect cluster best characterizes mirtazapine at usual doses?",
+      options: [
+        "Sexual dysfunction, nausea and diarrhoea",
+        "Insomnia, agitation and weight loss",
+        "Sedation, increased appetite and weight gain",
+        "Tremor, sweating and delayed ejaculation"
+      ],
+      correctIndex: 2,
+      explanation: "Mirtazapine's trade-off for its sleep and appetite benefits is sedation plus weight gain — driven by H1 and 5-HT2C blockade respectively — while serotonergic effects (nausea, GI upset, sexual dysfunction) are conspicuously minimal. Option B is bupropion's activating profile, and options A and D are SSRI-type serotonergic profiles.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atd-mir-05",
+      question: "Mirtazapine's half-life of 20–40 hours supports which dosing practice?",
+      options: [
+        "Twice-daily divided dosing to limit peaks",
+        "Once-weekly maintenance dosing",
+        "Twice-weekly loading doses",
+        "A single evening dose — once-daily is feasible and the sedation is put to use"
+      ],
+      correctIndex: 3,
+      explanation: "With a 20–40 hour half-life mirtazapine is genuinely once-daily, and standard practice is to give it in the evening precisely because of its sedation. Weekly dosing belongs to fluoxetine's far longer effective half-life, and no antidepressant uses a loading-dose strategy.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atd-mir-06",
+      question: "A 35-year-old on sertraline 100 mg for six weeks has improved sleep and anxiety but residual low mood and drive; the psychiatrist wants a safe augmentation with sedative benefit at night. The best add-on is:",
+      options: [
+        "Mirtazapine",
+        "Bupropion",
+        "Haloperidol",
+        "Lithium at antimanic doses"
+      ],
+      correctIndex: 0,
+      explanation: "Mirtazapine augmentation of an SSRI after partial response is a well-established, generally well-tolerated strategy — adding NE/5-HT disinhibition plus night-time sedation without serotonergic sexual burden. Bupropion is activating (the wrong direction for this patient), haloperidol is not an augmentation agent here, and lithium augmentation uses sub-antimanic doses and is a far more burdensome strategy.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atd-mir-07",
+      question: "Which receptor action explains why mirtazapine produces minimal nausea and GI upset compared with SSRIs?",
+      options: [
+        "Its weak dopamine transporter blockade",
+        "Blockade of 5-HT3 receptors — the emesis-coupled serotonin receptor",
+        "Antagonism of alpha-1 adrenoceptors",
+        "Inhibition of MAO-A in the gut wall"
+      ],
+      correctIndex: 1,
+      explanation: "Mirtazapine is a 5-HT3 antagonist — the receptor on vagal afferents and the area postrema most tied to nausea — so instead of SSRI-type queasiness it is, if anything, antiemetic (ondansetron shares this target). Alpha-1 blockade causes hypotension (trazodone territory), MAO inhibition defines a different class, and DAT blockade is bupropion's weak side-action.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "atd-mir-08",
+      question: "Two new MDD patients on the same clinic day: one obese with metabolic syndrome, the other 14 kg underweight with anorexia. Which assignment of two atypical antidepressants is pharmacologically sound?",
+      options: [
+        "Bupropion for the cachectic patient; mirtazapine for the patient with metabolic syndrome",
+        "Mirtazapine for both patients",
+        "Bupropion for the patient with metabolic syndrome; mirtazapine for the cachectic patient",
+        "Neither drug meaningfully changes body weight"
+      ],
+      correctIndex: 2,
+      explanation: "The classic weight contrast: mirtazapine drives appetite and weight UP (H1 plus 5-HT2C blockade) — ideal for the cachectic-anorexic patient, hazardous in metabolic syndrome; bupropion is weight-neutral-to-LOSS and even helps obesity, but would deepen the underweight patient's problem. Asserting weight-neutrality for either drug ignores their most examinable metabolic signatures.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
 
   /* End-of-page active recall questions */

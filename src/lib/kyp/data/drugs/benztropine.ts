@@ -746,6 +746,110 @@ export const benztropine: Drug = {
       explanation: "For drug-induced parkinsonism: start 0.5-1 mg twice daily, target 1-2 mg bd (2-4 mg/day), maximum 6 mg/day. Titrate to effect; taper and attempt withdrawal once EPS settles",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "adj-bnz-01",
+      question: "Benztropine improves antipsychotic-induced extrapyramidal symptoms by:",
+      options: [
+        "Central muscarinic receptor blockade in the striatum, partially restoring the dopamine-acetylcholine balance that D2 blockade disrupted",
+        "Direct dopamine D2 receptor stimulation in the nigrostriatal pathway",
+        "Irreversible inhibition of monoamine oxidase-B, raising striatal dopamine",
+        "Blockade of 5-HT2A receptors, which is itself the main antipsychotic action sought"
+      ],
+      correctIndex: 0,
+      explanation: "Antipsychotic D2 blockade tips the striatum toward cholinergic dominance; benztropine, a centrally acting antimuscarinic, rebalances it — Katzung lists it among the antimuscarinic antiparkinsonism drugs (2 mg IV in acute dystonia; 1-6 mg/day usual range). D2 stimulation would counter the antipsychotic itself, MAO-B inhibition is selegiline's pharmacology, and 5-HT2A blockade is the antipsychotic mechanism, not the EPS remedy.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "adj-bnz-02",
+      question: "Five days after starting haloperidol, a 22-year-old man develops sustained torticollis and upward eye deviation (oculogyric crisis) that frightens him. The fastest correct treatment is:",
+      options: [
+        "Extra haloperidol to deepen D2 blockade and stop the dystonia",
+        "Parenteral benztropine (or promethazine/diphenhydramine) — IM or IV antimuscarinic, typically relieving the dystonia within minutes",
+        "Oral trihexyphenidyl 10 mg with review after a week",
+        "IV flumazenil 1 mg to reset GABAergic tone"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung's teaching for acute dystonic reactions after the first few antipsychotic doses is a parenteral antimuscarinic — benztropine 2 mg IV, diphenhydramine 50 mg IV or biperiden IM — with relief in minutes. Slow oral dosing is too weak for the emergency, flumazenil is irrelevant, and more D2 blockade worsens the dystonia; afterwards, oral anticholinergic cover with dose review prevents recurrence.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "adj-bnz-03",
+      question: "A 60-year-old woman on long-term trifluoperazine has orofacial choreiform movements (lip smacking, tongue rolling) present for months — tardive dyskinesia. A junior increases her benztropine to treat the movements. Why is this wrong?",
+      options: [
+        "Tardive dyskinesia is an acute dystonia variant, so parenteral benztropine is ideal",
+        "Anticholinergics cure tardive dyskinesia by restoring a cholinergic deficit",
+        "Anticholinergics do not treat tardive dyskinesia and can worsen it; the direction is VMAT2 inhibition (valbenazine, deutetrabenazine), antipsychotic dose reduction or atypical switch",
+        "Benztropine is correct, but the dose must exceed 10 mg per day for tardive movements"
+      ],
+      correctIndex: 2,
+      explanation: "This is the classic trap: the anticholinergic that rescues acute dystonia does not help tardive dyskinesia and can aggravate it (Katzung frames TD as a relative cholinergic deficiency with dopamine supersensitivity), so the direction is VMAT2 inhibition or antipsychotic adjustment. The parenteral-benztropine remedy is for EARLY EPS such as dystonia, not the late choreoathetosis — a favourite distractor pairing in NEET-PG and USMLE alike.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "adj-bnz-04",
+      question: "A 74-year-old man on benztropine 4 mg per day for drug-induced parkinsonism develops confusion, a distended bladder and dry flushed skin; he also has early cataract with a shallow anterior chamber. The unifying diagnosis is:",
+      options: [
+        "Neuroleptic malignant syndrome, proven by the urinary retention",
+        "Normal-pressure hydrocephalus, unrelated to the new drug",
+        "A hyperthyroid crisis triggered by antipsychotic dose changes",
+        "Central and peripheral anticholinergic toxicity from benztropine — confusion, urinary retention, dry skin and the risk of precipitating angle-closure glaucoma; reduce or stop and consider alternatives"
+      ],
+      correctIndex: 3,
+      explanation: "Benztropine's central anticholinergic burden causes confusion and memory impairment in the elderly, and its peripheral muscarinic blockade produces urinary retention, dry skin and the danger of precipitating angle-closure glaucoma in predisposed eyes (KYP anchor). NMS presents with rigidity, fever and autonomic instability rather than this purely anticholinergic picture, and the other diagnoses ignore the temporal drug link.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "adj-bnz-05",
+      question: "Which extrapyramidal situations are appropriate for benztropine?",
+      options: [
+        "Acute dystonic reactions (parenterally) and antipsychotic-induced parkinsonism (orally), including prophylaxis when a high-EPS antipsychotic is unavoidable; not tardive dyskinesia",
+        "Tardive dyskinesia and akathisia, where it is the modern first-line agent",
+        "Only neuroleptic malignant syndrome, as a muscle-relaxant substitute for dantrolene",
+        "Only idiopathic Parkinson's disease, never the drug-induced forms"
+      ],
+      correctIndex: 0,
+      explanation: "The EPS-treatment map places benztropine at acute dystonia (IM/IV) and drug-induced parkinsonism (oral, Katzung's 1-6 mg/day range), with prophylactic cover when high-EPS antipsychotics cannot be avoided; tardive dyskinesia needs VMAT2 inhibition and akathisia responds better to propranolol-type measures. NMS belongs to dantrolene-bromocriptine care, and excluding drug-induced parkinsonism inverts its main psychiatric use.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "adj-bnz-06",
+      question: "In overdose, and in combination with tricyclic antidepressants, benztropine's main contribution is:",
+      options: [
+        "Direct hepatotoxicity with fulminant hepatic failure",
+        "Additive anticholinergic toxicity — delirium, mydriasis, tachycardia, urinary retention and hyperthermia; Katzung explicitly lists benztropine among agents whose anticholinergic effects add to TCAs",
+        "Additive QT prolongation culminating in torsades de pointes",
+        "Selective serotonin toxicity through SERT inhibition"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung notes TCAs combined with agents sharing anticholinergic properties — benztropine, diphenhydramine — produce additive anticholinergic effects, and the antimuscarinic toxidrome (hot, dry, flushed, delirious, tachycardic, blocked bladder) defines the overdose picture. Torsades is thioridazine and ziprasidone territory, serotonin toxicity needs serotonergic activity benztropine lacks, and fulminant hepatic failure is not its signature.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "adj-bnz-07",
+      question: "A patient's haloperidol has been replaced with an atypical and his drug-induced parkinsonism has fully resolved on benztropine 2 mg per day. The senior's advice is:",
+      options: [
+        "Double the benztropine dose for another year, then stop abruptly without review",
+        "Switch to lifelong levodopa-carbidopa as the standard maintenance for drug-induced parkinsonism",
+        "Attempt withdrawal of the antiparkinsonism drug every 3-4 months, since drug-induced parkinsonism is often self-limiting — rather than continuing anticholinergic cover indefinitely",
+        "Continue benztropine for life, since drug-induced parkinsonism always becomes permanent"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung states parkinsonism may be self-limiting and recommends an attempt to withdraw antiparkinsonism drugs every 3-4 months — the antidote to indefinite anticholinergic burden in the elderly. Permanence is not the rule, escalate-then-abruptly-stop invites both toxicity and relapse, and levodopa should never be used in these patients because the blocked D2 receptor leaves it nothing to act on.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "adj-bnz-08",
+      question: "In an Indian district hospital, IV benztropine is out of stock when a young man on trifluoperazine presents with acute torticollis. Which Tripathi-listed alternative is appropriate?",
+      options: [
+        "Metoclopramide, which treats dystonia through dopamine agonism",
+        "Oral diazepam 10 mg as the first-line remedy for every dystonia",
+        "Ondansetron, which blocks 5-HT3 receptors and relaxes neck muscles",
+        "Promethazine — the phenothiazine with central anticholinergic action listed among the antiparkinsonism alternatives (25-75 mg per day; PHENERGAN), effective IM for acute dystonia"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi lists promethazine (PHENERGAN 10 and 25 mg tablets, 25-75 mg/day) among the central-anticholinergic-type drugs for drug-induced EPS, and Katzung's acute-dystonia paragraph allows parenteral antihistamines like diphenhydramine alongside benztropine. Metoclopramide is a dopamine BLOCKER that causes dystonia, diazepam is only an occasional secondary IV option, and ondansetron has no antidystonic role.",
+      afterSectionId: "quick-facts",
+    },
   ],
   activeRecallQuestions: [
     {
