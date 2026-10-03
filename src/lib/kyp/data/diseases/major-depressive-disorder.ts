@@ -41,9 +41,9 @@ export const majorDepressiveDisorder: Disease = {
      HERO / SUMMARY
      ============================================================ */
   tagline:
-    "A common, disabling mood disorder defined by persistent low mood and anhedonia — eminently treatable, but under-recognised in Indian primary care.",
+    "A common, disabling mood disorder defined by persistent low mood and anhedonia: eminently treatable, but under-recognised in Indian primary care.",
   summary:
-    "Major Depressive Disorder (MDD) is a syndromal mood disorder characterised by at least 2 weeks of pervasive low mood or loss of interest (anhedonia), accompanied by disturbances in sleep, appetite, energy, concentration, self-worth, and (in severe cases) suicidal ideation. It is the leading cause of disability worldwide per the WHO, affecting approximately 300 million people globally and ~57 million in India. The pathophysiology is multifactorial — monoamine dysregulation (serotonin, norepinephrine, dopamine), HPA axis hyperactivity, reduced BDNF and hippocampal volume loss, and inflammatory and psychological contributions. Treatment combines pharmacotherapy (SSRIs first-line), evidence-based psychotherapy (CBT, IPT, behavioural activation), and lifestyle intervention. With appropriate treatment, 60–70% of patients achieve response and 30–40% achieve remission; untreated, MDD carries significant morbidity and a 4–10% completed-suicide rate.",
+    "Major Depressive Disorder (MDD) is a syndromal mood disorder characterised by at least 2 weeks of pervasive low mood or loss of interest (anhedonia), accompanied by disturbances in sleep, appetite, energy, concentration, self-worth, and (in severe cases) suicidal ideation. It is the leading cause of disability worldwide per the WHO, affecting approximately 300 million people globally and ~57 million in India. The pathophysiology is multifactorial: monoamine dysregulation (serotonin, norepinephrine, dopamine), HPA axis hyperactivity, reduced BDNF and hippocampal volume loss, and inflammatory and psychological contributions. Treatment combines pharmacotherapy (SSRIs first-line), evidence-based psychotherapy (CBT, IPT, behavioural activation), and lifestyle intervention. With appropriate treatment, 60–70% of patients achieve response and 30–40% achieve remission; untreated, MDD carries significant morbidity and a 4–10% completed-suicide rate.",
   estimatedReadTime: "22 min read",
   yieldRating: "high",
   highYieldLevel: "extreme",
@@ -54,13 +54,13 @@ export const majorDepressiveDisorder: Disease = {
      ============================================================ */
   learningObjectives: [
     "Apply DSM-5 and ICD-10 diagnostic criteria to confidently diagnose MDD and distinguish it from bereavement, adjustment disorder, and bipolar depression.",
-    "Explain the multifactorial pathophysiology — monoamine hypothesis, HPA axis dysregulation, BDNF/neuroplasticity, inflammation, and the cognitive triad.",
-    "Interpret PHQ-9 and HAM-D scores for diagnosis, severity grading, and treatment monitoring — and recognise the role of Hindi/multi-lingual validation in India.",
+    "Explain the multifactorial pathophysiology: monoamine hypothesis, HPA axis dysregulation, BDNF/neuroplasticity, inflammation, and the cognitive triad.",
+    "Interpret PHQ-9 and HAM-D scores for diagnosis, severity grading, and treatment monitoring, and recognise the role of Hindi/multi-lingual validation in India.",
     "Construct a stepwise management plan: lifestyle → psychotherapy → SSRI → augmentation → brain stimulation, matched to severity and patient context.",
     "Select the right antidepressant for the right patient (pregnancy, elderly, comorbid pain, sexual dysfunction, fatigue, insomnia, cardiac disease).",
-    "Screen for bipolar disorder before initiating any antidepressant — and recognise the consequences of missing it.",
-    "Counsel a patient on what to expect in the first 6 weeks of an SSRI — onset delay, side effects before benefit, and the importance of continuation.",
-    "Apply Indian practice realities — IPS guidelines, DMHP, Jan Aushadhi generics, Tele-MANAS (14416), family involvement — to real OPD scenarios.",
+    "Screen for bipolar disorder before initiating any antidepressant, and recognise the consequences of missing it.",
+    "Counsel a patient on what to expect in the first 6 weeks of an SSRI: onset delay, side effects before benefit, and the importance of continuation.",
+    "Apply Indian practice realities (IPS guidelines, DMHP, Jan Aushadhi generics, Tele-MANAS (14416), family involvement) to real OPD scenarios.",
   ],
 
   /* ============================================================
@@ -68,17 +68,17 @@ export const majorDepressiveDisorder: Disease = {
      ============================================================ */
   epidemiology: {
     globalPrevalence:
-      "Approximately 300 million people affected worldwide (WHO, 2023) — the leading cause of disability globally. Global point prevalence ~4–5%; 12-month prevalence ~6–7%. The COVID-19 pandemic raised global prevalence by an estimated 25%, with women, young adults, and those with comorbid somatic illness disproportionately affected.",
+      "Approximately 300 million people affected worldwide (WHO, 2023): the leading cause of disability globally. Global point prevalence ~4–5%; 12-month prevalence ~6–7%. The COVID-19 pandemic raised global prevalence by an estimated 25%, with women, young adults, and those with comorbid somatic illness disproportionately affected.",
     indianPrevalence:
-      "~57 million people with depression in India (NIMHANS National Mental Health Survey 2015–16). Point prevalence of depression in adults ~2.7% for depressive disorder, rising to ~10% when including milder forms. 1 in 20 Indians experience depression at some point in their lives. Prevalence is higher in women, the elderly, those with chronic illness, and in urban metros. Lifetime treatment gap in India: ~85% — most people with depression never receive evidence-based care.",
+      "~57 million people with depression in India (NIMHANS National Mental Health Survey 2015–16). Point prevalence of depression in adults ~2.7% for depressive disorder, rising to ~10% when including milder forms. 1 in 20 Indians experience depression at some point in their lives. Prevalence is higher in women, the elderly, those with chronic illness, and in urban metros. Lifetime treatment gap in India: ~85%, most people with depression never receive evidence-based care.",
     lifetimeRisk:
-      "Global lifetime risk ~10–15%; Indian data suggests ~9%. Risk is roughly doubled in first-degree relatives of affected individuals. Recurrence rates are high: ~50% after a single episode, ~70% after two episodes, ~90% after three episodes — justifying long-term maintenance therapy in recurrent MDD.",
+      "Global lifetime risk ~10–15%; Indian data suggests ~9%. Risk is roughly doubled in first-degree relatives of affected individuals. Recurrence rates are high: ~50% after a single episode, ~70% after two episodes, ~90% after three episodes, justifying long-term maintenance therapy in recurrent MDD.",
     genderRatio:
       "Female : male ratio ≈ 2 : 1. The gender gap emerges in adolescence and persists across cultures. Hypotheses include hormonal factors (oestrogen fluctuations, postpartum, perimenopause), social factors (caregiver burden, domestic violence, economic dependence), and help-seeking differences (women report and seek care more readily).",
     ageOfOnset:
-      "Peak onset 20–40 years (median ~26 years globally), but MDD can occur at any age — from preschool children to the very elderly. Late-onset depression (>60 years) is often associated with cerebrovascular disease (vascular depression), cognitive decline, and somatic comorbidity.",
+      "Peak onset 20–40 years (median ~26 years globally), but MDD can occur at any age, from preschool children to the very elderly. Late-onset depression (>60 years) is often associated with cerebrovascular disease (vascular depression), cognitive decline, and somatic comorbidity.",
     indianNotes:
-      "The NIMHANS National Mental Health Survey (2015–16) surveyed 12 states and ~34,000 individuals — the largest representative Indian mental-health dataset to date. Key Indian findings: (1) depression prevalence is highest in 40–49 year age band; (2) urban metros have higher prevalence than rural areas — a reversal of the global pattern; (3) the treatment gap is ~85% nationwide, worse in rural and low-income groups; (4) comorbid depression with chronic medical illness (diabetes, TB, HIV, cancer) is the rule rather than the exception; (5) suicide is the leading cause of death in Indians aged 15–39, with depression the single largest attributable risk factor. The NMHP and DMHP aim to bridge this gap (see Tele-MANAS, 14416).",
+      "The NIMHANS National Mental Health Survey (2015–16) surveyed 12 states and ~34,000 individuals: the largest representative Indian mental-health dataset to date. Key Indian findings: (1) depression prevalence is highest in 40–49 year age band; (2) urban metros have higher prevalence than rural areas: a reversal of the global pattern; (3) the treatment gap is ~85% nationwide, worse in rural and low-income groups; (4) comorbid depression with chronic medical illness (diabetes, TB, HIV, cancer) is the rule rather than the exception; (5) suicide is the leading cause of death in Indians aged 15–39, with depression the single largest attributable risk factor. The NMHP and DMHP aim to bridge this gap (see Tele-MANAS, 14416).",
   },
 
   /* ============================================================
@@ -89,19 +89,19 @@ export const majorDepressiveDisorder: Disease = {
       category: "genetic",
       factor: "Heritable genetic predisposition (~37% heritability)",
       details:
-        "Twin studies place MDD heritability at ~37% — substantial but lower than schizophrenia (~80%) or bipolar disorder (~85%). First-degree relatives have a 2–3× elevated risk. No single 'depression gene' exists; instead, hundreds of common variants each contribute small effects (polygenic risk score). SLC6A4 (serotonin transporter) 5-HTTLPR short allele is the best-studied candidate, with the strongest effects seen in gene × environment interaction with childhood stress (Caspi et al., 2003). Polygenic risk scores partly overlap with schizophrenia and bipolar disorder — consistent with shared neurobiology.",
+        "Twin studies place MDD heritability at ~37%: substantial but lower than schizophrenia (~80%) or bipolar disorder (~85%). First-degree relatives have a 2–3× elevated risk. No single 'depression gene' exists; instead, hundreds of common variants each contribute small effects (polygenic risk score). SLC6A4 (serotonin transporter) 5-HTTLPR short allele is the best-studied candidate, with the strongest effects seen in gene × environment interaction with childhood stress (Caspi et al., 2003). Polygenic risk scores partly overlap with schizophrenia and bipolar disorder: consistent with shared neurobiology.",
     },
     {
       category: "biological",
       factor: "Monoamine deficiency and HPA axis dysregulation",
       details:
-        "The classical monoamine hypothesis (Schildkraut, 1965) posits deficient serotonergic and noradrenergic signalling. Modern refinements emphasise: (1) reduced serotonin synthesis and turnover; (2) downregulated BDNF (brain-derived neurotrophic factor), impairing hippocampal neurogenesis; (3) HPA axis hyperactivity with elevated cortisol and impaired dexamethasone suppression; (4) altered glutamatergic tone in the subgenual anterior cingulate cortex. No single deficiency explains all of MDD — the truth is a network disorder.",
+        "The classical monoamine hypothesis (Schildkraut, 1965) posits deficient serotonergic and noradrenergic signalling. Modern refinements emphasise: (1) reduced serotonin synthesis and turnover; (2) downregulated BDNF (brain-derived neurotrophic factor), impairing hippocampal neurogenesis; (3) HPA axis hyperactivity with elevated cortisol and impaired dexamethasone suppression; (4) altered glutamatergic tone in the subgenual anterior cingulate cortex. No single deficiency explains all of MDD: the truth is a network disorder.",
     },
     {
       category: "biological",
       factor: "Neuroplasticity / BDNF hypothesis",
       details:
-        "Chronic stress and depression lower BDNF expression, particularly in the hippocampus — leading to dendritic atrophy and volume loss (~5–10% reduction on MRI). Successful antidepressant treatment restores BDNF levels and promotes neurogenesis. This is the unifying explanation for why SSRIs, SNRIs, TCAs, ECT, ketamine, and rTMS all ultimately converge on BDNF upregulation — despite different acute pharmacology.",
+        "Chronic stress and depression lower BDNF expression, particularly in the hippocampus, leading to dendritic atrophy and volume loss (~5–10% reduction on MRI). Successful antidepressant treatment restores BDNF levels and promotes neurogenesis. This is the unifying explanation for why SSRIs, SNRIs, TCAs, ECT, ketamine, and rTMS all ultimately converge on BDNF upregulation, despite different acute pharmacology.",
     },
     {
       category: "biological",
@@ -111,21 +111,21 @@ export const majorDepressiveDisorder: Disease = {
     },
     {
       category: "psychological",
-      factor: "Beck's cognitive triad — negative views of self, world, and future",
+      factor: "Beck's cognitive triad: negative views of self, world, and future",
       details:
-        "Aaron Beck's cognitive model (1967): depression arises from automatic negative thoughts about oneself ('I am worthless'), the world ('nothing goes my way'), and the future ('things will never improve'). These schemas, often laid down in childhood, are reactivated by stress. The triad perpetuates low mood through cognitive distortions (catastrophising, all-or-nothing thinking, personalisation). This is the theoretical basis for CBT — the most evidence-based psychotherapy for MDD.",
+        "Aaron Beck's cognitive model (1967): depression arises from automatic negative thoughts about oneself ('I am worthless'), the world ('nothing goes my way'), and the future ('things will never improve'). These schemas, often laid down in childhood, are reactivated by stress. The triad perpetuates low mood through cognitive distortions (catastrophising, all-or-nothing thinking, personalisation). This is the theoretical basis for CBT: the most evidence-based psychotherapy for MDD.",
     },
     {
       category: "psychological",
       factor: "Learned helplessness and rumination",
       details:
-        "Seligman's learned helplessness model: repeated uncontrollable stressors induce a state of passive resignation, even when escape becomes possible. Subsequent work ties this to dorsal raphe serotonergic sensitisation. Nolen-Hoeksema's rumination theory: repetitive, passive focus on one's distress (vs active problem-solving) prolongs and deepens depressive episodes — and predicts onset of new episodes. Female gender's elevated rumination may partly explain the 2:1 gender ratio.",
+        "Seligman's learned helplessness model: repeated uncontrollable stressors induce a state of passive resignation, even when escape becomes possible. Subsequent work ties this to dorsal raphe serotonergic sensitisation. Nolen-Hoeksema's rumination theory: repetitive, passive focus on one's distress (vs active problem-solving) prolongs and deepens depressive episodes, and predicts onset of new episodes. Female gender's elevated rumination may partly explain the 2:1 gender ratio.",
     },
     {
       category: "social",
       factor: "Social isolation, unemployment, poverty, relationship breakdown",
       details:
-        "Low socioeconomic status, unemployment, social isolation, and intimate partner conflict are powerful precipitants and perpetuators of MDD. The biopsychosocial model recognises these as both causes and consequences — depression causes job loss and isolation, which in turn deepen depression. Lack of confiding relationships is one of the strongest social risk factors (Brown & Harris, 1978).",
+        "Low socioeconomic status, unemployment, social isolation, and intimate partner conflict are powerful precipitants and perpetuators of MDD. The biopsychosocial model recognises these as both causes and consequences: depression causes job loss and isolation, which in turn deepen depression. Lack of confiding relationships is one of the strongest social risk factors (Brown & Harris, 1978).",
     },
     {
       category: "environmental",
@@ -137,7 +137,7 @@ export const majorDepressiveDisorder: Disease = {
       category: "indian-context",
       factor: "Stigma, low mental health literacy, and limited access to care",
       details:
-        "India-specific barriers include: pervasive stigma ('depression is weakness, not illness'), low mental health literacy (only ~15% recognise depressive symptoms as a treatable condition), restricted specialist access (≈0.3 psychiatrists per 100,000 vs WHO recommendation of 3+), and out-of-pocket costs for private care. The DMHP and Tele-MANAS aim to bridge this gap, but the 85% treatment gap persists. Cultural idioms of distress ('dil pe bojh', 'tanav', 'maansik thakaan') may delay recognition. Family often mediates help-seeking — involving them in psychoeducation is critical in Indian practice.",
+        "India-specific barriers include: pervasive stigma ('depression is weakness, not illness'), low mental health literacy (only ~15% recognise depressive symptoms as a treatable condition), restricted specialist access (≈0.3 psychiatrists per 100,000 vs WHO recommendation of 3+), and out-of-pocket costs for private care. The DMHP and Tele-MANAS aim to bridge this gap, but the 85% treatment gap persists. Cultural idioms of distress ('dil pe bojh', 'tanav', 'maansik thakaan') may delay recognition. Family often mediates help-seeking: involving them in psychoeducation is critical in Indian practice.",
     },
   ],
 
@@ -146,38 +146,38 @@ export const majorDepressiveDisorder: Disease = {
      ============================================================ */
   pathophysiology: {
     summary:
-      "Depression involves dysregulation of monoamine neurotransmitters (serotonin, norepinephrine, dopamine), HPA axis hyperactivity, reduced BDNF, and hippocampal volume loss — produced by genetic, neurodevelopmental, inflammatory, and psychosocial factors acting on a vulnerable brain.",
+      "Depression involves dysregulation of monoamine neurotransmitters (serotonin, norepinephrine, dopamine), HPA axis hyperactivity, reduced BDNF, and hippocampal volume loss: produced by genetic, neurodevelopmental, inflammatory, and psychosocial factors acting on a vulnerable brain.",
     neurotransmitters: [
-      "Serotonin (5-HT) — mood, sleep, appetite, impulsivity",
-      "Norepinephrine — energy, arousal, drive",
-      "Dopamine — reward, motivation, anhedonia",
-      "Glutamate — excitotoxicity in chronic stress; target of ketamine",
-      "GABA — deficient inhibitory tone in depression",
+      "Serotonin (5-HT): mood, sleep, appetite, impulsivity",
+      "Norepinephrine: energy, arousal, drive",
+      "Dopamine: reward, motivation, anhedonia",
+      "Glutamate: excitotoxicity in chronic stress; target of ketamine",
+      "GABA: deficient inhibitory tone in depression",
     ],
     brainRegions: [
-      "Prefrontal cortex — executive function, volition, top-down regulation of emotion",
-      "Hippocampus — memory consolidation, BDNF expression, neurogenesis (volume loss in MDD)",
-      "Amygdala — fear and emotional reactivity (hyperactive in MDD)",
-      "Raphe nuclei — serotonin synthesis and projection",
-      "Subgenual anterior cingulate cortex (Brodmann 25) — hub of mood regulation; deep brain stimulation target",
-      "Locus coeruleus — norepinephrine synthesis",
-      "Ventral tegmental area (VTA) — dopamine origin for mesolimbic/mesocortical pathways",
+      "Prefrontal cortex: executive function, volition, top-down regulation of emotion",
+      "Hippocampus: memory consolidation, BDNF expression, neurogenesis (volume loss in MDD)",
+      "Amygdala: fear and emotional reactivity (hyperactive in MDD)",
+      "Raphe nuclei: serotonin synthesis and projection",
+      "Subgenual anterior cingulate cortex (Brodmann 25): hub of mood regulation; deep brain stimulation target",
+      "Locus coeruleus: norepinephrine synthesis",
+      "Ventral tegmental area (VTA): dopamine origin for mesolimbic/mesocortical pathways",
     ],
     pathways: [
-      "Mesolimbic pathway (VTA → nucleus accumbens) — reward/anhedonia",
-      "Mesocortical pathway (VTA → prefrontal cortex) — cognition/executive dysfunction",
-      "Raphe–cortical serotonergic projection — mood regulation",
-      "HPA axis (hypothalamus → pituitary → adrenal) — cortisol hypersecretion",
+      "Mesolimbic pathway (VTA → nucleus accumbens): reward/anhedonia",
+      "Mesocortical pathway (VTA → prefrontal cortex): cognition/executive dysfunction",
+      "Raphe–cortical serotonergic projection: mood regulation",
+      "HPA axis (hypothalamus → pituitary → adrenal): cortisol hypersecretion",
     ],
     details:
-      "MDD is best understood as a network disorder — no single 'broken part' explains it. Three converging hypotheses illuminate different facets:\n\n" +
-      "1) MONOAMINE HYPOTHESIS — The oldest framework (Schildkraut 1965, Coppen 1967): depression reflects deficient serotonergic and noradrenergic neurotransmission. Evidence: (a) reserpine (depletes monoamines) caused depression in ~15% of hypertensives; (b) iproniazid (MAOI — boosts monoamines) improved mood; (c) SSRIs/SNRIs work by raising synaptic monoamines. Limitation: acute monoamine elevation occurs within hours but clinical effect takes 4–6 weeks — pointing to downstream adaptive changes (5-HT1A autoreceptor desensitisation, BDNF upregulation, receptor downregulation) as the true therapeutic mechanism.\n\n" +
-      "2) NEUROPLASTICITY / BDNF HYPOTHESIS — Stress and depression reduce BDNF expression in the hippocampus and prefrontal cortex, producing dendritic atrophy and reduced neurogenesis. Hippocampal volume is reduced ~5–10% in recurrent MDD, with greater loss correlating with longer untreated illness. Antidepressants of all classes — SSRIs, SNRIs, TCAs, MAOIs, ECT, ketamine, rTMS — converge on upregulating BDNF and restoring neuroplasticity. This explains the 4–6 week delay (BDNF-mediated neurogenesis takes weeks) and why drugs with very different acute pharmacology can all work.\n\n" +
-      "3) INFLAMMATORY HYPOTHESIS — Depressed patients show elevated CRP, IL-6, TNF-α. Inflammation activates IDO, shunting tryptophan toward kynurenine (and away from serotonin) and producing neurotoxic metabolites. Up to 30% of treatment-resistant depression cases have a high-inflammatory phenotype. This explains depression comorbid with autoimmune disease, obesity, and chronic infection — and is the rationale for novel anti-cytokine and anti-inflammatory augmentation strategies.\n\n" +
-      "HPA AXIS — Cortisol is elevated in ~50% of depressed patients, with impaired dexamethasone suppression (DST non-suppression). Chronic cortisol damages hippocampal neurons (glucocorticoid cascade hypothesis) — creating a vicious cycle. Successful treatment normalises HPA function.\n\n" +
-      "CIRCUIT-LEVEL — fMRI shows hyperactive amygdala (heightened threat reactivity), hypoactive prefrontal cortex (impaired top-down regulation), and reduced functional connectivity in the default mode network (persistent rumination). The subgenual anterior cingulate (Brodmann 25) is hyperactive in MDD and is the target of deep brain stimulation for treatment-resistant cases.",
+      "MDD is best understood as a network disorder: no single 'broken part' explains it. Three converging hypotheses illuminate different facets:\n\n" +
+      "1) MONOAMINE HYPOTHESIS. The oldest framework (Schildkraut 1965, Coppen 1967): depression reflects deficient serotonergic and noradrenergic neurotransmission. Evidence: (a) reserpine (depletes monoamines) caused depression in ~15% of hypertensives; (b) iproniazid (MAOI, boosts monoamines) improved mood; (c) SSRIs/SNRIs work by raising synaptic monoamines. Limitation: acute monoamine elevation occurs within hours but clinical effect takes 4–6 weeks, pointing to downstream adaptive changes (5-HT1A autoreceptor desensitisation, BDNF upregulation, receptor downregulation) as the true therapeutic mechanism.\n\n" +
+      "2) NEUROPLASTICITY / BDNF HYPOTHESIS. Stress and depression reduce BDNF expression in the hippocampus and prefrontal cortex, producing dendritic atrophy and reduced neurogenesis. Hippocampal volume is reduced ~5–10% in recurrent MDD, with greater loss correlating with longer untreated illness. Antidepressants of all classes (SSRIs, SNRIs, TCAs, MAOIs, ECT, ketamine, rTMS) converge on upregulating BDNF and restoring neuroplasticity. This explains the 4–6 week delay (BDNF-mediated neurogenesis takes weeks) and why drugs with very different acute pharmacology can all work.\n\n" +
+      "3) INFLAMMATORY HYPOTHESIS. Depressed patients show elevated CRP, IL-6, TNF-α. Inflammation activates IDO, shunting tryptophan toward kynurenine (and away from serotonin) and producing neurotoxic metabolites. Up to 30% of treatment-resistant depression cases have a high-inflammatory phenotype. This explains depression comorbid with autoimmune disease, obesity, and chronic infection, and is the rationale for novel anti-cytokine and anti-inflammatory augmentation strategies.\n\n" +
+      "HPA AXIS. Cortisol is elevated in ~50% of depressed patients, with impaired dexamethasone suppression (DST non-suppression). Chronic cortisol damages hippocampal neurons (glucocorticoid cascade hypothesis): creating a vicious cycle. Successful treatment normalises HPA function.\n\n" +
+      "CIRCUIT-LEVEL: fMRI shows hyperactive amygdala (heightened threat reactivity), hypoactive prefrontal cortex (impaired top-down regulation), and reduced functional connectivity in the default mode network (persistent rumination). The subgenual anterior cingulate (Brodmann 25) is hyperactive in MDD and is the target of deep brain stimulation for treatment-resistant cases.",
     indianResearchContext:
-      "NIMHANS neuroimaging research has contributed substantially to global depression neuroscience: (1) NIMHANS fMRI studies have demonstrated altered amygdala–prefrontal connectivity in Indian MDD cohorts, consistent with international findings; (2) NIMHANS genetic studies have explored the SLC6A4 5-HTTLPR polymorphism in Indian populations, finding differing allele distributions from Caucasian cohorts — with implications for SSRI response; (3) the NIMHANS National Mental Health Survey (2015–16) is the largest representative Indian epidemiological dataset on depression, anxiety, and substance use; (4) Indian studies on ketamine and rTMS for treatment-resistant depression are emerging. IPS-affiliated centres contribute to multi-centre international trials. A persistent gap is the under-representation of Indian/South-Asian samples in global psychiatric genomics consortia (PGC) — an active area of correction.",
+      "NIMHANS neuroimaging research has contributed substantially to global depression neuroscience: (1) NIMHANS fMRI studies have demonstrated altered amygdala–prefrontal connectivity in Indian MDD cohorts, consistent with international findings; (2) NIMHANS genetic studies have explored the SLC6A4 5-HTTLPR polymorphism in Indian populations, finding differing allele distributions from Caucasian cohorts, with implications for SSRI response; (3) the NIMHANS National Mental Health Survey (2015–16) is the largest representative Indian epidemiological dataset on depression, anxiety, and substance use; (4) Indian studies on ketamine and rTMS for treatment-resistant depression are emerging. IPS-affiliated centres contribute to multi-centre international trials. A persistent gap is the under-representation of Indian/South-Asian samples in global psychiatric genomics consortia (PGC): an active area of correction.",
   },
 
   /* ============================================================
@@ -185,13 +185,13 @@ export const majorDepressiveDisorder: Disease = {
      ============================================================ */
   neurotransmitters: ["Serotonin (5-HT)", "Norepinephrine", "Dopamine", "Glutamate", "GABA"],
   receptors: [
-    "SERT (serotonin transporter) — target of SSRIs",
-    "NET (norepinephrine transporter) — target of SNRIs/TCAs",
-    "5-HT1A autoreceptor (raphe nuclei) — desensitises over 1–2 weeks of SSRI therapy",
-    "5-HT2C — affects dopamine release; antagonism may augment antidepressant effect",
-    "α2-adrenergic autoreceptor — target of mirtazapine blockade",
-    "NMDA receptor — target of ketamine/esketamine",
-    "Glucocorticoid receptor (NR3C1) — epigenetically modified by childhood trauma",
+    "SERT (serotonin transporter): target of SSRIs",
+    "NET (norepinephrine transporter): target of SNRIs/TCAs",
+    "5-HT1A autoreceptor (raphe nuclei): desensitises over 1–2 weeks of SSRI therapy",
+    "5-HT2C: affects dopamine release; antagonism may augment antidepressant effect",
+    "α2-adrenergic autoreceptor: target of mirtazapine blockade",
+    "NMDA receptor: target of ketamine/esketamine",
+    "Glucocorticoid receptor (NR3C1): epigenetically modified by childhood trauma",
   ],
   brainRegionIds: ["prefrontal-cortex", "amygdala", "hippocampus", "raphe-nuclei", "nucleus-accumbens"],
   pathwayIds: ["mesolimbic", "mesocortical"],
@@ -203,9 +203,9 @@ export const majorDepressiveDisorder: Disease = {
     {
       category: "Emotional",
       symptoms: [
-        "Persistent depressed mood (subjective sadness or 'emptiness') — most days, most of the day, for ≥2 weeks",
-        "Anhedonia — markedly diminished interest or pleasure in almost all activities (the second gateway symptom in DSM-5)",
-        "Irritability — particularly common in children, adolescents, and males; often the presenting symptom in men",
+        "Persistent depressed mood (subjective sadness or 'emptiness'), most days, most of the day, for ≥2 weeks",
+        "Anhedonia: markedly diminished interest or pleasure in almost all activities (the second gateway symptom in DSM-5)",
+        "Irritability, particularly common in children, adolescents, and males; often the presenting symptom in men",
         "Feelings of emptiness, hopelessness, or emotional numbness",
         "Reduced emotional reactivity (mood reactivity preserved in atypical depression, lost in melancholic)",
       ],
@@ -213,34 +213,34 @@ export const majorDepressiveDisorder: Disease = {
     {
       category: "Cognitive",
       symptoms: [
-        "Poor concentration and attention — patients describe 'brain fog' or reading the same page repeatedly",
-        "Indecisiveness — even trivial choices become overwhelming",
-        "Worthlessness — a conviction of personal failure disproportionate to circumstance",
-        "Excessive or inappropriate guilt — often over past minor events; may reach delusional intensity in psychotic depression",
-        "Recurrent thoughts of death (not just fear of dying), suicidal ideation, suicide plans or attempts — the single most urgent symptom to assess",
-        "Hopelessness about the future — strong predictor of suicidality",
+        "Poor concentration and attention: patients describe 'brain fog' or reading the same page repeatedly",
+        "Indecisiveness, even trivial choices become overwhelming",
+        "Worthlessness: a conviction of personal failure disproportionate to circumstance",
+        "Excessive or inappropriate guilt: often over past minor events; may reach delusional intensity in psychotic depression",
+        "Recurrent thoughts of death (not just fear of dying), suicidal ideation, suicide plans or attempts: the single most urgent symptom to assess",
+        "Hopelessness about the future: strong predictor of suicidality",
         "Cognitive distortions (Beck): catastrophising, all-or-nothing thinking, personalisation",
       ],
     },
     {
       category: "Somatic",
       symptoms: [
-        "Fatigue and loss of energy — even small tasks feel effortful",
-        "Sleep disturbance — insomnia (initial, middle, or terminal/early-morning awakening) in ~80%; hypersomnia in ~15% (atypical depression)",
-        "Appetite/weight change — usually reduced with weight loss (melancholic); sometimes increased with weight gain (atypical)",
-        "Psychomotor changes — retardation (slowed speech, movement, thinking) or agitation (restlessness, pacing, hand-wringing); observable by others, not merely subjective",
-        "Loss of libido — often under-reported; ask directly",
-        "Unexplained somatic complaints — headaches, body aches, GI disturbance (especially common in Indian and East-Asian presentations)",
+        "Fatigue and loss of energy, even small tasks feel effortful",
+        "Sleep disturbance: insomnia (initial, middle, or terminal/early-morning awakening) in ~80%; hypersomnia in ~15% (atypical depression)",
+        "Appetite/weight change: usually reduced with weight loss (melancholic); sometimes increased with weight gain (atypical)",
+        "Psychomotor changes: retardation (slowed speech, movement, thinking) or agitation (restlessness, pacing, hand-wringing); observable by others, not merely subjective",
+        "Loss of libido: often under-reported; ask directly",
+        "Unexplained somatic complaints: headaches, body aches, GI disturbance (especially common in Indian and East-Asian presentations)",
       ],
     },
     {
       category: "Behavioural",
       symptoms: [
-        "Social withdrawal — avoidance of family, friends, work, community",
-        "Reduced activity and goal-directed behaviour — patients stop hobbies, work, self-care",
+        "Social withdrawal: avoidance of family, friends, work, community",
+        "Reduced activity and goal-directed behaviour: patients stop hobbies, work, self-care",
         "Neglect of self-care, grooming, hygiene",
-        "Reduced productivity at work or school — presenteeism and absenteeism",
-        "Increased substance use — alcohol, tobacco, cannabis, benzodiazepines as self-medication",
+        "Reduced productivity at work or school: presenteeism and absenteeism",
+        "Increased substance use: alcohol, tobacco, cannabis, benzodiazepines as self-medication",
         "Tearfulness or reduced facial expressiveness (mask-like facies in severe depression)",
       ],
     },
@@ -300,9 +300,9 @@ export const majorDepressiveDisorder: Disease = {
         "Specifiers: with melancholia, with catatonia, with psychotic symptoms, with anxious distress, with mixed episode, with seasonal pattern.",
         "Excludes normal bereavement, bipolar disorder (must screen for past hypomania/mania).",
       ],
-      duration: "≥2 weeks. May be shorter (down to 4 days) if symptoms are severe and treatment is initiated promptly — though standard threshold remains 2 weeks.",
+      duration: "≥2 weeks. May be shorter (down to 4 days) if symptoms are severe and treatment is initiated promptly, though standard threshold remains 2 weeks.",
       indianNote:
-        "ICD-11 was released in 2022 and member states are transitioning by 2025–2027. India is in phased transition; many hospitals still use ICD-10. The diagnostic threshold (≥2 weeks, mood/anhedonia) is essentially identical to DSM-5 — making cross-walking straightforward.",
+        "ICD-11 was released in 2022 and member states are transitioning by 2025–2027. India is in phased transition; many hospitals still use ICD-10. The diagnostic threshold (≥2 weeks, mood/anhedonia) is essentially identical to DSM-5, making cross-walking straightforward.",
     },
   ],
 
@@ -317,12 +317,12 @@ export const majorDepressiveDisorder: Disease = {
       ranges: [
         { min: 0, max: 4, severity: "Minimal / None", action: "No active treatment; reassurance. Repeat at interval if symptoms persist." },
         { min: 5, max: 9, severity: "Mild", action: "Consider watchful waiting, psychoeducation, brief CBT or behavioural activation; reassess in 2–4 weeks." },
-        { min: 10, max: 14, severity: "Moderate", action: "Active treatment — psychotherapy (CBT/IPT) and/or SSRI. First-line: sertraline or escitalopram." },
+        { min: 10, max: 14, severity: "Moderate", action: "Active treatment: psychotherapy (CBT/IPT) and/or SSRI. First-line: sertraline or escitalopram." },
         { min: 15, max: 19, severity: "Moderately severe", action: "Combined SSRI + psychotherapy; consider psychiatry referral if no improvement at 4–6 weeks." },
-        { min: 20, max: 27, severity: "Severe", action: "Urgent psychiatric referral. SSRI + psychotherapy. Assess suicidality — consider admission if active." },
+        { min: 20, max: 27, severity: "Severe", action: "Urgent psychiatric referral. SSRI + psychotherapy. Assess suicidality: consider admission if active." },
       ],
       indianNote:
-        "PHQ-9 has been validated in Hindi and multiple Indian languages (Tamil, Telugu, Marathi, Bengali, Kannada, Malayalam). It is widely used in DMHP clinics and primary care under the National Mental Health Programme. A PHQ-9 ≥10 has ~88% sensitivity and ~88% specificity for MDD in Indian validation studies. Used as the standard severity tracker in both government and private Indian practice. The PHQ-9 item-9 (suicidal thoughts) MUST be reviewed at every visit — any positive response triggers formal suicide risk assessment.",
+        "PHQ-9 has been validated in Hindi and multiple Indian languages (Tamil, Telugu, Marathi, Bengali, Kannada, Malayalam). It is widely used in DMHP clinics and primary care under the National Mental Health Programme. A PHQ-9 ≥10 has ~88% sensitivity and ~88% specificity for MDD in Indian validation studies. Used as the standard severity tracker in both government and private Indian practice. The PHQ-9 item-9 (suicidal thoughts) MUST be reviewed at every visit: any positive response triggers formal suicide risk assessment.",
     },
     {
       name: "HAM-D",
@@ -341,7 +341,7 @@ export const majorDepressiveDisorder: Disease = {
     {
       name: "MADRS",
       fullName: "Montgomery-Åsberg Depression Rating Scale",
-      measures: "Clinician-rated severity of depression, sensitive to change — preferred for treatment trials.",
+      measures: "Clinician-rated severity of depression, sensitive to change: preferred for treatment trials.",
       ranges: [
         { min: 0, max: 6, severity: "Normal / Remission", action: "Treatment goals met." },
         { min: 7, max: 19, severity: "Mild depression", action: "Active treatment; reassess at 4–6 weeks." },
@@ -349,7 +349,7 @@ export const majorDepressiveDisorder: Disease = {
         { min: 35, max: 60, severity: "Severe depression", action: "Psychiatry referral; consider augmentation or ECT." },
       ],
       indianNote:
-        "MADRS is more sensitive to change than HAM-D and has fewer somatic items, reducing confounding by comorbid medical illness — useful in Indian tertiary care where comorbid chronic disease is common. Less widely used than PHQ-9 or HAM-D in routine Indian OPD due to time constraints.",
+        "MADRS is more sensitive to change than HAM-D and has fewer somatic items, reducing confounding by comorbid medical illness: useful in Indian tertiary care where comorbid chronic disease is common. Less widely used than PHQ-9 or HAM-D in routine Indian OPD due to time constraints.",
     },
   ],
 
@@ -360,9 +360,9 @@ export const majorDepressiveDisorder: Disease = {
     {
       condition: "Bipolar depression (depressive phase of bipolar disorder)",
       distinguishingFeatures:
-        "History of prior manic or hypomanic episodes; family history of bipolar disorder; earlier age of onset; atypical features (hypersomnia, hyperphagia, leaden paralysis); antidepressant-induced manic switch; psychomotor retardation more pronounced. Screen with Mood Disorder Questionnaire (MDQ) — sensitivity ~0.73, specificity ~0.90 in Indian validation.",
+        "History of prior manic or hypomanic episodes; family history of bipolar disorder; earlier age of onset; atypical features (hypersomnia, hyperphagia, leaden paralysis); antidepressant-induced manic switch; psychomotor retardation more pronounced. Screen with Mood Disorder Questionnaire (MDQ): sensitivity ~0.73, specificity ~0.90 in Indian validation.",
       keyDifferentiator:
-        "ALWAYS screen for past hypomania/mania (MDQ) before starting any antidepressant. Missing bipolar depression and treating with an SSRI alone risks a manic switch — potentially disastrous (suicide, hospitalisation, relationship/financial harm). If bipolar confirmed, mood stabiliser first; antidepressant only if needed.",
+        "ALWAYS screen for past hypomania/mania (MDQ) before starting any antidepressant. Missing bipolar depression and treating with an SSRI alone risks a manic switch: potentially disastrous (suicide, hospitalisation, relationship/financial harm). If bipolar confirmed, mood stabiliser first; antidepressant only if needed.",
     },
     {
       condition: "Adjustment disorder with depressed mood",
@@ -374,21 +374,21 @@ export const majorDepressiveDisorder: Disease = {
     {
       condition: "Persistent depressive disorder (dysthymia; ICD-10 F34.1)",
       distinguishingFeatures:
-        "Chronic depressed mood for ≥2 years (≥1 year in children/adolescents). Fewer symptoms than MDD at any given time, but unremitting. Patients often describe themselves as 'always been this way' — implying they have forgotten what euthymia feels like. May be complicated by superimposed MDD episodes ('double depression').",
+        "Chronic depressed mood for ≥2 years (≥1 year in children/adolescents). Fewer symptoms than MDD at any given time, but unremitting. Patients often describe themselves as 'always been this way': implying they have forgotten what euthymia feels like. May be complicated by superimposed MDD episodes ('double depression').",
       keyDifferentiator:
-        "Duration ≥2 years with fewer acute symptoms. Often more treatment-resistant than episodic MDD — combination of SSRI + psychotherapy (CBT/IPT) recommended.",
+        "Duration ≥2 years with fewer acute symptoms. Often more treatment-resistant than episodic MDD: combination of SSRI + psychotherapy (CBT/IPT) recommended.",
     },
     {
       condition: "Medical conditions causing depression",
       distinguishingFeatures:
         "Hypothyroidism (check TSH), anaemia (check haemoglobin/ferritin), vitamin B12 deficiency (especially in Indian vegetarians), vitamin D deficiency, Parkinson's disease, multiple sclerosis, stroke (post-stroke depression), chronic pain, cancer, chronic infection (HIV, TB). Always perform medical workup at first presentation.",
       keyDifferentiator:
-        "Abnormal laboratory testing. Always check: CBC, TSH, B12, vitamin D, LFT, RBS/FBS. Treat the underlying medical condition first — depression often resolves. Never assume psychiatric origin without excluding medical mimics — especially in elderly and those with new-onset depression.",
+        "Abnormal laboratory testing. Always check: CBC, TSH, B12, vitamin D, LFT, RBS/FBS. Treat the underlying medical condition first: depression often resolves. Never assume psychiatric origin without excluding medical mimics, especially in elderly and those with new-onset depression.",
     },
     {
       condition: "Substance-induced depressive disorder",
       distinguishingFeatures:
-        "Depressive symptoms arise during or within a month of substance intoxication/withdrawal, OR medication use is etiologically related. Common culprits: alcohol (depression during withdrawal or chronic use), cannabis, opioids, benzodiazepines, corticosteroids, isotretinoin, interferon-α, antihypertensives (methyldopa, clonidine, reserpine — reserpine historically induced depression in 15% of hypertensives).",
+        "Depressive symptoms arise during or within a month of substance intoxication/withdrawal, OR medication use is etiologically related. Common culprits: alcohol (depression during withdrawal or chronic use), cannabis, opioids, benzodiazepines, corticosteroids, isotretinoin, interferon-α, antihypertensives (methyldopa, clonidine, reserpine, reserpine historically induced depression in 15% of hypertensives).",
       keyDifferentiator:
         "Detailed substance history, including over-the-counter and herbal products. Depression resolves within weeks of stopping the offending substance. Treat the substance use disorder first.",
     },
@@ -411,7 +411,7 @@ export const majorDepressiveDisorder: Disease = {
       distinguishingFeatures:
         "Primary symptom is anxiety/panic rather than low mood/anhedonia. Comorbidity is high (MDD + GAD in ~50% of cases). Anxiety symptoms precede MDD onset or persist after depression resolves.",
       keyDifferentiator:
-        "Identify primary syndrome. SSRIs treat both — useful given comorbidity. CBT for anxiety differs from CBT for depression (exposure vs behavioural activation).",
+        "Identify primary syndrome. SSRIs treat both: useful given comorbidity. CBT for anxiety differs from CBT for depression (exposure vs behavioural activation).",
     },
   ],
 
@@ -424,9 +424,9 @@ export const majorDepressiveDisorder: Disease = {
       name: "Exercise, sleep hygiene, nutrition",
       description:
         "Aerobic exercise 30 minutes × 5 days/week has effect size comparable to SSRI in mild-moderate MDD (Cooney et al., Cochrane 2013). Sleep hygiene (fixed wake time, no screens before bed, avoiding caffeine after noon) targets the most common residual symptom. Mediterranean-style diet rich in omega-3, B-vitamins, and fermented foods (gut–brain axis) is associated with lower depression incidence.",
-      whenToUse: "All patients — first-line alone in mild MDD (PHQ-9 5–9); adjunctive in moderate-severe MDD.",
+      whenToUse: "All patients: first-line alone in mild MDD (PHQ-9 5–9); adjunctive in moderate-severe MDD.",
       indianContext:
-        "Free and accessible: walking, yoga (especially sudarshan kriya — Indian RCT evidence for mild-moderate MDD), pranayama. Indian diet (rich in pulses, vegetables, fermented foods like curd/idli) supports gut–brain health. Avoid late-night phone use — a major Indian urban sleep disruptor.",
+        "Free and accessible: walking, yoga (especially sudarshan kriya. Indian RCT evidence for mild-moderate MDD), pranayama. Indian diet (rich in pulses, vegetables, fermented foods like curd/idli) supports gut–brain health. Avoid late-night phone use: a major Indian urban sleep disruptor.",
     },
     {
       category: "psychotherapy",
@@ -444,7 +444,7 @@ export const majorDepressiveDisorder: Disease = {
         "IPT focuses on one of four interpersonal problem areas (grief, role transition, role dispute, interpersonal deficits). Behavioural Activation is simpler: scheduling enjoyable and mastery activities to break the cycle of avoidance and low reinforcement. BA alone is as effective as full CBT in mild-moderate MDD (Dimidjian et al., 2006).",
       whenToUse: "IPT for depression with clear interpersonal precipitant; BA when CBT-trained therapist is unavailable (BA can be delivered by junior clinicians after brief training).",
       indianContext:
-        "BA is well-suited to low-resource Indian settings — can be delivered by trained community health workers under DMHP. IPT is culturally congruent in India given the importance of relationships and family.",
+        "BA is well-suited to low-resource Indian settings: can be delivered by trained community health workers under DMHP. IPT is culturally congruent in India given the importance of relationships and family.",
     },
     {
       category: "pharmacotherapy",
@@ -462,13 +462,13 @@ export const majorDepressiveDisorder: Disease = {
         "Block both SERT and NET. Venlafaxine: dose-dependent (≤150 mg/day mostly serotonergic; >150 mg/day adds noradrenergic). Duloxetine: balanced SERT/NET inhibition throughout dosing range. Useful when SSRI fails or when comorbid pain (neuropathic, fibromyalgia) is present.",
       whenToUse: "Second-line after SSRI failure; first-line when comorbid neuropathic pain, fibromyalgia, or chronic musculoskeletal pain (duloxetine); severe depression requiring more noradrenergic drive (venlafaxine).",
       indianContext:
-        "Widely available in India. Venlafaxine cost ~₹5–15/tablet; duloxetine ~₹8–20/tablet. Watch for hypertension with venlafaxine >225 mg/day. Duloxetine is the preferred antidepressant in patients with comorbid diabetic neuropathy — common in India given diabetes epidemic.",
+        "Widely available in India. Venlafaxine cost ~₹5–15/tablet; duloxetine ~₹8–20/tablet. Watch for hypertension with venlafaxine >225 mg/day. Duloxetine is the preferred antidepressant in patients with comorbid diabetic neuropathy: common in India given diabetes epidemic.",
     },
     {
       category: "pharmacotherapy",
       name: "Atypical antidepressants — bupropion, mirtazapine",
       description:
-        "Bupropion (NDRI — norepinephrine-dopamine reuptake inhibitor): activating; reverses SSRI-induced sexual dysfunction; first-line augmentation. Avoid in seizure/eating disorder. Mirtazapine (NaSSA — noradrenergic and specific serotonergic): sedating via 5-HT2/5-HT3 and H1 blockade; improves sleep and appetite; useful in depressed patients with insomnia and weight loss.",
+        "Bupropion (NDRI, norepinephrine-dopamine reuptake inhibitor): activating; reverses SSRI-induced sexual dysfunction; first-line augmentation. Avoid in seizure/eating disorder. Mirtazapine (NaSSA, noradrenergic and specific serotonergic): sedating via 5-HT2/5-HT3 and H1 blockade; improves sleep and appetite; useful in depressed patients with insomnia and weight loss.",
       whenToUse: "Bupropion: when SSRI causes sexual dysfunction or fatigue; smoking cessation comorbidity; ADHD comorbidity. Mirtazapine: when insomnia/weight loss prominent; first-line in cancer/geriatric depression with cachexia.",
       indianContext:
         "Bupropion ~₹10–25/tablet; mirtazapine ~₹3–12/tablet. Mirtazapine widely used in Indian oncology and geriatric practice. Bupropion augmentation of SSRI is a common Indian private-practice strategy for partial response.",
@@ -477,7 +477,7 @@ export const majorDepressiveDisorder: Disease = {
       category: "pharmacotherapy",
       name: "Tricyclic antidepressants (TCAs) — amitriptyline, clomipramine, nortriptyline",
       description:
-        "Block SERT + NET (and 5-HT2, α1, H1, muscarinic — responsible for side effects). Equally efficacious as SSRIs but more side-effect burden. Lethal in overdose (cardiotoxicity — QRS widening, QTc prolongation). Onset 2–4 weeks.",
+        "Block SERT + NET (and 5-HT2, α1, H1, muscarinic, responsible for side effects). Equally efficacious as SSRIs but more side-effect burden. Lethal in overdose (cardiotoxicity. QRS widening, QTc prolongation). Onset 2–4 weeks.",
       whenToUse: "Severe or treatment-resistant MDD; when comorbid neuropathic pain (amitriptyline, nortriptyline); OCD (clomipramine); nocturnal enuresis (imipramine). Avoid in elderly (anticholinergic), cardiac disease (QTc), and suicide risk (lethal overdose).",
       indianContext:
         "Amitriptyline is among the cheapest antidepressants in India (~₹1–3/tablet) and is widely used for comorbid chronic pain (neuropathic, fibromyalgia, tension headache). Clomipramine is the only TCA with a specific FDA approval for OCD. Always prescribe smallest pack size and warn about overdose lethality in at-risk patients.",
@@ -486,28 +486,28 @@ export const majorDepressiveDisorder: Disease = {
       category: "pharmacotherapy",
       name: "Augmentation — bupropion, mirtazapine, lithium, triiodothyronine (T3)",
       description:
-        "For partial response to SSRI/SNRI after 6–12 weeks of adequate dose: (1) Bupropion XL 150 mg added to SSRI — first-line augmentation, especially effective for residual fatigue/anhedonia/sexual dysfunction; (2) Mirtazapine 15–30 mg at night — improves sleep; (3) Lithium ~600–900 mg/day to level 0.6–0.8 — most evidence-based augmentation; (4) T3 (liothyronine) 25–50 mcg/day — rapid but risk of osteoporosis.",
+        "For partial response to SSRI/SNRI after 6–12 weeks of adequate dose: (1) Bupropion XL 150 mg added to SSRI; first-line augmentation, especially effective for residual fatigue/anhedonia/sexual dysfunction; (2) Mirtazapine 15–30 mg at night: improves sleep; (3) Lithium ~600–900 mg/day to level 0.6–0.8, most evidence-based augmentation; (4) T3 (liothyronine) 25–50 mcg/day: rapid but risk of osteoporosis.",
       whenToUse: "Partial response (≥25% but <50% PHQ-9 reduction) after 6–12 weeks of optimised SSRI. Lithium augmentation has the strongest evidence base (8 RCTs; NNT ~4 for response).",
       indianContext:
-        "Lithium requires monitoring (levels, renal, thyroid) — challenging in rural India. Bupropion and mirtazapine augmentation is more practical and widely used in Indian private practice. Always reassess diagnosis (bipolar missed? substance use?) before declaring treatment-resistant.",
+        "Lithium requires monitoring (levels, renal, thyroid), challenging in rural India. Bupropion and mirtazapine augmentation is more practical and widely used in Indian private practice. Always reassess diagnosis (bipolar missed? substance use?) before declaring treatment-resistant.",
     },
     {
       category: "pharmacotherapy",
       name: "Ketamine / Esketamine (rapid-acting)",
       description:
-        "NMDA receptor antagonism → glutamate surge → synaptic plasticity and BDNF release. Single IV dose produces response within hours (vs 4–6 weeks for SSRIs). Esketamine intranasal (Spravato) — FDA-approved for treatment-resistant depression (must have failed ≥2 antidepressants).",
+        "NMDA receptor antagonism → glutamate surge → synaptic plasticity and BDNF release. Single IV dose produces response within hours (vs 4–6 weeks for SSRIs). Esketamine intranasal (Spravato). FDA-approved for treatment-resistant depression (must have failed ≥2 antidepressants).",
       whenToUse: "Treatment-resistant depression (failed ≥2 antidepressant trials of adequate dose/duration); severe depression with acute suicide risk (single IV ketamine dose can reduce suicidality within 24 hours).",
       indianContext:
-        "IV ketamine is widely available in Indian anaesthesia/ED settings — increasingly used off-label in Indian private psychiatry for treatment-resistant depression. Esketamine is available but expensive (₹15,000–25,000 per session). Requires 2-hour observation post-dose. NIMHANS has conducted ketamine research in Indian patients.",
+        "IV ketamine is widely available in Indian anaesthesia/ED settings: increasingly used off-label in Indian private psychiatry for treatment-resistant depression. Esketamine is available but expensive (₹15,000–25,000 per session). Requires 2-hour observation post-dose. NIMHANS has conducted ketamine research in Indian patients.",
     },
     {
       category: "brain-stimulation",
       name: "ECT (Electroconvulsive Therapy)",
       description:
-        "Generalised seizure induced by electrical current under brief anaesthesia (propofol/methohexital) and muscle relaxant (succinylcholine). Bitemporal or unilateral electrode placement. 6–12 sessions, 2–3×/week. Mechanism: massive neurotransmitter release, BDNF upregulation, neuroendocrine reset. ~80% response rate in severe depression — faster and more effective than any medication.",
+        "Generalised seizure induced by electrical current under brief anaesthesia (propofol/methohexital) and muscle relaxant (succinylcholine). Bitemporal or unilateral electrode placement. 6–12 sessions, 2–3×/week. Mechanism: massive neurotransmitter release, BDNF upregulation, neuroendocrine reset. ~80% response rate in severe depression: faster and more effective than any medication.",
       whenToUse: "Severe MDD with psychosis, catatonia, or active suicidality; refusal to eat/drink (life-threatening); treatment-resistant MDD; when rapid response is needed (e.g., pregnancy where medications are limited); stooped severe psychomotor retardation.",
       indianContext:
-        "ECT is widely available in Indian government and private psychiatry centres. The Mental Healthcare Act 2017 explicitly permits ECT under anaesthesia with informed consent — bans unmodified ECT. In Indian practice, ECT is used more readily than in some Western settings for severe depression — particularly in government hospitals, where it offers a rapid, cost-effective solution for severe psychotic/suicidal depression.",
+        "ECT is widely available in Indian government and private psychiatry centres. The Mental Healthcare Act 2017 explicitly permits ECT under anaesthesia with informed consent: bans unmodified ECT. In Indian practice, ECT is used more readily than in some Western settings for severe depression, particularly in government hospitals, where it offers a rapid, cost-effective solution for severe psychotic/suicidal depression.",
     },
     {
       category: "brain-stimulation",
@@ -516,7 +516,7 @@ export const majorDepressiveDisorder: Disease = {
         "Non-invasive brain stimulation using a magnetic coil over the left dorsolateral prefrontal cortex (DLPFC). 10 Hz stimulation, 30–36 sessions over 6 weeks. FDA-approved for treatment-resistant MDD. No anaesthesia; minimal side effects (scalp discomfort, rare seizure).",
       whenToUse: "Treatment-resistant MDD where ECT is refused or contraindicated; depression with prominent cognitive/executive dysfunction; long-term maintenance therapy.",
       indianContext:
-        "rTMS is available in Indian private psychiatry centres (NIMHANS, AIIMS, private hospitals). Cost ~₹1,500–3,000 per session — 6-week course ₹30,000–60,000 — making it accessible only to middle/high-income patients currently. Insurance coverage is expanding.",
+        "rTMS is available in Indian private psychiatry centres (NIMHANS, AIIMS, private hospitals). Cost ~₹1,500–3,000 per session (6-week course ₹30,000–60,000) making it accessible only to middle/high-income patients currently. Insurance coverage is expanding.",
     },
   ],
 
@@ -536,49 +536,49 @@ export const majorDepressiveDisorder: Disease = {
       slug: "escitalopram",
       role: "First-line SSRI",
       rationale:
-        "S-enantiomer of citalopram; lowest CYP interaction profile of all SSRIs — preferred when patient is on complex polypharmacy. FDA-approved for MDD and GAD (12–17 years). QTc watch at higher doses (>20 mg).",
+        "S-enantiomer of citalopram; lowest CYP interaction profile of all SSRIs: preferred when patient is on complex polypharmacy. FDA-approved for MDD and GAD (12–17 years). QTc watch at higher doses (>20 mg).",
     },
     {
       name: "Fluoxetine",
       slug: "fluoxetine",
       role: "First-line SSRI (activating)",
       rationale:
-        "Longest half-life (1–4 days with norfluoxetine) → mildest discontinuation syndrome — good for adherence. Most activating SSRI — preferred for lethargic/asthenic depression. Only SSRI FDA-approved for paediatric depression (≥8 years) and bulimia nervosa.",
+        "Longest half-life (1–4 days with norfluoxetine) → mildest discontinuation syndrome: good for adherence. Most activating SSRI: preferred for lethargic/asthenic depression. Only SSRI FDA-approved for paediatric depression (≥8 years) and bulimia nervosa.",
     },
     {
       name: "Venlafaxine",
       slug: "venlafaxine",
       role: "Second-line / SNRI",
       rationale:
-        "Serotonin-norepinephrine reuptake inhibitor; effective after SSRI failure. Dose-dependent (≤150 mg/day mostly serotonergic; >150 mg/day adds noradrenergic). Watch BP — can cause hypertension at high doses. Useful in severe depression requiring more noradrenergic drive.",
+        "Serotonin-norepinephrine reuptake inhibitor; effective after SSRI failure. Dose-dependent (≤150 mg/day mostly serotonergic; >150 mg/day adds noradrenergic). Watch BP: can cause hypertension at high doses. Useful in severe depression requiring more noradrenergic drive.",
     },
     {
       name: "Duloxetine",
       slug: "duloxetine",
       role: "First-line when pain comorbid",
       rationale:
-        "Balanced SNRI with strong evidence for comorbid neuropathic pain (diabetic neuropathy, fibromyalgia, chronic musculoskeletal pain). Preferred in patients with depression + chronic pain — common combination in India given diabetes and chronic disease burden.",
+        "Balanced SNRI with strong evidence for comorbid neuropathic pain (diabetic neuropathy, fibromyalgia, chronic musculoskeletal pain). Preferred in patients with depression + chronic pain: common combination in India given diabetes and chronic disease burden.",
     },
     {
       name: "Bupropion",
       slug: "bupropion",
       role: "Augmentation / Atypical",
       rationale:
-        "NDRI — first-line augmentation for SSRI partial response. Reverses SSRI-induced sexual dysfunction. Useful when fatigue/anhedonia prominent or smoking cessation comorbid. Avoid in seizure disorder, eating disorders, and bulimia.",
+        "NDRI: first-line augmentation for SSRI partial response. Reverses SSRI-induced sexual dysfunction. Useful when fatigue/anhedonia prominent or smoking cessation comorbid. Avoid in seizure disorder, eating disorders, and bulimia.",
     },
     {
       name: "Mirtazapine",
       slug: "mirtazapine",
       role: "First-line when insomnia/weight loss",
       rationale:
-        "NaSSA — sedating (H1 blockade) and appetite-stimulating. Ideal when insomnia and weight loss are prominent. Useful in cancer/geriatric depression with cachexia. Augments SSRI when combined (mirtazapine + SSRI = 'California Rocket Fuel').",
+        "NaSSA: sedating (H1 blockade) and appetite-stimulating. Ideal when insomnia and weight loss are prominent. Useful in cancer/geriatric depression with cachexia. Augments SSRI when combined (mirtazapine + SSRI = 'California Rocket Fuel').",
     },
     {
       name: "Amitriptyline",
       slug: "amitriptyline",
-      role: "TCA — severe / treatment-resistant / pain comorbid",
+      role: "TCA: severe / treatment-resistant / pain comorbid",
       rationale:
-        "TCA — equally efficacious as SSRIs but more side-effect burden and lethal in overdose. Useful for severe/treatment-resistant MDD and when comorbid chronic neuropathic pain (diabetic neuropathy, fibromyalgia, post-herpetic neuralgia). Among the cheapest antidepressants in India (~₹1–3/tablet). Avoid in elderly (anticholinergic), cardiac disease (QTc), and suicide risk (overdose lethality).",
+        "TCA: equally efficacious as SSRIs but more side-effect burden and lethal in overdose. Useful for severe/treatment-resistant MDD and when comorbid chronic neuropathic pain (diabetic neuropathy, fibromyalgia, post-herpetic neuralgia). Among the cheapest antidepressants in India (~₹1–3/tablet). Avoid in elderly (anticholinergic), cardiac disease (QTc), and suicide risk (overdose lethality).",
     },
   ],
 
@@ -587,28 +587,28 @@ export const majorDepressiveDisorder: Disease = {
      ============================================================ */
   indianPractice: {
     indianGuidelines:
-      "Indian Psychiatric Society (IPS) — Clinical Practice Guidelines for Management of Depression (most recent revision 2023). Core recommendations: (1) SSRIs are first-line pharmacotherapy for MDD; (2) Sertraline and escitalopram are the most commonly prescribed SSRIs in Indian practice; (3) PHQ-9 should be used for diagnosis and monitoring where feasible; (4) Combined pharmacotherapy + psychotherapy is preferred for moderate-severe MDD; (5) Screen for bipolar disorder before initiating antidepressant; (6) ECT for severe/psychotic/catatonic/suicidal depression. IPS guidelines are concordant with international guidelines (NICE CG91, APA) but emphasise Indian realities — cost constraints, family involvement, and limited specialist access. ICD-10 is the official coding system in Indian government hospitals; DSM-5 is used in academic settings.",
+      "Indian Psychiatric Society (IPS). Clinical Practice Guidelines for Management of Depression (most recent revision 2023). Core recommendations: (1) SSRIs are first-line pharmacotherapy for MDD; (2) Sertraline and escitalopram are the most commonly prescribed SSRIs in Indian practice; (3) PHQ-9 should be used for diagnosis and monitoring where feasible; (4) Combined pharmacotherapy + psychotherapy is preferred for moderate-severe MDD; (5) Screen for bipolar disorder before initiating antidepressant; (6) ECT for severe/psychotic/catatonic/suicidal depression. IPS guidelines are concordant with international guidelines (NICE CG91, APA) but emphasise Indian realities: cost constraints, family involvement, and limited specialist access. ICD-10 is the official coding system in Indian government hospitals; DSM-5 is used in academic settings.",
     governmentHospitals:
       "District Mental Health Programme (DMHP) operates in 700+ of India's 770+ districts. Standard government-hospital protocol: (1) Clinical diagnosis using ICD-10 criteria; (2) PHQ-9 for severity where literacy permits; (3) First-line: sertraline 25–50 mg OD (lower starting dose than Western guidelines, to minimise early side effects given limited follow-up); (4) Review at 2/4/6/12 weeks; (5) Augmentation with bupropion or mirtazapine for partial response; (6) Referral to district psychiatry OPD for treatment-resistant cases; (7) ECT available in tertiary centres (district hospital + medical college). Crisis support: Tele-MANAS (14416).",
     privatePractice:
-      "Indian private psychiatry follows international guidelines more closely. Standard protocol: (1) DSM-5 diagnosis; (2) PHQ-9 at baseline, 4, 8, 12 weeks; (3) Wider antidepressant choice — SSRIs (sertraline, escitalopram, fluoxetine, paroxetine), SNRIs (venlafaxine, duloxetine), atypicals (bupropion, mirtazapine); (4) Combined pharmacotherapy + CBT/IPT where available; (5) Augmentation strategies (bupropion, mirtazapine, lithium, T3); (6) rTMS available in major metros; (7) Esketamine for treatment-resistant MDD. Cost: ₹2–25 per tablet for antidepressants; rTMS ₹30,000–60,000 per course; esketamine ₹15,000–25,000 per session. Insurance coverage is expanding under PMJAY (Ayushman Bharat) for severe mental illness.",
+      "Indian private psychiatry follows international guidelines more closely. Standard protocol: (1) DSM-5 diagnosis; (2) PHQ-9 at baseline, 4, 8, 12 weeks; (3) Wider antidepressant choice. SSRIs (sertraline, escitalopram, fluoxetine, paroxetine), SNRIs (venlafaxine, duloxetine), atypicals (bupropion, mirtazapine); (4) Combined pharmacotherapy + CBT/IPT where available; (5) Augmentation strategies (bupropion, mirtazapine, lithium, T3); (6) rTMS available in major metros; (7) Esketamine for treatment-resistant MDD. Cost: ₹2–25 per tablet for antidepressants; rTMS ₹30,000–60,000 per course; esketamine ₹15,000–25,000 per session. Insurance coverage is expanding under PMJAY (Ayushman Bharat) for severe mental illness.",
     primaryCare:
-      "General practitioners (GPs) and family physicians can and should initiate SSRIs for mild-moderate MDD in India — consistent with WHO mhGAP and DMHP guidelines. Standard primary-care protocol: (1) Screen with PHQ-2 (2-item); if positive, confirm with PHQ-9; (2) Exclude medical mimics (TSH, CBC, B12); (3) Screen for bipolar (MDQ) and suicidality; (4) Initiate sertraline 25–50 mg OD for PHQ-9 10–19; (5) Counsel on 4–6 week onset, side effects, and adherence; (6) Review at 2/4/6 weeks; (7) Refer to psychiatrist if PHQ-9 ≥20, suicidal ideation, psychotic features, treatment-resistant, or diagnostic uncertainty. Tele-MANAS (14416) for crisis support.",
+      "General practitioners (GPs) and family physicians can and should initiate SSRIs for mild-moderate MDD in India: consistent with WHO mhGAP and DMHP guidelines. Standard primary-care protocol: (1) Screen with PHQ-2 (2-item); if positive, confirm with PHQ-9; (2) Exclude medical mimics (TSH, CBC, B12); (3) Screen for bipolar (MDQ) and suicidality; (4) Initiate sertraline 25–50 mg OD for PHQ-9 10–19; (5) Counsel on 4–6 week onset, side effects, and adherence; (6) Review at 2/4/6 weeks; (7) Refer to psychiatrist if PHQ-9 ≥20, suicidal ideation, psychotic features, treatment-resistant, or diagnostic uncertainty. Tele-MANAS (14416) for crisis support.",
     costConsiderations:
       "Antidepressant costs in India (per tablet): Jan Aushadhi sertraline ₹2–5; branded sertraline (Serta, Serenata, Zosert) ₹3–8; escitalopram ₹3–10; fluoxetine ₹2–6; venlafaxine ₹5–15; duloxetine ₹8–20; bupropion ₹10–25; mirtazapine ₹3–12; amitriptyline ₹1–3. Jan Aushadhi Kendras stock sertraline (25/50/100 mg), escitalopram (5/10/20 mg), fluoxetine (20/60 mg), amitriptyline (10/25/75 mg). ECT in government hospitals is free or minimal cost; in private hospitals ₹500–2000/session. rTMS ₹30,000–60,000/course (mostly private). Esketamine ₹15,000–25,000/session (private only). PMJAY (Ayushman Bharat) covers severe mental illness treatment for eligible families.",
     patientCounselling: [
-      "Depression is a real medical illness — like diabetes or hypertension — not weakness, laziness, or 'thinking too much'. The brain's chemistry is affected.",
+      "Depression is a real medical illness (like diabetes or hypertension) not weakness, laziness, or 'thinking too much'. The brain's chemistry is affected.",
       "Treatment works. With combined medication and counselling, 60–70% of patients improve significantly. Untreated, depression can become chronic or life-threatening.",
-      "Medication (SSRI) takes 4–6 weeks to work fully. Side effects in the first 1–2 weeks (nausea, headache, sleep changes) usually settle. Don't stop early — wait for the benefit.",
+      "Medication (SSRI) takes 4–6 weeks to work fully. Side effects in the first 1–2 weeks (nausea, headache, sleep changes) usually settle. Don't stop early: wait for the benefit.",
       "NEVER stop antidepressants abruptly. Your doctor will help you reduce the dose gradually over several weeks when it is time to stop.",
-      "Continue treatment for 6–12 months AFTER you feel better — stopping earlier dramatically increases the chance of relapse.",
-      "Sexual side effects (reduced interest, difficulty reaching orgasm) are common and can be embarrassing — but your doctor can help. Don't stop the medicine without discussing alternatives.",
-      "Avoid alcohol — it can worsen depression and interact with medication.",
-      "If you feel worse, more agitated, or have new suicidal thoughts in the first month — contact your doctor immediately or call Tele-MANAS at 14416 (toll-free, 24/7, 20 Indian languages).",
-      "Involve your family — they can help monitor your mood, ensure you take your medication, and spot warning signs. In Indian joint-family context, family support is often the most powerful predictor of recovery.",
+      "Continue treatment for 6–12 months AFTER you feel better, stopping earlier dramatically increases the chance of relapse.",
+      "Sexual side effects (reduced interest, difficulty reaching orgasm) are common and can be embarrassing, but your doctor can help. Don't stop the medicine without discussing alternatives.",
+      "Avoid alcohol: it can worsen depression and interact with medication.",
+      "If you feel worse, more agitated, or have new suicidal thoughts in the first month: contact your doctor immediately or call Tele-MANAS at 14416 (toll-free, 24/7, 20 Indian languages).",
+      "Involve your family: they can help monitor your mood, ensure you take your medication, and spot warning signs. In Indian joint-family context, family support is often the most powerful predictor of recovery.",
       "Free/low-cost options: Jan Aushadhi sertraline (₹2–5/tablet), government hospital psychiatry OPDs under DMHP, Tele-MANAS counselling (14416, free).",
-      "Yoga, pranayama, and exercise are evidence-based adjuncts — not replacements for medication in moderate-severe depression.",
-      "Don't keep suicidal thoughts secret — sharing them with someone you trust can save your life.",
+      "Yoga, pranayama, and exercise are evidence-based adjuncts, not replacements for medication in moderate-severe depression.",
+      "Don't keep suicidal thoughts secret, sharing them with someone you trust can save your life.",
     ],
   },
 
@@ -617,44 +617,44 @@ export const majorDepressiveDisorder: Disease = {
      ============================================================ */
   patientEducation: {
     whatIsIt:
-      "Depression (Major Depressive Disorder) is a common medical condition that affects how you feel, think, and handle daily activities. It is more than just feeling sad or 'low' for a few days — it is a persistent pattern (at least 2 weeks) of low mood or loss of interest that affects sleep, appetite, energy, concentration, and self-worth. Globally, ~300 million people have depression — it is the leading cause of disability worldwide. In India, ~57 million people are affected. Depression is not weakness, laziness, or 'thinking too much' — it is a real medical illness with biological changes in the brain.",
+      "Depression (Major Depressive Disorder) is a common medical condition that affects how you feel, think, and handle daily activities. It is more than just feeling sad or 'low' for a few days. It is a persistent pattern (at least 2 weeks) of low mood or loss of interest that affects sleep, appetite, energy, concentration, and self-worth. Globally, ~300 million people have depression. It is the leading cause of disability worldwide. In India, ~57 million people are affected. Depression is not weakness, laziness, or 'thinking too much'. It is a real medical illness with biological changes in the brain.",
     whatCausesIt:
-      "Depression has no single cause — it results from a combination of: (1) BIOLOGICAL factors — changes in brain chemicals (serotonin, norepinephrine, dopamine), hormonal changes, and reduced BDNF (a chemical that helps brain cells grow and connect); (2) GENETIC factors — depression runs in families (heritability ~37%); (3) PSYCHOLOGICAL factors — negative thinking patterns, low self-esteem, chronic stress; (4) SOCIAL factors — isolation, unemployment, relationship problems, poverty, trauma. Some medical conditions (hypothyroidism, vitamin B12 deficiency, chronic pain) and some medicines can also cause depression-like symptoms — your doctor will check for these.",
+      "Depression has no single cause (it results from a combination of: (1) BIOLOGICAL factors) changes in brain chemicals (serotonin, norepinephrine, dopamine), hormonal changes, and reduced BDNF (a chemical that helps brain cells grow and connect); (2) GENETIC factors: depression runs in families (heritability ~37%); (3) PSYCHOLOGICAL factors: negative thinking patterns, low self-esteem, chronic stress; (4) SOCIAL factors: isolation, unemployment, relationship problems, poverty, trauma. Some medical conditions (hypothyroidism, vitamin B12 deficiency, chronic pain) and some medicines can also cause depression-like symptoms: your doctor will check for these.",
     symptoms:
-      "Common symptoms include: feeling sad, empty, or hopeless most of the day; losing interest or pleasure in activities you used to enjoy; changes in sleep (trouble sleeping, or sleeping too much); changes in appetite or weight; feeling tired or having no energy; difficulty concentrating or making decisions; feeling worthless or guilty; thoughts of death or suicide. Symptoms must last at least 2 weeks and interfere with daily life to be diagnosed as depression. If you have thoughts of suicide, seek help immediately — call Tele-MANAS at 14416 (toll-free, 24/7).",
+      "Common symptoms include: feeling sad, empty, or hopeless most of the day; losing interest or pleasure in activities you used to enjoy; changes in sleep (trouble sleeping, or sleeping too much); changes in appetite or weight; feeling tired or having no energy; difficulty concentrating or making decisions; feeling worthless or guilty; thoughts of death or suicide. Symptoms must last at least 2 weeks and interfere with daily life to be diagnosed as depression. If you have thoughts of suicide, seek help immediately. Call Tele-MANAS at 14416 (toll-free, 24/7).",
     treatment:
-      "Depression is treatable. The three pillars are: (1) MEDICATION — antidepressants (usually SSRIs like sertraline or escitalopram) that help restore the brain's chemical balance. They take 4–6 weeks to work fully. Common side effects (nausea, sleep changes, sexual dysfunction) are usually mild and temporary. (2) PSYCHOTHERAPY — 'talking therapy' like CBT (cognitive behavioural therapy) that helps identify and change negative thinking patterns. CBT is as effective as medication for mild-moderate depression; the combination is best for moderate-severe. (3) LIFESTYLE — regular exercise (30 min/day, 5 days/week), good sleep hygiene, social connection, and reducing alcohol. Treatment usually continues for 6–12 months AFTER you feel better, to prevent relapse.",
+      "Depression is treatable. The three pillars are: (1) MEDICATION; antidepressants (usually SSRIs like sertraline or escitalopram) that help restore the brain's chemical balance. They take 4–6 weeks to work fully. Common side effects (nausea, sleep changes, sexual dysfunction) are usually mild and temporary. (2) PSYCHOTHERAPY: 'talking therapy' like CBT (cognitive behavioural therapy) that helps identify and change negative thinking patterns. CBT is as effective as medication for mild-moderate depression; the combination is best for moderate-severe. (3) LIFESTYLE: regular exercise (30 min/day, 5 days/week), good sleep hygiene, social connection, and reducing alcohol. Treatment usually continues for 6–12 months AFTER you feel better, to prevent relapse.",
     selfHelp: [
-      "Regular exercise — 30 minutes of walking, yoga, or any activity, 5 days/week. Exercise is as effective as medication in mild depression.",
-      "Sleep hygiene — fixed wake time, no screens before bed, avoid caffeine after noon, dark and cool bedroom.",
-      "Social connection — talk to family, friends, or a trusted person daily. Isolation deepens depression.",
-      "Daily routine — get up, dress, eat meals, and sleep at the same times each day. Structure anchors mood.",
-      "Behavioural activation — schedule one enjoyable and one 'mastery' activity daily, even if you don't feel like it. Mood follows action.",
-      "Limit alcohol — alcohol is a depressant and worsens mood, sleep, and medication effect.",
-      "Sunlight exposure — 15–30 minutes of morning sunlight daily helps circadian rhythm and vitamin D.",
-      "Mindfulness, pranayama, yoga, meditation — evidence-based adjuncts; Sudarshan Kriya has Indian RCT evidence for depression.",
-      "Reduce screen time and social media — especially late-night use.",
-      "Don't make big decisions (job change, relationships) during a depressive episode — wait until you have recovered.",
+      "Regular exercise: 30 minutes of walking, yoga, or any activity, 5 days/week. Exercise is as effective as medication in mild depression.",
+      "Sleep hygiene: fixed wake time, no screens before bed, avoid caffeine after noon, dark and cool bedroom.",
+      "Social connection: talk to family, friends, or a trusted person daily. Isolation deepens depression.",
+      "Daily routine: get up, dress, eat meals, and sleep at the same times each day. Structure anchors mood.",
+      "Behavioural activation: schedule one enjoyable and one 'mastery' activity daily, even if you don't feel like it. Mood follows action.",
+      "Limit alcohol: alcohol is a depressant and worsens mood, sleep, and medication effect.",
+      "Sunlight exposure: 15–30 minutes of morning sunlight daily helps circadian rhythm and vitamin D.",
+      "Mindfulness, pranayama, yoga, meditation: evidence-based adjuncts; Sudarshan Kriya has Indian RCT evidence for depression.",
+      "Reduce screen time and social media, especially late-night use.",
+      "Don't make big decisions (job change, relationships) during a depressive episode. Wait until you have recovered.",
     ],
     whenToSeekHelp: [
       "Persistent low mood or loss of interest lasting more than 2 weeks.",
-      "Functional impairment — unable to work, study, or care for self/family.",
-      "Thoughts of death, suicide, or harming yourself — SEEK HELP IMMEDIATELY. Call Tele-MANAS 14416 (toll-free, 24/7, 20 Indian languages). In emergency, call 112.",
+      "Functional impairment: unable to work, study, or care for self/family.",
+      "Thoughts of death, suicide, or harming yourself. SEEK HELP IMMEDIATELY. Call Tele-MANAS 14416 (toll-free, 24/7, 20 Indian languages). In emergency, call 112.",
       "Significant sleep, appetite, or weight changes.",
       "Inability to enjoy activities you previously enjoyed (anhedonia).",
       "Feeling hopeless, worthless, or excessive guilt.",
       "Alcohol or substance use to cope with mood.",
-      "Any symptom of psychosis — hearing voices, believing people are trying to harm you, etc.",
+      "Any symptom of psychosis: hearing voices, believing people are trying to harm you, etc.",
     ],
     indianResources: [
-      "Tele-MANAS — National Tele-Mental Health Helpline: 14416 or 1-800-891-4416 (toll-free, 24/7, 20 Indian languages including Hindi, Tamil, Telugu, Kannada, Malayalam, Marathi, Gujarati, Bengali, Punjabi, Odia, Assamese, Urdu). Launched October 2022 by the Government of India. Provides free counselling, assessment, and referral.",
-      "NIMHANS (National Institute of Mental Health and Neurosciences), Bengaluru — premier government mental health institute. OPD services available; emergency psychiatry 24/7. Website: nimhans.ac.in",
-      "District Mental Health Programme (DMHP) — free mental health services at district hospitals across India.",
-      "iCall (Indian Council of Mental Health helpline) — 9152987821 (free, Mon–Sat 8 AM–10 PM).",
-      "Vandrevala Foundation — 1860-2662-345 or 9999 666 555 (24/7).",
-      "Jan Aushadhi Kendras — generic antidepressants (sertraline, escitalopram, fluoxetine, amitriptyline) at ₹2–5 per tablet. Locate at janaushadhi.gov.in",
-      "PMJAY (Ayushman Bharat) — covers severe mental illness treatment for eligible families (₹5 lakh annual cover).",
-      "AASRA — 9820466726 (suicide prevention, 24/7).",
+      "Tele-MANAS. National Tele-Mental Health Helpline: 14416 or 1-800-891-4416 (toll-free, 24/7, 20 Indian languages including Hindi, Tamil, Telugu, Kannada, Malayalam, Marathi, Gujarati, Bengali, Punjabi, Odia, Assamese, Urdu). Launched October 2022 by the Government of India. Provides free counselling, assessment, and referral.",
+      "NIMHANS (National Institute of Mental Health and Neurosciences), Bengaluru: premier government mental health institute. OPD services available; emergency psychiatry 24/7. Website: nimhans.ac.in",
+      "District Mental Health Programme (DMHP): free mental health services at district hospitals across India.",
+      "iCall (Indian Council of Mental Health helpline): 9152987821 (free, Mon–Sat 8 AM–10 PM).",
+      "Vandrevala Foundation: 1860-2662-345 or 9999 666 555 (24/7).",
+      "Jan Aushadhi Kendras: generic antidepressants (sertraline, escitalopram, fluoxetine, amitriptyline) at ₹2–5 per tablet. Locate at janaushadhi.gov.in",
+      "PMJAY (Ayushman Bharat): covers severe mental illness treatment for eligible families (₹5 lakh annual cover).",
+      "AASRA: 9820466726 (suicide prevention, 24/7).",
     ],
   },
 
@@ -662,18 +662,18 @@ export const majorDepressiveDisorder: Disease = {
      CLINICAL PEARLS (10)
      ============================================================ */
   clinicalPearls: [
-    "ALWAYS screen for bipolar disorder (MDQ questionnaire) before starting any antidepressant. Missing bipolar depression and treating with an SSRI alone risks a manic switch — potentially disastrous. Ask specifically about prior periods of elevated mood, reduced sleep need, racing thoughts, and impulsive behaviour.",
-    "PHQ-9 is used for BOTH diagnosis AND monitoring. Baseline score, then repeat at 4/8/12 weeks. ≥50% reduction = response; final score <5 = remission. Always check PHQ-9 item 9 (suicidal thoughts) — any positive response triggers formal suicide risk assessment.",
+    "ALWAYS screen for bipolar disorder (MDQ questionnaire) before starting any antidepressant. Missing bipolar depression and treating with an SSRI alone risks a manic switch: potentially disastrous. Ask specifically about prior periods of elevated mood, reduced sleep need, racing thoughts, and impulsive behaviour.",
+    "PHQ-9 is used for BOTH diagnosis AND monitoring. Baseline score, then repeat at 4/8/12 weeks. ≥50% reduction = response; final score <5 = remission. Always check PHQ-9 item 9 (suicidal thoughts): any positive response triggers formal suicide risk assessment.",
     "SSRI onset is 4–6 weeks for depression (8–12 weeks for anxiety disorders). Counsel patients explicitly: 'Side effects come first (week 1–2), mood benefit comes later (week 4–6). Don't stop early.' Patients who stop at 2 weeks stop before the drug works.",
-    "Sexual dysfunction affects 30–50% of patients on SSRIs and is the #1 reason for non-adherence. Patients rarely volunteer it — ask directly at every follow-up: 'Any changes in sexual interest or function?' Solutions: dose reduction, add bupropion XL 150 mg, switch to bupropion or mirtazapine.",
+    "Sexual dysfunction affects 30–50% of patients on SSRIs and is the #1 reason for non-adherence. Patients rarely volunteer it: ask directly at every follow-up: 'Any changes in sexual interest or function?' Solutions: dose reduction, add bupropion XL 150 mg, switch to bupropion or mirtazapine.",
     "Continue antidepressant treatment for 6–12 months AFTER remission for a first episode of MDD; longer (often indefinite) for recurrent episodes (≥3 episodes → maintenance therapy). Stopping earlier dramatically increases relapse risk (~40% relapse rate if stopped at 4 months vs <10% if continued for 12 months).",
     "First-line augmentation for SSRI partial response: bupropion XL 150 mg/day (especially for fatigue/anhedonia/sexual dysfunction) OR mirtazapine 15–30 mg at night (especially for insomnia/poor appetite). Lithium has the strongest evidence base for augmentation but requires level/renal/thyroid monitoring.",
-    "Sertraline is the SSRI of choice in pregnancy and lactation — lowest placental transfer and milk/plasma ratio (~0.5), infant serum levels usually undetectable. Avoid paroxetine (1st-trimester cardiac defects — former Category D). Never stop an SSRI abruptly if a patient becomes pregnant — abrupt discontinuation risks relapse AND discontinuation syndrome.",
-    "ECT is indicated for: severe MDD with psychotic features, catatonia, active suicidality requiring rapid response, refusal to eat/drink (life-threatening), treatment-resistant MDD, and when medications are contraindicated (pregnancy). ECT has ~80% response rate in severe depression — faster and more effective than any medication. The Mental Healthcare Act 2017 permits ECT under anaesthesia with informed consent and bans unmodified ECT.",
-    "Combined SSRI + CBT produces better long-term outcomes than either alone in moderate-severe MDD. CBT also reduces relapse risk after medication discontinuation. Always refer for CBT where available — Tele-MANAS, online platforms (Wysa, ePsyClinic), or in-person services.",
-    "NEVER stop an antidepressant abruptly after ≥4 weeks of use. Taper over 4+ weeks to avoid discontinuation syndrome (FINISH: Flu-like, Insomnia, Nausea, Imbalance, Sensory 'brain zaps', Hyperarousal). For short half-life SSRIs (paroxetine), substitute fluoxetine for the last 2 weeks of taper — fluoxetine self-tapers due to long half-life.",
+    "Sertraline is the SSRI of choice in pregnancy and lactation: lowest placental transfer and milk/plasma ratio (~0.5), infant serum levels usually undetectable. Avoid paroxetine (1st-trimester cardiac defects, former Category D). Never stop an SSRI abruptly if a patient becomes pregnant: abrupt discontinuation risks relapse AND discontinuation syndrome.",
+    "ECT is indicated for: severe MDD with psychotic features, catatonia, active suicidality requiring rapid response, refusal to eat/drink (life-threatening), treatment-resistant MDD, and when medications are contraindicated (pregnancy). ECT has ~80% response rate in severe depression: faster and more effective than any medication. The Mental Healthcare Act 2017 permits ECT under anaesthesia with informed consent and bans unmodified ECT.",
+    "Combined SSRI + CBT produces better long-term outcomes than either alone in moderate-severe MDD. CBT also reduces relapse risk after medication discontinuation. Always refer for CBT where available. Tele-MANAS, online platforms (Wysa, ePsyClinic), or in-person services.",
+    "NEVER stop an antidepressant abruptly after ≥4 weeks of use. Taper over 4+ weeks to avoid discontinuation syndrome (FINISH: Flu-like, Insomnia, Nausea, Imbalance, Sensory 'brain zaps', Hyperarousal). For short half-life SSRIs (paroxetine), substitute fluoxetine for the last 2 weeks of taper: fluoxetine self-tapers due to long half-life.",
     "If no response to SSRI after 6 weeks at adequate dose → increase dose. If no response at 12 weeks → switch class (SNRI, bupropion, mirtazapine) or augment. If 2 adequate antidepressant trials fail → refer to psychiatry; consider augmentation (lithium, T3), atypical antipsychotic (aripiprazole, quetiapine), ketamine/esketamine, rTMS, or ECT.",
-    "Always assess suicide risk directly — don't avoid the question. Ask: 'Have you had thoughts of death or suicide? Have you made any plans?' Asking does NOT increase risk; it provides relief and enables safety planning. Document assessment. Provide Tele-MANAS (14416) number. Involve family in monitoring.",
+    "Always assess suicide risk directly: don't avoid the question. Ask: 'Have you had thoughts of death or suicide? Have you made any plans?' Asking does NOT increase risk; it provides relief and enables safety planning. Document assessment. Provide Tele-MANAS (14416) number. Involve family in monitoring.",
   ],
 
   /* ============================================================
@@ -683,16 +683,16 @@ export const majorDepressiveDisorder: Disease = {
     mbbs: {
       viva: [
         "What are the DSM-5 criteria for Major Depressive Disorder? (5+ of 9 symptoms for ≥2 weeks; must include depressed mood or anhedonia; causes impairment; not attributable to substance/medical condition; no prior manic/hypomanic episode.)",
-        "Name the 9 symptoms of MDD (mnemonic: SIGECAPS — Sleep, Interest, Guilt, Energy, Concentration, Appetite, Psychomotor, Suicidality + depressed Mood).",
+        "Name the 9 symptoms of MDD (mnemonic: SIGECAPS. Sleep, Interest, Guilt, Energy, Concentration, Appetite, Psychomotor, Suicidality + depressed Mood).",
         "What is the difference between MDD and bipolar depression? (Bipolar requires prior manic/hypomanic episode; always screen with MDQ before starting antidepressant to avoid manic switch.)",
-        "What is the first-line pharmacotherapy for MDD? (SSRI — sertraline or escitalopram. IPS and NICE CG91 concur.)",
+        "What is the first-line pharmacotherapy for MDD? (SSRI, sertraline or escitalopram. IPS and NICE CG91 concur.)",
         "What is the black box warning for antidepressants? (Increased suicidality in patients <25 years. Weekly monitoring in the first month.)",
         "What is serotonin syndrome? Triad? Treatment? (Mental status change + autonomic instability + neuromuscular excitation [clonus, hyperreflexia]. Treatment: stop serotonergic agent, benzodiazepines, cyproheptadine, cooling.)",
       ],
       practical: [
-        "Take a psychiatric history from a patient with suspected depression — including suicide risk assessment and bipolar screening (MDQ).",
+        "Take a psychiatric history from a patient with suspected depression, including suicide risk assessment and bipolar screening (MDQ).",
         "Score and interpret a PHQ-9 (calculate severity band and treatment recommendation).",
-        "Counsel a patient starting an SSRI for first-episode depression — address onset delay, side effects, adherence, and follow-up.",
+        "Counsel a patient starting an SSRI for first-episode depression: address onset delay, side effects, adherence, and follow-up.",
         "Write a prescription for sertraline for a 30-year-old with first-episode moderate depression (50 mg OD, morning, with food).",
       ],
       longAnswer: [
@@ -702,7 +702,7 @@ export const majorDepressiveDisorder: Disease = {
     },
     neetPg: {
       highYield: [
-        "DSM-5 MDD criteria: 5+ of 9 symptoms for ≥2 weeks; must include depressed mood OR anhedonia. Mnemonic SIGECAPS — Sleep, Interest, Guilt, Energy, Concentration, Appetite, Psychomotor, Suicidality + depressed Mood.",
+        "DSM-5 MDD criteria: 5+ of 9 symptoms for ≥2 weeks; must include depressed mood OR anhedonia. Mnemonic SIGECAPS. Sleep, Interest, Guilt, Energy, Concentration, Appetite, Psychomotor, Suicidality + depressed Mood.",
         "ICD-10: ≥2 of 3 core symptoms (depressed mood, anhedonia, reduced energy) for ≥2 weeks = depressive episode. F32.x = single episode; F33.x = recurrent; F34.1 = dysthymia.",
         "ICD-10 vs DSM-5 difference: ICD-10 requires only 2 of 3 core symptoms; DSM-5 requires 5+ of 9. ICD-10 is the official system in India.",
         "PHQ-9 score bands: 0–4 minimal, 5–9 mild, 10–14 moderate, 15–19 moderately severe, 20–27 severe. ≥10 is the threshold for clinical depression. Item-9 = suicidal thoughts.",
@@ -714,20 +714,20 @@ export const majorDepressiveDisorder: Disease = {
         "ECT indications: severe MDD with psychosis, catatonia, active suicidality, refusal to eat/drink, treatment-resistant, pregnancy where medications are limited. ~80% response rate.",
       ],
       pyqConcepts: [
-        "NEET PG 2022: DSM-5 diagnostic criteria for MDD — number of symptoms required and duration. (Answer: 5+ of 9 symptoms for ≥2 weeks; must include depressed mood or anhedonia.)",
-        "NEET PG 2021: PHQ-9 score interpretation — score of 18 corresponds to which severity band? (Answer: 15–19 = moderately severe.)",
+        "NEET PG 2022: DSM-5 diagnostic criteria for MDD; number of symptoms required and duration. (Answer: 5+ of 9 symptoms for ≥2 weeks; must include depressed mood or anhedonia.)",
+        "NEET PG 2021: PHQ-9 score interpretation; score of 18 corresponds to which severity band? (Answer: 15–19 = moderately severe.)",
         "NEET PG 2020: A 30-year-old woman presents with 3 weeks of low mood, anhedonia, early-morning awakening, and weight loss. Diagnosis? (Answer: Major Depressive Disorder, single episode, moderate-severe.)",
-        "NEET PG 2019: Which is the most appropriate first-line antidepressant in pregnancy? (Answer: Sertraline — SSRI of choice in pregnancy.)",
+        "NEET PG 2019: Which is the most appropriate first-line antidepressant in pregnancy? (Answer: Sertraline. SSRI of choice in pregnancy.)",
         "INICET 2022: A patient on SSRI for 6 weeks reports partial response. What is the next step? (Answer: Optimise SSRI dose → if still partial at 12 weeks, augment with bupropion XL 150 mg or mirtazapine 15–30 mg, or switch to SNRI.)",
       ],
     },
     inicet: {
       clinicalReasoning: [
-        "A 28-year-old woman presents with 8 weeks of low mood, anhedonia, early-morning awakening, 4 kg weight loss, and PHQ-9 = 17. She has a family history of bipolar disorder. What is your approach? (Answer: Diagnose MDD moderate-severe (ICD-10 F32.2). Screen for bipolar with MDQ before starting antidepressant — given family history. If MDQ positive, refer to psychiatry for mood stabiliser assessment. If MDQ negative, start sertraline 50 mg OD + CBT. Monitor weekly for manic switch in first 2 months. Counsel on 4–6 week onset, side effects, and adherence. Provide Tele-MANAS 14416.)",
-        "A 65-year-old man on sertraline for 3 weeks presents with confusion and headache. Sodium is 122 mmol/L. What is the diagnosis and management? (Answer: SSRI-induced SIADH (hyponatraemia). Risk highest in elderly, first 2 weeks. Management: fluid restrict, hold sertraline, monitor sodium; if Na <120 or seizures → hypertonic saline in ICU. Reassess antidepressant choice — consider mirtazapine or ECT if depression still requires urgent treatment.)",
-        "A 32-year-old woman with depression is 8 weeks pregnant and on sertraline 50 mg. She wants to stop. How do you counsel her? (Answer: Sertraline is the SSRI of choice in pregnancy — lowest placental transfer. Untreated maternal depression carries significant risks (preterm birth, low birth weight, poor bonding, suicidality). Stopping abruptly risks relapse AND discontinuation syndrome. Counsel: continue sertraline, monitor closely with obstetrician. Watch for neonatal adaptation syndrome in 3rd trimester (jitteriness, respiratory distress, poor feeding — usually self-limited).)",
-        "A 22-year-old college student with severe depression and active suicidality is brought to the ER. What is your immediate management? (Answer: Psychiatric emergency. (1) Assess suicidality directly and remove access to means. (2) Do not send home alone — admit or supervised setting. (3) Consider urgent ECT (rapid response within days). (4) Start SSRI (sertraline 50 mg OD). (5) Tele-MANAS 14416 for family. (6) Black box warning — weekly monitoring. (7) Involve family for safety planning.)",
-        "A 45-year-old man has failed two adequate SSRI trials (sertraline 200 mg, then escitalopram 20 mg) over 8 months. PHQ-9 remains 18. What are the options? (Answer: Treatment-resistant depression. (1) Reassess diagnosis — missed bipolar? Substance use? Medical mimic? (2) Augment with bupropion XL 150 mg or mirtazapine 15 mg. (3) Switch to SNRI (venlafaxine, duloxetine) or TCA (amitriptyline). (4) Consider lithium augmentation (level 0.6–0.8). (5) Consider atypical antipsychotic augmentation (aripiprazole 2–5 mg, quetiapine XR 150 mg). (6) Consider rTMS or esketamine. (7) ECT if severe/suicidal/psychotic.)",
+        "A 28-year-old woman presents with 8 weeks of low mood, anhedonia, early-morning awakening, 4 kg weight loss, and PHQ-9 = 17. She has a family history of bipolar disorder. What is your approach? (Answer: Diagnose MDD moderate-severe (ICD-10 F32.2). Screen for bipolar with MDQ before starting antidepressant, given family history. If MDQ positive, refer to psychiatry for mood stabiliser assessment. If MDQ negative, start sertraline 50 mg OD + CBT. Monitor weekly for manic switch in first 2 months. Counsel on 4–6 week onset, side effects, and adherence. Provide Tele-MANAS 14416.)",
+        "A 65-year-old man on sertraline for 3 weeks presents with confusion and headache. Sodium is 122 mmol/L. What is the diagnosis and management? (Answer: SSRI-induced SIADH (hyponatraemia). Risk highest in elderly, first 2 weeks. Management: fluid restrict, hold sertraline, monitor sodium; if Na <120 or seizures → hypertonic saline in ICU. Reassess antidepressant choice: consider mirtazapine or ECT if depression still requires urgent treatment.)",
+        "A 32-year-old woman with depression is 8 weeks pregnant and on sertraline 50 mg. She wants to stop. How do you counsel her? (Answer: Sertraline is the SSRI of choice in pregnancy, lowest placental transfer. Untreated maternal depression carries significant risks (preterm birth, low birth weight, poor bonding, suicidality). Stopping abruptly risks relapse AND discontinuation syndrome. Counsel: continue sertraline, monitor closely with obstetrician. Watch for neonatal adaptation syndrome in 3rd trimester (jitteriness, respiratory distress, poor feeding, usually self-limited).)",
+        "A 22-year-old college student with severe depression and active suicidality is brought to the ER. What is your immediate management? (Answer: Psychiatric emergency. (1) Assess suicidality directly and remove access to means. (2) Do not send home alone: admit or supervised setting. (3) Consider urgent ECT (rapid response within days). (4) Start SSRI (sertraline 50 mg OD). (5) Tele-MANAS 14416 for family. (6) Black box warning: weekly monitoring. (7) Involve family for safety planning.)",
+        "A 45-year-old man has failed two adequate SSRI trials (sertraline 200 mg, then escitalopram 20 mg) over 8 months. PHQ-9 remains 18. What are the options? (Answer: Treatment-resistant depression. (1) Reassess diagnosis: missed bipolar? Substance use? Medical mimic? (2) Augment with bupropion XL 150 mg or mirtazapine 15 mg. (3) Switch to SNRI (venlafaxine, duloxetine) or TCA (amitriptyline). (4) Consider lithium augmentation (level 0.6–0.8). (5) Consider atypical antipsychotic augmentation (aripiprazole 2–5 mg, quetiapine XR 150 mg). (6) Consider rTMS or esketamine. (7) ECT if severe/suicidal/psychotic.)",
       ],
     },
     fmge: {
@@ -748,13 +748,13 @@ export const majorDepressiveDisorder: Disease = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The monoamine hypothesis is incomplete. Modern pathophysiology emphasises: (1) BDNF/neuroplasticity hypothesis — stress and depression lower BDNF, causing hippocampal volume loss (~5–10% reduction on MRI); all antidepressants converge on BDNF upregulation. (2) Inflammatory hypothesis — elevated CRP/IL-6/TNF-α; IDO activation shunts tryptophan to kynurenine; explains treatment-resistant depression with chronic inflammation. (3) HPA axis hyperactivity — cortisol elevation, impaired dexamethasone suppression. (4) Circuit-level: hyperactive amygdala, hypoactive prefrontal cortex, hyperactive subgenual cingulate (Brodmann 25).",
-        "Treatment-resistant depression (TRD) algorithm: (1) Confirm diagnosis — reassess for bipolar, substance use, medical mimics, non-adherence. (2) Optimise current antidepressant dose to maximum tolerated. (3) Augment: bupropion XL 150 mg, mirtazapine 15–30 mg, lithium (level 0.6–0.8), T3 25–50 mcg, atypical antipsychotic (aripiprazole 2–5 mg, quetiapine XR 150 mg, olanzapine 5 mg). (4) Switch class: SSRI → SNRI → TCA → MAOI. (5) Ketamine/esketamine for severe TRD with suicidality. (6) rTMS — left DLPFC, 10 Hz, 30–36 sessions. (7) ECT for severe/psychotic/catatonic/suicidal TRD.",
-        "Ketamine mechanism: NMDA antagonism → glutamate surge → mTOR pathway activation → rapid synaptogenesis and BDNF release. Single IV dose (0.5 mg/kg over 40 min) produces response within hours — useful for acute suicidality. Esketamine intranasal (Spravato) — FDA-approved for TRD. Indian NIMHANS studies confirm efficacy in Indian patients. Requires 2-hour post-dose observation.",
+        "The monoamine hypothesis is incomplete. Modern pathophysiology emphasises: (1) BDNF/neuroplasticity hypothesis; stress and depression lower BDNF, causing hippocampal volume loss (~5–10% reduction on MRI); all antidepressants converge on BDNF upregulation. (2) Inflammatory hypothesis: elevated CRP/IL-6/TNF-α; IDO activation shunts tryptophan to kynurenine; explains treatment-resistant depression with chronic inflammation. (3) HPA axis hyperactivity: cortisol elevation, impaired dexamethasone suppression. (4) Circuit-level: hyperactive amygdala, hypoactive prefrontal cortex, hyperactive subgenual cingulate (Brodmann 25).",
+        "Treatment-resistant depression (TRD) algorithm: (1) Confirm diagnosis; reassess for bipolar, substance use, medical mimics, non-adherence. (2) Optimise current antidepressant dose to maximum tolerated. (3) Augment: bupropion XL 150 mg, mirtazapine 15–30 mg, lithium (level 0.6–0.8), T3 25–50 mcg, atypical antipsychotic (aripiprazole 2–5 mg, quetiapine XR 150 mg, olanzapine 5 mg). (4) Switch class: SSRI → SNRI → TCA → MAOI. (5) Ketamine/esketamine for severe TRD with suicidality. (6) rTMS: left DLPFC, 10 Hz, 30–36 sessions. (7) ECT for severe/psychotic/catatonic/suicidal TRD.",
+        "Ketamine mechanism: NMDA antagonism → glutamate surge → mTOR pathway activation → rapid synaptogenesis and BDNF release. Single IV dose (0.5 mg/kg over 40 min) produces response within hours: useful for acute suicidality. Esketamine intranasal (Spravato). FDA-approved for TRD. Indian NIMHANS studies confirm efficacy in Indian patients. Requires 2-hour post-dose observation.",
         "Antidepressant selection by patient profile: PREGNANCY/LACTATION → sertraline (SSRI of choice). ELDERLY → sertraline or escitalopram (low CYP interactions); avoid paroxetine (anticholinergic); watch SIADH. COMORBID PAIN → duloxetine (SNRI). INSOMNIA/WEIGHT LOSS → mirtazapine. FATIGUE/ANHEDONIA → bupropion (or SSRI + bupropion augmentation). SEXUAL DYSFUNCTION → bupropion (avoid SSRIs). CARDIAC DISEASE → sertraline (best cardiac safety data post-MI). SEIZURE DISORDER → sertraline, citalopram (avoid bupropion).",
-        "Maintenance therapy duration: First episode → 6–12 months after remission. Second episode → 2–3 years. Third+ episode → indefinite. Recurrence rates: ~50% after 1 episode, ~70% after 2, ~90% after 3. Patient and family education about maintenance therapy is critical — premature discontinuation is the most common cause of relapse.",
-        "Psychotic depression requires combination therapy: antidepressant + antipsychotic (olanzapine, quetiapine, aripiprazole). ECT is the most effective treatment for psychotic depression (~80% response). Do NOT use antidepressant alone — psychotic depression is a high-risk presentation with elevated suicide risk.",
-        "Peripartum depression: ~10–15% of pregnant/postpartum women. Onset usually within 4 weeks postpartum (DSM-5 specifier: peripartum onset = during pregnancy or within 4 weeks postpartum). Sertraline is the SSRI of choice. ECT is safe in pregnancy. Untreated peripartum depression has serious consequences — impaired bonding, infanticide risk, suicide (a leading cause of maternal mortality). Indian context: family involvement is critical; stigma is high.",
+        "Maintenance therapy duration: First episode → 6–12 months after remission. Second episode → 2–3 years. Third+ episode → indefinite. Recurrence rates: ~50% after 1 episode, ~70% after 2, ~90% after 3. Patient and family education about maintenance therapy is critical: premature discontinuation is the most common cause of relapse.",
+        "Psychotic depression requires combination therapy: antidepressant + antipsychotic (olanzapine, quetiapine, aripiprazole). ECT is the most effective treatment for psychotic depression (~80% response). Do NOT use antidepressant alone: psychotic depression is a high-risk presentation with elevated suicide risk.",
+        "Peripartum depression: ~10–15% of pregnant/postpartum women. Onset usually within 4 weeks postpartum (DSM-5 specifier: peripartum onset = during pregnancy or within 4 weeks postpartum). Sertraline is the SSRI of choice. ECT is safe in pregnancy. Untreated peripartum depression has serious consequences: impaired bonding, infanticide risk, suicide (a leading cause of maternal mortality). Indian context: family involvement is critical; stigma is high.",
       ],
     },
   },
@@ -773,16 +773,16 @@ export const majorDepressiveDisorder: Disease = {
      PYQ METADATA — CONCEPT-LEVEL, NO COPYRIGHTED CONTENT
      ============================================================ */
   pyqMetadata: [
-    { exam: "NEET PG", year: 2022, concept: "DSM-5 diagnostic criteria for MDD — number of symptoms and duration", topic: "Mood disorders — diagnosis" },
+    { exam: "NEET PG", year: 2022, concept: "DSM-5 diagnostic criteria for MDD: number of symptoms and duration", topic: "Mood disorders: diagnosis" },
     { exam: "NEET PG", year: 2021, concept: "PHQ-9 score interpretation and severity bands", topic: "Psychiatric rating scales" },
     { exam: "NEET PG", year: 2020, concept: "First-line antidepressant in pregnancy", topic: "Antidepressants in pregnancy" },
     { exam: "NEET PG", year: 2019, concept: "SIGECAPS mnemonic for MDD symptoms", topic: "MDD diagnosis" },
     { exam: "INICET", year: 2023, concept: "Augmentation strategy for SSRI partial response", topic: "Treatment-resistant depression" },
     { exam: "INICET", year: 2022, concept: "ECT indications in MDD", topic: "Brain stimulation therapies" },
-    { exam: "INICET", year: 2021, concept: "Bipolar vs unipolar depression — screening before antidepressant", topic: "Bipolar disorder" },
-    { exam: "FMGE", year: 2022, concept: "DSM-5 criteria for MDD — 5 of 9 symptoms for 2 weeks", topic: "Mood disorders" },
+    { exam: "INICET", year: 2021, concept: "Bipolar vs unipolar depression: screening before antidepressant", topic: "Bipolar disorder" },
+    { exam: "FMGE", year: 2022, concept: "DSM-5 criteria for MDD: 5 of 9 symptoms for 2 weeks", topic: "Mood disorders" },
     { exam: "FMGE", year: 2021, concept: "SSRI mechanism and onset of action", topic: "Antidepressant pharmacology" },
-    { exam: "AIIMS", year: 2020, concept: "Serotonin syndrome — diagnosis and treatment", topic: "Antidepressant adverse effects" },
+    { exam: "AIIMS", year: 2020, concept: "Serotonin syndrome: diagnosis and treatment", topic: "Antidepressant adverse effects" },
   ],
 
   /* ============================================================
@@ -790,9 +790,9 @@ export const majorDepressiveDisorder: Disease = {
      ============================================================ */
   memoryTricks: [
     {
-      title: "DSM-5 MDD Symptoms — SIGECAPS",
+      title: "DSM-5 MDD Symptoms. SIGECAPS",
       trick:
-        "SIGECAPS — Sleep (insomnia/hypersomnia), Interest (anhedonia), Guilt (worthlessness), Energy (fatigue), Concentration (poor), Appetite (change), Psychomotor (agitation/retardation), Suicidality. Plus depressed Mood. Need 5+ of 9 for ≥2 weeks.",
+        "SIGECAPS. Sleep (insomnia/hypersomnia), Interest (anhedonia), Guilt (worthlessness), Energy (fatigue), Concentration (poor), Appetite (change), Psychomotor (agitation/retardation), Suicidality. Plus depressed Mood. Need 5+ of 9 for ≥2 weeks.",
       remembers: "The 9 DSM-5 symptoms of MDD. 'Caps' = capsules (the antidepressant you'll prescribe).",
     },
     {
@@ -802,49 +802,49 @@ export const majorDepressiveDisorder: Disease = {
       remembers: "The most tested diagnostic distinction. ICD-10 (used in Indian government hospitals) is less stringent than DSM-5.",
     },
     {
-      title: "PHQ-9 Severity Bands — '5-10-15-20'",
+      title: "PHQ-9 Severity Bands: '5-10-15-20'",
       trick:
         "PHQ-9: 0–4 minimal, 5–9 mild, 10–14 moderate, 15–19 moderately severe, 20–27 severe. Treat ≥10 with active therapy.",
       remembers: "PHQ-9 score interpretation. ≥10 is the threshold for clinical depression; ≥20 is severe (urgent psychiatry referral).",
     },
     {
-      title: "First-line Antidepressant — 'Sertraline or Escitalopram'",
+      title: "First-line Antidepressant: 'Sertraline or Escitalopram'",
       trick:
         "S-E first-line: Sertraline or Escitalopram. (S = Safe in pregnancy; E = Escitalopram for fewest interactions.)",
-      remembers: "First-choice SSRIs in MDD — per IPS, NICE, and APA guidelines.",
+      remembers: "First-choice SSRIs in MDD: per IPS, NICE, and APA guidelines.",
     },
     {
-      title: "Bipolar Screen Before Antidepressant — 'MDQ First'",
+      title: "Bipolar Screen Before Antidepressant: 'MDQ First'",
       trick:
         "Before any antidepressant: MDQ (Mood Disorder Questionnaire) first. Missed bipolar + SSRI = MANIC SWITCH.",
       remembers: "The single most important safety check before initiating an antidepressant.",
     },
     {
-      title: "SSRI Onset — '4–6 Weeks'",
+      title: "SSRI Onset: '4–6 Weeks'",
       trick:
-        "Side effects week 1–2, mood benefit week 4–6. Don't stop early — patients who stop at 2 weeks stop before the drug works.",
+        "Side effects week 1–2, mood benefit week 4–6. Don't stop early: patients who stop at 2 weeks stop before the drug works.",
       remembers: "SSRI onset delay and the rationale for patient counselling.",
     },
     {
-      title: "ECT Indications — 'CUPS'",
+      title: "ECT Indications: 'CUPS'",
       trick:
-        "CUPS — Catatonia, Urgent suicidality, Psychotic features, Severe treatment-resistant. (Also Stupor / refusal to eat.)",
+        "CUPS. Catatonia, Urgent suicidality, Psychotic features, Severe treatment-resistant. (Also Stupor / refusal to eat.)",
       remembers: "When to consider ECT in MDD.",
     },
     {
-      title: "Discontinuation Syndrome — 'FINISH'",
+      title: "Discontinuation Syndrome: 'FINISH'",
       trick:
-        "FINISH — Flu-like symptoms, Insomnia, Nausea, Imbalance, Sensory disturbances ('brain zaps'), Hyperarousal. Worst with paroxetine (shortest half-life); mildest with fluoxetine (self-tapers).",
+        "FINISH. Flu-like symptoms, Insomnia, Nausea, Imbalance, Sensory disturbances ('brain zaps'), Hyperarousal. Worst with paroxetine (shortest half-life); mildest with fluoxetine (self-tapers).",
       remembers: "SSRI discontinuation syndrome symptoms and worst-offending drug.",
     },
     {
-      title: "Augmentation Ladder — 'B-M-L-T'",
+      title: "Augmentation Ladder: 'B-M-L-T'",
       trick:
-        "After SSRI partial response: Bupropion → Mirtazapine → Lithium → T3. (Bupropion first — easiest; Lithium strongest evidence.)",
+        "After SSRI partial response: Bupropion → Mirtazapine → Lithium → T3. (Bupropion first, easiest; Lithium strongest evidence.)",
       remembers: "Stepwise augmentation strategy for treatment-resistant depression.",
     },
     {
-      title: "Beck's Cognitive Triad — 'Self-World-Future'",
+      title: "Beck's Cognitive Triad: 'Self-World-Future'",
       trick:
         "Negative view of SELF (worthless), WORLD (unfair), FUTURE (hopeless). CBT targets all three.",
       remembers: "The psychological theory underlying CBT for depression.",
@@ -855,20 +855,20 @@ export const majorDepressiveDisorder: Disease = {
      HIGH-YIELD SUMMARY — ONE-PAGE REVISION
      ============================================================ */
   highYieldSummary: [
-    "Definition: ≥2 weeks of pervasive low mood or anhedonia, with at least 5 of 9 SIGECAPS symptoms, causing functional impairment — not attributable to substance/medical condition/mania.",
-    "Epidemiology: ~300 million globally (leading cause of disability — WHO); ~57 million in India (NIMHANS NMHS). 2:1 female:male. Lifetime risk 10–15% global, ~9% India. Treatment gap ~85% in India.",
+    "Definition: ≥2 weeks of pervasive low mood or anhedonia, with at least 5 of 9 SIGECAPS symptoms, causing functional impairment, not attributable to substance/medical condition/mania.",
+    "Epidemiology: ~300 million globally (leading cause of disability. WHO); ~57 million in India (NIMHANS NMHS). 2:1 female:male. Lifetime risk 10–15% global, ~9% India. Treatment gap ~85% in India.",
     "Etiology: genetic (heritability ~37%), biological (monoamine deficiency, HPA hyperactivity, low BDNF, inflammation), psychological (Beck's cognitive triad), social (isolation, poverty, trauma), environmental (childhood adversity).",
     "Pathophysiology: Monoamine hypothesis (5-HT/NE/DA deficiency), BDNF/neuroplasticity hypothesis (hippocampal volume loss), inflammatory hypothesis (CRP/IL-6/TNF-α elevated, IDO activation), HPA axis hypercortisolism, circuit-level (amygdala hyperactive, PFC hypoactive, subgenual cingulate hyperactive).",
     "Diagnosis: DSM-5 (5/9 for ≥2 weeks, must include mood or anhedonia). ICD-10 (≥2/3 core for ≥2 weeks, official in India). ICD-11 (essentially DSM-5).",
     "Severity scales: PHQ-9 (self-rated, 0–4 minimal → 20–27 severe; ≥10 = clinical; ≥50% reduction = response; <5 = remission; validated in Hindi and Indian languages). HAM-D 17 (clinician-rated; <8 normal, >23 very severe).",
     "Differential: ALWAYS exclude bipolar depression (MDQ screen); adjustment disorder; persistent depressive disorder (dysthymia, ≥2 years); medical mimics (hypothyroidism, B12 deficiency); substance-induced; bereavement.",
-    "Stepwise management: (1) Lifestyle (exercise, sleep, diet) — mild. (2) Psychotherapy (CBT, IPT, BA) — mild-moderate. (3) SSRI (sertraline or escitalopram) — moderate-severe first-line. (4) SNRI/atypical — second-line. (5) Augmentation (bupropion, mirtazapine, lithium, T3) — partial response. (6) Brain stimulation (ECT, rTMS, ketamine) — severe/TRD.",
+    "Stepwise management: (1) Lifestyle (exercise, sleep, diet); mild. (2) Psychotherapy (CBT, IPT, BA): mild-moderate. (3) SSRI (sertraline or escitalopram): moderate-severe first-line. (4) SNRI/atypical: second-line. (5) Augmentation (bupropion, mirtazapine, lithium, T3): partial response. (6) Brain stimulation (ECT, rTMS, ketamine): severe/TRD.",
     "SSRI onset: 4–6 weeks for depression; 8–12 weeks for anxiety. Counsel: side effects come first (week 1–2), benefit later (week 4–6). Don't stop early.",
     "Sexual dysfunction is the #1 reason for SSRI discontinuation (30–50%). Ask directly at every follow-up. Add bupropion or switch.",
     "Continue treatment 6–12 months after remission for first episode; 2–3 years for second; indefinite for 3+. Premature discontinuation = relapse.",
     "ECT: severe/psychotic/catatonic/suicidal depression; ~80% response. Permitted under Mental Healthcare Act 2017 with anaesthesia + informed consent; unmodified ECT banned.",
     "Indian practice: IPS guidelines (SSRIs first-line); ICD-10 coding in government hospitals; DMHP; Tele-MANAS 14416; Jan Aushadhi sertraline (affordable generic available); PMJAY covers severe mental illness.",
-    "Never stop antidepressant abruptly — taper 4+ weeks. Fluoxetine self-tapers — substitute for last 2 weeks of paroxetine/sertraline taper.",
+    "Never stop antidepressant abruptly: taper 4+ weeks. Fluoxetine self-tapers: substitute for last 2 weeks of paroxetine/sertraline taper.",
     "ALWAYS assess suicide risk directly. Tele-MANAS 14416. Involve family in safety planning.",
   ],
 
@@ -877,31 +877,31 @@ export const majorDepressiveDisorder: Disease = {
      ============================================================ */
   clinicalCases: [
     {
-      title: "First-episode depression in a 28-year-old Indian woman — classical presentation and SSRI response",
+      title: "First-episode depression in a 28-year-old Indian woman: classical presentation and SSRI response",
       presentation:
         "A 28-year-old software engineer presents with 8 weeks of low mood, anhedonia, early-morning awakening, 4 kg weight loss, and intrusive thoughts of being 'a failure' after a relationship breakdown.",
       history:
-        "Priya, a 28-year-old software engineer based in Bengaluru, presents to her GP with 8 weeks of persistent low mood, loss of interest in activities she previously enjoyed (hiking, painting), early-morning awakening at 4 AM with inability to return to sleep, 4 kg unintentional weight loss, and intrusive negative thoughts about being 'a failure'. Symptoms began after her partner ended their 4-year relationship. She denies suicidal ideation but feels 'hopeless about the future'. No prior psychiatric history. No medical comorbidities. Sister has a history of depression treated with sertraline. Patient drinks alcohol 2–3 units/week, no recreational drugs, no regular medications. She works full-time but has taken 3 sick days in the past 2 weeks — previously zero in 2 years. Lives with parents in a joint family. Father reports she has stopped eating meals with the family and locks herself in her room.",
+        "Priya, a 28-year-old software engineer based in Bengaluru, presents to her GP with 8 weeks of persistent low mood, loss of interest in activities she previously enjoyed (hiking, painting), early-morning awakening at 4 AM with inability to return to sleep, 4 kg unintentional weight loss, and intrusive negative thoughts about being 'a failure'. Symptoms began after her partner ended their 4-year relationship. She denies suicidal ideation but feels 'hopeless about the future'. No prior psychiatric history. No medical comorbidities. Sister has a history of depression treated with sertraline. Patient drinks alcohol 2–3 units/week, no recreational drugs, no regular medications. She works full-time but has taken 3 sick days in the past 2 weeks: previously zero in 2 years. Lives with parents in a joint family. Father reports she has stopped eating meals with the family and locks herself in her room.",
       examination:
         "Alert, oriented, cooperative. Speech normal rate and rhythm, slightly reduced volume. Mood '2/10', affect congruent and reactive but restricted range. No hallucinations or delusions. No thought disorder. Cognitively intact (MoCA 28/30). PHQ-9 score 17 (moderately severe). GAD-7 score 11 (moderate). MDQ negative (no prior manic symptoms). No thyroid enlargement, no neurological deficit. BMI 22. BP 118/74, HR 72. CBC, TSH, B12, vitamin D, LFT, RBS all within normal limits.",
       diagnosis:
-        "Major Depressive Disorder, single episode, moderately severe, without psychotic features (DSM-5; ICD-10 F32.2). Differential: adjustment disorder with depressed mood (less likely given severity and neurovegetative symptoms); bipolar depression (MDQ negative — excluded); hypothyroidism-induced depression (TSH normal — excluded); vitamin B12 deficiency (B12 normal — excluded).",
+        "Major Depressive Disorder, single episode, moderately severe, without psychotic features (DSM-5; ICD-10 F32.2). Differential: adjustment disorder with depressed mood (less likely given severity and neurovegetative symptoms); bipolar depression (MDQ negative, excluded); hypothyroidism-induced depression (TSH normal, excluded); vitamin B12 deficiency (B12 normal, excluded).",
       management:
         "Started sertraline 25 mg OD for 5 days (to minimise early activation), then increased to 50 mg OD morning with food. Referred for CBT (12 sessions, weekly). Plan: review at 2 weeks (tolerability + suicidality), 4 weeks (early response), 6 weeks (dose escalation if PHQ-9 reduction <30%), 12 weeks (full response assessment). Patient given PHQ-9 self-rating schedule and safety plan with crisis contacts (Tele-MANAS 14416, 112 emergency). Counseled: (1) expect side effects before benefit; (2) do not stop abruptly; (3) avoid alcohol; (4) watch for agitation or new suicidal thoughts in first month; (5) full effect takes 4–6 weeks; (6) family to monitor mood and report warning signs. Father engaged in safety planning. Jan Aushadhi sertraline (₹2/tablet) prescribed given cost considerations.",
       outcome:
-        "Week 2: nausea and mild insomnia (tolerable, no suicidality, no manic switch). Week 4: sleep normalised, appetite returning, PHQ-9 12 (29% reduction — early response). Week 6: mood 5/10, PHQ-9 8 (53% reduction — treatment response). Dose maintained at 50 mg. CBT sessions ongoing (5 of 12 completed). Week 12: PHQ-9 4 (remission). Returned to hiking and painting. CBT completed. Plan: continue sertraline for 9 more months (12 months total from remission), then taper over 4–6 weeks. Family psychoeducation about early warning signs of relapse.",
+        "Week 2: nausea and mild insomnia (tolerable, no suicidality, no manic switch). Week 4: sleep normalised, appetite returning, PHQ-9 12 (29% reduction, early response). Week 6: mood 5/10, PHQ-9 8 (53% reduction, treatment response). Dose maintained at 50 mg. CBT sessions ongoing (5 of 12 completed). Week 12: PHQ-9 4 (remission). Returned to hiking and painting. CBT completed. Plan: continue sertraline for 9 more months (12 months total from remission), then taper over 4–6 weeks. Family psychoeducation about early warning signs of relapse.",
       teachingPoints: [
-        "PHQ-9 monitoring quantifies response — ≥50% reduction defines 'response', score <5 defines 'remission'.",
-        "Family history of SSRI response is a reasonable (though not definitive) predictor — pharmacogenomic testing is not yet routine in India.",
-        "Combining SSRI + CBT produces better long-term outcomes than either alone — especially for first-episode depression.",
+        "PHQ-9 monitoring quantifies response: ≥50% reduction defines 'response', score <5 defines 'remission'.",
+        "Family history of SSRI response is a reasonable (though not definitive) predictor: pharmacogenomic testing is not yet routine in India.",
+        "Combining SSRI + CBT produces better long-term outcomes than either alone, especially for first-episode depression.",
         "The 6-week review point is critical: if PHQ-9 reduction is <30%, increase the dose; if <50% at 12 weeks, consider switching or augmenting.",
-        "Continue treatment for 6–12 months AFTER remission for a first episode — stopping earlier dramatically increases relapse risk.",
+        "Continue treatment for 6–12 months AFTER remission for a first episode, stopping earlier dramatically increases relapse risk.",
         "Indian joint-family context: involve family in safety planning and monitoring. Father's engagement was critical to adherence.",
-        "Jan Aushadhi generic sertraline is ₹2/tablet — affordable even for long-term therapy.",
+        "Jan Aushadhi generic sertraline is ₹2/tablet: affordable even for long-term therapy.",
       ],
     },
     {
-      title: "Severe psychotic depression in a 62-year-old man — ECT as first-line",
+      title: "Severe psychotic depression in a 62-year-old man. ECT as first-line",
       presentation:
         "A 62-year-old retired man is brought by family after 3 months of severe depression with psychotic features, refusal to eat, and somatic delusions that his 'bowels are rotting'.",
       history:
@@ -909,18 +909,18 @@ export const majorDepressiveDisorder: Disease = {
       examination:
         "Alert but withdrawn, makes minimal eye contact. Speech: mute (writes single words when prompted). Psychomotor retardation marked (sits motionless for 30 minutes). Mood: severely depressed. Affect: flat, congruent. Thought content: nihilistic and somatic delusions ('bowels rotting'). No perceptual abnormality. Cognition difficult to assess due to mutism. PHQ-9 not assessable (mutism). HAM-D estimated 35 (very severe). BP 142/88, HR 78. CBC, TSH, B12, RFT, LFT, ECG all within normal limits. CT brain: mild age-related atrophy, no acute finding.",
       diagnosis:
-        "Severe Major Depressive Disorder, single episode, with psychotic features (DSM-5; ICD-10 F32.3 — severe with psychotic symptoms). Differential: psychotic depression vs schizophrenia (psychosis is mood-congruent and occurred after mood symptoms — favours psychotic depression); organic psychosis (CT and labs normal — excluded); Lewy body dementia (no cognitive fluctuation or parkinsonism — unlikely).",
+        "Severe Major Depressive Disorder, single episode, with psychotic features (DSM-5; ICD-10 F32.3: severe with psychotic symptoms). Differential: psychotic depression vs schizophrenia (psychosis is mood-congruent and occurred after mood symptoms, favours psychotic depression); organic psychosis (CT and labs normal, excluded); Lewy body dementia (no cognitive fluctuation or parkinsonism, unlikely).",
       management:
-        "Admitted to psychiatry inpatient unit (high suicide risk, refusal to eat, psychotic features). Started on urgent ECT course (bilateral, 3 sessions/week × 8 sessions) under anaesthesia with informed consent (per Mental Healthcare Act 2017). Concurrent: olanzapine 5 mg OD (for psychotic features) and sertraline 25 mg OD (to be titrated to 50 mg after ECT course). IV fluids and nasogastric feeding for nutritional support. Tele-MANAS 14416 given to family for crisis support. Family psychoeducation about ECT (procedure, side effects — especially transient memory disturbance, efficacy). Suicidality monitored 1:1.",
+        "Admitted to psychiatry inpatient unit (high suicide risk, refusal to eat, psychotic features). Started on urgent ECT course (bilateral, 3 sessions/week × 8 sessions) under anaesthesia with informed consent (per Mental Healthcare Act 2017). Concurrent: olanzapine 5 mg OD (for psychotic features) and sertraline 25 mg OD (to be titrated to 50 mg after ECT course). IV fluids and nasogastric feeding for nutritional support. Tele-MANAS 14416 given to family for crisis support. Family psychoeducation about ECT (procedure, side effects, especially transient memory disturbance, efficacy). Suicidality monitored 1:1.",
       outcome:
         "After 3 ECT sessions: started speaking in short sentences, accepted oral feeds, somatic delusions diminished. After 6 sessions: PHQ-9 assessable at 18 (down from estimated 35). After 8 sessions: mood 6/10, eating normally, delusions resolved, HAM-D 12. Discharged on sertraline 50 mg OD + olanzapine 5 mg OD. Olanzapine to be tapered after 6 months of stability (psychotic depression typically requires 6–12 months of antipsychotic continuation). Sertraline to be continued for 12–24 months. Family psychoeducation about relapse warning signs. Outpatient ECT not required (full remission achieved).",
       teachingPoints: [
-        "Psychotic depression is a PSYCHIATRIC EMERGENCY — high suicide risk, high mortality. Requires urgent admission and combination therapy (antidepressant + antipsychotic) or ECT.",
+        "Psychotic depression is a PSYCHIATRIC EMERGENCY: high suicide risk, high mortality. Requires urgent admission and combination therapy (antidepressant + antipsychotic) or ECT.",
         "ECT is the most effective treatment for psychotic depression (~80% response rate, faster than medication). Indicated when: psychosis, catatonia, suicidality, refusal to eat/drink, treatment-resistant.",
         "Mental Healthcare Act 2017 (India): ECT permitted only under anaesthesia with informed consent. Unmodified ECT is BANNED. Document consent process carefully.",
-        "Somatic delusions (e.g., 'bowels rotting', 'organs missing') are classic for psychotic depression — Cotard's syndrome is the extreme form (delusion of being dead or non-existent).",
+        "Somatic delusions (e.g., 'bowels rotting', 'organs missing') are classic for psychotic depression. Cotard's syndrome is the extreme form (delusion of being dead or non-existent).",
         "Continue antipsychotic for 6–12 months after psychotic depression remission; antidepressant for 12–24 months (longer than non-psychotic MDD).",
-        "Family history of completed suicide is a strong risk factor — always ask about family psychiatric history.",
+        "Family history of completed suicide is a strong risk factor, always ask about family psychiatric history.",
       ],
     },
   ],
@@ -1012,14 +1012,14 @@ export const majorDepressiveDisorder: Disease = {
       {
         id: "suicidal",
         question: "Severe depression WITH active suicidality",
-        recommendation: "Psychiatric emergency. Assess directly; remove access to means. Do not send home alone — admit or supervised setting. Consider urgent ECT (rapid response). Start SSRI. Tele-MANAS 14416 for family. Involve family in safety planning.",
+        recommendation: "Psychiatric emergency. Assess directly; remove access to means. Do not send home alone: admit or supervised setting. Consider urgent ECT (rapid response). Start SSRI. Tele-MANAS 14416 for family. Involve family in safety planning.",
         reasoning: "Active suicidality = high imminent risk. ECT produces response within days (vs 4–6 weeks for SSRI). 1:1 observation inpatient. Document assessment and safety plan.",
       },
       {
         id: "ssri-start",
-        question: "Starting an SSRI — what to do first",
+        question: "Starting an SSRI: what to do first",
         recommendation: "ALWAYS screen for bipolar disorder (MDQ) BEFORE prescribing any antidepressant. Check for MAOI use in past 14 days (absolute contraindication). Baseline PHQ-9. In elderly: check serum sodium. Counsel on 4–6 week onset, side effects, and adherence.",
-        reasoning: "Missed bipolar + SSRI = manic switch (potentially disastrous). MAOI + SSRI = fatal serotonin syndrome. Black box warning: suicidality in <25 years — weekly monitoring first month.",
+        reasoning: "Missed bipolar + SSRI = manic switch (potentially disastrous). MAOI + SSRI = fatal serotonin syndrome. Black box warning: suicidality in <25 years; weekly monitoring first month.",
         branches: [
           { label: "Bipolar excluded, MAOI excluded", next: "ssri-prescribe" },
           { label: "Bipolar confirmed", next: "bipolar" },
@@ -1028,13 +1028,13 @@ export const majorDepressiveDisorder: Disease = {
       {
         id: "bipolar",
         question: "Bipolar depression confirmed (MDQ positive)",
-        recommendation: "Mood stabiliser first (lithium, quetiapine, lamotrigine, olanzapine, valproate). Antidepressant (SSRI) ONLY if mood stabiliser alone is insufficient — and always WITH mood stabiliser cover.",
+        recommendation: "Mood stabiliser first (lithium, quetiapine, lamotrigine, olanzapine, valproate). Antidepressant (SSRI) ONLY if mood stabiliser alone is insufficient, and always WITH mood stabiliser cover.",
         reasoning: "Antidepressant monotherapy in bipolar depression risks manic switch. Quetiapine and olanzapine-fluoxetine combination are FDA-approved for bipolar depression. Refer to psychiatry.",
       },
       {
         id: "ssri-prescribe",
         question: "Which SSRI to choose?",
-        recommendation: "Sertraline (default — safe in pregnancy, σ1 agonism, mild CYP interactions) OR escitalopram (lowest CYP interactions). Alternatives by profile: pregnancy → sertraline; elderly → sertraline/escitalopram; comorbid pain → duloxetine; insomnia/weight loss → mirtazapine; fatigue/sexual dysfunction → bupropion.",
+        recommendation: "Sertraline (default, safe in pregnancy, σ1 agonism, mild CYP interactions) OR escitalopram (lowest CYP interactions). Alternatives by profile: pregnancy → sertraline; elderly → sertraline/escitalopram; comorbid pain → duloxetine; insomnia/weight loss → mirtazapine; fatigue/sexual dysfunction → bupropion.",
         reasoning: "Cipriani Lancet 2018 network meta-analysis: SSRIs have best efficacy/tolerability ratio. Sertraline and escitalopram are first-choice SSRIs in Indian practice.",
         branches: [
           { label: "Continue management", next: "followup" },
@@ -1052,8 +1052,8 @@ export const majorDepressiveDisorder: Disease = {
       },
       {
         id: "augmentation",
-        question: "Partial response to SSRI — augmentation options",
-        recommendation: "First-line: bupropion XL 150 mg/day (especially for fatigue/anhedonia/sexual dysfunction) OR mirtazapine 15–30 mg at night (especially for insomnia). Second-line: lithium (level 0.6–0.8) — strongest evidence. Third-line: T3 25–50 mcg/day, atypical antipsychotic (aripiprazole 2–5 mg, quetiapine XR 150 mg).",
+        question: "Partial response to SSRI: augmentation options",
+        recommendation: "First-line: bupropion XL 150 mg/day (especially for fatigue/anhedonia/sexual dysfunction) OR mirtazapine 15–30 mg at night (especially for insomnia). Second-line: lithium (level 0.6–0.8): strongest evidence. Third-line: T3 25–50 mcg/day, atypical antipsychotic (aripiprazole 2–5 mg, quetiapine XR 150 mg).",
         reasoning: "Lithium has the strongest augmentation evidence (8 RCTs, NNT ~4). Bupropion and mirtazapine are more practical in low-resource Indian settings (no level monitoring required). Reassess diagnosis before declaring treatment-resistant.",
         branches: [
           { label: "Still no response after 2 augmentations", next: "trd" },
@@ -1063,13 +1063,13 @@ export const majorDepressiveDisorder: Disease = {
         id: "trd",
         question: "Treatment-resistant depression (failed ≥2 antidepressant trials)",
         recommendation: "Refer to psychiatry. Consider: (1) switch to SNRI/TCA/MAOI; (2) atypical antipsychotic augmentation; (3) ketamine/esketamine (rapid-acting, especially for suicidality); (4) rTMS (left DLPFC, 30–36 sessions); (5) ECT (most effective, especially for severe/psychotic/suicidal).",
-        reasoning: "TRD = failure of ≥2 adequate antidepressant trials. Reassess diagnosis (bipolar? substance use? medical mimic?). Ketamine produces response within hours (vs 4–6 weeks for SSRIs) — useful for acute suicidality.",
+        reasoning: "TRD = failure of ≥2 adequate antidepressant trials. Reassess diagnosis (bipolar? substance use? medical mimic?). Ketamine produces response within hours (vs 4–6 weeks for SSRIs): useful for acute suicidality.",
       },
       {
         id: "maintenance",
-        question: "Remission achieved (PHQ-9 <5) — maintenance plan",
+        question: "Remission achieved (PHQ-9 <5): maintenance plan",
         recommendation: "Continue antidepressant for 6–12 months after remission for first episode; 2–3 years for second episode; indefinite for 3+ episodes. Psychotherapy (CBT) reduces relapse risk. Lifestyle (exercise, sleep, social connection). Family psychoeducation about early warning signs.",
-        reasoning: "Premature discontinuation = relapse. Recurrence rates: ~50% after 1 episode, ~70% after 2, ~90% after 3. Always taper over 4+ weeks when discontinuing — never stop abruptly.",
+        reasoning: "Premature discontinuation = relapse. Recurrence rates: ~50% after 1 episode, ~70% after 2, ~90% after 3. Always taper over 4+ weeks when discontinuing, never stop abruptly.",
       },
     ],
   },
@@ -1080,18 +1080,18 @@ export const majorDepressiveDisorder: Disease = {
   commonMistakes: [
     {
       mistake: "Not screening for bipolar disorder before starting an antidepressant",
-      why: "SSRI monotherapy in undiagnosed bipolar depression can trigger a manic switch — potentially disastrous (suicide, hospitalisation, relationship/financial harm). Bipolar is missed in ~40% of cases initially diagnosed as unipolar MDD.",
+      why: "SSRI monotherapy in undiagnosed bipolar depression can trigger a manic switch: potentially disastrous (suicide, hospitalisation, relationship/financial harm). Bipolar is missed in ~40% of cases initially diagnosed as unipolar MDD.",
       correction: "ALWAYS screen with MDQ (Mood Disorder Questionnaire) before initiating any antidepressant. Ask specifically about prior periods of elevated mood, reduced sleep need, racing thoughts, and impulsive behaviour. If MDQ positive, refer to psychiatry for mood stabiliser assessment before SSRI.",
     },
     {
       mistake: "Stopping the antidepressant at 2 weeks because 'it's not working'",
       why: "SSRIs take 4–6 weeks for full antidepressant effect. Stopping at 2 weeks means stopping before the drug has had a chance to work. Patients interpret lack of early benefit as 'this drug doesn't work for me'.",
-      correction: "Counsel explicitly at initiation: 'Side effects come first (week 1–2), mood benefit comes later (week 4–6). Don't stop early — wait.' Schedule follow-up at 4 weeks to reassess response.",
+      correction: "Counsel explicitly at initiation: 'Side effects come first (week 1–2), mood benefit comes later (week 4–6). Don't stop early: wait.' Schedule follow-up at 4 weeks to reassess response.",
     },
     {
       mistake: "Abrupt discontinuation when the patient feels better",
-      why: "Sudden cessation after ≥4 weeks of use causes discontinuation syndrome — dizziness, 'brain zaps', nausea, irritability, insomnia. Can start within 24 hours of missed dose. Worst with paroxetine (shortest half-life).",
-      correction: "ALWAYS taper over 4+ weeks. If severe, substitute fluoxetine (long half-life) for last 2 weeks of paroxetine/sertraline taper — fluoxetine self-tapers.",
+      why: "Sudden cessation after ≥4 weeks of use causes discontinuation syndrome: dizziness, 'brain zaps', nausea, irritability, insomnia. Can start within 24 hours of missed dose. Worst with paroxetine (shortest half-life).",
+      correction: "ALWAYS taper over 4+ weeks. If severe, substitute fluoxetine (long half-life) for last 2 weeks of paroxetine/sertraline taper: fluoxetine self-tapers.",
     },
     {
       mistake: "Stopping treatment too early after remission",
@@ -1100,7 +1100,7 @@ export const majorDepressiveDisorder: Disease = {
     },
     {
       mistake: "Not asking about sexual dysfunction",
-      why: "Sexual dysfunction affects 30–50% of patients on SSRIs and is the #1 reason for non-adherence. Patients rarely volunteer it — they simply stop the medication.",
+      why: "Sexual dysfunction affects 30–50% of patients on SSRIs and is the #1 reason for non-adherence. Patients rarely volunteer it: they simply stop the medication.",
       correction: "Ask directly at every follow-up: 'Any changes in sexual interest or function?' If present: dose reduction, add bupropion XL 150 mg, switch to bupropion or mirtazapine. Sildenafil for erectile component.",
     },
     {
@@ -1115,12 +1115,12 @@ export const majorDepressiveDisorder: Disease = {
     },
     {
       mistake: "Not warning about NSAID bleeding risk",
-      why: "SSRIs deplete platelet serotonin → impaired clotting. Combined with NSAIDs → 6× increased risk of upper GI bleed. Patients take ibuprofen for SSRI-induced headache — creating a vicious cycle.",
+      why: "SSRIs deplete platelet serotonin → impaired clotting. Combined with NSAIDs → 6× increased risk of upper GI bleed. Patients take ibuprofen for SSRI-induced headache, creating a vicious cycle.",
       correction: "Counsel: use paracetamol instead of ibuprofen/diclofenac. If NSAIDs are necessary, add PPI for gastroprotection.",
     },
     {
       mistake: "Not involving family in Indian context",
-      why: "In Indian joint-family culture, family mediates help-seeking, monitors mood, ensures medication adherence, and provides crisis support. Not involving them is a missed opportunity — and patients are more likely to discontinue medication if family is not engaged.",
+      why: "In Indian joint-family culture, family mediates help-seeking, monitors mood, ensures medication adherence, and provides crisis support. Not involving them is a missed opportunity, and patients are more likely to discontinue medication if family is not engaged.",
       correction: "Family psychoeducation is critical in Indian practice. Involve a family member in counselling sessions. Provide Tele-MANAS 14416 number to family. Engage family in safety planning if suicidality is present.",
     },
     {
@@ -1135,8 +1135,8 @@ export const majorDepressiveDisorder: Disease = {
     },
     {
       mistake: "Using SSRIs in bipolar depression without mood stabiliser cover",
-      why: "SSRI monotherapy in bipolar depression can trigger a manic switch — potentially with disastrous consequences (suicide, hospitalisation, financial/relationship harm).",
-      correction: "Always screen for bipolar disorder (MDQ) before initiating any antidepressant. If bipolar confirmed, use mood stabiliser first (lithium, quetiapine, lamotrigine, olanzapine, valproate). Antidepressant (SSRI) ONLY if mood stabiliser alone is insufficient — and always WITH mood stabiliser cover.",
+      why: "SSRI monotherapy in bipolar depression can trigger a manic switch: potentially with disastrous consequences (suicide, hospitalisation, financial/relationship harm).",
+      correction: "Always screen for bipolar disorder (MDQ) before initiating any antidepressant. If bipolar confirmed, use mood stabiliser first (lithium, quetiapine, lamotrigine, olanzapine, valproate). Antidepressant (SSRI) ONLY if mood stabiliser alone is insufficient, and always WITH mood stabiliser cover.",
     },
   ],
 
@@ -1146,13 +1146,13 @@ export const majorDepressiveDisorder: Disease = {
   wardPearls: {
     professorMayAsk: [
       "What are the DSM-5 diagnostic criteria for MDD? (5+ of 9 symptoms for ≥2 weeks; must include depressed mood or anhedonia; mnemonic SIGECAPS.)",
-      "Differentiate MDD from bipolar depression. How do you screen? (Bipolar requires prior manic/hypomanic episode; screen with MDQ before starting any antidepressant — to avoid manic switch.)",
-      "What is the pathophysiology of MDD? Explain the monoamine, BDNF, and inflammatory hypotheses. (Monoamine deficiency → BDNF reduction → hippocampal atrophy; inflammatory activation of IDO shunts tryptophan to kynurenine; HPA hypercortisolism damages hippocampus — vicious cycle.)",
-      "What is the first-line pharmacotherapy for MDD? (SSRI — sertraline or escitalopram. Cipriani Lancet 2018 network meta-analysis confirmed best efficacy/tolerability ratio.)",
+      "Differentiate MDD from bipolar depression. How do you screen? (Bipolar requires prior manic/hypomanic episode; screen with MDQ before starting any antidepressant, to avoid manic switch.)",
+      "What is the pathophysiology of MDD? Explain the monoamine, BDNF, and inflammatory hypotheses. (Monoamine deficiency → BDNF reduction → hippocampal atrophy; inflammatory activation of IDO shunts tryptophan to kynurenine; HPA hypercortisolism damages hippocampus: vicious cycle.)",
+      "What is the first-line pharmacotherapy for MDD? (SSRI, sertraline or escitalopram. Cipriani Lancet 2018 network meta-analysis confirmed best efficacy/tolerability ratio.)",
       "When do you choose ECT in MDD? (Severe with psychosis, catatonia, active suicidality, refusal to eat/drink, treatment-resistant, pregnancy where medications limited. ~80% response rate.)",
       "What is the difference between DSM-5 and ICD-10 criteria? (DSM-5 = 5 of 9 symptoms; ICD-10 = 2 of 3 core symptoms. ICD-10 is the official coding system in India.)",
       "How do you interpret PHQ-9? (0–4 minimal, 5–9 mild, 10–14 moderate, 15–19 moderately severe, 20–27 severe. ≥10 = clinical depression; ≥50% reduction = response; <5 = remission.)",
-      "What is the maintenance therapy duration after first episode of MDD? (6–12 months after remission. Recurrence rates: ~50% after 1, ~70% after 2, ~90% after 3 — justify longer therapy in recurrent MDD.)",
+      "What is the maintenance therapy duration after first episode of MDD? (6–12 months after remission. Recurrence rates: ~50% after 1, ~70% after 2, ~90% after 3; justify longer therapy in recurrent MDD.)",
     ],
     residentExpects: [
       "Know DSM-5 and ICD-10 criteria for MDD and be able to apply them in clinical practice.",
@@ -1166,30 +1166,30 @@ export const majorDepressiveDisorder: Disease = {
       "Know when to refer to psychiatry: PHQ-9 ≥20, suicidality, psychotic features, treatment-resistant, diagnostic uncertainty, bipolar suspicion.",
     ],
     consultantsDo: [
-      "Use PHQ-9 at every visit for objective severity monitoring — and item-9 (suicidal thoughts) is always reviewed.",
-      "Screen for bipolar disorder (MDQ) before starting any antidepressant — even in apparent unipolar MDD.",
-      "Combine SSRI + CBT for moderate-severe MDD — better long-term outcomes than either alone.",
+      "Use PHQ-9 at every visit for objective severity monitoring, and item-9 (suicidal thoughts) is always reviewed.",
+      "Screen for bipolar disorder (MDQ) before starting any antidepressant, even in apparent unipolar MDD.",
+      "Combine SSRI + CBT for moderate-severe MDD: better long-term outcomes than either alone.",
       "Ask about sexual dysfunction at every follow-up (patients rarely volunteer).",
       "Continue treatment 6–12 months after remission for first episode; 2–3 years for second; indefinite for 3+.",
       "Use sertraline as default SSRI in pregnancy and lactation; escitalopram for low CYP interaction profile.",
       "Use bupropion XL 150 mg as first-line augmentation for SSRI partial response.",
-      "Consider ECT early in severe/psychotic/catatonic/suicidal depression — don't wait for multiple drug failures.",
-      "Always involve family in Indian practice — psychoeducation, monitoring, and safety planning.",
+      "Consider ECT early in severe/psychotic/catatonic/suicidal depression: don't wait for multiple drug failures.",
+      "Always involve family in Indian practice: psychoeducation, monitoring, and safety planning.",
       "Provide Tele-MANAS 14416 to every patient and family at first visit.",
-      "Consider cost — Jan Aushadhi generic sertraline (affordable generic available); involves family in adherence support.",
+      "Consider cost. Jan Aushadhi generic sertraline (affordable generic available); involves family in adherence support.",
     ],
     internsMiss: [
-      "Forgetting to screen for bipolar (MDQ) before starting an SSRI — leads to manic switch.",
-      "Not counselling about 4–6 week onset — patient stops early.",
-      "Not warning about NSAID bleeding risk — patient takes ibuprofen for SSRI headache.",
-      "Not asking about sexual dysfunction — patient stops silently.",
-      "Not checking sodium in elderly — presents with confusion 2 weeks later.",
-      "Not assessing suicide risk directly — medicolegal pitfall.",
+      "Forgetting to screen for bipolar (MDQ) before starting an SSRI: leads to manic switch.",
+      "Not counselling about 4–6 week onset: patient stops early.",
+      "Not warning about NSAID bleeding risk: patient takes ibuprofen for SSRI headache.",
+      "Not asking about sexual dysfunction: patient stops silently.",
+      "Not checking sodium in elderly: presents with confusion 2 weeks later.",
+      "Not assessing suicide risk directly: medicolegal pitfall.",
       "Not involving family (critical in Indian joint-family context).",
-      "Stopping abruptly when patient feels better — discontinuation syndrome.",
+      "Stopping abruptly when patient feels better: discontinuation syndrome.",
       "Not excluding medical mimics (hypothyroidism, B12 deficiency, anaemia) before psychiatric diagnosis.",
       "Not providing Tele-MANAS 14416 number for crisis support.",
-      "Under-dosing and not titrating SSRI — patient never reaches therapeutic dose.",
+      "Under-dosing and not titrating SSRI: patient never reaches therapeutic dose.",
       "Not referring to psychiatry for PHQ-9 ≥20, suicidality, psychotic features, or treatment-resistant depression.",
     ],
   },
@@ -1206,8 +1206,8 @@ export const majorDepressiveDisorder: Disease = {
       { name: "Venlafaxine", slug: "venlafaxine", relationship: "Second-line SNRI", distinguishing: "Dose-dependent SERT/NET; >150 mg adds noradrenergic; watch BP at high doses" },
       { name: "Duloxetine", slug: "duloxetine", relationship: "First-line SNRI when pain comorbid", distinguishing: "Balanced SERT/NET; first-choice for comorbid diabetic neuropathy, fibromyalgia, chronic pain" },
       { name: "Bupropion", slug: "bupropion", relationship: "Atypical / Augmentation", distinguishing: "NDRI; reverses SSRI sexual dysfunction; avoids in seizure/eating disorder" },
-      { name: "Mirtazapine", slug: "mirtazapine", relationship: "Atypical — when insomnia/weight loss", distinguishing: "NaSSA; sedating via H1; appetite-stimulating; ideal for cancer/geriatric depression with cachexia" },
-      { name: "Amitriptyline", slug: "amitriptyline", relationship: "TCA — severe/TRD/pain", distinguishing: "Equally efficacious as SSRIs but more side effects; lethal in overdose; cheapest antidepressant in India (₹1–3)" },
+      { name: "Mirtazapine", slug: "mirtazapine", relationship: "Atypical, when insomnia/weight loss", distinguishing: "NaSSA; sedating via H1; appetite-stimulating; ideal for cancer/geriatric depression with cachexia" },
+      { name: "Amitriptyline", slug: "amitriptyline", relationship: "TCA: severe/TRD/pain", distinguishing: "Equally efficacious as SSRIs but more side effects; lethal in overdose; cheapest antidepressant in India (₹1–3)" },
     ],
   },
 
@@ -1299,32 +1299,32 @@ export const majorDepressiveDisorder: Disease = {
   activeRecallQuestions: [
     {
       question: "What are the DSM-5 diagnostic criteria for Major Depressive Disorder? Name the SIGECAPS mnemonic.",
-      answer: "5+ of 9 symptoms for ≥2 weeks, causing functional impairment, not attributable to substance/medical condition/mania. MUST include depressed mood or anhedonia. The 9 symptoms: SIGECAPS — Sleep (insomnia/hypersomnia), Interest (anhedonia), Guilt (worthlessness), Energy (fatigue), Concentration (poor), Appetite (change), Psychomotor (agitation/retardation), Suicidality, + depressed Mood.",
+      answer: "5+ of 9 symptoms for ≥2 weeks, causing functional impairment, not attributable to substance/medical condition/mania. MUST include depressed mood or anhedonia. The 9 symptoms: SIGECAPS. Sleep (insomnia/hypersomnia), Interest (anhedonia), Guilt (worthlessness), Energy (fatigue), Concentration (poor), Appetite (change), Psychomotor (agitation/retardation), Suicidality, + depressed Mood.",
       topic: "Diagnosis",
     },
     {
       question: "What is the first-line pharmacotherapy for moderate-severe MDD? Name two first-choice SSRIs and explain why.",
-      answer: "SSRIs are first-line (IPS, NICE CG91, APA). First-choice SSRIs: (1) Sertraline — SSRI of choice in pregnancy/lactation (lowest milk/plasma ratio ~0.5), 6 FDA indications (only SSRI for PTSD), σ1 agonism (anxiolytic), mild CYP2D6 inhibition (fewer interactions), affordable (Jan Aushadhi generic). (2) Escitalopram — S-enantiomer of citalopram, lowest CYP interaction profile (preferred for polypharmacy patients).",
+      answer: "SSRIs are first-line (IPS, NICE CG91, APA). First-choice SSRIs: (1) Sertraline. SSRI of choice in pregnancy/lactation (lowest milk/plasma ratio ~0.5), 6 FDA indications (only SSRI for PTSD), σ1 agonism (anxiolytic), mild CYP2D6 inhibition (fewer interactions), affordable (Jan Aushadhi generic). (2) Escitalopram. S-enantiomer of citalopram, lowest CYP interaction profile (preferred for polypharmacy patients).",
       topic: "Pharmacotherapy",
     },
     {
       question: "Why must you ALWAYS screen for bipolar disorder before starting any antidepressant? How do you screen?",
-      answer: "SSRI monotherapy in undiagnosed bipolar depression can trigger a manic switch — potentially disastrous (suicide, hospitalisation, financial/relationship harm). Bipolar is missed in ~40% of cases initially diagnosed as unipolar MDD. Screen with MDQ (Mood Disorder Questionnaire) — sensitivity ~0.73, specificity ~0.90 in Indian validation. Ask about prior periods of elevated mood, reduced sleep need, racing thoughts, impulsive behaviour. If MDQ positive, refer to psychiatry for mood stabiliser assessment before SSRI.",
+      answer: "SSRI monotherapy in undiagnosed bipolar depression can trigger a manic switch: potentially disastrous (suicide, hospitalisation, financial/relationship harm). Bipolar is missed in ~40% of cases initially diagnosed as unipolar MDD. Screen with MDQ (Mood Disorder Questionnaire): sensitivity ~0.73, specificity ~0.90 in Indian validation. Ask about prior periods of elevated mood, reduced sleep need, racing thoughts, impulsive behaviour. If MDQ positive, refer to psychiatry for mood stabiliser assessment before SSRI.",
       topic: "Safety",
     },
     {
       question: "Interpret the following PHQ-9 scores and give the management recommendation: (a) 7, (b) 12, (c) 17, (d) 23.",
-      answer: "(a) 7 = mild depression (5–9 band). Watchful waiting or psychotherapy (CBT/IPT/BA); consider SSRI if functional impairment. (b) 12 = moderate depression (10–14). Active treatment: SSRI (sertraline or escitalopram) + CBT. (c) 17 = moderately severe (15–19). Combined SSRI + psychotherapy; consider psychiatry referral. (d) 23 = severe (20–27). Urgent psychiatry referral. SSRI + psychotherapy. Assess suicidality — consider admission if active. ECT if psychotic/catatonic/suicidal. ≥50% reduction = response; <5 = remission.",
+      answer: "(a) 7 = mild depression (5–9 band). Watchful waiting or psychotherapy (CBT/IPT/BA); consider SSRI if functional impairment. (b) 12 = moderate depression (10–14). Active treatment: SSRI (sertraline or escitalopram) + CBT. (c) 17 = moderately severe (15–19). Combined SSRI + psychotherapy; consider psychiatry referral. (d) 23 = severe (20–27). Urgent psychiatry referral. SSRI + psychotherapy. Assess suicidality: consider admission if active. ECT if psychotic/catatonic/suicidal. ≥50% reduction = response; <5 = remission.",
       topic: "Severity scales",
     },
     {
       question: "Describe the stepwise augmentation strategy for SSRI partial response in MDD.",
-      answer: "After SSRI at adequate dose for 6–12 weeks with partial response (≥25% but <50% PHQ-9 reduction): (1) First-line: Bupropion XL 150 mg/day (especially for fatigue/anhedonia/sexual dysfunction) OR Mirtazapine 15–30 mg at night (especially for insomnia/poor appetite). (2) Second-line: Lithium augmentation (level 0.6–0.8) — strongest evidence base (8 RCTs, NNT ~4). (3) Third-line: T3 (liothyronine) 25–50 mcg/day; atypical antipsychotic (aripiprazole 2–5 mg, quetiapine XR 150 mg). Always reassess diagnosis (bipolar missed? substance use? medical mimic?) before declaring treatment-resistant.",
+      answer: "After SSRI at adequate dose for 6–12 weeks with partial response (≥25% but <50% PHQ-9 reduction): (1) First-line: Bupropion XL 150 mg/day (especially for fatigue/anhedonia/sexual dysfunction) OR Mirtazapine 15–30 mg at night (especially for insomnia/poor appetite). (2) Second-line: Lithium augmentation (level 0.6–0.8): strongest evidence base (8 RCTs, NNT ~4). (3) Third-line: T3 (liothyronine) 25–50 mcg/day; atypical antipsychotic (aripiprazole 2–5 mg, quetiapine XR 150 mg). Always reassess diagnosis (bipolar missed? substance use? medical mimic?) before declaring treatment-resistant.",
       topic: "Treatment-resistant depression",
     },
     {
       question: "List the indications for ECT in Major Depressive Disorder. What is the response rate and what does the Mental Healthcare Act 2017 say about ECT in India?",
-      answer: "ECT indications in MDD: (1) Severe depression with psychotic features; (2) Catatonia; (3) Active suicidality requiring rapid response; (4) Refusal to eat/drink (life-threatening); (5) Treatment-resistant MDD (failed ≥2 antidepressant trials); (6) Pregnancy where medications are contraindicated; (7) Severe psychomotor retardation. Response rate ~80% in severe depression — faster and more effective than any medication. Mental Healthcare Act 2017 (India): ECT permitted ONLY under anaesthesia with informed consent. Unmodified ECT (without anaesthesia) is BANNED. Document consent process carefully.",
+      answer: "ECT indications in MDD: (1) Severe depression with psychotic features; (2) Catatonia; (3) Active suicidality requiring rapid response; (4) Refusal to eat/drink (life-threatening); (5) Treatment-resistant MDD (failed ≥2 antidepressant trials); (6) Pregnancy where medications are contraindicated; (7) Severe psychomotor retardation. Response rate ~80% in severe depression: faster and more effective than any medication. Mental Healthcare Act 2017 (India): ECT permitted ONLY under anaesthesia with informed consent. Unmodified ECT (without anaesthesia) is BANNED. Document consent process carefully.",
       topic: "Brain stimulation",
     },
   ],
@@ -1356,7 +1356,7 @@ export const majorDepressiveDisorder: Disease = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, ward pearls, drug family, evidence sources.",
+      description: "Everything: advanced reasoning, ward pearls, drug family, evidence sources.",
       visibleSections: ["top", "summary", "learning-objectives", "knowledge-graph", "epidemiology", "etiology", "pathophysiology", "symptoms", "diagnostic-criteria", "severity-scales", "differential-diagnosis", "management", "drugs", "indian-practice", "patient-education", "clinical-pearls", "clinical-case", "decision-path", "common-mistakes", "ward-pearls", "drug-navigation", "exam-lens", "high-yield-summary", "faq", "active-recall", "references"],
     },
   ],
@@ -1375,7 +1375,7 @@ export const majorDepressiveDisorder: Disease = {
       title: "Pathophysiology & Etiology",
       description: "Why does depression happen? What's going on in the brain?",
       sectionIds: ["etiology", "pathophysiology"],
-      checkpoint: "You understand the multifactorial etiology and the three converging pathophysiology hypotheses — monoamine, BDNF/neuroplasticity, and inflammatory — plus HPA axis and circuit-level changes.",
+      checkpoint: "You understand the multifactorial etiology and the three converging pathophysiology hypotheses (monoamine, BDNF/neuroplasticity, and inflammatory) plus HPA axis and circuit-level changes.",
     },
     {
       number: 3,
@@ -1389,14 +1389,14 @@ export const majorDepressiveDisorder: Disease = {
       title: "Management",
       description: "How do you treat depression? Which drug? When to escalate?",
       sectionIds: ["management", "drugs", "indian-practice"],
-      checkpoint: "You can construct a stepwise management plan — lifestyle → psychotherapy → SSRI → augmentation → brain stimulation — and choose the right antidepressant for the right patient in Indian context.",
+      checkpoint: "You can construct a stepwise management plan (lifestyle → psychotherapy → SSRI → augmentation → brain stimulation) and choose the right antidepressant for the right patient in Indian context.",
     },
     {
       number: 5,
       title: "Clinical Reasoning",
       description: "Work through real cases. Avoid common mistakes.",
       sectionIds: ["clinical-case", "decision-path", "common-mistakes", "ward-pearls"],
-      checkpoint: "You've worked through clinical cases, navigated the decision tree, and learned the common mistakes interns make — and how consultants avoid them.",
+      checkpoint: "You've worked through clinical cases, navigated the decision tree, and learned the common mistakes interns make, and how consultants avoid them.",
     },
     {
       number: 6,
@@ -1414,18 +1414,18 @@ export const majorDepressiveDisorder: Disease = {
     { label: "Major Depressive Disorder", type: "condition", href: "#top", note: "The disease you're reading about" },
     { label: "Serotonin (5-HT)", type: "neurotransmitter", href: "#pathophysiology", note: "Central to the monoamine hypothesis" },
     { label: "Raphe Nuclei", type: "brain-region", href: "#pathophysiology", note: "Where serotonin is synthesised" },
-    { label: "Prefrontal Cortex", type: "brain-region", href: "#pathophysiology", note: "Hypoactive in MDD — impaired top-down regulation" },
+    { label: "Prefrontal Cortex", type: "brain-region", href: "#pathophysiology", note: "Hypoactive in MDD: impaired top-down regulation" },
     { label: "Hippocampus", type: "brain-region", href: "#pathophysiology", note: "5–10% volume loss in recurrent MDD; BDNF-mediated neurogenesis" },
-    { label: "Amygdala", type: "brain-region", href: "#pathophysiology", note: "Hyperactive — heightened threat reactivity" },
+    { label: "Amygdala", type: "brain-region", href: "#pathophysiology", note: "Hyperactive: heightened threat reactivity" },
     { label: "BDNF", type: "neurotransmitter", href: "#pathophysiology", note: "Reduced in depression; restored by all antidepressants" },
-    { label: "HPA Axis", type: "pathway", href: "#pathophysiology", note: "Hyperactive — cortisol elevation in ~50% of MDD" },
+    { label: "HPA Axis", type: "pathway", href: "#pathophysiology", note: "Hyperactive: cortisol elevation in ~50% of MDD" },
     { label: "SSRIs", type: "class", href: "#management", note: "First-line pharmacotherapy for MDD" },
-    { label: "Sertraline", type: "drug", href: "/drugs/sertraline", note: "Default first-choice SSRI — safe in pregnancy, σ1 agonism, affordable generic" },
+    { label: "Sertraline", type: "drug", href: "/drugs/sertraline", note: "Default first-choice SSRI: safe in pregnancy, σ1 agonism, affordable generic" },
     { label: "CBT (Cognitive Behavioural Therapy)", type: "drug", href: "#management", note: "Most evidence-based psychotherapy for MDD" },
-    { label: "PHQ-9", type: "drug", href: "#severity-scales", note: "Self-rated severity scale — diagnosis AND monitoring" },
-    { label: "Bipolar Depression", type: "condition", href: "#differential-diagnosis", note: "ALWAYS exclude before starting antidepressant — MDQ screen" },
-    { label: "ECT", type: "drug", href: "#management", note: "Severe/psychotic/catatonic/suicidal MDD — ~80% response" },
-    { label: "Tele-MANAS", type: "patient-guide", href: "tel:14416", note: "National Tele-Mental Health Helpline — 14416 (free, 24/7, 20 Indian languages)" },
+    { label: "PHQ-9", type: "drug", href: "#severity-scales", note: "Self-rated severity scale: diagnosis AND monitoring" },
+    { label: "Bipolar Depression", type: "condition", href: "#differential-diagnosis", note: "ALWAYS exclude before starting antidepressant. MDQ screen" },
+    { label: "ECT", type: "drug", href: "#management", note: "Severe/psychotic/catatonic/suicidal MDD: ~80% response" },
+    { label: "Tele-MANAS", type: "patient-guide", href: "tel:14416", note: "National Tele-Mental Health Helpline: 14416 (free, 24/7, 20 Indian languages)" },
   ],
 
   /* ============================================================
@@ -1434,7 +1434,7 @@ export const majorDepressiveDisorder: Disease = {
   cbmeMapping: {
     subject: "Psychiatry",
     mbbsYear: "Final Professional (Phase III)",
-    topic: "Mood Disorders — Major Depressive Disorder: Diagnosis and Management",
+    topic: "Mood Disorders. Major Depressive Disorder: Diagnosis and Management",
     competencyCodes: ["PY3.2", "PY3.1", "PH7.3", "PH7.4"],
     competencyDescriptions: [
       "PY3.2 (Psychiatry, Final Professional): Describe the clinical features, diagnostic criteria (DSM-5/ICD-10), differential diagnosis, and stepwise management of mood disorders, including major depressive disorder.",
@@ -1508,13 +1508,13 @@ export const majorDepressiveDisorder: Disease = {
       time: "Weeks 1–2",
       title: "Side-effect phase",
       description:
-        "Acute SSRI side effects emerge: nausea, headache, sleep changes, mild activation/anxiety. Mood has not yet improved. THIS IS THE CRITICAL COUNSELLING WINDOW — patient is most likely to discontinue here. Weekly monitoring (especially if <25 years — black box warning for suicidality). Indian context: family support critical for adherence.",
+        "Acute SSRI side effects emerge: nausea, headache, sleep changes, mild activation/anxiety. Mood has not yet improved. THIS IS THE CRITICAL COUNSELLING WINDOW: patient is most likely to discontinue here. Weekly monitoring (especially if <25 years, black box warning for suicidality). Indian context: family support critical for adherence.",
       phase: "peak",
     },
     {
       id: "t5",
       time: "Weeks 2–4",
-      title: "Early response — sleep, appetite, energy improve first",
+      title: "Early response: sleep, appetite, energy improve first",
       description:
         "5-HT1A autoreceptor desensitisation occurs in raphe nuclei; serotonergic throughput to prefrontal cortex increases. Sleep architecture normalises, appetite returns, energy improves. Mood is usually still low. PHQ-9 should start to drop. Sexual dysfunction often emerges here (if it's going to occur).",
       phase: "peak",
@@ -1544,62 +1544,62 @@ export const majorDepressiveDisorder: Disease = {
     {
       question: "What is the difference between feeling sad and having depression?",
       answer:
-        "Sadness is a normal human emotion that everyone experiences — usually in response to a specific event, and it passes with time. Depression is a medical illness characterised by persistent low mood or loss of interest (for at least 2 weeks) that interferes with daily life, sleep, appetite, energy, concentration, and self-worth. The key differences: duration (≥2 weeks), pervasiveness (most of the day, most days), impairment (work, relationships, self-care), and associated symptoms (sleep, appetite, energy, concentration, suicidal thoughts). If you're unsure, take the PHQ-9 self-test and discuss with a clinician.",
+        "Sadness is a normal human emotion that everyone experiences: usually in response to a specific event, and it passes with time. Depression is a medical illness characterised by persistent low mood or loss of interest (for at least 2 weeks) that interferes with daily life, sleep, appetite, energy, concentration, and self-worth. The key differences: duration (≥2 weeks), pervasiveness (most of the day, most days), impairment (work, relationships, self-care), and associated symptoms (sleep, appetite, energy, concentration, suicidal thoughts). If you're unsure, take the PHQ-9 self-test and discuss with a clinician.",
     },
     {
       question: "Is depression a 'real' illness or just weakness?",
       answer:
-        "Depression is a real medical illness with measurable biological changes in the brain — including altered neurotransmitter function (serotonin, norepinephrine, dopamine), reduced BDNF (brain-derived neurotrophic factor), hippocampal volume loss, HPA axis dysregulation, and inflammatory changes. It is the leading cause of disability worldwide (WHO). Calling it 'weakness' is like calling diabetes 'weakness' — it misunderstands the biology. With appropriate treatment, 60–70% of patients achieve response and 30–40% achieve remission.",
+        "Depression is a real medical illness with measurable biological changes in the brain, including altered neurotransmitter function (serotonin, norepinephrine, dopamine), reduced BDNF (brain-derived neurotrophic factor), hippocampal volume loss, HPA axis dysregulation, and inflammatory changes. It is the leading cause of disability worldwide (WHO). Calling it 'weakness' is like calling diabetes 'weakness': it misunderstands the biology. With appropriate treatment, 60–70% of patients achieve response and 30–40% achieve remission.",
     },
     {
       question: "How long does it take for antidepressants to work?",
       answer:
-        "SSRIs (the most commonly prescribed antidepressants) take 4–6 weeks for full antidepressant effect in depression. For anxiety disorders, PTSD, and OCD, full effect may take 8–12 weeks. Some early changes (sleep, appetite, energy) can happen within 1–2 weeks, but mood improvement comes later. This is the single most important counselling point — many patients stop at 2 weeks thinking the drug 'isn't working', when in fact it hasn't had time to work yet.",
+        "SSRIs (the most commonly prescribed antidepressants) take 4–6 weeks for full antidepressant effect in depression. For anxiety disorders, PTSD, and OCD, full effect may take 8–12 weeks. Some early changes (sleep, appetite, energy) can happen within 1–2 weeks, but mood improvement comes later. This is the single most important counselling point, many patients stop at 2 weeks thinking the drug 'isn't working', when in fact it hasn't had time to work yet.",
     },
     {
       question: "Can I stop the antidepressant once I feel better?",
       answer:
-        "Not usually. For a first depressive episode, treatment should continue for 6–12 months AFTER you feel better — stopping earlier significantly increases relapse risk (~40% relapse if stopped at 4 months vs <10% if continued for 12 months). For recurrent episodes (2+), longer-term (2–3 years or indefinite) treatment may be recommended. Always discuss timing with your clinician before stopping, and NEVER stop abruptly — taper over 4+ weeks to avoid discontinuation syndrome.",
+        "Not usually. For a first depressive episode, treatment should continue for 6–12 months AFTER you feel better, stopping earlier significantly increases relapse risk (~40% relapse if stopped at 4 months vs <10% if continued for 12 months). For recurrent episodes (2+), longer-term (2–3 years or indefinite) treatment may be recommended. Always discuss timing with your clinician before stopping, and NEVER stop abruptly: taper over 4+ weeks to avoid discontinuation syndrome.",
     },
     {
       question: "Will antidepressants affect my sex life?",
       answer:
-        "Possibly. Sexual side effects — decreased libido, delayed orgasm, anorgasmia, erectile dysfunction — affect 30–50% of people on SSRIs and are the most common reason people stop them. These are usually reversible on discontinuation, but in a small subset of patients they may persist (PSSD). If this bothers you, talk to your clinician — adding bupropion XL 150 mg, dose reduction, or switching to bupropion or mirtazapine often helps. Don't stop silently — there are solutions.",
+        "Possibly. Sexual side effects (decreased libido, delayed orgasm, anorgasmia, erectile dysfunction) affect 30–50% of people on SSRIs and are the most common reason people stop them. These are usually reversible on discontinuation, but in a small subset of patients they may persist (PSSD). If this bothers you, talk to your clinician: adding bupropion XL 150 mg, dose reduction, or switching to bupropion or mirtazapine often helps. Don't stop silently: there are solutions.",
     },
     {
       question: "What should I do if I have thoughts of suicide?",
       answer:
-        "Seek help IMMEDIATELY. Thoughts of suicide are a symptom of depression — not a personal failing, and they will pass with treatment. In India: call Tele-MANAS at 14416 (toll-free, 24/7, 20 Indian languages). In an emergency, call 112 (pan-India emergency number) or go to the nearest hospital emergency department. Other helplines: iCall 9152987821, AASRA 9820466726, Vandrevala Foundation 1860-2662-345. Remove access to means (medications, sharp objects). Tell someone you trust — family, friend, or doctor. Don't keep suicidal thoughts secret.",
+        "Seek help IMMEDIATELY. Thoughts of suicide are a symptom of depression, not a personal failing, and they will pass with treatment. In India: call Tele-MANAS at 14416 (toll-free, 24/7, 20 Indian languages). In an emergency, call 112 (pan-India emergency number) or go to the nearest hospital emergency department. Other helplines: iCall 9152987821, AASRA 9820466726, Vandrevala Foundation 1860-2662-345. Remove access to means (medications, sharp objects). Tell someone you trust: family, friend, or doctor. Don't keep suicidal thoughts secret.",
     },
     {
       question: "Can depression be treated without medication?",
       answer:
-        "Yes — for mild depression (PHQ-9 5–9), psychotherapy (CBT, IPT, Behavioural Activation) and lifestyle changes (exercise, sleep hygiene, social connection) are first-line, and may be sufficient. For moderate-severe depression (PHQ-9 ≥10), combined medication + psychotherapy is recommended — outcomes are better than either alone. For severe/psychotic/suicidal depression, medication (and possibly ECT) is essential. NEVER stop prescribed medication without discussing with your clinician — even if you're feeling better.",
+        "Yes, for mild depression (PHQ-9 5–9), psychotherapy (CBT, IPT, Behavioural Activation) and lifestyle changes (exercise, sleep hygiene, social connection) are first-line, and may be sufficient. For moderate-severe depression (PHQ-9 ≥10), combined medication + psychotherapy is recommended: outcomes are better than either alone. For severe/psychotic/suicidal depression, medication (and possibly ECT) is essential. NEVER stop prescribed medication without discussing with your clinician, even if you're feeling better.",
     },
     {
       question: "Can I drink alcohol while taking antidepressants?",
       answer:
-        "Alcohol can worsen depression, interfere with sleep, increase sedation, and reduce the effectiveness of antidepressants. While not strictly contraindicated with SSRIs, it's best minimised or avoided — particularly during the first month while your body is adapting. Alcohol is dangerous with TCAs (cardiotoxicity, fatal overdose), MAOIs (hypertensive crisis with tyramine), and benzodiazepines (respiratory depression). Always discuss alcohol use with your clinician.",
+        "Alcohol can worsen depression, interfere with sleep, increase sedation, and reduce the effectiveness of antidepressants. While not strictly contraindicated with SSRIs, it's best minimised or avoided, particularly during the first month while your body is adapting. Alcohol is dangerous with TCAs (cardiotoxicity, fatal overdose), MAOIs (hypertensive crisis with tyramine), and benzodiazepines (respiratory depression). Always discuss alcohol use with your clinician.",
     },
     {
       question: "I'm pregnant and have depression. What should I do?",
       answer:
-        "Don't stop any antidepressant abruptly — first discuss with your obstetrician and psychiatrist. Untreated maternal depression carries significant risks to mother and baby (preterm birth, low birth weight, poor bonding, suicidality). Sertraline is the SSRI of choice in pregnancy — lowest placental transfer, longest safety track record. Avoid paroxetine (1st-trimester cardiac defects — former Category D). Third-trimester: watch for neonatal adaptation syndrome (jitteriness, respiratory distress, poor feeding — usually self-limited). ECT is safe in pregnancy if medication is insufficient. Counsel: the risks of untreated depression usually outweigh the risks of appropriately chosen medication.",
+        "Don't stop any antidepressant abruptly: first discuss with your obstetrician and psychiatrist. Untreated maternal depression carries significant risks to mother and baby (preterm birth, low birth weight, poor bonding, suicidality). Sertraline is the SSRI of choice in pregnancy: lowest placental transfer, longest safety track record. Avoid paroxetine (1st-trimester cardiac defects, former Category D). Third-trimester: watch for neonatal adaptation syndrome (jitteriness, respiratory distress, poor feeding, usually self-limited). ECT is safe in pregnancy if medication is insufficient. Counsel: the risks of untreated depression usually outweigh the risks of appropriately chosen medication.",
     },
     {
       question: "What is the difference between MDD and bipolar depression?",
       answer:
-        "Major Depressive Disorder (MDD) is 'unipolar' — only depressive episodes, no manic or hypomanic episodes. Bipolar disorder involves both depressive episodes AND manic/hypomanic episodes. Bipolar depression looks similar to MDD during a depressive episode — the difference is the history. ALWAYS screen for prior manic/hypomanic episodes (using MDQ — Mood Disorder Questionnaire) before starting any antidepressant, because giving an SSRI alone to someone with bipolar depression can trigger a manic switch — potentially disastrous. If bipolar is confirmed, mood stabiliser first; antidepressant only if needed (with mood stabiliser cover).",
+        "Major Depressive Disorder (MDD) is 'unipolar': only depressive episodes, no manic or hypomanic episodes. Bipolar disorder involves both depressive episodes AND manic/hypomanic episodes. Bipolar depression looks similar to MDD during a depressive episode. The difference is the history. ALWAYS screen for prior manic/hypomanic episodes (using MDQ (Mood Disorder Questionnaire) before starting any antidepressant, because giving an SSRI alone to someone with bipolar depression can trigger a manic switch) potentially disastrous. If bipolar is confirmed, mood stabiliser first; antidepressant only if needed (with mood stabiliser cover).",
     },
     {
       question: "How do I find free or low-cost mental health care in India?",
       answer:
-        "Several options: (1) Tele-MANAS — 14416 — free counselling and referral (see Indian Resources). (2) District Mental Health Programme (DMHP) — free mental health services at district hospitals. (3) Jan Aushadhi Kendras — generic antidepressants at ₹2–5 per tablet. Locate at janaushadhi.gov.in. (4) NIMHANS Bengaluru — premier government mental health institute; OPD and emergency services. (5) Government medical college hospitals — psychiatry OPDs. (6) PMJAY (Ayushman Bharat) — covers severe mental illness treatment for eligible families (₹5 lakh annual cover). (7) Online platforms: Wysa, ePsyClinic, Tata 1mg (low-cost teleconsultation).",
+        "Several options: (1) Tele-MANAS (14416) free counselling and referral (see Indian Resources). (2) District Mental Health Programme (DMHP): free mental health services at district hospitals. (3) Jan Aushadhi Kendras: generic antidepressants at ₹2–5 per tablet. Locate at janaushadhi.gov.in. (4) NIMHANS Bengaluru: premier government mental health institute; OPD and emergency services. (5) Government medical college hospitals: psychiatry OPDs. (6) PMJAY (Ayushman Bharat): covers severe mental illness treatment for eligible families (₹5 lakh annual cover). (7) Online platforms: Wysa, ePsyClinic, Tata 1mg (low-cost teleconsultation).",
     },
     {
       question: "What is ECT and when is it used in depression?",
       answer:
-        "ECT (Electroconvulsive Therapy) is a medical procedure in which a carefully controlled electrical current is passed through the brain to induce a brief seizure, under general anaesthesia and muscle relaxation. It is used for: severe depression with psychotic features, catatonia, active suicidality requiring rapid response, refusal to eat/drink (life-threatening), and treatment-resistant depression. ECT has ~80% response rate in severe depression — faster and more effective than any medication. The Mental Healthcare Act 2017 (India) permits ECT only under anaesthesia with informed consent; unmodified ECT is banned. Side effects include transient memory disturbance (usually resolves within weeks). ECT is a safe, evidence-based, life-saving treatment — not the frightening procedure depicted in old movies.",
+        "ECT (Electroconvulsive Therapy) is a medical procedure in which a carefully controlled electrical current is passed through the brain to induce a brief seizure, under general anaesthesia and muscle relaxation. It is used for: severe depression with psychotic features, catatonia, active suicidality requiring rapid response, refusal to eat/drink (life-threatening), and treatment-resistant depression. ECT has ~80% response rate in severe depression: faster and more effective than any medication. The Mental Healthcare Act 2017 (India) permits ECT only under anaesthesia with informed consent; unmodified ECT is banned. Side effects include transient memory disturbance (usually resolves within weeks). ECT is a safe, evidence-based, life-saving treatment, not the frightening procedure depicted in old movies.",
     },
   ],
 
@@ -1640,19 +1640,19 @@ export const majorDepressiveDisorder: Disease = {
      ============================================================ */
   patientMode: {
     tagline:
-      "A common and treatable medical illness that affects mood, sleep, energy, and self-worth — not weakness or 'thinking too much'.",
+      "A common and treatable medical illness that affects mood, sleep, energy, and self-worth, not weakness or 'thinking too much'.",
     summary:
-      "Depression (Major Depressive Disorder or MDD) is a real medical condition that affects how you feel, think, and handle daily activities. It is more than just feeling sad for a few days — it's at least 2 weeks of low mood or loss of interest, plus changes in sleep, appetite, energy, concentration, and self-worth. Globally, ~300 million people have depression — it is the leading cause of disability worldwide. In India, ~57 million people are affected. The good news: depression is treatable. With combined medication (usually SSRIs like sertraline) and talking therapy (like CBT), 60–70% of patients improve significantly.",
+      "Depression (Major Depressive Disorder or MDD) is a real medical condition that affects how you feel, think, and handle daily activities. It is more than just feeling sad for a few days: it's at least 2 weeks of low mood or loss of interest, plus changes in sleep, appetite, energy, concentration, and self-worth. Globally, ~300 million people have depression. It is the leading cause of disability worldwide. In India, ~57 million people are affected. The good news: depression is treatable. With combined medication (usually SSRIs like sertraline) and talking therapy (like CBT), 60–70% of patients improve significantly.",
     mechanism:
-      "Your brain uses chemicals called neurotransmitters (serotonin, norepinephrine, dopamine) to regulate mood, sleep, appetite, and energy. In depression, these chemicals are out of balance. Also, a chemical called BDNF (which helps brain cells grow and connect) is reduced — causing some brain areas (like the hippocampus) to shrink. Chronic stress, traumatic experiences, and genetic factors can all contribute. Antidepressants work by restoring the balance of these chemicals and boosting BDNF — but this takes time (4–6 weeks), which is why you may feel side effects before the mood benefit.",
+      "Your brain uses chemicals called neurotransmitters (serotonin, norepinephrine, dopamine) to regulate mood, sleep, appetite, and energy. In depression, these chemicals are out of balance. Also, a chemical called BDNF (which helps brain cells grow and connect) is reduced, causing some brain areas (like the hippocampus) to shrink. Chronic stress, traumatic experiences, and genetic factors can all contribute. Antidepressants work by restoring the balance of these chemicals and boosting BDNF, but this takes time (4–6 weeks), which is why you may feel side effects before the mood benefit.",
     sideEffects:
-      "If you start an SSRI antidepressant: most people get some side effects in the first 1–2 weeks — usually nausea, headache, sleep changes, or feeling a bit wired. These usually settle as your body adapts. Sexual side effects (lower interest or difficulty reaching orgasm) are common and can persist — talk to your doctor if this bothers you, as there are solutions. Serious side effects are rare but you should know the signs: high fever with confusion and shaking could be serotonin syndrome (emergency), feeling worse or having new suicidal thoughts in the first month needs immediate medical review (especially if you're under 25).",
+      "If you start an SSRI antidepressant: most people get some side effects in the first 1–2 weeks; usually nausea, headache, sleep changes, or feeling a bit wired. These usually settle as your body adapts. Sexual side effects (lower interest or difficulty reaching orgasm) are common and can persist: talk to your doctor if this bothers you, as there are solutions. Serious side effects are rare but you should know the signs: high fever with confusion and shaking could be serotonin syndrome (emergency), feeling worse or having new suicidal thoughts in the first month needs immediate medical review (especially if you're under 25).",
     monitoring:
-      "If you're on antidepressant medication, you'll have check-ins with your doctor at 2 weeks (side effects + mood), 4 weeks (early response), 6 weeks (dose adjustment if needed), and 12 weeks (full response). You may be asked to fill in a short questionnaire (PHQ-9) so your progress can be tracked — a score below 5 means remission. If you're over 65, your doctor may check your blood sodium in the first 2 weeks. Always report any new or worsening symptoms — especially agitation, irritability, or suicidal thoughts.",
+      "If you're on antidepressant medication, you'll have check-ins with your doctor at 2 weeks (side effects + mood), 4 weeks (early response), 6 weeks (dose adjustment if needed), and 12 weeks (full response). You may be asked to fill in a short questionnaire (PHQ-9) so your progress can be tracked: a score below 5 means remission. If you're over 65, your doctor may check your blood sodium in the first 2 weeks. Always report any new or worsening symptoms, especially agitation, irritability, or suicidal thoughts.",
     contraindications:
-      "Some antidepressants cannot be used (or need dose adjustment) in certain situations: pregnancy (some SSRIs are safer than others — sertraline is preferred), severe liver or kidney disease, certain other medications (especially MAOIs — dangerous combination), some heart conditions. Always tell your doctor about all your medical conditions and ALL medications (including over-the-counter, herbal, and Ayurvedic products) before starting an antidepressant. NEVER stop an antidepressant abruptly after taking it for more than 4 weeks — always taper under medical supervision.",
+      "Some antidepressants cannot be used (or need dose adjustment) in certain situations: pregnancy (some SSRIs are safer than others (sertraline is preferred), severe liver or kidney disease, certain other medications (especially MAOIs) dangerous combination), some heart conditions. Always tell your doctor about all your medical conditions and ALL medications (including over-the-counter, herbal, and Ayurvedic products) before starting an antidepressant. NEVER stop an antidepressant abruptly after taking it for more than 4 weeks, always taper under medical supervision.",
     interactions:
-      "The main thing to know: avoid alcohol or keep it to a minimum — it can worsen mood, sleep, and medication side effects. Tell your pharmacist about EVERYTHING you take — prescription, over-the-counter, herbal (especially St John's Wort, which interacts dangerously with SSRIs), and recreational substances. Dangerous combinations include: other antidepressants (especially MAOIs), tramadol (pain), triptans (migraine), certain antibiotics (linezolid), cough syrups with dextromethorphan. Your doctor or pharmacist will check for these automatically — but you should also tell them.",
+      "The main thing to know: avoid alcohol or keep it to a minimum; it can worsen mood, sleep, and medication side effects. Tell your pharmacist about EVERYTHING you take: prescription, over-the-counter, herbal (especially St John's Wort, which interacts dangerously with SSRIs), and recreational substances. Dangerous combinations include: other antidepressants (especially MAOIs), tramadol (pain), triptans (migraine), certain antibiotics (linezolid), cough syrups with dextromethorphan. Your doctor or pharmacist will check for these automatically, but you should also tell them.",
   },
 
   /* ============================================================
@@ -1671,7 +1671,7 @@ export const majorDepressiveDisorder: Disease = {
       internationalSource: "NICE CG91 / APA / WHO mhGAP",
       internationalRecommendation: "SSRIs are first-line for moderate-severe MDD. Sertraline commonly chosen for favourable side-effect and interaction profile.",
       indianSource: "Indian Psychiatric Society (IPS)",
-      indianRecommendation: "IPS guidelines concur — SSRIs first-line. Sertraline and escitalopram are the most commonly prescribed SSRIs in Indian practice. Selection based on patient profile (pregnancy, elderly, comorbidities, cost). Jan Aushadhi generic sertraline is affordable and widely accessible.",
+      indianRecommendation: "IPS guidelines concur. SSRIs first-line. Sertraline and escitalopram are the most commonly prescribed SSRIs in Indian practice. Selection based on patient profile (pregnancy, elderly, comorbidities, cost). Jan Aushadhi generic sertraline is affordable and widely accessible.",
     },
     {
       topic: "Diagnosis and severity monitoring",
@@ -1685,7 +1685,7 @@ export const majorDepressiveDisorder: Disease = {
       internationalSource: "FDA / APA",
       internationalRecommendation: "Sertraline is the SSRI of choice in pregnancy when pharmacotherapy is necessary. Risk-benefit must weigh untreated maternal depression risks.",
       indianSource: "Indian Psychiatric Society (IPS)",
-      indianRecommendation: "IPS concurs — sertraline is preferred in pregnancy. In Indian practice, decision to treat must also consider risks of untreated depression (poor antenatal care, poor nutrition, suicidality) which may be higher in low-resource settings. Always involve obstetrician. Counsel family.",
+      indianRecommendation: "IPS concurs: sertraline is preferred in pregnancy. In Indian practice, decision to treat must also consider risks of untreated depression (poor antenatal care, poor nutrition, suicidality) which may be higher in low-resource settings. Always involve obstetrician. Counsel family.",
     },
     {
       topic: "Use of ECT",
@@ -1710,7 +1710,7 @@ export const majorDepressiveDisorder: Disease = {
     international: [
       { source: "NICE CG91", recommendation: "SSRIs first-line for moderate-severe MDD. Combined SSRI + CBT for severe MDD. Continue 6–12 months after remission." },
       { source: "APA Practice Guideline", recommendation: "SSRI first-line; consider patient profile (pregnancy, elderly, comorbidities) for selection. ECT for severe/psychotic/suicidal." },
-      { source: "WHO mhGAP", recommendation: "SSRIs first-line in the Mental Health Gap Action Programme — for use by non-specialist health workers in low-resource settings." },
+      { source: "WHO mhGAP", recommendation: "SSRIs first-line in the Mental Health Gap Action Programme, for use by non-specialist health workers in low-resource settings." },
       { source: "Cipriani Lancet 2018", recommendation: "Network meta-analysis of 21 antidepressants: all more efficacious than placebo; SSRIs have the best efficacy/tolerability ratio. Amitriptyline, escitalopram, mirtazapine, paroxetine, venlafaxine, and sertraline had the best combination." },
       { source: "DSM-5 / ICD-10 / ICD-11", recommendation: "Diagnostic criteria: 5+ of 9 symptoms for ≥2 weeks (DSM-5); ≥2 of 3 core symptoms for ≥2 weeks (ICD-10)." },
     ],
@@ -1719,10 +1719,10 @@ export const majorDepressiveDisorder: Disease = {
       { source: "NIMHANS National Mental Health Survey (2015–16)", recommendation: "~57 million Indians with depression; 85% treatment gap. Higher prevalence in women, elderly, urban metros, chronic illness. Calls for scaling up DMHP and primary care mental health." },
       { source: "NMC CBME Curriculum", recommendation: "MDD taught in Final Professional Psychiatry (PY3.1, PY3.2) and Second Professional Pharmacology (PH7.3, PH7.4). Competency-based learning." },
       { source: "Mental Healthcare Act 2017", recommendation: "ECT only under anaesthesia with informed consent. Bans unmodified ECT. Guarantees rights of persons with mental illness. Mandates advance directives." },
-      { source: null, recommendation: "No dedicated IPS guideline on SSRI monitoring frequency — current section reflects accepted clinical practice and internationally accepted evidence." },
+      { source: null, recommendation: "No dedicated IPS guideline on SSRI monitoring frequency: current section reflects accepted clinical practice and internationally accepted evidence." },
     ],
     indianClinicalPractice:
-      "In Indian practice, MDD is the most common diagnosis in psychiatry OPDs. The standard workflow: clinical diagnosis using DSM-5/ICD-10 → PHQ-9 for severity → SSRI (sertraline or escitalopram) first-line → combined with CBT where available → follow-up at 2/4/6/12 weeks. Indian government hospitals under DMHP dispense affordable Jan Aushadhi generic sertraline. ECT is more readily used than in Western settings for severe depression — particularly in government hospitals where it offers rapid, cost-effective response. Family involvement is emphasised given the joint family system. Tele-MANAS (14416) provides free 24/7 counselling. PMJAY (Ayushman Bharat) covers severe mental illness treatment for eligible families. The 85% treatment gap remains the biggest challenge — addressed by scaling up DMHP, training primary care physicians, and tele-mental health.",
+      "In Indian practice, MDD is the most common diagnosis in psychiatry OPDs. The standard workflow: clinical diagnosis using DSM-5/ICD-10 → PHQ-9 for severity → SSRI (sertraline or escitalopram) first-line → combined with CBT where available → follow-up at 2/4/6/12 weeks. Indian government hospitals under DMHP dispense affordable Jan Aushadhi generic sertraline. ECT is more readily used than in Western settings for severe depression, particularly in government hospitals where it offers rapid, cost-effective response. Family involvement is emphasised given the joint family system. Tele-MANAS (14416) provides free 24/7 counselling. PMJAY (Ayushman Bharat) covers severe mental illness treatment for eligible families. The 85% treatment gap remains the biggest challenge: addressed by scaling up DMHP, training primary care physicians, and tele-mental health.",
   },
 
   /* ============================================================
@@ -1746,29 +1746,29 @@ export const majorDepressiveDisorder: Disease = {
      ============================================================ */
   prescriptionWorkflow: {
     beforePrescribing: [
-      "Confirm diagnosis using DSM-5/ICD-10 criteria — 5+ of 9 symptoms for ≥2 weeks (DSM-5).",
-      "ALWAYS screen for bipolar disorder (MDQ) before any antidepressant — prevents manic switch.",
-      "Assess suicidal ideation directly — if present, involve family for monitoring and provide Tele-MANAS 14416.",
-      "Check for MAOI use in last 14 days — absolute contraindication to SSRI.",
+      "Confirm diagnosis using DSM-5/ICD-10 criteria: 5+ of 9 symptoms for ≥2 weeks (DSM-5).",
+      "ALWAYS screen for bipolar disorder (MDQ) before any antidepressant: prevents manic switch.",
+      "Assess suicidal ideation directly, if present, involve family for monitoring and provide Tele-MANAS 14416.",
+      "Check for MAOI use in last 14 days: absolute contraindication to SSRI.",
       "Exclude medical mimics: CBC, TSH, B12, vitamin D, LFT, RBS (especially in elderly or atypical presentation).",
       "Baseline PHQ-9 score for response monitoring.",
       "In elderly: check baseline serum sodium (SIADH risk in first 2 weeks).",
-      "In women of reproductive age: discuss pregnancy plans — sertraline is SSRI of choice if pregnancy possible.",
-      "Review concurrent medications — tramadol, triptans, NSAIDs, warfarin, St John's Wort interact with SSRIs.",
-      "Counsel about 4–6 week onset — set expectation that side effects precede benefit.",
-      "Counsel about NEVER stopping abruptly — taper over 4+ weeks when discontinuing.",
+      "In women of reproductive age: discuss pregnancy plans; sertraline is SSRI of choice if pregnancy possible.",
+      "Review concurrent medications: tramadol, triptans, NSAIDs, warfarin, St John's Wort interact with SSRIs.",
+      "Counsel about 4–6 week onset: set expectation that side effects precede benefit.",
+      "Counsel about NEVER stopping abruptly: taper over 4+ weeks when discontinuing.",
       "Engage family in monitoring and safety planning (critical in Indian joint-family context).",
     ],
     duringTreatment: [
-      "Week 1–2: assess tolerability (nausea, insomnia, agitation) and suicidality (especially <25 years — black box warning).",
-      "Week 2–4: review early response — sleep, appetite, energy often improve before mood.",
+      "Week 1–2: assess tolerability (nausea, insomnia, agitation) and suicidality (especially <25 years, black box warning).",
+      "Week 2–4: review early response; sleep, appetite, energy often improve before mood.",
       "Week 4–6: assess response with PHQ-9. If <30% reduction, increase dose.",
       "Week 6–12: full response assessment. If <50% reduction at 12 weeks, consider augmentation (bupropion/mirtazapine) or switch.",
-      "Monitor for sexual dysfunction — ask directly at every follow-up; patients rarely volunteer.",
-      "Watch for hyponatraemia in elderly (confusion, headache, seizures) — check serum sodium if symptomatic.",
+      "Monitor for sexual dysfunction: ask directly at every follow-up; patients rarely volunteer.",
+      "Watch for hyponatraemia in elderly (confusion, headache, seizures): check serum sodium if symptomatic.",
       "Watch for serotonin syndrome if serotonergic drugs are added (tramadol, triptans, linezolid, St John's Wort).",
-      "Check PHQ-9 item-9 (suicidal thoughts) at every visit — any positive response triggers formal suicide risk assessment.",
-      "Encourage concurrent CBT if available — combined SSRI + CBT produces better outcomes than either alone.",
+      "Check PHQ-9 item-9 (suicidal thoughts) at every visit: any positive response triggers formal suicide risk assessment.",
+      "Encourage concurrent CBT if available: combined SSRI + CBT produces better outcomes than either alone.",
     ],
     followUp: [
       "First follow-up at 2 weeks (tolerability + suicidality).",
@@ -1777,19 +1777,19 @@ export const majorDepressiveDisorder: Disease = {
       "Fourth follow-up at 12 weeks (full response assessment).",
       "If remission achieved (PHQ-9 <5): continue 6–12 months for first episode; 2–3 years for second; indefinite for 3+.",
       "Before discontinuation: taper over 4+ weeks. Substitute fluoxetine (long half-life) for last 2 weeks of paroxetine/sertraline taper.",
-      "In government hospitals: follow-up may be every 4–8 weeks due to travel barriers — counsel family to watch for red flags.",
+      "In government hospitals: follow-up may be every 4–8 weeks due to travel barriers. Counsel family to watch for red flags.",
       "Long-term monitoring: every 3–6 months during maintenance; immediate review if relapse warning signs (sleep disturbance, withdrawal, irritability, anhedonia re-emerge).",
     ],
     whenToRefer: [
       "Refer to psychiatrist if no response to 2 adequate antidepressant trials (12 weeks each at therapeutic dose).",
       "Refer urgently if suicidal ideation emerges or worsens.",
-      "Refer if bipolar disorder is suspected (MDQ positive or manic switch) — mood stabiliser needed before SSRI.",
-      "Refer if psychotic features (delusions, hallucinations) — combination therapy (antidepressant + antipsychotic) or ECT.",
-      "Refer if serotonin syndrome develops (emergency — call 112).",
+      "Refer if bipolar disorder is suspected (MDQ positive or manic switch): mood stabiliser needed before SSRI.",
+      "Refer if psychotic features (delusions, hallucinations): combination therapy (antidepressant + antipsychotic) or ECT.",
+      "Refer if serotonin syndrome develops (emergency, call 112).",
       "Refer to physician if severe hyponatraemia (Na <120 mmol/L) or seizures.",
       "Refer to obstetrician if patient becomes pregnant (do NOT stop sertraline abruptly).",
-      "Refer for CBT — combined SSRI + CBT produces better outcomes than either alone.",
-      "Refer for ECT if severe/psychotic/catatonic/suicidal — ~80% response rate.",
+      "Refer for CBT: combined SSRI + CBT produces better outcomes than either alone.",
+      "Refer for ECT if severe/psychotic/catatonic/suicidal: ~80% response rate.",
       "Refer for rTMS or ketamine/esketamine if treatment-resistant.",
     ],
   },

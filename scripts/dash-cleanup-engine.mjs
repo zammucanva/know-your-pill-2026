@@ -186,6 +186,8 @@ const CURATED = [
   ["First presentation — schizophrenia — psychotic manifestations",
    "First presentation: schizophrenia with psychotic manifestations"],
   ["First presentation — ", "First presentation: "],
+  [". — see mechanism and prescriber sections.", ". See mechanism and prescriber sections."],
+  ["(2017); facts are paraphrased, not reproduced.", "(2017); facts are paraphrased, not reproduced."],
 ];
 
 /* ------------------------------------------------------------------ */
@@ -317,7 +319,9 @@ function transformContent(content, log) {
         // apply pairing
         let t = text.slice(0, d1.idx - 1) + " (" + text.slice(d1.idx + 2, d2.idx - 1).trim() + ") " + text.slice(d2.idx + 2);
         t = t.replace(/ {2,}/g, " ");
-        if (badPunctuation(t)) break;
+        const seam1 = t.slice(Math.max(0, d1.idx - 3), d1.idx + 5);
+        const seam2 = t.slice(Math.max(0, d2.idx - 3), d2.idx + 5);
+        if (/([,.:;]{2,}|\s[,.:;]|\(\s|\s\))/.test(seam1 + seam2)) break;
         text = t;
         changed = true;
         log.rules.push("parenthetical");
@@ -331,16 +335,21 @@ function transformContent(content, log) {
     const d = dashes[0];
     const before = text.slice(sentenceStartBefore(text, d.idx), d.idx - 1);
     const after = text.slice(d.idx + 2);
-    let m = after.match(/^(\d+)(?=[\s.,]|$)/) || after.match(/^([A-Za-z][A-Za-z'’-]*)/);
-    const quotedLead = !m && /^['\"“‘]/.test(after);
-    if (!m && !quotedLead) { log.skipped.push({ reason: "non-word continuation", snippet: text.slice(Math.max(0, d.idx - 40), d.idx + 40) }); break; }
+    let m = after.match(/^(\d+)(?=[\s.,×x%–-]|$)/) || after.match(/^(\d+[A-Za-z]*)/) || after.match(/^([A-Za-zα-ωΑ-Ω][A-Za-z'’α-ωΑ-Ω-]*)/);
+    if (!m && after.startsWith("#")) { m = ["", "#"]; }
+    const quotedLead = !m && (/^\\?['\"“‘]/.test(after) || after.startsWith("#"));
+    const symbolLead = !m && !quotedLead && /^[~≥≤><[(+]/.test(after);
+    const abbrevLead = /^(i\.e\.|e\.g\.)/.test(after);
+    if (!m && !quotedLead && !symbolLead) { log.skipped.push({ reason: "non-word continuation", snippet: text.slice(Math.max(0, d.idx - 40), d.idx + 40) }); break; }
     const W = m ? m[1].toLowerCase() : "";
     const wCap = m ? m[1] : "";
 
-    let repl = null; let rule = null;
+    let repl = null; let rule = null; let capitalize = false;
     const leadHasVerb = VERB_RE.test(before);
-    if (quotedLead) { repl = ": "; rule = "quoted"; }
-    if (quotedLead) { /* handled above */ }
+    if (quotedLead || symbolLead) { repl = before.includes(":") ? "; " : ": "; rule = symbolLead ? "symbol" : "quoted"; }
+    else if (abbrevLead) { repl = ", "; rule = "abbreviation"; }
+    else if (before.trim() === "" && m && /^[a-z]/.test(m[1])) { repl = " "; rule = "after-period"; capitalize = true; }
+    if (repl !== null) { /* decided by quote/abbrev/after-period rules above */ }
     else if (/^[A-Z]/.test(wCap)) {
       // page-title pattern "Page — Description · Know Your Pill" → colon
       if (/\s·\s/.test(text)) { repl = ": "; rule = "title-colon"; }
@@ -368,11 +377,14 @@ function transformContent(content, log) {
 
     // capitalization for sentence splits
     let afterText = after;
-    if (repl === ". " && /^[a-z]/.test(wCap)) {
+    if ((repl === ". " || capitalize) && /^[a-z]/.test(wCap)) {
       afterText = wCap[0].toUpperCase() + after.slice(1);
     }
     let t = text.slice(0, d.idx - 1) + repl + afterText.replace(/^ +/, "");
-    if (badPunctuation(t)) {
+    // validate only the seam neighborhood, not the whole string (the
+    // original may legitimately contain constructs like "e.g.,")
+    const seam = t.slice(Math.max(0, d.idx - 3), d.idx + 5);
+    if (/([,.:;]{2,}|\s[,.:;])/.test(seam)) {
       log.skipped.push({ reason: "would create bad punctuation", snippet: text.slice(Math.max(0, d.idx - 40), d.idx + 40) });
       break;
     }

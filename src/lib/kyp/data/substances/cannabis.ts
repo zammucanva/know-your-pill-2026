@@ -30,7 +30,7 @@ export const cannabis: SubstancePage = {
   disorderName: "Cannabis Use Disorder",
   drugClass: "cannabinoid",
   artwork: "/artwork/cannabis.png",
-  artworkAlt: "Cannabis molecule — THC, the primary psychoactive cannabinoid",
+  artworkAlt: "Cannabis molecule. THC, the primary psychoactive cannabinoid",
 
   tagline: "Explore cannabinoids, altered perception, CB1 receptor pathways, intoxication, psychosis risk, withdrawal, and recovery neuroscience through immersive psychiatry education.",
   summary: "Cannabis is derived from the Cannabis sativa plant and contains over 100 cannabinoids. Delta-9-tetrahydrocannabinol (THC) is the primary psychoactive component. Cannabis produces mild physical dependence but significant psychological dependence with chronic use. Street names include grass, hash, hashish, and marijuana.",
@@ -96,7 +96,7 @@ export const cannabis: SubstancePage = {
       },
       {
         title: "Brain Regions Affected",
-        description: "Basal ganglia — Motor coordination. Hippocampus — Memory formation. Cerebellum — Balance and coordination. Cortex — Cognition and perception.",
+        description: "Basal ganglia. Motor coordination. Hippocampus. Memory formation. Cerebellum. Balance and coordination. Cortex. Cognition and perception.",
       },
       {
         title: "Mechanism of Action",
@@ -141,8 +141,8 @@ export const cannabis: SubstancePage = {
     },
     {
       title: "Synaesthesia",
-      description: "Crossing of sensory modalities — \"seeing\" sounds or \"hearing\" colors. Sensory information is processed in unusual combinations.",
-      example: "I could see the music — it looked like colorful waves.",
+      description: "Crossing of sensory modalities: \"seeing\" sounds or \"hearing\" colors. Sensory information is processed in unusual combinations.",
+      example: "I could see the music: it looked like colorful waves.",
     },
     {
       title: "Visual Enhancements",
@@ -156,7 +156,7 @@ export const cannabis: SubstancePage = {
     },
     {
       title: "Hallucinations",
-      description: "At high doses, true hallucinations may occur — seeing or hearing things that aren't there. More common in naive or susceptible users.",
+      description: "At high doses, true hallucinations may occur: seeing or hearing things that aren't there. More common in naive or susceptible users.",
       example: "I saw shapes moving on the wall that weren't really there.",
     },
   ],
@@ -193,23 +193,23 @@ export const cannabis: SubstancePage = {
   cannabisPsychosis: {
     eyebrow: "Psychiatric Emergency",
     title: "Cannabis Psychosis",
-    subtitle: "Hemp insanity — a schizophrenia-like state induced by high-dose cannabis, first described by Moreau de Tours in 1839.",
+    subtitle: "Hemp insanity: a schizophrenia-like state induced by high-dose cannabis, first described by Moreau de Tours in 1839.",
     cardTitle: "Hemp Insanity",
     cardTagline: "Cannabis-induced psychotic state",
     summary: "Cannabis psychosis, historically called \"hemp insanity,\" is a schizophrenia-like state that can occur with high-dose cannabis use, particularly in susceptible individuals. First described by Moreau de Tours in 1839, it presents with disorientation, confusion, paranoia, and hallucinations. The prognosis is generally good with abstinence.",
     clinicalFeatures: [
-      "Disorientation — Confusion about time, place, or identity",
-      "Paranoia — Intense suspiciousness and persecutory delusions",
-      "Hallucinations — Auditory and visual perceptual disturbances",
-      "Confusion — Disorganized thinking and impaired cognition",
-      "Agitation — Restlessness and emotional lability",
+      "Disorientation. Confusion about time, place, or identity",
+      "Paranoia. Intense suspiciousness and persecutory delusions",
+      "Hallucinations. Auditory and visual perceptual disturbances",
+      "Confusion. Disorganized thinking and impaired cognition",
+      "Agitation. Restlessness and emotional lability",
     ],
     riskFactors: [
-      "High-potency cannabis — High THC, low CBD preparations",
-      "Personal history — Previous psychotic episodes",
-      "Family history — Schizophrenia or psychotic disorders in family",
-      "Young age — Adolescent brain more vulnerable",
-      "Daily use — Chronic heavy consumption",
+      "High-potency cannabis. High THC, low CBD preparations",
+      "Personal history. Previous psychotic episodes",
+      "Family history. Schizophrenia or psychotic disorders in family",
+      "Young age. Adolescent brain more vulnerable",
+      "Daily use. Chronic heavy consumption",
     ],
     prognosis: "Cannabis-induced psychosis typically resolves with abstinence, usually within days to weeks. However, in vulnerable individuals, it may unmask or trigger a primary psychotic disorder such as schizophrenia. Early intervention and sustained abstinence are critical.",
   },

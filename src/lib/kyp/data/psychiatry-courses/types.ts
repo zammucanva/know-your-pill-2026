@@ -76,7 +76,7 @@ export const evidenceGradeMeta: Record<
   proposed: {
     label: "Proposed",
     description:
-      "A leading working hypothesis — useful to learn, not yet settled science.",
+      "A leading working hypothesis: useful to learn, not yet settled science.",
   },
   uncertain: {
     label: "Uncertain",
