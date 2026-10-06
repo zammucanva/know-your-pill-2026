@@ -22,7 +22,8 @@ import {
   ConceptAccordion,
   ConceptProse,
 } from "./concept-ui";
-import { StepChain } from "../course-ui";
+import { KYPMechanismCanvas } from "@/components/mechanism";
+import { fromCourseMechanism } from "@/lib/mechanism";
 
 /* ============================================================
    Concept lesson sections — Lessons 1–3 of the concept course
@@ -231,6 +232,14 @@ export function ConceptKnowledgeGraph({ course }: { course: PsychiatryCourse }) 
 export function ConceptMechanism({ course }: { course: PsychiatryCourse }) {
   const inShort = mechanismInShort(course.mechanism.summary);
   const stepCount = course.mechanism.steps.length;
+  // Legacy adapter (labels verbatim, grade → qualifier); compact canvas
+  // replaces the numbered StepChain inside the same <details> — the SSR
+  // text (In-short + full narrative) is unchanged.
+  const definition = fromCourseMechanism({
+    courseSlug: course.slug,
+    courseTitle: course.title,
+    mechanism: course.mechanism,
+  });
   return (
     <Section spacing="tight" id="mechanism">
       <Container width="narrow">
@@ -256,7 +265,7 @@ export function ConceptMechanism({ course }: { course: PsychiatryCourse }) {
             The {stepCount} steps in detail
           </summary>
           <div className="mt-4">
-            <StepChain steps={course.mechanism.steps.map((s) => ({ label: s, detail: undefined }))} />
+            <KYPMechanismCanvas definition={definition} variant="compact" />
           </div>
         </details>
       </Container>

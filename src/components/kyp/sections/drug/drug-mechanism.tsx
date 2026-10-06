@@ -4,7 +4,8 @@ import { SectionHeader } from "@/components/kyp/ui/section-header";
 import { Callout } from "@/components/kyp/ui/callout";
 import { Badge } from "@/components/kyp/ui/badge";
 import { CardPrimitive, CardBody } from "@/components/kyp/ui/card-primitive";
-import { MechanismFlow } from "@/components/kyp/ui/mechanism-flow";
+import { KYPMechanismCanvas } from "@/components/mechanism";
+import { getPilotMechanism, fromDrugMechanismFlow } from "@/lib/mechanism";
 import type { Drug } from "@/lib/kyp/data";
 
 /**
@@ -23,6 +24,19 @@ interface DrugMechanismOfActionProps {
 
 export function DrugMechanismOfAction({ drug }: DrugMechanismOfActionProps) {
   const m = drug.mechanism;
+
+  // Pilot registry first (hand-authored rich graphs); the legacy adapter
+  // converts the remaining drug mechanismFlow data verbatim. Both render
+  // KYPMechanismCanvas — the old vertical card chain is retired.
+  const pilot = getPilotMechanism(drug.slug);
+  const definition =
+    pilot ??
+    fromDrugMechanismFlow({
+      drugSlug: drug.slug,
+      drugName: drug.genericName,
+      mechanismSummary: drug.mechanism.summary,
+      mechanismFlow: drug.mechanismFlow,
+    });
 
   const pkItems = [
     { label: "Molecular target", value: m.molecularTarget },
@@ -47,14 +61,15 @@ export function DrugMechanismOfAction({ drug }: DrugMechanismOfActionProps) {
           </Callout>
         </div>
 
-        {/* Visual flow diagram (NEW — replaces text-only steps as primary visual) */}
+        {/* Universal mechanism canvas (pilot or legacy-adapted data) */}
         <div className="mt-10">
           <h3 className="text-h3">Visual mechanism flow</h3>
           <p className="mt-2 text-body text-muted-foreground">
             Each node below represents a key step in the drug's action, from acute molecular target
-            to chronic clinical effect. Follow the chain top to bottom.
+            to chronic clinical effect. Follow the causal flow left to right; drag or scroll to
+            explore the full graph.
           </p>
-          <MechanismFlow flow={drug.mechanismFlow} />
+          <KYPMechanismCanvas definition={definition} />
         </div>
 
         {/* Step-by-step mechanism (text version — kept for depth) */}

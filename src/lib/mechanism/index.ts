@@ -12,3 +12,5 @@ export * from "./model";
 export * from "./validate";
 export * from "./layout";
 export * from "./describe";
+export * from "./normalize";
+export * from "./pilots";

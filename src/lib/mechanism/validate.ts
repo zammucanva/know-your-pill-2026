@@ -80,6 +80,20 @@ export function collectMechanismErrors(def: MechanismDefinition): string[] {
     }
   });
 
+  // --- edge→intervention references ---
+  const interventionIds = new Set((def.interventions ?? []).map((iv) => iv.id));
+  edges.forEach((e, i) => {
+    if (e.interventionId && !interventionIds.has(e.interventionId)) {
+      push(`edge[${i}]: interventionId "${e.interventionId}" does not resolve to an intervention`);
+    }
+    if (e.interventionId) {
+      const iv = (def.interventions ?? []).find((iv) => iv.id === e.interventionId);
+      if (iv && e.to !== iv.targetId) {
+        push(`edge[${i}]: intervention edge targets "${e.to}" but intervention "${iv.id}" targets "${iv.targetId}"`);
+      }
+    }
+  });
+
   // --- compartments ---
   const compartmentIds = new Set<string>();
   (def.compartments ?? []).forEach((c, i) => {
@@ -125,7 +139,7 @@ export function collectMechanismErrors(def: MechanismDefinition): string[] {
     if (!Array.isArray(f.edgeIds) || f.edgeIds.length === 0) push(`${where} needs at least one edgeId`);
     else
       f.edgeIds.forEach((eid) => {
-        const edge = edges.find((e) => (e.id ?? `${e.from}→${e.to}#${edges.indexOf(e)}`) === eid);
+        const edge = edges.find((e) => (e.id ?? `e-${e.from}-${e.to}-${edges.indexOf(e)}`) === eid);
         if (!edge) push(`${where}: edge id "${eid}" does not resolve`);
         else {
           const rel = getRelationshipMeta(edge.relationship);
