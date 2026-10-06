@@ -224,35 +224,31 @@ export function layoutMechanism(def: MechanismDefinition): MechanismLayout {
   }
 
   const layer = new Map<string, number>();
-  // Kahn-style iterative longest-path (deterministic; handles DAGs incl. multi-root)
+  // Kahn topological longest-path: a node is dequeued exactly when all its
+  // forward parents have been PROCESSED, so every parent's l+1 contribution
+  // is applied before the node propagates. (A "all parents have layers"
+  // gate is NOT enough — layers get assigned during propagation.)
   const indeg = new Map<string, number>();
   for (const n of nodes) indeg.set(n.id, (parents.get(n.id) ?? []).length);
-  const queue: string[] = nodes.filter((n) => (parents.get(n.id) ?? []).length === 0).map((n) => n.id);
+  const queue: string[] = nodes.filter((n) => (indeg.get(n.id) ?? 0) === 0).map((n) => n.id);
   for (const id of queue) layer.set(id, 0);
-  let guard = 0;
-  const totalEdgeCount = forward.length;
-  let processed = 0;
-  while (queue.length > 0 && guard < nodes.length + totalEdgeCount + 10) {
-    guard++;
+  const processedIds = new Set<string>();
+  while (queue.length > 0) {
     const id = queue.shift()!;
+    processedIds.add(id);
     const l = layer.get(id) ?? 0;
     for (const child of children.get(id) ?? []) {
       layer.set(child, Math.max(layer.get(child) ?? 0, l + 1));
-      const p = parents.get(child) ?? [];
-      // re-queue when all parents have layers assigned
-      if (p.every((pp) => layer.has(pp))) {
-        const deg = (indeg.get(child) ?? 1) - 1;
-        indeg.set(child, deg);
-        if (deg <= 0) queue.push(child);
-      }
+      const d = (indeg.get(child) ?? 1) - 1;
+      indeg.set(child, d);
+      if (d === 0) queue.push(child);
     }
-    processed++;
   }
-  // Any node left without a layer (cycle among forward edges — malformed data):
-  // fall back to BFS discovery order relative to roots, then record a warning.
+  // Any node never processed sits on (or downstream of) a cycle among
+  // forward edges — malformed data: fall back to layer 0 and warn.
   for (const n of nodes) {
-    if (!layer.has(n.id)) {
-      layer.set(n.id, 0);
+    if (!processedIds.has(n.id)) {
+      layer.set(n.id, layer.get(n.id) ?? 0);
       if (!warnings.includes("cyclic forward edges detected — affected nodes placed at layer 0")) {
         warnings.push("cyclic forward edges detected — affected nodes placed at layer 0");
       }

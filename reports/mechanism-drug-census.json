@@ -1,0 +1,1173 @@
+{
+  "generatedAt": "2026-10-06T12:31:03.663Z",
+  "baseline": "a7131451f084ff1b22e57e2159b76dde07822e3f",
+  "corpus": "drugs",
+  "tally": {
+    "FULLY_MAPPED": 2,
+    "ADAPTER_FALLBACK": 143,
+    "NO_MECHANISM": 0,
+    "ERROR": 0
+  },
+  "rows": [
+    {
+      "topicId": "sertraline",
+      "name": "Sertraline",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-sertraline",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "fluoxetine",
+      "name": "Fluoxetine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-fluoxetine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "escitalopram",
+      "name": "Escitalopram",
+      "kind": "drug",
+      "status": "FULLY_MAPPED",
+      "mechanismId": "pilot-escitalopram",
+      "note": "hand-authored rich graph (pilot registry)"
+    },
+    {
+      "topicId": "paroxetine",
+      "name": "Paroxetine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-paroxetine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "citalopram",
+      "name": "Citalopram",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-citalopram",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "fluvoxamine",
+      "name": "Fluvoxamine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-fluvoxamine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "venlafaxine",
+      "name": "Venlafaxine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-venlafaxine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "duloxetine",
+      "name": "Duloxetine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-duloxetine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "bupropion",
+      "name": "Bupropion",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-bupropion",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "mirtazapine",
+      "name": "Mirtazapine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-mirtazapine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "amitriptyline",
+      "name": "Amitriptyline",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-amitriptyline",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "clomipramine",
+      "name": "Clomipramine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-clomipramine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "tianeptine",
+      "name": "Tianeptine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-tianeptine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "isocarboxazid",
+      "name": "Isocarboxazid",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-isocarboxazid",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "moclobemide",
+      "name": "Moclobemide",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-moclobemide",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "phenelzine",
+      "name": "Phenelzine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-phenelzine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "selegiline",
+      "name": "Selegiline",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-selegiline",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "tranylcypromine",
+      "name": "Tranylcypromine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-tranylcypromine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "l-methylfolate",
+      "name": "L-Methylfolate",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-l-methylfolate",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "agomelatine",
+      "name": "Agomelatine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-agomelatine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "vortioxetine",
+      "name": "Vortioxetine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-vortioxetine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "ketamine",
+      "name": "Ketamine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-ketamine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "reboxetine",
+      "name": "Reboxetine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-reboxetine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "nefazodone",
+      "name": "Nefazodone",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-nefazodone",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "trazodone",
+      "name": "Trazodone",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-trazodone",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "desvenlafaxine",
+      "name": "Desvenlafaxine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-desvenlafaxine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "levomilnacipran",
+      "name": "Levomilnacipran",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-levomilnacipran",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "milnacipran",
+      "name": "Milnacipran",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-milnacipran",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "vilazodone",
+      "name": "Vilazodone",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-vilazodone",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "triiodothyronine",
+      "name": "Triiodothyronine (T3)",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-triiodothyronine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "amoxapine",
+      "name": "Amoxapine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-amoxapine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "desipramine",
+      "name": "Desipramine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-desipramine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "dothiepin",
+      "name": "Dothiepin",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-dothiepin",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "doxepin",
+      "name": "Doxepin",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-doxepin",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "imipramine",
+      "name": "Imipramine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-imipramine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "lofepramine",
+      "name": "Lofepramine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-lofepramine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "maprotiline",
+      "name": "Maprotiline",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-maprotiline",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "mianserin",
+      "name": "Mianserin",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-mianserin",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "nortriptyline",
+      "name": "Nortriptyline",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-nortriptyline",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "protriptyline",
+      "name": "Protriptyline",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-protriptyline",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "trimipramine",
+      "name": "Trimipramine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-trimipramine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "amisulpride",
+      "name": "Amisulpride",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-amisulpride",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "asenapine",
+      "name": "Asenapine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-asenapine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "blonanserin",
+      "name": "Blonanserin",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-blonanserin",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "clozapine",
+      "name": "Clozapine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-clozapine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "iloperidone",
+      "name": "Iloperidone",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-iloperidone",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "lurasidone",
+      "name": "Lurasidone",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-lurasidone",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "olanzapine",
+      "name": "Olanzapine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-olanzapine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "paliperidone",
+      "name": "Paliperidone",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-paliperidone",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "perospirone",
+      "name": "Perospirone",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-perospirone",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "pimavanserin",
+      "name": "Pimavanserin",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-pimavanserin",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "quetiapine",
+      "name": "Quetiapine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-quetiapine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "risperidone",
+      "name": "Risperidone",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-risperidone",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "sertindole",
+      "name": "Sertindole",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-sertindole",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "sulpiride",
+      "name": "Sulpiride",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-sulpiride",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "ziprasidone",
+      "name": "Ziprasidone",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-ziprasidone",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "zotepine",
+      "name": "Zotepine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-zotepine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "aripiprazole",
+      "name": "Aripiprazole",
+      "kind": "drug",
+      "status": "FULLY_MAPPED",
+      "mechanismId": "pilot-aripiprazole",
+      "note": "hand-authored rich graph (pilot registry)"
+    },
+    {
+      "topicId": "brexpiprazole",
+      "name": "Brexpiprazole",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-brexpiprazole",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "cariprazine",
+      "name": "Cariprazine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-cariprazine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "chlorpromazine",
+      "name": "Chlorpromazine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-chlorpromazine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "cyamemazine",
+      "name": "Cyamemazine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-cyamemazine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "flupenthixol",
+      "name": "Flupenthixol",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-flupenthixol",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "fluphenazine",
+      "name": "Fluphenazine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-fluphenazine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "haloperidol",
+      "name": "Haloperidol",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-haloperidol",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "loxapine",
+      "name": "Loxapine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-loxapine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "mesoridazine",
+      "name": "Mesoridazine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-mesoridazine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "molindone",
+      "name": "Molindone",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-molindone",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "perphenazine",
+      "name": "Perphenazine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-perphenazine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "pimozide",
+      "name": "Pimozide",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-pimozide",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "pipothiazine",
+      "name": "Pipothiazine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-pipothiazine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "thioridazine",
+      "name": "Thioridazine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-thioridazine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "thiothixene",
+      "name": "Thiothixene",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-thiothixene",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "trifluoperazine",
+      "name": "Trifluoperazine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-trifluoperazine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "zuclopenthixol",
+      "name": "Zuclopenthixol",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-zuclopenthixol",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "gabapentin",
+      "name": "Gabapentin",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-gabapentin",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "levetiracetam",
+      "name": "Levetiracetam",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-levetiracetam",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "pregabalin",
+      "name": "Pregabalin",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-pregabalin",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "tiagabine",
+      "name": "Tiagabine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-tiagabine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "topiramate",
+      "name": "Topiramate",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-topiramate",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "zonisamide",
+      "name": "Zonisamide",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-zonisamide",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "carbamazepine",
+      "name": "Carbamazepine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-carbamazepine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "lamotrigine",
+      "name": "Lamotrigine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-lamotrigine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "lithium",
+      "name": "Lithium",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-lithium",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "oxcarbazepine",
+      "name": "Oxcarbazepine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-oxcarbazepine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "valproate",
+      "name": "Valproate",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-valproate",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "prazosin",
+      "name": "Prazosin",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-prazosin",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "diphenhydramine",
+      "name": "Diphenhydramine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-diphenhydramine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "hydroxyzine",
+      "name": "Hydroxyzine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-hydroxyzine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "buspirone",
+      "name": "Buspirone",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-buspirone",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "alprazolam",
+      "name": "Alprazolam",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-alprazolam",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "chlordiazepoxide",
+      "name": "Chlordiazepoxide",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-chlordiazepoxide",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "clonazepam",
+      "name": "Clonazepam",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-clonazepam",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "clorazepate",
+      "name": "Clorazepate",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-clorazepate",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "diazepam",
+      "name": "Diazepam",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-diazepam",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "loflazepate",
+      "name": "Loflazepate",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-loflazepate",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "lorazepam",
+      "name": "Lorazepam",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-lorazepam",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "midazolam",
+      "name": "Midazolam",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-midazolam",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "oxazepam",
+      "name": "Oxazepam",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-oxazepam",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "flumazenil",
+      "name": "Flumazenil",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-flumazenil",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "propranolol",
+      "name": "Propranolol",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-propranolol",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "estazolam",
+      "name": "Estazolam",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-estazolam",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "flunitrazepam",
+      "name": "Flunitrazepam",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-flunitrazepam",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "flurazepam",
+      "name": "Flurazepam",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-flurazepam",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "quazepam",
+      "name": "Quazepam",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-quazepam",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "temazepam",
+      "name": "Temazepam",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-temazepam",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "triazolam",
+      "name": "Triazolam",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-triazolam",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "suvorexant",
+      "name": "Suvorexant",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-suvorexant",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "ramelteon",
+      "name": "Ramelteon",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-ramelteon",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "tasimelteon",
+      "name": "Tasimelteon",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-tasimelteon",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "eszopiclone",
+      "name": "Eszopiclone",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-eszopiclone",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "zaleplon",
+      "name": "Zaleplon",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-zaleplon",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "zolpidem",
+      "name": "Zolpidem",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-zolpidem",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "zopiclone",
+      "name": "Zopiclone",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-zopiclone",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "clonidine",
+      "name": "Clonidine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-clonidine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "guanfacine",
+      "name": "Guanfacine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-guanfacine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "atomoxetine",
+      "name": "Atomoxetine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-atomoxetine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "dexamphetamine",
+      "name": "Dextroamphetamine (d-Amphetamine)",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-dexamphetamine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "amphetamine",
+      "name": "Amphetamine (d,l)",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-amphetamine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "lisdexamfetamine",
+      "name": "Lisdexamfetamine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-lisdexamfetamine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "dexmethylphenidate",
+      "name": "Dexmethylphenidate",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-dexmethylphenidate",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "methylphenidate",
+      "name": "Methylphenidate (d,l)",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-methylphenidate",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "pemoline",
+      "name": "Pemoline",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-pemoline",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "armodafinil",
+      "name": "Armodafinil",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-armodafinil",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "modafinil",
+      "name": "Modafinil",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-modafinil",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "donepezil",
+      "name": "Donepezil",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-donepezil",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "galantamine",
+      "name": "Galantamine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-galantamine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "rivastigmine",
+      "name": "Rivastigmine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-rivastigmine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "tacrine",
+      "name": "Tacrine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-tacrine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "caprylidene",
+      "name": "Caprylidene",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-caprylidene",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "memantine",
+      "name": "Memantine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-memantine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "acamprosate",
+      "name": "Acamprosate",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-acamprosate",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "buprenorphine",
+      "name": "Buprenorphine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-buprenorphine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "disulfiram",
+      "name": "Disulfiram",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-disulfiram",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "nalmefene",
+      "name": "Nalmefene",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-nalmefene",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "naltrexone",
+      "name": "Naltrexone",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-naltrexone",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "naltrexone-bupropion",
+      "name": "Naltrexone-Bupropion",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-naltrexone-bupropion",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "varenicline",
+      "name": "Varenicline",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-varenicline",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "benztropine",
+      "name": "Benztropine",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-benztropine",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "trihexyphenidyl",
+      "name": "Trihexyphenidyl",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-trihexyphenidyl",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "flibanserin",
+      "name": "Flibanserin",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-flibanserin",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "dextromethorphan",
+      "name": "Dextromethorphan",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-dextromethorphan",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "sodium-oxybate",
+      "name": "Sodium Oxybate",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-sodium-oxybate",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "lorcaserin",
+      "name": "Lorcaserin",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-lorcaserin",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    },
+    {
+      "topicId": "phentermine-topiramate",
+      "name": "Phentermine-Topiramate",
+      "kind": "drug",
+      "status": "ADAPTER_FALLBACK",
+      "mechanismId": "adapted-drug-phentermine-topiramate",
+      "note": "labels verbatim via legacy adapter; rich mapping pending (next content phase)"
+    }
+  ]
+}
