@@ -73,6 +73,10 @@ export interface LaidOutEdge {
   labelWidth?: number;
   isFeedback: boolean;
   isIntervention: boolean;
+  /** Wrapped label lines (long labels wrap into a multi-line chip). */
+  labelLines?: string[];
+  /** Chip height (when labelled). */
+  labelHeight?: number;
 }
 
 export interface LaidOutCompartment {
@@ -146,13 +150,13 @@ const TIMELINE_H = 24;
 
 /** Worst-case average glyph width for the sans stack used in the canvas. */
 function textWidth(text: string, fontSize: number, bold = false): number {
-  const factor = bold ? 0.62 : 0.57;
+  const factor = bold ? 0.68 : 0.6;
   let w = 0;
   for (const ch of text) {
-    if (/[iIl.,:;'|!()\[\]]/.test(ch)) w += factor * 0.45 * fontSize;
-    else if (/[fjrt\u2013\u2014-]/.test(ch)) w += factor * 0.55 * fontSize;
-    else if (/[mwMW]/.test(ch)) w += factor * 1.35 * fontSize;
-    else if (ch === " ") w += factor * 0.42 * fontSize;
+    if (/[iIl.,:;'|!()\[\]]/.test(ch)) w += factor * 0.48 * fontSize;
+    else if (/[fjrt\u2013\u2014-]/.test(ch)) w += factor * 0.58 * fontSize;
+    else if (/[mwMW]/.test(ch)) w += factor * 1.42 * fontSize;
+    else if (ch === " ") w += factor * 0.44 * fontSize;
     else w += factor * fontSize;
   }
   return w;
@@ -293,15 +297,41 @@ export function layoutMechanism(def: MechanismDefinition): MechanismLayout {
   const measured = new Map<string, ReturnType<typeof measureNode>>();
   for (const n of nodes) measured.set(n.id, measureNode(n));
 
+  /* Adaptive layer gaps: a long edge label needs horizontal room between
+   * its columns, or it will sit on neighbouring nodes. Compute every edge
+   * label's wrapped width FIRST, then give each layer boundary the gap the
+   * widest crossing label needs (never below the base gap). */
+  const wrapEdgeLabel = (label: string): { lines: string[]; width: number; height: number } => {
+    const maxW = 176;
+    const lines = wrapText(label, maxW, 12, false);
+    const w = Math.max(...lines.map((l) => textWidth(l, 12, false))) + 16;
+    return { lines, width: w, height: lines.length * 14 + 8 };
+  };
+  const labelSizeByEdge = new Map<string, { lines: string[]; width: number; height: number }>();
+  for (const e of forward) {
+    if (e.label) labelSizeByEdge.set(`${e.from}->${e.to}`, wrapEdgeLabel(e.label));
+  }
+  // density adaptation: dense graphs get more air (crowding was the top
+  // VLM complaint on the 20-edge MDD graph)
+  const density = edges.length;
+  const baseGap = density > 14 ? LAYER_GAP * 1.18 : density > 8 ? LAYER_GAP * 1.08 : LAYER_GAP;
+  const boundaryGap: number[] = new Array(maxLayer + 1).fill(baseGap);
+  for (const e of forward) {
+    const lab = e.label ? labelSizeByEdge.get(`${e.from}->${e.to}`) : null;
+    if (!lab) continue;
+    const l = layer.get(e.from) ?? 0;
+    boundaryGap[l] = Math.max(boundaryGap[l], lab.width + 56);
+  }
+
   const columnX: number[] = [];
   let x = PAD;
   for (let l = 0; l <= maxLayer; l++) {
     let colW = 0;
     for (const n of byLayer[l]) colW = Math.max(colW, measured.get(n.id)!.w);
     columnX[l] = x;
-    x += colW + LAYER_GAP;
+    x += colW + boundaryGap[l];
   }
-  const graphRight = x - LAYER_GAP;
+  const graphRight = x - (maxLayer >= 0 ? boundaryGap[maxLayer] : LAYER_GAP);
 
   const laid: LaidOutNode[] = [];
   // intervention marker space above the topmost node of each column
@@ -325,6 +355,7 @@ export function layoutMechanism(def: MechanismDefinition): MechanismLayout {
 
   const nodeById = new Map<string, LaidOutNode>();
   let maxStackBottom = PAD;
+  const nodeGapV = (def.edges ?? []).length > 14 ? NODE_GAP_V * 1.3 : NODE_GAP_V;
   for (let l = 0; l <= maxLayer; l++) {
     const colNodes = byLayer[l];
     const markerSpace = markerSpaceByCol[l];
@@ -346,7 +377,7 @@ export function layoutMechanism(def: MechanismDefinition): MechanismLayout {
       };
       laid.push(lo);
       nodeById.set(n.id, lo);
-      y += m.h + NODE_GAP_V;
+      y += m.h + nodeGapV;
     }
     if (colNodes.length > 0) {
       // vertical centring of the column against its parents' barycentre (visual)
@@ -423,10 +454,51 @@ export function layoutMechanism(def: MechanismDefinition): MechanismLayout {
     const dx = tx - sx;
     const c = Math.max(36, dx * 0.45);
     const path = `M ${r(sx)} ${r(sy)} C ${r(sx + c)} ${r(sy)}, ${r(tx - c)} ${r(ty)}, ${r(tx)} ${r(ty)}`;
-    const midX = (sx + tx) / 2;
-    const midY = (sy + ty) / 2;
+    const bez = (t: number) => {
+      const u = 1 - t;
+      const bx = u * u * u * sx + 3 * u * u * t * (sx + c) + 3 * u * t * t * (tx - c) + t * t * t * tx;
+      const by = u * u * u * sy + 3 * u * u * t * sy + 3 * u * t * t * ty + t * t * t * ty;
+      return { x: bx, y: by };
+    };
+    const mid = bez(0.5);
+    const near = bez(0.28);
+    const far = bez(0.72);
     const angle = (Math.atan2(ty - (tx - c), tx - c - (sx + c)) * 180) / Math.PI;
-    return { path, terminalX: tx, terminalY: ty, terminalAngle: 0, labelX: midX, labelY: midY, approach: angle };
+    return { path, terminalX: tx, terminalY: ty, terminalAngle: 0, labelX: mid.x, labelY: mid.y, labelNear: near, labelFar: far, approach: angle };
+  };
+
+  /** Nudge a label rect off any node it would cover (labels overlapping
+   *  node boxes was a VLM-found defect on dense graphs like naloxone). */
+  const labelHitsNode = (lx: number, ly: number, w: number, h: number, skip: Set<string>): boolean => {
+    const lx1 = lx - w / 2 - 2;
+    const lx2 = lx + w / 2 + 2;
+    const ly1 = ly - h / 2 - 2;
+    const ly2 = ly + h / 2 + 2;
+    return laid.some(
+      (n) => !skip.has(n.id) && lx1 < n.x + n.w && n.x < lx2 && ly1 < n.y + n.h && n.y < ly2
+    );
+  };
+
+  /** Full avoidance: try the midpoint, then near/far curve positions, with
+   *  vertical nudges at each — long-range edges cross intermediate columns
+   *  and their midpoints can sit on nodes (aripiprazole defect). */
+  const avoidNodeCollision = (
+    mid: { x: number; y: number },
+    near: { x: number; y: number },
+    far: { x: number; y: number },
+    w: number,
+    h: number,
+    skip: Set<string>
+  ): { x: number; y: number } => {
+    const candidates: { x: number; y: number }[] = [mid, near, far];
+    for (const c of candidates) {
+      let y = c.y;
+      for (let attempt = 0; attempt < 5; attempt++) {
+        if (!labelHitsNode(c.x, y, w, h, skip)) return { x: c.x, y };
+        y += attempt % 2 === 0 ? 30 : -60;
+      }
+    }
+    return mid;
   };
 
   let fanOutCursor = new Map<string, number>();
@@ -440,6 +512,10 @@ export function layoutMechanism(def: MechanismDefinition): MechanismLayout {
     const ii = fanInCursor.get(e.to) ?? 0;
     fanInCursor.set(e.to, ii + 1);
     const p = forwardPath(from, to, Math.min(oi, from.fanOut.length - 1), Math.min(ii, to.fanIn.length - 1));
+    const lab = e.label ? labelSizeByEdge.get(`${e.from}->${e.to}`) ?? wrapEdgeLabel(e.label) : null;
+    const fwdLabelPos = lab
+      ? avoidNodeCollision({ x: p.labelX, y: p.labelY }, p.labelNear, p.labelFar, lab.width, lab.height, new Set([e.from, e.to]))
+      : null;
     laidEdges.push({
       id: e.id,
       edge: e,
@@ -447,9 +523,11 @@ export function layoutMechanism(def: MechanismDefinition): MechanismLayout {
       terminalX: p.terminalX,
       terminalY: p.terminalY,
       terminalAngle: p.terminalAngle,
-      labelX: p.labelX,
-      labelY: p.labelY,
-      labelWidth: e.label ? textWidth(e.label, 10, false) + 12 : undefined,
+      labelX: fwdLabelPos?.x ?? p.labelX,
+      labelY: fwdLabelPos?.y ?? p.labelY,
+      labelWidth: lab?.width,
+      labelHeight: lab?.height,
+      labelLines: lab?.lines,
       isFeedback: false,
       isIntervention: Boolean(e.interventionId && interventionIds.has(e.interventionId)),
     });
@@ -471,6 +549,7 @@ export function layoutMechanism(def: MechanismDefinition): MechanismLayout {
     const depth = maxStackBottom + FEEDBACK_BASE_DEPTH + idx * FEEDBACK_STACK;
     const c = Math.max(34, (depth - Math.max(sy, ty)) * 0.6);
     const path = `M ${r(sx)} ${r(sy)} C ${r(sx)} ${r(sy + c)}, ${r(tx)} ${r(ty + c)}, ${r(tx)} ${r(ty)}`;
+    const lab = e.label ? wrapEdgeLabel(e.label) : null;
     laidEdges.push({
       id: e.id,
       edge: e,
@@ -480,11 +559,60 @@ export function layoutMechanism(def: MechanismDefinition): MechanismLayout {
       terminalAngle: -90,
       labelX: (sx + tx) / 2,
       labelY: depth - 12,
-      labelWidth: e.label ? textWidth(e.label, 10, false) + 12 : undefined,
+      labelWidth: lab?.width,
+      labelHeight: lab?.height,
+      labelLines: lab?.lines,
       isFeedback: true,
       isIntervention: false,
     });
   });
+
+  /* --- 5c. label-vs-label collision post-pass --- *
+   * With node overlaps handled, the remaining defect class is two label
+   * chips landing on each other (convergence fans). Nudge in growing
+   * vertical steps until free. */
+  const rectsOverlap = (
+    ax: number, ay: number, aw: number, ah: number,
+    bx: number, by: number, bw: number, bh: number
+  ) => ax < bx + bw && bx < ax + aw && ay < by + bh && by < ay + ah;
+
+  // multi-sweep convergence: a nudge against one label can reintroduce an
+  // overlap with another (observed on aripiprazole) — sweep until stable.
+  for (let sweep = 0; sweep < 4; sweep++) {
+    let nudged = false;
+    for (let i = 0; i < laidEdges.length; i++) {
+      const a = laidEdges[i];
+      if (!a.labelX || a.labelY === undefined || !a.labelWidth) continue;
+      for (let j = i + 1; j < laidEdges.length; j++) {
+        const b = laidEdges[j];
+        if (!b.labelX || b.labelY === undefined || !b.labelWidth) continue;
+        if (Math.abs(a.labelX - b.labelX) > 240) continue; // too far apart to matter
+        let guard = 0;
+        // enforce a minimum visual gap (12px + estimator-vs-render margin),
+        // not merely non-overlap
+        while (
+          guard < 7 &&
+          rectsOverlap(
+            a.labelX - a.labelWidth / 2 - 4, a.labelY - (a.labelHeight ?? 17) / 2 - 4, a.labelWidth + 8, (a.labelHeight ?? 17) + 8,
+            b.labelX - b.labelWidth / 2 - 4, b.labelY - (b.labelHeight ?? 17) / 2 - 4, b.labelWidth + 8, (b.labelHeight ?? 17) + 8
+          )
+        ) {
+          if (guard < 3) {
+            // small step: a coarse step overshoots the valid window when
+            // squeezed between two neighbours (aripiprazole defect)
+            a.labelY += a.labelY >= b.labelY ? 14 : -14;
+          } else {
+            // vertically trapped (labels above AND below): escape
+            // horizontally along the edge instead
+            a.labelX += (a.labelX ?? 0) >= (b.labelX ?? 0) ? 26 : -26;
+          }
+          guard++;
+          nudged = true;
+        }
+      }
+    }
+    if (!nudged) break;
+  }
 
   const flowBottom = maxStackBottom + (returns.length > 0 ? FEEDBACK_BASE_DEPTH + returns.length * FEEDBACK_STACK : 0);
 

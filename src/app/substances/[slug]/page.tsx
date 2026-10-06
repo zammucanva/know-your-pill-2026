@@ -656,7 +656,14 @@ export default async function SubstancePage({ params }: PageProps) {
                   <h3 className="text-h3 mb-3">Medications</h3>
                   <div className="grid gap-3 sm:grid-cols-2">
                     {substance.treatment.medications.map((med, i) => (
-                      <div key={i} className="rounded-lg border border-border/50 p-4">
+                      <div
+                        key={i}
+                        className={
+                          med.mechanismFlow && med.mechanismFlow.length > 0
+                            ? "rounded-lg border border-border/50 p-4 sm:col-span-2"
+                            : "rounded-lg border border-border/50 p-4"
+                        }
+                      >
                         <div className="flex items-baseline justify-between gap-2">
                           <p className="text-sm font-semibold text-foreground">{med.name}</p>
                           {med.mechanism && (

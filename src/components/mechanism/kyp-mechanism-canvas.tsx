@@ -75,14 +75,18 @@ export function KYPMechanismCanvas({ definition: def, variant = "full" }: KYPMec
   const computeInitial = React.useCallback((): View => {
     const W = size?.w ?? 800;
     const H = size?.h ?? 460;
-    const fit = Math.min(W / layout.width, H / layout.height);
+    // READABILITY-FIRST initial view: fit to WIDTH (never to height — a
+    // height-fit shrinks wide graphs to unreadable scales; vertical panning
+    // handles overflow instead). Desktop clamps >= 0.6; mobile clamps >= 0.85
+    // anchored at the start of the causal chain (spec §24 strategy).
+    const fitW = W / layout.width;
     const isMobile = W < 768;
     const z = isMobile
-      ? Math.min(Math.max(fit, 0.85), 1.4)
-      : Math.min(Math.max(fit, 0.55), 1.25);
+      ? Math.min(Math.max(fitW, 0.85), 1.4)
+      : Math.min(Math.max(fitW, 0.9), 1.25);
     if (isMobile) {
-      // anchored at the start of the causal chain, vertically centred
-      const y = Math.max(8, (H - layout.height * z) / 2);
+      // readable-first: never below 0.9 on desktop (users pan/fit for overview)
+      const y = Math.max(8, Math.min((H - layout.height * z) / 2, 8));
       return { x: 8, y, z };
     }
     const x = Math.max(8, (W - layout.width * z) / 2);
@@ -468,6 +472,7 @@ export function KYPMechanismCanvas({ definition: def, variant = "full" }: KYPMec
 
       {/* ---------- canvas / steps ---------- */}
       {mode === "graph" ? (
+        <div className="kyp-mech-canvas-block">
         <div
           ref={wrapRef}
           className={`kyp-mech-canvas-wrap${reducedMotion ? " kyp-mech-reduced-motion" : ""}`}
@@ -506,6 +511,7 @@ export function KYPMechanismCanvas({ definition: def, variant = "full" }: KYPMec
           <div className="kyp-mech-sr" role="status" aria-live="polite">
             {announcement}
           </div>
+        </div>
         </div>
       ) : (
         <div className="kyp-mech-steps">

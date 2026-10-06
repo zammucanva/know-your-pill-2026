@@ -56,19 +56,19 @@ function Terminal({ x, y, angle, kind, vars }: {
       return (
         <path
           {...common}
-          d="M 0 -7.5 L 0 7.5"
-          strokeWidth={3}
+          d="M 0 -8.5 L 0 8.5"
+          strokeWidth={3.5}
           fill="none"
           transform={t}
         />
       );
     case "dot":
-      return <circle {...common} cx={0} cy={0} r={3.6} transform={t} />;
+      return <circle {...common} cx={0} cy={0} r={4.1} transform={t} />;
     case "chevron":
       return (
         <path
           {...common}
-          d="M -9 -4.5 L -4 0 L -9 4.5 M -3.5 -4.5 L 1.5 0 L -3.5 4.5"
+          d="M -10 -5 L -4.5 0 L -10 5 M -4 -5 L 1.5 0 L -4 5"
           fill="none"
           strokeWidth={2}
           strokeLinecap="round"
@@ -77,12 +77,12 @@ function Terminal({ x, y, angle, kind, vars }: {
         />
       );
     case "diamond":
-      return <path {...common} d="M 0 -5.5 L 5.5 0 L 0 5.5 L -5.5 0 Z" transform={t} />;
+      return <path {...common} d="M 0 -6.5 L 6.5 0 L 0 6.5 L -6.5 0 Z" transform={t} />;
     case "none":
       return null;
     // arrow (default)
     default:
-      return <path {...common} d="M 1.5 0 L -8.5 -4.75 L -8.5 4.75 Z" transform={t} />;
+      return <path {...common} d="M 2 0 L -10 -5.4 L -10 5.4 Z" transform={t} />;
   }
 }
 
@@ -189,14 +189,20 @@ export const MechanismSvg = React.memo(function MechanismSvg({
                 >
                   <rect
                     x={le.labelX - (le.labelWidth ?? 40) / 2}
-                    y={le.labelY - 8.5}
+                    y={le.labelY - (le.labelHeight ?? 17) / 2}
                     width={le.labelWidth ?? 40}
-                    height={17}
-                    rx={8.5}
+                    height={le.labelHeight ?? 17}
+                    rx={7}
                   />
-                  <text x={le.labelX} y={le.labelY + 0.5}>
-                    {le.edge.label}
-                  </text>
+                  {(le.labelLines ?? [le.edge.label]).map((line, li) => (
+                    <text
+                      key={li}
+                      x={le.labelX}
+                      y={(le.labelY ?? 0) - (le.labelHeight ?? 17) / 2 + 12 + li * 14}
+                    >
+                      {line}
+                    </text>
+                  ))}
                 </g>
               )}
             </g>
