@@ -67,7 +67,7 @@ export function collectMechanismErrors(def: MechanismDefinition): string[] {
     if (!e.to || !nodeIds.has(e.to)) push(`${where}: "to" (${e.to}) does not resolve to a node`);
     const rel = getRelationshipMeta(e.relationship);
     if (!rel) push(`${where}: unknown relationship "${e.relationship}" (closed vocabulary)`);
-    if (e.from && e.from === e.to) push(`${where}: self-loop on "${e.from}" — use a feedback relationship instead`);
+    if (e.from && e.from === e.to) push(`${where}: self-loop on "${e.from}"; use a feedback relationship instead`);
     const key = `${e.from ?? "?"}→${e.to ?? "?"}:${e.relationship}`;
     if (seenEdgeKeys.has(key)) push(`${where}: duplicate edge ${key}`);
     seenEdgeKeys.add(key);

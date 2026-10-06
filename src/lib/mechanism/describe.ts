@@ -34,7 +34,7 @@ export function describeEdge(def: MechanismDefinition, edge: MechanismEdge): str
   const toLabel = to?.label ?? edge.to;
   let sentence = `${fromLabel} ${verb} ${toLabel}`;
   if (edge.label && rel && edge.label.toLowerCase() !== verb.toLowerCase()) {
-    sentence += ` — ${edge.label}`;
+    sentence += ` (${edge.label})`;
   }
   if (edge.qualifier) sentence += ` (evidence: ${edge.qualifier})`;
   if (edge.interventionId) {
@@ -67,7 +67,7 @@ export function describeNodeContext(def: MechanismDefinition, nodeId: string): s
   const interventions = (def.interventions ?? []).filter((iv) => iv.targetId === nodeId);
   for (const iv of interventions) {
     const action = INTERVENTION_ACTION_META[iv.action]?.label ?? iv.action;
-    lines.push(`Intervention: ${iv.agentLabel} acts here — ${action}${iv.effectLabel ? ` (${iv.effectLabel})` : ""}.`);
+    lines.push(`Intervention: ${iv.agentLabel} acts here: ${action}${iv.effectLabel ? ` (${iv.effectLabel})` : ""}.`);
   }
 
   const stage = def.timeline?.find((t) => t.nodeIds.includes(nodeId));
@@ -104,7 +104,7 @@ export function describeMechanism(def: MechanismDefinition): string {
     const target = def.nodes.find((n) => n.id === iv.targetId);
     const action = INTERVENTION_ACTION_META[iv.action]?.label ?? iv.action;
     blocks.push(
-      `Intervention: ${iv.agentLabel} acts on ${target?.label ?? iv.targetId} — ${action}${
+      `Intervention: ${iv.agentLabel} acts on ${target?.label ?? iv.targetId}: ${action}${
         iv.effectLabel ? ` (${iv.effectLabel})` : ""
       }${iv.description ? `. ${iv.description}` : ""}`
     );
@@ -112,7 +112,7 @@ export function describeMechanism(def: MechanismDefinition): string {
 
   if (def.normalState && def.abnormalState) {
     blocks.push(
-      `Normal state — ${def.normalState.label}: ${def.normalState.findings.map((f) => `${f.label}: ${f.text}`).join(" ")}`
+      `Normal state (${def.normalState.label}): ${def.normalState.findings.map((f) => `${f.label}: ${f.text}`).join(" ")}`
     );
     blocks.push(
       `${def.abnormalState.label}: ${def.abnormalState.findings.map((f) => `${f.label}: ${f.text}`).join(" ")}`
@@ -120,7 +120,7 @@ export function describeMechanism(def: MechanismDefinition): string {
   }
 
   if (def.clinicalConsequences?.length) {
-    blocks.push(`Clinical consequences: ${def.clinicalConsequences.map((c) => `${c.label} — ${c.description}`).join(" ")}`);
+    blocks.push(`Clinical consequences: ${def.clinicalConsequences.map((c) => `${c.label}: ${c.description}`).join(" ")}`);
   }
 
   if (def.scenarios?.length) {

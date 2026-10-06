@@ -72,7 +72,7 @@ const records: PilotIntegrityRecord[] = [];
   records.push({
     pilot: "pilot-escitalopram",
     topicId: "escitalopram",
-    source: "src/lib/kyp/data/drugs/escitalopram.ts — mechanismFlow (nodes, edges, caption) + mechanism.steps + mechanism.effect",
+    source: "src/lib/kyp/data/drugs/escitalopram.ts: mechanismFlow (nodes, edges, caption) + mechanism.steps + mechanism.effect",
     migration: "FULLY_MAPPED (pilot conversion + enrichment)",
     nodesBefore: src.nodes.length,
     nodesAfter: pilot.nodes.length,
@@ -100,7 +100,7 @@ const records: PilotIntegrityRecord[] = [];
   records.push({
     pilot: "pilot-aripiprazole",
     topicId: "aripiprazole",
-    source: "src/lib/kyp/data/drugs/aripiprazole.ts — mechanismFlow",
+    source: "src/lib/kyp/data/drugs/aripiprazole.ts: mechanismFlow",
     migration: "FULLY_MAPPED (pilot conversion)",
     nodesBefore: src.nodes.length,
     nodesAfter: pilot.nodes.length,
@@ -164,7 +164,7 @@ const records: PilotIntegrityRecord[] = [];
   records.push({
     pilot: "pilot-major-depressive-disorder",
     topicId: "major-depressive-disorder",
-    source: "src/lib/kyp/data/diseases/major-depressive-disorder.ts — summary, etiology.models, pathophysiology.{summary,neurotransmitters,pathways,details}, receptors, knowledgeGraph, management (ketamine entry)",
+    source: "src/lib/kyp/data/diseases/major-depressive-disorder.ts: summary, etiology.models, pathophysiology.{summary,neurotransmitters,pathways,details}, receptors, knowledgeGraph, management (ketamine entry)",
     migration: "FULLY_MAPPED (NEW visual — baseline was text-only; all text preserved on the page)",
     nodesBefore: 0,
     nodesAfter: pilot.nodes.length,
@@ -179,7 +179,7 @@ const records: PilotIntegrityRecord[] = [];
 
 /* ---------- 4. Disulfiram (substance step flow -> rich pilot) ---------- */
 {
-  const med = alcoholSource.treatment?.medications?.find((m) => m.name === "Disulfiram")!;
+  const med = alcoholSource.treatment?.medications?.find((m) => m.name === "Disulfiram");
   if (!med?.mechanismFlow) throw new Error("Disulfiram mechanismFlow missing");
   const steps = med.mechanismFlow;
   const pilot = pilotMechanisms.find((p) => p.mechanismId === "pilot-alcohol-disulfiram")!;
@@ -217,7 +217,7 @@ const records: PilotIntegrityRecord[] = [];
   records.push({
     pilot: "pilot-alcohol-disulfiram",
     topicId: "alcohol",
-    source: "src/lib/kyp/data/substances/alcohol.ts — treatment.medications[Disulfiram].mechanismFlow + reactionSymptoms + description",
+    source: "src/lib/kyp/data/substances/alcohol.ts: treatment.medications[Disulfiram].mechanismFlow + reactionSymptoms + description",
     migration: "FULLY_MAPPED (pilot conversion)",
     nodesBefore: steps.length,
     nodesAfter: pilot.nodes.length,
@@ -265,7 +265,7 @@ const records: PilotIntegrityRecord[] = [];
   records.push({
     pilot: "pilot-opioids-naloxone",
     topicId: "opioids",
-    source: "src/lib/kyp/data/substances/opioids.ts — naloxoneInfo.{mechanismFlow,summary,pharmacologyNotes}",
+    source: "src/lib/kyp/data/substances/opioids.ts: naloxoneInfo.{mechanismFlow,summary,pharmacologyNotes}",
     migration: "FULLY_MAPPED (pilot conversion)",
     nodesBefore: src.mechanismFlow.length,
     nodesAfter: pilot.nodes.length,

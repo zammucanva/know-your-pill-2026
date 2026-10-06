@@ -81,7 +81,7 @@ const escitalopram: MechanismDefinition = validateMechanism({
   evidence: {
     grade: "established",
     summary: "SSRI mechanism with well-characterised acute and delayed components.",
-    sources: ["src/lib/kyp/data/drugs/escitalopram.ts — mechanismFlow, mechanism.steps, mechanism.effect, mechanism.summary"],
+    sources: ["src/lib/kyp/data/drugs/escitalopram.ts: mechanismFlow, mechanism.steps, mechanism.effect, mechanism.summary"],
   },
 });
 
@@ -144,7 +144,7 @@ const aripiprazole: MechanismDefinition = validateMechanism({
   evidence: {
     grade: "established",
     summary: "Receptor-level pharmacology with pathway-dependent net effects.",
-    sources: ["src/lib/kyp/data/drugs/aripiprazole.ts — mechanismFlow"],
+    sources: ["src/lib/kyp/data/drugs/aripiprazole.ts: mechanismFlow"],
   },
 });
 
@@ -285,7 +285,7 @@ const majorDepressiveDisorder: MechanismDefinition = validateMechanism({
     summary:
       "The monoamine hypothesis is incomplete: MDD is a network disorder with three converging hypotheses (monoamine, BDNF/neuroplasticity, inflammatory) plus HPA and circuit-level changes.",
     sources: [
-      "src/lib/kyp/data/diseases/major-depressive-disorder.ts — summary, etiology.models, pathophysiology.{summary,neurotransmitters,pathways,details}, receptors, knowledgeGraph nodes, management (ketamine entry)",
+      "src/lib/kyp/data/diseases/major-depressive-disorder.ts: summary, etiology.models, pathophysiology.{summary,neurotransmitters,pathways,details}, receptors, knowledgeGraph nodes, management (ketamine entry)",
     ],
   },
 });
@@ -338,7 +338,7 @@ const disulfiram: MechanismDefinition = validateMechanism({
   evidence: {
     grade: "established",
     summary: "Classical enzyme-inhibition deterrence mechanism.",
-    sources: ["src/lib/kyp/data/substances/alcohol.ts — treatment.medications[Disulfiram].mechanismFlow + reactionSymptoms"],
+    sources: ["src/lib/kyp/data/substances/alcohol.ts: treatment.medications[Disulfiram].mechanismFlow + reactionSymptoms"],
   },
 });
 
@@ -391,7 +391,7 @@ const naloxone: MechanismDefinition = validateMechanism({
   evidence: {
     grade: "established",
     summary: "Emergency receptor-competition mechanism with rapid, time-limited action.",
-    sources: ["src/lib/kyp/data/substances/opioids.ts — naloxoneInfo.{mechanismFlow,summary,pharmacologyNotes}"],
+    sources: ["src/lib/kyp/data/substances/opioids.ts: naloxoneInfo.{mechanismFlow,summary,pharmacologyNotes}"],
   },
 });
 

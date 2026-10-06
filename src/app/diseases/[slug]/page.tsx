@@ -242,7 +242,7 @@ export default async function DiseasePage({ params }: PageProps) {
                   <div className="mt-8">
                     <h3 className="text-h3">Pathophysiology graph</h3>
                     <p className="mt-2 text-body text-muted-foreground">
-                      The same mechanism as a causal graph: follow each branch left to right —
+                      The same mechanism as a causal graph: follow each branch left to right;
                       interventions (SSRIs, ketamine) appear at their point of action.
                     </p>
                     <KYPMechanismCanvas definition={pilot} />

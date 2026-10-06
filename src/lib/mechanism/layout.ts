@@ -150,7 +150,7 @@ function textWidth(text: string, fontSize: number, bold = false): number {
   let w = 0;
   for (const ch of text) {
     if (/[iIl.,:;'|!()\[\]]/.test(ch)) w += factor * 0.45 * fontSize;
-    else if (/[fjrt\-–—]/.test(ch)) w += factor * 0.55 * fontSize;
+    else if (/[fjrt\u2013\u2014-]/.test(ch)) w += factor * 0.55 * fontSize;
     else if (/[mwMW]/.test(ch)) w += factor * 1.35 * fontSize;
     else if (ch === " ") w += factor * 0.42 * fontSize;
     else w += factor * fontSize;
@@ -249,8 +249,8 @@ export function layoutMechanism(def: MechanismDefinition): MechanismLayout {
   for (const n of nodes) {
     if (!processedIds.has(n.id)) {
       layer.set(n.id, layer.get(n.id) ?? 0);
-      if (!warnings.includes("cyclic forward edges detected — affected nodes placed at layer 0")) {
-        warnings.push("cyclic forward edges detected — affected nodes placed at layer 0");
+      if (!warnings.includes("cyclic forward edges detected; affected nodes placed at layer 0")) {
+        warnings.push("cyclic forward edges detected; affected nodes placed at layer 0");
       }
     }
   }

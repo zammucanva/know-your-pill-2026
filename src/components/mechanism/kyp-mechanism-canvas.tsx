@@ -517,7 +517,7 @@ export function KYPMechanismCanvas({ definition: def, variant = "full" }: KYPMec
                 return (
                   <li key={n.id}>
                     <strong>{n.node.label}</strong>
-                    {n.node.sublabel ? ` — ${n.node.sublabel}` : ""}
+                    {n.node.sublabel ? ` · ${n.node.sublabel}` : ""}
                     {outgoing.length > 0 && (
                       <span className="block text-muted-foreground" style={{ fontSize: "0.75rem", marginTop: "0.25rem" }}>
                         {outgoing
