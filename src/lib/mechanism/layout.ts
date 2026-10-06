@@ -47,6 +47,10 @@ export interface LaidOutNode {
   h: number;
   layer: number;
   node: MechanismNode;
+  /** Wrapped label lines (deterministic — same estimator as measurement). */
+  labelLines: string[];
+  /** Wrapped sublabel lines. */
+  sublabelLines: string[];
   /** Y offsets where outgoing forward edges attach on the right side. */
   fanOut: number[];
   /** Y offsets where incoming forward edges attach on the left side. */
@@ -339,6 +343,8 @@ export function layoutMechanism(def: MechanismDefinition): MechanismLayout {
         h: m.h,
         layer: l,
         node: n,
+        labelLines: m.labelLines,
+        sublabelLines: m.sublabelLines,
         fanOut: [],
         fanIn: [],
       };
