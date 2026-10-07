@@ -147,8 +147,9 @@ export default function WelcomePage() {
       setStep(data.isNew || !data.learnerType || data.learnerType === "student" ? "role" : "done");
     } catch (err: unknown) {
       const code = (err as { code?: string })?.code;
+      const message = (err as { message?: string })?.message;
       if (code === "auth/popup-closed-by-user") return;
-      setError("Google sign-in failed. Please try again.");
+      setError(`Google sign-in failed: ${code ?? "unknown"} — ${message ?? ""}`);
     } finally {
       setLoading(false);
     }
