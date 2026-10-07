@@ -51,7 +51,8 @@
 
 export const CONTENT_SECURITY_POLICY = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline'",
+  // Firebase Auth loads apis.google.com/js/api.js for the signInWithPopup flow
+  "script-src 'self' 'unsafe-inline' https://apis.google.com",
   "style-src 'self' 'unsafe-inline'",
   // Google profile photos from Google Sign-In
   "img-src 'self' https://lh3.googleusercontent.com",
