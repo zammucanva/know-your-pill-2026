@@ -6,16 +6,21 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
 }
 
 model User {
-  id            String    @id @default(cuid())
-  name          String
-  email         String    @unique
-  passwordHash  String
-  emailVerified Boolean   @default(false)
+  id                String    @id @default(cuid())
+  name              String
+  email             String    @unique
+  passwordHash      String    @default("")
+  emailVerified     Boolean   @default(false)
+  /// "email" | "google"
+  provider          String    @default("email")
+  /// Google UID when provider = "google"
+  providerAccountId String?
   /// Learner-facing profile; safe for the authenticated user to change.
   learnerType   String    @default("student")
   /// Server-authoritative authorization role; ordinary users cannot change this.
