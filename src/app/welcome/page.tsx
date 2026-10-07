@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { IS_STATIC_EXPORT } from "@/lib/kyp/static-export";
-import { signInWithPopup } from "firebase/auth";
+import { signInWithRedirect, getRedirectResult } from "firebase/auth";
 import { auth, googleProvider } from "@/lib/firebase-client";
 
 type Step = "welcome" | "signup" | "login" | "verify" | "role" | "done";
@@ -52,15 +52,35 @@ export default function WelcomePage() {
   const [passwordFocused, setPasswordFocused] = React.useState(false);
 
   React.useEffect(() => {
-    // Static export: no session API exists — skip the check (the
-    // buttons below degrade honestly instead) [audit B1].
     if (IS_STATIC_EXPORT) return;
+    // Check existing session
     fetch("/api/auth/session").then(r => r.json()).then(data => {
       if (data.user) {
         setUserData({ name: data.user.name, email: data.user.email });
         setStep(data.user.learnerType && data.user.learnerType !== "mbbs_student" ? "done" : "role");
       }
     }).catch(() => {});
+
+    // Pick up the result when Google redirects back to this page
+    setLoading(true);
+    getRedirectResult(auth).then(async (result) => {
+      if (!result) return;
+      const idToken = await result.user.getIdToken();
+      const res = await fetch("/api/auth/google", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ idToken }),
+      });
+      const data = await res.json();
+      if (!res.ok) { setError(data.error || "Google sign-in failed"); return; }
+      setUserData({ name: data.name, email: data.email });
+      setStep(data.isNew || !data.learnerType || data.learnerType === "student" ? "role" : "done");
+    }).catch((err: unknown) => {
+      const code = (err as { code?: string })?.code;
+      if (code && code !== "auth/no-current-user") {
+        setError("Google sign-in failed. Please try again.");
+      }
+    }).finally(() => setLoading(false));
   }, []);
 
   // Password validation
@@ -134,22 +154,10 @@ export default function WelcomePage() {
     setError("");
     setLoading(true);
     try {
-      const result = await signInWithPopup(auth, googleProvider);
-      const idToken = await result.user.getIdToken();
-      const res = await fetch("/api/auth/google", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ idToken }),
-      });
-      const data = await res.json();
-      if (!res.ok) { setError(data.error || "Google sign-in failed"); return; }
-      setUserData({ name: data.name, email: data.email });
-      setStep(data.isNew || !data.learnerType || data.learnerType === "student" ? "role" : "done");
-    } catch (err: unknown) {
-      const code = (err as { code?: string })?.code;
-      if (code === "auth/popup-closed-by-user") return;
+      await signInWithRedirect(auth, googleProvider);
+      // Page will redirect away — result is handled in the useEffect above
+    } catch {
       setError("Google sign-in failed. Please try again.");
-    } finally {
       setLoading(false);
     }
   };
