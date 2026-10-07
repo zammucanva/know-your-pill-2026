@@ -27,6 +27,7 @@ import { resolve } from "path";
 import { BASE_URL, ensureServer } from "./helpers/server";
 import {
   CONTENT_SECURITY_POLICY,
+  FIREBASE_AUTH_SOURCES,
   REQUIRED_CSP_DIRECTIVE_KEYS,
 } from "@/lib/csp";
 
@@ -47,27 +48,33 @@ describe("CSP policy constant (unit)", () => {
     }
   });
 
-  test("2. default-src and connect-src are strictly 'self'", () => {
+  test("2. default-src is strictly 'self'; connect-src/frame-src add only Firebase Auth hosts", () => {
     const directives = parseDirectives(CONTENT_SECURITY_POLICY);
     expect(directives.get("default-src")).toBe("'self'");
-    expect(directives.get("connect-src")).toBe("'self'");
+    expect(directives.get("connect-src")).toBe(
+      ["'self'", ...FIREBASE_AUTH_SOURCES["connect-src"]].join(" ")
+    );
+    expect(directives.get("frame-src")).toBe(
+      ["'self'", ...FIREBASE_AUTH_SOURCES["frame-src"]].join(" ")
+    );
     expect(directives.get("object-src")).toBe("'none'");
     expect(directives.get("base-uri")).toBe("'self'");
     expect(directives.get("frame-ancestors")).toBe("'none'");
     expect(directives.get("form-action")).toBe("'self'");
   });
 
-  test("3. the policy allows no third-party origins, wildcards, or schemes", () => {
+  test("3. the only third-party origins are the exact Firebase Auth hosts; no wildcards or schemes", () => {
     for (const source of CONTENT_SECURITY_POLICY.split(";").map((p) => p.trim()).filter(Boolean)) {
       const lower = source.toLowerCase();
-      expect(lower).not.toContain("*.");
+      const [key, ...tokens] = lower.split(/\s+/);
+      const allowedHosts: readonly string[] =
+        FIREBASE_AUTH_SOURCES[key as keyof typeof FIREBASE_AUTH_SOURCES] ?? [];
+      expect(lower).not.toContain("*");
       expect(lower).not.toContain("http:");
-      expect(lower).not.toContain("https:");
       expect(lower).not.toContain("ws:");
       expect(lower).not.toContain("wss:");
-      // Only 'self', 'none', 'unsafe-inline' keywords appear as sources.
-      for (const token of lower.split(/\s+/).slice(1)) {
-        expect(["'self'", "'none'", "'unsafe-inline'"]).toContain(token);
+      for (const token of tokens) {
+        expect(["'self'", "'none'", "'unsafe-inline'", ...allowedHosts]).toContain(token);
       }
     }
   });

@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { IS_STATIC_EXPORT } from "@/lib/kyp/static-export";
-import { signInWithRedirect, getRedirectResult } from "firebase/auth";
+import { signInWithPopup } from "firebase/auth";
 import { auth, googleProvider } from "@/lib/firebase-client";
 
 type Step = "welcome" | "signup" | "login" | "verify" | "role" | "done";
@@ -60,32 +60,6 @@ export default function WelcomePage() {
         setStep(data.user.learnerType && data.user.learnerType !== "mbbs_student" ? "done" : "role");
       }
     }).catch(() => {});
-
-    // Only check redirect result if the user actually clicked "Continue with Google"
-    const pendingRedirect = sessionStorage.getItem("kyp_google_redirect");
-    if (!pendingRedirect) return;
-    sessionStorage.removeItem("kyp_google_redirect");
-    setLoading(true);
-
-    const timeout = new Promise<null>((_, reject) =>
-      setTimeout(() => reject(new Error("timeout")), 10000)
-    );
-    Promise.race([getRedirectResult(auth), timeout])
-      .then(async (result) => {
-        if (!result) return;
-        const idToken = await result.user.getIdToken();
-        const res = await fetch("/api/auth/google", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ idToken }),
-        });
-        const data = await res.json();
-        if (!res.ok) { setError(data.error || "Google sign-in failed"); return; }
-        setUserData({ name: data.name, email: data.email });
-        setStep(data.isNew || !data.learnerType || data.learnerType === "student" ? "role" : "done");
-      })
-      .catch(() => setError("Google sign-in failed. Please try again."))
-      .finally(() => setLoading(false));
   }, []);
 
   // Password validation
@@ -159,11 +133,26 @@ export default function WelcomePage() {
     setError("");
     setLoading(true);
     try {
-      sessionStorage.setItem("kyp_google_redirect", "1");
-      await signInWithRedirect(auth, googleProvider);
-    } catch {
-      sessionStorage.removeItem("kyp_google_redirect");
+      const result = await signInWithPopup(auth, googleProvider);
+      const idToken = await result.user.getIdToken();
+      const res = await fetch("/api/auth/google", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ idToken }),
+      });
+      const data = await res.json();
+      if (!res.ok) { setError(data.error || "Google sign-in failed"); return; }
+      setUserData({ name: data.name, email: data.email });
+      setStep(data.isNew || !data.learnerType || data.learnerType === "student" ? "role" : "done");
+    } catch (err: unknown) {
+      const code = (err as { code?: string })?.code;
+      if (code === "auth/popup-closed-by-user" || code === "auth/cancelled-popup-request") return;
+      if (code === "auth/popup-blocked") {
+        setError("Your browser blocked the Google sign-in popup. Allow popups for this site and try again.");
+        return;
+      }
       setError("Google sign-in failed. Please try again.");
+    } finally {
       setLoading(false);
     }
   };
