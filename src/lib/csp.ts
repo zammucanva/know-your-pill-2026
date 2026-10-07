@@ -53,9 +53,12 @@ export const CONTENT_SECURITY_POLICY = [
   "default-src 'self'",
   "script-src 'self' 'unsafe-inline'",
   "style-src 'self' 'unsafe-inline'",
-  "img-src 'self'",
+  // Google profile photos from Google Sign-In
+  "img-src 'self' https://lh3.googleusercontent.com",
   "font-src 'self'",
-  "connect-src 'self'",
+  // Firebase Auth SDK makes fetch calls to Google Identity Toolkit and Secure Token
+  // during signInWithPopup — blocking these causes auth/internal-error
+  "connect-src 'self' https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://www.googleapis.com",
   "object-src 'none'",
   "base-uri 'self'",
   "frame-ancestors 'none'",
