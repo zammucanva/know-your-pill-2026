@@ -21,6 +21,7 @@ import {
   getEntityMeta,
   getRelationshipMeta,
   INTERVENTION_ACTION_META,
+  EDGE_LABEL_TIER_META,
 } from "@/lib/mechanism";
 import { describeEdge, describeNode } from "@/lib/mechanism";
 
@@ -38,6 +39,17 @@ export interface MechanismSvgProps {
   onNodeSelect: (id: string) => void;
   onNodeKeyDown: (e: React.KeyboardEvent, id: string) => void;
   dragging: boolean;
+  /** When set (client, after the initial view is computed) the viewBox is
+   *  the CONTAINER's pixel space — 1 user unit = 1 CSS pixel, so view.z is
+   *  the true on-screen zoom. Null (server render / no-JS) keeps the legacy
+   *  graph-bounds viewBox with preserveAspectRatio meet, which shows the
+   *  WHOLE graph in the static HTML (SEO + screen-reader fallback).
+   *
+   *  This closes the v2 latent defect where the meet-fit pre-compressed
+   *  the graph by wrapW/graphW (0.13-0.5×) before the view zoom multiplied
+   *  on top — the "85%" zoom hint actually rendered 13px node labels at
+   *  1.7 CSS px on mobile and 4.5 px on desktop. */
+  pixelSpace: { w: number; h: number } | null;
 }
 
 /* ---------- terminal geometry (angle in degrees, 0 = pointing right) ---------- */
@@ -99,6 +111,7 @@ export const MechanismSvg = React.memo(function MechanismSvg({
   onNodeSelect,
   onNodeKeyDown,
   dragging,
+  pixelSpace,
 }: MechanismSvgProps) {
   const nodeAria = React.useCallback(
     (n: LaidOutNode) => {
@@ -109,11 +122,15 @@ export const MechanismSvg = React.memo(function MechanismSvg({
     [selectedId]
   );
 
+  const viewBox = pixelSpace
+    ? `0 0 ${pixelSpace.w} ${pixelSpace.h}`
+    : `0 0 ${Math.max(layout.width, 320)} ${Math.max(layout.height, 200)}`;
+
   return (
     <svg
       className="kyp-mech-svg"
       data-dragging={dragging ? "true" : "false"}
-      viewBox={`0 0 ${Math.max(layout.width, 320)} ${Math.max(layout.height, 200)}`}
+      viewBox={viewBox}
       preserveAspectRatio="xMidYMin meet"
       role="group"
       aria-label={`${def.title} mechanism diagram: ${def.nodes.length} nodes, ${def.edges.length} relationships. Tab through nodes; press Enter to inspect.`}
@@ -157,6 +174,7 @@ export const MechanismSvg = React.memo(function MechanismSvg({
             feedback: le.isFeedback ? "true" : "false",
             intervention: le.isIntervention ? "true" : "false",
           };
+          const tierMeta = EDGE_LABEL_TIER_META[le.labelTier ?? "primary"];
           return (
             <g key={le.id}>
               <path
@@ -166,6 +184,7 @@ export const MechanismSvg = React.memo(function MechanismSvg({
                 data-stroke={le.isIntervention ? "dotted" : rel.stroke}
                 data-feedback={le.isFeedback ? "true" : "false"}
                 data-intervention={le.isIntervention ? "true" : "false"}
+                data-emphasis={le.emphasis ?? "primary"}
                 data-dim={dimEdgeIds.has(le.id) ? "true" : "false"}
                 role="img"
                 aria-label={describeEdge(def, le.edge)}
@@ -173,7 +192,7 @@ export const MechanismSvg = React.memo(function MechanismSvg({
               <Terminal
                 x={le.terminalX}
                 y={le.terminalY}
-                angle={le.isFeedback ? -90 : 0}
+                angle={le.terminalAngle}
                 kind={le.isIntervention && le.edge.interventionId
                   ? (INTERVENTION_ACTION_META[
                       def.interventions?.find((iv) => iv.id === le.edge.interventionId)?.action ?? "receptor-antagonism"
@@ -184,6 +203,7 @@ export const MechanismSvg = React.memo(function MechanismSvg({
               {le.edge.label && le.labelX !== undefined && le.labelY !== undefined && (
                 <g
                   className="kyp-mech-edge-label"
+                  data-tier={le.labelTier ?? "primary"}
                   data-intervention={le.isIntervention ? "true" : "false"}
                   data-dim={dimEdgeIds.has(le.id) ? "true" : "false"}
                 >
@@ -198,7 +218,8 @@ export const MechanismSvg = React.memo(function MechanismSvg({
                     <text
                       key={li}
                       x={le.labelX}
-                      y={(le.labelY ?? 0) - (le.labelHeight ?? 17) / 2 + 12 + li * 14}
+                      y={(le.labelY ?? 0) - (le.labelHeight ?? 17) / 2 + tierMeta.firstBaseline + li * tierMeta.lineH}
+                      style={{ fontSize: tierMeta.fs, fontWeight: tierMeta.weight }}
                     >
                       {line}
                     </text>

@@ -77,15 +77,18 @@ export function KYPMechanismCanvas({ definition: def, variant = "full" }: KYPMec
     const H = size?.h ?? 460;
     // READABILITY-FIRST initial view: fit to WIDTH (never to height — a
     // height-fit shrinks wide graphs to unreadable scales; vertical panning
-    // handles overflow instead). Desktop clamps >= 0.6; mobile clamps >= 0.85
-    // anchored at the start of the causal chain (spec §24 strategy).
+    // handles overflow instead). Desktop clamps >= 0.8 (widened from 0.9 in
+    // the density polish: narrower capped layer corridors already shrink
+    // dense graphs, and showing more of the causal chain initially beats
+    // a marginally larger zoom on ribbon-wide graphs); mobile clamps
+    // >= 0.85 anchored at the start of the causal chain (spec §24 strategy).
     const fitW = W / layout.width;
     const isMobile = W < 768;
     const z = isMobile
       ? Math.min(Math.max(fitW, 0.85), 1.4)
-      : Math.min(Math.max(fitW, 0.9), 1.25);
+      : Math.min(Math.max(fitW, 0.8), 1.25);
     if (isMobile) {
-      // readable-first: never below 0.9 on desktop (users pan/fit for overview)
+      // readable-first: never below 0.85 on mobile (touch target scale)
       const y = Math.max(8, Math.min((H - layout.height * z) / 2, 8));
       return { x: 8, y, z };
     }
@@ -99,6 +102,15 @@ export function KYPMechanismCanvas({ definition: def, variant = "full" }: KYPMec
     setView(computeInitial());
     setViewInitialized(true);
   }, [size, viewInitialized, computeInitial]);
+
+  /* True pixel space: once the initial view is computed the SVG switches
+   * from the SSR graph-bounds fit viewBox to the container's pixel space,
+   * making view.z the REAL on-screen zoom (see MechanismSvg.pixelSpace).
+   * size comes from the ResizeObserver, so resizes stay honest. */
+  const pixelSpace = React.useMemo(
+    () => (viewInitialized && size ? { w: size.w, h: size.h } : null),
+    [viewInitialized, size]
+  );
 
   const clampView = React.useCallback((v: View): View => {
     const z = Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, v.z));
@@ -477,6 +489,10 @@ export function KYPMechanismCanvas({ definition: def, variant = "full" }: KYPMec
           ref={wrapRef}
           className={`kyp-mech-canvas-wrap${reducedMotion ? " kyp-mech-reduced-motion" : ""}`}
           data-variant={variant}
+          data-continues-left={view.x < -24 ? "true" : "false"}
+          data-continues-right={
+            size && view.x + layout.width * view.z - size.w > 24 ? "true" : "false"
+          }
           style={{ height: canvasHeight }}
           tabIndex={0}
           role="group"
@@ -497,6 +513,7 @@ export function KYPMechanismCanvas({ definition: def, variant = "full" }: KYPMec
             def={def}
             layout={layout}
             view={view}
+            pixelSpace={pixelSpace}
             selectedId={selectedId}
             dimNodeIds={dimNodeIds}
             dimEdgeIds={dimEdgeIds}
@@ -505,13 +522,27 @@ export function KYPMechanismCanvas({ definition: def, variant = "full" }: KYPMec
             onNodeKeyDown={onNodeKeyDown}
             dragging={dragging}
           />
-          <span className="kyp-mech-zoomhint" aria-hidden="true">
-            {Math.round(view.z * 100)}% · drag / scroll to explore
-          </span>
           <div className="kyp-mech-sr" role="status" aria-live="polite">
             {announcement}
           </div>
         </div>
+        {/* legend lives INSIDE the canvas block so it is captured with the
+            graph (the visual-QA unit) and stays adjacent to what it decodes */}
+        {legendEntries.length > 0 && (
+          <div className="kyp-mech-legend" aria-label="Edge semantics legend">
+            {legendEntries.map((e, i) => (
+              <span key={i}>
+                <span className="glyph" aria-hidden="true">
+                  {e.glyph}
+                </span>
+                {e.label}
+              </span>
+            ))}
+          </div>
+        )}
+        <span className="kyp-mech-zoomhint" aria-hidden="true">
+          {Math.round(view.z * 100)}% · drag / scroll to explore · graph continues beyond the edge
+        </span>
         </div>
       ) : (
         <div className="kyp-mech-steps">
@@ -539,40 +570,6 @@ export function KYPMechanismCanvas({ definition: def, variant = "full" }: KYPMec
                 );
               })}
           </ol>
-        </div>
-      )}
-
-      {/* ---------- legend ---------- */}
-      {legendEntries.length > 0 && (
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: "0.375rem 0.875rem",
-            marginTop: "0.5rem",
-            fontSize: "0.6875rem",
-            color: "var(--muted-foreground)",
-          }}
-          aria-label="Edge semantics legend"
-        >
-          {legendEntries.map((e, i) => (
-            <span key={i} style={{ display: "inline-flex", alignItems: "center", gap: "0.375rem" }}>
-              <span
-                aria-hidden="true"
-                style={{
-                  fontFamily: "var(--font-mono)",
-                  fontWeight: 700,
-                  color: "var(--foreground)",
-                  minWidth: "1.5rem",
-                  display: "inline-block",
-                  textAlign: "center",
-                }}
-              >
-                {e.glyph}
-              </span>
-              {e.label}
-            </span>
-          ))}
         </div>
       )}
 

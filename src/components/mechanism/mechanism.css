@@ -20,10 +20,10 @@
   --mech-edge-intervention: var(--brand);
   --mech-chip-bg: var(--card);
   --mech-chip-ink: var(--muted-foreground);
-  --mech-band: color-mix(in oklch, var(--neural) 7%, transparent);
-  --mech-band-stroke: color-mix(in oklch, var(--neural) 32%, transparent);
+  --mech-band: color-mix(in oklch, var(--neural) 11%, transparent);
+  --mech-band-stroke: color-mix(in oklch, var(--neural) 42%, transparent);
   --mech-grid: color-mix(in oklch, var(--foreground) 4%, transparent);
-  --mech-timeline-bg: color-mix(in oklch, var(--brand) 12%, transparent);
+  --mech-timeline-bg: color-mix(in oklch, var(--brand) 16%, transparent);
   --mech-timeline-ink: var(--brand);
   width: 100%;
   font-family: var(--font-sans);
@@ -133,6 +133,41 @@
   -webkit-user-select: none;
 }
 
+/* Continuation fades: when the graph extends past a canvas edge (pannable
+   direction), a short gradient marks it as intentional continuation instead
+   of looking "cut off" — the standard map-viewport affordance. Purely
+   presentational; pointer-transparent; never a focus/AT target. */
+.kyp-mech-canvas-wrap::before,
+.kyp-mech-canvas-wrap::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 46px;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.kyp-mech-canvas-wrap::before {
+  left: 0;
+  background: linear-gradient(to right, var(--background), transparent);
+}
+
+.kyp-mech-canvas-wrap::after {
+  right: 0;
+  background: linear-gradient(to left, var(--background), transparent);
+}
+
+.kyp-mech-canvas-wrap[data-continues-left="true"]::before {
+  opacity: 0.92;
+}
+
+.kyp-mech-canvas-wrap[data-continues-right="true"]::after {
+  opacity: 0.92;
+}
+
 .kyp-mech-canvas-wrap[data-variant="compact"] {
   border-radius: 0.75rem;
 }
@@ -154,17 +189,12 @@
 }
 
 .kyp-mech-zoomhint {
-  position: absolute;
-  right: 0.625rem;
-  bottom: 0.625rem;
-  pointer-events: none;
+  display: block;
+  text-align: right;
+  margin-top: 0.375rem;
+  padding: 0 0.5rem;
   font-size: 0.65rem;
   color: var(--muted-foreground);
-  background: color-mix(in oklch, var(--card) 82%, transparent);
-  border: 1px solid var(--border);
-  border-radius: 0.5rem;
-  padding: 0.25rem 0.5rem;
-  opacity: 0.85;
 }
 
 /* ---------- graph elements ---------- */
@@ -233,6 +263,14 @@
 .kyp-mech-edge[data-feedback="true"] { stroke: var(--mech-edge-feedback); }
 .kyp-mech-edge[data-intervention="true"] { stroke: var(--mech-edge-intervention); }
 
+/* structural hierarchy: edges on a longest causal path, interventions and
+   feedback returns keep the full 2.25 weight; long-range converging side
+   edges recede so the primary causal story dominates dense graphs */
+.kyp-mech-edge[data-emphasis="context"] {
+  stroke-width: 1.7;
+  opacity: 0.82;
+}
+
 .kyp-mech-edge[data-dim="true"] {
   opacity: 0.14;
 }
@@ -255,6 +293,10 @@ path.kyp-mech-terminal[data-intervention] {
 }
 
 /* edge label chip */
+.kyp-mech-edge-label {
+  transition: opacity 150ms ease;
+}
+
 .kyp-mech-edge-label rect {
   fill: var(--mech-chip-bg);
   stroke: var(--border);
@@ -267,6 +309,26 @@ path.kyp-mech-terminal[data-intervention] {
   font-weight: 600;
   text-anchor: middle;
   dominant-baseline: central;
+}
+
+/* annotation tier: long explanatory sentences render as quiet, compact
+   chips — same information, lower visual weight, so short verb chips and
+   the causal backbone dominate dense graphs (font metrics come from
+   EDGE_LABEL_TIER_META; only colour/contrast live here) */
+.kyp-mech-edge-label[data-tier="annotation"] rect {
+  fill: color-mix(in oklch, var(--card) 58%, var(--background));
+  stroke: color-mix(in oklch, var(--border) 70%, transparent);
+}
+
+.kyp-mech-edge-label[data-tier="annotation"] text {
+  fill: var(--muted-foreground);
+}
+
+/* labels dim together with their edges in focus mode (the v2 gap: chips
+   stayed fully opaque while edges faded — progressive disclosure was
+   broken on exactly the dense graphs that need it) */
+.kyp-mech-edge-label[data-dim="true"] {
+  opacity: 0.14;
 }
 
 .kyp-mech-edge-label[data-intervention="true"] rect {
@@ -288,7 +350,7 @@ path.kyp-mech-terminal[data-intervention] {
 
 .kyp-mech-compartment text {
   fill: var(--neural);
-  font-size: 10.5px;
+  font-size: 11px;
   font-weight: 650;
   letter-spacing: 0.02em;
 }
@@ -296,13 +358,13 @@ path.kyp-mech-terminal[data-intervention] {
 /* timeline chips */
 .kyp-mech-timeline rect {
   fill: var(--mech-timeline-bg);
-  stroke: color-mix(in oklch, var(--brand) 40%, transparent);
+  stroke: color-mix(in oklch, var(--brand) 55%, transparent);
   rx: 8;
 }
 
 .kyp-mech-timeline text {
   fill: var(--mech-timeline-ink);
-  font-size: 10.5px;
+  font-size: 11px;
   font-weight: 650;
   text-anchor: middle;
   dominant-baseline: central;
@@ -329,20 +391,31 @@ path.kyp-mech-terminal[data-intervention] {
   font-weight: 700;
 }
 
-/* legend */
-.kyp-mech-legend rect {
-  fill: color-mix(in oklch, var(--card) 90%, transparent);
-  stroke: var(--border);
+/* legend (inside the canvas block, under the graph) */
+.kyp-mech-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4375rem 1rem;
+  margin-top: 0.5rem;
+  padding: 0 0.5rem;
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
 }
 
-.kyp-mech-legend text {
-  fill: var(--muted-foreground);
-  font-size: 10px;
+.kyp-mech-legend > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.kyp-mech-legend .legend-title {
+.kyp-mech-legend .glyph {
+  font-family: var(--font-mono);
   font-weight: 700;
-  fill: var(--foreground);
+  font-size: 0.8125rem;
+  color: var(--foreground);
+  min-width: 1.75rem;
+  display: inline-block;
+  text-align: center;
 }
 
 /* ---------- inspector + panels ---------- */
