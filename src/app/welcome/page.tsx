@@ -61,26 +61,31 @@ export default function WelcomePage() {
       }
     }).catch(() => {});
 
-    // Pick up the result when Google redirects back to this page
+    // Only check redirect result if the user actually clicked "Continue with Google"
+    const pendingRedirect = sessionStorage.getItem("kyp_google_redirect");
+    if (!pendingRedirect) return;
+    sessionStorage.removeItem("kyp_google_redirect");
     setLoading(true);
-    getRedirectResult(auth).then(async (result) => {
-      if (!result) return;
-      const idToken = await result.user.getIdToken();
-      const res = await fetch("/api/auth/google", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ idToken }),
-      });
-      const data = await res.json();
-      if (!res.ok) { setError(data.error || "Google sign-in failed"); return; }
-      setUserData({ name: data.name, email: data.email });
-      setStep(data.isNew || !data.learnerType || data.learnerType === "student" ? "role" : "done");
-    }).catch((err: unknown) => {
-      const code = (err as { code?: string })?.code;
-      if (code && code !== "auth/no-current-user") {
-        setError("Google sign-in failed. Please try again.");
-      }
-    }).finally(() => setLoading(false));
+
+    const timeout = new Promise<null>((_, reject) =>
+      setTimeout(() => reject(new Error("timeout")), 10000)
+    );
+    Promise.race([getRedirectResult(auth), timeout])
+      .then(async (result) => {
+        if (!result) return;
+        const idToken = await result.user.getIdToken();
+        const res = await fetch("/api/auth/google", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ idToken }),
+        });
+        const data = await res.json();
+        if (!res.ok) { setError(data.error || "Google sign-in failed"); return; }
+        setUserData({ name: data.name, email: data.email });
+        setStep(data.isNew || !data.learnerType || data.learnerType === "student" ? "role" : "done");
+      })
+      .catch(() => setError("Google sign-in failed. Please try again."))
+      .finally(() => setLoading(false));
   }, []);
 
   // Password validation
@@ -154,9 +159,10 @@ export default function WelcomePage() {
     setError("");
     setLoading(true);
     try {
+      sessionStorage.setItem("kyp_google_redirect", "1");
       await signInWithRedirect(auth, googleProvider);
-      // Page will redirect away — result is handled in the useEffect above
     } catch {
+      sessionStorage.removeItem("kyp_google_redirect");
       setError("Google sign-in failed. Please try again.");
       setLoading(false);
     }
