@@ -77,7 +77,36 @@ export interface LaidOutEdge {
   labelLines?: string[];
   /** Chip height (when labelled). */
   labelHeight?: number;
+  /** Visual weight tier of the label chip — PURELY a length heuristic
+   *  (≤ PRIMARY_TIER_MAX_CHARS renders bold; longer explanatory sentences
+   *  render as quieter annotation chips). NEVER a medical classification:
+   *  intervention + feedback labels are always primary so the drug action
+   *  and return paths stay prominent (mission §12/§13). */
+  labelTier?: EdgeLabelTier;
+  /** Structural emphasis of the edge line: "primary" = on a longest
+   *  forward path, or an intervention, or a feedback return; "context" =
+   *  everything else (typically long-range converging side edges). Derived
+   *  from graph geometry only (path tightness), not medical salience. */
+  emphasis?: "primary" | "context";
 }
+
+/** Label tier of an edge chip. Deterministic function of the label only. */
+export type EdgeLabelTier = "primary" | "annotation";
+
+/** Rendering metrics per tier — single source of truth for layout AND the
+ *  SVG renderer (they must agree byte-for-byte on chip geometry). */
+export const EDGE_LABEL_TIER_META: Record<
+  EdgeLabelTier,
+  { fs: number; weight: number; maxW: number; padX: number; lineH: number; firstBaseline: number; chipPadY: number }
+> = {
+  // short verb-style labels: the bold, loud tier
+  primary: { fs: 12.5, weight: 650, maxW: 168, padX: 8, lineH: 15, firstBaseline: 12, chipPadY: 4 },
+  // long explanatory sentences: quiet, compact, still fully readable
+  annotation: { fs: 11.5, weight: 500, maxW: 142, padX: 7, lineH: 13.5, firstBaseline: 10.5, chipPadY: 3.5 },
+};
+
+/** Labels at or below this character count render in the primary tier. */
+export const PRIMARY_TIER_MAX_CHARS = 20;
 
 export interface LaidOutCompartment {
   id: string;
@@ -138,11 +167,20 @@ const MAX_TEXT_WIDTH = 190; // wrap threshold inside a node
 const MIN_NODE_W = 108;
 const MAX_NODE_W = 246;
 const FEEDBACK_BASE_DEPTH = 46; // return-edge sweep below the flow
-const FEEDBACK_STACK = 30; // extra depth per additional return edge
+const FEEDBACK_STACK = 52; // extra depth per additional return edge (>= tallest 2-line chip + clearance)
 const MARKER_H = 26; // floating intervention marker height
 const MARKER_GAP = 12; // gap between stacked markers
 const COMPARTMENT_PAD = 12;
 const TIMELINE_H = 24;
+/* Density polish: a label chip may widen its inter-column corridor only up
+ * to a tier cap — beyond that the chip relies on collision-aware placement
+ * (it may sit over the neighbouring node columns wherever vertical space is
+ * free). This bounds the canvas width explosion dense graphs suffered
+ * (MDD was 2452px wide; only ~55% of the causal chain fitted the initial
+ * desktop viewport). */
+const GAP_LABEL_MARGIN = 40; // breathing room around a chip inside its corridor
+const PRIMARY_GAP_CAP = 182;
+const ANNOTATION_GAP_CAP = 134;
 
 /* ============================================================
    Conservative text measurement (no DOM)
@@ -293,23 +331,56 @@ export function layoutMechanism(def: MechanismDefinition): MechanismLayout {
     syncOrder();
   }
 
+  /* --- sink-depth (longest distance to a sink over forward edges) ---
+   * Used to derive the structural backbone: an edge lies on SOME longest
+   * forward path iff it advances the ranking by exactly one layer AND the
+   * full route through it reaches the graph's total depth —
+   * layer(from) + 1 + sinkDepth(to) === maxLayer. Purely graph-geometric. */
+  const sinkDepth = new Map<string, number>();
+  const depthMemo = (id: string, guard: Set<string>): number => {
+    const memo = sinkDepth.get(id);
+    if (memo !== undefined) return memo;
+    if (guard.has(id)) return 0; // defensive: forward cycles were already warned
+    guard.add(id);
+    const kids = children.get(id) ?? [];
+    const d = kids.length === 0 ? 0 : Math.max(...kids.map((k) => depthMemo(k, guard))) + 1;
+    guard.delete(id);
+    sinkDepth.set(id, d);
+    return d;
+  };
+  for (const n of nodes) depthMemo(n.id, new Set());
+  const isBackboneEdge = (e: MechanismEdge): boolean =>
+    (layer.get(e.from) ?? 0) + 1 === (layer.get(e.to) ?? 0) &&
+    (layer.get(e.from) ?? 0) + 1 + (sinkDepth.get(e.to) ?? 0) === maxLayer;
+
   /* --- 3. geometry: columns then vertical stacks --- */
   const measured = new Map<string, ReturnType<typeof measureNode>>();
   for (const n of nodes) measured.set(n.id, measureNode(n));
 
-  /* Adaptive layer gaps: a long edge label needs horizontal room between
-   * its columns, or it will sit on neighbouring nodes. Compute every edge
-   * label's wrapped width FIRST, then give each layer boundary the gap the
-   * widest crossing label needs (never below the base gap). */
-  const wrapEdgeLabel = (label: string): { lines: string[]; width: number; height: number } => {
-    const maxW = 176;
-    const lines = wrapText(label, maxW, 12, false);
-    const w = Math.max(...lines.map((l) => textWidth(l, 12, false))) + 16;
-    return { lines, width: w, height: lines.length * 14 + 8 };
+  /* Adaptive layer gaps: give each layer boundary the room the widest
+   * crossing label needs, CAPPED per tier (see GAP_* constants) — labels
+   * wider than their corridor are placed clear of nodes by the collision
+   * solver below instead of inflating the canvas width. */
+  const wrapEdgeLabel = (label: string, tier: EdgeLabelTier): { lines: string[]; width: number; height: number } => {
+    const meta = EDGE_LABEL_TIER_META[tier];
+    const lines = wrapText(label, meta.maxW, meta.fs, false);
+    const w = Math.max(...lines.map((l) => textWidth(l, meta.fs, false))) + meta.padX * 2;
+    return { lines, width: w, height: lines.length * meta.lineH + meta.chipPadY * 2 };
   };
-  const labelSizeByEdge = new Map<string, { lines: string[]; width: number; height: number }>();
-  for (const e of forward) {
-    if (e.label) labelSizeByEdge.set(`${e.from}->${e.to}`, wrapEdgeLabel(e.label));
+  const interventionIdsForTier = new Set((def.interventions ?? []).map((iv) => iv.id));
+  const tierOf = (e: MechanismEdge, isFeedbackEdge: boolean): EdgeLabelTier =>
+    isFeedbackEdge || (e.interventionId && interventionIdsForTier.has(e.interventionId))
+      ? "primary"
+      : (e.label ?? "").length <= PRIMARY_TIER_MAX_CHARS
+        ? "primary"
+        : "annotation";
+  const labelSizeByEdge = new Map<string, { lines: string[]; width: number; height: number; tier: EdgeLabelTier }>();
+  for (const e of edges) {
+    if (e.label) {
+      const isFb = getRelationshipMeta(e.relationship)?.shape === "return";
+      const tier = tierOf(e, isFb);
+      labelSizeByEdge.set(`${e.from}->${e.to}`, { ...wrapEdgeLabel(e.label, tier), tier });
+    }
   }
   // density adaptation: dense graphs get more air (crowding was the top
   // VLM complaint on the 20-edge MDD graph)
@@ -320,7 +391,8 @@ export function layoutMechanism(def: MechanismDefinition): MechanismLayout {
     const lab = e.label ? labelSizeByEdge.get(`${e.from}->${e.to}`) : null;
     if (!lab) continue;
     const l = layer.get(e.from) ?? 0;
-    boundaryGap[l] = Math.max(boundaryGap[l], lab.width + 56);
+    const cap = lab.tier === "primary" ? PRIMARY_GAP_CAP : ANNOTATION_GAP_CAP;
+    boundaryGap[l] = Math.max(boundaryGap[l], Math.min(lab.width + GAP_LABEL_MARGIN, cap));
   }
 
   const columnX: number[] = [];
@@ -480,8 +552,10 @@ export function layoutMechanism(def: MechanismDefinition): MechanismLayout {
   };
 
   /** Full avoidance: try the midpoint, then near/far curve positions, with
-   *  vertical nudges at each — long-range edges cross intermediate columns
-   *  and their midpoints can sit on nodes (aripiprazole defect). */
+   *  vertical nudges at each; if every candidate still hits a node, run a
+   *  bounded deterministic vertical SCAN (alternating ±13px steps) for the
+   *  first clear corridor — the escape hatch that keeps capped-gap chips
+   *  (see GAP_* constants) off the node columns. */
   const avoidNodeCollision = (
     mid: { x: number; y: number },
     near: { x: number; y: number },
@@ -498,6 +572,12 @@ export function layoutMechanism(def: MechanismDefinition): MechanismLayout {
         y += attempt % 2 === 0 ? 30 : -60;
       }
     }
+    // deterministic scan: ±13px steps from the midpoint, bounded
+    for (let step = 1; step <= 46; step++) {
+      for (const dy of step % 2 === 0 ? [step * 13] : [-step * 13]) {
+        if (!labelHitsNode(mid.x, mid.y + dy, w, h, skip)) return { x: mid.x, y: mid.y + dy };
+      }
+    }
     return mid;
   };
 
@@ -512,10 +592,11 @@ export function layoutMechanism(def: MechanismDefinition): MechanismLayout {
     const ii = fanInCursor.get(e.to) ?? 0;
     fanInCursor.set(e.to, ii + 1);
     const p = forwardPath(from, to, Math.min(oi, from.fanOut.length - 1), Math.min(ii, to.fanIn.length - 1));
-    const lab = e.label ? labelSizeByEdge.get(`${e.from}->${e.to}`) ?? wrapEdgeLabel(e.label) : null;
+    const lab = e.label ? labelSizeByEdge.get(`${e.from}->${e.to}`) : null;
     const fwdLabelPos = lab
       ? avoidNodeCollision({ x: p.labelX, y: p.labelY }, p.labelNear, p.labelFar, lab.width, lab.height, new Set([e.from, e.to]))
       : null;
+    const isIv = Boolean(e.interventionId && interventionIds.has(e.interventionId));
     laidEdges.push({
       id: e.id,
       edge: e,
@@ -528,8 +609,13 @@ export function layoutMechanism(def: MechanismDefinition): MechanismLayout {
       labelWidth: lab?.width,
       labelHeight: lab?.height,
       labelLines: lab?.lines,
+      labelTier: lab?.tier,
       isFeedback: false,
-      isIntervention: Boolean(e.interventionId && interventionIds.has(e.interventionId)),
+      isIntervention: isIv,
+      // interventions and the structural backbone stay at full visual
+      // weight; remaining long-range/converging side edges recede so the
+      // primary causal story dominates dense graphs (geometric rule only)
+      emphasis: isIv || isBackboneEdge(e) ? "primary" : "context",
     });
   }
 
@@ -538,83 +624,199 @@ export function layoutMechanism(def: MechanismDefinition): MechanismLayout {
     const n = nodeById.get(id);
     return n ? n.y + n.h : maxStackBottom;
   };
+  let feedbackMaxY = 0;
   returns.forEach((e, idx) => {
     const from = nodeById.get(e.from);
     const to = nodeById.get(e.to);
     if (!from || !to) return;
     const sx = from.x + from.w / 2;
     const sy = nodeBottom(e.from);
-    const tx = to.x + to.w / 2;
-    const ty = nodeBottom(e.to);
-    const depth = maxStackBottom + FEEDBACK_BASE_DEPTH + idx * FEEDBACK_STACK;
-    const c = Math.max(34, (depth - Math.max(sy, ty)) * 0.6);
-    const path = `M ${r(sx)} ${r(sy)} C ${r(sx)} ${r(sy + c)}, ${r(tx)} ${r(ty + c)}, ${r(tx)} ${r(ty)}`;
-    const lab = e.label ? wrapEdgeLabel(e.label) : null;
+    /* v2 defects (both reproduced on the pilots, both fixed here):
+     *  1. The bezier only reaches ~75% of its control depth, so a sweep
+     *     budgeted off maxStackBottom could still cut through nodes between
+     *     its endpoints (the escitalopram return crossed the SERT and DRUG
+     *     nodes; the MDD cortisol return grazed BDNF and neuroplasticity).
+     *  2. Attaching at the TARGET's bottom is impossible when the target's
+     *     column has siblings below it — the vertical approach must pass
+     *     through them. The arc now re-enters through the target's LEFT
+     *     edge (lower third, below the forward fan-in band), approached
+     *     horizontally like every other incoming edge.
+     * The clearance is SOLVED by iterating the control depth until no
+     * sampled arc point sits inside a non-endpoint node. */
+    const ax = to.x;
+    const ay = to.y + Math.max(14, Math.min(to.h * 0.72, to.h - 12)) - idx * 14;
+    const vx = Math.max(6, to.x - 46); // corridor pull-left control
+    const bez = (c: number, t: number) => {
+      const u = 1 - t;
+      return {
+        x: u * u * u * sx + 3 * u * u * t * sx + 3 * u * t * t * vx + t * t * t * ax,
+        y: u * u * u * sy + 3 * u * u * t * (sy + c) + 3 * u * t * t * (ay + c) + t * t * t * ay,
+      };
+    };
+    const stackOffset = idx * FEEDBACK_STACK;
+    let c = Math.max(34, (maxStackBottom + FEEDBACK_BASE_DEPTH + stackOffset - Math.max(sy, ay)) / 0.75);
+    let residualCrossings = 0;
+    for (let iter = 0; iter < 12; iter++) {
+      let needDc = 0;
+      residualCrossings = 0;
+      for (let i = 1; i < 40; i++) {
+        const t = i / 40;
+        const p = bez(c, t);
+        for (const n of laid) {
+          if (n.id === e.from || n.id === e.to) continue;
+          if (p.x < n.x - 1 || p.x > n.x + n.w + 1 || p.y < n.y - 1 || p.y > n.y + n.h + 1) continue;
+          residualCrossings++;
+          // lift needed at this t: dy = 3·u·t·dc (bezier control sensitivity)
+          const lift = n.y + n.h + 10 - p.y;
+          needDc = Math.max(needDc, lift / Math.max(3 * (1 - t) * t, 0.05));
+        }
+      }
+      if (needDc <= 0) break;
+      c += needDc;
+    }
+    if (residualCrossings > 0) {
+      warnings.push(`feedback return "${e.from}->${e.to}" could not fully clear the nodes it passes under (${residualCrossings} sample points)`);
+    }
+    const path = `M ${r(sx)} ${r(sy)} C ${r(sx)} ${r(sy + c)}, ${r(vx)} ${r(ay + c)}, ${r(ax)} ${r(ay)}`;
+    // exact deepest point of the arc (sampled — deterministic, cheap)
+    let maxY = -Infinity;
+    let maxPt = { x: (sx + ax) / 2, y: (sy + ay) / 2 };
+    for (let i = 0; i <= 40; i++) {
+      const p = bez(c, i / 40);
+      if (p.y > maxY) {
+        maxY = p.y;
+        maxPt = p;
+      }
+    }
+    const tier = tierOf(e, true);
+    const lab = e.label ? wrapEdgeLabel(e.label, tier) : null;
+    feedbackMaxY = Math.max(feedbackMaxY, maxY + (lab?.height ?? 17) / 2);
     laidEdges.push({
       id: e.id,
       edge: e,
       path,
-      terminalX: tx,
-      terminalY: ty,
-      terminalAngle: -90,
-      labelX: (sx + tx) / 2,
-      labelY: depth - 12,
+      terminalX: ax,
+      terminalY: ay,
+      terminalAngle: 0, // horizontal re-entry through the target's left edge
+      labelX: maxPt.x,
+      labelY: maxPt.y,
       labelWidth: lab?.width,
       labelHeight: lab?.height,
       labelLines: lab?.lines,
+      labelTier: lab ? tier : undefined,
       isFeedback: true,
       isIntervention: false,
+      emphasis: "primary", // feedback return paths never recede (mission §13)
     });
   });
 
   /* --- 5c. label-vs-label collision post-pass --- *
    * With node overlaps handled, the remaining defect class is two label
-   * chips landing on each other (convergence fans). Nudge in growing
-   * vertical steps until free. */
+   * chips landing on each other (convergence fans). The v2 greedy nudge
+   * could OSCILLATE when a chip was trapped between two blockers whose
+   * gap was smaller than the chip (reproduced on MDD: "HPA axis" between
+   * "excitotoxicity…" and "antagonism → glutamate surge" — every sweep
+   * flipped it back). The polish replaces the nudge with a deterministic
+   * CLEAR-POSITION SEARCH: small vertical steps away from the blocker,
+   * then a horizontal slide along the edge, then a bounded ±13px vertical
+   * scan — every candidate must be clear of ALL other chips AND nodes. */
   const rectsOverlap = (
     ax: number, ay: number, aw: number, ah: number,
     bx: number, by: number, bw: number, bh: number
   ) => ax < bx + bw && bx < ax + aw && ay < by + bh && by < ay + ah;
 
-  // multi-sweep convergence: a nudge against one label can reintroduce an
-  // overlap with another (observed on aripiprazole) — sweep until stable.
+  const labelClearOfAll = (
+    x: number, y: number, w: number, h: number,
+    self: LaidOutEdge, skipNodes: Set<string>
+  ): boolean => {
+    if (labelHitsNode(x, y, w, h, skipNodes)) return false;
+    for (const other of laidEdges) {
+      if (other.id === self.id) continue;
+      if (!other.labelWidth || other.labelX === undefined || other.labelY === undefined) continue;
+      if (Math.abs(x - other.labelX) > 260) continue;
+      // shared-anchor pairs keep the wider clearance (see the solver below)
+      const sharedAnchor =
+        self.edge.from === other.edge.from || self.edge.to === other.edge.to ||
+        self.edge.from === other.edge.to || self.edge.to === other.edge.from;
+      const pad = sharedAnchor ? 12 : 4;
+      if (
+        rectsOverlap(
+          x - w / 2 - pad, y - h / 2 - pad, w + pad * 2, h + pad * 2,
+          other.labelX - other.labelWidth / 2 - pad, other.labelY - (other.labelHeight ?? 17) / 2 - pad, other.labelWidth + pad * 2, (other.labelHeight ?? 17) + pad * 2
+        )
+      )
+        return false;
+    }
+    return true;
+  };
+
   for (let sweep = 0; sweep < 4; sweep++) {
-    let nudged = false;
-    for (let i = 0; i < laidEdges.length; i++) {
-      const a = laidEdges[i];
-      if (!a.labelX || a.labelY === undefined || !a.labelWidth) continue;
-      for (let j = i + 1; j < laidEdges.length; j++) {
-        const b = laidEdges[j];
-        if (!b.labelX || b.labelY === undefined || !b.labelWidth) continue;
-        if (Math.abs(a.labelX - b.labelX) > 240) continue; // too far apart to matter
-        let guard = 0;
-        // enforce a minimum visual gap (12px + estimator-vs-render margin),
-        // not merely non-overlap
-        while (
-          guard < 7 &&
-          rectsOverlap(
-            a.labelX - a.labelWidth / 2 - 4, a.labelY - (a.labelHeight ?? 17) / 2 - 4, a.labelWidth + 8, (a.labelHeight ?? 17) + 8,
-            b.labelX - b.labelWidth / 2 - 4, b.labelY - (b.labelHeight ?? 17) / 2 - 4, b.labelWidth + 8, (b.labelHeight ?? 17) + 8
+    let moved = false;
+    for (const a of laidEdges) {
+      if (!a.labelWidth || a.labelX === undefined || a.labelY === undefined) continue;
+      if (a.isFeedback) continue; // return-path labels are position-fixed below the flow; the OTHER chip moves
+      const skipNodes = new Set([a.edge.from, a.edge.to]);
+      const w = a.labelWidth;
+      const h = a.labelHeight ?? 17;
+      let ax = a.labelX;
+      let ay = a.labelY;
+      for (const b of laidEdges) {
+        if (b.id === a.id) continue;
+        if (!b.labelWidth || b.labelX === undefined || b.labelY === undefined) continue;
+        if (Math.abs(ax - b.labelX) > 260) continue;
+        // chips feeding the same anchor node (shared from/to) read as one
+        // crowded cluster even when technically separated — enforce a wider
+        // clearance between them than between unrelated chips
+        const sharedAnchor =
+          a.edge.from === b.edge.from || a.edge.to === b.edge.to ||
+          a.edge.from === b.edge.to || a.edge.to === b.edge.from;
+        const pad = sharedAnchor ? 12 : 4;
+        if (
+          !rectsOverlap(
+            ax - w / 2 - pad, ay - h / 2 - pad, w + pad * 2, h + pad * 2,
+            b.labelX - b.labelWidth / 2 - pad, b.labelY - (b.labelHeight ?? 17) / 2 - pad, b.labelWidth + pad * 2, (b.labelHeight ?? 17) + pad * 2
           )
-        ) {
-          if (guard < 3) {
-            // small step: a coarse step overshoots the valid window when
-            // squeezed between two neighbours (aripiprazole defect)
-            a.labelY += a.labelY >= b.labelY ? 14 : -14;
-          } else {
-            // vertically trapped (labels above AND below): escape
-            // horizontally along the edge instead
-            a.labelX += (a.labelX ?? 0) >= (b.labelX ?? 0) ? 26 : -26;
+        )
+          continue;
+        // a collides with b — find a clear position (deterministic order):
+        let placed = false;
+        const dirY = ay >= b.labelY ? 1 : -1;
+        for (let k = 1; k <= 3 && !placed; k++) {
+          const y = ay + dirY * 14 * k;
+          if (labelClearOfAll(ax, y, w, h, a, skipNodes)) {
+            ay = y;
+            placed = true;
           }
-          guard++;
-          nudged = true;
         }
+        for (let k = 1; k <= 3 && !placed; k++) {
+          const x = ax + (ax >= b.labelX ? 1 : -1) * 26 * k;
+          if (labelClearOfAll(x, ay, w, h, a, skipNodes)) {
+            ax = x;
+            placed = true;
+          }
+        }
+        const originY = ay;
+        for (let step = 1; step <= 46 && !placed; step++) {
+          for (const dy of step % 2 === 0 ? [step * 13] : [-step * 13]) {
+            if (labelClearOfAll(ax, originY + dy, w, h, a, skipNodes)) {
+              ay = originY + dy;
+              placed = true;
+            }
+          }
+        }
+        if (placed) {
+          a.labelX = ax;
+          a.labelY = ay;
+          moved = true;
+        }
+        // if !placed the violation surfaces in the geometry audit (fail-loud)
       }
     }
-    if (!nudged) break;
+    if (!moved) break;
   }
 
-  const flowBottom = maxStackBottom + (returns.length > 0 ? FEEDBACK_BASE_DEPTH + returns.length * FEEDBACK_STACK : 0);
+  // actual extent of the sweeps (label chips included) — see 5b
+  const flowBottom = Math.max(maxStackBottom, feedbackMaxY > 0 ? feedbackMaxY + 10 : 0);
 
   /* --- 6. compartments (bands behind their member nodes) --- */
   const laidCompartments: LaidOutCompartment[] = [];
