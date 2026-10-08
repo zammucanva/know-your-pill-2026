@@ -297,6 +297,15 @@ export function buildTest(
    Retest assembly (NOW-N2)
    ============================================================ */
 
+let externalResolver: ((identity: string) => PoolQuestion | null) | null = null;
+
+/** Register a resolver for identities this module cannot rebuild itself. */
+export function setExternalQuestionResolver(
+  resolver: ((identity: string) => PoolQuestion | null) | null
+): void {
+  externalResolver = resolver;
+}
+
 /** Source slug encoded at the head of every question identity. */
 function sourceSlugOfIdentity(identity: string): string {
   return identity.split("|")[0];
@@ -362,6 +371,21 @@ export function buildRetest(
             question: quiz.question,
           }),
         });
+      }
+    }
+  }
+
+  // Questions from other registered sources (e.g. the Question Factory's
+  // locally remembered quizzes). Unresolvable identities are dropped, never
+  // substituted.
+  if (externalResolver) {
+    const have = new Set(pool.map((q) => q.identity));
+    for (const identity of identities) {
+      if (have.has(identity)) continue;
+      const resolved = externalResolver(identity);
+      if (resolved) {
+        pool.push(resolved);
+        have.add(identity);
       }
     }
   }

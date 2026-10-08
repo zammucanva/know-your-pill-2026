@@ -28,7 +28,10 @@ import {
   buildRetest,
   buildTest,
   getPoolStats,
+  setExternalQuestionResolver,
 } from "@/lib/kyp/custom-test/engine";
+import { FACTORY_QUIZ_PARAM, takeFactoryQuiz } from "@/lib/kyp/question-factory/handoff";
+import { rememberPlayed, resolveFactoryQuestion } from "@/lib/kyp/question-factory/played-store";
 import {
   DIFFICULTY_TIERS,
   defaultDifficultyForLearnerType,
@@ -136,6 +139,8 @@ function formatClock(ms: number): string {
 }
 
 export function CustomTestBuilder() {
+  /** Set when the running quiz came from the Question Factory. */
+  const [factoryLabel, setFactoryLabel] = React.useState<string | null>(null);
   /* ── Setup state ── */
   const [selected, setSelected] = React.useState<Set<string>>(new Set());
   const [expanded, setExpanded] = React.useState<Set<string>>(
@@ -304,6 +309,7 @@ export function CustomTestBuilder() {
       retestOf: null,
       finishedAt: null,
     });
+    setFactoryLabel(null);
     setCappedNotice(
       built.capped
         ? `Only ${built.available} unique questions are available for this selection. The test was set to ${built.deliveredCount}.`
@@ -348,6 +354,29 @@ export function CustomTestBuilder() {
           } skipped.`
         : null
     );
+    setReviewAll(false);
+    setPhase("test");
+  };
+
+  /** Question Factory handoff: the generated quiz arrives already built
+   *  (4 options, 1 correct); this runner only presents it. */
+  const startFactoryQuiz = (questions: TestQuestion[], label: string) => {
+    if (questions.length === 0) return;
+    rememberPlayed(questions);
+    setAttempt({
+      questions,
+      answers: questions.map(() => null),
+      index: 0,
+      startedAt: Date.now(),
+      capped: false,
+      available: questions.length,
+      allottedMs: null,
+      exam: false,
+      retestOf: null,
+      finishedAt: null,
+    });
+    setCappedNotice(null);
+    setFactoryLabel(label);
     setReviewAll(false);
     setPhase("test");
   };
@@ -587,6 +616,18 @@ export function CustomTestBuilder() {
   React.useEffect(() => {
     if (appliedEntryParams.current) return;
     appliedEntryParams.current = true;
+
+    // Lets "Retest" rebuild Question Factory questions from local play history.
+    setExternalQuestionResolver(resolveFactoryQuestion);
+
+    // A finished quiz staged by /quiz/factory.
+    if (searchParams.get(FACTORY_QUIZ_PARAM)) {
+      const staged = takeFactoryQuiz();
+      if (staged) {
+        startFactoryQuiz(staged.questions, staged.label);
+        return;
+      }
+    }
 
     // N2 — a staged retest request from the Mistake Book.
     if (searchParams.get("retest")) {
@@ -1792,6 +1833,15 @@ export function CustomTestBuilder() {
                     <RotateCcw className="h-4 w-4" />
                     Build another test
                   </Link>
+                  {factoryLabel && (
+                    <Link
+                      href="/quiz/factory"
+                      className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand kyp-focus-ring"
+                    >
+                      <RotateCcw className="h-4 w-4" />
+                      Generate another quiz
+                    </Link>
+                  )}
                 </div>
               </Reveal>
             </Container>
