@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) Yes, the Emergency entry is a clearly designed, contained red pill with a solid background and rounded corners.\n(2) Yes, it is fully readable and does not overlap any other app elements (ignoring the 'N' dev overlay).",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791393741,
+  "id": "202610080122193f7acf2720ad4963",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202610080122193f7acf2720ad4963",
+  "usage": {
+    "completion_tokens": 52,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1765,
+    "prompt_tokens_details": {
+      "cached_tokens": 5
+    },
+    "total_tokens": 1817
+  }
+}
