@@ -1,0 +1,9 @@
+KYP Synapse Studio - attribution
+
+The brain image (assets/brain_sagittal.png) is a rendering of 3D models from Z-Anatomy
+(https://github.com/LluisV/Z-Anatomy, CC BY-SA 4.0), which is built on BodyParts3D
+(c) The Database Center for Life Science, licensed CC BY-SA 2.1 Japan / CC BY 4.0.
+The image is distributed under CC BY-SA 4.0 with attribution to Z-Anatomy and BodyParts3D.
+
+Schematic teaching animation. Mechanisms are simplified; confirm against current prescribing
+information. Not medical advice.
