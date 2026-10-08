@@ -23,6 +23,7 @@ import { MistakeBookEntry } from "@/components/kyp/sections/study/mistake-book-e
 import { PracticeStatsLine } from "@/components/kyp/sections/study/practice-stats-line";
 import { TopicAccuracyChips } from "@/components/kyp/sections/study/topic-accuracy-chips";
 import { RetentionDueEntry } from "@/components/kyp/sections/study/retention-due-entry";
+import { ClassHoneycomb, type HoneycombClass } from "@/components/kyp/sections/study/class-honeycomb";
 import { StudyProgressCard } from "@/components/kyp/sections/study/study-progress-card";
 import { DailyPlan } from "@/components/kyp/sections/study/daily-plan";
 import { drugs } from "@/lib/kyp/data";
@@ -84,6 +85,25 @@ const yieldLabel: Record<string, string> = {
   medium: "medium yield",
   high: "high yield",
 };
+
+const honeycombClasses: HoneycombClass[] = classGroups.map((classLabel) => {
+  const group = drugs.filter((d) => d.drugClassLabel === classLabel);
+  return {
+    label: classLabel,
+    fullName: group[0]?.drugClassFullName ?? classLabel,
+    courses: group.length,
+    questions: group.reduce((n, d) => n + (d.microQuizzes?.length || 0), 0),
+    drugs: group.map((d) => ({
+      slug: d.slug,
+      name: d.genericName,
+      readTime: d.estimatedReadTime,
+      questions: d.microQuizzes?.length || 0,
+      yieldLabel: yieldLabel[d.yieldRating] ?? d.yieldRating,
+      highYield: d.yieldRating === "high",
+      objective: d.learningObjectives[0] ?? "",
+    })),
+  };
+});
 
 /** Server-safe module header (same markup as the dashboard's ModuleHeader). */
 function CardHeader({
@@ -313,6 +333,19 @@ export default function StudyPage() {
                 courses: objectives, checkpoints, and active recall in every
                 course. Open a class to see its medications.
               </p>
+              {/* Desktop: the interactive honeycomb. Every medication is
+                  also reachable through the plain list below. */}
+              <div className="hidden p-5 md:block">
+                <ClassHoneycomb classes={honeycombClasses} />
+              </div>
+              <details className="group/all border-t border-border/40">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-3 text-sm font-medium text-foreground kyp-focus-ring">
+                  <span>
+                    <span className="md:hidden">Browse all classes</span>
+                    <span className="hidden md:inline">All classes as a list</span>
+                  </span>
+                  <ArrowRight className="h-4 w-4 text-muted-foreground/40 transition-transform group-open/all:rotate-90" />
+                </summary>
               <div className="grid gap-4 p-5 md:grid-cols-2 xl:grid-cols-3">
                 {classGroups.map((classLabel) => {
                   const group = drugs.filter((d) => d.drugClassLabel === classLabel);
@@ -376,6 +409,7 @@ export default function StudyPage() {
                   );
                 })}
               </div>
+              </details>
             </ModuleCard>
 
             {/* ===== HOW STUDY MODE WORKS ===== */}
