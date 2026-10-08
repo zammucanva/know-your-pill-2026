@@ -11,6 +11,7 @@ import {
   Timer,
 } from "lucide-react";
 
+import { ModuleCard, ModuleHeader } from "@/components/kyp/dashboard/modules-hero";
 import { FIRST_COURSE_SLUG } from "@/lib/kyp/study/course-stats-generated";
 import { useLocalProgress } from "@/lib/kyp/progress/use-local-progress";
 import {
@@ -79,7 +80,9 @@ export function StudyNextPanel() {
   if (!data || (recent.length === 0 && mistakeCount === 0 && presets.length === 0 && reviewsDue === 0)) {
     const start = { slug: FIRST_COURSE_SLUG };
     return (
-      <div className="mt-10 flex flex-wrap gap-3">
+      <ModuleCard>
+        <ModuleHeader icon={BookOpen} title="Start learning" />
+        <div className="flex flex-wrap gap-3 p-5">
         <Link
           href={`/drugs/${start.slug}`}
           className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
@@ -94,7 +97,8 @@ export function StudyNextPanel() {
           <BookOpen className="h-4 w-4" />
           Browse Medications
         </Link>
-      </div>
+        </div>
+      </ModuleCard>
     );
   }
 
@@ -105,13 +109,12 @@ export function StudyNextPanel() {
   const otherUnfinished = unfinished.slice(1, 3);
 
   return (
-    <div className="mt-10">
+    <ModuleCard className="h-full">
+      <ModuleHeader icon={BookOpen} title="Continue where you left off" />
+      <div className="p-5">
       {/* (1) Continue Learning — the resume card */}
       {first && (
-        <div className="max-w-xl rounded-xl border border-border/60 bg-card/50 p-5">
-          <p className="text-overline text-muted-foreground mb-2">
-            Continue where you left off
-          </p>
+        <div>
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div className="min-w-0">
               <p className="font-serif text-lg font-semibold text-foreground">
@@ -121,6 +124,10 @@ export function StudyNextPanel() {
                 {firstIsComplete
                   ? `All ${firstTotal} sections complete · 100%`
                   : `${first.completedSections.length} / ${firstTotal} sections · ${firstPercent}% complete`}
+                {!firstIsComplete && first.currentSectionLabel
+                  ? ` · next: ${first.currentSectionLabel}`
+                  : ""}
+                {first.quiz.bestScore !== null ? ` · quiz best ${first.quiz.bestScore}%` : ""}
               </p>
             </div>
             <Link
@@ -233,6 +240,7 @@ export function StudyNextPanel() {
           </p>
         )}
       </div>
-    </div>
+      </div>
+    </ModuleCard>
   );
 }

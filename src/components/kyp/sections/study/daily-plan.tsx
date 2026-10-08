@@ -41,7 +41,7 @@ export function DailyPlan() {
   };
 
   return (
-    <div className="mt-10 max-w-xl rounded-xl border border-brand/30 bg-brand-soft/10 p-5">
+    <div className="h-full rounded-xl border border-brand/30 bg-brand-soft/10 p-5 shadow-[var(--shadow-lift)]">
       <div className="flex items-start justify-between gap-3">
         <p className="flex items-center gap-2 text-overline text-brand">
           <CalendarCheck className="h-3.5 w-3.5" aria-hidden />

@@ -56,7 +56,7 @@ export function TopicAccuracyChips() {
   withData.sort((a, b) => a.accuracy - b.accuracy || a.label.localeCompare(b.label));
 
   return (
-    <div className="mt-10">
+    <div className="mt-6">
       <div className="flex flex-wrap items-baseline justify-between gap-3">
         <p className="text-overline text-muted-foreground">Topic accuracy</p>
         <Link
