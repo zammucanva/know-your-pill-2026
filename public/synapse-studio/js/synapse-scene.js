@@ -89,6 +89,9 @@
       });
       this.vgcc = [{ x: 320 }, { x: 560 }];
       this.nav = [{ x: 470, y: 32 }, { x: 530, y: 32 }];
+      this.kv = [{ x: 400, y: PRE_Y }, { x: 700, y: PRE_Y }];
+      // second-messenger cascade nodes inside the spine (drawn only for intracellular modulators)
+      this.casc = { plc: { x: 655, y: 432 }, IMPase: { x: 612, y: 468, key: "IMPase" }, GSK3B: { x: 812, y: 446, key: "GSK3B" } };
       this.mito = { x: 225, y: 122, label: C.ENZYMES.MAO.label };
       this.aadc = { x: 640, y: 118 };
 
@@ -129,6 +132,12 @@
         [[618, 104], [640, 132], [664, 112]].forEach((p) => sites.push({ x: p[0], y: p[1], kind: "enzyme", ref: this.aadc, inside: true }));
       } else if (act0 === "na_channel_blocker") {
         this.nav.forEach((n) => sites.push({ x: n.x, y: n.y, kind: "channel", ref: n, inside: true, axon: true }));
+      } else if (act0 === "vesicle_protein_ligand" || act0 === "vesicle_loading_inhibitor") {
+        this.vesicles.slice(0, 3).forEach((v) => sites.push({ x: v.x, y: v.y + 14, kind: "vesicle", ref: v, inside: true }));
+      } else if (act0 === "k_channel_modulator") {
+        this.kv.forEach((c) => sites.push({ x: c.x, y: PRE_Y - 8, kind: "channel", ref: c, inside: true }));
+      } else if (act0 === "intracellular_modulator") {
+        ["IMPase", "GSK3B"].filter((k) => act.has(k)).forEach((k) => sites.push({ x: this.casc[k].x, y: this.casc[k].y, kind: "enzyme", ref: this.casc[k], inside: true, post: true }));
       } else if (act0 === "ca_channel_ligand") {
         this.vgcc.forEach((c) => sites.push({ x: c.x, y: PRE_Y - 8, kind: "channel", ref: c, inside: true }));
       }
@@ -361,6 +370,55 @@
         return g;
       });
 
+      // K+ channels on the terminal membrane (only for potassium-channel drugs)
+      this.kvEls = [];
+      if (d.action === "k_channel_modulator") {
+        grad("protK", "linearGradient", { x1: 0, y1: 0, x2: 1, y2: 0 }, [["0%", "#a9d6cf"], ["45%", "#5f9f98"], ["100%", "#244b47"]]);
+        this.kvEls = this.kv.map((c) => {
+          const g = el("g", { filter: "url(#ds)" }, svg);
+          el("rect", { x: c.x - 11, y: PRE_Y - 22, width: 22, height: 44, rx: 8, fill: "url(#protK)", stroke: "#8fc7bf", "stroke-width": 1.2 }, g);
+          el("rect", { x: c.x - 2.6, y: PRE_Y - 20, width: 5.2, height: 40, rx: 2.5, fill: "#0a131d" }, g);
+          el("path", { d: "M " + (c.x - 11) + " " + (PRE_Y - 6) + " h 22 M " + (c.x - 11) + " " + (PRE_Y + 8) + " h 22", stroke: "#d4eeea", "stroke-width": 0.8, opacity: 0.5 }, g);
+          const x = el("g", { opacity: 0 }, g);
+          el("line", { x1: c.x - 13, y1: PRE_Y - 13, x2: c.x + 13, y2: PRE_Y + 13, stroke: "#d4756e", "stroke-width": 4, "stroke-linecap": "round" }, x);
+          el("line", { x1: c.x + 13, y1: PRE_Y - 13, x2: c.x - 13, y2: PRE_Y + 13, stroke: "#d4756e", "stroke-width": 4, "stroke-linecap": "round" }, x);
+          return { g, x };
+        });
+      }
+
+      // second-messenger cascade in the spine (only for intracellular modulators)
+      this.cascEls = null;
+      if (d.action === "intracellular_modulator") {
+        const cg = el("g", null, svg);
+        const node = (cx, cy, rx, ry, fill, stroke) => {
+          const n = el("g", { filter: "url(#ds)" }, cg);
+          el("ellipse", { cx, cy, rx, ry, fill, stroke, "stroke-width": 1.6 }, n);
+          el("ellipse", { cx: cx - rx * 0.3, cy: cy - ry * 0.35, rx: rx * 0.35, ry: ry * 0.3, fill: "#fff", opacity: 0.22 }, n);
+          return n;
+        };
+        const R3 = this.post[Math.min(2, this.post.length - 1)], R4 = this.post[Math.min(3, this.post.length - 1)];
+        this.cascPaths = [
+          { id: "plc", pts: [[R3.x + 6, POST_Y + 44], [R3.x + 30, POST_Y + 62], [this.casc.plc.x - 12, this.casc.plc.y - 8]], blocked: false },
+          { id: "ip3", pts: [[this.casc.plc.x - 14, this.casc.plc.y + 8], [this.casc.IMPase.x + 10, this.casc.IMPase.y - 14], [572, 494]], blocked: "IMPase" },
+          { id: "gsk", pts: [[R4.x + 8, POST_Y + 44], [R4.x + 40, POST_Y + 62], [this.casc.GSK3B.x - 14, this.casc.GSK3B.y - 8]], blocked: "GSK3B" },
+        ];
+        this.cascPaths.forEach((cp) => {
+          const q = cp.pts;
+          el("path", { d: "M " + q[0].join(" ") + " Q " + q[1].join(" ") + " " + q[2].join(" "), fill: "none", stroke: "#8a8fd2", "stroke-width": 2, "stroke-dasharray": "5 5", opacity: 0.55 }, cg);
+        });
+        node(this.casc.plc.x, this.casc.plc.y, 20, 13, "#4d5099", "#aeb2ee");
+        this.cascEls = { x: {} };
+        ["IMPase", "GSK3B"].forEach((k) => {
+          const c = this.casc[k];
+          node(c.x, c.y, 24, 14, "#5b4f94", "#c0b6ee");
+          const xg = el("g", { opacity: 0 }, cg);
+          el("line", { x1: c.x - 16, y1: c.y - 12, x2: c.x + 16, y2: c.y + 12, stroke: "#d4756e", "stroke-width": 3.6, "stroke-linecap": "round" }, xg);
+          el("line", { x1: c.x + 16, y1: c.y - 12, x2: c.x - 16, y2: c.y + 12, stroke: "#d4756e", "stroke-width": 3.6, "stroke-linecap": "round" }, xg);
+          this.cascEls.x[k] = xg;
+        });
+        this.gCascPulse = el("g", null, svg);
+      }
+
       // transporters: 12-helix proteins with an outward-open substrate pocket
       this.transEls = this.transporters.map((t) => {
         const col = C.SPECIES[t.species].color;
@@ -517,6 +575,16 @@
       mem("Postsynaptic", "membrane", 340);
       lab("Postsynaptic neuron (dendritic spine)", 330, 560, { cls: "lbl-big" });
       lab("Postsynaptic density", 330, 385, { anchor: "middle", cls: "lbl-mini" });
+      if (d.action === "vesicle_protein_ligand" || d.action === "vesicle_loading_inhibitor") {
+        const tk = d.actsOn[0], tl = C.TARGETS[tk] ? C.TARGETS[tk].label : tk;
+        lab(tl + (d.action === "vesicle_protein_ligand" ? " on the vesicle membrane" : " (loads transmitter into vesicles)"), 228, 204, { anchor: "end", cls: "lbl-mini" });
+      }
+      if (d.action === "k_channel_modulator") lab("Voltage-gated K⁺ channel (Kv)", 722, 208, { cls: "lbl-mini" });
+      if (d.action === "intracellular_modulator") {
+        lab("Second-messenger cascade (PLC → IP3)", this.casc.plc.x + 2, this.casc.plc.y - 20, { anchor: "middle", cls: "lbl-mini" });
+        lab("IMPase (inositol recycling)", this.casc.IMPase.x - 4, this.casc.IMPase.y + 30, { anchor: "middle", cls: "lbl-mini" });
+        lab("GSK-3β", this.casc.GSK3B.x, this.casc.GSK3B.y + 30, { anchor: "middle", cls: "lbl-mini" });
+      }
       lab("Adhesion proteins (neurexin–neuroligin)", 22, 320, { cls: "lbl-mini" });
       lab("Reserve pool of vesicles", 600, 100, { cls: "lbl-mini" });
       lab("Smooth endoplasmic reticulum", 412, 520, { anchor: "middle", cls: "lbl-mini" });
@@ -524,7 +592,7 @@
         lab("Microtubule (vesicle track)", 800, 160, { cls: "lbl-mini" });
         lab("Actin filaments", 150, 222, { cls: "lbl-mini" });
         lab("Glycocalyx (sugar coat)", 22, 334, { cls: "lbl-mini" });
-        lab("Ribosomes (protein synthesis)", 690, 425, { anchor: "middle", cls: "lbl-mini" });
+        if (d.action !== "intracellular_modulator") lab("Ribosomes (protein synthesis)", 690, 425, { anchor: "middle", cls: "lbl-mini" });
       }
       lab("Mitochondrion (ATP supply)", 735, 566, { anchor: "middle", cls: "lbl-mini" });
       lab("Voltage-gated Ca²⁺ channel", 330, 214);
@@ -592,7 +660,9 @@
         const inhib = this.inhibitoryRelease();
         if (inhib) rel *= 1 - inhib * e;
         let load = 1;
-        if (act === "precursor" || (act === "enzyme_inhibitor" && d.actsOn.includes("MAO"))) load = 1 + 0.75 * e;
+        if (act === "precursor" || (act === "enzyme_inhibitor" && (d.actsOn.includes("MAO") || d.actsOn.includes("GABA-T")))) load = 1 + 0.75 * e;
+        if (act === "vesicle_loading_inhibitor") load = 1 - 0.65 * e;
+        if (act === "k_channel_modulator" && d.kdir === "block") { load = 1 + 0.5 * e; rel = Math.min(0.97, rel * (1 + 0.15 * e)); }
         return { rel, load };
       };
       const occupied = (r, tt) => {
@@ -654,6 +724,8 @@
       const d = this.drug;
       if (d.action === "na_channel_blocker") return 0.55;
       if (d.action === "ca_channel_ligand") return 0.5;
+      if (d.action === "vesicle_protein_ligand") return 0.55;
+      if (d.action === "k_channel_modulator" && d.kdir !== "block") return 0.5;
       if (d.action === "receptor_agonist" && d.actsOn.some((k) => C.RECEPTORS[k] && C.RECEPTORS[k].loc === "pre")) return 0.5;
       if (d.action === "partial_agonist" && d.actsOn.some((k) => C.RECEPTORS[k] && C.RECEPTORS[k].loc === "pre")) return 0.5 * (d.efficacy || 0.5);
       return 0;
@@ -747,6 +819,11 @@
           }
         });
       }
+      if (act === "intracellular_modulator") {
+        const f = 1 - 0.5 * this.avgE(t);
+        resp *= f;
+        for (let i = 0; i < act_r.length; i++) act_r[i] *= f;
+      }
       return { cleft, resp, act_r };
     }
 
@@ -764,6 +841,7 @@
     }
 
     responseLabel() {
+      if (this.drug.action === "intracellular_modulator") return "Downstream (second-messenger) signal";
       const sp = this.drug.receptors.map((k) => C.RECEPTORS[k] && C.RECEPTORS[k].species);
       if (sp.some((s) => s === "gaba" || s === "opioid")) return "Inhibitory signal received";
       if (sp.some((s) => s === "glutamate" || s === "acetylcholine")) return "Excitatory signal received";
@@ -795,8 +873,8 @@
         const e = this.vesEls[idx];
         e.g.setAttribute("transform", "translate(" + v.x + " " + y + ") scale(" + sc + ")");
         e.g.setAttribute("opacity", alpha);
-        const boost = (act === "precursor" || (act === "enzyme_inhibitor" && d.actsOn.includes("MAO"))) ? this.avgE(t) : 0;
-        const depleted = act === "releaser" ? this.avgE(t) : 0;
+        const boost = (act === "precursor" || (act === "enzyme_inhibitor" && (d.actsOn.includes("MAO") || d.actsOn.includes("GABA-T"))) || (act === "k_channel_modulator" && d.kdir === "block")) ? this.avgE(t) : 0;
+        const depleted = (act === "releaser" || act === "vesicle_loading_inhibitor") ? this.avgE(t) : 0;
         const nShow = Math.round(Math.max(2, 5 + 4 * boost - 4 * depleted));
         e.dots.forEach((dot, q) => dot.setAttribute("opacity", dots && q < nShow ? 1 : 0));
       });
@@ -841,9 +919,39 @@
         ee.x.setAttribute("opacity", site && act === "enzyme_inhibitor" ? this.siteE(site, t) : 0);
       });
 
+      if (this.kvEls.length) this.kvEls.forEach((k, i) => {
+        const site = this.sites.find((q) => q.ref === this.kv[i]);
+        k.x.setAttribute("opacity", site && d.kdir === "block" ? this.siteE(site, t) : 0);
+      });
+      if (this.cascEls) this.renderCascade(t, s);
       this.renderIons(t, s);
       this.renderDrug(t);
       this.renderAP(t);
+    }
+
+    /** Second-messenger cascade: pulses travel down each branch; a blocked branch dims and thins. */
+    renderCascade(t, s) {
+      const g = this.gCascPulse;
+      g.innerHTML = "";
+      const act = clamp((s.act_r[Math.min(2, this.post.length - 1)] || 0) + (s.act_r[Math.min(3, this.post.length - 1)] || 0), 0, 3);
+      const drive = 0.35 + 0.65 * clamp(act, 0, 1);
+      ["IMPase", "GSK3B"].forEach((k) => {
+        const site = this.sites.find((q) => q.ref === this.casc[k]);
+        this.cascEls.x[k].setAttribute("opacity", site ? this.siteE(site, t) : 0);
+      });
+      this.cascPaths.forEach((cp, ci) => {
+        const site = cp.blocked ? this.sites.find((q) => q.ref === this.casc[cp.blocked]) : null;
+        const block = site ? this.siteE(site, t) : 0;
+        const n = Math.max(1, Math.round(3 * drive * (1 - 0.7 * block)));
+        for (let q = 0; q < n; q++) {
+          const f = (((t * 0.28 + q / n + hash(ci, q, 5, 5) * 0.2) % 1) + 1) % 1;
+          // a pulse stalls part-way along the branch when its enzyme is blocked
+          const ff = cp.blocked ? Math.min(f, lerp(1, 0.62, block)) : f;
+          const p = pathPoint(cp.pts, ff);
+          const a = (1 - 0.65 * block * (f > 0.62 ? 1 : 0)) * Math.min(1, f * 5, (1 - f) * 5 + 0.2);
+          el("circle", { cx: p[0], cy: p[1], r: 4, fill: "#b9bdf5", opacity: clamp(a, 0, 1) * 0.95 }, g);
+        }
+      });
     }
 
     renderIons(t, s) {
@@ -879,6 +987,18 @@
           }
         }
       });
+      // K+ channel openers: K+ leaves through the open channels
+      if (act === "k_channel_modulator" && this.drug.kdir !== "block") {
+        this.kv.forEach((c, j) => {
+          const site = this.sites.find((q) => q.ref === c);
+          const e = site ? this.siteE(site, t) : 0;
+          if (e < 0.1) return;
+          for (let q = 0; q < 2; q++) {
+            const f = ((t * 0.8 + q / 2 + hash(j, q, 6, 1)) % 1);
+            this.ion(g, c.x + (q ? 4 : -4), lerp(PRE_Y - 26, PRE_Y + 52, f), "K⁺", "#e6b866", e * (1 - Math.abs(f - 0.5) * 1.2));
+          }
+        });
+      }
       // Na+ channel / axon: no ions drawn (action potential drawn separately)
       const kvis = this.drug.action.includes("agonist") && this.post.some((r) => r.inhibitory) ? clamp(this.avgE(t), 0, 1) : 0;
       const kr = this.post.find((r) => r.inhibitory);
@@ -906,13 +1026,16 @@
         let x, y, a = 1;
         if (site) {
           const through = site.inside;
-          const pts = through
+          const pts = site.post
+            ? [[1040, 300 + 25 * hash(i, 1, 1, 1)], [site.x + 160, 320], [site.x, POST_Y - 30], [site.x, POST_Y + 34], [site.x, site.y]]
+            : through
             ? [[1040, 300 + 25 * hash(i, 1, 1, 1)], [site.x + 160, 306], [site.x, PRE_Y + 40], [site.x, PRE_Y - 30], [site.x, site.y]]
             : [[1040, 280 + 40 * hash(i, 1, 1, 1)], [site.x + 170, 300 + 10 * Math.sin(i)], [site.x, site.y]];
           if (site.axon) pts.splice(3, 0, [site.x + (site.x < 500 ? 40 : -40), 90]);
           const p = pathPoint(pts, smooth(u));
           x = p[0]; y = p[1];
-          if (through && y > PRE_Y - 16 && y < PRE_Y + 16 && u < 1) a = 0.55;
+          if (through && !site.post && y > PRE_Y - 16 && y < PRE_Y + 16 && u < 1) a = 0.55;
+          if (site.post && y > POST_Y - 16 && y < POST_Y + 16 && u < 1) a = 0.55;
           if (u >= 1) { x += 1.5 * Math.sin(t * 2 + i); y += 1.5 * Math.cos(t * 2.3 + i); }
         } else {
           const home = [880 - 38 * (i % 3), 300 + 18 * (i % 2) + 6 * Math.sin(t + i)];

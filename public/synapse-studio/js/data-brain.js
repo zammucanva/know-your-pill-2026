@@ -62,6 +62,7 @@
     AADC: { label: "AADC (DOPA decarboxylase)", full: "Aromatic L-amino-acid decarboxylase", loc: "terminal" },
     AChE: { label: "AChE", full: "Acetylcholinesterase", loc: "cleft" },
     COX:  { label: "COX (cyclooxygenase)", full: "Cyclooxygenase enzymes", loc: "terminal" },
+    "GABA-T": { label: "GABA-T (GABA transaminase)", full: "GABA transaminase (breaks down GABA inside the terminal)", loc: "terminal" },
   };
 
   /* ---- Schematic sagittal brain (viewBox 0 0 800 520). Not anatomically exact. ---- */
@@ -133,5 +134,14 @@
     });
   });
 
-  global.KYP_CORE = { SPECIES, RECEPTORS, DEFAULT_RECEPTOR, ENZYMES, OUTLINE, REGIONS, PATHWAYS };
+  /** Other drug targets the scene can draw (vesicle proteins, K+ channels, intracellular enzymes). */
+  const TARGETS = {
+    SV2A:   { label: "SV2A", full: "SV2A, a protein on synaptic vesicles" },
+    VMAT2:  { label: "VMAT2", full: "Vesicular monoamine transporter 2 (VMAT2)" },
+    Kv:     { label: "Kv channel", full: "voltage-gated K⁺ channels (Kv)" },
+    IMPase: { label: "IMPase", full: "inositol monophosphatase (IMPase)" },
+    GSK3B:  { label: "GSK-3β", full: "glycogen synthase kinase 3β (GSK-3β)" },
+  };
+
+  global.KYP_CORE = { SPECIES, RECEPTORS, DEFAULT_RECEPTOR, ENZYMES, TARGETS, OUTLINE, REGIONS, PATHWAYS };
 })(window);
