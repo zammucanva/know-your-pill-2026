@@ -20,11 +20,10 @@
 
 import { describe, expect, test } from "bun:test";
 import { execSync } from "child_process";
-import { existsSync, readFileSync, rmSync } from "fs";
+import { existsSync, readFileSync } from "fs";
 import { resolve } from "path";
-import { Database } from "bun:sqlite";
 import { PrismaClient } from "@prisma/client";
-import { TEST_DB_URL, ensureServer, testDb } from "./helpers/server";
+import { ensureServer, testDb, TEST_DB_URL } from "./helpers/server";
 
 const MIGRATIONS_DIR = resolve(process.cwd(), "prisma/migrations");
 const INIT_MIGRATION_DIR = resolve(MIGRATIONS_DIR, "20260922000000_init");
@@ -97,13 +96,8 @@ describe("the test database itself is migration-built", () => {
   });
 });
 
-// SKIPPED since the Supabase/Postgres migration (3d4b7cf): prepare-database.ts
-// is built on SQLite-only statements (PRAGMA, sqlite_master) and the legacy
-// db-push databases it upgraded were SQLite files. It cannot run against the
-// Postgres client, so tests 6 and 7 cannot pass; remove them together with
-// the helper and the `db:prepare` script if the legacy path is retired.
 describe("legacy data-upgrade helper is idempotent on migrated databases", () => {
-  test.skip("6. prepare-database.ts exits cleanly and mutates nothing", async () => {
+  test("6. prepare-database.ts exits cleanly and mutates nothing", async () => {
     await ensureServer();
     const before = await testDb().user.count();
     const beforeTypes = await testDb().user.groupBy({
@@ -134,102 +128,104 @@ describe("legacy db-push database upgrade path (real legacy shape)", () => {
    * learner vocabulary, NO learnerType), Progress, Bookmark,
    * SearchHistory — and NO Session/PasswordResetToken/LoginAttempt tables
    * or migration history. Data rows are inserted so preservation can be
-   * asserted after the upgrade.
+   * asserted after the upgrade. The fixture lives in its own scratch
+   * postgres database on the test server, rebuilt from nothing each run.
    */
-  function createLegacyFixture(dbPath: string): void {
-    rmSync(dbPath, { force: true });
-    const sqlite = new Database(dbPath);
-    sqlite.exec(`
-      CREATE TABLE "User" (
+  const LEGACY_DB_NAME = "kyp_legacy_fixture";
+  const LEGACY_DB_URL = (() => {
+    const url = new URL(TEST_DB_URL);
+    url.pathname = `/${LEGACY_DB_NAME}`;
+    return url.toString();
+  })();
+
+  async function createLegacyFixture(): Promise<void> {
+    // Postgres has no CREATE DATABASE IF NOT EXISTS — rebuild explicitly.
+    await testDb().$executeRawUnsafe(`DROP DATABASE IF EXISTS "${LEGACY_DB_NAME}"`);
+    await testDb().$executeRawUnsafe(`CREATE DATABASE "${LEGACY_DB_NAME}"`);
+
+    const fixture = new PrismaClient({
+      datasources: { db: { url: LEGACY_DB_URL } },
+    });
+    const statements = [
+      `CREATE TABLE "User" (
           "id" TEXT NOT NULL PRIMARY KEY,
           "name" TEXT NOT NULL,
           "email" TEXT NOT NULL,
           "passwordHash" TEXT NOT NULL,
           "emailVerified" BOOLEAN NOT NULL DEFAULT false,
           "role" TEXT NOT NULL DEFAULT 'student',
-          "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-          "updatedAt" DATETIME NOT NULL
-      );
-      CREATE TABLE "Progress" (
+          "createdAt" TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+          "updatedAt" TIMESTAMP NOT NULL
+      )`,
+      `CREATE TABLE "Progress" (
           "id" TEXT NOT NULL PRIMARY KEY,
           "userId" TEXT NOT NULL,
           "type" TEXT NOT NULL,
           "slug" TEXT NOT NULL,
           "title" TEXT NOT NULL,
-          "lastVisitedAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+          "lastVisitedAt" TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
           "visitCount" INTEGER NOT NULL DEFAULT 1,
           CONSTRAINT "Progress_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User" ("id") ON DELETE CASCADE ON UPDATE CASCADE
-      );
-      CREATE TABLE "Bookmark" (
+      )`,
+      `CREATE TABLE "Bookmark" (
           "id" TEXT NOT NULL PRIMARY KEY,
           "userId" TEXT NOT NULL,
           "type" TEXT NOT NULL,
           "slug" TEXT NOT NULL,
           "title" TEXT NOT NULL,
-          "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+          "createdAt" TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
           CONSTRAINT "Bookmark_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User" ("id") ON DELETE CASCADE ON UPDATE CASCADE
-      );
-      CREATE TABLE "SearchHistory" (
+      )`,
+      `CREATE TABLE "SearchHistory" (
           "id" TEXT NOT NULL PRIMARY KEY,
           "userId" TEXT NOT NULL,
           "query" TEXT NOT NULL,
           "resultType" TEXT,
           "resultSlug" TEXT,
           "resultTitle" TEXT,
-          "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+          "createdAt" TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
           CONSTRAINT "SearchHistory_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User" ("id") ON DELETE CASCADE ON UPDATE CASCADE
-      );
-    `);
-    const insert = sqlite.prepare(
-      `INSERT INTO "User" ("id","name","email","passwordHash","role","updatedAt")
-       VALUES (?,?,?,?,?,datetime('now'))`
-    );
-    insert.run("legacy-1", "Legacy One", "legacy1@example.test", "hash1", "mbbs_student");
-    insert.run("legacy-2", "Legacy Two", "legacy2@example.test", "hash2", "medical_student");
-    insert.run("legacy-3", "Legacy Three", "legacy3@example.test", "hash3", "admin");
-    sqlite
-      .prepare(
-        `INSERT INTO "Progress" ("id","userId","type","slug","title") VALUES ('p1','legacy-1','drug','sertraline','Sertraline')`
-      )
-      .run();
-    sqlite
-      .prepare(
-        `INSERT INTO "Bookmark" ("id","userId","type","slug","title") VALUES ('b1','legacy-2','disease','major-depressive-disorder','MDD')`
-      )
-      .run();
-    sqlite
-      .prepare(
-        `INSERT INTO "SearchHistory" ("id","userId","query") VALUES ('s1','legacy-3','ssri')`
-      )
-      .run();
-    sqlite.close();
+      )`,
+      `INSERT INTO "User" ("id","name","email","passwordHash","role","updatedAt") VALUES ('legacy-1','Legacy One','legacy1@example.test','hash1','mbbs_student', now())`,
+      `INSERT INTO "User" ("id","name","email","passwordHash","role","updatedAt") VALUES ('legacy-2','Legacy Two','legacy2@example.test','hash2','medical_student', now())`,
+      `INSERT INTO "User" ("id","name","email","passwordHash","role","updatedAt") VALUES ('legacy-3','Legacy Three','legacy3@example.test','hash3','admin', now())`,
+      `INSERT INTO "Progress" ("id","userId","type","slug","title") VALUES ('p1','legacy-1','drug','sertraline','Sertraline')`,
+      `INSERT INTO "Bookmark" ("id","userId","type","slug","title") VALUES ('b1','legacy-2','disease','major-depressive-disorder','MDD')`,
+      `INSERT INTO "SearchHistory" ("id","userId","query") VALUES ('s1','legacy-3','ssri')`,
+    ];
+    try {
+      for (const sql of statements) {
+        await fixture.$executeRawUnsafe(sql);
+      }
+    } finally {
+      await fixture.$disconnect();
+    }
   }
 
-  test.skip("7. the documented upgrade path preserves data and completes the schema", async () => {
-    const dbPath = resolve(process.cwd(), "db/legacy-fixture.db");
-    createLegacyFixture(dbPath);
-    const fixtureUrl = `file:${dbPath}`;
+  test("7. the documented upgrade path preserves data and completes the schema", async () => {
+    await ensureServer();
+    await createLegacyFixture();
 
     try {
       // ── The documented legacy path, in order ──
       execSync("bun scripts/prepare-database.ts", {
         cwd: process.cwd(),
-        env: { ...process.env, DATABASE_URL: fixtureUrl },
+        env: { ...process.env, DATABASE_URL: LEGACY_DB_URL, DIRECT_URL: LEGACY_DB_URL },
         stdio: "pipe",
       });
       execSync("bunx prisma migrate resolve --applied 20260922000000_init", {
         cwd: process.cwd(),
-        env: { ...process.env, DATABASE_URL: fixtureUrl },
+        env: { ...process.env, DATABASE_URL: LEGACY_DB_URL, DIRECT_URL: LEGACY_DB_URL },
         stdio: "pipe",
       });
       execSync("bunx prisma migrate deploy", {
         cwd: process.cwd(),
-        env: { ...process.env, DATABASE_URL: fixtureUrl },
+        env: { ...process.env, DATABASE_URL: LEGACY_DB_URL, DIRECT_URL: LEGACY_DB_URL },
         stdio: "pipe",
       });
 
       const legacy = new PrismaClient({
-        datasources: { db: { url: fixtureUrl } },
+        datasources: { db: { url: LEGACY_DB_URL } },
       });
       try {
         // Data preserved — all rows survive the upgrade.
@@ -239,8 +235,11 @@ describe("legacy db-push database upgrade path (real legacy shape)", () => {
         expect(await legacy.searchHistory.count()).toBe(1);
 
         // Roles normalised to the authorization vocabulary; learner
-        // values preserved in learnerType.
-        const roles = await legacy.user.groupBy({ by: ["role"], _count: { _all: true } });
+        // values preserved in learnerType. (Sorted — postgres does not
+        // guarantee groupBy row order.)
+        const roles = (await legacy.user.groupBy({ by: ["role"], _count: { _all: true } })).sort(
+          (a: { role: string }, b: { role: string }) => a.role.localeCompare(b.role)
+        );
         expect(roles).toEqual([{ role: "admin", _count: { _all: 1 } }, { role: "user", _count: { _all: 2 } }]);
         // learnerType: backfilled from the legacy learner-vocabulary roles;
         // the admin user keeps the column default ('student') because
@@ -286,7 +285,7 @@ describe("legacy db-push database upgrade path (real legacy shape)", () => {
         // Migration history baselined: deploy again is a no-op.
         const secondDeploy = execSync("bunx prisma migrate deploy", {
           cwd: process.cwd(),
-          env: { ...process.env, DATABASE_URL: fixtureUrl },
+          env: { ...process.env, DATABASE_URL: LEGACY_DB_URL, DIRECT_URL: LEGACY_DB_URL },
           stdio: "pipe",
         }).toString();
         expect(secondDeploy).toContain("No pending migrations");
@@ -294,7 +293,7 @@ describe("legacy db-push database upgrade path (real legacy shape)", () => {
         // Re-running the whole path changes no data (idempotence).
         execSync("bun scripts/prepare-database.ts", {
           cwd: process.cwd(),
-          env: { ...process.env, DATABASE_URL: fixtureUrl },
+          env: { ...process.env, DATABASE_URL: LEGACY_DB_URL, DIRECT_URL: LEGACY_DB_URL },
           stdio: "pipe",
         });
         expect(await legacy.user.count()).toBe(3);
@@ -303,8 +302,10 @@ describe("legacy db-push database upgrade path (real legacy shape)", () => {
         await legacy.$disconnect();
       }
     } finally {
-      rmSync(dbPath, { force: true });
-      rmSync(dbPath + "-journal", { force: true });
+      // Drop the scratch database (must happen after the fixture client
+      // disconnected — postgres refuses to drop databases with open
+      // connections).
+      await testDb().$executeRawUnsafe(`DROP DATABASE IF EXISTS "${LEGACY_DB_NAME}"`);
     }
   }, 60000);
 });

@@ -31,6 +31,11 @@ jobs:
 
       - name: Generate Prisma client
         run: bunx prisma generate
+        env:
+          # Placeholder URLs — prisma generate only validates the schema's
+          # datasource envs; the static export never opens a connection.
+          DATABASE_URL: postgresql://pages:pages@localhost:5432/pages
+          DIRECT_URL: postgresql://pages:pages@localhost:5432/pages
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

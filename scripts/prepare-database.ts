@@ -12,7 +12,9 @@ import { db } from "../src/lib/db";
  *
  *   1. DATA migration — adds `User.learnerType`, backfills it from the
  *      legacy `User.role` values, and normalises `role` to the
- *      authorization vocabulary (user/admin/moderator).
+ *      authorization vocabulary (user/admin/moderator); adds the
+ *      auth-provider columns (`provider`, `providerAccountId`) the
+ *      email/Google sign-in era introduced.
  *   2. SCHEMA completion — creates the security-era tables and indices
  *      the legacy database never had (Session, PasswordResetToken,
  *      LoginAttempt, plus the User_email unique index), using the exact
@@ -37,27 +39,31 @@ import { db } from "../src/lib/db";
  * already-baselined ones.
  *
  * VERIFIED against a copy of the real legacy production database
- * (db/custom.db, 35 users, 2026-09-22): data preserved (all User /
- * Progress / Bookmark / SearchHistory rows intact), roles normalised,
- * missing tables created, and the upgraded database serves the current
- * application. The historical probe this file replaced (a
+ * (db/custom.db, 35 users, 2026-09-22, sqlite era): data preserved (all
+ * User / Progress / Bookmark / SearchHistory rows intact), roles
+ * normalised, missing tables created, and the upgraded database served
+ * the application. The historical probe this file replaced (a
  * `SELECT "learnerType" ...` existence check) never failed on SQLite —
  * double-quoted unknown identifiers degrade to string literals — which
  * is why the legacy path previously crashed with
  * `no such column: learnerType`.
+ *
+ * NOTE (postgres era): probes use information_schema — SQLite's PRAGMA
+ * introspection does not exist on Postgres.
  */
 
-/** PRAGMA-based column probe — immune to SQLite's double-quote fallback. */
+/** Column probe via the information schema (portable across Postgres
+ *  servers; immune to identifier-fallback pitfalls). */
 async function userTableColumns(): Promise<string[]> {
-  const rows = await db.$queryRawUnsafe<Array<{ name: string }>>(
-    'PRAGMA table_info("User")'
+  const rows = await db.$queryRawUnsafe<Array<{ column_name: string }>>(
+    `SELECT column_name FROM information_schema.columns WHERE table_schema = current_schema() AND table_name = 'User'`
   );
-  return rows.map((row) => row.name);
+  return rows.map((row) => row.column_name);
 }
 
 async function tableExists(name: string): Promise<boolean> {
-  const tables = await db.$queryRawUnsafe<Array<{ name: string }>>(
-    'SELECT name FROM sqlite_master WHERE type = "table" AND name = $1',
+  const tables = await db.$queryRawUnsafe<Array<{ table_name: string }>>(
+    `SELECT table_name FROM information_schema.tables WHERE table_schema = current_schema() AND table_name = $1`,
     name
   );
   return tables.length > 0;
@@ -75,10 +81,10 @@ const MISSING_TABLE_DDL = [
       "id" TEXT NOT NULL PRIMARY KEY,
       "tokenHash" TEXT NOT NULL,
       "userId" TEXT NOT NULL,
-      "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-      "expiresAt" DATETIME NOT NULL,
-      "revokedAt" DATETIME,
-      "lastUsedAt" DATETIME,
+      "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+      "expiresAt" TIMESTAMP(3) NOT NULL,
+      "revokedAt" TIMESTAMP(3),
+      "lastUsedAt" TIMESTAMP(3),
       CONSTRAINT "Session_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User" ("id") ON DELETE CASCADE ON UPDATE CASCADE
   )`,
   `CREATE UNIQUE INDEX IF NOT EXISTS "Session_tokenHash_key" ON "Session"("tokenHash")`,
@@ -88,9 +94,9 @@ const MISSING_TABLE_DDL = [
       "id" TEXT NOT NULL PRIMARY KEY,
       "tokenHash" TEXT NOT NULL,
       "userId" TEXT NOT NULL,
-      "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-      "expiresAt" DATETIME NOT NULL,
-      "usedAt" DATETIME,
+      "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+      "expiresAt" TIMESTAMP(3) NOT NULL,
+      "usedAt" TIMESTAMP(3),
       "sourceHash" TEXT,
       CONSTRAINT "PasswordResetToken_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User" ("id") ON DELETE CASCADE ON UPDATE CASCADE
   )`,
@@ -102,16 +108,22 @@ const MISSING_TABLE_DDL = [
       "identifierHash" TEXT NOT NULL,
       "sourceHash" TEXT NOT NULL,
       "failureCount" INTEGER NOT NULL DEFAULT 0,
-      "windowStart" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-      "lastFailureAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-      "lockoutUntil" DATETIME,
+      "windowStart" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+      "lastFailureAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+      "lockoutUntil" TIMESTAMP(3),
       "escalationLevel" INTEGER NOT NULL DEFAULT 0,
-      "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-      "updatedAt" DATETIME NOT NULL
+      "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+      "updatedAt" TIMESTAMP(3) NOT NULL
   )`,
   `CREATE INDEX IF NOT EXISTS "LoginAttempt_identifierHash_lastFailureAt_idx" ON "LoginAttempt"("identifierHash", "lastFailureAt")`,
   `CREATE INDEX IF NOT EXISTS "LoginAttempt_sourceHash_lastFailureAt_idx" ON "LoginAttempt"("sourceHash", "lastFailureAt")`,
   `CREATE UNIQUE INDEX IF NOT EXISTS "LoginAttempt_identifierHash_sourceHash_key" ON "LoginAttempt"("identifierHash", "sourceHash")`,
+  // -- Data-table indices of the init migration (legacy db-push rows lack them)
+  `CREATE UNIQUE INDEX IF NOT EXISTS "Progress_userId_type_slug_key" ON "Progress"("userId", "type", "slug")`,
+  `CREATE INDEX IF NOT EXISTS "Progress_userId_lastVisitedAt_idx" ON "Progress"("userId", "lastVisitedAt")`,
+  `CREATE UNIQUE INDEX IF NOT EXISTS "Bookmark_userId_type_slug_key" ON "Bookmark"("userId", "type", "slug")`,
+  `CREATE INDEX IF NOT EXISTS "Bookmark_userId_createdAt_idx" ON "Bookmark"("userId", "createdAt")`,
+  `CREATE INDEX IF NOT EXISTS "SearchHistory_userId_createdAt_idx" ON "SearchHistory"("userId", "createdAt")`,
   // -- User indices (legacy databases rely on an implicit autoindex)
   `CREATE UNIQUE INDEX IF NOT EXISTS "User_email_key" ON "User"("email")`,
 ];
@@ -129,6 +141,16 @@ async function main() {
   if (!columns.includes("learnerType")) {
     await db.$executeRawUnsafe(
       "ALTER TABLE \"User\" ADD COLUMN \"learnerType\" TEXT NOT NULL DEFAULT 'student'"
+    );
+  }
+  if (!columns.includes("provider")) {
+    await db.$executeRawUnsafe(
+      "ALTER TABLE \"User\" ADD COLUMN \"provider\" TEXT NOT NULL DEFAULT 'email'"
+    );
+  }
+  if (!columns.includes("providerAccountId")) {
+    await db.$executeRawUnsafe(
+      "ALTER TABLE \"User\" ADD COLUMN \"providerAccountId\" TEXT"
     );
   }
 
