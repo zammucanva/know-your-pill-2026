@@ -333,17 +333,14 @@ export default function StudyPage() {
                 courses: objectives, checkpoints, and active recall in every
                 course. Open a class to see its medications.
               </p>
-              {/* Desktop: the interactive honeycomb. Every medication is
-                  also reachable through the plain list below. */}
-              <div className="hidden p-5 md:block">
+              {/* The interactive honeycomb (four columns on phones). Every
+                  medication is also reachable through the plain list below. */}
+              <div className="p-5">
                 <ClassHoneycomb classes={honeycombClasses} />
               </div>
               <details className="group/all border-t border-border/40">
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-3 text-sm font-medium text-foreground kyp-focus-ring">
-                  <span>
-                    <span className="md:hidden">Browse all classes</span>
-                    <span className="hidden md:inline">All classes as a list</span>
-                  </span>
+                  <span>All classes as a list</span>
                   <ArrowRight className="h-4 w-4 text-muted-foreground/40 transition-transform group-open/all:rotate-90" />
                 </summary>
               <div className="grid gap-4 p-5 md:grid-cols-2 xl:grid-cols-3">

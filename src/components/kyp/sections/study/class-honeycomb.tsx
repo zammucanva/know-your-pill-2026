@@ -88,7 +88,10 @@ function shortLabel(label: string): string {
   return clean.slice(0, 4);
 }
 
-const COLS = 7;
+/** Columns: seven on wide screens, four on phones so bubbles stay tappable. */
+const WIDE_COLS = 7;
+const PHONE_COLS = 4;
+const PHONE_MAX_WIDTH = 520;
 
 export function ClassHoneycomb({ classes }: { classes: HoneycombClass[] }) {
   const ref = React.useRef<HTMLDivElement>(null);
@@ -140,6 +143,8 @@ export function ClassHoneycomb({ classes }: { classes: HoneycombClass[] }) {
     return () => cancelAnimationFrame(raf);
   }, [pointer, reduced]);
 
+  const compact = width > 0 && width < PHONE_MAX_WIDTH;
+  const COLS = compact ? PHONE_COLS : WIDE_COLS;
   const step = width > 0 ? width / (COLS + 0.5) : 0;
   const rowH = step * 0.866;
   const rows = Math.ceil(classes.length / COLS);
@@ -155,7 +160,7 @@ export function ClassHoneycomb({ classes }: { classes: HoneycombClass[] }) {
           y: r * rowH + step * 0.55,
         };
       }),
-    [classes, step, rowH]
+    [classes, step, rowH, COLS]
   );
 
   // Where the "lens" sits: the pointer, else the focused bubble, else the middle.
@@ -167,7 +172,8 @@ export function ClassHoneycomb({ classes }: { classes: HoneycombClass[] }) {
   const radius = step * 2.4;
 
   const scaleFor = (i: number): number => {
-    if (reduced || step === 0) return 1;
+    // No fisheye on phones: every bubble keeps a comfortable tap size.
+    if (reduced || compact || step === 0) return 1;
     const dx = positions[i].x - lens.x;
     const dy = positions[i].y - lens.y;
     const d = Math.hypot(dx, dy);
@@ -204,7 +210,7 @@ export function ClassHoneycomb({ classes }: { classes: HoneycombClass[] }) {
               aria-hidden
               className="pointer-events-none absolute inset-0"
               style={{
-                background: `radial-gradient(circle ${step * 2.6}px at ${lens.x}px ${lens.y}px, color-mix(in oklch, var(--brand) 18%, transparent), transparent 70%)`,
+                background: `radial-gradient(circle ${step * 2.6}px at ${lens.x}px ${lens.y}px, color-mix(in oklch, var(--brand) 8%, transparent), transparent 70%)`,
               }}
             />
           )}
@@ -219,8 +225,8 @@ export function ClassHoneycomb({ classes }: { classes: HoneycombClass[] }) {
               const glow = FAMILY_GLOW[fam];
               const boost = hot ? 1 : near * near;
               const shadow =
-                boost > 0.04 || active
-                  ? `0 0 ${10 + 26 * boost}px ${1 + 5 * boost}px rgba(${glow}, ${0.12 + 0.5 * boost})`
+                boost > 0.15 || active
+                  ? `0 0 ${6 + 10 * boost}px ${boost * 1.5}px rgba(${glow}, ${0.05 + 0.2 * boost})`
                   : "none";
               return (
                 <button
