@@ -3,6 +3,7 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "@/components/kyp/theme-provider";
 import { SkipToContentLink } from "@/components/kyp/ui/skip-to-content";
+import { SettingsEffects } from "@/components/kyp/dashboard/settings-effects";
 import { ContentProtection } from "@/lib/contentProtection";
 import { imgPath } from "@/lib/kyp/image-path";
 import { CONTENT_SECURITY_POLICY } from "@/lib/csp";
@@ -140,6 +141,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          {/* Dashboard accessibility settings (font scale, reduced
+              motion, high contrast, focus indicators) applied as
+              attributes on <html>. Renders nothing. */}
+          <SettingsEffects />
           {children}
           <Toaster />
         </ThemeProvider>
