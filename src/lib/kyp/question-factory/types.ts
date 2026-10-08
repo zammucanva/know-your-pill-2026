@@ -169,26 +169,41 @@ export interface QuestionOption {
   entityId?: string;
 }
 
+/** One relationship an option asserts. The link holds when ANY of the
+ *  listed relations holds between subject and object (for example "common"
+ *  or "serious" side effect). */
+export interface ClaimLink {
+  relations: RelationId[];
+  subjectId: string;
+  objectId: string;
+}
+
 /**
- * A claim the validator re-checks against the fact index, independently of
- * how the question was built. For a positive question the correct option's
- * claim must HOLD and every distractor's must NOT hold; for a NOT-question
- * the polarity flips. This is what proves "exactly one correct answer".
+ * What an option asserts, re-checked against the fact index by the
+ * validator independently of how the question was built. An option is
+ * TRUE when every one of its links holds. For a positive question the
+ * correct option must be true and every distractor false; for a NOT
+ * question the polarity flips. This is what proves "exactly one correct
+ * answer" under the closed-world rule (an entity not documented for the
+ * subject does not hold).
  */
 export interface OptionClaim {
   optionIndex: number;
-  relation: RelationId;
-  subjectId: string;
-  objectId: string;
-  /** Whether the relation is expected to hold for this option. */
+  links: ClaimLink[];
+  /** The truth value the construction intended for this option. */
   expected: boolean;
 }
+
+/** Positive: "which IS ..."; negative: "which is NOT ...". */
+export type Polarity = "positive" | "negative";
 
 export interface QuestionProvenance {
   /** Batch id the question was produced in. */
   batchId: string;
   /** Seed that, with template + slot, reproduces this exact question. */
   seed: number;
+  /** Seed of the job/batch run that produced it. */
+  batchSeed: number;
   generatorVersion: string;
   templateId: string;
   templateVersion: string;
@@ -210,6 +225,7 @@ export interface GeneratedQuestion {
   family: TemplateFamily;
   kind: QuestionKind;
   difficulty: Difficulty;
+  polarity: Polarity;
   /** Facts a solver must connect. */
   depth: 1 | 2 | 3;
   /** Semantic fingerprint (concept + relation + answer), used for dedupe

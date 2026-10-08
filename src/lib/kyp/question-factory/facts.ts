@@ -17,7 +17,14 @@
  * directly without adapters.
  */
 
-import { contentTokens, hashString, normalizeText, stripParens, toId } from "./normalize";
+import {
+  contentTokens,
+  displayLabel,
+  hashString,
+  normalizeText,
+  stripParens,
+  toId,
+} from "./normalize";
 import type {
   EntityRef,
   EntityType,
@@ -151,7 +158,19 @@ export interface FactStore {
 }
 
 function entity(type: EntityType, id: string, label: string): EntityRef {
-  return { type, id, label };
+  // Net effects are whole sentences and stay exactly as written; every other
+  // label is shown without its editorial annotation (see displayLabel).
+  return { type, id, label: type === "netEffect" ? label : displayLabel(label) };
+}
+
+/** "X belongs to the SSRI class (Selective Serotonin Reuptake Inhibitor)."
+ *  Built from the data's own label and full name. Worded without a/an so it
+ *  is grammatical for every label, including acronyms; when the full name
+ *  already starts with the label it is not repeated. */
+function classSentence(name: string, label: string, fullName: string): string {
+  return normalizeText(fullName).startsWith(normalizeText(label))
+    ? `${name} belongs to the ${fullName} class.`
+    : `${name} belongs to the ${label} class (${fullName}).`;
 }
 
 function pushTo<K, V>(map: Map<K, V[]>, key: K, value: V): void {
@@ -247,7 +266,7 @@ export function buildFactStore(sources: FactSources): FactStore {
       drugEntity,
       entity("drugClass", `drugClass:${toId(drug.drugClassLabel)}`, drug.drugClassLabel),
       `${drug.genericName} · ${drug.drugClassFullName}`,
-      `${drug.genericName} is a ${drug.drugClassLabel} (${drug.drugClassFullName}).`,
+      classSentence(drug.genericName, drug.drugClassLabel, drug.drugClassFullName),
       src("Overview", "quick-facts")
     );
 
