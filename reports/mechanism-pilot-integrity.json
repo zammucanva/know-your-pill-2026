@@ -1,0 +1,253 @@
+{
+  "generatedAt": "2026-10-06T12:31:03.212Z",
+  "baselineSha": "a7131451f084ff1b22e57e2159b76dde07822e3f",
+  "branch": "feat/mechanism-system-replacement-v2",
+  "summary": {
+    "pilots": 5,
+    "totalUnmapped": 0,
+    "clinicalReviewFlags": 0,
+    "verdict": "PASS — no unmapped content, no clinical review flags"
+  },
+  "records": [
+    {
+      "pilot": "pilot-escitalopram",
+      "topicId": "escitalopram",
+      "source": "src/lib/kyp/data/drugs/escitalopram.ts — mechanismFlow (nodes, edges, caption) + mechanism.steps + mechanism.effect",
+      "migration": "FULLY_MAPPED (pilot conversion + enrichment)",
+      "nodesBefore": 9,
+      "nodesAfter": 9,
+      "edgesBefore": 8,
+      "edgesAfter": 9,
+      "preservedText": [
+        "Presynaptic neuron",
+        "Raphe nuclei: synthesises serotonin",
+        "Serotonin (5-HT)",
+        "Released into synaptic cleft",
+        "SERT transporter",
+        "Normally reuptakes serotonin",
+        "Escitalopram (S-enantiomer)",
+        "Highly selective SERT blockade",
+        "↑ Synaptic 5-HT",
+        "More serotonin available",
+        "5-HT1A autoreceptor",
+        "Initially brakes firing",
+        "Autoreceptors desensitise",
+        "Days 7–14: brake removed",
+        "Prefrontal cortex",
+        "Mood regulation improves",
+        "↑ BDNF + neurogenesis",
+        "Weeks 2–6: full effect",
+        "releases",
+        "reuptake",
+        "blocks (highly selective)",
+        "accumulates",
+        "detects",
+        "over 7–14 days",
+        "increased throughput",
+        "weeks 2–6"
+      ],
+      "transformedText": [
+        {
+          "after": "inhibit further serotonin release",
+          "note": "verbatim fragment of mechanism.steps[1] (documented structural addition: the autoreceptor feedback edge)"
+        }
+      ],
+      "unmappedText": [],
+      "clinicalReviewRequired": []
+    },
+    {
+      "pilot": "pilot-aripiprazole",
+      "topicId": "aripiprazole",
+      "source": "src/lib/kyp/data/drugs/aripiprazole.ts — mechanismFlow",
+      "migration": "FULLY_MAPPED (pilot conversion)",
+      "nodesBefore": 7,
+      "nodesAfter": 7,
+      "edgesBefore": 7,
+      "edgesAfter": 7,
+      "preservedText": [
+        "Aripiprazole",
+        "D2/D3 partial agonist",
+        "D2 receptor",
+        "High-affinity partial agonist occupancy",
+        "Mesolimbic pathway",
+        "Excess dopamine → psychosis",
+        "Net antagonism here",
+        "Partial agonist out-competes dopamine",
+        "Tuberoinfundibular pathway",
+        "Prolactin regulation preserved",
+        "Mesocortical pathway",
+        "Agonist support where DA tone is low",
+        "5-HT2A antagonism + 5-HT1A partial agonism",
+        "Cortical DA release, antidepressant effect",
+        "high DA tone",
+        "occupies",
+        "net blockade",
+        "net agonism",
+        "net agonism",
+        "modulates",
+        "enhances"
+      ],
+      "transformedText": [],
+      "unmappedText": [],
+      "clinicalReviewRequired": []
+    },
+    {
+      "pilot": "pilot-major-depressive-disorder",
+      "topicId": "major-depressive-disorder",
+      "source": "src/lib/kyp/data/diseases/major-depressive-disorder.ts — summary, etiology.models, pathophysiology.{summary,neurotransmitters,pathways,details}, receptors, knowledgeGraph, management (ketamine entry)",
+      "migration": "FULLY_MAPPED (NEW visual — baseline was text-only; all text preserved on the page)",
+      "nodesBefore": 0,
+      "nodesAfter": 17,
+      "edgesBefore": 0,
+      "edgesAfter": 20,
+      "preservedText": [
+        "Chronic stress",
+        "acting on a vulnerable brain",
+        "Monoamine dysregulation",
+        "Serotonin, norepinephrine, dopamine",
+        "SERT (serotonin transporter)",
+        "target of SSRIs",
+        "Hypothalamus",
+        "Pituitary",
+        "Adrenal",
+        "Cortisol hypersecretion",
+        "cortisol elevation in ~50% of MDD",
+        "BDNF expression",
+        "reduced in depression; restored by all antidepressants",
+        "Hippocampal volume loss",
+        "5–10% volume loss in recurrent MDD",
+        "Glutamate",
+        "excitotoxicity in chronic stress; target of ketamine",
+        "NMDA receptor",
+        "target of ketamine/esketamine",
+        "Synaptic plasticity",
+        "heightened threat reactivity",
+        "impaired top-down regulation",
+        "deep brain stimulation target",
+        "at least 2 weeks of pervasive low mood or loss of interest (anhedonia)",
+        "HPA axis",
+        "HPA axis",
+        "cortisol hypersecretion",
+        "chronic cortisol damages hippocampal neurons",
+        "impaired dexamethasone suppression",
+        "glucocorticoid cascade hypothesis",
+        "stress and depression lower BDNF expression",
+        "excitotoxicity in chronic stress",
+        "dendritic atrophy and reduced neurogenesis",
+        "antagonism → glutamate surge",
+        "synaptic plasticity",
+        "BDNF release",
+        "deficient serotonergic and noradrenergic signalling",
+        "raising synaptic monoamines",
+        "greater loss correlating with longer untreated illness",
+        "heightened threat reactivity",
+        "impaired top-down regulation",
+        "hyperactive in MDD",
+        "altered glutamatergic tone",
+        "target of SSRIs",
+        "Ketamine / esketamine",
+        "NMDA receptor antagonism"
+      ],
+      "transformedText": [
+        {
+          "after": "Amygdala hyperactivity",
+          "note": "composition of source fragment \"hyperactive amygdala\""
+        },
+        {
+          "after": "Prefrontal cortex hypoactivity",
+          "note": "composition of source fragment \"hypoactive prefrontal cortex\""
+        },
+        {
+          "after": "Subgenual ACC (Brodmann 25) hyperactivity",
+          "note": "composition of source fragment \"brodmann 25\""
+        },
+        {
+          "after": "Inflammatory activation",
+          "note": "composition of source fragment \"inflammatory\""
+        },
+        {
+          "after": "elevated CRP, IL-6, TNF-α; inflammation activates IDO, shunting tryptophan toward kynurenine",
+          "note": "fragment-join of verbatim source fragments (split on ; or :)"
+        },
+        {
+          "after": "MDD syndrome",
+          "note": "composition of source fragment \"major depressive disorder\""
+        },
+        {
+          "after": "high-inflammatory phenotype in treatment-resistant depression",
+          "note": "fragment-join of verbatim source fragments (split on ; or :)"
+        },
+        {
+          "after": "SSRIs (first-line)",
+          "note": "composition of source fragment \"ssris first-line\""
+        }
+      ],
+      "unmappedText": [],
+      "clinicalReviewRequired": []
+    },
+    {
+      "pilot": "pilot-alcohol-disulfiram",
+      "topicId": "alcohol",
+      "source": "src/lib/kyp/data/substances/alcohol.ts — treatment.medications[Disulfiram].mechanismFlow + reactionSymptoms + description",
+      "migration": "FULLY_MAPPED (pilot conversion)",
+      "nodesBefore": 5,
+      "nodesAfter": 5,
+      "edgesBefore": 4,
+      "edgesAfter": 3,
+      "preservedText": [
+        "Alcohol Ingestion",
+        "Disulfiram Reaction"
+      ],
+      "transformedText": [
+        {
+          "after": "Aldehyde dehydrogenase (ALDH)",
+          "note": "composition: step-3 title 'ALDH Blocked' abbreviation + step-3 description 'aldehyde dehydrogenase enzyme' expansion"
+        },
+        {
+          "after": "works by inhibiting aldehyde dehydrogenase",
+          "note": "fragment of the medication description sentence"
+        },
+        {
+          "after": "ALDH Blocked (step-3 title)",
+          "note": "the step title names the blocked STATE; represented structurally by the disulfiram→ALDH intervention edge (label = step-3 description verbatim)"
+        }
+      ],
+      "unmappedText": [],
+      "clinicalReviewRequired": []
+    },
+    {
+      "pilot": "pilot-opioids-naloxone",
+      "topicId": "opioids",
+      "source": "src/lib/kyp/data/substances/opioids.ts — naloxoneInfo.{mechanismFlow,summary,pharmacologyNotes}",
+      "migration": "FULLY_MAPPED (pilot conversion)",
+      "nodesBefore": 5,
+      "nodesAfter": 5,
+      "edgesBefore": 4,
+      "edgesAfter": 4,
+      "preservedText": [
+        "Opioid Overdose",
+        "Naloxone Administered",
+        "Opioid Displacement",
+        "Reversal",
+        "Breathing resumes within 2-5 minutes. Consciousness returns."
+      ],
+      "transformedText": [
+        {
+          "after": "Mu opioid receptors",
+          "note": "case-normalised fragment of the naloxoneInfo summary ('mu opioid receptors')"
+        },
+        {
+          "after": "opioids bound to mu receptors",
+          "note": "fragment-join of verbatim source description fragments"
+        },
+        {
+          "after": "receptor competition",
+          "note": "fragment-join of verbatim source description fragments"
+        }
+      ],
+      "unmappedText": [],
+      "clinicalReviewRequired": []
+    }
+  ],
+  "collisionNote": "The /drugs/disulfiram page renders its own 4-node reward-pathway flow via the legacy adapter (getPilotMechanism('disulfiram') === null); the ALDH pilot renders only on /substances/alcohol (getTreatmentPilot('alcohol','Disulfiram')). Guarded by tests/mechanism-integrity.test.ts tests 6-8."
+}

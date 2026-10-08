@@ -58,36 +58,8 @@ export function EvidenceLegend({ className }: { className?: string }) {
   );
 }
 
-/** Numbered step chain used by mechanism steps and pathway chains. */
-export function StepChain({
-  steps,
-  className,
-}: {
-  steps: { label: string; detail?: string }[];
-  className?: string;
-}) {
-  return (
-    <ol className={cn("relative space-y-0", className)}>
-      {steps.map((step, i) => (
-        <React.Fragment key={i}>
-          <li className="flex gap-4">
-            <div className="flex flex-col items-center">
-              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand font-mono text-sm font-semibold text-primary-foreground">
-                {i + 1}
-              </span>
-              {i < steps.length - 1 && (
-                <span aria-hidden className="w-px flex-1 bg-border/70" />
-              )}
-            </div>
-            <div className="min-w-0 flex-1 pb-6 last:pb-0">
-              <p className="text-sm font-medium leading-snug text-foreground">{step.label}</p>
-              {step.detail && (
-                <p className="mt-0.5 text-xs leading-relaxed text-muted-foreground">{step.detail}</p>
-              )}
-            </div>
-          </li>
-        </React.Fragment>
-      ))}
-    </ol>
-  );
-}
+/**
+ * Numbered step chain — RETIRED from mechanism duty by the mechanism-system
+ * replacement (KYPMechanismCanvas renders every mechanism now). Zero
+ * consumers remain; the export was removed. Historical marker only.
+ */

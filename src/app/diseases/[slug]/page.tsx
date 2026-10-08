@@ -21,6 +21,8 @@ import { LearningPath } from "@/components/kyp/ui/learning-path";
 import { getDiseaseBySlug, getAllDiseaseSlugs } from "@/lib/kyp/data/diseases";
 import { PageTracker } from "@/components/kyp/ui/page-tracker";
 import { TestUnderstandingCTA } from "@/components/kyp/ui/test-understanding-cta";
+import { KYPMechanismCanvas } from "@/components/mechanism";
+import { getDiseasePilot } from "@/lib/mechanism";
 
 import { Pill, ClipboardCheck, Globe, MapPin } from "lucide-react";
 
@@ -231,6 +233,22 @@ export default async function DiseasePage({ params }: PageProps) {
             <div className="mt-8">
               <Callout variant="info" title="Summary">{disease.pathophysiology.summary}</Callout>
               <p className="mt-4 text-sm text-foreground/90 leading-relaxed">{disease.pathophysiology.details}</p>
+              {/* Mechanism graph (pilot registry — the documented gap at
+                  baseline was a text-only disease page; all existing text
+                  is preserved above, the graph is ADDED below it) */}
+              {(() => {
+                const pilot = getDiseasePilot(disease.slug);
+                return pilot ? (
+                  <div className="mt-8">
+                    <h3 className="text-h3">Pathophysiology graph</h3>
+                    <p className="mt-2 text-body text-muted-foreground">
+                      The same mechanism as a causal graph: follow each branch left to right;
+                      interventions (SSRIs, ketamine) appear at their point of action.
+                    </p>
+                    <KYPMechanismCanvas definition={pilot} />
+                  </div>
+                ) : null;
+              })()}
               <div className="mt-6 grid gap-4 sm:grid-cols-3">
                 <div>
                   <p className="text-overline text-muted-foreground mb-1.5">Neurotransmitters</p>

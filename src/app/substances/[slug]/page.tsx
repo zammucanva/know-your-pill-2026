@@ -18,6 +18,8 @@ import { imgPath } from "@/lib/kyp/image-path";
 import { AlertTriangle, Activity, HeartPulse } from "lucide-react";
 import { PageTracker } from "@/components/kyp/ui/page-tracker";
 import { TestUnderstandingCTA } from "@/components/kyp/ui/test-understanding-cta";
+import { KYPMechanismCanvas } from "@/components/mechanism";
+import { getTreatmentPilot, fromSubstanceStepFlow } from "@/lib/mechanism";
 
 type Slug = string;
 
@@ -654,7 +656,14 @@ export default async function SubstancePage({ params }: PageProps) {
                   <h3 className="text-h3 mb-3">Medications</h3>
                   <div className="grid gap-3 sm:grid-cols-2">
                     {substance.treatment.medications.map((med, i) => (
-                      <div key={i} className="rounded-lg border border-border/50 p-4">
+                      <div
+                        key={i}
+                        className={
+                          med.mechanismFlow && med.mechanismFlow.length > 0
+                            ? "rounded-lg border border-border/50 p-4 sm:col-span-2"
+                            : "rounded-lg border border-border/50 p-4"
+                        }
+                      >
                         <div className="flex items-baseline justify-between gap-2">
                           <p className="text-sm font-semibold text-foreground">{med.name}</p>
                           {med.mechanism && (
@@ -666,17 +675,20 @@ export default async function SubstancePage({ params }: PageProps) {
                         {med.mechanismFlow && med.mechanismFlow.length > 0 && (
                           <div className="mt-3">
                             <p className="text-overline text-muted-foreground">Mechanism Flow</p>
-                            <ol className="mt-1.5 space-y-1">
-                              {med.mechanismFlow.map((s, k) => (
-                                <li key={k} className="flex items-start gap-2 text-xs text-foreground/80">
-                                  <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-brand/15 font-mono text-[0.6rem] font-bold text-brand">{s.step}</span>
-                                  <span>
-                                    <strong className="font-medium text-foreground">{s.title}</strong>
-                                    <span className="text-muted-foreground"> · {s.description}</span>
-                                  </span>
-                                </li>
-                              ))}
-                            </ol>
+                            <div className="mt-1.5">
+                              <KYPMechanismCanvas
+                                definition={
+                                  getTreatmentPilot(substance.slug, med.name) ??
+                                  fromSubstanceStepFlow({
+                                    substanceSlug: substance.slug,
+                                    substanceName: substance.name,
+                                    flowTitle: `${med.name} mechanism`,
+                                    steps: med.mechanismFlow,
+                                  })
+                                }
+                                variant="compact"
+                              />
+                            </div>
                           </div>
                         )}
 
@@ -838,20 +850,23 @@ export default async function SubstancePage({ params }: PageProps) {
               <SectionHeader eyebrow={substance.naloxoneInfo.eyebrow} title={substance.naloxoneInfo.title} tone="emergency" />
               <p className="mt-4 text-sm text-foreground/90">{substance.naloxoneInfo.subtitle}</p>
 
-              {/* 5-step mechanism flow */}
+              {/* 5-step mechanism flow — universal canvas (pilot registry
+                  first; legacy adapter for any non-pilot step flow) */}
               <div className="mt-6">
                 <p className="text-overline text-muted-foreground">Mechanism Flow</p>
-                <ol className="mt-2 grid gap-2 sm:grid-cols-5">
-                  {substance.naloxoneInfo.mechanismFlow.map((s, i) => (
-                    <li key={i} className="rounded-lg border border-border/50 bg-background/60 p-3">
-                      <div className="flex items-center gap-2">
-                        <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand text-primary-foreground font-mono text-xs font-bold">{s.step}</span>
-                        <p className="text-xs font-semibold text-foreground">{s.title}</p>
-                      </div>
-                      <p className="mt-1.5 text-[0.7rem] text-muted-foreground leading-relaxed">{s.description}</p>
-                    </li>
-                  ))}
-                </ol>
+                <div className="mt-2">
+                  <KYPMechanismCanvas
+                    definition={
+                      getTreatmentPilot(substance.slug, "Naloxone") ??
+                      fromSubstanceStepFlow({
+                        substanceSlug: substance.slug,
+                        substanceName: substance.name,
+                        flowTitle: substance.naloxoneInfo.cardTitle,
+                        steps: substance.naloxoneInfo.mechanismFlow,
+                      })
+                    }
+                  />
+                </div>
               </div>
 
               {/* Naloxone rescue pattern-card */}

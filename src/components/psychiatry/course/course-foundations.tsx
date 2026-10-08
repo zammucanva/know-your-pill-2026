@@ -10,7 +10,9 @@ import { Timeline } from "@/components/kyp/ui/timeline";
 import { Badge } from "@/components/kyp/ui/badge";
 import { CardPrimitive, CardBody } from "@/components/kyp/ui/card-primitive";
 import { LearningPath } from "@/components/kyp/ui/learning-path";
-import { EvidenceBadge, EvidenceLegend, StepChain } from "./course-ui";
+import { EvidenceBadge, EvidenceLegend } from "./course-ui";
+import { KYPMechanismCanvas } from "@/components/mechanism";
+import { fromCourseMechanism } from "@/lib/mechanism";
 import { linkPath } from "@/lib/kyp/image-path";
 import type { PsychiatryCourse } from "./course-types";
 import { cn } from "@/lib/utils";
@@ -303,6 +305,14 @@ export function CourseKnowledgeGraph({ course }: { course: PsychiatryCourse }) {
 
 /** Lesson 2 — mechanism with evidence grading (wide banded, drug rhythm). */
 export function CourseMechanism({ course }: { course: PsychiatryCourse }) {
+  // Legacy adapter: course steps + grade → MechanismDefinition (labels
+  // verbatim; the grade travels as the edge evidence qualifier). The old
+  // numbered StepChain is retired from mechanism duty.
+  const definition = fromCourseMechanism({
+    courseSlug: course.slug,
+    courseTitle: course.title,
+    mechanism: course.mechanism,
+  });
   return (
     <Section id="mechanism" className="bg-muted/20">
       <Container>
@@ -329,7 +339,7 @@ export function CourseMechanism({ course }: { course: PsychiatryCourse }) {
           </CardPrimitive>
         </div>
         <div className="mt-8">
-          <StepChain steps={course.mechanism.steps.map((s) => ({ label: s, detail: undefined }))} />
+          <KYPMechanismCanvas definition={definition} />
         </div>
       </Container>
     </Section>
