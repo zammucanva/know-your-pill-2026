@@ -16,7 +16,6 @@
     "test:content-lock": "bun scripts/content-lock.ts",
     "gen:client-data": "bun scripts/gen-client-data.ts",
     "osv": "bun scripts/osv-audit.ts",
-    "db:prepare": "bun scripts/prepare-database.ts && bunx prisma migrate deploy",
     "typecheck": "tsc --noEmit",
     "test:security": "bun test tests/security.test.ts tests/privacy.test.ts tests/idor.test.ts",
     "db:deploy": "bunx prisma migrate deploy",
