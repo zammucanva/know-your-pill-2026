@@ -108,7 +108,7 @@ export interface FactSources {
 /** First time-range phrase in a half-life string, or null. */
 export function extractHalfLife(text: string): string | null {
   const match = text.match(
-    /~?\s*\d+(?:[.,]\d+)?\s*(?:[–—-]\s*\d+(?:[.,]\d+)?)?\s*(?:hours?|days?|minutes?)/
+    /~?\s*\d+(?:[.,]\d+)?\s*(?:[\u2013\u2014-]\s*\d+(?:[.,]\d+)?)?\s*(?:hours?|days?|minutes?)/
   );
   return match ? match[0].replace(/~/g, "").trim() : null;
 }
@@ -124,7 +124,7 @@ export function extractMetaboliteName(text: string): string | null {
  *  single episode ..." -> "Major Depressive Disorder"). A verbatim prefix,
  *  never reworded. Returns null when no clean head can be isolated. */
 export function diagnosisHead(text: string): string | null {
-  const head = text.split(/[,;(]|\s—\s|\.\s/)[0].trim();
+  const head = text.split(/[,;(]|\s\u2014\s|\.\s/)[0].trim();
   if (head.length < 4 || head.length > 100) return null;
   return head;
 }

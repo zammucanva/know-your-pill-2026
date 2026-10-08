@@ -43,6 +43,22 @@ export interface DistractorRequest {
   accept?: (entity: EntityRef) => boolean;
 }
 
+/**
+ * A generic grouping and one of its members cannot be offered together:
+ * "Central monoaminergic systems" contains "Serotonin", so either could be
+ * defended as the answer. Deliberately small and explicit; extend it only
+ * with groupings the reviewed content itself uses.
+ */
+const UMBRELLA = /\b(monoamin\w*|neurotransmitter systems?)\b/;
+const MONOAMINE_MEMBER = /\b(serotonin|dopamine|norepinephrine|noradrenaline|epinephrine|adrenaline|histamine|5 ?ht\w*|catecholamine\w*)\b/;
+
+function umbrellaClash(a: string, b: string): boolean {
+  return (
+    (UMBRELLA.test(a) && MONOAMINE_MEMBER.test(b)) ||
+    (UMBRELLA.test(b) && MONOAMINE_MEMBER.test(a))
+  );
+}
+
 /** Why a candidate label is too close to a guarded label. */
 export function isTooSimilar(
   label: string,
@@ -55,6 +71,7 @@ export function isTooSimilar(
   const stems = stemTokens(label);
   for (const guard of guardTokens) {
     if (guard.norm === norm) return true;
+    if (umbrellaClash(norm, guard.norm)) return true;
     // one label contained in the other ("Hyponatraemia" vs "Hyponatraemia (SIADH)")
     if (
       norm.length >= 4 &&
