@@ -8,6 +8,7 @@ import { FloatingSearch } from "@/components/kyp/ui/floating-search";
 import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { Reveal } from "@/components/kyp/ui/reveal";
+import { studioHref } from "@/lib/kyp/synapse-studio";
 import {
   drugs,
   drugTaxonomy,
@@ -114,6 +115,13 @@ export default function MedicationLibraryPage() {
                   Practice MCQs
                   <Zap className="h-4 w-4" />
                 </Link>
+                <a
+                  href={studioHref()}
+                  className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
+                >
+                  Synapse Studio
+                  <ArrowRight className="h-4 w-4" />
+                </a>
               </div>
             </Reveal>
 

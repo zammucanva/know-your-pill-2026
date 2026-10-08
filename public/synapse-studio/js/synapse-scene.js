@@ -559,7 +559,7 @@
       const line = (x1, y1, x2, y2) => el("line", { x1, y1, x2, y2, class: "lead" }, g);
 
       lab("Presynaptic terminal (axon bouton)", 175, 62, { cls: "lbl-big" });
-      lab("Axon — action potential arrives", 545, 24);
+      lab("Axon, action potential arrives", 545, 24);
       line(530, 24, 540, 20);
       const v1 = this.vesicles[1];
       const spN = C.SPECIES[v1.species].name.replace(/ \(.*\)$/, "");
@@ -606,7 +606,7 @@
       this.transporters.forEach((t) => {
         if (seen[t.species]) return;
         seen[t.species] = 1;
-        lab(t.label + " — " + t.full.toLowerCase(), t.x, 283, { anchor: t.x < 500 ? "start" : "end", cls: "lbl-mini" });
+        lab(t.label + ", " + t.full.toLowerCase(), t.x, 283, { anchor: t.x < 500 ? "start" : "end", cls: "lbl-mini" });
         line(t.x, PRE_Y + 22, t.x, 276);
       });
       // cleft enzyme labels

@@ -35,7 +35,7 @@
       { id: "hypothalamus", effect: "up", note: "Serotonin influences appetite, sleep and stress responses" },
     ],
     pathways: [{ id: "serotonergic", effect: "up" }],
-    onset: "The synaptic effect starts within hours, but the clinical benefit usually takes about 2–6 weeks (autoreceptor desensitisation and slower adaptations — not drawn).",
+    onset: "The synaptic effect starts within hours, but the clinical benefit usually takes about 2–6 weeks (autoreceptor desensitisation and slower adaptations, not drawn).",
     simplifications: "Acute reuptake blockade is shown. Slower adaptive changes (5-HT1A autoreceptor desensitisation, neuroplasticity) are not animated.",
   };
   family(SSRI, [
@@ -99,7 +99,7 @@
     species: ["serotonin", "norepinephrine"], receptors: ["5-HT1A", "5-HT2A"], action: "reuptake_inhibitor", actsOn: ["SERT", "NET"],
     regions: [{ id: "pfc", effect: "up", note: "More serotonin and norepinephrine signalling" }, { id: "raphe", effect: "mixed", note: "" }, { id: "lc", effect: "mixed", note: "" }, { id: "hypothalamus", effect: "up", note: "" }],
     pathways: [{ id: "serotonergic", effect: "up" }, { id: "noradrenergic", effect: "up" }],
-    onset: "Clinical benefit takes weeks.", simplifications: "Also blocks histamine H1, muscarinic and α1 receptors (causing sedation, dry mouth, dizziness) — those actions are not drawn.",
+    onset: "Clinical benefit takes weeks.", simplifications: "Also blocks histamine H1, muscarinic and α1 receptors (causing sedation, dry mouth, dizziness), those actions are not drawn.",
   });
 
   add({
@@ -143,7 +143,7 @@
   add({
     id: "haloperidol", name: "Haloperidol", aliases: ["Haldol"], class: "First-generation antipsychotic",
     uses: "Schizophrenia, acute psychosis, Tourette syndrome", species: ["dopamine"], receptors: ["D2"], action: "receptor_antagonist", actsOn: ["D2"],
-    regions: [{ id: "nacc", effect: "down", note: "Mesolimbic D2 blockade — linked to the antipsychotic effect" }, { id: "striatum", effect: "down", note: "Nigrostriatal blockade — linked to movement side effects" }, { id: "hypothalamus", effect: "mixed", note: "Pituitary D2 blockade raises prolactin" }],
+    regions: [{ id: "nacc", effect: "down", note: "Mesolimbic D2 blockade, linked to the antipsychotic effect" }, { id: "striatum", effect: "down", note: "Nigrostriatal blockade, linked to movement side effects" }, { id: "hypothalamus", effect: "mixed", note: "Pituitary D2 blockade raises prolactin" }],
     pathways: [{ id: "mesolimbic", effect: "down" }, { id: "nigrostriatal", effect: "down" }],
     onset: "Agitation settles in hours; the antipsychotic effect builds over days to weeks.",
     simplifications: "D2 antagonism is drawn; the tuberoinfundibular (prolactin) pathway is described but not animated.",
@@ -158,7 +158,7 @@
   add({
     id: "olanzapine", name: "Olanzapine", aliases: ["Zyprexa"], class: "Second-generation antipsychotic",
     uses: "Schizophrenia, bipolar disorder", species: ["dopamine", "serotonin", "histamine"], receptors: ["D2", "5-HT2A", "H1"], action: "receptor_antagonist", actsOn: ["D2", "5-HT2A", "H1"],
-    regions: [{ id: "nacc", effect: "down", note: "D2 blockade" }, { id: "pfc", effect: "mixed", note: "5-HT2A blockade modulates cortical signalling" }, { id: "hypothalamus", effect: "down", note: "H1 blockade — sedation and appetite effects" }],
+    regions: [{ id: "nacc", effect: "down", note: "D2 blockade" }, { id: "pfc", effect: "mixed", note: "5-HT2A blockade modulates cortical signalling" }, { id: "hypothalamus", effect: "down", note: "H1 blockade, sedation and appetite effects" }],
     pathways: [{ id: "mesolimbic", effect: "down" }, { id: "histaminergic", effect: "down" }],
     onset: "Sedation is quick; antipsychotic effect builds over days to weeks.", simplifications: "Also blocks muscarinic and other receptors; not drawn.",
   });
@@ -196,7 +196,7 @@
     ],
     pathways: [{ id: "gabaergic", effect: "up" }],
     onset: "Within minutes to an hour; tolerance and dependence can develop with regular use.",
-    simplifications: "It enhances the effect of GABA (it does not open the channel by itself). Different benzodiazepines differ in speed and duration — not drawn.",
+    simplifications: "It enhances the effect of GABA (it does not open the channel by itself). Different benzodiazepines differ in speed and duration, not drawn.",
   };
   family(BZD, [
     { id: "diazepam", name: "Diazepam", aliases: ["Valium"], uses: "Anxiety, seizures, muscle spasm, alcohol withdrawal" },
@@ -224,8 +224,8 @@
       { id: "pag", effect: "up", note: "Activates descending pain control" },
       { id: "thalamus", effect: "down", note: "Less pain signal relayed" },
       { id: "acc", effect: "down", note: "Reduces the emotional unpleasantness of pain" },
-      { id: "nacc", effect: "up", note: "Disinhibits dopamine neurons — reward and risk of misuse" },
-      { id: "medulla", effect: "down", note: "Slows breathing — the dangerous effect in overdose" },
+      { id: "nacc", effect: "up", note: "Disinhibits dopamine neurons, reward and risk of misuse" },
+      { id: "medulla", effect: "down", note: "Slows breathing, the dangerous effect in overdose" },
     ],
     pathways: [{ id: "opioid", effect: "up" }, { id: "mesolimbic", effect: "up" }],
     onset: "Minutes to an hour depending on drug and route.",
@@ -264,7 +264,7 @@
   add({
     id: "nicotine", name: "Nicotine", aliases: [], class: "Nicotinic acetylcholine receptor agonist",
     uses: "Tobacco; nicotine-replacement therapy", species: ["acetylcholine"], receptors: ["nAChR"], action: "receptor_agonist", actsOn: ["nAChR"],
-    regions: [{ id: "vta", effect: "up", note: "Excites dopamine neurons" }, { id: "nacc", effect: "up", note: "Dopamine release — reinforcement" }, { id: "pfc", effect: "up", note: "Attention" }, { id: "hippocampus", effect: "up", note: "" }],
+    regions: [{ id: "vta", effect: "up", note: "Excites dopamine neurons" }, { id: "nacc", effect: "up", note: "Dopamine release, reinforcement" }, { id: "pfc", effect: "up", note: "Attention" }, { id: "hippocampus", effect: "up", note: "" }],
     pathways: [{ id: "mesolimbic", effect: "up" }, { id: "cholinergic", effect: "up" }], onset: "Seconds when inhaled; very short-lived, driving repeated use.",
     simplifications: "Nicotine is not broken down by AChE as acetylcholine is, so receptors stay stimulated longer; desensitisation is not drawn.",
   });
@@ -346,7 +346,7 @@
       bind: (d) => `${d.name} is carried into the terminal by ${targets(d)}, empties the vesicles into the cytoplasm and makes the transporters run backwards.`,
       effect: (d) => `${names(d)} is pushed out through the reversed transporters, far above the amount normal release provides.` },
     receptor_antagonist: { label: "Receptor antagonist",
-      bind: (d) => `${d.name} binds ${targets(d)} without activating it — it occupies the receptor.`,
+      bind: (d) => `${d.name} binds ${targets(d)} without activating it, it occupies the receptor.`,
       effect: (d) => `${names(d)} can no longer activate the blocked receptors, so the postsynaptic response falls.` },
     receptor_agonist: { label: "Receptor agonist",
       bind: (d) => `${d.name} binds and activates ${targets(d)}.`,
@@ -355,9 +355,9 @@
         : `The receptors are activated by ${d.name} even without ${names(d)}, so the postsynaptic response rises.` },
     partial_agonist: { label: "Partial agonist",
       bind: (d) => `${d.name} binds ${targets(d)} and activates it only partly while occupying the site.`,
-      effect: (d) => `Signalling settles at a moderate level — lower than a full agonist, higher than a blocker — which stabilises activity.` },
+      effect: (d) => `Signalling settles at a moderate level, lower than a full agonist, higher than a blocker, which stabilises activity.` },
     pam: { label: "Positive allosteric modulator",
-      bind: (d) => `${d.name} binds a separate allosteric site on the ${targets(d)} — not where ${names(d)} binds.`,
+      bind: (d) => `${d.name} binds a separate allosteric site on the ${targets(d)}, not where ${names(d)} binds.`,
       effect: (d) => `When ${names(d)} is present the channel opens more strongly and more Cl⁻ enters, so inhibition is enhanced. On its own the drug does not open the channel.` },
     channel_blocker: { label: "Channel blocker",
       bind: (d) => `${d.name} lodges in the open channel pore of ${targets(d)}.`,
