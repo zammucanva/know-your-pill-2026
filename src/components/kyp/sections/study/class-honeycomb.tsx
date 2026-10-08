@@ -183,7 +183,10 @@ export function ClassHoneycomb({ classes }: { classes: HoneycombClass[] }) {
   const onMove = (e: React.PointerEvent<HTMLDivElement>) => {
     if (e.pointerType === "touch") return;
     const rect = e.currentTarget.getBoundingClientRect();
-    setPointer({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+    const next = { x: e.clientX - rect.left, y: e.clientY - rect.top };
+    setPointer(next);
+    // First contact snaps the lens to the pointer; later moves are eased.
+    setLensPos((cur) => cur ?? next);
   };
 
   const shown = hover ?? focusIdx ?? selected;
@@ -197,8 +200,11 @@ export function ClassHoneycomb({ classes }: { classes: HoneycombClass[] }) {
           ref={ref}
           onPointerMove={onMove}
           onPointerLeave={() => {
+            // Reset at once: lens back to rest, no hover, no lingering focus.
             setPointer(null);
+            setLensPos(null);
             setHover(null);
+            setFocusIdx(null);
           }}
           style={{ height }}
           className="relative overflow-hidden rounded-3xl border border-border/50 bg-background/60"
@@ -236,7 +242,11 @@ export function ClassHoneycomb({ classes }: { classes: HoneycombClass[] }) {
                   aria-label={`${c.fullName}: ${c.courses} ${c.courses === 1 ? "course" : "courses"}, ${c.questions} questions`}
                   onClick={() => setSelected(active ? null : i)}
                   onPointerEnter={(e) => e.pointerType !== "touch" && setHover(i)}
-                  onFocus={() => setFocusIdx(i)}
+                  onFocus={(e) => {
+                    // Only keyboard focus moves the lens; a mouse click
+                    // leaves focus on the button and must not pin it.
+                    if (e.currentTarget.matches(":focus-visible")) setFocusIdx(i);
+                  }}
                   onBlur={() => setFocusIdx((f) => (f === i ? null : f))}
                   style={{
                     width: size,
