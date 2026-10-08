@@ -1,32 +1,75 @@
 /**
  * KYP test harness — starts ONE standalone server (production build)
- * against an ISOLATED test database for the entire test run.
+ * against an ISOLATED, DISPOSABLE Postgres database for the entire run.
  *
- * The production database (db/custom.db) is NEVER touched by tests.
+ * Production (Supabase) is NEVER touched by tests. Bun auto-loads
+ * .env.local, which holds the production DATABASE_URL / DIRECT_URL, so the
+ * harness (a) overrides BOTH variables everywhere and (b) refuses to run
+ * unless the target is a local database whose name contains "test".
  *
  * Environment:
- *   - DATABASE_URL points at db/test.db (recreated fresh per run)
+ *   - KYP_TEST_DATABASE_URL selects the test database; the default is the
+ *     CI Postgres service (postgresql://postgres:postgres@127.0.0.1:5432/kyp_test)
  *   - SESSION_SECRET is a fixed TEST-ONLY secret (never a production value)
  *   - NODE_ENV=production so Secure-cookie behavior is exercised
  *   - PORT 3101 (test-only port)
  */
 
+import { setDefaultTimeout } from "bun:test";
 import { spawn, execSync } from "child_process";
-import { createWriteStream, existsSync, rmSync } from "fs";
-import { resolve } from "path";
+import { createWriteStream, existsSync } from "fs";
+import { tmpdir } from "os";
+import { join, resolve } from "path";
 import type { PrismaClient } from "@prisma/client";
+
+// The first test in a file that calls ensureServer() pays for the database
+// reset (schema drop + `prisma migrate deploy`) and the server start, which
+// exceeds Bun's 5s default. Applies to every file that imports this helper.
+setDefaultTimeout(60_000);
 
 export const TEST_PORT = 3101;
 export const BASE_URL = `http://localhost:${TEST_PORT}`;
 /** Fixed test-only session secret (32+ chars). NEVER a production value. */
 export const TEST_SESSION_SECRET =
   "kyp-test-only-session-secret-0123456789abcdef0123456789abcdef";
-export const TEST_DB_PATH = resolve(process.cwd(), "db/test.db");
-export const TEST_DB_URL = `file:${TEST_DB_PATH}`;
-export const SERVER_LOG_PATH = "/tmp/kyp-test-server.log";
+export const SERVER_LOG_PATH = join(tmpdir(), "kyp-test-server.log");
 
-// Set DATABASE_URL BEFORE any PrismaClient is instantiated by tests.
+const DEFAULT_TEST_DB_URL = "postgresql://postgres:postgres@127.0.0.1:5432/kyp_test";
+
+/** Throws unless `url` is a local database named like a test database.
+ * The test run DROPS the public schema, so this must never be satisfiable
+ * by a remote or production URL. */
+export function assertDisposableTestDatabase(url: string): void {
+  let parsed: URL;
+  try {
+    parsed = new URL(url);
+  } catch {
+    throw new Error("KYP_TEST_DATABASE_URL is not a valid URL");
+  }
+  const localHosts = new Set(["localhost", "127.0.0.1", "[::1]", "::1"]);
+  const dbName = decodeURIComponent(parsed.pathname.replace(/^\//, ""));
+  if (!/^postgres(ql)?:$/.test(parsed.protocol)) {
+    throw new Error(`Refusing to run tests: test database must be Postgres, got ${parsed.protocol}`);
+  }
+  if (!localHosts.has(parsed.hostname) || !/test/i.test(dbName)) {
+    throw new Error(
+      `Refusing to run tests: the test database must be local and its name must contain "test" ` +
+        `(got host "${parsed.hostname}", database "${dbName}"). Tests DROP the public schema.`
+    );
+  }
+}
+
+export const TEST_DB_URL = process.env.KYP_TEST_DATABASE_URL ?? DEFAULT_TEST_DB_URL;
+assertDisposableTestDatabase(TEST_DB_URL);
+
+// Override BOTH Prisma connection variables BEFORE any PrismaClient is
+// instantiated: prisma/schema.prisma reads DATABASE_URL and DIRECT_URL, and
+// a stale DIRECT_URL from .env.local would otherwise point migrations at
+// production.
 process.env.DATABASE_URL = TEST_DB_URL;
+process.env.DIRECT_URL = TEST_DB_URL;
+
+const DB_ENV = { DATABASE_URL: TEST_DB_URL, DIRECT_URL: TEST_DB_URL };
 
 let serverProc: ReturnType<typeof spawn> | null = null;
 let serverReady = false;
@@ -34,15 +77,20 @@ let serverReady = false;
 /** Recreate the test DB from the VERSIONED Prisma migrations (fresh, zero
  * rows). Using `migrate deploy` — never `db push` — means every test run
  * also proves the production migration path works end-to-end. */
-function resetTestDatabase(): void {
-  if (existsSync(TEST_DB_PATH)) {
-    rmSync(TEST_DB_PATH);
-    rmSync(TEST_DB_PATH + "-journal", { force: true });
-    rmSync(TEST_DB_PATH + "-wal", { force: true });
-    rmSync(TEST_DB_PATH + "-shm", { force: true });
+async function resetTestDatabase(): Promise<void> {
+  // Drop in-process (one fast connection) instead of spawning a second
+  // `bunx prisma` process; only `migrate deploy` needs the CLI.
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const { PrismaClient } = require("@prisma/client") as typeof import("@prisma/client");
+  const admin = new PrismaClient({ datasources: { db: { url: TEST_DB_URL } } });
+  try {
+    await admin.$executeRawUnsafe("DROP SCHEMA IF EXISTS public CASCADE");
+    await admin.$executeRawUnsafe("CREATE SCHEMA public");
+  } finally {
+    await admin.$disconnect();
   }
   execSync(`bunx prisma migrate deploy`, {
-    env: { ...process.env, DATABASE_URL: TEST_DB_URL },
+    env: { ...process.env, ...DB_ENV },
     stdio: "pipe",
   });
 }
@@ -64,11 +112,11 @@ export async function ensureServer(): Promise<string> {
     // no stale process — fine
   }
   await Bun.sleep(500);
-  resetTestDatabase();
+  await resetTestDatabase();
   serverProc = spawn("node", [resolve(process.cwd(), ".next/standalone/server.js")], {
     env: {
       ...process.env,
-      DATABASE_URL: TEST_DB_URL,
+      ...DB_ENV,
       SESSION_SECRET: TEST_SESSION_SECRET,
       PORT: String(TEST_PORT),
       HOSTNAME: "127.0.0.1",
