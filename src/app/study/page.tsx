@@ -16,6 +16,7 @@ import {
 import { Navbar } from "@/components/kyp/sections/navbar";
 import { Footer } from "@/components/kyp/sections/footer";
 import { FloatingSearch } from "@/components/kyp/ui/floating-search";
+import { Container } from "@/components/kyp/ui/container";
 import { ModuleCard } from "@/components/kyp/dashboard/modules-hero";
 import { ContinueStudying } from "@/components/kyp/sections/study/continue-studying";
 import { StudyNextPanel } from "@/components/kyp/sections/study/study-next-panel";
@@ -198,7 +199,7 @@ export default function StudyPage() {
       <FloatingSearch variant="floating" />
 
       <main className="flex-1 pt-16">
-        <div className="mx-auto w-full max-w-[1200px] px-4 py-8 sm:px-6 lg:px-8">
+        <Container className="py-8">
           <div className="flex flex-col gap-5">
             {/* ===== HEADER ===== */}
             <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
@@ -445,7 +446,7 @@ export default function StudyPage() {
               </details>
             </ModuleCard>
           </div>
-        </div>
+        </Container>
       </main>
       <Footer />
     </div>

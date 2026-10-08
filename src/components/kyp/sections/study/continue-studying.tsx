@@ -6,6 +6,7 @@ import {
   ArrowRight,
   BookOpen,
   CheckCircle2,
+  ChevronDown,
   RotateCcw,
   X,
 } from "lucide-react";
@@ -128,10 +129,32 @@ export function ContinueStudying() {
       id="continue"
       className={hasOthers ? undefined : "border-0 bg-transparent shadow-none"}
     >
-      {hasOthers && (
-        <ModuleHeader icon={BookOpen} title="Recent courses" aside="Where you left off" />
-      )}
-      <div className={hasOthers ? "p-5" : "px-1"}>
+      {/* With earlier courses this folds away behind a header; with only
+          one course it is just the footer line (the summary is hidden and
+          the details stay open). */}
+      <details className="group/recent" open={hasOthers ? undefined : true}>
+        <summary
+          className={
+            hasOthers
+              ? "flex min-h-14 cursor-pointer list-none items-center justify-between gap-3 px-5 py-3.5 kyp-focus-ring"
+              : "hidden"
+          }
+        >
+          <span className="flex items-center gap-2 font-serif text-lg font-semibold text-foreground">
+            <BookOpen className="h-4 w-4 text-brand" aria-hidden />
+            Recent courses
+          </span>
+          <span className="flex items-center gap-3 text-xs text-muted-foreground">
+            {recent.length - 1} earlier {recent.length - 1 === 1 ? "course" : "courses"}
+            <span className="grid h-7 w-7 place-items-center rounded-md border border-border/60 bg-background/60">
+              <ChevronDown
+                className="h-4 w-4 transition-transform group-open/recent:rotate-180"
+                aria-hidden
+              />
+            </span>
+          </span>
+        </summary>
+      <div className={hasOthers ? "border-t border-border/50 p-5" : "px-1"}>
         <div className="space-y-px">
           {/* The most recent course is the resume card above; this card
               lists the courses before it and owns the reset control. */}
@@ -224,6 +247,7 @@ export function ContinueStudying() {
             )}
           </div>
       </div>
+      </details>
     </ModuleCard>
   );
 }
