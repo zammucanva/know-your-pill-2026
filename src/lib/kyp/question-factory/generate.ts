@@ -47,6 +47,9 @@ export interface GenerateInput {
   positionCounts: number[];
   /** ISO timestamp provider (injected so tests are deterministic). */
   now: () => string;
+  /** Rebuild with the correct answer in this exact position. Used only by
+   *  reproduceQuestion; normal generation balances positions itself. */
+  fixedPosition?: number;
 }
 
 export type GenerateResult =
@@ -85,7 +88,10 @@ export function generateQuestion(input: GenerateInput): GenerateResult {
 
   // seeded wording and balanced option order
   const stem = candidate.stems[rng.int(candidate.stems.length)];
-  const correctPosition = leastUsedPosition(positionCounts, (n) => rng.int(n));
+  // The rng is consumed exactly once here whether or not the position is
+  // fixed, so a reproduced question continues the same random stream.
+  const balanced = leastUsedPosition(positionCounts, (n) => rng.int(n));
+  const correctPosition = input.fixedPosition ?? balanced;
   const shuffledWrong = rng.shuffle([...wrong]);
   const ordered = [...shuffledWrong];
   ordered.splice(correctPosition, 0, correct[0]);
@@ -151,4 +157,34 @@ export function contextFor(
     allDrugs: [...store.drugs.values()],
     includeGlobal,
   };
+}
+
+/**
+ * Rebuild a generated question from its own provenance: find its concept
+ * by fingerprint and template, then run the same template with the same
+ * seed and the recorded answer position. Returns null when the source data
+ * no longer supports it (for example the content changed since).
+ */
+export function reproduceQuestion(
+  store: FactStore,
+  q: GeneratedQuestion,
+  templates: QuestionTemplate[],
+  now: () => string
+): GeneratedQuestion | null {
+  const template = templates.find((t) => t.id === q.provenance.templateId);
+  if (!template) return null;
+  const ctx = contextFor(store, [...store.drugs.values()], true);
+  const slot = template.enumerate(ctx).find((s) => semanticFingerprint(s.concept) === q.fingerprint);
+  if (!slot) return null;
+  const built = generateQuestion({
+    template,
+    slot,
+    ctx,
+    jobSeed: q.provenance.batchSeed,
+    batchId: q.provenance.batchId,
+    positionCounts: [0, 0, 0, 0],
+    now,
+    fixedPosition: q.correctIndex,
+  });
+  return built.ok ? built.question : null;
 }
