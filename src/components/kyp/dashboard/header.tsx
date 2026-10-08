@@ -136,7 +136,7 @@ export function DashboardHeader({
           aria-label={`Know Your Pill, go to ${defaultLandingPage === "dashboard" ? "your dashboard" : defaultLandingPage}`}
         >
           <img
-            src={imgPath("/logo-navy-64.png")}
+            src={imgPath("/logo-navy-128.png")}
             alt=""
             width={28}
             height={28}
