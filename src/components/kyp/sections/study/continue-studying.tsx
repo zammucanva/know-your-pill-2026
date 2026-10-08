@@ -10,9 +10,7 @@ import {
   X,
 } from "lucide-react";
 
-import { Container } from "@/components/kyp/ui/container";
-import { Section } from "@/components/kyp/ui/section";
-import { Reveal } from "@/components/kyp/ui/reveal";
+import { ModuleCard, ModuleHeader } from "@/components/kyp/dashboard/modules-hero";
 import { FIRST_COURSE_SLUG } from "@/lib/kyp/study/course-stats-generated";
 import { useLocalProgress } from "@/lib/kyp/progress/use-local-progress";
 import {
@@ -81,6 +79,7 @@ export function ContinueStudying() {
   const firstPercent = first ? coursePercentComplete(first, firstTotal) : 0;
   const firstIsComplete = Boolean(first?.completedAt);
   const firstSectionLabel = first?.currentSectionLabel ?? null;
+  const hasOthers = recent.length > 1;
   const courseCount = data ? Object.keys(data.courses).length : 0;
 
   const handleReset = () => {
@@ -94,126 +93,55 @@ export function ContinueStudying() {
 
   /* ── GENUINE START STATE ─────────────────────────────────────── */
   if (!hasProgress) {
+    // The hub's resume panel already offers the start state; this card only
+    // adds the "progress cleared" confirmation.
+    if (!resetDone) return null;
     const start = { slug: FIRST_COURSE_SLUG };
     return (
-      <Section spacing="relaxed" className="border-t border-border/30 bg-muted/10">
-        <Container>
-          <Reveal>
-            <div className="flex flex-wrap items-center justify-between gap-6">
-              <div className="max-w-xl">
-                <p className="text-overline text-muted-foreground mb-2">
-                  {resetDone ? "Progress cleared" : "Start learning"}
-                </p>
-                <h2
-                  className="font-serif font-semibold tracking-[-0.02em] text-foreground"
-                  style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.25rem)" }}
-                >
-                  {resetDone ? "Fresh start" : "You haven&apos;t started a course yet"}
-                </h2>
-                <p className="mt-3 text-body-sm text-muted-foreground leading-relaxed">
-                  {resetDone
-                    ? "Your local study progress has been cleared. Begin again with any course below."
-                    : "Every course is a complete lesson plan: objectives, checkpoints, active recall. Begin with course 01 and your progress will be remembered on this device."}
-                </p>
-              </div>
-              <Link
-                href={`/drugs/${start.slug}`}
-                className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
-              >
-                {resetDone ? "Start again" : "Start learning"}
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
-          </Reveal>
-        </Container>
-      </Section>
+      <ModuleCard>
+        <ModuleHeader
+          icon={BookOpen}
+          title={resetDone ? "Fresh start" : "Start learning"}
+          aside={resetDone ? "Progress cleared" : undefined}
+        />
+        <div className="flex flex-wrap items-center justify-between gap-6 p-5">
+          <p className="max-w-xl text-sm leading-relaxed text-muted-foreground">
+            {resetDone
+              ? "Your local study progress has been cleared. Begin again with any course below."
+              : "Every course is a complete lesson plan: objectives, checkpoints, active recall. Begin with course 01 and your progress will be remembered on this device."}
+          </p>
+          <Link
+            href={`/drugs/${start.slug}`}
+            className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
+          >
+            {resetDone ? "Start again" : "Start learning"}
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+      </ModuleCard>
     );
   }
 
   /* ── GENUINE CONTINUE STATE ──────────────────────────────────── */
   return (
-    <Section
+    <ModuleCard
       id="continue"
-      spacing="relaxed"
-      className="border-t border-border/30 bg-muted/10"
+      className={hasOthers ? undefined : "border-0 bg-transparent shadow-none"}
     >
-      <Container>
-        <Reveal>
-          <p className="text-overline text-muted-foreground mb-3">
-            Where you left off
-          </p>
-          <h2
-            className="mb-10 font-serif font-semibold tracking-[-0.02em] text-foreground"
-            style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)" }}
-          >
-            Continue studying
-          </h2>
-        </Reveal>
-
+      {hasOthers && (
+        <ModuleHeader icon={BookOpen} title="Recent courses" aside="Where you left off" />
+      )}
+      <div className={hasOthers ? "p-5" : "px-1"}>
         <div className="space-y-px">
-          {/* Most recent course — the hero continue row */}
-          {first && (
-            <Reveal>
-              <Link
-                href={continueHref(first)}
-                className="group flex items-center gap-6 border-b border-border/15 py-5 transition-all last:border-0 hover:pl-2"
-              >
-                <span className="hidden w-6 shrink-0 font-mono text-xs text-muted-foreground/30 sm:block">
-                  01
-                </span>
-                <div className="min-w-0 flex-1">
-                  <h3 className="font-serif text-lg font-semibold text-foreground">
-                    {first.title}
-                    {firstIsComplete && (
-                      <span className="ml-2 inline-flex items-center gap-1 text-xs font-medium text-success">
-                        <CheckCircle2 className="h-3.5 w-3.5" aria-hidden />
-                        Completed
-                      </span>
-                    )}
-                  </h3>
-                  <p className="mt-0.5 text-xs text-muted-foreground/60">
-                    {firstIsComplete
-                      ? `All ${firstTotal} sections complete · studied ${timeAgo(first.lastVisitedAt)}`
-                      : firstSectionLabel
-                        ? `Continue: ${firstSectionLabel} · studied ${timeAgo(first.lastVisitedAt)}`
-                        : `studied ${timeAgo(first.lastVisitedAt)}`}
-                  </p>
-                  {/* Real progress bar — reflects genuinely read sections */}
-                  <div className="mt-3 flex items-center gap-3">
-                    <div
-                      className="h-1 max-w-xs flex-1 overflow-hidden rounded-full bg-muted"
-                      role="progressbar"
-                      aria-valuenow={firstPercent}
-                      aria-valuemin={0}
-                      aria-valuemax={100}
-                      aria-label={`${first.title} course completion`}
-                    >
-                      <div
-                        className="h-full rounded-full bg-brand transition-[width] duration-300 motion-reduce:transition-none"
-                        style={{ width: `${firstPercent}%` }}
-                      />
-                    </div>
-                    <span className="text-xs font-medium tabular-nums text-foreground/70">
-                      {firstPercent}% complete
-                    </span>
-                  </div>
-                </div>
-                <div className="hidden shrink-0 items-center gap-1.5 text-xs text-muted-foreground/60 sm:flex">
-                  {first.quiz.bestScore !== null && (
-                    <span>Quiz best {first.quiz.bestScore}%</span>
-                  )}
-                </div>
-                <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground/20 transition-all group-hover:text-brand group-hover:translate-x-1" />
-              </Link>
-            </Reveal>
-          )}
+          {/* The most recent course is the resume card above; this card
+              lists the courses before it and owns the reset control. */}
 
           {/* Older courses — compact rows */}
           {recent.slice(1).map((course, i) => {
             const total = studyCourseTotal(course.slug);
             const isComplete = Boolean(course.completedAt);
             return (
-              <Reveal key={course.slug} delay={(i + 1) * 0.05}>
+              <React.Fragment key={course.slug}>
                 <Link
                   href={continueHref(course)}
                   className="group flex items-center gap-6 border-b border-border/15 py-4 transition-all last:border-0 hover:pl-2"
@@ -240,14 +168,19 @@ export function ContinueStudying() {
                   </div>
                   <ArrowRight className="h-3.5 w-3.5 shrink-0 text-muted-foreground/20 transition-all group-hover:text-brand group-hover:translate-x-1" />
                 </Link>
-              </Reveal>
+              </React.Fragment>
             );
           })}
         </div>
 
         {/* Local-storage honesty + deliberate two-step reset */}
-        <Reveal delay={0.1}>
-          <div className="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-border/30 pt-6">
+          <div
+            className={
+              hasOthers
+                ? "mt-6 flex flex-wrap items-center justify-between gap-4 border-t border-border/30 pt-6"
+                : "flex flex-wrap items-center justify-between gap-4"
+            }
+          >
             <p className="flex items-center gap-2 text-xs text-muted-foreground/60">
               <BookOpen className="h-3.5 w-3.5" aria-hidden />
               {courseCount} {courseCount === 1 ? "course" : "courses"} remembered on
@@ -290,8 +223,7 @@ export function ContinueStudying() {
               </button>
             )}
           </div>
-        </Reveal>
-      </Container>
-    </Section>
+      </div>
+    </ModuleCard>
   );
 }
