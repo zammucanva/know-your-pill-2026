@@ -329,6 +329,7 @@
     if (C.RECEPTORS[key]) return C.RECEPTORS[key].label;
     if (C.ENZYMES[key]) return C.ENZYMES[key].label;
     for (const s in C.SPECIES) if (C.SPECIES[s].clear.label === key) return C.SPECIES[s].clear.full;
+    if (global.KYP_CORE.TARGETS[key]) return global.KYP_CORE.TARGETS[key].full;
     if (key === "Nav") return "voltage-gated Na⁺ channels";
     if (key === "VGCC") return "voltage-gated Ca²⁺ channels (α2δ subunit)";
     return key;
@@ -376,6 +377,23 @@
       bind: (d) => `${d.name} binds the α2δ subunit of voltage-gated Ca²⁺ channels.`,
       effect: (d) => `Less Ca²⁺ enters the terminal, so fewer vesicles fuse and less ${names(d)} is released.` },
   };
+
+  ACTIONS.vesicle_protein_ligand = { label: "Synaptic-vesicle protein ligand",
+      bind: (d) => `${d.name} binds ${targets(d)} on the membrane of synaptic vesicles inside the terminal.`,
+      effect: (d) => `Vesicles release their contents less readily, so less ${names(d)} is released with each action potential. Overactive circuits are calmed.` };
+  ACTIONS.vesicle_loading_inhibitor = { label: "Vesicle-loading inhibitor",
+      bind: (d) => `${d.name} binds and blocks ${targets(d)}, the pump that loads transmitter into vesicles.`,
+      effect: (d) => `Vesicles fill poorly, so each release carries much less ${names(d)} and signalling falls.` };
+  ACTIONS.k_channel_modulator = { label: "Potassium-channel modulator",
+      bind: (d) => d.kdir === "block"
+        ? `${d.name} blocks ${targets(d)} on the terminal membrane.`
+        : `${d.name} opens ${targets(d)} on the neuron's membrane.`,
+      effect: (d) => d.kdir === "block"
+        ? `K⁺ can no longer leave as quickly, so each action potential lasts longer, more Ca²⁺ enters and more ${names(d)} is released.`
+        : `K⁺ leaves more easily, which hyperpolarises the neuron, so it fires less and releases less ${names(d)}.` };
+  ACTIONS.intracellular_modulator = { label: "Intracellular signalling modulator",
+      bind: (d) => `${d.name} enters the postsynaptic neuron and inhibits ${targets(d)}, enzymes inside the second-messenger cascade.`,
+      effect: (d) => `${names(d)} still activates the receptors, but the signal passed down the cascade is weaker, which steadies over-active signalling.` };
 
   function agonistInhibitory(d) {
     return d.receptors.some((r) => global.KYP_CORE.RECEPTORS[r] && global.KYP_CORE.RECEPTORS[r].inhibitory);

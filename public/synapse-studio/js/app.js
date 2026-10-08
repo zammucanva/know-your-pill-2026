@@ -28,7 +28,7 @@
     need(Array.isArray(o.pathways) && o.pathways.every((p) => C.PATHWAYS[p.id] && ["up", "down", "mixed"].includes(p.effect)), "pathways: [{id, effect}] with ids from: " + Object.keys(C.PATHWAYS).join(", "));
     if (!err.length) {
       // actsOn must resolve to something the scene can draw
-      const known = new Set(Object.keys(C.RECEPTORS).concat(Object.keys(C.ENZYMES), ["Nav", "VGCC"], Object.values(C.SPECIES).map((s) => s.clear.label)));
+      const known = new Set(Object.keys(C.RECEPTORS).concat(Object.keys(C.ENZYMES), Object.keys(C.TARGETS), ["Nav", "VGCC"], Object.values(C.SPECIES).map((s) => s.clear.label)));
       o.actsOn.forEach((a) => { if (!known.has(a)) err.push('actsOn: unknown target "' + a + '".'); });
     }
     return err;
