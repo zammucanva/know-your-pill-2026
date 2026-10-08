@@ -17,7 +17,7 @@ import {
 import { cn } from "@/lib/utils";
 import { IS_STATIC_EXPORT } from "@/lib/kyp/static-export";
 import { signInWithPopup } from "firebase/auth";
-import { auth, googleProvider } from "@/lib/firebase-client";
+import { getFirebaseAuth, createGoogleProvider } from "@/lib/firebase-client";
 
 type Step = "welcome" | "signup" | "login" | "verify" | "role" | "done";
 type Role = "patient" | "student" | "medical_resident" | "medical_student" | "psychiatrist";
@@ -133,7 +133,7 @@ export default function WelcomePage() {
     setError("");
     setLoading(true);
     try {
-      const result = await signInWithPopup(auth, googleProvider);
+      const result = await signInWithPopup(getFirebaseAuth(), createGoogleProvider());
       const idToken = await result.user.getIdToken();
       const res = await fetch("/api/auth/google", {
         method: "POST",
