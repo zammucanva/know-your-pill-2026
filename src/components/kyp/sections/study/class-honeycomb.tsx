@@ -49,6 +49,16 @@ const FAMILY_STYLE: Record<Family, string> = {
   other: "bg-slate-500/15 text-slate-700 ring-slate-500/40 dark:text-slate-300",
 };
 
+/** RGB triplets for each family's glow (matches the bubble tint). */
+const FAMILY_GLOW: Record<Family, string> = {
+  antidepressant: "20, 184, 166",
+  antipsychotic: "139, 92, 246",
+  mood: "245, 158, 11",
+  calming: "14, 165, 233",
+  stimulant: "249, 115, 22",
+  other: "100, 116, 139",
+};
+
 const FAMILY_LABEL: Record<Family, string> = {
   antidepressant: "Antidepressants",
   antipsychotic: "Antipsychotics",
@@ -84,6 +94,8 @@ export function ClassHoneycomb({ classes }: { classes: HoneycombClass[] }) {
   const ref = React.useRef<HTMLDivElement>(null);
   const [width, setWidth] = React.useState(0);
   const [pointer, setPointer] = React.useState<{ x: number; y: number } | null>(null);
+  // The lens eases toward the pointer so the motion feels fluid, not jumpy.
+  const [lensPos, setLensPos] = React.useState<{ x: number; y: number } | null>(null);
   const [focusIdx, setFocusIdx] = React.useState<number | null>(null);
   const [hover, setHover] = React.useState<number | null>(null);
   const [selected, setSelected] = React.useState<number | null>(null);
@@ -105,6 +117,29 @@ export function ClassHoneycomb({ classes }: { classes: HoneycombClass[] }) {
     };
   }, []);
 
+  React.useEffect(() => {
+    if (reduced) {
+      setLensPos(pointer);
+      return;
+    }
+    let raf = 0;
+    const tick = () => {
+      let again = false;
+      setLensPos((cur) => {
+        if (!pointer) return null;
+        if (!cur) return pointer;
+        const dx = pointer.x - cur.x;
+        const dy = pointer.y - cur.y;
+        if (Math.hypot(dx, dy) < 0.5) return pointer;
+        again = true;
+        return { x: cur.x + dx * 0.22, y: cur.y + dy * 0.22 };
+      });
+      if (again || pointer) raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [pointer, reduced]);
+
   const step = width > 0 ? width / (COLS + 0.5) : 0;
   const rowH = step * 0.866;
   const rows = Math.ceil(classes.length / COLS);
@@ -125,7 +160,7 @@ export function ClassHoneycomb({ classes }: { classes: HoneycombClass[] }) {
 
   // Where the "lens" sits: the pointer, else the focused bubble, else the middle.
   const lens =
-    pointer ??
+    lensPos ??
     (focusIdx !== null && positions[focusIdx]
       ? positions[focusIdx]
       : { x: width / 2, y: height / 2 });
@@ -164,12 +199,29 @@ export function ClassHoneycomb({ classes }: { classes: HoneycombClass[] }) {
           role="group"
           aria-label="Medication classes"
         >
+          {pointer && !reduced && (
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0"
+              style={{
+                background: `radial-gradient(circle ${step * 2.6}px at ${lens.x}px ${lens.y}px, color-mix(in oklch, var(--brand) 18%, transparent), transparent 70%)`,
+              }}
+            />
+          )}
           {step > 0 &&
             classes.map((c, i) => {
               const s = scaleFor(i);
               const size = step * 0.86;
               const fam = familyOf(c);
               const active = selected === i;
+              const near = reduced ? 0 : Math.max(0, Math.min(1, (s - 0.5) / 0.7));
+              const hot = hover === i || focusIdx === i;
+              const glow = FAMILY_GLOW[fam];
+              const boost = hot ? 1 : near * near;
+              const shadow =
+                boost > 0.04 || active
+                  ? `0 0 ${10 + 26 * boost}px ${1 + 5 * boost}px rgba(${glow}, ${0.12 + 0.5 * boost})`
+                  : "none";
               return (
                 <button
                   key={c.label}
@@ -186,11 +238,12 @@ export function ClassHoneycomb({ classes }: { classes: HoneycombClass[] }) {
                     left: positions[i].x,
                     top: positions[i].y,
                     transform: `translate(-50%, -50%) scale(${s})`,
-                    zIndex: Math.round(s * 100),
+                    zIndex: Math.round(s * 100) + (hot ? 50 : 0),
+                    boxShadow: shadow,
                   }}
                   className={cn(
                     "absolute flex items-center justify-center rounded-full text-center font-semibold leading-none ring-1 kyp-focus-ring",
-                    "transition-[transform,box-shadow] duration-150 ease-out motion-reduce:transition-none",
+                    "transition-[transform,box-shadow] duration-100 ease-out motion-reduce:transition-none active:brightness-95",
                     FAMILY_STYLE[fam],
                     active && "ring-2 ring-offset-2 ring-offset-background shadow-lg"
                   )}
