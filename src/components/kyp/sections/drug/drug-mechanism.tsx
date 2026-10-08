@@ -7,6 +7,7 @@ import { CardPrimitive, CardBody } from "@/components/kyp/ui/card-primitive";
 import { KYPMechanismCanvas } from "@/components/mechanism";
 import { getPilotMechanism, fromDrugMechanismFlow } from "@/lib/mechanism";
 import type { Drug } from "@/lib/kyp/data";
+import { hasStudioAnimation, studioHref } from "@/lib/kyp/synapse-studio";
 
 /**
  * DrugMechanismOfAction — the science of how the drug works.
@@ -71,6 +72,26 @@ export function DrugMechanismOfAction({ drug }: DrugMechanismOfActionProps) {
           </p>
           <KYPMechanismCanvas definition={definition} />
         </div>
+
+        {/* Synapse Studio: labelled 2D brain and synapse animation (only for medications the studio covers) */}
+        {hasStudioAnimation(drug.slug) && (
+          <div className="mt-10">
+            <Callout variant="info" title="Watch it in the brain">
+              <p>
+                See where {drug.genericName} acts in the brain and what happens at the synapse, as a
+                labelled 2D animation you can pause, scrub and view full screen.
+              </p>
+              <p className="mt-3">
+                <a
+                  href={studioHref(drug.slug)}
+                  className="inline-flex min-h-[44px] items-center rounded-md bg-brand px-4 text-body-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+                >
+                  Open Synapse Studio for {drug.genericName}
+                </a>
+              </p>
+            </Callout>
+          </div>
+        )}
 
         {/* Step-by-step mechanism (text version — kept for depth) */}
         <div className="mt-12">
