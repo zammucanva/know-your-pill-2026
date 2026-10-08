@@ -785,3 +785,91 @@ summary,
     text-decoration: none;
   }
 }
+
+/* ════════════════════════════════════════════════════════════════
+   Dashboard settings — visual effects of kyp:settings:v1
+   (settings drawer + SettingsEffects). All rules are scoped either
+   to <html> attribute flags or to the .dash-shell surface, so no
+   other page is affected.
+   ════════════════════════════════════════════════════════════════ */
+
+/* Text size (root font scale; rem-based UI scales with it) */
+html[data-font-scale="sm"] { font-size: 93.75%; }
+html[data-font-scale="lg"] { font-size: 106.25%; }
+
+/* Reduce motion: clamp animations and transitions */
+html[data-reduced-motion="true"] .dash-shell *,
+html[data-reduced-motion="true"] .dash-shell *::before,
+html[data-reduced-motion="true"] .dash-shell *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* High contrast: stronger borders and text inside the dashboard */
+html[data-high-contrast="true"] .dash-shell {
+  --border: color-mix(in oklch, currentColor 45%, transparent);
+}
+html[data-high-contrast="true"] .dash-shell .dash-card,
+html[data-high-contrast="true"] .dash-shell .dash-card-quiet {
+  border-width: 1.5px;
+  background: var(--card);
+}
+html[data-high-contrast="true"] .dash-shell .text-muted-foreground {
+  color: color-mix(in oklch, var(--foreground) 78%, var(--background));
+}
+
+/* Enhanced focus indicators: thicker keyboard focus rings */
+html[data-focus-indicators="true"] .dash-shell :focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 2px;
+  border-radius: 0.5rem;
+}
+
+/* Accent variants (dashboard shell scope only) */
+.dash-shell[data-accent="teal"] {
+  --brand: oklch(0.58 0.12 185);
+  --brand-soft: oklch(0.93 0.05 185);
+  --brand-ink: oklch(0.34 0.09 190);
+}
+.dark .dash-shell[data-accent="teal"] {
+  --brand: oklch(0.75 0.13 182);
+  --brand-soft: oklch(0.30 0.05 185);
+  --brand-ink: oklch(0.90 0.06 185);
+}
+.dash-shell[data-accent="neutral"] {
+  --brand: oklch(0.46 0.02 250);
+  --brand-soft: oklch(0.94 0.01 250);
+  --brand-ink: oklch(0.33 0.015 250);
+}
+.dark .dash-shell[data-accent="neutral"] {
+  --brand: oklch(0.74 0.015 250);
+  --brand-soft: oklch(0.29 0.015 250);
+  --brand-ink: oklch(0.88 0.01 250);
+}
+
+/* Density: compact tightens the module grid through --dash-gap
+   (set inline by the shell from the settings store). */
+
+/* Settings drawer entrance (mobile bottom sheet / desktop right panel) */
+@keyframes dash-drawer-in-mobile {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+@keyframes dash-drawer-in-desktop {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+.dash-drawer {
+  animation: dash-drawer-in-mobile 0.22s ease-out;
+}
+@media (min-width: 640px) {
+  .dash-drawer {
+    animation: dash-drawer-in-desktop 0.22s ease-out;
+  }
+}
+/* Respect the reduce-motion setting for the drawer itself */
+html[data-reduced-motion="true"] .dash-drawer {
+  animation: none;
+}

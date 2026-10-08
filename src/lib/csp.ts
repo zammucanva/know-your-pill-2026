@@ -45,17 +45,33 @@
  *                               in depth.)
  *   form-action 'self'       — forms can only submit same-origin.
  *
- * The policy deliberately contains NO wildcard hosts, NO protocol
- * schemes (http:/https:), and NO third-party origins.
+ * The policy deliberately contains NO wildcard hosts and NO bare protocol
+ * schemes. The only third-party origins are the exact hosts listed in
+ * FIREBASE_AUTH_SOURCES, required for Google sign-in.
  */
+
+// Exact origins Firebase Auth (Google sign-in via signInWithPopup) needs.
+// Without frame-src the SDK's hidden auth iframe is blocked and sign-in
+// fails with auth/internal-error.
+export const FIREBASE_AUTH_SOURCES = {
+  "script-src": ["https://apis.google.com"],
+  "img-src": ["https://lh3.googleusercontent.com"],
+  "connect-src": [
+    "https://identitytoolkit.googleapis.com",
+    "https://securetoken.googleapis.com",
+    "https://www.googleapis.com",
+  ],
+  "frame-src": ["https://kyp-medicine.firebaseapp.com"],
+} as const;
 
 export const CONTENT_SECURITY_POLICY = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline'",
+  `script-src 'self' 'unsafe-inline' ${FIREBASE_AUTH_SOURCES["script-src"].join(" ")}`,
   "style-src 'self' 'unsafe-inline'",
-  "img-src 'self'",
+  `img-src 'self' ${FIREBASE_AUTH_SOURCES["img-src"].join(" ")}`,
   "font-src 'self'",
-  "connect-src 'self'",
+  `connect-src 'self' ${FIREBASE_AUTH_SOURCES["connect-src"].join(" ")}`,
+  `frame-src 'self' ${FIREBASE_AUTH_SOURCES["frame-src"].join(" ")}`,
   "object-src 'none'",
   "base-uri 'self'",
   "frame-ancestors 'none'",
@@ -70,6 +86,7 @@ export const REQUIRED_CSP_DIRECTIVE_KEYS = [
   "img-src",
   "font-src",
   "connect-src",
+  "frame-src",
   "object-src",
   "base-uri",
   "frame-ancestors",

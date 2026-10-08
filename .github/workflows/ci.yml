@@ -9,8 +9,25 @@ on:
 jobs:
   quality:
     runs-on: ubuntu-latest
+    # Disposable Postgres for the test suite (the schema is PostgreSQL; the
+    # harness refuses to run against anything but a local "*test*" database).
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: kyp_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d kyp_test"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
     env:
-      DATABASE_URL: file:./db/ci.db
+      DATABASE_URL: postgresql://postgres:postgres@127.0.0.1:5432/kyp_test
+      DIRECT_URL: postgresql://postgres:postgres@127.0.0.1:5432/kyp_test
       SESSION_SECRET: kyp-ci-only-session-secret-0123456789abcdef0123456789abcdef
       TRUSTED_PROXY_HEADERS: "1"
       EMAIL_PROVIDER: mock
