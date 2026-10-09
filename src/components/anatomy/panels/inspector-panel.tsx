@@ -214,11 +214,11 @@ export function InspectorPanel() {
         {/* Source attribution */}
         <div className="mt-6 border-t border-[var(--border)] pt-3">
           <p className="text-[11px] italic text-[var(--muted-foreground)]">
-            Anatomical data from BodyParts3D, © The Database Center for Life
-            Science, CC BY 4.0.
+            Anatomical data from Z-Anatomy (CC BY-SA 4.0) and BodyParts3D, ©
+            The Database Center for Life Science (CC BY 4.0).
           </p>
           <a
-            href="https://dbarchive.biosciencedbc.jp/en/bodyparts3d/"
+            href="https://github.com/LluisV/Z-Anatomy"
             target="_blank"
             rel="noreferrer"
             className="mt-1 inline-flex items-center gap-1 text-[11px] font-medium text-[var(--brand)] hover:underline"

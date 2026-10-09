@@ -141,7 +141,7 @@ export const systems: AnatomicalSystem[] = [
     description:
       "Cartilage, ligaments, and other connective tissues that support, connect, and separate structures.",
     color: "#aec3bb",
-    defaultVisible: true,
+    defaultVisible: false,
     icon: "Link",
   },
 ];

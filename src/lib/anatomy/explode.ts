@@ -120,14 +120,14 @@ export function classifyMusclePart(
     return MUSCLE_GROUP_EXPLODE["deep_thoracic"];
 
   let dx = cx * 2.4;
-  let dy = cy > 1.5 ? 0.5 : 0; // head and neck lift slightly
+  let dy = cy > 1.5 ? 0.2 : 0; // head and neck lift slightly
   let dz = cz - BODY_AXIS_Z;
   const len = Math.hypot(dx, dy, dz);
   if (len < 0.03) return MUSCLE_GROUP_EXPLODE["deep_thoracic"]; // on the axis: leave in place
   dx /= len; dy /= len; dz /= len;
 
   let distance = 0.27;
-  if (cy > 1.5) distance = 0.1; // head and neck
+  if (cy > 1.5) distance = 0.08; // head and neck
   else if (Math.abs(cx) > 0.15) distance = cy > 0.7 ? 0.26 : 0.2; // arms, legs
   return { direction: [dx, dy, dz], distance };
 }

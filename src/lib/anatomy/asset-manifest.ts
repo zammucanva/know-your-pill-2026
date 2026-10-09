@@ -36,10 +36,10 @@ export interface AssetManifest {
 
 export const assetManifest: AssetManifest = {
   kind: "real",
-  statusLabel: "BodyParts3D, 2,234 structures loaded",
+  statusLabel: "Z-Anatomy + BodyParts3D, 3,101 structures loaded",
   draco: false,
   meshopt: true,
-  license: "CC BY 4.0, BodyParts3D, © The Database Center for Life Science",
-  sourceUrl: "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/",
-  structureCount: 2234,
+  license: "CC BY-SA 4.0 (Z-Anatomy) and CC BY 4.0 (BodyParts3D, © The Database Center for Life Science)",
+  sourceUrl: "https://github.com/LluisV/Z-Anatomy",
+  structureCount: 3101,
 };

@@ -1,5 +1,25 @@
 # Anatomy data attribution
 
+The atlas is a hybrid of two open datasets.
+
+## Z-Anatomy (skeleton, muscles, cardiovascular, nervous, respiratory, digestive, endocrine, reproductive, lymphatic)
+
+"Z-Anatomy, the libre 3D atlas of anatomy" (https://github.com/LluisV/Z-Anatomy), licensed
+CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Full licence and upstream credits:
+`LICENSE-Z-Anatomy.txt`. Z-Anatomy is itself built on BodyParts3D and includes "Brainder" and white matter
+models from the University of Washington and "Cranial Nerves and Foramina" by the University of Dundee, CAHID (CC BY 4.0).
+
+Adaptations: FBX files exported with Blender, axes converted to Y-up metres, welded and simplified (quadric
+decimation, per-system triangle budgets), smooth normals quantized to signed 16-bit, packed into binary chunks;
+label stubs, origin/insertion markers and sulcus-only filler meshes omitted; side suffixes (.l/.r) rewritten as
+"Left"/"Right" names. The non-commercial Z-Anatomy parts (inner ear, kidney) are NOT included. Rebuild with
+`scripts/anatomy/export_zanatomy.py` and `scripts/anatomy/build_atlas.py`.
+
+**ShareAlike:** the adapted geometry files in this folder (`atlas.json`, `body-*.bin.gz`) are distributed under
+CC BY-SA 4.0. The rest of the site's code and content is not part of that dataset.
+
+## BodyParts3D (urinary system, sensory organs, body surface)
+
 BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International.
 
 - License: https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html (updated 2025-02-27)
