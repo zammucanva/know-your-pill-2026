@@ -177,3 +177,47 @@ body.fs-open {overflow: hidden;}
 .syn-studio .layout { padding: 0; }
 .syn-studio .panel { top: 5.5rem; max-height: calc(100vh - 6.5rem); }
 .syn-studio .stage-col.fs { z-index: 100; }
+
+/* browse, compare, share, links */
+.syn-studio dialog { margin: auto; }
+.syn-studio .sharebtn { padding: 6px 12px; font-size: 13px; }
+@media (max-width: 640px) { .syn-studio #btnPrint { display: none; } .syn-studio .sharebtn { padding: 6px 10px; } }
+.syn-studio .brw-ctl { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin: 8px 0 12px; }
+.syn-studio .brw-ctl input, .syn-studio .brw-ctl select, .syn-studio .cmp-ctl select { padding: 8px 10px; border-radius: 10px; border: 1px solid var(--line); background: var(--panel2); color: var(--txt); font: inherit; }
+.syn-studio .brw-ctl input { flex: 1 1 10rem; min-width: 0; }
+.syn-studio .brw-list { max-height: min(60vh, 520px); overflow: auto; }
+.syn-studio .brw-list h3 { margin: 14px 0 6px; font-size: 12px; text-transform: uppercase; letter-spacing: .09em; color: var(--mut); }
+.syn-studio .brw-list h3 small { font-weight: 400; margin-left: 4px; }
+.syn-studio .brw-list .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.syn-studio .brw-list .chips button { padding: 5px 10px; border-radius: 999px; border: 1px solid var(--line); background: var(--panel2); font-size: 13px; }
+.syn-studio .brw-list .chips button:hover { border-color: var(--teal); }
+.syn-studio .cmp-ctl { display: flex; gap: 8px; align-items: center; margin: 8px 0 12px; }
+.syn-studio .cmp-ctl select { flex: 1 1 0; min-width: 0; }
+.syn-studio .cmp-out { max-height: min(62vh, 560px); overflow: auto; }
+.syn-studio .cmp-out table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+.syn-studio .cmp-out th, .syn-studio .cmp-out td { text-align: left; vertical-align: top; padding: 7px 8px; border-bottom: 1px solid var(--line); }
+.syn-studio .cmp-out thead th { position: sticky; top: 0; background: var(--panel); }
+.syn-studio .cmp-out tbody th { color: var(--mut); font-weight: 600; width: 26%; }
+.syn-studio .cmp-out tr.same td { background: color-mix(in oklch, var(--teal) 8%, transparent); }
+.syn-studio .cmp-out tr.grp th { background: var(--panel2); text-transform: uppercase; letter-spacing: .08em; font-size: 11px; }
+.syn-studio .cmp-out .e-up { color: var(--up); } .syn-studio .cmp-out .e-down { color: var(--down); } .syn-studio .cmp-out .e-mixed { color: var(--mixed); }
+.syn-studio .cmp-act { margin: 12px 0 4px; display: flex; gap: 8px; flex-wrap: wrap; }
+.syn-studio .rlist li .r3d { display: inline-block; margin-top: 4px; font-size: 12px; color: var(--teal); text-decoration: underline; }
+.syn-studio .learn { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.syn-studio .learn a { color: var(--teal); text-decoration: underline; }
+
+/* phones: keep the legend off the brain */
+@media (max-width: 640px) {
+  .syn-studio .stage.v-brain { aspect-ratio: 4 / 3; }
+  .syn-studio .stage .legend, .syn-studio .stage.v-syn .legend { left: 8px; right: 8px; top: auto; bottom: 8px; flex-direction: row; flex-wrap: wrap; gap: 4px 12px; font-size: 11px; padding: 5px 9px; border-radius: 10px; }
+  .syn-studio .stage.v-brain .zoomhint { top: 8px; bottom: auto; right: 8px; padding: 6px 10px; font-size: 12.5px; }
+}
+
+/* print: just the medication, not the site chrome */
+@media print {
+  body:has(.syn-studio) header, body:has(.syn-studio) footer, body:has(.syn-studio) nav,
+  .syn-studio .syn-toolbar, .syn-studio .tabs, .syn-studio .controls, .syn-studio .phases, .syn-studio .zoomhint, .syn-studio dialog { display: none !important; }
+  .syn-studio .layout { display: block; }
+  .syn-studio .stage { -webkit-print-color-adjust: exact; print-color-adjust: exact; break-inside: avoid; box-shadow: none; }
+  .syn-studio .panel { position: static; max-height: none; overflow: visible; border: 0; padding: 12px 0 0; }
+}

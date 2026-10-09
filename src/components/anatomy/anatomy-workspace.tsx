@@ -11,6 +11,7 @@ import { ModelStatusBadge } from "@/components/anatomy/panels/model-status-badge
 import { ModelLoadingOverlay } from "@/components/anatomy/panels/model-loading-overlay";
 import { MobilePanelTriggers } from "@/components/anatomy/panels/mobile-panel-triggers";
 import { atlasQuality, type AtlasQuality } from "@/lib/anatomy/atlas-source";
+import { useBrainDeepLink } from "@/lib/anatomy/use-brain-deep-link";
 
 // The 3D engine (three.js + react-three-fiber) is only fetched when this
 // workspace mounts, never on other KYP routes.
@@ -33,6 +34,7 @@ export function AnatomyWorkspace() {
   // The lite atlas is chosen on phones and slow connections; offer the full model explicitly.
   const [quality, setQuality] = React.useState<AtlasQuality>("full");
   React.useEffect(() => setQuality(atlasQuality()), []);
+  useBrainDeepLink();
 
   return (
     <section aria-label="3D anatomy workspace" className="mx-auto w-full max-w-[96rem] px-4 pb-10 sm:px-6 lg:px-8">

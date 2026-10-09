@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 import { Brain, X, ChevronRight, Search } from "lucide-react";
 import { useAnatomyStore } from "@/lib/anatomy/store/anatomy-store";
 import { useCameraStore } from "@/lib/anatomy/store/camera-store";
@@ -9,8 +10,10 @@ import {
   brainPresets,
   brainStructureGroups,
   ALL_BRAIN_CONCEPT_IDS,
+  getBrainGroupForConcept,
   type BrainStructureGroup,
 } from "@/lib/anatomy/brain-registry";
+import { STUDIO_REGION_DRUGS, STUDIO_REGION_GROUP, STUDIO_REGION_NAMES } from "@/lib/kyp/studio-region-drugs";
 import { getNormalizationOverride } from "@/lib/anatomy/kyp-normalization";
 import { cn } from "@/lib/utils";
 import type { BP3DConcept } from "@/lib/hooks/use-anatomy-model";
@@ -185,6 +188,8 @@ export function BrainModePanel() {
         </div>
       </div>
 
+      <StudioDrugsSection atlasParts={atlas?.parts} />
+
       {/* Body — either search results or hierarchy */}
       <div className="min-h-0 flex-1 p-2.5">
         {isSearching ? (
@@ -248,6 +253,66 @@ export function BrainModePanel() {
           </div>
         )}
       </div>
+    </div>
+  );
+}
+
+const EFFECT_MARK = { up: "↑", down: "↓", mixed: "⇄" } as const;
+const EFFECT_WORD = { up: "more signalling", down: "less signalling", mixed: "modulated" } as const;
+
+/**
+ * Medications that act in the region of the selected brain structure, taken
+ * from the Synapse Studio library (see scripts/synapse/gen-studio-data.mjs).
+ * Each links to its animation in the studio.
+ */
+function StudioDrugsSection({ atlasParts }: { atlasParts?: { id: string; conceptId: string }[] }) {
+  const selectedStructureId = useAnatomyStore((s) => s.selectedStructureId);
+  const info = React.useMemo(() => {
+    if (!selectedStructureId || !atlasParts) return null;
+    const part = atlasParts.find((p) => p.id === selectedStructureId);
+    const group = part ? getBrainGroupForConcept(part.conceptId) : undefined;
+    if (!group) return null;
+    const regions = Object.keys(STUDIO_REGION_GROUP).filter((r) => STUDIO_REGION_GROUP[r] === group.id);
+    if (!regions.length) return null;
+    const seen = new Map<string, { id: string; name: string; effect: keyof typeof EFFECT_MARK }>();
+    for (const r of regions) {
+      for (const d of STUDIO_REGION_DRUGS[r] ?? []) if (!seen.has(d.id)) seen.set(d.id, { id: d.id, name: d.name, effect: d.effect });
+    }
+    return { group, regions, drugs: [...seen.values()].sort((a, b) => a.name.localeCompare(b.name)) };
+  }, [selectedStructureId, atlasParts]);
+
+  if (!info) {
+    return (
+      <p className="border-b border-[var(--border)] px-3 py-2 text-[10px] text-[var(--muted-foreground)]">
+        Select a structure to see medications that act in its region.
+      </p>
+    );
+  }
+  const shown = info.drugs.slice(0, 10);
+  return (
+    <div className="border-b border-[var(--border)] p-2.5">
+      <p className="kyp-label mb-1">Medications acting in {info.group.label.toLowerCase()}</p>
+      <p className="mb-1.5 text-[10px] text-[var(--muted-foreground)]">
+        {info.regions.map((r) => STUDIO_REGION_NAMES[r]).join(", ")}. {info.drugs.length} in Synapse Studio.
+      </p>
+      <ul className="flex flex-wrap gap-1">
+        {shown.map((d) => (
+          <li key={d.id}>
+            <Link
+              href={`/synapse-studio#${d.id}`}
+              title={`${d.name}: ${EFFECT_WORD[d.effect]}`}
+              className="inline-flex items-center gap-1 rounded-md border border-[var(--border)] bg-[var(--surface)] px-1.5 py-0.5 text-[11px] text-[var(--foreground)] hover:bg-[var(--accent)]"
+            >
+              {d.name}
+              <span aria-hidden="true" className="text-[var(--muted-foreground)]">{EFFECT_MARK[d.effect]}</span>
+              <span className="sr-only">{EFFECT_WORD[d.effect]}</span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+      <Link href="/synapse-studio" className="mt-1.5 inline-block text-[11px] font-medium text-[var(--brand)] hover:underline">
+        {info.drugs.length > shown.length ? `+${info.drugs.length - shown.length} more, open Synapse Studio` : "Open Synapse Studio"}
+      </Link>
     </div>
   );
 }

@@ -24,13 +24,16 @@ const SCRIPTS = [
   "data-drugs-extra.js",
   "data-drugs-types.js",
   "data-drugs-more.js",
+  "data-links.js",
   "synapse-scene.js",
   "brain-scene.js",
+  "extras.js",
   "app.js",
 ];
 
 type StudioWindow = Window & {
   KYP_ASSET_BASE?: string;
+  KYP_SITE_BASE?: string;
   KYPStudioMount?: (root: HTMLElement) => () => void;
   __kypStudioScripts?: Promise<void>;
 };
@@ -50,6 +53,7 @@ function loadStudioScripts(): Promise<void> {
   const w = window as StudioWindow;
   if (!w.__kypStudioScripts) {
     w.KYP_ASSET_BASE = imgPath("/synapse-studio/");
+    w.KYP_SITE_BASE = process.env.NEXT_PUBLIC_BASE_PATH || ""; // for the studio's links to other KYP pages
     w.__kypStudioScripts = SCRIPTS.reduce<Promise<void>>(
       (p, f) => p.then(() => loadScript(imgPath("/synapse-studio/js/" + f))),
       Promise.resolve()
