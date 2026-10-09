@@ -33,5 +33,7 @@ export interface SectionProps
 }
 
 export function Section({ spacing, as: Component = "section", className, ...props }: SectionProps) {
-  return <Component className={cn(sectionVariants({ spacing }), className)} {...props} />;
+  // ComponentType (not ElementType): see container.tsx (react-three-fiber JSX augmentation).
+  const Comp = Component as React.ComponentType<React.HTMLAttributes<HTMLElement>>;
+  return <Comp className={cn(sectionVariants({ spacing }), className)} {...props} />;
 }

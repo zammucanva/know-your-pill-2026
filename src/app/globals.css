@@ -120,6 +120,9 @@
   --background: oklch(0.99 0.005 220);
   --foreground: oklch(0.18 0.02 240);
   --surface: oklch(0.98 0.006 220);
+  /* 3D anatomy viewport surround */
+  --viewport-backdrop: oklch(96.5% 0.008 220);
+  --viewport-backdrop-secondary: oklch(93.5% 0.01 220);
   --surface-elevated: oklch(1 0 0);
   --shadow-color: oklch(0.18 0.04 240 / 0.10);
 
@@ -202,6 +205,8 @@
   --background: oklch(0.14 0.02 250);
   --foreground: oklch(0.96 0.008 220);
   --surface: oklch(0.16 0.02 250);
+  --viewport-backdrop: oklch(16% 0.02 250);
+  --viewport-backdrop-secondary: oklch(13% 0.025 250);
   --surface-elevated: oklch(0.2 0.025 250);
   --shadow-color: oklch(0 0 0 / 0.4);
 

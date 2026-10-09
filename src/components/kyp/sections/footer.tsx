@@ -40,6 +40,7 @@ const footerLinks = [
     links: [
       { label: "Learn", href: "/learn" },
       { label: "Study Mode", href: "/study" },
+      { label: "3D Anatomy", href: "/anatomy" },
       { label: "Synapse Studio", href: "/synapse-studio/index.html" },
       { label: "Medications", href: "/#library" },
       { label: "Substance Use", href: "/#substances" },
