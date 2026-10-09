@@ -16,8 +16,9 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { IS_STATIC_EXPORT } from "@/lib/kyp/static-export";
-import { signInWithPopup } from "firebase/auth";
-import { getFirebaseAuth, createGoogleProvider } from "@/lib/firebase-client";
+import { getRedirectResult, signInWithPopup, signInWithRedirect } from "firebase/auth";
+import { getFirebaseAuth, createGoogleProvider, canUseSameOriginAuth } from "@/lib/firebase-client";
+import { isInAppBrowser, isMobileBrowser } from "@/lib/kyp/google-auth-env";
 
 type Step = "welcome" | "signup" | "login" | "verify" | "role" | "done";
 type Role = "patient" | "student" | "medical_resident" | "medical_student" | "psychiatrist";
@@ -35,6 +36,9 @@ const passwordRequirements = [
   { label: "One letter", test: (pw: string) => /[a-zA-Z]/.test(pw) },
   { label: "One number", test: (pw: string) => /\d/.test(pw) },
 ];
+
+/** Set while a Google redirect sign-in is in flight (cleared on return). */
+const GOOGLE_REDIRECT_FLAG = "kyp:google-redirect";
 
 export default function WelcomePage() {
   const router = useRouter();
@@ -129,30 +133,118 @@ export default function WelcomePage() {
     finally { setLoading(false); }
   };
 
+  /** Exchange a Firebase user for a KYP session, then move to the next step. */
+  const completeGoogleSignIn = async (user: { getIdToken: () => Promise<string> }) => {
+    const idToken = await user.getIdToken();
+    const res = await fetch("/api/auth/google", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ idToken }),
+    });
+    const data = await res.json();
+    if (!res.ok) { setError(data.error || "Google sign-in failed"); return; }
+    setUserData({ name: data.name, email: data.email });
+    setStep(data.isNew || !data.learnerType || data.learnerType === "student" ? "role" : "done");
+  };
+
+  const googleErrorMessage = (err: unknown): string | null => {
+    const code = (err as { code?: string })?.code;
+    switch (code) {
+      case "auth/popup-closed-by-user":
+      case "auth/cancelled-popup-request":
+        return null; // the person backed out: no error to show
+      case "auth/popup-blocked":
+        return "Your browser blocked the Google sign-in window. Allow popups for this site and try again.";
+      case "auth/unauthorized-domain":
+        return "Google sign-in is not enabled for this web address yet.";
+      case "auth/web-storage-unsupported":
+        return "Your browser is blocking the storage Google sign-in needs. Turn off private browsing or content blockers for this site and try again.";
+      case "auth/network-request-failed":
+        return "Network problem during Google sign-in. Check your connection and try again.";
+      default:
+        return "Google sign-in failed. Please try again.";
+    }
+  };
+
+  // Finish a Google sign-in that started with a full-page redirect (phones
+  // and tablets). The flag is set just before leaving, so desktop visitors
+  // never initialise Firebase on load.
+  React.useEffect(() => {
+    if (IS_STATIC_EXPORT) return;
+    let pending = false;
+    try { pending = window.sessionStorage.getItem(GOOGLE_REDIRECT_FLAG) === "1"; } catch { /* ignore */ }
+    if (!pending) return;
+    try { window.sessionStorage.removeItem(GOOGLE_REDIRECT_FLAG); } catch { /* ignore */ }
+    let cancelled = false;
+    (async () => {
+      setLoading(true);
+      try {
+        const result = await getRedirectResult(getFirebaseAuth({ sameOrigin: canUseSameOriginAuth() }));
+        if (cancelled) return;
+        if (result) await completeGoogleSignIn(result.user);
+        else setError("Google sign-in did not finish. Please try again.");
+      } catch (err: unknown) {
+        if (!cancelled) {
+          const message = googleErrorMessage(err);
+          if (message) setError(message);
+        }
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    })();
+    return () => { cancelled = true; };
+  }, []);
+
+  const startGoogleRedirect = async () => {
+    try { window.sessionStorage.setItem(GOOGLE_REDIRECT_FLAG, "1"); } catch { /* ignore */ }
+    await signInWithRedirect(
+      getFirebaseAuth({ sameOrigin: canUseSameOriginAuth() }),
+      createGoogleProvider()
+    );
+    // The browser is now leaving for Google; keep the button disabled.
+  };
+
   const handleGoogleSignIn = async () => {
     setError("");
+    const ua = navigator.userAgent;
+
+    // Google refuses OAuth inside embedded browsers (Instagram, Facebook,
+    // TikTok, ...): no code path can work there.
+    if (isInAppBrowser(ua)) {
+      setError("Google does not allow sign-in inside this app's built-in browser. Open this page in Safari or Chrome and try again, or use email and password.");
+      return;
+    }
+
     setLoading(true);
+    const mobile = isMobileBrowser(ua, navigator.platform, navigator.maxTouchPoints);
     try {
-      const result = await signInWithPopup(getFirebaseAuth(), createGoogleProvider());
-      const idToken = await result.user.getIdToken();
-      const res = await fetch("/api/auth/google", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ idToken }),
-      });
-      const data = await res.json();
-      if (!res.ok) { setError(data.error || "Google sign-in failed"); return; }
-      setUserData({ name: data.name, email: data.email });
-      setStep(data.isNew || !data.learnerType || data.learnerType === "student" ? "role" : "done");
-    } catch (err: unknown) {
-      const code = (err as { code?: string })?.code;
-      if (code === "auth/popup-closed-by-user" || code === "auth/cancelled-popup-request") return;
-      if (code === "auth/popup-blocked") {
-        setError("Your browser blocked the Google sign-in popup. Allow popups for this site and try again.");
+      if (mobile) {
+        // Popups are blocked or lost on phones: use the full-page redirect.
+        await startGoogleRedirect();
         return;
       }
-      setError("Google sign-in failed. Please try again.");
-    } finally {
+      const result = await signInWithPopup(getFirebaseAuth(), createGoogleProvider());
+      await completeGoogleSignIn(result.user);
+    } catch (err: unknown) {
+      const code = (err as { code?: string })?.code;
+      // Desktop popup blocked or unsupported: fall back to the redirect.
+      if (!mobile && (code === "auth/popup-blocked" || code === "auth/operation-not-supported-in-this-environment")) {
+        try {
+          await startGoogleRedirect();
+          return;
+        } catch (redirectErr) {
+          try { window.sessionStorage.removeItem(GOOGLE_REDIRECT_FLAG); } catch { /* ignore */ }
+          const message = googleErrorMessage(redirectErr);
+          if (message) setError(message);
+          setLoading(false);
+          return;
+        }
+      }
+      if (mobile) {
+        try { window.sessionStorage.removeItem(GOOGLE_REDIRECT_FLAG); } catch { /* ignore */ }
+      }
+      const message = googleErrorMessage(err);
+      if (message) setError(message);
       setLoading(false);
     }
   };
