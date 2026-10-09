@@ -1,11 +1,12 @@
 "use client";
 
+import { ProfileMenu } from "@/components/kyp/ui/profile-menu";
 import * as React from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 import {
-  ChevronDown, LayoutDashboard, LogOut, Menu, Moon, Phone, Settings as SettingsIcon, Sun, UserRound,
+  Menu, Moon, Phone, Settings as SettingsIcon, Sun,
 } from "lucide-react";
 
 import { FloatingSearch } from "@/components/kyp/ui/floating-search";
@@ -13,7 +14,6 @@ import { imgPath } from "@/lib/kyp/image-path";
 import {
   LANDING_PAGE_HREF, useDashboardSettings,
 } from "@/lib/kyp/dashboard/settings-store";
-import { cn } from "@/lib/utils";
 
 /**
  * DashboardHeader — the compact command bar of the dashboard.
@@ -31,17 +31,6 @@ import { cn } from "@/lib/utils";
 export interface DashboardHeaderUser {
   name: string;
   email: string;
-}
-
-function initialsOf(name: string): string {
-  return (
-    name
-      .split(/\s+/)
-      .filter(Boolean)
-      .slice(0, 2)
-      .map((part) => part[0]?.toUpperCase() ?? "")
-      .join("") || "U"
-  );
 }
 
 function ThemeToggle() {
@@ -77,26 +66,7 @@ export function DashboardHeader({
 }) {
   const router = useRouter();
   const defaultLandingPage = useDashboardSettings((s) => s.defaultLandingPage);
-  const [menuOpen, setMenuOpen] = React.useState(false);
   const [signingOut, setSigningOut] = React.useState(false);
-  const menuRef = React.useRef<HTMLDivElement | null>(null);
-
-  // Close the profile dropdown on outside click / Escape.
-  React.useEffect(() => {
-    if (!menuOpen) return;
-    const onPointer = (e: PointerEvent) => {
-      if (menuRef.current && !menuRef.current.contains(e.target as Node)) setMenuOpen(false);
-    };
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setMenuOpen(false);
-    };
-    document.addEventListener("pointerdown", onPointer);
-    document.addEventListener("keydown", onKey);
-    return () => {
-      document.removeEventListener("pointerdown", onPointer);
-      document.removeEventListener("keydown", onKey);
-    };
-  }, [menuOpen]);
 
   const signOut = async () => {
     if (signingOut) return;
@@ -172,73 +142,13 @@ export function DashboardHeader({
             <SettingsIcon className="h-4 w-4" />
           </button>
 
-          {/* Profile dropdown */}
-          <div ref={menuRef} className="relative">
-            <button
-              type="button"
-              onClick={() => setMenuOpen((v) => !v)}
-              aria-haspopup="menu"
-              aria-expanded={menuOpen}
-              aria-label="Account menu"
-              className="flex items-center gap-1.5 rounded-full outline-none focus-visible:ring-2 focus-visible:ring-brand/60"
-            >
-              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-soft text-xs font-bold text-brand-ink">
-                {user ? initialsOf(user.name) : <UserRound className="h-4 w-4" />}
-              </span>
-              <ChevronDown
-                className={cn(
-                  "hidden h-3.5 w-3.5 text-muted-foreground transition-transform sm:block",
-                  menuOpen && "rotate-180"
-                )}
-              />
-            </button>
-
-            {menuOpen && (
-              <div
-                role="menu"
-                className="absolute right-0 top-full z-50 mt-2 w-64 overflow-hidden rounded-xl border border-border bg-popover shadow-xl"
-              >
-                <div className="border-b border-border/60 px-4 py-3">
-                  <p className="truncate text-sm font-semibold text-foreground">{user?.name ?? "Signed in"}</p>
-                  <p className="truncate text-xs text-muted-foreground">{user?.email ?? ""}</p>
-                </div>
-                <div className="p-1.5">
-                  <button
-                    type="button"
-                    role="menuitem"
-                    onClick={() => {
-                      setMenuOpen(false);
-                      onOpenSettings();
-                    }}
-                    className="flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-sm text-foreground transition-colors hover:bg-accent"
-                  >
-                    <SettingsIcon className="h-4 w-4 text-muted-foreground" />
-                    Account &amp; settings
-                  </button>
-                  <Link
-                    href="/dashboard"
-                    role="menuitem"
-                    onClick={() => setMenuOpen(false)}
-                    className="flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-sm text-foreground transition-colors hover:bg-accent"
-                  >
-                    <LayoutDashboard className="h-4 w-4 text-muted-foreground" />
-                    My dashboard
-                  </Link>
-                  <div className="my-1.5 h-px bg-border/60" />
-                  <button
-                    type="button"
-                    role="menuitem"
-                    onClick={signOut}
-                    disabled={signingOut}
-                    className="flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-sm text-emergency transition-colors hover:bg-emergency-soft/50 disabled:opacity-50"
-                  >
-                    <LogOut className="h-4 w-4" />
-                    {signingOut ? "Signing out…" : "Sign out"}
-                  </button>
-                </div>
-              </div>
-            )}
-          </div>
+          {/* Account menu: the same component as the main header */}
+          <ProfileMenu
+            user={user ?? { name: "Signed in", email: "" }}
+            onLogout={signOut}
+            onOpenSettings={onOpenSettings}
+            signingOut={signingOut}
+          />
         </div>
       </div>
 
