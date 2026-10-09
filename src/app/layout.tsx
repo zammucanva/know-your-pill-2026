@@ -3,6 +3,7 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "@/components/kyp/theme-provider";
 import { SkipToContentLink } from "@/components/kyp/ui/skip-to-content";
+import { LiquidGlassFilters } from "@/components/kyp/ui/liquid-glass-filters";
 import { SettingsEffects } from "@/components/kyp/dashboard/settings-effects";
 import { ContentProtection } from "@/lib/contentProtection";
 import { imgPath } from "@/lib/kyp/image-path";
@@ -125,6 +126,7 @@ export default function RootLayout({
         {/* Skip-to-content — first focusable element on every page,
             so keyboard users can jump past the fixed navbar to <main>. */}
         <SkipToContentLink />
+        <LiquidGlassFilters />
 
         {/* rel="license" — points crawlers and tools at the reuse terms
             page. Rendered once here in the root layout; React hoists it

@@ -153,8 +153,8 @@ function PracticeCard({
         prefetch={false}
         className={
           primary
-            ? "mt-4 inline-flex items-center justify-center gap-2 rounded-lg bg-brand px-4 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
-            : "mt-4 inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-card px-4 py-2.5 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
+            ? "mt-4 inline-flex items-center justify-center gap-2 rounded-lg kyp-glass bg-brand px-4 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
+            : "mt-4 inline-flex items-center justify-center gap-2 rounded-lg kyp-glass kyp-glass-refract border border-border bg-card/70 px-4 py-2.5 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
         }
       >
         {cta}
@@ -236,7 +236,7 @@ export default function StudyPage() {
                 <Link
                   href="/compare"
                   prefetch={false}
-                  className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-3.5 py-2 text-sm font-medium text-foreground transition-colors hover:border-brand/40 hover:text-brand"
+                  className="inline-flex items-center gap-2 rounded-lg kyp-glass kyp-glass-refract border border-border bg-card/70 px-3.5 py-2 text-sm font-medium text-foreground transition-colors hover:border-brand/40 hover:text-brand"
                 >
                   <Scale className="h-4 w-4" />
                   Compare medications
@@ -244,14 +244,14 @@ export default function StudyPage() {
                 <Link
                   href="/compare/classes"
                   prefetch={false}
-                  className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-3.5 py-2 text-sm font-medium text-foreground transition-colors hover:border-brand/40 hover:text-brand"
+                  className="inline-flex items-center gap-2 rounded-lg kyp-glass kyp-glass-refract border border-border bg-card/70 px-3.5 py-2 text-sm font-medium text-foreground transition-colors hover:border-brand/40 hover:text-brand"
                 >
                   <Grid3X3 className="h-4 w-4" />
                   Compare a class by concern
                 </Link>
                 <Link
                   href="/dashboard"
-                  className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-3.5 py-2 text-sm font-medium text-foreground transition-colors hover:border-brand/40 hover:text-brand"
+                  className="inline-flex items-center gap-2 rounded-lg kyp-glass kyp-glass-refract border border-border bg-card/70 px-3.5 py-2 text-sm font-medium text-foreground transition-colors hover:border-brand/40 hover:text-brand"
                 >
                   <LineChart className="h-4 w-4" />
                   My progress

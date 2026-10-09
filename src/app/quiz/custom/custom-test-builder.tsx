@@ -1237,7 +1237,7 @@ export function CustomTestBuilder() {
                 <div className="mt-8">
                   {selectedCount > 0 ? (
                     <div className="flex flex-wrap items-center gap-2.5">
-                      <label className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-3 py-2 text-sm">
+                      <label className="inline-flex items-center gap-2 rounded-lg kyp-glass kyp-glass-refract border border-border bg-card/70 px-3 py-2 text-sm">
                         <span className="text-muted-foreground">Preset name</span>
                         <input
                           type="text"
@@ -1252,7 +1252,7 @@ export function CustomTestBuilder() {
                       <button
                         type="button"
                         onClick={handleSavePreset}
-                        className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-card px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-brand/40 hover:text-brand kyp-focus-ring"
+                        className="inline-flex items-center gap-1.5 rounded-lg kyp-glass kyp-glass-refract border border-border bg-card/70 px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-brand/40 hover:text-brand kyp-focus-ring"
                       >
                         <Check className="h-3.5 w-3.5" aria-hidden />
                         Save this setup
@@ -1285,7 +1285,7 @@ export function CustomTestBuilder() {
                       stats.total === 0 ||
                       !(Number.isFinite(requestedCount) && requestedCount >= 1)
                     }
-                    className="inline-flex items-center gap-2 rounded-lg bg-brand px-6 py-3.5 text-base font-semibold text-primary-foreground transition-colors hover:bg-brand/90 disabled:cursor-not-allowed disabled:opacity-40 kyp-focus-ring"
+                    className="inline-flex items-center gap-2 rounded-lg kyp-glass bg-brand px-6 py-3.5 text-base font-semibold text-primary-foreground transition-colors hover:bg-brand/90 disabled:cursor-not-allowed disabled:opacity-40 kyp-focus-ring"
                   >
                     <Zap className="h-5 w-5" />
                     Start Test
@@ -1406,7 +1406,7 @@ export function CustomTestBuilder() {
                     type="button"
                     onClick={() => setResetOpen(true)}
                     aria-haspopup="dialog"
-                    className="inline-flex shrink-0 items-center gap-1 rounded-lg border border-border bg-card px-2.5 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:border-warning/50 hover:text-warning kyp-focus-ring"
+                    className="inline-flex shrink-0 items-center gap-1 rounded-lg kyp-glass kyp-glass-refract border border-border bg-card/70 px-2.5 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:border-warning/50 hover:text-warning kyp-focus-ring"
                   >
                     <RotateCcw className="h-3.5 w-3.5" aria-hidden />
                     Reset
@@ -1537,7 +1537,7 @@ export function CustomTestBuilder() {
                     <button
                       type="button"
                       onClick={nextQuestion}
-                      className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90 kyp-focus-ring"
+                      className="inline-flex items-center gap-2 rounded-lg kyp-glass bg-brand px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90 kyp-focus-ring"
                     >
                       {attempt.index + 1 >= attempt.questions.length
                         ? "See Results"
@@ -1558,7 +1558,7 @@ export function CustomTestBuilder() {
                   <button
                     type="button"
                     onClick={nextQuestion}
-                    className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90 kyp-focus-ring"
+                    className="inline-flex items-center gap-2 rounded-lg kyp-glass bg-brand px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90 kyp-focus-ring"
                   >
                     {attempt.index + 1 >= attempt.questions.length
                       ? "Submit exam"
@@ -1795,7 +1795,7 @@ export function CustomTestBuilder() {
                           setReviewAll(false);
                           setPhase("review");
                         }}
-                        className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90 kyp-focus-ring"
+                        className="inline-flex items-center gap-2 rounded-lg kyp-glass bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90 kyp-focus-ring"
                       >
                         <Eye className="h-4 w-4" />
                         Review Incorrect · {results.incorrect.length}
@@ -1816,7 +1816,7 @@ export function CustomTestBuilder() {
                       setReviewAll(true);
                       setPhase("review");
                     }}
-                    className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand kyp-focus-ring"
+                    className="inline-flex items-center gap-2 rounded-lg kyp-glass kyp-glass-refract border border-border bg-card/70 px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand kyp-focus-ring"
                   >
                     <ClipboardList className="h-4 w-4" />
                     Review all questions
@@ -1828,7 +1828,7 @@ export function CustomTestBuilder() {
                       setPhase("setup");
                       setAttempt(null);
                     }}
-                    className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand kyp-focus-ring"
+                    className="inline-flex items-center gap-2 rounded-lg kyp-glass kyp-glass-refract border border-border bg-card/70 px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand kyp-focus-ring"
                   >
                     <RotateCcw className="h-4 w-4" />
                     Build another test
@@ -1836,7 +1836,7 @@ export function CustomTestBuilder() {
                   {factoryLabel && (
                     <Link
                       href="/quiz/factory"
-                      className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand kyp-focus-ring"
+                      className="inline-flex items-center gap-2 rounded-lg kyp-glass kyp-glass-refract border border-border bg-card/70 px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand kyp-focus-ring"
                     >
                       <RotateCcw className="h-4 w-4" />
                       Generate another quiz
@@ -2010,7 +2010,7 @@ export function CustomTestBuilder() {
                 <button
                   type="button"
                   onClick={() => setPhase("results")}
-                  className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand kyp-focus-ring"
+                  className="inline-flex items-center gap-2 rounded-lg kyp-glass kyp-glass-refract border border-border bg-card/70 px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand kyp-focus-ring"
                 >
                   <ArrowLeft className="h-4 w-4" />
                   Back to results

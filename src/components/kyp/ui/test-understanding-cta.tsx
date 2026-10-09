@@ -40,7 +40,7 @@ export function TestUnderstandingCTA({ topic, variant = "default", quizHref = "/
       <Link
         href={quizHref}
         prefetch={false}
-        className="group inline-flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2.5 text-sm font-medium text-foreground transition-all hover:border-brand/40 hover:text-brand"
+        className="group inline-flex items-center gap-2 rounded-lg kyp-glass kyp-glass-refract border border-border bg-card/70 px-4 py-2.5 text-sm font-medium text-foreground transition-all hover:border-brand/40 hover:text-brand"
       >
         <Zap className="h-4 w-4 text-brand" />
         {heading}
@@ -69,7 +69,7 @@ export function TestUnderstandingCTA({ topic, variant = "default", quizHref = "/
             <Link
               href={quizHref}
               prefetch={false}
-              className="group inline-flex shrink-0 items-center gap-2 rounded-lg bg-brand px-6 py-3.5 text-base font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
+              className="group inline-flex shrink-0 items-center gap-2 rounded-lg kyp-glass bg-brand px-6 py-3.5 text-base font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
             >
               <Zap className="h-5 w-5" />
               Start Practice

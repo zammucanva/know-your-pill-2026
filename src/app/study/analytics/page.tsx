@@ -157,7 +157,7 @@ export default function AnalyticsPage() {
                     <Link
                       href="/quiz"
                       prefetch={false}
-                      className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
+                      className="inline-flex items-center gap-2 rounded-lg kyp-glass bg-brand px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
                     >
                       Start practicing
                       <ArrowRight className="h-4 w-4" />
@@ -411,14 +411,14 @@ export default function AnalyticsPage() {
                   <div className="mt-12 flex flex-wrap gap-3">
                     <Link
                       href="/study"
-                      className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
+                      className="inline-flex items-center gap-2 rounded-lg kyp-glass kyp-glass-refract border border-border bg-card/70 px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
                     >
                       <ArrowLeft className="h-4 w-4" />
                       Back to Study Mode
                     </Link>
                     <Link
                       href="/study/mistakes"
-                      className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
+                      className="inline-flex items-center gap-2 rounded-lg kyp-glass kyp-glass-refract border border-border bg-card/70 px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
                     >
                       Questions to revisit
                       <ArrowRight className="h-4 w-4" />

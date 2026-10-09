@@ -85,14 +85,14 @@ export function StudyNextPanel() {
         <div className="flex flex-wrap gap-3 p-5">
         <Link
           href={`/drugs/${start.slug}`}
-          className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
+          className="inline-flex items-center gap-2 rounded-lg kyp-glass bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
         >
           Start Learning
           <ArrowRight className="h-4 w-4" />
         </Link>
         <Link
           href="#medications"
-          className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
+          className="inline-flex items-center gap-2 rounded-lg kyp-glass kyp-glass-refract border border-border bg-card/70 px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
         >
           <BookOpen className="h-4 w-4" />
           Browse Medications
@@ -133,7 +133,7 @@ export function StudyNextPanel() {
             <Link
               href={continueHref(first)}
               aria-label={`Continue ${first.title}`}
-              className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-brand px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
+              className="inline-flex shrink-0 items-center gap-2 rounded-lg kyp-glass bg-brand px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
             >
               Continue
               <ArrowRight className="h-4 w-4" />
@@ -166,7 +166,7 @@ export function StudyNextPanel() {
               <Link
                 key={course.slug}
                 href={continueHref(course)}
-                className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-brand/40 hover:text-brand"
+                className="inline-flex items-center gap-2 rounded-lg kyp-glass kyp-glass-refract border border-border bg-card/70 px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-brand/40 hover:text-brand"
               >
                 {course.title}
                 <span className="text-xs text-muted-foreground tabular-nums">
@@ -211,7 +211,7 @@ export function StudyNextPanel() {
             <Link
               key={preset.id}
               href={`/quiz/custom?preset=${preset.id}`}
-              className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-brand/40 hover:text-brand"
+              className="inline-flex items-center gap-2 rounded-lg kyp-glass kyp-glass-refract border border-border bg-card/70 px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-brand/40 hover:text-brand"
             >
               {preset.timed && (
                 <Timer className="h-3.5 w-3.5 text-muted-foreground" aria-hidden />
@@ -228,7 +228,7 @@ export function StudyNextPanel() {
       <div className="mt-3 flex flex-wrap gap-3">
         <Link
           href="#medications"
-          className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
+          className="inline-flex items-center gap-2 rounded-lg kyp-glass kyp-glass-refract border border-border bg-card/70 px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
         >
           <BookOpen className="h-4 w-4" />
           Study Medications

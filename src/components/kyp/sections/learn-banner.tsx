@@ -42,7 +42,7 @@ export function LearnBanner() {
               <div className="flex shrink-0 gap-2">
                 <Link
                   href="/learn"
-                  className="group inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
+                  className="group inline-flex items-center gap-2 rounded-lg kyp-glass bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
                 >
                   Learn
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
@@ -51,7 +51,7 @@ export function LearnBanner() {
                 <Link
                   href="/quiz"
                   prefetch={false}
-                  className="group inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
+                  className="group inline-flex items-center gap-2 rounded-lg kyp-glass kyp-glass-refract border border-border bg-card/70 px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
                 >
                   <Zap className="h-4 w-4" />
                   Practice

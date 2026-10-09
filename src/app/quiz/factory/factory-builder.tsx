@@ -294,7 +294,7 @@ export function FactoryBuilder() {
               An unfinished run was found: {saved.counts.accepted} of {saved.counts.requested} questions.
             </p>
             <div className="mt-3 flex gap-2">
-              <button type="button" onClick={resumeSaved} className="rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-white kyp-focus-ring">
+              <button type="button" onClick={resumeSaved} className="rounded-lg kyp-glass bg-brand px-4 py-2 text-sm font-semibold text-white kyp-focus-ring">
                 Resume
               </button>
               <button
@@ -432,7 +432,7 @@ export function FactoryBuilder() {
             <button
               type="button"
               onClick={generate}
-              className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-3 text-sm font-semibold text-white kyp-focus-ring"
+              className="inline-flex items-center gap-2 rounded-lg kyp-glass bg-brand px-5 py-3 text-sm font-semibold text-white kyp-focus-ring"
             >
               <Play className="h-4 w-4" aria-hidden />
               {job ? "Generate again" : "Generate questions"}
@@ -504,7 +504,7 @@ export function FactoryBuilder() {
                 <button
                   type="button"
                   onClick={startQuiz}
-                  className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-3 text-sm font-semibold text-white kyp-focus-ring"
+                  className="inline-flex items-center gap-2 rounded-lg kyp-glass bg-brand px-5 py-3 text-sm font-semibold text-white kyp-focus-ring"
                 >
                   <Play className="h-4 w-4" aria-hidden />
                   Start quiz ({job.questions.length})

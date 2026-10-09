@@ -119,13 +119,13 @@ export default function TermsPage() {
                 attribution, and ask before republishing anything.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
-                <span className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2 text-xs font-medium text-muted-foreground">
+                <span className="inline-flex items-center gap-2 rounded-lg kyp-glass kyp-glass-refract border border-border bg-card/70 px-4 py-2 text-xs font-medium text-muted-foreground">
                   <Scale className="h-3.5 w-3.5 text-brand" />
                   © 2026 Zamaan Ali Shamji · All rights reserved
                 </span>
                 <a
                   href="mailto:zammucanva@gmail.com"
-                  className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2 text-xs font-medium text-muted-foreground transition-colors hover:border-brand/40 hover:text-brand"
+                  className="inline-flex items-center gap-2 rounded-lg kyp-glass kyp-glass-refract border border-border bg-card/70 px-4 py-2 text-xs font-medium text-muted-foreground transition-colors hover:border-brand/40 hover:text-brand"
                 >
                   <Mail className="h-3.5 w-3.5" />
                   Request permission

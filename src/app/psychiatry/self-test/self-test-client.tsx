@@ -185,7 +185,7 @@ export function SelfTestClient({
                   type="button"
                   onClick={start}
                   disabled={available === 0}
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-brand px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand/90 disabled:opacity-50"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-lg kyp-glass bg-brand px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand/90 disabled:opacity-50"
                 >
                   <Shuffle className="h-4 w-4" aria-hidden /> Start self-test
                 </button>
@@ -193,7 +193,7 @@ export function SelfTestClient({
             </div>
           ) : (
             <div className="mx-auto max-w-2xl">
-              <div className="flex items-center justify-between gap-3 rounded-xl border border-border bg-card px-4 py-3">
+              <div className="flex items-center justify-between gap-3 rounded-xl kyp-glass kyp-glass-refract border border-border bg-card/70 px-4 py-3">
                 <p className="text-sm font-medium text-foreground">
                   {answeredCount}/{run.length} answered
                   {answeredCount > 0 && (
@@ -269,13 +269,13 @@ export function SelfTestClient({
                         setSeed((s) => s + 1);
                         start();
                       }}
-                      className="inline-flex items-center gap-1.5 rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-white"
+                      className="inline-flex items-center gap-1.5 rounded-lg kyp-glass bg-brand px-4 py-2 text-sm font-semibold text-white"
                     >
                       <RotateCcw className="h-4 w-4" aria-hidden /> Run again
                     </button>
                     <Link
                       href="/psychiatry/library"
-                      className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-card px-4 py-2 text-sm font-semibold text-foreground"
+                      className="inline-flex items-center gap-1.5 rounded-lg kyp-glass kyp-glass-refract border border-border bg-card/70 px-4 py-2 text-sm font-semibold text-foreground"
                     >
                       Back to the Library <ArrowRight className="h-4 w-4" aria-hidden />
                     </Link>

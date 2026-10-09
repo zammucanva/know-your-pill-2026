@@ -353,16 +353,16 @@ export function SearchModal({ open, onOpenChange, initialQuery = null }: SearchM
         <div className="flex items-center justify-between gap-2 border-t border-border/70 bg-muted/30 px-4 py-2.5 text-xs text-muted-foreground">
           <div className="flex items-center gap-3">
             <span className="flex items-center gap-1">
-              <kbd className="rounded border border-border bg-card px-1.5 py-0.5 font-mono text-[0.65rem]">↑</kbd>
-              <kbd className="rounded border border-border bg-card px-1.5 py-0.5 font-mono text-[0.65rem]">↓</kbd>
+              <kbd className="rounded kyp-glass kyp-glass-refract border border-border bg-card/70 px-1.5 py-0.5 font-mono text-[0.65rem]">↑</kbd>
+              <kbd className="rounded kyp-glass kyp-glass-refract border border-border bg-card/70 px-1.5 py-0.5 font-mono text-[0.65rem]">↓</kbd>
               navigate
             </span>
             <span className="flex items-center gap-1">
-              <kbd className="rounded border border-border bg-card px-1.5 py-0.5 font-mono text-[0.65rem]">↵</kbd>
+              <kbd className="rounded kyp-glass kyp-glass-refract border border-border bg-card/70 px-1.5 py-0.5 font-mono text-[0.65rem]">↵</kbd>
               open
             </span>
             <span className="flex items-center gap-1">
-              <kbd className="rounded border border-border bg-card px-1.5 py-0.5 font-mono text-[0.65rem]">esc</kbd>
+              <kbd className="rounded kyp-glass kyp-glass-refract border border-border bg-card/70 px-1.5 py-0.5 font-mono text-[0.65rem]">esc</kbd>
               close
             </span>
           </div>

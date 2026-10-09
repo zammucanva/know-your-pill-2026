@@ -72,7 +72,7 @@ export function PsychiatrySection() {
           <div className="mt-12 flex flex-wrap gap-3">
             <Link
               href="/psychiatry"
-              className="group inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
+              className="group inline-flex items-center gap-2 rounded-lg kyp-glass bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
             >
               <Brain className="h-4 w-4" aria-hidden />
               Open KYP Psychiatry
@@ -80,7 +80,7 @@ export function PsychiatrySection() {
             </Link>
             <Link
               href="/psychiatry/self-test"
-              className="group inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
+              className="group inline-flex items-center gap-2 rounded-lg kyp-glass kyp-glass-refract border border-border bg-card/70 px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
             >
               <ListChecks className="h-4 w-4" aria-hidden />
               Take a self-test

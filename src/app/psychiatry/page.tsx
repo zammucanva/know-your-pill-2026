@@ -76,13 +76,13 @@ export default function PsychiatryHubPage() {
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 href="/psychiatry/library"
-                className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand/90"
+                className="inline-flex items-center gap-2 rounded-lg kyp-glass bg-brand px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand/90"
               >
                 Open the Library <ArrowRight className="h-4 w-4" aria-hidden />
               </Link>
               <Link
                 href="/psychiatry/self-test"
-                className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:border-brand/40"
+                className="inline-flex items-center gap-2 rounded-lg kyp-glass kyp-glass-refract border border-border bg-card/70 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:border-brand/40"
               >
                 <ListChecks className="h-4 w-4" aria-hidden /> Take a self-test
               </Link>

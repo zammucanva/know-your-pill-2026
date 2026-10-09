@@ -110,14 +110,14 @@ export default function MedicationLibraryPage() {
                 <Link
                   href="/quiz"
                   prefetch={false}
-                  className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
+                  className="inline-flex items-center gap-2 rounded-lg kyp-glass kyp-glass-refract border border-border bg-card/70 px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
                 >
                   Practice MCQs
                   <Zap className="h-4 w-4" />
                 </Link>
                 <Link
                   href={studioHref()}
-                  className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
+                  className="inline-flex items-center gap-2 rounded-lg kyp-glass kyp-glass-refract border border-border bg-card/70 px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
                 >
                   Synapse Studio
                   <ArrowRight className="h-4 w-4" />
@@ -323,7 +323,7 @@ export default function MedicationLibraryPage() {
                 <Link
                   href="/quiz"
                   prefetch={false}
-                  className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
+                  className="inline-flex items-center gap-2 rounded-lg kyp-glass bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
                 >
                   Practice MCQs
                   <ArrowRight className="h-4 w-4" />

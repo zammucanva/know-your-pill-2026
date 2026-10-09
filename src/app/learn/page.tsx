@@ -92,7 +92,7 @@ export default function LearnPage() {
               <div className="mt-10 flex flex-wrap gap-3">
                 <Link
                   href="/#library"
-                  className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
+                  className="inline-flex items-center gap-2 rounded-lg kyp-glass bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
                 >
                   Start Learning
                   <ArrowRight className="h-4 w-4" />
@@ -101,7 +101,7 @@ export default function LearnPage() {
                 <Link
                   href="/quiz"
                   prefetch={false}
-                  className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
+                  className="inline-flex items-center gap-2 rounded-lg kyp-glass kyp-glass-refract border border-border bg-card/70 px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
                 >
                   Practice MCQs
                   <Zap className="h-4 w-4" />
@@ -327,7 +327,7 @@ export default function LearnPage() {
               <Link
                 href="/quiz"
                 prefetch={false}
-                className="group inline-flex items-center gap-3 rounded-lg border border-border bg-card px-6 py-4 text-base font-semibold text-foreground transition-all hover:border-brand/40 hover:shadow-[var(--shadow-soft)]"
+                className="group inline-flex items-center gap-3 rounded-lg kyp-glass kyp-glass-refract border border-border bg-card/70 px-6 py-4 text-base font-semibold text-foreground transition-all hover:border-brand/40 hover:shadow-[var(--shadow-soft)]"
               >
                 <Zap className="h-5 w-5 text-brand" />
                 Start Practice

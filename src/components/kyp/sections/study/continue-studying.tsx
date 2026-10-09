@@ -113,7 +113,7 @@ export function ContinueStudying() {
           </p>
           <Link
             href={`/drugs/${start.slug}`}
-            className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
+            className="inline-flex items-center gap-2 rounded-lg kyp-glass bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
           >
             {resetDone ? "Start again" : "Start learning"}
             <ArrowRight className="h-4 w-4" />
