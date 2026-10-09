@@ -238,13 +238,13 @@ export default function ReviewPage() {
                     <div className="mt-4 flex flex-wrap gap-3">
                       <Link
                         href="/study/mistakes"
-                        className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
+                        className="inline-flex items-center gap-2 rounded-lg kyp-glass kyp-glass-refract border border-border bg-card/70 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
                       >
                         Mistake Book
                       </Link>
                       <Link
                         href="/quiz"
-                        className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
+                        className="inline-flex items-center gap-2 rounded-lg kyp-glass bg-brand px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
                       >
                         Keep practicing
                         <ArrowRight className="h-4 w-4" />
@@ -268,7 +268,7 @@ export default function ReviewPage() {
                       <button
                         type="button"
                         onClick={startSession}
-                        className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90 kyp-focus-ring"
+                        className="inline-flex items-center gap-2 rounded-lg kyp-glass bg-brand px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90 kyp-focus-ring"
                       >
                         Start reviewing
                         <ArrowRight className="h-4 w-4" />
@@ -276,7 +276,7 @@ export default function ReviewPage() {
                       <button
                         type="button"
                         onClick={exportSchedule}
-                        className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:border-brand/40 hover:text-brand kyp-focus-ring"
+                        className="inline-flex items-center gap-2 rounded-lg kyp-glass kyp-glass-refract border border-border bg-card/70 px-4 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:border-brand/40 hover:text-brand kyp-focus-ring"
                       >
                         <Download className="h-3.5 w-3.5" aria-hidden />
                         Export review data
@@ -431,7 +431,7 @@ export default function ReviewPage() {
                     <button
                       type="button"
                       onClick={next}
-                      className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90 kyp-focus-ring"
+                      className="inline-flex items-center gap-2 rounded-lg kyp-glass bg-brand px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90 kyp-focus-ring"
                     >
                       {index + 1 >= questions!.length ? "Finish review" : "Next"}
                       <ArrowRight className="h-4 w-4" />
@@ -492,7 +492,7 @@ export default function ReviewPage() {
                 <div className="mt-10 flex flex-wrap gap-3">
                   <Link
                     href="/study"
-                    className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
+                    className="inline-flex items-center gap-2 rounded-lg kyp-glass bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
                   >
                     <ArrowLeft className="h-4 w-4" />
                     Back to Study Mode
@@ -505,7 +505,7 @@ export default function ReviewPage() {
                       setQuestions(null);
                       setDueCount(getRetentionDueQueue().length);
                     }}
-                    className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
+                    className="inline-flex items-center gap-2 rounded-lg kyp-glass kyp-glass-refract border border-border bg-card/70 px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
                   >
                     <RotateCcw className="h-4 w-4" />
                     Back to the queue

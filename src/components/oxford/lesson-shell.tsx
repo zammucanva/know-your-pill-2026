@@ -1144,7 +1144,7 @@ function MobileLessonNav({
                 <Link
                   href={selfTestHref}
                   onClick={close}
-                  className="flex items-center justify-between rounded-lg bg-brand px-3 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand/90"
+                  className="flex items-center justify-between rounded-lg kyp-glass bg-brand px-3 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand/90"
                 >
                   Self-test
                   <ArrowRight className="h-4 w-4" aria-hidden />

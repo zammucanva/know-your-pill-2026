@@ -56,7 +56,7 @@ export function SynapseStudioSection() {
               <div className="shrink-0">
                 <Link
                   href={studioHref()}
-                  className="group inline-flex min-h-[44px] items-center gap-2 rounded-lg bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
+                  className="group inline-flex min-h-[44px] items-center gap-2 rounded-lg kyp-glass bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
                 >
                   Open Synapse Studio
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />

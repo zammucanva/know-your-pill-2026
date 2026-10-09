@@ -523,7 +523,7 @@ export default function QuizPage() {
                   <button
                     type="button"
                     onClick={startQuiz}
-                    className="inline-flex items-center gap-2 rounded-lg bg-brand px-6 py-3.5 text-base font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
+                    className="inline-flex items-center gap-2 rounded-lg kyp-glass bg-brand px-6 py-3.5 text-base font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
                   >
                     <Zap className="h-5 w-5" />
                     Start Practice
@@ -661,7 +661,7 @@ export default function QuizPage() {
                   <button
                     type="button"
                     onClick={restart}
-                    className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
+                    className="inline-flex items-center gap-2 rounded-lg kyp-glass kyp-glass-refract border border-border bg-card/70 px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
                   >
                     <RotateCcw className="h-4 w-4" />
                     Practice Again
@@ -677,7 +677,7 @@ export default function QuizPage() {
                   )}
                   <Link
                     href="/learn"
-                    className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
+                    className="inline-flex items-center gap-2 rounded-lg kyp-glass kyp-glass-refract border border-border bg-card/70 px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
                   >
                     <ArrowLeft className="h-4 w-4" />
                     Back to Learn
@@ -848,7 +848,7 @@ export default function QuizPage() {
                   <button
                     type="button"
                     onClick={nextQuestion}
-                    className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
+                    className="inline-flex items-center gap-2 rounded-lg kyp-glass bg-brand px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
                   >
                     {currentIndex + 1 >= filteredQuestions.length ? "See Results" : "Next Question"}
                     <ArrowRight className="h-4 w-4" />
