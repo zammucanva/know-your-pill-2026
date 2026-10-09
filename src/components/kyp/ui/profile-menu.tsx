@@ -12,6 +12,7 @@ import {
   GraduationCap,
   LayoutDashboard,
   LogOut,
+  Settings as SettingsIcon,
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -39,7 +40,9 @@ export interface ProfileMenuUser {
 
 interface Item {
   label: string;
-  href: string;
+  href?: string;
+  /** An action row instead of a link. */
+  onSelect?: () => void;
   icon: React.ComponentType<{ className?: string }>;
   /** Engine routes bundle the registry, so they are not prefetched. */
   engine?: boolean;
@@ -60,10 +63,15 @@ function initialsOf(name: string): string {
 export function ProfileMenu({
   user,
   onLogout,
+  onOpenSettings,
+  signingOut = false,
   className,
 }: {
   user: ProfileMenuUser;
   onLogout: () => void | Promise<void>;
+  /** When given, an "Account & settings" row opens it (the dashboard drawer). */
+  onOpenSettings?: () => void;
+  signingOut?: boolean;
   className?: string;
 }) {
   const pathname = usePathname();
@@ -75,6 +83,9 @@ export function ProfileMenu({
 
   const role = learnerLabel(user.learnerType);
   const items: Item[] = [
+    ...(onOpenSettings
+      ? [{ label: "Account & settings", icon: SettingsIcon, onSelect: onOpenSettings } as Item]
+      : []),
     { label: "My Dashboard", href: "/dashboard", icon: LayoutDashboard, badge: role },
     { label: "Study Mode", href: "/study", icon: GraduationCap },
     { label: "Mistake Book", href: "/study/mistakes", icon: BookMarked, engine: true },
@@ -189,30 +200,51 @@ export function ProfileMenu({
           >
             <div className="px-3 pb-2 pt-1.5">
               <p className="truncate text-sm font-semibold text-foreground">{user.name}</p>
-              <p className="truncate text-xs text-muted-foreground">{user.email}</p>
+              {user.email && <p className="truncate text-xs text-muted-foreground">{user.email}</p>}
             </div>
             <div className="mx-2 mb-1.5 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
 
             <div className="space-y-0.5">
-              {items.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  prefetch={item.engine ? false : undefined}
-                  role="menuitem"
-                  tabIndex={-1}
-                  onClick={() => close()}
-                  className={itemClass}
-                >
-                  <item.icon className="h-4 w-4 shrink-0 text-muted-foreground transition-colors group-hover:text-brand" />
-                  <span className="flex-1 whitespace-nowrap">{item.label}</span>
-                  {item.badge && (
-                    <span className="rounded-md border border-brand/15 bg-brand-soft/50 px-2 py-0.5 text-xs font-medium text-brand">
-                      {item.badge}
-                    </span>
-                  )}
-                </Link>
-              ))}
+              {items.map((item) => {
+                const inner = (
+                  <>
+                    <item.icon className="h-4 w-4 shrink-0 text-muted-foreground transition-colors group-hover:text-brand" />
+                    <span className="flex-1 whitespace-nowrap">{item.label}</span>
+                    {item.badge && (
+                      <span className="rounded-md border border-brand/15 bg-brand-soft/50 px-2 py-0.5 text-xs font-medium text-brand">
+                        {item.badge}
+                      </span>
+                    )}
+                  </>
+                );
+                return item.href ? (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    prefetch={item.engine ? false : undefined}
+                    role="menuitem"
+                    tabIndex={-1}
+                    onClick={() => close()}
+                    className={itemClass}
+                  >
+                    {inner}
+                  </Link>
+                ) : (
+                  <button
+                    key={item.label}
+                    type="button"
+                    role="menuitem"
+                    tabIndex={-1}
+                    onClick={() => {
+                      close();
+                      item.onSelect?.();
+                    }}
+                    className={itemClass}
+                  >
+                    {inner}
+                  </button>
+                );
+              })}
             </div>
 
             <div className="mx-2 my-1.5 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
@@ -221,14 +253,15 @@ export function ProfileMenu({
               type="button"
               role="menuitem"
               tabIndex={-1}
+              disabled={signingOut}
               onClick={() => {
                 close();
                 void onLogout();
               }}
-              className="flex w-full items-center gap-3 rounded-xl border border-transparent bg-emergency/10 px-3 py-2.5 text-sm font-medium text-emergency outline-none transition-colors hover:border-emergency/30 hover:bg-emergency/15 focus-visible:border-emergency/40"
+              className="flex w-full items-center gap-3 rounded-xl border border-transparent bg-emergency/10 px-3 py-2.5 text-sm font-medium text-emergency outline-none transition-colors hover:border-emergency/30 hover:bg-emergency/15 focus-visible:border-emergency/40 disabled:opacity-50"
             >
               <LogOut className="h-4 w-4 shrink-0" />
-              Sign out
+              {signingOut ? "Signing out…" : "Sign out"}
             </button>
           </motion.div>
         )}
