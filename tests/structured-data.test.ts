@@ -534,7 +534,7 @@ describe("structured-data — 18. sitemap covers exactly the real route inventor
       expect(urls).toContain(absoluteUrl(`/diseases/${disease.slug}`));
     }
     for (const route of ["/learn", "/medicine", "/study", "/study/mistakes", "/study/review",
-      "/study/analytics", "/quiz", "/quiz/custom", "/compare", "/compare/classes",
+      "/study/analytics", "/anatomy", "/quiz", "/quiz/custom", "/compare", "/compare/classes",
       "/interactions", "/legal/terms"]) {
       expect(urls).toContain(absoluteUrl(route));
     }
@@ -544,7 +544,7 @@ describe("structured-data — 18. sitemap covers exactly the real route inventor
     const urls = sitemap.map((e) => e.url);
     const expectedCount =
       2 + getAllTaxonomyClassIds().length + getAllDrugSlugs().length +
-      substancePages.length + diseases.length + 12;
+      substancePages.length + diseases.length + 13;
     expect(urls.length).toBe(expectedCount);
     expect(new Set(urls).size).toBe(urls.length); // unique — no duplicate URLs
 
@@ -552,7 +552,7 @@ describe("structured-data — 18. sitemap covers exactly the real route inventor
     const slugs = new Set(getAllDrugSlugs());
     const classIds = new Set(getAllTaxonomyClassIds());
     const staticRoutes = new Set(["/", "/drugs", "/learn", "/medicine", "/study",
-      "/study/mistakes", "/study/review", "/study/analytics", "/quiz", "/quiz/custom",
+      "/study/mistakes", "/study/review", "/study/analytics", "/anatomy", "/quiz", "/quiz/custom",
       "/compare", "/compare/classes", "/interactions", "/legal/terms"]);
     for (const url of urls) {
       expect(url.startsWith(SITE_URL)).toBe(true);
