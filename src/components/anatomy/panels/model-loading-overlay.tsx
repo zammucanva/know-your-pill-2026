@@ -40,9 +40,22 @@ export function ModelLoadingOverlay() {
   const error = useModelLoadingStore((s) => s.error);
   const errorCategory = useModelLoadingStore((s) => s.errorCategory);
   const loaded = useModelLoadingStore((s) => s.loaded);
+  const partial = useModelLoadingStore((s) => s.partial);
   const retry = useModelLoadingStore((s) => s.retry);
 
   if (loaded) return null;
+
+  // Part of the body is already on screen: keep it usable and show a small progress chip.
+  if (partial && !error) {
+    return (
+      <div
+        role="status"
+        className="pointer-events-none absolute left-1/2 top-16 z-20 -translate-x-1/2 rounded-full border border-[var(--border)] bg-[var(--card)]/90 px-3 py-1 text-[11px] font-medium text-[var(--muted-foreground)] shadow-[var(--shadow-soft)] backdrop-blur"
+      >
+        Loading remaining structures… {progress}%
+      </div>
+    );
+  }
 
   if (error) {
     return (

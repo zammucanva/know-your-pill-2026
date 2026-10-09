@@ -156,6 +156,74 @@ export function useAnatomyModel() {
         if (disposed) return;
         setAtlas(data);
 
+        // Parts grouped per system, with the chunks each system needs.
+        const systemParts = new Map<string, { parts: BP3DPart[]; chunks: Set<number> }>();
+        for (const part of data.parts) {
+          let e = systemParts.get(part.system);
+          if (!e) systemParts.set(part.system, (e = { parts: [], chunks: new Set() }));
+          e.parts.push(part);
+          e.chunks.add(part.chunk);
+        }
+        const result = new Map<string, SystemGeometry>();
+
+        // Build every system whose chunks have all arrived and publish the
+        // map, so the body appears progressively while the rest streams in.
+        const buildReadySystems = () => {
+          const built: THREE.BufferGeometry[] = [];
+          try {
+            let added = false;
+            systemParts.forEach((entry, sys) => {
+              if (result.has(sys) || ![...entry.chunks].every((c) => chunkBuffers[c])) return;
+              const geoms: THREE.BufferGeometry[] = [];
+              entry.parts.forEach((part, perSystemIndex) => {
+                const buffer = chunkBuffers[part.chunk];
+                const g = new THREE.BufferGeometry();
+                g.setAttribute(
+                  "position",
+                  new THREE.BufferAttribute(new Float32Array(buffer, part.positions, part.vertexCount * 3), 3)
+                );
+                g.setAttribute(
+                  "normal",
+                  new THREE.BufferAttribute(new Int16Array(buffer, part.normals, part.vertexCount * 3), 3, true)
+                );
+                g.setIndex(new THREE.BufferAttribute(new Uint32Array(buffer, part.indices, part.indexCount), 1));
+                g.boundingBox = new THREE.Box3(
+                  new THREE.Vector3().fromArray(part.bounds[0]),
+                  new THREE.Vector3().fromArray(part.bounds[1])
+                );
+                g.computeBoundingSphere();
+                g.setAttribute(
+                  "partIndex",
+                  new THREE.BufferAttribute(new Float32Array(part.vertexCount).fill(perSystemIndex), 1)
+                );
+                geoms.push(g);
+                built.push(g);
+              });
+              // mergeGeometries() does not compute bounds; without them the
+              // merged mesh is frustum-culled away.
+              const merged = mergeGeometries(geoms, false);
+              if (merged) {
+                merged.computeBoundingBox();
+                merged.computeBoundingSphere();
+                result.set(sys, { systemId: sys, geometry: merged, parts: entry.parts });
+                added = true;
+              }
+              geoms.forEach((g) => g.dispose());
+            });
+            if (added && !disposed) {
+              setGeometries(new Map(result));
+              useModelLoadingStore.getState().setPartial(true);
+            }
+          } catch (e) {
+            built.forEach((g) => g.dispose());
+            result.forEach((sg) => sg.geometry.dispose());
+            throw new CategorizedLoadError(
+              e instanceof Error && e.message ? e.message : "Could not build anatomy geometry.",
+              "runtime"
+            );
+          }
+        };
+
         // 2. Fetch and decode each chunk, building per-system merged geometries
         const chunkBuffers: ArrayBuffer[] = new Array(data.chunks.length).fill(null);
         let loaded = 0;
@@ -199,6 +267,7 @@ export function useAnatomyModel() {
           loaded++;
           const pct = Math.round((loaded / data.chunks.length) * 100);
           store.setProgress(pct);
+          if (!disposed) buildReadySystems();
         };
 
         // Load chunks with limited parallelism (3 at a time, like human-atlas)
@@ -215,98 +284,21 @@ export function useAnatomyModel() {
 
         if (disposed) return;
 
-        // 3. Build per-system merged geometries.
+        // 3. Build per-system merged geometries, each as soon as every chunk
+        // holding its parts has arrived (see buildReadySystems below).
         //
         // IMPORTANT: the `partIndex` attribute written into each geometry MUST
         // be the per-system index (0 .. entry.parts.length-1), NOT the global
-        // part index (0 .. 2233). The rendering side (SystemMesh) builds a
-        // DataTexture sized to ceilPowerOfTwo(perSystemPartCount) and indexes
-        // it with per-system indices. If we wrote the global index here, the
-        // shader would read out-of-bounds texels and per-part visibility /
-        // selection / hover would silently break.
-        const systemMap = new Map<string, { parts: BP3DPart[]; geometries: THREE.BufferGeometry[] }>();
-        const result = new Map<string, SystemGeometry>();
-
-        try {
-          data.parts.forEach((part) => {
-            const buffer = chunkBuffers[part.chunk];
-            if (!buffer) return;
-
-            const sys = part.system;
-            if (!systemMap.has(sys)) {
-              systemMap.set(sys, { parts: [], geometries: [] });
-            }
-            const entry = systemMap.get(sys)!;
-            // Per-system index = the position this part will occupy in
-            // entry.parts once pushed. This is the value the shader will use
-            // to look up state in the per-system DataTexture.
-            const perSystemIndex = entry.parts.length;
-
-            const g = new THREE.BufferGeometry();
-            g.setAttribute(
-              "position",
-              new THREE.BufferAttribute(new Float32Array(buffer, part.positions, part.vertexCount * 3), 3)
-            );
-            g.setAttribute(
-              "normal",
-              new THREE.BufferAttribute(new Int16Array(buffer, part.normals, part.vertexCount * 3), 3, true)
-            );
-            g.setIndex(new THREE.BufferAttribute(new Uint32Array(buffer, part.indices, part.indexCount), 1));
-
-            // Store bounding box from manifest
-            g.boundingBox = new THREE.Box3(
-              new THREE.Vector3().fromArray(part.bounds[0]),
-              new THREE.Vector3().fromArray(part.bounds[1])
-            );
-            g.computeBoundingSphere();
-
-            // Add partIndex attribute — PER-SYSTEM index, NOT global.
-            g.setAttribute(
-              "partIndex",
-              new THREE.BufferAttribute(new Float32Array(part.vertexCount).fill(perSystemIndex), 1)
-            );
-
-            entry.parts.push(part);
-            entry.geometries.push(g);
-          });
-
-          // Merge geometries per system. mergeGeometries() does NOT compute
-          // bounding box / sphere on the merged result, so we must do it
-          // ourselves; otherwise Three.js frustum-culls the merged mesh using
-          // a null bounding box and silently hides everything.
-          systemMap.forEach((entry, sys) => {
-            const merged = mergeGeometries(entry.geometries, false);
-            if (merged) {
-              merged.computeBoundingBox();
-              merged.computeBoundingSphere();
-              result.set(sys, {
-                systemId: sys,
-                geometry: merged,
-                parts: entry.parts,
-              });
-            }
-          });
-        } catch (e) {
-          // Geometry decode/build failure — free every geometry allocated so
-          // far (per-part sources and any already-merged results), then
-          // surface the error under the "runtime" category.
-          systemMap.forEach((entry) => {
-            entry.geometries.forEach((g) => g.dispose());
-          });
-          result.forEach((sg) => sg.geometry.dispose());
-          throw new CategorizedLoadError(
-            e instanceof Error && e.message ? e.message : "Could not build anatomy geometry.",
-            "runtime"
-          );
-        }
-
+        // part index. The rendering side (SystemMesh) builds a DataTexture
+        // sized to ceilPowerOfTwo(perSystemPartCount) and indexes it with
+        // per-system indices. If we wrote the global index here, the shader
+        // would read out-of-bounds texels and per-part visibility / selection
+        // / hover would silently break.
+        buildReadySystems();
         if (disposed) {
-          // Cleanup
           result.forEach((sg) => sg.geometry.dispose());
           return;
         }
-
-        setGeometries(result);
         useModelLoadingStore.getState().setLoaded(true);
       } catch (e) {
         // Aborts mean this attempt was superseded (unmount or retry), not
