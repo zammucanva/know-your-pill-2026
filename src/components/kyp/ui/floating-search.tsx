@@ -77,7 +77,7 @@ export function FloatingSearch({ variant = "floating", className }: FloatingSear
             // (287 overlap positions measured at 375px on drug pages,
             // 122 at 768px; 0 at ≥1024px). Mobile/tablet users reach
             // search through the navbar menu row instead.
-            "fixed bottom-6 right-6 z-40 hidden items-center gap-2.5 rounded-full border border-border/80 bg-card/90 backdrop-blur-xl pl-4 pr-2 py-2 shadow-[var(--shadow-lift)] transition-all hover:border-brand/40 hover:shadow-[var(--shadow-glow)] print:hidden lg:flex",
+            "fixed bottom-6 right-6 z-40 hidden items-center gap-2.5 rounded-full border border-border/80 bg-card/90 backdrop-blur-xl pl-4 pr-2 py-2 shadow-[var(--shadow-lift)] transition-all hover:border-brand/40 hover:shadow-[var(--shadow-glow)] print:hidden",
             "group",
             className
           )}
