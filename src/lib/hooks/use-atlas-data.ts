@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { imgPath } from "@/lib/kyp/image-path";
+import { atlasManifestPath } from "@/lib/anatomy/atlas-source";
 import type { BP3DAtlas, BP3DPart, BP3DConcept } from "./use-anatomy-model";
 
 /**
@@ -22,7 +23,7 @@ async function loadAtlas(): Promise<BP3DAtlas | null> {
   if (loadPromise) return loadPromise;
   loadPromise = (async () => {
     try {
-      const res = await fetch(imgPath("/models/atlas.json"));
+      const res = await fetch(imgPath(atlasManifestPath()));
       if (!res.ok) return null;
       const data = (await res.json()) as BP3DAtlas;
       cachedAtlas = data;

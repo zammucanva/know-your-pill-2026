@@ -10,6 +10,7 @@ import { BrainModePanel, BrainModeToggle } from "@/components/anatomy/panels/bra
 import { ModelStatusBadge } from "@/components/anatomy/panels/model-status-badge";
 import { ModelLoadingOverlay } from "@/components/anatomy/panels/model-loading-overlay";
 import { MobilePanelTriggers } from "@/components/anatomy/panels/mobile-panel-triggers";
+import { atlasQuality, type AtlasQuality } from "@/lib/anatomy/atlas-source";
 
 // The 3D engine (three.js + react-three-fiber) is only fetched when this
 // workspace mounts, never on other KYP routes.
@@ -29,6 +30,10 @@ const AnatomyCanvas = dynamic(
  * panels move into sheets opened from the bar above the viewport.
  */
 export function AnatomyWorkspace() {
+  // The lite atlas is chosen on phones and slow connections; offer the full model explicitly.
+  const [quality, setQuality] = React.useState<AtlasQuality>("full");
+  React.useEffect(() => setQuality(atlasQuality()), []);
+
   return (
     <section aria-label="3D anatomy workspace" className="mx-auto w-full max-w-[96rem] px-4 pb-10 sm:px-6 lg:px-8">
       <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
@@ -71,6 +76,14 @@ export function AnatomyWorkspace() {
         Anatomy: Z-Anatomy (CC BY-SA 4.0) and BodyParts3D, © The Database Center for Life Science
         (CC BY 4.0); adult male reference model, 3,101 structures. Educational use only, not a
         clinical tool.
+        {quality === "lite" && (
+          <>
+            {" "}Showing the lighter model for this device.{" "}
+            <a href="?quality=full" className="font-medium text-[var(--brand)] hover:underline">
+              Load full detail (about 35 MB)
+            </a>
+          </>
+        )}
       </p>
     </section>
   );

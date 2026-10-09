@@ -31,6 +31,8 @@ interface ModelLoadingState {
   /** Machine-readable failure kind — drives the overlay's badge and retry UX. */
   errorCategory: ModelErrorCategory;
   loaded: boolean;
+  /** True once at least one system is on screen while the rest is still streaming in. */
+  partial: boolean;
   /**
    * Bumped by retry(). useAnatomyModel's load effect depends on this value,
    * so every increment re-runs the entire download + geometry pipeline
@@ -40,6 +42,7 @@ interface ModelLoadingState {
   setProgress: (n: number) => void;
   setError: (s: string, category?: ModelErrorCategory) => void;
   setLoaded: (b: boolean) => void;
+  setPartial: (b: boolean) => void;
   /**
    * Request a full reload: clears the error state, resets progress/loaded
    * and increments retryToken (which re-triggers the loader effect).
@@ -52,16 +55,19 @@ export const useModelLoadingStore = create<ModelLoadingState>((set) => ({
   error: "",
   errorCategory: "",
   loaded: false,
+  partial: false,
   retryToken: 0,
   setProgress: (progress) => set({ progress }),
   setError: (error, category = "") => set({ error, errorCategory: category }),
   setLoaded: (loaded) => set({ loaded }),
+  setPartial: (partial) => set({ partial }),
   retry: () =>
     set((state) => ({
       retryToken: state.retryToken + 1,
       error: "",
       errorCategory: "",
       loaded: false,
+      partial: false,
       progress: 0,
     })),
 }));
