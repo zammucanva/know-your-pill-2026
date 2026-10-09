@@ -1,6 +1,7 @@
 "use client";
 
 import { ProfileMenu } from "@/components/kyp/ui/profile-menu";
+import { NavDropdown } from "@/components/kyp/ui/nav-dropdown";
 import * as React from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -20,9 +21,10 @@ import { cn } from "@/lib/utils";
  * peer "Practice" entry is intentionally absent: practice is reached
  * through Study Mode's Practice section, not as a competing navbar item.
  */
-const navLinks = [
+/** Most-used destinations stay on the bar. */
+const primaryLinks = [
   { href: "/learn", label: "Learn" },
-  { href: "/psychiatry", label: "Psychiatry" },
+  { href: "/study", label: "Study Mode" },
   { href: "/drugs", label: "Medication Library" },
   // prefetch=false: /interactions is a client-side data engine whose
   // route bundle embeds the 145-drug registry (~1.5MB gzipped). The
@@ -30,12 +32,31 @@ const navLinks = [
   // EVERY page; navigating without prefetch only costs the first
   // click. Browsing routes keep their default prefetch.
   { href: "/interactions", label: "Interactions", prefetch: false as const },
-  { href: "/#substances", label: "Substances" },
-  { href: "/study", label: "Study Mode" },
-  { href: "/anatomy", label: "3D Anatomy" },
-  { href: "/synapse-studio", label: "Synapse Studio" },
-  { href: "/medicine", label: "Medicine" },
 ];
+
+/** Related destinations, grouped under one clearly named menu each. */
+const navGroups = [
+  {
+    label: "Explore",
+    items: [
+      { href: "/psychiatry", label: "Psychiatry", description: "Disorders, courses and self-test" },
+      { href: "/#substances", label: "Substances", description: "Alcohol, opioids, cannabis and more" },
+      // /medicine is the plain-language hub (patients and carers); the
+      // Medication Library is the full clinical course for each drug.
+      { href: "/medicine", label: "Patient Guides", description: "Plain-language medicine information" },
+    ],
+  },
+  {
+    label: "Visual tools",
+    items: [
+      { href: "/anatomy", label: "3D Anatomy", description: "Explore the body in 3D" },
+      { href: "/synapse-studio", label: "Synapse Studio", description: "Animated drug-action scenes" },
+    ],
+  },
+];
+
+/** Every destination, flat: used by the mobile menu. */
+const navLinks = [...primaryLinks, ...navGroups.flatMap((g) => g.items)];
 
 type SessionUser = { id: string; name: string; email: string; learnerType: string } | null;
 
@@ -137,29 +158,33 @@ export function Navbar() {
             GitHub Pages basePath. Plain <a href="/#…"> would resolve to
             the root domain and break anchor navigation on Pages. */}
         <nav aria-label="Primary" className="hidden items-center gap-0.5 lg:flex xl:gap-1">
-          {navLinks.map((l) => (
+          {primaryLinks.map((l) => (
             <Link
               key={l.href}
               href={l.href}
               prefetch={"prefetch" in l ? l.prefetch : undefined}
               aria-current={isCurrent(l.href) ? "page" : undefined}
-              className="rounded-md px-2.5 py-2 text-[13px] font-medium text-muted-foreground transition-colors hover:bg-accent/50 hover:text-foreground xl:px-3 xl:text-sm"
+              className="whitespace-nowrap rounded-md px-2 py-2 text-[13px] font-medium text-muted-foreground transition-colors hover:bg-accent/50 hover:text-foreground xl:px-3 xl:text-sm"
             >
               {l.label}
             </Link>
+          ))}
+          {navGroups.map((g) => (
+            <NavDropdown key={g.label} label={g.label} items={g.items} isCurrent={isCurrent} />
           ))}
         </nav>
 
         {/* Right cluster */}
         <div className="flex items-center gap-2">
-          <FloatingSearch variant="button" className="hidden xl:flex" />
+          <FloatingSearch variant="button" className="hidden lg:flex" />
 
           <Link
             href="/#emergency"
             className="hidden items-center gap-1.5 rounded-full border border-emergency/30 bg-emergency-soft/60 px-2.5 py-1.5 text-[11px] font-bold text-[oklch(0.4_0.16_25)] transition-colors hover:bg-emergency/10 sm:flex xl:px-3 xl:text-xs"
           >
             <Phone className="h-3 w-3" strokeWidth={2.5} />
-            Emergency
+            <span className="hidden xl:inline">Emergency</span>
+            <span className="sr-only xl:hidden">Emergency</span>
           </Link>
 
           {/* Auth button */}

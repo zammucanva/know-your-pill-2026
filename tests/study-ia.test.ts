@@ -53,16 +53,18 @@ describe("study mode IA — single top-level learning destination", () => {
   test("navLinks are exactly the unified destinations (Study Mode, Medicine, 3D Anatomy and Synapse Studio included)", () => {
     const src = read(NAVBAR);
     const hrefs = [...src.matchAll(/href: "([^"]+)"/g)].map((m) => m[1]);
+    // Source order: the always-visible links first, then the grouped
+    // menus (Explore, then Visual tools). Every destination appears once.
     expect(hrefs).toEqual([
       "/learn",
-      "/psychiatry",
+      "/study",
       "/drugs",
       "/interactions",
+      "/psychiatry",
       "/#substances",
-      "/study",
+      "/medicine",
       "/anatomy",
       "/synapse-studio",
-      "/medicine",
     ]);
   });
 

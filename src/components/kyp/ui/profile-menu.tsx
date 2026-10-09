@@ -161,7 +161,7 @@ export function ProfileMenu({
         aria-expanded={open}
         aria-label={`Account menu for ${user.name}`}
         className={cn(
-          "flex items-center gap-2.5 rounded-full border border-border/60 bg-muted/40 py-1 pl-1 pr-2.5 outline-none transition-colors",
+          "flex items-center gap-1.5 rounded-full border border-border/60 bg-muted/40 py-1 pl-1 pr-2 outline-none transition-colors",
           "hover:border-brand/40 focus-visible:ring-2 focus-visible:ring-brand/60",
           open && "border-brand/40"
         )}
@@ -169,14 +169,6 @@ export function ProfileMenu({
         <span className="rounded-full bg-gradient-to-br from-brand via-sky-400 to-violet-400 p-[2px]">
           <span className="flex h-7 w-7 items-center justify-center rounded-full bg-background text-[11px] font-bold text-brand">
             {initialsOf(user.name)}
-          </span>
-        </span>
-        <span className="hidden min-w-0 text-left leading-tight xl:block">
-          <span className="block max-w-[8rem] truncate text-xs font-semibold text-foreground">
-            {user.name}
-          </span>
-          <span className="block max-w-[8rem] truncate text-[10px] text-muted-foreground">
-            {user.email}
           </span>
         </span>
         <ChevronDown
