@@ -2,8 +2,9 @@
 
 import * as React from "react";
 import { useRouter } from "next/navigation";
-import { Loader2, Play, RotateCcw, Square } from "lucide-react";
+import { Play, RotateCcw, Square } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { KypLoader } from "@/components/kyp/ui/kyp-loader";
 import { MAX_PER_REQUEST } from "@/lib/kyp/question-factory/request";
 import { StoredHistory } from "@/lib/kyp/question-factory/history";
 import { stageFactoryQuiz, FACTORY_QUIZ_PARAM, markQuizSeen } from "@/lib/kyp/question-factory/handoff";
@@ -270,9 +271,11 @@ export function FactoryBuilder() {
   }
   if (!loaded) {
     return (
-      <p role="status" className="mt-10 flex items-center gap-2 text-sm text-muted-foreground">
-        <Loader2 className="h-4 w-4 animate-spin" aria-hidden /> Loading the reviewed content…
-      </p>
+      <KypLoader
+        title="Loading the reviewed content…"
+        subtitle="Preparing the medications and source facts on your device."
+        delayMs={200}
+      />
     );
   }
 

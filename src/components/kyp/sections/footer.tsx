@@ -64,7 +64,7 @@ export function Footer() {
         <Reveal>
           {/* Massive closing typography */}
           <p
-            className="font-serif font-bold text-muted-foreground/[0.06] tracking-[-0.04em] leading-none mb-16 select-none"
+            className="font-serif font-bold text-center text-muted-foreground/[0.06] tracking-[-0.04em] leading-none mb-16 select-none"
             style={{ fontSize: "clamp(3rem, 12vw, 8rem)" }}
           >
             Know Your Pill

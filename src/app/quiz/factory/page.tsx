@@ -4,6 +4,7 @@ import { Navbar } from "@/components/kyp/sections/navbar";
 import { Footer } from "@/components/kyp/sections/footer";
 import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
+import { KypLoader } from "@/components/kyp/ui/kyp-loader";
 import { FactoryBuilder } from "./factory-builder";
 
 /**
@@ -48,9 +49,11 @@ export default function QuestionFactoryPage() {
             </p>
             <React.Suspense
               fallback={
-                <p role="status" className="mt-10 text-sm text-muted-foreground">
-                  Loading the question factory…
-                </p>
+                <KypLoader
+                  title="Preparing the question factory…"
+                  subtitle="Loading the reviewed content."
+                  delayMs={200}
+                />
               }
             >
               <FactoryBuilder />

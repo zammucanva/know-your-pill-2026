@@ -1,5 +1,6 @@
 "use client";
 
+import { KypLoader } from "@/components/kyp/ui/kyp-loader";
 import * as React from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -126,9 +127,12 @@ export default function MistakeBookPage() {
                 >
                   Mistake Book
                 </h1>
-                <p role="status" className="mt-6 max-w-xl text-body-lg text-muted-foreground leading-relaxed">
-                  Loading your mistake book…
-                </p>
+                <KypLoader
+                  className="-mx-4 mt-2"
+                  title="Opening your mistake book…"
+                  subtitle="Loading the questions you saved to revisit."
+                  delayMs={200}
+                />
               </Reveal>
             </Container>
           </Section>

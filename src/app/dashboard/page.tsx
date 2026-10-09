@@ -4,6 +4,8 @@ import * as React from "react";
 import { useRouter } from "next/navigation";
 
 import { DashboardShell } from "@/components/kyp/dashboard/shell";
+import { FirstLoginIntro } from "@/components/kyp/dashboard/first-login-intro";
+import { KypLoader } from "@/components/kyp/ui/kyp-loader";
 import { StatsRow, WelcomeHero } from "@/components/kyp/dashboard/modules-hero";
 import {
   ContinueLearningCard, DailyGoalCard, LearningProgress,
@@ -40,19 +42,6 @@ interface SessionUser {
   name: string;
   email: string;
   learnerType: string;
-}
-
-/** Placeholder for a module whose data is still arriving. */
-function SkeletonCard({ className }: { className?: string }) {
-  return (
-    <div
-      aria-hidden
-      className={
-        "animate-pulse rounded-xl border border-border/60 bg-card/60 motion-reduce:animate-none " +
-        (className ?? "h-40")
-      }
-    />
-  );
 }
 
 export default function DashboardPage() {
@@ -137,6 +126,22 @@ export default function DashboardPage() {
     });
   };
 
+  // Session, progress and bookmarks are requested together; until they
+  // settle the shell stays on screen and the content area shows the
+  // shared KYP loader (short delay so a fast response never flashes it).
+  if (loading) {
+    return (
+      <DashboardShell user={null}>
+        <KypLoader
+          variant="page"
+          title="Preparing your dashboard…"
+          subtitle="Loading your personalised learning experience."
+          delayMs={150}
+        />
+      </DashboardShell>
+    );
+  }
+
   // Real counts only. The medication library total comes from the
   // generated platform stats (single source of truth).
   const medicationTotal = Number(platformStats[0]?.value ?? 0) || 145;
@@ -146,25 +151,22 @@ export default function DashboardPage() {
 
   return (
     <DashboardShell user={user ? { name: user.name, email: user.email } : null}>
+      {user && <FirstLoginIntro email={user.email} />}
       <WelcomeHero
         name={user?.name ?? null}
         progress={progress}
         learnerType={user?.learnerType}
       />
 
-      {loading ? (
-        <SkeletonCard className="h-24" />
-      ) : (
-        <StatsRow
-          pagesExplored={progress.length}
-          medicationsStudied={medicationsStudied}
-          medicationTotal={medicationTotal}
-          mcqsAnswered={mcqsAnswered}
-          bookmarks={bookmarks.length}
-        />
-      )}
+      <StatsRow
+        pagesExplored={progress.length}
+        medicationsStudied={medicationsStudied}
+        medicationTotal={medicationTotal}
+        mcqsAnswered={mcqsAnswered}
+        bookmarks={bookmarks.length}
+      />
 
-      {loading ? <SkeletonCard className="h-36" /> : <ContinueLearningCard progress={progress} />}
+      <ContinueLearningCard progress={progress} />
 
       {mounted && studyReminders && <DailyGoalCard />}
 
@@ -175,7 +177,7 @@ export default function DashboardPage() {
       */}
       <div className="grid grid-cols-1 gap-[var(--dash-gap,1.25rem)] lg:grid-cols-2 lg:items-start">
         <div className="order-1 lg:col-start-1 lg:row-start-1">
-          {loading ? <SkeletonCard className="h-56" /> : <LearningProgress progress={progress} />}
+          <LearningProgress progress={progress} />
         </div>
         <div className="order-4 lg:col-start-2 lg:row-start-1">
           <QuickActions />
@@ -187,19 +189,11 @@ export default function DashboardPage() {
         )}
         {(mounted ? showRecentlyVisited : true) && (
           <div className="order-2 lg:col-span-2">
-            {loading ? (
-              <SkeletonCard className="h-44" />
-            ) : (
-              <RecentlyVisited progress={progress} onCleared={() => setProgress([])} />
-            )}
+            <RecentlyVisited progress={progress} onCleared={() => setProgress([])} />
           </div>
         )}
         <div className="order-3 lg:col-span-2">
-          {loading ? (
-            <SkeletonCard className="h-44" />
-          ) : (
-            <SavedKnowledge bookmarks={bookmarks} onRemoved={removeBookmark} />
-          )}
+          <SavedKnowledge bookmarks={bookmarks} onRemoved={removeBookmark} />
         </div>
         <div className="order-6 lg:col-span-2">
           <EmergencyCard />
