@@ -2,6 +2,7 @@
 
 import { ProfileMenu } from "@/components/kyp/ui/profile-menu";
 import { NavDropdown } from "@/components/kyp/ui/nav-dropdown";
+import { ActionSearchBar } from "@/components/kyp/ui/action-search-bar";
 import * as React from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -202,7 +203,7 @@ export function Navbar({ intro }: { intro?: NavbarIntro } = {}) {
 
         {/* Right cluster */}
         <div className="flex items-center gap-2">
-          <FloatingSearch variant="button" className="hidden lg:flex" />
+          <ActionSearchBar className="hidden lg:block" />
 
           <Link
             href="/#emergency"
