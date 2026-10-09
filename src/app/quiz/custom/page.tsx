@@ -4,6 +4,7 @@ import { Navbar } from "@/components/kyp/sections/navbar";
 import { Footer } from "@/components/kyp/sections/footer";
 import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
+import { KypLoader } from "@/components/kyp/ui/kyp-loader";
 import { CustomTestBuilder } from "./custom-test-builder";
 
 /**
@@ -71,9 +72,11 @@ function CustomTestShellFallback() {
           drawn from the same reviewed KYP content you study: nothing
           invented, nothing outside the library.
         </p>
-        <p role="status" className="mt-10 text-sm text-muted-foreground">
-          Loading the test builder…
-        </p>
+        <KypLoader
+          title="Preparing the test builder…"
+          subtitle="Loading the medications and question pools."
+          delayMs={200}
+        />
       </Container>
     </Section>
   );

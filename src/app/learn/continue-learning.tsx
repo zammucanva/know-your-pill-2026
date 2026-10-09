@@ -1,5 +1,6 @@
 "use client";
 
+import { KypLoader } from "@/components/kyp/ui/kyp-loader";
 import * as React from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -57,7 +58,7 @@ export function ContinueLearningSection() {
         </Reveal>
 
         {loading ? (
-          <p className="text-body-sm text-muted-foreground">Loading…</p>
+          <KypLoader variant="compact" title="Loading your recent courses…" delayMs={200} />
         ) : progress.length > 0 ? (
           <div className="space-y-px">
             {progress.map((p, i) => (

@@ -132,6 +132,7 @@ export function DashboardHeader({
         </button>
         <Link
           href={LANDING_PAGE_HREF[defaultLandingPage]}
+          data-kyp-brand
           className="flex items-center gap-2.5 rounded-lg outline-none focus-visible:ring-2 focus-visible:ring-brand/60"
           aria-label={`Know Your Pill, go to ${defaultLandingPage === "dashboard" ? "your dashboard" : defaultLandingPage}`}
         >
