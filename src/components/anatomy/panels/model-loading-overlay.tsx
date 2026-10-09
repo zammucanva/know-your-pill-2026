@@ -46,7 +46,7 @@ export function ModelLoadingOverlay() {
 
   if (error) {
     return (
-      <div className="absolute inset-0 z-20 flex items-center justify-center bg-[var(--background)]/80 backdrop-blur-sm">
+      <div className="pointer-events-auto absolute inset-0 z-20 flex items-center justify-center bg-[var(--background)]/80 backdrop-blur-sm">
         <div
           role="alert"
           className="w-80 max-w-[calc(100%-2rem)] rounded-2xl border border-[var(--emergency)]/30 bg-[var(--card)] px-5 py-4 text-center shadow-[var(--shadow-emergency)]"
@@ -73,7 +73,7 @@ export function ModelLoadingOverlay() {
   }
 
   return (
-    <div className="absolute inset-0 z-20 flex items-center justify-center bg-[var(--background)]/80 backdrop-blur-md">
+    <div className="pointer-events-auto absolute inset-0 z-20 flex items-center justify-center bg-[var(--background)]/80 backdrop-blur-md">
       <KypLoader
         variant="section"
         title="Preparing 3D Anatomy…"
