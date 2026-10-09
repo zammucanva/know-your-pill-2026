@@ -117,7 +117,7 @@ export function BrainModePanel() {
   const isSearching = query.trim().length > 0;
 
   return (
-    <div className="kyp-scroll absolute left-3 top-1/2 z-10 flex max-h-[78vh] w-72 -translate-y-1/2 flex-col overflow-y-auto rounded-2xl border border-[var(--border)] bg-[var(--card)]/95 shadow-[var(--shadow-lift)] backdrop-blur-xl">
+    <div className="kyp-scroll pointer-events-auto absolute left-3 top-1/2 z-10 flex max-h-[78vh] w-72 -translate-y-1/2 flex-col overflow-y-auto rounded-2xl border border-[var(--border)] bg-[var(--card)]/95 shadow-[var(--shadow-lift)] backdrop-blur-xl">
       {/* Header */}
       <div className="sticky top-0 flex items-center justify-between border-b border-[var(--border)] bg-[var(--card)]/95 px-3 py-2.5 backdrop-blur-xl">
         <div className="flex items-center gap-2">

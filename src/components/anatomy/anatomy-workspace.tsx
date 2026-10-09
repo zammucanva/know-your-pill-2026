@@ -52,7 +52,9 @@ export function AnatomyWorkspace() {
           <div className="absolute inset-0">
             <AnatomyCanvas />
           </div>
-          <div className="absolute inset-0">
+          {/* Chrome layer: pointer-events-none so hover, click, drag and wheel reach the canvas
+              underneath; each control below opts back in with pointer-events-auto. */}
+          <div className="pointer-events-none absolute inset-0">
             <ModelLoadingOverlay />
             <ViewportToolbar />
             <BrainModePanel />
