@@ -78,6 +78,41 @@ const nextConfig: NextConfig = {
                 ...productionOnly,
               ],
             },
+            // The proxied Firebase auth handler embeds an iframe from this
+            // same origin, which the blanket DENY / frame-ancestors 'none'
+            // above would block. Allow same-origin framing for these
+            // paths only (later rules override earlier ones per key).
+            {
+              source: "/__/auth/:path*",
+              headers: [
+                { key: "X-Frame-Options", value: "SAMEORIGIN" },
+                ...(process.env.NODE_ENV === "production"
+                  ? [
+                      {
+                        key: "Content-Security-Policy",
+                        value: CONTENT_SECURITY_POLICY.replace(
+                          "frame-ancestors 'none'",
+                          "frame-ancestors 'self'"
+                        ),
+                      },
+                    ]
+                  : []),
+              ],
+            },
+          ];
+        },
+        // Same-origin Firebase auth handler. Safari and other browsers that
+        // partition third-party storage cannot finish a Google redirect
+        // sign-in when the handler lives on <project>.firebaseapp.com, so
+        // the handler is served from this site's own host instead (the
+        // client points authDomain at the page host; see firebase-client).
+        // Skipped when no auth domain is configured (CI, previews).
+        rewrites: async () => {
+          const authDomain = process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN;
+          if (!authDomain) return [];
+          return [
+            { source: "/__/auth/:path*", destination: `https://${authDomain}/__/auth/:path*` },
+            { source: "/__/firebase/init.json", destination: `https://${authDomain}/__/firebase/init.json` },
           ];
         },
         // Redirect legacy .html routes to canonical clean URLs
