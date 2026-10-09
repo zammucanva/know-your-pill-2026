@@ -1,21 +1,21 @@
 "use client";
 
 import * as React from "react";
-import { Loader2 } from "lucide-react";
+import { KypLoader } from "@/components/kyp/ui/kyp-loader";
 
 /**
- * LoadingGate — Suspense fallback while the 3D engine loads.
- * Shown for ~1-2 seconds on first entry to the anatomy explorer.
+ * LoadingGate: Suspense fallback while the 3D engine loads.
+ * Uses the shared KYP loader so every blocking load looks the same.
  */
 export function LoadingGate() {
   return (
     <div className="flex h-full w-full items-center justify-center">
-      <div className="flex flex-col items-center gap-3">
-        <Loader2 size={28} className="animate-spin text-[var(--primary)]" />
-        <p className="text-sm text-[var(--muted-foreground)]">
-          Loading 3D engine…
-        </p>
-      </div>
+      <KypLoader
+        variant="section"
+        title="Loading the 3D engine…"
+        subtitle="Preparing the viewer on your device."
+        delayMs={200}
+      />
     </div>
   );
 }

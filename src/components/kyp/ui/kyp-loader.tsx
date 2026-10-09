@@ -57,6 +57,8 @@ export interface KypLoaderProps extends Omit<React.HTMLAttributes<HTMLDivElement
   greeting?: boolean;
   /** Wait this long before showing, so instant loads never flash. */
   delayMs?: number;
+  /** Real progress, 0 to 100, when the operation reports it. Omit when it does not. */
+  progress?: number | null;
 }
 
 const SIZE: Record<KypLoaderSize, { box: string; title: string; sub: string; greet: string }> = {
@@ -141,7 +143,9 @@ export function KypLoader({
   variant = "section",
   greeting = true,
   delayMs = 0,
+  progress = null,
   className,
+  children,
   ...props
 }: KypLoaderProps) {
   const reduced = useReducedMotion();
@@ -208,6 +212,27 @@ export function KypLoader({
         <p className={cn("tracking-tight text-foreground", cfg.title)}>{title}</p>
         {subtitle && <p className={cn("leading-relaxed text-muted-foreground", cfg.sub)}>{subtitle}</p>}
       </div>
+      {progress !== null && (
+        <div className="flex flex-col items-center gap-1.5">
+          <div
+            role="progressbar"
+            aria-label={title}
+            aria-valuemin={0}
+            aria-valuemax={100}
+            aria-valuenow={Math.round(progress)}
+            className="h-1.5 w-48 overflow-hidden rounded-full bg-border/60"
+          >
+            <div
+              className="h-full rounded-full bg-brand transition-[width] duration-300 motion-reduce:transition-none"
+              style={{ width: `${Math.max(0, Math.min(100, progress))}%` }}
+            />
+          </div>
+          <span aria-hidden className="text-xs tabular-nums text-muted-foreground">
+            {Math.round(progress)}%
+          </span>
+        </div>
+      )}
+      {children}
     </div>
   );
 }

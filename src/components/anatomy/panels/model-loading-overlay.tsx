@@ -1,6 +1,7 @@
 "use client";
 
 import { RotateCw } from "lucide-react";
+import { KypLoader } from "@/components/kyp/ui/kyp-loader";
 import {
   useModelLoadingStore,
   type ModelErrorCategory,
@@ -72,24 +73,18 @@ export function ModelLoadingOverlay() {
   }
 
   return (
-    <div className="absolute inset-0 z-20 flex items-center justify-center bg-[var(--background)]/70 backdrop-blur-md">
-      <div className="flex flex-col items-center gap-3 rounded-2xl border border-[var(--border)] bg-[var(--card)] px-8 py-6 shadow-[var(--shadow-lift)]">
-        <div
-          role="progressbar"
-          aria-label="Anatomy model loading progress"
-          aria-valuemin={0}
-          aria-valuemax={100}
-          aria-valuenow={progress}
-          className="h-2 w-56 overflow-hidden rounded-full bg-[var(--secondary)]"
-        >
-          <div
-            className="h-full bg-[var(--brand)] transition-all duration-300"
-            style={{ width: `${progress}%` }}
-          />
-        </div>
-        <p className="text-sm text-[var(--muted-foreground)]">Loading anatomy… {progress}%</p>
-        <p className="text-[11px] text-[var(--muted-foreground)]/70">2,234 structures · BodyParts3D CC BY 4.0</p>
-      </div>
+    <div className="absolute inset-0 z-20 flex items-center justify-center bg-[var(--background)]/80 backdrop-blur-md">
+      <KypLoader
+        variant="section"
+        title="Preparing 3D Anatomy…"
+        subtitle="Loading the anatomy model on your device."
+        progress={progress}
+        greeting={false}
+      >
+        <p className="text-[11px] text-[var(--muted-foreground)]/70">
+          2,234 structures · BodyParts3D CC BY 4.0
+        </p>
+      </KypLoader>
     </div>
   );
 }
