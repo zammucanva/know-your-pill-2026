@@ -4,6 +4,7 @@ import * as React from "react";
 import { Target } from "lucide-react";
 
 import { ModuleCard, ModuleHeader } from "@/components/kyp/dashboard/modules-hero";
+import { StudyActivityRings } from "@/components/kyp/sections/study/study-activity-rings";
 import { useLocalProgress } from "@/lib/kyp/progress/use-local-progress";
 
 /**
@@ -30,10 +31,11 @@ export function StudyProgressCard({ children }: { children: React.ReactNode }) {
     <ModuleCard id="progress">
       <ModuleHeader icon={Target} title="Your progress" aside="Kept on this device" />
       <div className="px-5 pb-5">
+        <StudyActivityRings className="py-6" />
         {hasAnything ? (
           children
         ) : (
-          <p className="pt-5 text-sm leading-relaxed text-muted-foreground">
+          <p className="text-sm leading-relaxed text-muted-foreground">
             Nothing to show yet. Reviews due, questions to revisit, topic accuracy and practice
             history appear here once you start practising.
           </p>
