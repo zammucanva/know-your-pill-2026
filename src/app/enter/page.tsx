@@ -48,10 +48,24 @@ export default function EnterPage() {
   }, []);
 
   // Track scroll progress of the 100vh spacer
-  const { scrollYProgress } = useScroll({
+  const { scrollYProgress: rawScrollProgress } = useScroll({
     target: spacerRef,
     offset: ["start start", "end start"],
   });
+
+  // Every derived value below reads this plain MotionValue, not the raw
+  // scroll-linked one. Derived opacities of the raw value get promoted by
+  // framer-motion to browser scroll-timeline animations, and once the
+  // spacer has scrolled out of view those animations finish and drop back
+  // to the base style (opacity 1 / 0): the hero wordmark stayed on screen,
+  // the header never appeared and the scroll hint never faded. Feeding the
+  // progress through a manually-set MotionValue keeps all of it JS-driven
+  // and identical in every browser.
+  const scrollYProgress = useMotionValue(0);
+  React.useEffect(() => {
+    scrollYProgress.set(rawScrollProgress.get());
+  }, [rawScrollProgress, scrollYProgress]);
+  useMotionValueEvent(rawScrollProgress, "change", (v) => scrollYProgress.set(v));
 
   // Header fades in during the cross-fade window (0.50 → 0.72)
   const scrollHeaderOpacity = useTransform(
