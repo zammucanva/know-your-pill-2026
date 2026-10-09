@@ -88,7 +88,7 @@ window.KYPStudioMount = function (root) {
     syn.setDrug(d, {});
     renderPanel(d);
     go("brain");
-    history.replaceState(history.state, "", "#" + id);
+    X.writeHash();
   }
 
   function go(view, regionId) {
@@ -128,6 +128,7 @@ window.KYPStudioMount = function (root) {
     renderLegend(); renderPhases(); updateGauges(); tick(0, true);
     $("stage").classList.toggle("nolabels", !$("chkLabels").checked);
     $("stage").classList.toggle("v-syn", isSyn); $("stage").classList.toggle("v-brain", !isSyn);
+    X.writeHash();
   }
 
   function active() { return S.view === "synapse" ? syn : brain; }
@@ -163,6 +164,7 @@ window.KYPStudioMount = function (root) {
       (d.simplifications ? '<h3>What this animation simplifies</h3><p class="small">' + esc(d.simplifications) + "</p>" : "") +
       '<h3>Basis</h3><p class="small">' + esc(d.evidence) + "</p>";
     $("panel").querySelectorAll(".rlist li").forEach((li) => li.addEventListener("click", () => go("synapse", li.dataset.r)));
+    X.decoratePanel(d);
   }
 
   /* ------------------------------------------------------------------- gauges */
@@ -233,6 +235,7 @@ window.KYPStudioMount = function (root) {
   });
 
   loadCustom();
+  const X = window.KYPStudioExtras({ root, $, S, LIB, C, ACTIONS, esc, pick: (id) => pick(id), isDead: () => dead });
   window.__app = { setDrug, go, S, syn, brain, validateDrug, LIB };
   // full screen page + controls
   const col = $("stageCol"), fsSel = $("fsDrug");
@@ -243,6 +246,7 @@ window.KYPStudioMount = function (root) {
   }
   function pick(id) {
     if (!LIB[id]) return;
+    sug.hidden = true; q.value = LIB[id].name;
     const view = S.view;
     setDrug(id);
     if (view === "synapse") go("synapse", LIB[id].regions[0] && LIB[id].regions[0].id);
@@ -299,8 +303,9 @@ window.KYPStudioMount = function (root) {
   $("btnGfx").addEventListener("click", () => $("dlgGfx").showModal());
   applyGfx(null);
 
-  const start = (location.hash || "").slice(1);
-  setDrug(LIB[start] ? start : "clonazepam");
+  const start = X.parseHash();
+  setDrug(LIB[start.id] ? start.id : "clonazepam");
+  if (LIB[start.id] && start.view === "synapse") go("synapse", start.region || (S.drug.regions[0] && S.drug.regions[0].id));
   q.value = "";
   raf = requestAnimationFrame(loop);
 
