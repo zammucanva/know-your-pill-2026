@@ -17,11 +17,9 @@ const AnatomyCanvas = dynamic(
   () => import("@/components/anatomy/anatomy-canvas").then((m) => m.AnatomyCanvas),
   {
     ssr: false,
-    loading: () => (
-      <div className="flex h-full w-full items-center justify-center">
-        <p className="text-sm text-[var(--muted-foreground)]">Starting 3D engine…</p>
-      </div>
-    ),
+    // The viewport's loading overlay already shows the KYP loader from the
+    // first frame, so this fallback stays empty rather than doubling it.
+    loading: () => null,
   }
 );
 
