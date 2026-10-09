@@ -1,5 +1,6 @@
 "use client";
 
+import { ProfileMenu } from "@/components/kyp/ui/profile-menu";
 import * as React from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -162,23 +163,8 @@ export function Navbar() {
 
           {/* Auth button */}
           {user ? (
-            <div className="hidden items-center gap-2 sm:flex">
-              <Link
-                href="/dashboard"
-                className="flex items-center gap-1.5 rounded-full border border-border/60 bg-muted/40 px-3 py-1.5 text-xs font-medium text-foreground transition-colors hover:border-brand/40 hover:text-brand"
-              >
-                <UserIcon className="h-3 w-3 text-brand" />
-                {user.name}
-              </Link>
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={handleLogout}
-                aria-label="Log out"
-                className="h-9 w-9 rounded-full"
-              >
-                <LogOut className="h-4 w-4" />
-              </Button>
+            <div className="hidden sm:block">
+              <ProfileMenu user={user} onLogout={handleLogout} />
             </div>
           ) : (
             /* Static export: no auth backend exists — hide the Log in
