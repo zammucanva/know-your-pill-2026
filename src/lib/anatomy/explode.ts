@@ -46,11 +46,11 @@ export const DEFAULT_EXPLODE_DISTANCE = 0.3;
  * Nervous distance=0 because it contains the brain.
  */
 export const EXPLODE_LAYOUT: Record<string, ExplodeLayoutEntry> = {
-  skeletal:       { direction: [0, 0, -1], distance: 0.03 },
+  skeletal:       { direction: [0, 0, 0],  distance: 0.00 }, // the frame stays put
   nervous:        { direction: [0, 0, 0],  distance: 0.00 },
   muscular:       { direction: [0, 0, 0],  distance: 0.00 }, // per-part shader
-  integumentary:  { direction: [-1, 0, 0], distance: 0.30 },
-  connective:     { direction: [0, 0, -1], distance: 0.15 },
+  integumentary:  { direction: [0, 0, 0],  distance: 0.00 },
+  connective:     { direction: [0, 0, 0],  distance: 0.00 }, // small loose fragments, moving them just scatters shards
   cardiac:        { direction: [-1, 0, 0], distance: 0.06 },
   respiratory:    { direction: [0, 0, 1],  distance: 0.05 },
   arterial:       { direction: [1, 0, 0],  distance: 0.08 },
@@ -97,8 +97,15 @@ export const MUSCLE_GROUP_EXPLODE: Record<string, MuscleGroupConfig> = {
 };
 
 /**
- * Classify a muscle part into a spatial group based on centroid + name.
+ * Classify a muscle part for the exploded view.
+ *
+ * Every muscle moves radially away from the body's vertical axis, so the
+ * spread reads from ANY camera angle (front, side, top) instead of only along
+ * the viewing axis. Lateral travel is weighted up (x * 2.4) so the front view
+ * visibly opens like a flower; large, deep or midline muscles move least.
  */
+const BODY_AXIS_Z = 0.03;
+
 export function classifyMusclePart(
   part: { bounds: [number[], number[]]; conceptId: string },
   partName: string
@@ -111,24 +118,18 @@ export function classifyMusclePart(
   if (name.includes("diaphragm")) return MUSCLE_GROUP_EXPLODE["diaphragm"];
   if (name.includes("papillary") || name.includes("ventricle"))
     return MUSCLE_GROUP_EXPLODE["deep_thoracic"];
-  if (cy > 1.5) return MUSCLE_GROUP_EXPLODE["head_neck"];
-  if (Math.abs(cx) > 0.15) {
-    if (cx > 0) return cy > 0.7 ? MUSCLE_GROUP_EXPLODE["upper_limb_right"] : MUSCLE_GROUP_EXPLODE["lower_limb_right"];
-    return cy > 0.7 ? MUSCLE_GROUP_EXPLODE["upper_limb_left"] : MUSCLE_GROUP_EXPLODE["lower_limb_left"];
-  }
-  if (cx > 0.10) return MUSCLE_GROUP_EXPLODE["right_lateral"];
-  if (cx < -0.10) return MUSCLE_GROUP_EXPLODE["left_lateral"];
-  if (cy > 1.1 && cy < 1.5) {
-    if (cz > 0.02) return MUSCLE_GROUP_EXPLODE["anterior_thoracic"];
-    if (cz < -0.02) return MUSCLE_GROUP_EXPLODE["posterior_thoracic"];
-    return MUSCLE_GROUP_EXPLODE["deep_thoracic"];
-  }
-  if (cy > 0.7 && cy < 1.1) {
-    if (cz > 0.02) return MUSCLE_GROUP_EXPLODE["anterior_abdominal"];
-    if (cz < -0.02) return MUSCLE_GROUP_EXPLODE["posterior_abdominal"];
-    return MUSCLE_GROUP_EXPLODE["deep_thoracic"];
-  }
-  return cx > 0 ? MUSCLE_GROUP_EXPLODE["lower_limb_right"] : MUSCLE_GROUP_EXPLODE["lower_limb_left"];
+
+  let dx = cx * 2.4;
+  let dy = cy > 1.5 ? 0.2 : 0; // head and neck lift slightly
+  let dz = cz - BODY_AXIS_Z;
+  const len = Math.hypot(dx, dy, dz);
+  if (len < 0.03) return MUSCLE_GROUP_EXPLODE["deep_thoracic"]; // on the axis: leave in place
+  dx /= len; dy /= len; dz /= len;
+
+  let distance = 0.27;
+  if (cy > 1.5) distance = 0.08; // head and neck
+  else if (Math.abs(cx) > 0.15) distance = cy > 0.7 ? 0.26 : 0.2; // arms, legs
+  return { direction: [dx, dy, dz], distance };
 }
 
 // ── System-level explode computation ────────────────────────────────

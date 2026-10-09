@@ -6,7 +6,7 @@ import { useThree, type ThreeEvent } from "@react-three/fiber";
 import { useAnatomyModel, type BP3DAtlas } from "@/lib/hooks/use-anatomy-model";
 import { useAnatomyStore } from "@/lib/anatomy/store/anatomy-store";
 import { useCameraStore } from "@/lib/anatomy/store/camera-store";
-import { isBrainVentriclePart } from "@/lib/anatomy/kyp-normalization";
+import { ALL_BRAIN_CONCEPT_IDS } from "@/lib/anatomy/brain-registry";
 import {
   computeExplodeOffsets,
   computeBrainExplodeOffsets,
@@ -16,8 +16,8 @@ import {
 } from "@/lib/anatomy/explode";
 
 const SYSTEM_COLORS: Record<string, string> = {
-  skeletal: "#e2d9ba", muscular: "#a85b50", cardiac: "#b96760", sensory: "#b0c8ce",
-  arterial: "#c05245", venous: "#527c9f", nervous: "#d8b565", respiratory: "#b98991",
+  skeletal: "#e8dfc4", muscular: "#9c3f38", cardiac: "#b96760", sensory: "#b0c8ce",
+  arterial: "#c05245", venous: "#527c9f", nervous: "#d9b8aa", respiratory: "#b98991",
   digestive: "#b8916b", urinary: "#b47961", lymphatic: "#879f7c", endocrine: "#c5a09a",
   reproductive: "#bda098", integumentary: "#ba9b7d", connective: "#aec3bb",
 };
@@ -39,18 +39,11 @@ export function AnatomyModel() {
   const explodeLevel = useCameraStore((s) => s.explodeLevel);
   const brainModeActive = useAnatomyStore((s) => s.brainModeActive);
 
-  const bp3dToOurs: Record<string, string> = {
-    skeletal: "skeletal", muscular: "muscular", nervous: "nervous",
-    cardiac: "cardiovascular", arterial: "cardiovascular", venous: "cardiovascular",
-    respiratory: "respiratory", digestive: "digestive", endocrine: "endocrine",
-    urinary: "urinary", reproductive: "reproductive", lymphatic: "lymphatic",
-    integumentary: "integumentary", sensory: "nervous", connective: "skeletal",
-  };
-
-  const isSystemVisible = React.useCallback((bp3dSystem: string): boolean => {
-    const ourSystem = bp3dToOurs[bp3dSystem] ?? bp3dSystem;
-    return systemVisibility[ourSystem as keyof typeof systemVisibility] ?? false;
-  }, [systemVisibility]);
+  // Atlas system ids and store ids are the same namespace (see SystemId in lib/anatomy/types.ts).
+  const isSystemVisible = React.useCallback(
+    (system: string): boolean => systemVisibility[system as keyof typeof systemVisibility] ?? false,
+    [systemVisibility]
+  );
 
   // System-level explode offsets (mesh.position for all systems except muscular)
   const explodeOffsets = React.useMemo<Map<string, [number, number, number]>>(() => {
@@ -60,9 +53,7 @@ export function AnatomyModel() {
     for (const sysId of SYSTEM_ORDER) {
       const sg = geometries.get(sysId);
       if (!sg || !sg.geometry.boundingBox) continue;
-      const visible = brainModeActive
-        ? sysId === "nervous" || sysId === "cardiac"
-        : isSystemVisible(sysId);
+      const visible = brainModeActive ? sysId === "nervous" : isSystemVisible(sysId);
       explodable.push({
         id: sysId,
         bounds: {
@@ -112,7 +103,7 @@ export function AnatomyModel() {
         if (!sg) return null;
         let visible: boolean;
         if (brainModeActive) {
-          visible = sysId === "nervous" || sysId === "cardiac";
+          visible = sysId === "nervous";
         } else {
           visible = isSystemVisible(sysId);
         }
@@ -235,8 +226,9 @@ function SystemMesh({
     parts.forEach((part, i) => {
       const idx = i * 4;
       let isVisible = 1;
-      if (brainModeActive && systemId === "cardiac") {
-        isVisible = isBrainVentriclePart(part.conceptId) ? 1 : 0;
+      // Brain Mode isolates the brain: the nervous system also holds spinal cord and peripheral nerves.
+      if (brainModeActive && systemId === "nervous") {
+        isVisible = ALL_BRAIN_CONCEPT_IDS.has(part.conceptId) ? 1 : 0;
       }
       data[idx] = isVisible;
       if (selectedPartId === part.id) data[idx + 1] = 1;
@@ -275,16 +267,14 @@ function SystemMesh({
 
   // ── Separate shader program per explode variant ──────────────────
   //
-  // CRITICAL: override customProgramCacheKey so Three.js compiles a
-  // SEPARATE shader when per-part explode is active. Without this,
-  // toggling explode would silently reuse the wrong program cache key.
-  React.useEffect(() => {
-    const material = materialRef.current;
-    if (!material) return;
-    (material as THREE.MeshStandardMaterial & { customProgramCacheKey?: () => string }).customProgramCacheKey =
-      () => (hasPerPartExplode ? "kyp-per-part-explode-v1" : "kyp-standard-v1");
-    material.needsUpdate = true;
-  }, [hasPerPartExplode]);
+  // The cache key must be on the material from its FIRST compile (set as a JSX prop below).
+  // Setting it later, from an effect, let every system reuse the program compiled for the
+  // muscles (whose vertex shader reads the per-part explode texture), so other systems read
+  // garbage offsets and parts flew apart.
+  const programCacheKey = React.useMemo(
+    () => () => (hasPerPartExplode ? "kyp-per-part-explode-v1" : "kyp-standard-v1"),
+    [hasPerPartExplode]
+  );
 
   // ── Raycast handlers (typed) ─────────────────────────────────────
   const handleClick = React.useCallback((e: ThreeEvent<MouseEvent>) => {
@@ -326,8 +316,8 @@ function SystemMesh({
 
   // ── Shader injection ─────────────────────────────────────────────
   const shaderHeader = hasPerPartExplode
-    ? `attribute float partIndex;\nuniform sampler2D partState;\nuniform float stateWidth;\nuniform sampler2D uExplodeState;\nuniform float uExplodeLevel;\nvarying float vPartVisible;\nvarying float vPartSelected;\nvarying float vPartHovered;\n`
-    : `attribute float partIndex;\nuniform sampler2D partState;\nuniform float stateWidth;\nvarying float vPartVisible;\nvarying float vPartSelected;\nvarying float vPartHovered;\n`;
+    ? `attribute float partIndex;\nuniform sampler2D partState;\nuniform float stateWidth;\nuniform sampler2D uExplodeState;\nuniform float uExplodeLevel;\nvarying float vPartVisible;\nvarying float vPartSelected;\nvarying float vPartHovered;\nvarying float vPartId;\n`
+    : `attribute float partIndex;\nuniform sampler2D partState;\nuniform float stateWidth;\nvarying float vPartVisible;\nvarying float vPartSelected;\nvarying float vPartHovered;\nvarying float vPartId;\n`;
 
   const vertexReplace = hasPerPartExplode
     ? `#include <begin_vertex>
@@ -335,12 +325,14 @@ function SystemMesh({
        vec4 state = texture2D(partState, stateUv);
        vec4 explodeData = texture2D(uExplodeState, stateUv);
        transformed += explodeData.xyz * explodeData.w * uExplodeLevel;
+       vPartId = partIndex;
        vPartVisible = state.x;
        vPartSelected = state.y;
        vPartHovered = state.z;`
     : `#include <begin_vertex>
        vec2 stateUv = vec2((partIndex + 0.5) / stateWidth, 0.5);
        vec4 state = texture2D(partState, stateUv);
+       vPartId = partIndex;
        vPartVisible = state.x;
        vPartSelected = state.y;
        vPartHovered = state.z;`;
@@ -356,9 +348,10 @@ function SystemMesh({
       <meshStandardMaterial
         ref={materialRef}
         color={color}
-        metalness={0.08}
-        roughness={0.53}
+        metalness={0.04}
+        roughness={systemId === "skeletal" ? 0.62 : 0.42}
         side={THREE.DoubleSide}
+        customProgramCacheKey={programCacheKey}
         transparent={systemId === "integumentary"}
         opacity={systemId === "integumentary" ? 0.1 : 1}
         depthWrite={systemId !== "integumentary"}
@@ -374,7 +367,7 @@ function SystemMesh({
           shader.vertexShader = shaderHeader + shader.vertexShader;
           shader.vertexShader = shader.vertexShader.replace("#include <begin_vertex>", vertexReplace);
           shader.fragmentShader =
-            `varying float vPartVisible;\nvarying float vPartSelected;\nvarying float vPartHovered;\n` +
+            `varying float vPartVisible;\nvarying float vPartSelected;\nvarying float vPartHovered;\nvarying float vPartId;\n` +
             shader.fragmentShader;
           shader.fragmentShader = shader.fragmentShader.replace(
             "#include <clipping_planes_fragment>",
@@ -383,6 +376,8 @@ function SystemMesh({
           shader.fragmentShader = shader.fragmentShader.replace(
             "#include <color_fragment>",
             `#include <color_fragment>\n` +
+            `float tone = fract(sin(vPartId * 12.9898) * 43758.5453);\n` +
+            `diffuseColor.rgb *= 0.84 + 0.3 * tone;\n` +
             `diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.08, 0.58, 0.53), vPartSelected * 0.75);\n` +
             `diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.95, 0.77, 0.36), vPartHovered * 0.4);`
           );

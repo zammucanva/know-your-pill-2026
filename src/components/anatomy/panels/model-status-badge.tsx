@@ -19,7 +19,7 @@ export function ModelStatusBadge() {
         aria-hidden
       />
       <span className="text-[var(--muted-foreground)]">
-        {isPlaceholder ? "Demo asset" : "BP3D atlas"}
+        {isPlaceholder ? "Demo asset" : "Z-Anatomy atlas"}
       </span>
     </div>
   );

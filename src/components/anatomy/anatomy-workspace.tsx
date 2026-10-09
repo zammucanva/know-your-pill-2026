@@ -68,8 +68,9 @@ export function AnatomyWorkspace() {
       </div>
 
       <p className="mt-4 text-xs leading-relaxed text-[var(--muted-foreground)]">
-        Anatomy: BodyParts3D, © The Database Center for Life Science, licensed CC BY 4.0 (adult male
-        reference model, 2,234 structures). Educational use only, not a clinical tool.
+        Anatomy: Z-Anatomy (CC BY-SA 4.0) and BodyParts3D, © The Database Center for Life Science
+        (CC BY 4.0); adult male reference model, 3,101 structures. Educational use only, not a
+        clinical tool.
       </p>
     </section>
   );

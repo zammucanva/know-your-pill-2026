@@ -82,7 +82,7 @@ export function ModelLoadingOverlay() {
         greeting={false}
       >
         <p className="text-[11px] text-[var(--muted-foreground)]/70">
-          2,234 structures · BodyParts3D CC BY 4.0
+          3,101 structures · Z-Anatomy CC BY-SA 4.0 · BodyParts3D CC BY 4.0
         </p>
       </KypLoader>
     </div>

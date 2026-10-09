@@ -11,7 +11,7 @@ extending it.
 | Framework | Next.js 16 (App Router), Tailwind 4, `next-themes` | Next.js 16, Tailwind 4, own theme store |
 | Shell | `Navbar` + `Footer` per page, global theme | Own `Header`, single route with ATLAS / MECHANISM modes |
 | 3D | none | three 0.169, @react-three/fiber 9, @react-three/drei 10 |
-| Model | n/a | BodyParts3D, 2,234 structures, 15 gzip chunks + `atlas.json` |
+| Model | n/a | Hybrid Z-Anatomy + BodyParts3D, 3,101 structures, 15 gzip chunks + `atlas.json` (see `scripts/anatomy/`) |
 | State | zustand (some features) | zustand stores (selection, camera, loading) |
 
 ## What was brought over (atlas mode only)
