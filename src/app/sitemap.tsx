@@ -93,6 +93,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/study/mistakes",
     "/study/review",
     "/study/analytics",
+    "/anatomy",
     "/quiz",
     "/quiz/custom",
     "/compare",

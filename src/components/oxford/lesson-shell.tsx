@@ -46,7 +46,7 @@ import { useScrollSpy, type NavItem } from "@/lib/kyp/use-scroll-spy";
 
 const PHASE_STYLE: Record<
   LearningPhase,
-  { icon: React.ElementType; chip: string }
+  { icon: React.ComponentType<{ className?: string; "aria-hidden"?: boolean }>; chip: string }
 > = {
   understand: { icon: BookOpen, chip: "bg-brand/10 text-brand" },
   learn: { icon: Microscope, chip: "bg-brand/10 text-brand" },

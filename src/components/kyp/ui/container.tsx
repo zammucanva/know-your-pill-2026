@@ -29,8 +29,11 @@ export function Container({
   className,
   ...props
 }: ContainerProps) {
+  // ComponentType (not ElementType): @react-three/fiber augments JSX.IntrinsicElements,
+  // which breaks JSX over a polymorphic ElementType.
+  const Comp = Component as React.ComponentType<React.HTMLAttributes<HTMLElement>>;
   return (
-    <Component
+    <Comp
       className={cn("mx-auto w-full px-4 sm:px-6 lg:px-8", widthClass[width], className)}
       {...props}
     />

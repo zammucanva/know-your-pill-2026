@@ -70,7 +70,7 @@ interface SearchModalProps {
   initialQuery?: string | null;
 }
 
-const typeIcon: Record<SearchableItem["type"], React.ElementType> = {
+const typeIcon: Record<SearchableItem["type"], React.ComponentType<{ className?: string; strokeWidth?: number }>> = {
   drug: Pill,
   substance: FlaskConical,
   disease: HeartPulse,

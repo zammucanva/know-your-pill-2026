@@ -31,6 +31,7 @@ const navLinks = [
   { href: "/interactions", label: "Interactions", prefetch: false as const },
   { href: "/#substances", label: "Substances" },
   { href: "/study", label: "Study Mode" },
+  { href: "/anatomy", label: "3D Anatomy" },
   { href: "/medicine", label: "Medicine" },
 ];
 
