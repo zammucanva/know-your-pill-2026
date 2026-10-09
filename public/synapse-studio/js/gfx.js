@@ -35,7 +35,7 @@
       save(); emit(Object.keys(patch));
     },
     reset() { state = Object.assign({ quality: "high" }, PRESETS.high, { reduceMotion: reduced }); save(); emit(Object.keys(state)); },
-    subscribe(f) { subs.push(f); },
+    subscribe(f) { subs.push(f); return () => { const i = subs.indexOf(f); if (i >= 0) subs.splice(i, 1); }; },
     pulseFactor() { return { few: 0.5, normal: 1, many: 1.6 }[state.pulses] || 1; },
   };
 })(window);

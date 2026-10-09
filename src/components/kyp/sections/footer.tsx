@@ -1,6 +1,6 @@
 "use client";
 
-import { imgPath, linkPath } from "@/lib/kyp/image-path";
+import { imgPath } from "@/lib/kyp/image-path";
 import Link from "next/link";
 import { ArrowUp, Github, Mail } from "lucide-react";
 import { Container } from "@/components/kyp/ui/container";
@@ -41,7 +41,7 @@ const footerLinks = [
       { label: "Learn", href: "/learn" },
       { label: "Study Mode", href: "/study" },
       { label: "3D Anatomy", href: "/anatomy" },
-      { label: "Synapse Studio", href: "/synapse-studio/index.html" },
+      { label: "Synapse Studio", href: "/synapse-studio" },
       { label: "Medications", href: "/#library" },
       { label: "Substance Use", href: "/#substances" },
       { label: "Emergency", href: "/#emergency" },
@@ -79,9 +79,9 @@ export function Footer() {
                 <ul className="space-y-2">
                   {col.links.map((link) => (
                     <li key={link.label}>
-                      {link.href.startsWith("#") || link.href.startsWith("/synapse-studio") ? (
+                      {link.href.startsWith("#") ? (
                         <a
-                          href={link.href.startsWith("/") ? linkPath(link.href) : link.href}
+                          href={link.href}
                           className="text-body-sm text-foreground/50 transition-colors hover:text-brand"
                         >
                           {link.label}

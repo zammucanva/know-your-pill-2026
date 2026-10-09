@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ArrowRight, Brain } from "lucide-react";
 import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
@@ -6,10 +7,7 @@ import { STUDIO_DRUG_COUNT, studioHref } from "@/lib/kyp/synapse-studio";
 
 /**
  * SynapseStudioSection: homepage entry point to the Synapse Studio
- * (labelled 2D brain and synapse animations, static app in
- * /public/synapse-studio). Server Component; links are raw anchors
- * (the studio is a static page, not a Next route) routed through
- * linkPath via studioHref so the GitHub Pages basePath is applied.
+ * (labelled 2D brain and synapse animations at /synapse-studio). Server Component.
  */
 const examples = [
   { slug: "sertraline", label: "Sertraline" },
@@ -45,24 +43,24 @@ export function SynapseStudioSection() {
                 <ul className="mt-4 flex flex-wrap gap-2" aria-label="Example medications">
                   {examples.map((e) => (
                     <li key={e.slug}>
-                      <a
+                      <Link
                         href={studioHref(e.slug)}
                         className="inline-flex min-h-[36px] items-center rounded-full border border-border bg-muted/30 px-3 text-body-sm text-foreground/80 transition-colors hover:border-brand/40 hover:text-brand"
                       >
                         {e.label}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="shrink-0">
-                <a
+                <Link
                   href={studioHref()}
                   className="group inline-flex min-h-[44px] items-center gap-2 rounded-lg bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
                 >
                   Open Synapse Studio
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>

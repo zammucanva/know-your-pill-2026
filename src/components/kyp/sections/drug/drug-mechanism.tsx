@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { SectionHeader } from "@/components/kyp/ui/section-header";
@@ -82,12 +83,12 @@ export function DrugMechanismOfAction({ drug }: DrugMechanismOfActionProps) {
                 labelled 2D animation you can pause, scrub and view full screen.
               </p>
               <p className="mt-3">
-                <a
+                <Link
                   href={studioHref(drug.slug)}
                   className="inline-flex min-h-[44px] items-center rounded-md bg-brand px-4 text-body-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
                 >
                   Open Synapse Studio for {drug.genericName}
-                </a>
+                </Link>
               </p>
             </Callout>
           </div>

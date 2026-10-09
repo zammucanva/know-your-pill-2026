@@ -64,7 +64,7 @@ export function SystemsPanel() {
                     aria-label={visible ? `Hide ${system.name} system` : `Show ${system.name} system`}
                     aria-pressed={visible}
                     className="rounded-md p-1 text-[var(--muted-foreground)] transition-colors hover:bg-[var(--secondary)] hover:text-[var(--foreground)]"
-                    title={visible ? "Visible — click to hide" : "Hidden — click to show"}
+                    title={visible ? "Visible, click to hide" : "Hidden, click to show"}
                   >
                     {visible ? <Eye size={14} /> : <EyeOff size={14} />}
                   </button>
@@ -100,7 +100,7 @@ export function SystemsPanel() {
                       onClick={() => isolateSystem(isIsolated ? null : system.id)}
                       aria-label={`Isolate ${system.name} system`}
                       aria-pressed={isIsolated}
-                      title={isIsolated ? "Isolated — click to restore" : "Isolate this system"}
+                      title={isIsolated ? "Isolated, click to restore" : "Isolate this system"}
                       className={cn(
                         "rounded-md p-1 transition-all duration-[var(--duration-base)]",
                         isIsolated

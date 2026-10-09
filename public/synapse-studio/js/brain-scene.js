@@ -51,7 +51,7 @@
 
       // real mid-sagittal brain section (Z-Anatomy, CC BY-SA 4.0)
       const img = el("image", { x: 0, y: 0, width: 800, height: 560, preserveAspectRatio: "xMidYMid meet", style: "filter: drop-shadow(0 8px 24px rgba(0,0,0,.6))" }, svg);
-      img.setAttribute("href", "assets/brain_sagittal.png");
+      img.setAttribute("href", (global.KYP_ASSET_BASE || "") + "assets/brain_sagittal.png");
 
       // affected map
       const reg = {};

@@ -71,7 +71,7 @@ export const brainStructureGroups: BrainStructureGroup[] = [
   {
     id: "frontal-cortex",
     label: "Frontal Cortex",
-    description: "Frontal gyri — executive function, motor control, language",
+    description: "Frontal gyri, executive function, motor control, language",
     conceptIds: [
       "FMA72653", "FMA72654", "FMA72655", "FMA72656", "FMA72657", "FMA72658",
       "FMA72661", "FMA72662",
@@ -80,7 +80,7 @@ export const brainStructureGroups: BrainStructureGroup[] = [
   {
     id: "parietal-cortex",
     label: "Parietal Cortex",
-    description: "Parietal gyri — somatosensory processing, spatial orientation",
+    description: "Parietal gyri, somatosensory processing, spatial orientation",
     conceptIds: [
       "FMA72665", "FMA72666", "FMA72667", "FMA72668", "FMA72669", "FMA72670",
       "FMA72671", "FMA72672",
@@ -89,7 +89,7 @@ export const brainStructureGroups: BrainStructureGroup[] = [
   {
     id: "temporal-cortex",
     label: "Temporal Cortex",
-    description: "Temporal gyri — auditory processing, memory, language",
+    description: "Temporal gyri, auditory processing, memory, language",
     conceptIds: [
       "FMA72685", "FMA72686", "FMA72687", "FMA72688", "FMA72689", "FMA72690",
       "FMA72705", "FMA72706", "FMA72800", "FMA72801", "FMA72804", "FMA72805",
@@ -98,7 +98,7 @@ export const brainStructureGroups: BrainStructureGroup[] = [
   {
     id: "occipital-cortex",
     label: "Occipital Cortex",
-    description: "Occipital gyri — visual processing",
+    description: "Occipital gyri, visual processing",
     conceptIds: ["FMA72975", "FMA72976"],
   },
   {
@@ -127,7 +127,7 @@ export const brainStructureGroups: BrainStructureGroup[] = [
   {
     id: "basal-ganglia",
     label: "Basal Ganglia",
-    description: "Caudate, putamen, globus pallidus — motor control, reward",
+    description: "Caudate, putamen, globus pallidus, motor control, reward",
     conceptIds: [
       "FMA72826", "FMA72827", "FMA72828", "FMA72829", "FMA72830", "FMA72831",
     ],
@@ -135,7 +135,7 @@ export const brainStructureGroups: BrainStructureGroup[] = [
   {
     id: "limbic-system",
     label: "Limbic System",
-    description: "Hippocampus, amygdala — memory and emotion",
+    description: "Hippocampus, amygdala, memory and emotion",
     conceptIds: [
       "FMA72713", "FMA72714",         // hippocampus (left, right)
       "FMA72832", "FMA72833",         // amygdala (right, left)
@@ -160,7 +160,7 @@ export const brainStructureGroups: BrainStructureGroup[] = [
   {
     id: "brainstem",
     label: "Brainstem",
-    description: "Medulla, pons — relay, autonomic control, cranial nerves",
+    description: "Medulla, pons, relay, autonomic control, cranial nerves",
     conceptIds: ["FMA62004", "FMA67943"],
   },
   {
@@ -280,7 +280,7 @@ export const brainPresets: BrainPreset[] = [
     id: "ventricular-system",
     label: "Ventricular System",
     description:
-      "CSF chambers of the brain — lateral, third, fourth ventricles, " +
+      "CSF chambers of the brain, lateral, third, fourth ventricles, " +
       "interventricular foramen. (Normalized from cardiac → nervous.)",
     groupIds: ["ventricular-system"],
   },
