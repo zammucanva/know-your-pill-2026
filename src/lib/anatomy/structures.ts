@@ -29,7 +29,7 @@ export const structures: AnatomicalStructure[] = [
     anatomyDescription:
       "The brain is the central organ of the nervous system, located in the cranial cavity. It is divided into the cerebrum, cerebellum, and brainstem, with deep structures including the thalamus, hypothalamus, basal ganglia, and limbic system.",
     clinicalRelevance:
-      "Brain lesions produce focal neurological deficits that map to affected regions — e.g. left frontal lesions cause expressive aphasia, occipital lesions cause visual field cuts.",
+      "Brain lesions produce focal neurological deficits that map to affected regions, e.g. left frontal lesions cause expressive aphasia, occipital lesions cause visual field cuts.",
     meshName: "Brain",
     explodeVector: [0, 0.2, 0],
     explodeMagnitude: 0.15,
@@ -164,7 +164,7 @@ export const structures: AnatomicalStructure[] = [
     anatomyDescription:
       "Located posterior to the brainstem, beneath the occipital lobe. Has a highly folded cortex and deep nuclei.",
     clinicalRelevance:
-      "Damage causes ataxia, dysmetria, intention tremor, and gait instability — ipsilateral to the lesion.",
+      "Damage causes ataxia, dysmetria, intention tremor, and gait instability, ipsilateral to the lesion.",
     meshName: "Cerebellum",
     explodeVector: [0, -0.3, 0.1],
     explodeMagnitude: 0.3,

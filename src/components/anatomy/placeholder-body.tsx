@@ -175,7 +175,7 @@ export function PlaceholderBanner() {
           whiteSpace: "nowrap",
         }}
       >
-        Placeholder model — Real anatomical GLB not yet loaded
+        Placeholder model, Real anatomical GLB not yet loaded
       </div>
     </Html>
   );

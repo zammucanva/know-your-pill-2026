@@ -32,6 +32,7 @@ const navLinks = [
   { href: "/#substances", label: "Substances" },
   { href: "/study", label: "Study Mode" },
   { href: "/anatomy", label: "3D Anatomy" },
+  { href: "/synapse-studio", label: "Synapse Studio" },
   { href: "/medicine", label: "Medicine" },
 ];
 

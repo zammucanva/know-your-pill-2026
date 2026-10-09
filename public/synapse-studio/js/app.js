@@ -1,9 +1,12 @@
 /* KYP Synapse Studio — app shell: search, views, playback, gauges, drug panel, custom drugs. */
-(function () {
+window.KYPStudioMount = function (root) {
   "use strict";
+  const offs = [];
+  const on = (target, ev, fn, opt) => { target.addEventListener(ev, fn, opt); offs.push(() => target.removeEventListener(ev, fn, opt)); };
+  let dead = false, raf = 0;
   const { clamp, esc } = KYPU;
   const C = KYP_CORE, LIB = KYP_DRUGS, ACTIONS = KYP_ACTIONS, TXT = KYP_TEXT;
-  const $ = (id) => document.getElementById(id);
+  const $ = (id) => root.querySelector("#" + id);
   const LOOP = SYN_LOOP;
   const LS_KEY = "kyp-synapse-custom-v1";
 
@@ -72,7 +75,7 @@
     items.forEach((li, i) => li.classList.toggle("sel", i === selIdx));
   });
   sug.addEventListener("mousedown", (e) => { const li = e.target.closest("li[data-i]"); if (li) pick(cur[+li.dataset.i].id); });
-  document.addEventListener("click", (e) => { if (!e.target.closest(".search")) sug.hidden = true; });
+  on(document, "click", (e) => { if (!e.target.closest(".search")) sug.hidden = true; });
   function pick(id) { sug.hidden = true; q.value = LIB[id].name; setDrug(id); }
 
   /* ------------------------------------------------------------------ drug / views */
@@ -85,7 +88,7 @@
     syn.setDrug(d, {});
     renderPanel(d);
     go("brain");
-    history.replaceState(null, "", "#" + id);
+    history.replaceState(history.state, "", "#" + id);
   }
 
   function go(view, regionId) {
@@ -169,7 +172,7 @@
     $("gL2").textContent = syn.responseLabel();
     const c = clamp(g.cleft / 3, 0, 1), r = clamp(g.resp / 2.2, 0, 1);
     $("g1").style.width = (c * 100) + "%"; $("g2").style.width = (r * 100) + "%";
-    const ticks = document.querySelectorAll("#gauges .tick");
+    const ticks = root.querySelectorAll("#gauges .tick");
     ticks[0].style.left = (100 / 3) + "%"; ticks[1].style.left = (100 / 2.2) + "%";
     $("gV1").textContent = Math.round(g.cleft * 100) + "%"; $("gV2").textContent = Math.round(g.resp * 100) + "%";
   }
@@ -196,7 +199,7 @@
   let lastDraw = 0;
   function loop(now) {
     if (!fpsCap || now - lastDraw >= 1000 / fpsCap - 2) { lastDraw = now; tick(now, false); }
-    requestAnimationFrame(loop);
+    if (!dead) raf = requestAnimationFrame(loop);
   }
 
   /* --------------------------------------------------------------- UI wiring */
@@ -209,7 +212,7 @@
   $("btnZoom").addEventListener("click", () => go("synapse", S.drug.regions[0] && S.drug.regions[0].id));
   $("chkLabels").addEventListener("change", () => $("stage").classList.toggle("nolabels", !$("chkLabels").checked));
   $("chkAll").addEventListener("change", () => { brain.setShowAll($("chkAll").checked); tick(0, true); });
-  document.addEventListener("keydown", (e) => { if (e.code === "Space" && !/INPUT|TEXTAREA|SELECT/.test((e.target.tagName || ""))) { e.preventDefault(); $("btnPlay").click(); } });
+  on(document, "keydown", (e) => { if (e.code === "Space" && !/INPUT|TEXTAREA|SELECT/.test((e.target.tagName || ""))) { e.preventDefault(); $("btnPlay").click(); } });
 
   const dlg = $("dlg");
   const TEMPLATE = JSON.stringify({
@@ -251,7 +254,7 @@
     $("fsbar").hidden = !on;
     if (on) { fillFsSelect(); try { const r = col.requestFullscreen && col.requestFullscreen(); if (r && r.catch) r.catch(() => {}); } catch (e) {} }
     else if (document.fullscreenElement) { try { document.exitFullscreen(); } catch (e) {} }
-    requestAnimationFrame(() => tick(0, true));
+    requestAnimationFrame(() => { if (!dead) tick(0, true); });
   }
   $("btnFs").addEventListener("click", () => setFs(true));
   $("fsExit").addEventListener("click", () => setFs(false));
@@ -259,9 +262,8 @@
   $("fsNext").addEventListener("click", () => { const l = Object.keys(LIB).sort((x, y) => LIB[x].name.localeCompare(LIB[y].name)); pick(l[(l.indexOf(S.drug.id) + 1) % l.length]); });
   fsSel.addEventListener("change", () => pick(fsSel.value));
   $("fsGfx").addEventListener("click", () => $("dlgGfx").showModal());
-  $("fsTheme").addEventListener("click", () => $("btnTheme").click());
-  document.addEventListener("fullscreenchange", () => { if (!document.fullscreenElement && col.classList.contains("fs")) setFs(false); });
-  document.addEventListener("keydown", (e) => {
+  on(document, "fullscreenchange", () => { if (!document.fullscreenElement && col.classList.contains("fs")) setFs(false); });
+  on(document, "keydown", (e) => {
     if (/INPUT|TEXTAREA|SELECT/.test((e.target.tagName || ""))) return;
     if (e.key === "f" || e.key === "F") { e.preventDefault(); setFs(!col.classList.contains("fs")); }
     else if (e.key === "Escape" && col.classList.contains("fs")) setFs(false);
@@ -287,7 +289,8 @@
     ["anatomy", "texture", "shadows", "glow", "reduceMotion"].forEach((k) => (gfxEls[k].checked = !!g[k]));
     if (S.drug && changed && (changed.includes("detail") || changed.includes("anatomy"))) { brain.setDrug(S.drug); syn.setDrug(S.drug, {}); go(S.view, S.region); }
   }
-  GFX.subscribe((g, changed) => applyGfx(changed));
+  const unsub = GFX.subscribe((g, changed) => applyGfx(changed));
+  offs.push(unsub);
   gfxEls.quality.addEventListener("change", () => GFX.preset(gfxEls.quality.value));
   ["detail", "pulses", "labelSize"].forEach((k) => gfxEls[k].addEventListener("change", () => GFX.set({ [k]: gfxEls[k].value })));
   gfxEls.fps.addEventListener("change", () => GFX.set({ fps: parseInt(gfxEls.fps.value, 10) }));
@@ -296,25 +299,17 @@
   $("btnGfx").addEventListener("click", () => $("dlgGfx").showModal());
   applyGfx(null);
 
-  // dark / light toggle (remembered per browser; the diagram stage stays dark in both themes)
-  const themeBtn = $("btnTheme");
-  const applyTheme = (t) => {
-    document.documentElement.setAttribute("data-theme", t);
-    themeBtn.textContent = t === "dark" ? "☾" : "☀";
-    themeBtn.setAttribute("aria-checked", t === "dark" ? "true" : "false");
-    themeBtn.setAttribute("aria-label", t === "dark" ? "Dark mode (switch to light)" : "Light mode (switch to dark)");
-  };
-  let theme = "dark";
-  try { theme = localStorage.getItem("kyp-theme") || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark"); } catch (e) {}
-  applyTheme(theme);
-  themeBtn.addEventListener("click", () => {
-    theme = theme === "dark" ? "light" : "dark";
-    applyTheme(theme);
-    try { localStorage.setItem("kyp-theme", theme); } catch (e) {}
-  });
-
   const start = (location.hash || "").slice(1);
   setDrug(LIB[start] ? start : "clonazepam");
   q.value = "";
-  requestAnimationFrame(loop);
-})();
+  raf = requestAnimationFrame(loop);
+
+  return function destroy() {
+    dead = true;
+    cancelAnimationFrame(raf);
+    offs.forEach((f) => { try { f(); } catch (e) { /* ignore */ } });
+    document.body.classList.remove("fs-open");
+    if (document.fullscreenElement) { try { document.exitFullscreen(); } catch (e) { /* ignore */ } }
+    if (window.__app && window.__app.S === S) delete window.__app;
+  };
+};

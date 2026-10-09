@@ -50,7 +50,7 @@ describe("study mode IA — single top-level learning destination", () => {
     expect(matches.length).toBe(1);
   });
 
-  test("navLinks are exactly the unified destinations (Study Mode, Medicine and 3D Anatomy included)", () => {
+  test("navLinks are exactly the unified destinations (Study Mode, Medicine, 3D Anatomy and Synapse Studio included)", () => {
     const src = read(NAVBAR);
     const hrefs = [...src.matchAll(/href: "([^"]+)"/g)].map((m) => m[1]);
     expect(hrefs).toEqual([
@@ -61,6 +61,7 @@ describe("study mode IA — single top-level learning destination", () => {
       "/#substances",
       "/study",
       "/anatomy",
+      "/synapse-studio",
       "/medicine",
     ]);
   });

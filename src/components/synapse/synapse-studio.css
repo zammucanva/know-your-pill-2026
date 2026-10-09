@@ -1,0 +1,179 @@
+/* Synapse Studio inside the KYP shell: every rule is scoped to .syn-studio and the colours come from the
+   site's design tokens (light + dark follow the global theme). The diagram stage stays dark in both themes
+   because the artwork is drawn for a dark background. */
+.syn-studio {
+  --bg: var(--background); --panel: var(--card); --panel2: var(--muted); --line: var(--border);
+  --txt: var(--foreground); --mut: var(--muted-foreground); --teal: var(--brand);
+  --amber: var(--warning-ink, var(--warning)); --up: var(--warning); --down: oklch(55% 0.16 255); --mixed: var(--neural);
+  --top: var(--background); --sel: var(--brand-soft); --hover: var(--accent); --track: var(--muted);
+  --field: var(--background); --fieldtxt: var(--foreground);
+  --tagbg: var(--brand-soft); --tagbd: color-mix(in oklch, var(--brand) 35%, transparent);
+  --amberbg: var(--warning-soft); --amberbd: color-mix(in oklch, var(--warning) 45%, transparent);
+  --onteal: var(--primary-foreground); --shadow: var(--shadow-color);
+  color: var(--txt); font-size: 15px; line-height: 1.5;
+}
+.dark .syn-studio { --down: oklch(72% 0.13 255); }
+.syn-studio, .syn-studio * { box-sizing: border-box; }
+.syn-studio button { font: inherit; color: inherit; cursor: pointer; }
+.syn-studio .syn-toolbar { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+.syn-studio .layout { padding: 0; }
+.syn-studio .panel { top: 5.5rem; max-height: calc(100vh - 6.5rem); }
+.syn-studio .stage-col.fs { z-index: 100; }
+.syn-studio .syn-note { margin-top: 16px; font-size: 12px; color: var(--mut); }
+.syn-studio .search input:focus { box-shadow: 0 0 0 3px color-mix(in oklch, var(--brand) 22%, transparent); }
+
+.syn-studio [hidden] {display: none !important;}
+.syn-studio html {margin: 0; background: var(--bg); color: var(--txt); font: 15px/1.5 system-ui, "Segoe UI", Roboto, sans-serif;}
+.syn-studio button {font: inherit; color: inherit; cursor: pointer;}
+.syn-studio .search {position: relative; flex: 1; max-width: 560px;}
+.syn-studio .search input {width: 100%; padding: 11px 16px; border-radius: 12px; border: 1px solid var(--line); background: var(--panel); color: var(--txt); font: inherit; outline: none;}
+.syn-studio .search input:focus {border-color: var(--teal); box-shadow: 0 0 0 3px rgba(47,208,192,.18);}
+.syn-studio .suggest {position: absolute; left: 0; right: 0; top: 100%; margin: 6px 0 0; padding: 6px; list-style: none; border-radius: 12px; background: var(--panel2); border: 1px solid var(--line); max-height: 340px; overflow: auto; box-shadow: 0 16px 40px var(--shadow);}
+.syn-studio .suggest li {padding: 8px 10px; border-radius: 8px; cursor: pointer; display: flex; justify-content: space-between; gap: 10px;}
+.syn-studio .suggest li:hover,
+.syn-studio .suggest li.sel {background: var(--hover);}
+.syn-studio .suggest small {color: var(--mut);}
+.syn-studio .ghost {background: transparent; border: 1px solid var(--line); border-radius: 10px; padding: 8px 14px;}
+.syn-studio .ghost:hover {border-color: var(--teal);}
+.syn-studio .primary {background: var(--teal); color: var(--onteal); border: 0; border-radius: 10px; padding: 9px 16px; font-weight: 700;}
+.syn-studio .layout {flex: 1; display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 18px; padding: 18px 22px;}
+@media (max-width: 1000px) {
+  .syn-studio .layout {grid-template-columns: 1fr;}
+}
+.syn-studio .tabs {display: flex; align-items: center; gap: 8px; margin-bottom: 10px;}
+.syn-studio .tab {background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 8px 14px; color: var(--mut);}
+.syn-studio .tab.active {color: var(--txt); border-color: var(--teal); background: var(--sel);}
+.syn-studio .spacer {flex: 1;}
+.syn-studio .check {color: var(--mut); font-size: 13px; display: flex; gap: 6px; align-items: center; cursor: pointer;}
+.syn-studio .stage {position: relative; aspect-ratio: 1000 / 640; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); background: #070d19; box-shadow: 0 18px 50px rgba(0,0,0,.45);}
+.syn-studio .scene {position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; pointer-events: none; transition: opacity .7s ease, transform .8s cubic-bezier(.6,.05,.2,1);}
+.syn-studio .scene.on {opacity: 1; pointer-events: auto;}
+.syn-studio #svgSyn {transform: scale(.82);}
+.syn-studio #svgSyn.on {transform: scale(1);}
+.syn-studio #svgBrain.zoomed {opacity: 0; transform: scale(6);}
+.syn-studio .stage.v-brain {aspect-ratio: 1000 / 560;}
+.syn-studio .stage.v-syn .legend {left: auto; right: 14px; top: auto; bottom: 14px;}
+.syn-studio .stage.v-syn .ctxbar {top: auto; bottom: 14px; left: 14px; transform: none; max-width: 56%; text-align: left;}
+.syn-studio .legend {position: absolute; left: 14px; bottom: 14px; display: flex; flex-direction: column; gap: 5px; font-size: 12.5px; background: rgba(6,11,22,.62); padding: 9px 12px; border-radius: 12px; backdrop-filter: blur(4px); border: 1px solid #1f3050;}
+.syn-studio .legend span {display: flex; align-items: center; gap: 8px;}
+.syn-studio .legend i {width: 12px; height: 12px; border-radius: 50%; display: inline-block;}
+.syn-studio .legend i.hex {border-radius: 3px; transform: rotate(45deg);}
+.syn-studio .ctxbar {position: absolute; left: 50%; top: 12px; transform: translateX(-50%); background: rgba(6,11,22,.72); border: 1px solid #1f3050; border-radius: 12px; padding: 7px 14px; font-size: 13px; max-width: 70%; text-align: center;}
+.syn-studio .back {position: absolute; right: 14px; top: 12px; background: rgba(6,11,22,.72); border: 1px solid var(--teal); border-radius: 10px; padding: 7px 12px; font-size: 13px;}
+.syn-studio .zoomhint {position: absolute; right: 14px; bottom: 14px; background: #11304a; border: 1px solid var(--teal); border-radius: 12px; padding: 9px 14px; font-weight: 600;}
+.syn-studio .empty {position: absolute; inset: 0; display: grid; place-items: center; color: var(--mut); background: #070d19;}
+.syn-studio .controls {display: flex; align-items: center; gap: 12px; margin-top: 12px;}
+.syn-studio .play {width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--teal); background: var(--sel); font-size: 14px;}
+.syn-studio #scrub {flex: 1; accent-color: var(--teal);}
+.syn-studio #speed {background: var(--panel); color: var(--txt); border: 1px solid var(--line); border-radius: 8px; padding: 7px;}
+.syn-studio .phases {display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px;}
+.syn-studio .chip {background: var(--panel); border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; font-size: 13px; color: var(--mut);}
+.syn-studio .chip.active {color: var(--onteal); background: var(--teal); border-color: var(--teal); font-weight: 700;}
+.syn-studio .caption {margin: 12px 2px 4px; padding: 12px 16px; background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--teal); border-radius: 12px; min-height: 64px;}
+.syn-studio .gauges {margin-top: 10px; display: grid; gap: 10px;}
+.syn-studio .gauge {display: grid; grid-template-columns: 220px 1fr 70px; align-items: center; gap: 10px; font-size: 13px; color: var(--mut);}
+.syn-studio .bar {position: relative; height: 12px; border-radius: 8px; background: var(--track); border: 1px solid var(--line); overflow: hidden;}
+.syn-studio .bar i {position: absolute; left: 0; top: 0; bottom: 0; width: 30%; background: linear-gradient(90deg, #1c8f86, #2fd0c0); border-radius: 8px;}
+.syn-studio .bar .tick {position: absolute; top: -2px; bottom: -2px; width: 2px; background: var(--txt); opacity: .85;}
+.syn-studio .gauge em {font-style: normal; color: var(--txt); text-align: right;}
+.syn-studio .gnote {grid-column: 1 / -1; margin: 0; font-size: 12px; color: var(--mut);}
+.syn-studio .panel {background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 18px; align-self: start; position: sticky; top: 78px; max-height: calc(100vh - 100px); overflow: auto;}
+.syn-studio .panel h2 {margin: 0 0 2px; font-size: 22px;}
+.syn-studio .panel .aka {color: var(--mut); font-size: 13px; margin: 0 0 8px;}
+.syn-studio .tag {display: inline-block; font-size: 12px; padding: 3px 10px; border-radius: 999px; background: var(--tagbg); border: 1px solid var(--tagbd); margin: 0 6px 6px 0;}
+.syn-studio .tag.amber {background: var(--amberbg); border-color: var(--amberbd); color: var(--amber);}
+.syn-studio .panel h3 {margin: 16px 0 6px; font-size: 12px; text-transform: uppercase; letter-spacing: .09em; color: var(--mut);}
+.syn-studio .panel p {margin: 0 0 6px;}
+.syn-studio .panel .small {font-size: 13px; color: var(--mut);}
+.syn-studio .rlist {list-style: none; margin: 0; padding: 0; display: grid; gap: 6px;}
+.syn-studio .rlist li {padding: 8px 10px; border-radius: 10px; background: var(--panel2); border: 1px solid transparent; cursor: pointer;}
+.syn-studio .rlist li:hover {border-color: var(--teal);}
+.syn-studio .rlist b {font-weight: 600;}
+.syn-studio .rlist .u {color: var(--up);}
+.syn-studio .rlist .d {color: var(--down);}
+.syn-studio .rlist .m {color: var(--mixed);}
+.syn-studio .rlist small {display: block; color: var(--mut);}
+.syn-studio .foot {padding: 12px 22px; color: var(--mut); font-size: 12px; border-top: 1px solid var(--line); text-align: center;}
+.syn-studio dialog {border: 1px solid var(--line); border-radius: 16px; background: var(--panel); color: var(--txt); padding: 0; width: min(720px, 94vw);}
+.syn-studio dialog::backdrop {background: rgba(2,5,12,.7);}
+.syn-studio .dlgbox {padding: 20px;}
+.syn-studio .dlgbox h2 {margin: 0 0 6px;}
+.syn-studio #dlgText {width: 100%; background: var(--field); color: var(--fieldtxt); border: 1px solid var(--line); border-radius: 10px; padding: 12px; font: 12.5px/1.5 ui-monospace, Consolas, monospace;}
+.syn-studio .dlgbtn {display: flex; justify-content: flex-end; gap: 10px; margin-top: 12px;}
+.syn-studio .err {color: #ff8b8b; background: #2a1013; border: 1px solid #6b2127; border-radius: 10px; padding: 8px 12px; white-space: pre-wrap;}
+.syn-studio svg text {font-family: system-ui, "Segoe UI", sans-serif;}
+.syn-studio .lbl {font-size: 13px; font-weight: 600; fill: #e6f0ff; paint-order: stroke; stroke: #070d19; stroke-width: 4px; stroke-linejoin: round;}
+.syn-studio .lbl-big {font-size: 15px; fill: #c4d8d9;}
+.syn-studio .lbl-mem {fill: #a9e4e4; font-size: 12.5px;}
+.syn-studio .lbl-region {font-size: 14px;}
+.syn-studio .lbl-mini {font-size: 11.5px; font-weight: 500; fill: #a9bfdc; paint-order: stroke; stroke: #070d19; stroke-width: 3.5px; stroke-linejoin: round;}
+.syn-studio .lbl-drug {font-size: 16px; font-weight: 800; fill: #f0c27a; paint-order: stroke; stroke: #070d19; stroke-width: 5px;}
+.syn-studio .lbl-path {font-size: 11px; font-style: italic; font-weight: 600; paint-order: stroke; stroke: #070d19; stroke-width: 3.5px; stroke-linejoin: round;}
+.syn-studio .lead {stroke: #7fa0c8; stroke-width: 1; opacity: .8; fill: none;}
+.syn-studio .ion {font-size: 8px; font-weight: 800;}
+.syn-studio .stage.nolabels .labels {display: none;}
+.syn-studio .themebtn {width: 40px; height: 40px; border-radius: 12px; border: 1px solid var(--line); background: var(--panel); display: grid; place-items: center; font-size: 18px; line-height: 1;}
+.syn-studio .themebtn:hover {border-color: var(--teal);}
+.syn-studio .gfx-notexture [filter="url(#grain)"],
+.syn-studio .gfx-notexture [filter="url(#blotch)"] {display: none;}
+.syn-studio .gfx-noshadow [filter="url(#ds)"] {filter: none;}
+.syn-studio .gfx-noglow [filter="url(#glow)"],
+.syn-studio .gfx-noglow [filter="url(#bglow)"],
+.syn-studio .gfx-noglow [filter="url(#bglow2)"] {display: none;}
+.syn-studio .stage.ls-large .lbl {font-size: 15.5px;}
+.syn-studio .stage.ls-large .lbl-big {font-size: 18px;}
+.syn-studio .stage.ls-large .lbl-mini {font-size: 13.5px;}
+.syn-studio .stage.ls-large .lbl-mem {font-size: 14.5px;}
+.syn-studio .stage.ls-large .lbl-drug {font-size: 19px;}
+.syn-studio .stage.ls-large .lbl-path {font-size: 13px;}
+.syn-studio .lbl-anat {font-size: 10.5px; font-weight: 500; fill: #f3e9c9; paint-order: stroke; stroke: #070d19; stroke-width: 3px; stroke-linejoin: round; font-style: italic;}
+.syn-studio .stage.ls-large .lbl-anat {font-size: 13px;}
+.syn-studio .setgrid {display: grid; grid-template-columns: 1fr auto; gap: 10px 16px; align-items: center; margin: 12px 0;}
+.syn-studio .setgrid select {background: var(--panel2); color: var(--txt); border: 1px solid var(--line); border-radius: 8px; padding: 7px 10px; max-width: 280px;}
+.syn-studio .setgrid input[type=checkbox] {width: 20px; height: 20px; accent-color: var(--teal); justify-self: end;}
+.syn-studio .stage,
+.syn-studio .stage button {color: #e6efff;}
+.syn-studio .fsbtn {padding: 6px 12px; font-size: 13px;}
+.syn-studio .fsbar {display: flex; gap: 8px; align-items: center; margin-bottom: 8px;}
+.syn-studio .fsbar select {background: var(--panel); color: var(--txt); border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; min-width: 200px; max-width: 40vw;}
+.syn-studio .fsbar .ghost,
+.syn-studio .fsbar .primary {padding: 7px 12px; font-size: 13px;}
+body.fs-open {overflow: hidden;}
+.syn-studio .stage-col.fs {position: fixed; inset: 0; z-index: 100; background: var(--bg); padding: 10px 16px 12px; display: flex; flex-direction: column; overflow: auto;}
+.syn-studio .stage-col.fs .stage,
+.syn-studio .stage-col.fs .stage.v-brain {aspect-ratio: auto; flex: 1 1 auto; min-height: 260px; border-radius: 14px;}
+.syn-studio .stage-col.fs .tabs {margin-bottom: 8px;}
+.syn-studio .stage-col.fs .caption {margin-top: 10px; min-height: 0; padding: 8px 14px;}
+.syn-studio .stage-col.fs .controls {margin-top: 10px;}
+.syn-studio .stage-col.fs .phases {margin-top: 8px;}
+.syn-studio .stage-col.fs .brainnote {margin-top: 4px;}
+.syn-studio .stage-col.fs .fsbtn {display: none;}
+.syn-studio .stage-col.fs > *:not(.stage) {flex: none;}
+.syn-studio .stage-col.fs .gauges {gap: 6px;}
+.syn-studio .stage-col.fs .gauge {grid-template-columns: 200px 1fr 60px;}
+@media (max-height: 640px) {
+  .syn-studio .stage-col.fs .stage,
+  .syn-studio .stage-col.fs .stage.v-brain {min-height: 300px;}
+}
+.syn-studio .stage.v-brain .legend {top: auto; bottom: 14px; left: 14px; font-size: 12px; padding: 8px 11px;}
+.syn-studio .brainnote {margin: 8px 2px 0; font-size: 12px; color: var(--mut);}
+.syn-studio .anat-extra {opacity: 0; transition: opacity .2s;}
+.syn-studio .stage:hover .anat-extra,
+.syn-studio .stage:focus-within .anat-extra {opacity: 1;}
+.syn-studio .gfx-notexture .deco {display: none;}
+
+/* small screens: stack the toolbar, let the tab row wrap, never widen the page */
+.syn-studio .layout > * { min-width: 0; }
+.syn-studio .tabs { flex-wrap: wrap; row-gap: 8px; }
+.syn-studio .syn-toolbar .search { flex: 1 1 18rem; min-width: 0; }
+@media (max-width: 640px) {
+  .syn-studio .syn-toolbar .search { flex-basis: 100%; max-width: none; }
+  .syn-studio .tabs .spacer { flex-basis: 100%; height: 0; }
+  .syn-studio .gauge { grid-template-columns: 1fr 70px; }
+  .syn-studio .gauge .bar { grid-column: 1 / -1; grid-row: 2; }
+}
+
+/* overrides that must come after the converted rules above */
+.syn-studio .layout { padding: 0; }
+.syn-studio .panel { top: 5.5rem; max-height: calc(100vh - 6.5rem); }
+.syn-studio .stage-col.fs { z-index: 100; }

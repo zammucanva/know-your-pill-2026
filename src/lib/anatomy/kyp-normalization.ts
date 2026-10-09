@@ -93,7 +93,7 @@ export const KYP_NORMALIZATION_OVERRIDES: KypNormalizationOverride[] = [
     reason:
       "CSF-filled chamber of the brain's ventricular system. Source " +
       "classified as cardiac due to the word 'ventricle'. Anatomically " +
-      "unambiguous — the lateral ventricle is the largest CSF cavity in " +
+      "unambiguous, the lateral ventricle is the largest CSF cavity in " +
       "each cerebral hemisphere.",
   },
   {
@@ -103,7 +103,7 @@ export const KYP_NORMALIZATION_OVERRIDES: KypNormalizationOverride[] = [
     kypName: "Right lateral ventricle (brain)",
     reason:
       "Right lateral ventricle of the brain. Same misclassification as " +
-      "FMA78448 — anatomically a brain CSF chamber, not a heart chamber.",
+      "FMA78448, anatomically a brain CSF chamber, not a heart chamber.",
   },
   {
     conceptId: "FMA78450",
@@ -112,7 +112,7 @@ export const KYP_NORMALIZATION_OVERRIDES: KypNormalizationOverride[] = [
     kypName: "Left lateral ventricle (brain)",
     reason:
       "Left lateral ventricle of the brain. Same misclassification as " +
-      "FMA78448 — anatomically a brain CSF chamber, not a heart chamber.",
+      "FMA78448, anatomically a brain CSF chamber, not a heart chamber.",
   },
   {
     conceptId: "FMA78454",
@@ -138,7 +138,7 @@ export const KYP_NORMALIZATION_OVERRIDES: KypNormalizationOverride[] = [
     brainGroup: "ventricular-system",
     kypName: "Interventricular foramen of Monro",
     reason:
-      "Foramen of Monro — the channel connecting each lateral ventricle " +
+      "Foramen of Monro, the channel connecting each lateral ventricle " +
       "to the third ventricle. A brain structure, not a heart structure.",
   },
 ];
