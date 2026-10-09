@@ -78,6 +78,10 @@ BUDGET = {
 }
 
 
+# BUDGET_SCALE=0.4 builds the lighter atlas served to phones (see build_atlas.py --lite)
+SCALE = float(os.environ.get("BUDGET_SCALE", "1"))
+
+
 def classify(tag, name):
     """Return (system, group) or None to skip."""
     if MARKER.search(name):
@@ -158,7 +162,7 @@ def process(fbx_name, tag):
 
     for (system, group), objs in sorted(items.items()):
         counts = [tri_count(o.data) for o in objs]
-        targets = allocate(counts, BUDGET[group])
+        targets = allocate(counts, int(BUDGET[group] * SCALE))
         print(f"## {fbx_name} {system}/{group}: {len(objs)} parts {sum(counts)} -> {sum(targets)} tris", flush=True)
         for o, orig, target in zip(objs, counts, targets):
             for m in list(o.modifiers):

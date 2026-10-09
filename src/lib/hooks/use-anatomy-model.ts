@@ -5,6 +5,7 @@ import * as THREE from "three";
 import { mergeGeometries } from "three/examples/jsm/utils/BufferGeometryUtils.js";
 import { fetchWithRetry, isAbortError } from "@/lib/hooks/fetch-with-retry";
 import { imgPath } from "@/lib/kyp/image-path";
+import { atlasManifestPath } from "@/lib/anatomy/atlas-source";
 import { useModelLoadingStore, type ModelErrorCategory } from "@/lib/anatomy/store/model-loading-store";
 
 /**
@@ -50,6 +51,8 @@ export interface BP3DChunk {
   bytes: number;
   gzip?: string;
   gzipBytes?: number;
+  /** Short content hash; appended as ?v= so chunks can be cached as immutable. */
+  hash?: string;
 }
 
 export interface BP3DAtlas {
@@ -137,7 +140,7 @@ export function useAnatomyModel() {
       try {
         // 1. Fetch atlas.json. Retried with exponential backoff on network
         // errors, 5xx and 429; permanent 4xx failures surface immediately.
-        const res = await fetchWithRetry(imgPath("/models/atlas.json"), { signal: abort.signal });
+        const res = await fetchWithRetry(imgPath(atlasManifestPath()), { signal: abort.signal });
         if (!res.ok) {
           throw new CategorizedLoadError(
             `Could not load anatomy manifest (HTTP ${res.status}).`,
@@ -161,7 +164,8 @@ export function useAnatomyModel() {
         const loadChunk = async (ci: number) => {
           const chunk = data.chunks[ci];
           const compressed = !!chunk.gzip;
-          const response = await fetchWithRetry(imgPath(compressed ? chunk.gzip! : chunk.url), {
+          const base = compressed ? chunk.gzip! : chunk.url;
+          const response = await fetchWithRetry(imgPath(chunk.hash ? `${base}?v=${chunk.hash}` : base), {
             signal: abort.signal,
           });
           if (!response.ok) {

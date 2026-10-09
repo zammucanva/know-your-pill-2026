@@ -2,13 +2,14 @@
 Build the hybrid /anatomy atlas: Z-Anatomy parts (from export_zanatomy.py) for the systems it covers in
 detail, plus the existing BodyParts3D parts for the rest (urinary, sensory organs, body surface).
 
-    python scripts/anatomy/build_atlas.py <zexp_dir> [--bp3d <dir with the BodyParts3D atlas.json + body-N.bin.gz>]
+    python scripts/anatomy/build_atlas.py <zexp_dir> [--bp3d <dir with the original BodyParts3D atlas.json + body-N.bin.gz>] [--lite]
 
-Reads the BodyParts3D atlas from public/models (or --bp3d), writes the hybrid atlas to public/models,
-and keeps a pristine copy of the BodyParts3D atlas under public/models/bp3d-original/ is NOT created:
-rebuild from git history if you need the original.
+Reads the BodyParts3D parts to keep (urinary, sensory, body surface) from public/models, or from --bp3d (a copy of
+the original BodyParts3D atlas, recoverable from git history), and writes the hybrid atlas to public/models.
+--lite writes atlas-lite.json + body-lite-N.bin.gz for phones; run export_zanatomy.py with BUDGET_SCALE=0.4 for it.
 """
 import gzip
+import hashlib
 import json
 import os
 import re
@@ -20,6 +21,9 @@ MODELS = os.path.join(ROOT, "public", "models")
 args = sys.argv[1:]
 ZDIR = args[0]
 BP = args[args.index("--bp3d") + 1] if "--bp3d" in args else MODELS
+LITE = "--lite" in args  # lighter phone build: atlas-lite.json + body-lite-N.bin.gz (export with BUDGET_SCALE=0.4)
+PREFIX = "body-lite" if LITE else "body"
+MANIFEST = "atlas-lite.json" if LITE else "atlas.json"
 
 KEEP_BP3D = {"urinary", "sensory", "integumentary"}
 CHUNK_BYTES = 4_200_000
@@ -113,11 +117,12 @@ def main():
         if not cur:
             return
         raw = bytes(cur)
-        name = f"body-{ci}.bin"
+        name = f"{PREFIX}-{ci}.bin"
         gz = gzip.compress(raw, 9)
         with open(os.path.join(MODELS, name + ".gz"), "wb") as f:
             f.write(gz)
-        chunks.append({"url": f"/models/{name}", "bytes": len(raw), "gzip": f"/models/{name}.gz", "gzipBytes": len(gz)})
+        chunks.append({"url": f"/models/{name}", "bytes": len(raw), "gzip": f"/models/{name}.gz", "gzipBytes": len(gz),
+                       "hash": hashlib.sha1(gz).hexdigest()[:10]})
         cur = bytearray()
         ci += 1
 
@@ -140,7 +145,7 @@ def main():
     flush()
     # remove stale chunks from the previous build
     for f in os.listdir(MODELS):
-        m = re.match(r"body-(\d+)\.bin\.gz$", f)
+        m = re.match(rf"{PREFIX}-(\d+)\.bin\.gz$", f)
         if m and int(m.group(1)) >= ci:
             os.remove(os.path.join(MODELS, f))
 
@@ -160,7 +165,7 @@ def main():
                  "cardiovascular, nervous, respiratory, digestive, endocrine, reproductive and lymphatic systems; "
                  "BodyParts3D for urinary, sensory organs and body surface)",
     }
-    with open(os.path.join(MODELS, "atlas.json"), "w", encoding="utf-8", newline="\n") as f:
+    with open(os.path.join(MODELS, MANIFEST), "w", encoding="utf-8", newline="\n") as f:
         json.dump(manifest, f, separators=(",", ":"))
     mb = sum(c["gzipBytes"] for c in chunks) / 1e6
     print(f"parts={len(out_parts)} (Z {n}, BP3D {len(kept_ids)}) tris={total_tris:,} z_tris={z_tris:,} chunks={len(chunks)} gz={mb:.1f} MB")

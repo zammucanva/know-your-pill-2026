@@ -78,6 +78,14 @@ const nextConfig: NextConfig = {
                 ...productionOnly,
               ],
             },
+            // Anatomy geometry chunks are requested with ?v=<content hash> (see use-anatomy-model),
+            // so a changed chunk always has a new URL and these can be cached for a year.
+            {
+              source: "/models/:file(body-.*\.bin\.gz)",
+              headers: [
+                { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+              ],
+            },
             // The proxied Firebase auth handler embeds an iframe from this
             // same origin, which the blanket DENY / frame-ancestors 'none'
             // above would block. Allow same-origin framing for these
