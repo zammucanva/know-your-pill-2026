@@ -199,7 +199,7 @@
       const aff = d.regions.filter((r) => r.effect !== "mixed" || r.note).slice(0, 3).map((r) => C.REGIONS[r.id].name);
       if (phaseId === "baseline") return "Normal activity: neurotransmitter pathways carry signals between brain regions. Click a highlighted region to zoom into its synapse.";
       if (phaseId === "arrive") return d.name + " reaches the brain through the bloodstream (it must cross the blood–brain barrier) and begins to act at its target.";
-      const first = d.regions.filter((r) => r.note).slice(0, 2).map((r) => C.REGIONS[r.id].name + (r.note ? " — " + r.note.charAt(0).toLowerCase() + r.note.slice(1) : "")).join("; ");
+      const first = d.regions.filter((r) => r.note).slice(0, 2).map((r) => C.REGIONS[r.id].name + (r.note ? ", " + r.note.charAt(0).toLowerCase() + r.note.slice(1) : "")).join("; ");
       return "Effect on circuits: " + (first || "signalling in the highlighted regions changes") + ".";
     }
 

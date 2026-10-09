@@ -36,7 +36,7 @@
   const TCA = Object.assign({}, SSRI2, { class: "Tricyclic antidepressant", species: ["serotonin", "norepinephrine"], actsOn: ["SERT", "NET"],
     regions: [R("pfc", "up", "More serotonin and norepinephrine signalling"), R("raphe", "mixed"), R("lc", "mixed"), R("hypothalamus", "mixed", "Sedation and appetite effects (H1 blockade not drawn)")],
     pathways: [P("serotonergic", "up"), P("noradrenergic", "up")],
-    simplifications: "Also blocks histamine H1, muscarinic and α1 receptors (sedation, dry mouth, dizziness) — those actions are not drawn." });
+    simplifications: "Also blocks histamine H1, muscarinic and α1 receptors (sedation, dry mouth, dizziness), those actions are not drawn." });
   family(TCA, [
     { id: "nortriptyline", name: "Nortriptyline", aliases: ["Pamelor"], uses: "Depression, neuropathic pain", extra: "Prefers norepinephrine reuptake over serotonin." },
     { id: "imipramine", name: "Imipramine", aliases: ["Tofranil"], uses: "Depression, childhood enuresis" },
@@ -90,7 +90,7 @@
     { id: "iloperidone", name: "Iloperidone", aliases: ["Fanapt"] },
   ]);
   const AP1 = Object.assign({}, AP, { class: "First-generation antipsychotic", species: ["dopamine"], receptors: ["D2"], actsOn: ["D2"],
-    regions: [R("nacc", "down", "Mesolimbic D2 blockade — linked to the antipsychotic effect"), R("striatum", "down", "Nigrostriatal blockade — linked to movement side effects"), R("hypothalamus", "down", "Tuberoinfundibular blockade raises prolactin")],
+    regions: [R("nacc", "down", "Mesolimbic D2 blockade, linked to the antipsychotic effect"), R("striatum", "down", "Nigrostriatal blockade, linked to movement side effects"), R("hypothalamus", "down", "Tuberoinfundibular blockade raises prolactin")],
     pathways: [P("mesolimbic", "down"), P("nigrostriatal", "down")] });
   family(AP1, [
     { id: "chlorpromazine", name: "Chlorpromazine", aliases: ["Thorazine"], uses: "Schizophrenia, severe nausea, intractable hiccups", extra: "Also blocks H1, α1 and muscarinic receptors." },
@@ -149,7 +149,7 @@
   family({
     class: "Benzodiazepine (GABA-A positive allosteric modulator)", species: ["gaba"], receptors: ["GABA-A"], action: "pam", actsOn: ["GABA-A"],
     regions: [R("amygdala", "up", "More inhibition in fear/anxiety circuits"), R("pfc", "up", "More cortical inhibition (sedation)"), R("thalamus", "up", "More inhibition in arousal and sensory relay"), R("hippocampus", "up", "Impairs forming new memories")],
-    pathways: [P("gabaergic", "up")], onset: "Minutes to an hour; tolerance and dependence can develop with regular use.", simplifications: "It enhances the effect of GABA (it does not open the channel by itself). Speed and duration differ between drugs — not drawn.",
+    pathways: [P("gabaergic", "up")], onset: "Minutes to an hour; tolerance and dependence can develop with regular use.", simplifications: "It enhances the effect of GABA (it does not open the channel by itself). Speed and duration differ between drugs, not drawn.",
   }, [
     { id: "temazepam", name: "Temazepam", aliases: ["Restoril"], uses: "Insomnia" },
     { id: "midazolam", name: "Midazolam", aliases: ["Versed"], uses: "Procedural sedation, seizures", extra: "Very short-acting." },
@@ -233,7 +233,7 @@
   /* ===================================================== Opioids and pain ===================================================== */
   family({
     class: "Opioid agonist (μ-opioid receptor)", species: ["opioid"], receptors: ["MOR", "MOR_pre"], action: "receptor_agonist", actsOn: ["MOR", "MOR_pre"],
-    regions: [R("pag", "up", "Activates descending pain control"), R("thalamus", "down", "Less pain signal relayed"), R("acc", "down", "Reduces the emotional unpleasantness of pain"), R("nacc", "up", "Disinhibits dopamine neurons — reward and risk of misuse"), R("medulla", "down", "Slows breathing — the dangerous effect in overdose")],
+    regions: [R("pag", "up", "Activates descending pain control"), R("thalamus", "down", "Less pain signal relayed"), R("acc", "down", "Reduces the emotional unpleasantness of pain"), R("nacc", "up", "Disinhibits dopamine neurons, reward and risk of misuse"), R("medulla", "down", "Slows breathing, the dangerous effect in overdose")],
     pathways: [P("opioid", "up"), P("mesolimbic", "up")], onset: "Minutes to an hour depending on drug and route.",
     simplifications: "Receptor activation inhibits the neuron (K⁺ efflux) and reduces release; reward and breathing effects arise from circuit-level actions summarised on the brain overview.",
   }, [

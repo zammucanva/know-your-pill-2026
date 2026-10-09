@@ -36,7 +36,7 @@
   function loadCustom() {
     try {
       const arr = JSON.parse(localStorage.getItem(LS_KEY) || "[]");
-      arr.forEach((o) => { if (!validateDrug(o).length) { o.custom = true; o.evidence = o.evidence || "User-added entry — not reviewed."; o.aliases = o.aliases || []; LIB[o.id] = o; } });
+      arr.forEach((o) => { if (!validateDrug(o).length) { o.custom = true; o.evidence = o.evidence || "User-added entry, not reviewed."; o.aliases = o.aliases || []; LIB[o.id] = o; } });
     } catch (e) { /* ignore */ }
   }
   function saveCustom(o) {
@@ -115,7 +115,7 @@
     if (isSyn && regionId) {
       const aff = S.drug.regions.find((r) => r.id === regionId);
       ctx.hidden = false;
-      ctx.innerHTML = "Zoomed into <b>" + esc(C.REGIONS[regionId].name) + "</b>" + (aff && aff.note ? " — " + esc(aff.note) : "");
+      ctx.innerHTML = "Zoomed into <b>" + esc(C.REGIONS[regionId].name) + "</b>" + (aff && aff.note ? ", " + esc(aff.note) : "");
     } else ctx.hidden = true;
     $("btnBack").hidden = !isSyn;
     $("btnZoom").hidden = isSyn;
@@ -225,7 +225,7 @@
     try { o = JSON.parse($("dlgText").value); } catch (e) { $("dlgErr").hidden = false; $("dlgErr").textContent = "Not valid JSON: " + e.message; return; }
     const errs = validateDrug(o);
     if (errs.length) { $("dlgErr").hidden = false; $("dlgErr").textContent = errs.join("\n"); return; }
-    o.custom = true; o.aliases = o.aliases || []; o.evidence = o.evidence || "User-added entry — not reviewed.";
+    o.custom = true; o.aliases = o.aliases || []; o.evidence = o.evidence || "User-added entry, not reviewed.";
     LIB[o.id] = o; saveCustom(o); dlg.close(); pick(o.id);
   });
 
