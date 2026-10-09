@@ -15,7 +15,7 @@
  *         Who is KYP / About).
  */
 import { beforeAll, describe, expect, test } from "bun:test";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { BASE_URL, ensureServer } from "./helpers/server";
 import { getAllNoteSlugs, loadCorpus } from "../src/lib/oxford/loader";
@@ -2172,10 +2172,12 @@ describe("psychiatry — final-closure QA (D-3/D-4/D-5 + Study Mode, 2026-10-01)
     expect(navbar).toContain("menuButtonRef.current?.focus();");
     expect(navbar).toContain('aria-controls="mobile-nav-menu"');
 
-    // D-3 — the /enter page's navbar shares the same contract.
-    const enterNavbar = read("src/components/kyp/enter/enter-navbar.tsx");
-    expect(enterNavbar).toContain('if (e.key !== "Escape" || e.defaultPrevented) return;');
-    expect(enterNavbar).toContain("menuButtonRef.current?.focus();");
+    // D-3 — the /enter page renders the SAME canonical Navbar (intro mode),
+    // so it inherits this contract; no second navbar implementation exists.
+    const enterPage = read("src/app/enter/page.tsx");
+    expect(enterPage).toContain('import { Navbar } from "@/components/kyp/sections/navbar";');
+    expect(enterPage).not.toContain("EnterNavbar");
+    expect(existsSync(join(process.cwd(), "src/components/kyp/enter/enter-navbar.tsx"))).toBe(false);
 
     // D-4 — the psychiatry/drug Section Navigator sheet: dialog
     // semantics + scroll lock + Escape + focus restoration (mirrors the

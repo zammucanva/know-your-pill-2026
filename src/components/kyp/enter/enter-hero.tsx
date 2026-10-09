@@ -42,6 +42,8 @@ interface EnterHeroProps {
   headerLogoRef: React.RefObject<HTMLElement | null>;
   /** Whether reduced-motion is active (disables transforms). */
   reducedMotion: boolean;
+  /** True once the intro has played and the user scrolled back above the homepage: the spacer is dropped. */
+  spacerCollapsed?: boolean;
 }
 
 export function EnterHero({
@@ -49,6 +51,7 @@ export function EnterHero({
   spacerRef,
   headerLogoRef,
   reducedMotion,
+  spacerCollapsed = false,
 }: EnterHeroProps) {
   const heroTextRef = React.useRef<HTMLDivElement>(null);
   const [travel, setTravel] = React.useState({ x: 0, y: 0, scale: 0.15 });
@@ -216,7 +219,7 @@ export function EnterHero({
       {/* 100vh spacer — creates the scroll distance for the animation.
           The homepage content follows this in normal flow, so after
           scrolling 100vh the animation is done and the homepage enters. */}
-      <div ref={spacerRef} id="enter-top" className="h-screen" />
+      <div ref={spacerRef} id="enter-top" className={spacerCollapsed ? "h-0" : "h-screen"} />
     </>
   );
 }

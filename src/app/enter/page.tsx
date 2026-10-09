@@ -8,7 +8,7 @@ import {
   useMotionValue,
   motion,
 } from "framer-motion";
-import { EnterNavbar } from "@/components/kyp/enter/enter-navbar";
+import { Navbar } from "@/components/kyp/sections/navbar";
 import { EnterHero } from "@/components/kyp/enter/enter-hero";
 import { HomeContent } from "@/components/kyp/home-content";
 import { FloatingSearch } from "@/components/kyp/ui/floating-search";
@@ -20,7 +20,7 @@ import { FloatingSearch } from "@/components/kyp/ui/floating-search";
  *   /welcome (done step) → "Enter KYP" button → /enter → scroll animation → homepage content
  *
  * Structure:
- *   <EnterNavbar>     — fixed header, starts at opacity 0, fades in as hero docks
+ *   <Navbar intro>    — the canonical site navbar in intro mode: starts at opacity 0, fades in as the hero docks
  *   <EnterHero>       — 100vh spacer + fixed animation layer (KYP / MEDICINE text)
  *   <HomeContent>     — the existing homepage sections (hero, library, substances, etc.)
  *   <FloatingSearch>  — fades in with the header
@@ -53,21 +53,60 @@ export default function EnterPage() {
     offset: ["start start", "end start"],
   });
 
-  // Every derived value below reads this plain MotionValue, not the raw
-  // scroll-linked one. Derived opacities of the raw value get promoted by
-  // framer-motion to browser scroll-timeline animations, and once the
-  // spacer has scrolled out of view those animations finish and drop back
-  // to the base style (opacity 1 / 0): the hero wordmark stayed on screen,
-  // the header never appeared and the scroll hint never faded. Feeding the
-  // progress through a manually-set MotionValue keeps all of it JS-driven
-  // and identical in every browser.
+  // The intro plays ONCE per page visit. While it is running, `scrollYProgress`
+  // follows the scroll (so it can be scrubbed both ways). The moment it
+  // reaches the end of the dock/cross-fade it LATCHES: progress is pinned
+  // to 1, so scrolling up, down or back into the spacer can never replay
+  // it, flicker the wordmark back, or reset the header's opacity.
+  //
+  // Every derived value reads this plain MotionValue, not the raw
+  // scroll-linked one: derived opacities of the raw value get promoted by
+  // framer-motion to browser scroll-timeline animations, which finish and
+  // drop back to the base style once the spacer leaves the viewport.
+  const INTRO_DONE_AT = 0.82; // layer fully faded, header fully visible
   const scrollYProgress = useMotionValue(0);
-  React.useEffect(() => {
-    scrollYProgress.set(rawScrollProgress.get());
-  }, [rawScrollProgress, scrollYProgress]);
-  useMotionValueEvent(rawScrollProgress, "change", (v) => scrollYProgress.set(v));
+  const introDoneRef = React.useRef(false);
+  const [introDone, setIntroDone] = React.useState(false);
+  const [spacerCollapsed, setSpacerCollapsed] = React.useState(false);
 
-  // Header fades in during the cross-fade window (0.50 → 0.72)
+  const applyProgress = React.useCallback(
+    (v: number) => {
+      if (introDoneRef.current) return;
+      if (v >= INTRO_DONE_AT) {
+        introDoneRef.current = true;
+        scrollYProgress.set(1);
+        setIntroDone(true);
+        return;
+      }
+      scrollYProgress.set(v);
+    },
+    [scrollYProgress]
+  );
+  React.useEffect(() => {
+    applyProgress(rawScrollProgress.get()); // also covers reload/restore past the intro
+  }, [rawScrollProgress, applyProgress]);
+  useMotionValueEvent(rawScrollProgress, "change", applyProgress);
+
+  // After the intro, scrolling back up must land on the normal homepage
+  // top, not on the empty intro spacer. When the user scrolls up to the
+  // point where the homepage's own top meets the viewport top, drop the
+  // spacer (the visible content does not move at that exact moment).
+  React.useEffect(() => {
+    if (!introDone || spacerCollapsed) return;
+    let lastY = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      const spacerH = spacerRef.current?.offsetHeight ?? 0;
+      if (y < lastY && y <= spacerH) setSpacerCollapsed(true);
+      lastY = y;
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [introDone, spacerCollapsed]);
+  React.useLayoutEffect(() => {
+    if (spacerCollapsed) window.scrollTo({ top: 0, behavior: "instant" });
+  }, [spacerCollapsed]);
+
   const scrollHeaderOpacity = useTransform(
     scrollYProgress,
     [0, 0.5, 0.72],
@@ -80,7 +119,7 @@ export default function EnterPage() {
 
   // Activate header interactivity after cross-fade is mostly done
   useMotionValueEvent(scrollYProgress, "change", (v) => {
-    if (v >= 0.65 && !headerActive) setHeaderActive(true);
+    setHeaderActive(v >= 0.65);
   });
 
   // Reduced-motion: header is immediately active and visible
@@ -90,10 +129,12 @@ export default function EnterPage() {
 
   return (
     <div className="relative flex min-h-screen flex-col">
-      <EnterNavbar
-        headerOpacity={headerOpacity}
-        active={reducedMotion || headerActive}
-        logoRef={logoRef}
+      <Navbar
+        intro={{
+          opacity: headerOpacity,
+          active: reducedMotion || headerActive || introDone,
+          logoRef,
+        }}
       />
 
       <EnterHero
@@ -101,6 +142,7 @@ export default function EnterPage() {
         spacerRef={spacerRef}
         headerLogoRef={logoRef}
         reducedMotion={reducedMotion}
+        spacerCollapsed={spacerCollapsed}
       />
 
       {/* Homepage content — flows below the animation spacer */}
@@ -112,7 +154,7 @@ export default function EnterPage() {
       <motion.div
         style={{
           opacity: reducedMotion ? 1 : headerOpacity,
-          pointerEvents: (reducedMotion || headerActive) ? "auto" : "none",
+          pointerEvents: (reducedMotion || headerActive || introDone) ? "auto" : "none",
         }}
       >
         <FloatingSearch variant="floating" />

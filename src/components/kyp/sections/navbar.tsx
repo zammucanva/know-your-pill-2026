@@ -5,6 +5,7 @@ import { NavDropdown } from "@/components/kyp/ui/nav-dropdown";
 import * as React from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { motion, type MotionValue } from "framer-motion";
 
 import { useTheme } from "next-themes";
 import { usePathname } from "next/navigation";
@@ -60,7 +61,22 @@ const navLinks = [...primaryLinks, ...navGroups.flatMap((g) => g.items)];
 
 type SessionUser = { id: string; name: string; email: string; learnerType: string } | null;
 
-export function Navbar() {
+/**
+ * Intro mode, used only by /enter. The cinematic intro owns the header's
+ * opacity (scroll-linked, 0 -> 1 as the wordmark docks) and needs the logo
+ * element to measure its dock target. Everything else (links, menus, search,
+ * account, theme) is the same canonical navbar every other page renders.
+ */
+export interface NavbarIntro {
+  /** Scroll-linked header opacity. */
+  opacity: MotionValue<number>;
+  /** False while the header is still invisible: it is then inert (no focus, no clicks, hidden from AT). */
+  active: boolean;
+  /** Attached to the logo link: the dock target for the hero wordmark. */
+  logoRef: React.RefObject<HTMLElement | null>;
+}
+
+export function Navbar({ intro }: { intro?: NavbarIntro } = {}) {
   const router = useRouter();
   const pathname = usePathname();
   const [open, setOpen] = React.useState(false);
@@ -127,19 +143,29 @@ export function Navbar() {
   };
 
   return (
-    <header
+    <motion.header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-[var(--duration-base)] ease-[var(--ease-out-soft)] print:hidden",
+        "fixed inset-x-0 top-0 z-50 duration-[var(--duration-base)] ease-[var(--ease-out-soft)] print:hidden",
+        // In intro mode opacity is driven by scroll, so only colours may transition
+        intro ? "transition-[background-color,border-color]" : "transition-all",
+        intro && !intro.active && "pointer-events-none",
         scrolled
           ? "border-b border-border/70 bg-background/80 backdrop-blur-xl backdrop-saturate-150"
           : "bg-transparent"
       )}
+      style={intro ? { opacity: intro.opacity } : undefined}
+      aria-hidden={intro && !intro.active ? true : undefined}
+      inert={intro && !intro.active ? true : undefined}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Brand — goes home from every page (next/link prepends the
             GitHub Pages basePath; on the homepage itself the
             same-route navigation scrolls back to the top). */}
-        <Link href="/" className="group flex items-center gap-2.5">
+        <Link
+          href="/"
+          ref={intro?.logoRef as React.Ref<HTMLAnchorElement> | undefined}
+          className="group flex items-center gap-2.5"
+        >
           <span className="relative h-9 w-9 shrink-0 overflow-hidden rounded-xl">
             <img width={128} height={128}
               src={imgPath("/logo-navy-128.png")}
@@ -318,6 +344,6 @@ export function Navbar() {
           </nav>
         </div>
       )}
-    </header>
+    </motion.header>
   );
 }
