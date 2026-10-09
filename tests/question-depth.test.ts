@@ -25,7 +25,11 @@
  * Pure module tests — no server required.
  */
 
-import { describe, expect, test } from "bun:test";
+import { describe, expect, setDefaultTimeout, test } from "bun:test";
+
+// The engine-integration cases build full question pools from the whole
+// registry, which takes several seconds on a busy CI runner.
+setDefaultTimeout(60_000);
 import { readFileSync } from "node:fs";
 import {
   DEFAULT_DIFFICULTY_BY_LEARNER_TYPE,

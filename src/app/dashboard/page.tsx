@@ -42,11 +42,16 @@ interface SessionUser {
   learnerType: string;
 }
 
-function DashboardSkeleton() {
+/** Placeholder for a module whose data is still arriving. */
+function SkeletonCard({ className }: { className?: string }) {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <p className="text-sm text-muted-foreground">Loading your dashboard…</p>
-    </div>
+    <div
+      aria-hidden
+      className={
+        "animate-pulse rounded-xl border border-border/60 bg-card/60 motion-reduce:animate-none " +
+        (className ?? "h-40")
+      }
+    />
   );
 }
 
@@ -77,11 +82,19 @@ export default function DashboardPage() {
       return;
     }
     async function load() {
+      // All three requests start together (the data requests do not need
+      // the session result to begin), so the page waits for the slowest
+      // one, not for the sum of them.
+      const get = (url: string) => fetch(url).catch(() => null);
       try {
-        const sessionRes = await fetch("/api/auth/session");
+        const [sessionRes, progressRes, bookmarksRes] = await Promise.all([
+          get("/api/auth/session"),
+          get("/api/progress?limit=20"),
+          get("/api/bookmarks"),
+        ]);
         // Static deployments have no API routes — treat any non-OK
         // response exactly like "not logged in" [audit B2].
-        if (!sessionRes.ok) {
+        if (!sessionRes || !sessionRes.ok) {
           router.push("/welcome");
           return;
         }
@@ -92,14 +105,10 @@ export default function DashboardPage() {
         }
         setUser(sessionData.user);
 
-        const [progressRes, bookmarksRes] = await Promise.all([
-          fetch("/api/progress?limit=20"),
-          fetch("/api/bookmarks"),
-        ]);
-        const [progressData, bookmarksData] = await Promise.all([
-          progressRes.json(),
-          bookmarksRes.json(),
-        ]);
+        const [progressData, bookmarksData] = (await Promise.all([
+          progressRes?.ok ? progressRes.json().catch(() => ({})) : {},
+          bookmarksRes?.ok ? bookmarksRes.json().catch(() => ({})) : {},
+        ])) as [{ progress?: ProgressEntry[] }, { bookmarks?: BookmarkEntry[] }];
         setProgress(progressData.progress || []);
         setBookmarks(bookmarksData.bookmarks || []);
       } catch {
@@ -128,10 +137,6 @@ export default function DashboardPage() {
     });
   };
 
-  if (loading) {
-    return <DashboardSkeleton />;
-  }
-
   // Real counts only. The medication library total comes from the
   // generated platform stats (single source of truth).
   const medicationTotal = Number(platformStats[0]?.value ?? 0) || 145;
@@ -147,15 +152,19 @@ export default function DashboardPage() {
         learnerType={user?.learnerType}
       />
 
-      <StatsRow
-        pagesExplored={progress.length}
-        medicationsStudied={medicationsStudied}
-        medicationTotal={medicationTotal}
-        mcqsAnswered={mcqsAnswered}
-        bookmarks={bookmarks.length}
-      />
+      {loading ? (
+        <SkeletonCard className="h-24" />
+      ) : (
+        <StatsRow
+          pagesExplored={progress.length}
+          medicationsStudied={medicationsStudied}
+          medicationTotal={medicationTotal}
+          mcqsAnswered={mcqsAnswered}
+          bookmarks={bookmarks.length}
+        />
+      )}
 
-      <ContinueLearningCard progress={progress} />
+      {loading ? <SkeletonCard className="h-36" /> : <ContinueLearningCard progress={progress} />}
 
       {mounted && studyReminders && <DailyGoalCard />}
 
@@ -166,7 +175,7 @@ export default function DashboardPage() {
       */}
       <div className="grid grid-cols-1 gap-[var(--dash-gap,1.25rem)] lg:grid-cols-2 lg:items-start">
         <div className="order-1 lg:col-start-1 lg:row-start-1">
-          <LearningProgress progress={progress} />
+          {loading ? <SkeletonCard className="h-56" /> : <LearningProgress progress={progress} />}
         </div>
         <div className="order-4 lg:col-start-2 lg:row-start-1">
           <QuickActions />
@@ -178,11 +187,19 @@ export default function DashboardPage() {
         )}
         {(mounted ? showRecentlyVisited : true) && (
           <div className="order-2 lg:col-span-2">
-            <RecentlyVisited progress={progress} onCleared={() => setProgress([])} />
+            {loading ? (
+              <SkeletonCard className="h-44" />
+            ) : (
+              <RecentlyVisited progress={progress} onCleared={() => setProgress([])} />
+            )}
           </div>
         )}
         <div className="order-3 lg:col-span-2">
-          <SavedKnowledge bookmarks={bookmarks} onRemoved={removeBookmark} />
+          {loading ? (
+            <SkeletonCard className="h-44" />
+          ) : (
+            <SavedKnowledge bookmarks={bookmarks} onRemoved={removeBookmark} />
+          )}
         </div>
         <div className="order-6 lg:col-span-2">
           <EmergencyCard />
