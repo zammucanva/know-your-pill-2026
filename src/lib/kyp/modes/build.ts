@@ -39,11 +39,17 @@ function list(values: unknown, base: string): Sourced[] {
   return out;
 }
 
+/** A prompt reads as a question when it has a "?" or opens with an exam command word. */
+const QUESTION_LIKE =
+  /\?|^(name|list|define|describe|explain|enumerate|state|mention|write|classify|outline|give|compare|differentiate|discuss|identify)\b/i;
+
 /**
  * Splits "Question (answer)" for display only; `full` stays the verbatim source.
  * The answer is the FIRST parenthesised group, and only when that group runs to
- * the end of the string (balanced, optional trailing full stop). Anything else is
- * shown whole with no reveal rather than guessed at.
+ * the end of the string (balanced, optional trailing full stop) AND the text before
+ * it reads as a question. Statement-style items that merely end in a parenthetical
+ * ("Mechanism: ... (hydrazine class)") are shown whole with no reveal rather than
+ * being presented as a question with a hidden answer.
  */
 export function splitViva(full: string): { question: string; answer: string | null } {
   const text = full.trim();
@@ -57,7 +63,7 @@ export function splitViva(full: string): { question: string; answer: string | nu
         if (tail === "" || tail === ".") {
           const question = text.slice(0, open).trim();
           const answer = text.slice(open + 1, i).trim();
-          if (question && answer) return { question, answer };
+          if (question && answer && QUESTION_LIKE.test(question)) return { question, answer };
         }
         break;
       }

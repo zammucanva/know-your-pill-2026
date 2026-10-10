@@ -96,6 +96,9 @@ describe("vertical slice: sertraline", () => {
     // Nested parentheses stay inside the answer; trailing text after the group means no split.
     expect(splitViva("Why? (Because (a) and (b))").answer).toBe("Because (a) and (b)");
     expect(splitViva("Why? (Because) and more").answer).toBeNull();
+    // Statement-style items ending in a parenthetical are not question-and-answer pairs.
+    expect(splitViva("Mechanism: IRREVERSIBLE non-selective MAO-A + MAO-B inhibitor (hydrazine class)").answer).toBeNull();
+    expect(splitViva("Third hydrazine IRREVERSIBLE MAOI (with phenelzine, and historically iproniazid)").answer).toBeNull();
   });
 
   test("MCQ drill carries the authored questions unchanged", () => {
@@ -295,5 +298,54 @@ describe("rollout gate (docs/four-mode-rollout-gate.md, section A)", () => {
   });
   test("the enabled list is exactly the reviewed slice (change deliberately)", () => {
     expect([...LENS_ENABLED_SLUGS]).toEqual(["sertraline"]);
+  });
+});
+
+describe("viva splitter across the whole registry", () => {
+  const items = drugs.flatMap((d) => (d.examLens?.mbbs?.viva ?? []).map((v) => ({ slug: d.slug, v })));
+  test("splitting never loses or alters source text", () => {
+    const lossy = items.filter(({ v }) => {
+      const s = splitViva(v);
+      const t = v.trim();
+      if (s.answer === null) return s.question !== t;
+      const rebuilt = `${s.question} (${s.answer})`;
+      return rebuilt !== t && `${rebuilt}.` !== t;
+    });
+    expect(lossy.map((x) => x.slug + ": " + x.v.slice(0, 60))).toEqual([]);
+  });
+  test("only question-like prompts get a hidden answer", () => {
+    const bad = items.filter(({ v }) => {
+      const s = splitViva(v);
+      return s.answer !== null && !/\?|^(name|list|define|describe|explain|enumerate|state|mention|write|classify|outline|give|compare|differentiate|discuss|identify)\b/i.test(s.question);
+    });
+    expect(bad).toEqual([]);
+  });
+  test("the enabled medication keeps a reveal on every viva item", () => {
+    const sertraline = items.filter((i) => i.slug === "sertraline");
+    expect(sertraline.length).toBe(6);
+    for (const { v } of sertraline) expect(splitViva(v).answer).not.toBeNull();
+  });
+});
+
+describe("readiness script keeps the three gates separate", () => {
+  const run = (slug: string) => {
+    const r = Bun.spawnSync([process.execPath, "scripts/four-mode-readiness.ts", slug], { cwd: process.cwd() });
+    return { code: r.exitCode, out: r.stdout.toString() + r.stderr.toString() };
+  };
+  test("a mechanical pass is reported next to an unassessed clinical gate and no release authorisation", () => {
+    for (const slug of ["sertraline", "fluoxetine"]) {
+      const { code, out } = run(slug);
+      expect(code).toBe(0);
+      expect(out).toContain("MECHANICAL:       MET");
+      expect(out).toContain("CLINICAL REVIEW:  NOT ASSESSED");
+      expect(out).toContain("RELEASE:          NOT AUTHORISED");
+      // Only the status block: the statements above it legitimately quote regulatory text.
+      expect(out.split("== STATUS")[1]).not.toMatch(/\b(approved|ready to enable|safe to enable)\b/i);
+    }
+  });
+  test("running it never enables a medication, and unknown slugs fail", () => {
+    expect(run("fluoxetine").out).toContain("not enabled");
+    expect(LENS_ENABLED_SLUGS.includes("fluoxetine")).toBe(false);
+    expect(run("no-such-medicine").code).toBe(2);
   });
 });

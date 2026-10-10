@@ -7,14 +7,15 @@
  * canonical data, which cannot (and why), validator issues, viva items shown
  * without a reveal, and every displayed statement that mentions addiction,
  * dependence, withdrawal or stopping, so a qualified reviewer can read each one.
- * Exit code 1 when the mechanical criteria (docs/four-mode-rollout-gate.md,
- * section A) are not met. Passing them says nothing about clinical review.
+ * Prints three separate statuses (mechanical, clinical review, release). Exit code
+ * reflects the MECHANICAL gate only (docs/four-mode-rollout-gate.md, section A);
+ * a pass is never an authorisation to enable a medication.
  */
 
 import { drugs } from "@/lib/kyp/data";
 import { getPatientGuide } from "@/lib/kyp/patient";
 import { stahlMcqs } from "@/lib/kyp/stahl-mcqs";
-import { MODE_ORDER, buildModeLenses, splitViva, validateLensSet } from "@/lib/kyp/modes";
+import { LENS_ENABLED_SLUGS, MODE_ORDER, buildModeLenses, splitViva, validateLensSet } from "@/lib/kyp/modes";
 
 const slug = process.argv[2];
 const drug = drugs.find((d) => d.slug === slug);
@@ -57,7 +58,11 @@ console.log(`\nstatements for clinical review (addiction/dependence/withdrawal/s
 for (const f of flagged) console.log(`   ${f}`);
 
 const unavailable = MODE_ORDER.reduce((n, m) => n + lenses[m].unavailable.length, 0);
-const ready = unavailable === 0 && issues.length === 0;
-console.log(`\nmechanical criteria (gate section A): ${ready ? "MET" : "NOT MET"}  unavailable blocks=${unavailable} validator issues=${issues.length}`);
-console.log("clinical review and release approval are separate gates and are NOT assessed here.");
-process.exit(ready ? 0 : 1);
+const mechanical = unavailable === 0 && issues.length === 0 && vivaNoReveal.length === 0;
+const enabled = LENS_ENABLED_SLUGS.includes(slug);
+console.log("\n== STATUS (three separate gates) ==");
+console.log(`MECHANICAL:       ${mechanical ? "MET" : "NOT MET"} (unavailable blocks=${unavailable}, validator issues=${issues.length}, viva without reveal=${vivaNoReveal.length})`);
+console.log("CLINICAL REVIEW:  NOT ASSESSED by this tool (a recorded qualified reviewer is required; see docs/four-mode-readiness-checklist.md)");
+console.log(`RELEASE:          NOT AUTHORISED by this tool (currently ${enabled ? "ENABLED in LENS_ENABLED_SLUGS" : "not enabled"}; this script never enables anything)`);
+// Exit code reports the mechanical gate only. It is NOT an authorisation to enable.
+process.exit(mechanical ? 0 : 1);
