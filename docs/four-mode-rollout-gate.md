@@ -1,0 +1,27 @@
+# Four-mode rollout gate
+
+A medication may be added to `LENS_ENABLED_SLUGS` (`src/lib/kyp/modes/specs.ts`) only when every criterion below passes. Adding a slug is a content-release decision, not a refactor.
+
+Status today: sertraline is enabled as the vertical slice. It is **not clinically approved** and remains subject to the Wave 1 review process; its lens shows the pending-review notice. No other medication is enabled.
+
+## A. Mechanical criteria (enforced by `tests/four-mode-lens.test.ts`)
+1. All four lenses build with **zero unavailable blocks**.
+2. `validateLensSet` returns **no issues at all** (no errors, no duplicate-text warnings): every displayed string equals its canonical source, and no sentence is authored twice across fields.
+3. Every long rendered fragment is canonical text or declared presentation copy (`UI_COPY` / mode specs / `REVIEW_NOTICE`). New wording in the lens must be added there on purpose.
+4. The notice is present in every mode, states that the rest of the page is also not reviewed, and no rendered text claims validation.
+5. `tsc --noEmit`, ESLint, `lint:dashes` and `next build` pass; the content-lock and medical-data snapshot pass in a clean LF checkout and show no data change.
+
+## B. Content criteria (human, not automatable)
+1. The medication's source content (registry fields, Patient Guide, MCQs) has a **recorded qualified clinical review**: reviewer name and qualification, date, sources.
+2. Open Wave 1 findings for the medication are resolved or explicitly accepted (for example the habit-forming claim, 104 medicines; timeline contradictions).
+3. The Patient Guide statements shown in Patient mode (urgent help, key points) were read by the reviewer in the context of this view.
+4. MCQ answers and explanations are unchanged from the authored bank; any change goes through its own review.
+
+## C. Experience criteria (browser)
+1. All four modes exercised in a real browser on desktop and 375 px mobile: no horizontal overflow, no console errors from the lens, mode switching works.
+2. Interactions work: mechanism stepper, viva reveal, MCQ answer locks after one choice, staged case withholds diagnosis, decision-path branches and restart.
+3. Patient mode shows urgent help before the explanation.
+4. An unaffected medication page is unchanged.
+
+## D. Release
+Separate explicit approval; no push, merge or deploy as part of enabling.

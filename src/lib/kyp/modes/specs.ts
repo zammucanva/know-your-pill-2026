@@ -58,3 +58,14 @@ export function modeOfBlock(kind: BlockKind): ModeId {
  * lenses are reviewed for rollout.
  */
 export const LENS_ENABLED_SLUGS: readonly string[] = ["sertraline"];
+
+/**
+ * The review notice shown on every lens. Scope matters: it states that
+ * NEITHER the lens NOR the rest of the page has a recorded qualified
+ * clinical review, so it cannot be read as approving the surrounding page.
+ */
+export const REVIEW_NOTICE = {
+  heading: "Review status: not yet clinically reviewed.",
+  body:
+    "This view re-presents text already on this page. Neither this view nor the rest of this page has a recorded qualified clinical review yet. It is for education, not treatment decisions. Ask your prescriber or pharmacist before changing how you take any medicine.",
+} as const;

@@ -4,7 +4,7 @@ import * as React from "react";
 import { AlertTriangle, ChevronRight, ChevronLeft, ClipboardCheck, ShieldAlert, Info } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useGuidedLearning } from "@/components/kyp/ui/guided-learning-toggle";
-import { MODE_SPECS } from "@/lib/kyp/modes/specs";
+import { MODE_SPECS, REVIEW_NOTICE } from "@/lib/kyp/modes/specs";
 import type { LensBlock, ModeId, ModeLens, ModeLensSet } from "@/lib/kyp/modes/types";
 import {
   CASE_STAGES,
@@ -40,14 +40,16 @@ const card = "rounded-xl border border-border/70 bg-card/80 p-4 sm:p-5";
 
 function ReviewNotice() {
   return (
-    <p
+    <aside
+      role="note"
       data-review-state="pending-clinical-review"
-      className="mt-4 flex items-start gap-2 text-xs text-muted-foreground"
+      className="mt-4 flex items-start gap-2 rounded-lg border border-amber-500/40 bg-amber-500/10 p-3 text-sm"
     >
-      <Info className="mt-0.5 h-3.5 w-3.5 shrink-0" aria-hidden />
-      Education only. This view reuses this guide&apos;s existing content and has not yet had qualified clinical
-      review. It does not replace advice from your prescriber or pharmacist.
-    </p>
+      <Info className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
+      <p>
+        <span className="font-medium">{REVIEW_NOTICE.heading}</span> {REVIEW_NOTICE.body}
+      </p>
+    </aside>
   );
 }
 
@@ -181,7 +183,7 @@ function MbbsBlocks({ blocks }: { blocks: LensBlock[] }) {
                     {q.answer === null ? null : open[idx] ? (
                       <p className="mt-1 rounded-md bg-muted/50 p-2">{q.answer}</p>
                     ) : (
-                      <button type="button" onClick={() => setOpen((o) => ({ ...o, [idx]: true }))} className="mt-1 text-xs underline underline-offset-2">
+                      <button type="button" onClick={() => setOpen((o) => ({ ...o, [idx]: true }))} className="mt-1 inline-flex min-h-9 items-center px-1 text-xs underline underline-offset-2">
                         Reveal answer
                       </button>
                     )}
@@ -224,7 +226,7 @@ function McqCard({ q, n }: { q: Extract<LensBlock, { kind: "mcq-drill" }>["quest
         ))}
       </div>
       {result !== null && (
-        <p data-mcq-result={result ? "correct" : "incorrect"} className="mt-2 rounded-md bg-muted/50 p-2">
+        <p role="status" data-mcq-result={result ? "correct" : "incorrect"} className="mt-2 rounded-md bg-muted/50 p-2">
           <span className="font-medium">{result ? "Correct. " : "Not quite. "}</span>
           {q.explanation}
         </p>
@@ -251,7 +253,7 @@ function NeetBlocks({ blocks }: { blocks: LensBlock[] }) {
         if (b.kind === "pyq-concepts")
           return (
             <div key={b.kind} data-block="pyq-concepts" className={card}>
-              <h3 className="font-semibold">Previously tested concepts</h3>
+              <h3 className="font-semibold">Exam concepts noted in this guide</h3>
               <ul className="mt-2 list-disc space-y-1 pl-5 text-sm">
                 {b.items.map((it) => (
                   <li key={it.source}>{it.text}</li>
@@ -336,7 +338,7 @@ function ResidentBlocks({ blocks }: { blocks: LensBlock[] }) {
                 </div>
               )}
               {current.id !== b.startNodeId && (
-                <button type="button" onClick={() => setNode(null)} className="mt-3 text-xs underline underline-offset-2">
+                <button type="button" onClick={() => setNode(null)} className="mt-3 inline-flex min-h-9 items-center px-1 text-xs underline underline-offset-2">
                   Back to start
                 </button>
               )}
@@ -382,11 +384,12 @@ export function ModeLensView({ drugName, lenses, mode }: Props & { mode: ModeId 
       id="mode-lens"
       data-mode-lens={mode}
       aria-label={`${spec.label} view of ${drugName}`}
-      className="mx-auto w-full max-w-5xl px-4 py-8 sm:px-6"
+      className="mx-auto w-full max-w-5xl scroll-mt-24 px-4 py-8 sm:px-6"
     >
       <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">{spec.label} view</p>
       <h2 className="mt-1 text-xl font-semibold">{spec.objective}</h2>
       <p className="mt-1 text-sm text-muted-foreground">{spec.interaction}</p>
+      <ReviewNotice />
       <div className="mt-5">
         {mode === "patient" && <PatientBlocks blocks={lens.blocks} />}
         {mode === "mbbs" && <MbbsBlocks blocks={lens.blocks} />}
@@ -394,7 +397,6 @@ export function ModeLensView({ drugName, lenses, mode }: Props & { mode: ModeId 
         {mode === "resident" && <ResidentBlocks blocks={lens.blocks} />}
       </div>
       <Unavailable items={lens.unavailable} />
-      <ReviewNotice />
     </section>
   );
 }

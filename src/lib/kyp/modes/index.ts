@@ -6,7 +6,7 @@ import { LENS_ENABLED_SLUGS } from "./specs";
 import type { ModeLensSet } from "./types";
 
 export * from "./types";
-export { MODE_SPECS, MODE_ORDER, LENS_ENABLED_SLUGS, modeOfBlock } from "./specs";
+export { MODE_SPECS, MODE_ORDER, LENS_ENABLED_SLUGS, REVIEW_NOTICE, modeOfBlock } from "./specs";
 export { buildModeLens, buildModeLenses, splitViva } from "./build";
 export { validateLensSet, readPath } from "./validate";
 

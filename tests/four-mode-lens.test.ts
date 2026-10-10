@@ -8,6 +8,7 @@ import {
   LENS_ENABLED_SLUGS,
   MODE_ORDER,
   MODE_SPECS,
+  REVIEW_NOTICE,
   buildModeLenses,
   getModeLenses,
   modeOfBlock,
@@ -215,5 +216,75 @@ describe("registry-wide validation (all medications)", () => {
     }
     const other = drugs.find((d) => !LENS_ENABLED_SLUGS.includes(d.slug))!;
     expect(getModeLenses(other.slug)).toBeNull();
+  });
+});
+
+describe("content fidelity of rendered text", () => {
+  const decode = (t: string) =>
+    t.replace(/&#x27;/g, "'").replace(/&quot;/g, '"').replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&");
+  const strings = (v: unknown, out: string[] = []): string[] => {
+    if (typeof v === "string") out.push(v);
+    else if (Array.isArray(v)) v.forEach((x) => strings(x, out));
+    else if (v && typeof v === "object") Object.values(v).forEach((x) => strings(x, out));
+    return out;
+  };
+  // Presentation-only copy written for the UI. Anything new and long must be added
+  // here deliberately, which is the review gate for new wording in the lens.
+  const UI_COPY = [
+    "Answer aloud first, then reveal.",
+    "Pick an answer; it is final once chosen.",
+    "Decide your diagnosis and plan before revealing each step.",
+    "Common errors and when not to use",
+    "Exam concepts noted in this guide",
+    "Tell your doctor or pharmacist",
+    "Mechanism, step by step",
+    "Get urgent help",
+  ];
+
+  test("every long rendered fragment is canonical text or declared presentation copy", () => {
+    const { lenses } = lensFor("sertraline");
+    const unknown: string[] = [];
+    for (const m of MODE_ORDER) {
+      const canon = strings(lenses[m].blocks);
+      const declared = [
+        MODE_SPECS[m].objective,
+        MODE_SPECS[m].interaction,
+        MODE_SPECS[m].label + " view",
+        REVIEW_NOTICE.heading,
+        REVIEW_NOTICE.body,
+        ...UI_COPY,
+      ];
+      const html = render(m, "sertraline");
+      for (const raw of html.split(/<[^>]+>/)) {
+        const t = decode(raw).trim().replace(/^(Target|Case|Avoid|Net effect): /, "").replace(/^\d+\. /, "");
+        if (t.length < 25) continue;
+        const ok = canon.some((c) => c.includes(t)) || declared.some((d) => d.includes(t));
+        if (!ok) unknown.push(`${m}: ${t.slice(0, 80)}`);
+      }
+    }
+    expect(unknown).toEqual([]);
+  });
+
+  test("the notice states that the whole page is not reviewed, and no text claims validation", () => {
+    expect(REVIEW_NOTICE.body).toContain("rest of this page");
+    expect(REVIEW_NOTICE.body).toContain("recorded qualified clinical review");
+    for (const m of MODE_ORDER) {
+      const html = render(m, "sertraline");
+      expect(html).toContain(REVIEW_NOTICE.heading);
+      expect(html).not.toMatch(/clinically (approved|validated|verified)|peer.reviewed|medically reviewed/i);
+    }
+  });
+});
+
+describe("rollout gate (docs/four-mode-rollout-gate.md, section A)", () => {
+  test("every enabled medication has complete, clean lenses", () => {
+    for (const slug of LENS_ENABLED_SLUGS) {
+      const { drug, patientGuide, lenses } = lensFor(slug);
+      for (const m of MODE_ORDER) expect(lenses[m].unavailable).toEqual([]);
+      expect(validateLensSet(lenses, drug, patientGuide)).toEqual([]);
+    }
+  });
+  test("the enabled list is exactly the reviewed slice (change deliberately)", () => {
+    expect([...LENS_ENABLED_SLUGS]).toEqual(["sertraline"]);
   });
 });
