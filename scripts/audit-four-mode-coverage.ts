@@ -1,0 +1,155 @@
+/**
+ * Four-mode coverage audit (READ-ONLY).
+ *
+ * For every medication in the registry, checks what authored content backs
+ * each learning mode (patient / mbbs / neetPg / resident) and what the mode
+ * switcher actually shows. It never edits content.
+ *
+ *   bun scripts/audit-four-mode-coverage.ts
+ *
+ * Output (reports/medication-audit/four-mode/): coverage.csv, summary.json
+ *
+ * Status per (medication, mode):
+ *   dedicated  >= 60% of the mode's indicators are substantive and not shared boilerplate
+ *   partial    at least one substantive indicator
+ *   missing    none
+ * "substantive" is a SIZE and UNIQUENESS test only (text length and not
+ * reused verbatim on >= SHARED_MIN medications). It says nothing about
+ * clinical quality; every row still needs qualified clinical review.
+ */
+
+import { mkdirSync, writeFileSync } from "fs";
+import { drugs } from "@/lib/kyp/data";
+import { patientGuides } from "@/lib/kyp/patient";
+import { STAHL_MCQ_BANK } from "@/lib/kyp/stahl-mcqs";
+import type { Drug, GuidedLearningMode } from "@/lib/kyp/data";
+
+const OUT = "reports/medication-audit/four-mode";
+const SHARED_MIN = 10;
+const MODES: GuidedLearningMode[] = ["patient", "mbbs", "neetPg", "resident"];
+
+type Indicator = { id: string; get: (d: Drug) => string[] };
+const L = (v: unknown): string[] =>
+  Array.isArray(v) ? v.flatMap((x) => (typeof x === "string" ? [x] : [])) : typeof v === "string" ? [v] : [];
+const json = (v: unknown): string[] => (v == null ? [] : [JSON.stringify(v)]);
+
+const mcqCount = new Map<string, number>();
+// The source bank (DSL form) names the medication in `drug`.
+for (const q of STAHL_MCQ_BANK as unknown as { drug: string }[]) mcqCount.set(q.drug, (mcqCount.get(q.drug) ?? 0) + 1);
+
+const INDICATORS: Record<GuidedLearningMode, Indicator[]> = {
+  patient: [
+    { id: "patientGuide", get: (d) => (patientGuides[d.slug] ? [`patient guide present for ${d.slug}`.padEnd(40, ".")] : []) },
+    { id: "patientExplanation", get: (d) => L(d.patientExplanation) },
+    { id: "patientEducationPoints", get: (d) => L(d.patientEducationPoints) },
+    { id: "patientMode", get: (d) => json(d.patientMode) },
+  ],
+  mbbs: [
+    { id: "examLens.mbbs.viva", get: (d) => L(d.examLens?.mbbs?.viva) },
+    { id: "examLens.mbbs.practical", get: (d) => L(d.examLens?.mbbs?.practical) },
+    { id: "examLens.mbbs.longAnswer", get: (d) => L(d.examLens?.mbbs?.longAnswer) },
+    { id: "mechanism.pharmacokinetics+prescriberGuide", get: (d) => [...L(d.mechanism?.pharmacokinetics), ...L(d.prescriberGuide?.pharmacokinetics)] },
+    { id: "cbmeMapping", get: (d) => json(d.cbmeMapping) },
+    { id: "mechanism", get: (d) => json(d.mechanism) },
+  ],
+  neetPg: [
+    { id: "examPearls", get: (d) => L(d.examPearls) },
+    { id: "examLens.neetPg.highYield", get: (d) => L(d.examLens?.neetPg?.highYield) },
+    { id: "examLens.neetPg.pyqConcepts", get: (d) => L(d.examLens?.neetPg?.pyqConcepts) },
+    { id: "memoryTricks", get: (d) => json(d.memoryTricks) },
+    { id: "microQuizzes", get: (d) => json(d.microQuizzes) },
+    { id: "activeRecallQuestions", get: (d) => json(d.activeRecallQuestions) },
+    { id: "stahlMcqBank>=3", get: (d) => ((mcqCount.get(d.slug) ?? 0) >= 3 ? [`${mcqCount.get(d.slug)} mcqs`.padEnd(40, "x")] : []) },
+  ],
+  resident: [
+    { id: "examLens.inicet.clinicalReasoning", get: (d) => L(d.examLens?.inicet?.clinicalReasoning) },
+    { id: "wardPearls.residentExpects", get: (d) => L(d.wardPearls?.residentExpects) },
+    { id: "clinicalCases", get: (d) => json(d.clinicalCases) },
+    { id: "clinicalDecisionPath", get: (d) => json(d.clinicalDecisionPath) },
+    { id: "commonMistakes", get: (d) => json(d.commonMistakes) },
+    { id: "whenNotToUse", get: (d) => json(d.whenNotToUse) },
+    { id: "prescriberGuide", get: (d) => json(d.prescriberGuide) },
+    { id: "guidelineComparisons", get: (d) => json(d.guidelineComparisons) },
+  ],
+};
+
+// How many medications reuse each exact string, per indicator.
+const reuse = new Map<string, number>();
+for (const d of drugs) {
+  const seen = new Set<string>();
+  for (const m of MODES) for (const ind of INDICATORS[m]) for (const s of ind.get(d)) {
+    const k = `${ind.id}::${s.trim()}`;
+    if (!seen.has(k)) { seen.add(k); reuse.set(k, (reuse.get(k) ?? 0) + 1); }
+  }
+}
+
+const MIN = 40; // characters
+function substantive(ind: Indicator, d: Drug): "yes" | "shared" | "thin" | "none" {
+  const items = ind.get(d).map((s) => s.trim()).filter(Boolean);
+  if (!items.length) return "none";
+  const total = items.reduce((n, s) => n + s.length, 0);
+  if (total < MIN) return "thin";
+  const sharedAll = items.every((s) => (reuse.get(`${ind.id}::${s}`) ?? 0) >= SHARED_MIN);
+  return sharedAll ? "shared" : "yes";
+}
+
+const rows: string[][] = [];
+const modeStats: Record<string, { dedicated: number; partial: number; missing: number; slugs: Record<string, string[]> }> = {};
+for (const m of MODES) modeStats[m] = { dedicated: 0, partial: 0, missing: 0, slugs: { dedicated: [], partial: [], missing: [] } };
+const indicatorStats: Record<string, Record<string, number>> = {};
+const pathSets: Record<string, Map<string, number>> = {};
+for (const m of MODES) pathSets[m] = new Map();
+
+for (const d of drugs) {
+  const row: string[] = [d.slug, d.genericName, d.drugClassLabel];
+  for (const m of MODES) {
+    const res = INDICATORS[m].map((i) => ({ id: i.id, v: substantive(i, d) }));
+    for (const r of res) (indicatorStats[`${m}.${r.id}`] ??= { yes: 0, shared: 0, thin: 0, none: 0 })[r.v]++;
+    const yes = res.filter((r) => r.v === "yes").length;
+    const status = yes >= Math.ceil(INDICATORS[m].length * 0.6) ? "dedicated" : yes >= 1 ? "partial" : "missing";
+    modeStats[m][status]++;
+    modeStats[m].slugs[status].push(d.slug);
+    const path = d.learningPaths?.find((p) => p.mode === m);
+    const sections = path ? [...path.visibleSections].sort().join("|") : "(no learning path: shows everything)";
+    pathSets[m].set(sections, (pathSets[m].get(sections) ?? 0) + 1);
+    row.push(status, `${yes}/${res.length}`, res.filter((r) => r.v !== "yes").map((r) => `${r.id}:${r.v}`).join(" "), String(path?.visibleSections.length ?? "all"));
+  }
+  row.push(patientGuides[d.slug] ? "yes" : "no", String(mcqCount.get(d.slug) ?? 0));
+  rows.push(row);
+}
+
+mkdirSync(OUT, { recursive: true });
+const head = ["slug", "medication", "class"];
+for (const m of MODES) head.push(`${m}_status`, `${m}_substantive`, `${m}_gaps`, `${m}_visible_sections`);
+head.push("has_patient_guide", "stahl_mcq_count");
+const csv = (v: string) => `"${v.replace(/"/g, '""')}"`;
+writeFileSync(`${OUT}/coverage.csv`, [head, ...rows].map((r) => r.map(csv).join(",")).join("\n") + "\n");
+
+// Visibility analysis: how different are the four modes actually?
+const allSections = new Set<string>();
+for (const d of drugs) for (const p of d.learningPaths ?? []) p.visibleSections.forEach((s) => allSections.add(s));
+const setOf = (d: Drug, m: GuidedLearningMode) => new Set(d.learningPaths?.find((p) => p.mode === m)?.visibleSections ?? []);
+const subsetPairs: Record<string, number> = {};
+for (const d of drugs) for (const a of MODES) for (const b of MODES) {
+  if (a === b) continue;
+  const A = setOf(d, a), B = setOf(d, b);
+  if (A.size && [...A].every((s) => B.has(s)) && A.size < B.size) subsetPairs[`${a} ⊂ ${b}`] = (subsetPairs[`${a} ⊂ ${b}`] ?? 0) + 1;
+}
+const distinct = Object.fromEntries(MODES.map((m) => [m, pathSets[m].size]));
+const noPath = drugs.filter((d) => !d.learningPaths?.length).map((d) => d.slug);
+
+const summary = {
+  generatedFrom: "scripts/audit-four-mode-coverage.ts",
+  medications: drugs.length,
+  patientGuides: Object.keys(patientGuides).length,
+  stahlMcqs: STAHL_MCQ_BANK.length,
+  medicationsWithStahlMcqs: mcqCount.size,
+  distinctVisibleSectionSetsPerMode: distinct,
+  medicationsWithoutLearningPaths: noPath.length,
+  subsetRelationsAcrossMedications: subsetPairs,
+  modes: Object.fromEntries(MODES.map((m) => [m, { dedicated: modeStats[m].dedicated, partial: modeStats[m].partial, missing: modeStats[m].missing, missingSlugs: modeStats[m].slugs.missing }])),
+  indicators: indicatorStats,
+  note: "Indicator status is a size/uniqueness test, not a quality or clinical-accuracy judgement.",
+};
+writeFileSync(`${OUT}/summary.json`, JSON.stringify(summary, null, 2) + "\n");
+console.log(JSON.stringify({ ...summary, indicators: undefined, modes: Object.fromEntries(MODES.map((m) => [m, { d: modeStats[m].dedicated, p: modeStats[m].partial, x: modeStats[m].missing }])) }, null, 1));
