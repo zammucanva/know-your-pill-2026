@@ -21,7 +21,7 @@ export const MODE_SPECS: Record<ModeId, ModeSpec> = {
     audience: "Undergraduate medical students learning pharmacology.",
     objective:
       "Explain how the drug works from target to effect, and answer viva-style questions.",
-    blocks: ["mechanism-walkthrough", "pharmacology-card", "viva-qa"],
+    blocks: ["mechanism-walkthrough", "pharmacology-card", "viva"],
     interaction: "Step through the mechanism, then attempt each viva question before revealing the answer.",
   },
   neetPg: {

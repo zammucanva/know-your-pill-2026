@@ -62,9 +62,22 @@ export interface PharmacologyCardBlock extends BlockBase {
   kind: "pharmacology-card";
   rows: { label: string; value: Sourced }[];
 }
+/**
+ * One viva-list entry, classified by what the text actually is:
+ *  - qa: a question whose answer is the trailing parenthesised group (revealable)
+ *  - statement: a fact or note shown whole (no hidden answer is invented)
+ *  - needs-review: malformed or ambiguous text, shown whole and failing the gate
+ */
+export type VivaItem =
+  | { type: "qa"; full: Sourced; question: string; answer: string }
+  | { type: "statement"; full: Sourced }
+  | { type: "needs-review"; full: Sourced; reason: VivaReviewReason };
+
+export type VivaReviewReason = "empty" | "unbalanced-parentheses" | "question-without-parsable-answer";
+
 export interface VivaBlock extends BlockBase {
-  kind: "viva-qa";
-  items: { full: Sourced; question: string; answer: string | null }[];
+  kind: "viva";
+  items: VivaItem[];
 }
 
 /* ---------- NEET PG ---------- */

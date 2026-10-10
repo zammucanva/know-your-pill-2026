@@ -7,6 +7,7 @@ Status today: sertraline is enabled as the vertical slice. It is **not clinicall
 ## A. Mechanical criteria (enforced by `tests/four-mode-lens.test.ts`)
 1. All four lenses build with **zero unavailable blocks**.
 2. `validateLensSet` returns **no issues at all** (no errors, no duplicate-text warnings): every displayed string equals its canonical source, and no sentence is authored twice across fields.
+   - Viva items are typed, not forced into one shape: a **question with a revealable answer** gets a reveal; a **statement or fact** is shown whole and is valid as it is (no hidden answer is invented, nothing is converted into a question); **malformed or ambiguous** text (empty, unbalanced parentheses, or a "?" with no parsable answer) fails the gate and is shown whole under a review label until its source is corrected. Statements never fail the gate.
 3. Every long rendered fragment is canonical text or declared presentation copy (`UI_COPY` / mode specs / `REVIEW_NOTICE`). New wording in the lens must be added there on purpose.
 4. The notice is present in every mode, states that the rest of the page is also not reviewed, and no rendered text claims validation.
 5. `tsc --noEmit`, ESLint, `lint:dashes` and `next build` pass; the content-lock and medical-data snapshot pass in a clean LF checkout and show no data change.

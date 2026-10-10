@@ -127,7 +127,7 @@ function PatientBlocks({ blocks }: { blocks: LensBlock[] }) {
 /* ---------------- MBBS ---------------- */
 function MbbsBlocks({ blocks }: { blocks: LensBlock[] }) {
   const [step, setStep] = React.useState(0);
-  const [open, setOpen] = React.useState<Record<number, boolean>>({});
+  const [open, setOpen] = React.useState<Record<string, boolean>>({});
   return (
     <div className="space-y-4">
       {blocks.map((b) => {
@@ -171,27 +171,55 @@ function MbbsBlocks({ blocks }: { blocks: LensBlock[] }) {
               ))}
             </dl>
           );
-        if (b.kind === "viva-qa")
+        if (b.kind === "viva") {
+          const qa = b.items.filter((x): x is Extract<typeof x, { type: "qa" }> => x.type === "qa");
+          const facts = b.items.filter((x) => x.type === "statement");
+          const review = b.items.filter((x) => x.type === "needs-review");
           return (
-            <div key={b.kind} data-block="viva-qa" className={card}>
-              <h3 className="font-semibold">Viva questions</h3>
-              <p className="mt-1 text-xs text-muted-foreground">Answer aloud first, then reveal.</p>
-              <ol className="mt-3 space-y-3">
-                {b.items.map((q, idx) => (
-                  <li key={q.full.source} className="text-sm">
-                    <p>{q.question}</p>
-                    {q.answer === null ? null : open[idx] ? (
-                      <p className="mt-1 rounded-md bg-muted/50 p-2">{q.answer}</p>
-                    ) : (
-                      <button type="button" onClick={() => setOpen((o) => ({ ...o, [idx]: true }))} className="mt-1 inline-flex min-h-9 items-center px-1 text-xs underline underline-offset-2">
-                        Reveal answer
-                      </button>
-                    )}
-                  </li>
-                ))}
-              </ol>
+            <div key={b.kind} data-block="viva" className={card}>
+              {qa.length > 0 && (
+                <div data-viva-type="qa">
+                  <h3 className="font-semibold">Viva questions</h3>
+                  <p className="mt-1 text-xs text-muted-foreground">Answer aloud first, then reveal.</p>
+                  <ol className="mt-3 space-y-3">
+                    {qa.map((q) => (
+                      <li key={q.full.source} className="text-sm">
+                        <p>{q.question}</p>
+                        {open[q.full.source] ? (
+                          <p className="mt-1 rounded-md bg-muted/50 p-2">{q.answer}</p>
+                        ) : (
+                          <button type="button" onClick={() => setOpen((o) => ({ ...o, [q.full.source]: true }))} className="mt-1 inline-flex min-h-9 items-center px-1 text-xs underline underline-offset-2">
+                            Reveal answer
+                          </button>
+                        )}
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              )}
+              {facts.length > 0 && (
+                <div data-viva-type="statement" className={qa.length > 0 ? "mt-5" : undefined}>
+                  <h3 className="font-semibold">Key facts for viva</h3>
+                  <ul className="mt-2 list-disc space-y-1.5 pl-5 text-sm">
+                    {facts.map((f) => (
+                      <li key={f.full.source}>{f.full.text}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              {review.length > 0 && (
+                <div data-viva-type="needs-review" className="mt-5">
+                  <p className="text-xs text-muted-foreground">Display format under review:</p>
+                  <ul className="mt-1 list-disc space-y-1.5 pl-5 text-sm">
+                    {review.map((f) => (
+                      <li key={f.full.source}>{f.full.text}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           );
+        }
         return null;
       })}
     </div>

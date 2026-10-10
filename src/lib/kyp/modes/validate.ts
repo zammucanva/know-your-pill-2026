@@ -37,7 +37,9 @@ export interface LensIssue {
     | "duplicate-across-fields"
     | "unreviewed-state-missing"
     | "kind-both-built-and-unavailable"
-    | "kind-unaccounted";
+    | "kind-unaccounted"
+    | "viva-needs-review"
+    | "viva-split-lossy";
   detail: string;
 }
 
@@ -66,6 +68,18 @@ export function validateLensSet(set: ModeLensSet, drug: Drug, patientGuide?: Pat
       if (modeOfBlock(b.kind) !== mode) issues.push({ code: "wrong-mode", severity: "error", detail: `${b.kind} in ${mode}` });
       if (b.review !== "pending-clinical-review")
         issues.push({ code: "unreviewed-state-missing", severity: "error", detail: `${mode}:${b.kind}` });
+      if (b.kind === "viva") {
+        for (const it of b.items) {
+          if (it.type === "needs-review")
+            issues.push({ code: "viva-needs-review", severity: "error", detail: `${it.full.source}:${it.reason}` });
+          if (it.type === "qa") {
+            const rebuilt = `${it.question} (${it.answer})`;
+            const t = it.full.text.trim();
+            if (rebuilt !== t && `${rebuilt}.` !== t)
+              issues.push({ code: "viva-split-lossy", severity: "error", detail: it.full.source });
+          }
+        }
+      }
       for (const s of sourcedIn(b)) {
         const actual = readPath(root, s.source);
         if (actual === undefined) issues.push({ code: "source-missing", severity: "error", detail: `${mode}:${s.source}` });

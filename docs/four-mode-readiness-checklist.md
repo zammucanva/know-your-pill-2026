@@ -6,7 +6,7 @@ Medication: ______  Slug: ______  Checked by: ______  Date: ______
 
 ## Mechanical (engineering) — run `bun scripts/four-mode-readiness.ts <slug>`
 - [ ] Command exits 0 ("mechanical criteria MET"): zero unavailable blocks, zero validator issues.
-- [ ] Zero viva items shown without a reveal (or each such item is listed and accepted by the reviewer).
+- [ ] Viva items: zero "needs review" (malformed or ambiguous). Statements shown whole are valid; question-and-answer items have a reveal.
 - [ ] Authored MCQs present and unchanged from the bank (count: ___).
 - [ ] After adding the slug: `bun test tests/four-mode-lens.test.ts`, `tsc --noEmit`, ESLint, `lint:dashes`, `next build` all pass.
 - [ ] Clean LF checkout: content-lock and medical-data snapshot pass and show no data change.

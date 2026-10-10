@@ -12,6 +12,7 @@ import {
   buildModeLenses,
   getModeLenses,
   modeOfBlock,
+  classifyViva,
   splitViva,
   validateLensSet,
   type BlockKind,
@@ -85,8 +86,8 @@ describe("vertical slice: sertraline", () => {
   });
 
   test("viva display split never alters the verbatim source text", () => {
-    const viva = lenses.mbbs.blocks.find((b) => b.kind === "viva-qa");
-    if (!viva || viva.kind !== "viva-qa") throw new Error("no viva block");
+    const viva = lenses.mbbs.blocks.find((b) => b.kind === "viva");
+    if (!viva || viva.kind !== "viva") throw new Error("no viva block");
     for (const it of viva.items) expect(it.full.text).toBe(drug.examLens!.mbbs.viva[Number(/\[(\d+)\]/.exec(it.full.source)![1])]);
     expect(splitViva("What is X? (Because Y)")).toEqual({ question: "What is X?", answer: "Because Y" });
     expect(splitViva("Plain statement").answer).toBeNull();
@@ -118,7 +119,7 @@ describe("rendered mode experiences", () => {
   test("each mode renders its own blocks and none of the other modes' blocks", () => {
     const expected: Record<ModeId, string[]> = {
       patient: ["urgent-help", "plain-summary", "key-points", "tell-your-doctor"],
-      mbbs: ["mechanism-walkthrough", "pharmacology-card", "viva-qa"],
+      mbbs: ["mechanism-walkthrough", "pharmacology-card", "viva"],
       neetPg: ["high-yield-recall", "pyq-concepts", "mcq-drill"],
       resident: ["case-reasoner", "decision-path", "pitfalls"],
     };
@@ -193,7 +194,8 @@ describe("registry-wide validation (all medications)", () => {
     expect(all.length).toBe(drugs.length);
     const errors = all.flatMap((a) =>
       validateLensSet(a.lenses, a.drug, a.patientGuide)
-        .filter((i) => i.severity === "error")
+        // viva-needs-review is a content classification (pinned in "viva content types"), not a fidelity defect.
+        .filter((i) => i.severity === "error" && i.code !== "viva-needs-review")
         .map((i) => `${a.drug.slug}:${i.code}:${i.detail}`)
     );
     expect(errors).toEqual([]);
@@ -241,6 +243,8 @@ describe("content fidelity of rendered text", () => {
   // here deliberately, which is the review gate for new wording in the lens.
   const UI_COPY = [
     "Answer aloud first, then reveal.",
+    "Key facts for viva",
+    "Display format under review:",
     "Pick an answer; it is final once chosen.",
     "Decide your diagnosis and plan before revealing each step.",
     "Common errors and when not to use",
@@ -291,9 +295,9 @@ describe("rollout gate (docs/four-mode-rollout-gate.md, section A)", () => {
       const { drug, patientGuide, lenses } = lensFor(slug);
       for (const m of MODE_ORDER) expect(lenses[m].unavailable).toEqual([]);
       expect(validateLensSet(lenses, drug, patientGuide)).toEqual([]);
-      // Every viva item of an enabled medicine must offer a reveal (no question shown with its answer inline).
-      const noReveal = (drug.examLens?.mbbs?.viva ?? []).filter((v) => splitViva(v).answer === null);
-      expect(noReveal).toEqual([]);
+      // No viva item of an enabled medicine may be malformed or ambiguous. Statements shown whole are valid.
+      const needsReview = (drug.examLens?.mbbs?.viva ?? []).filter((v) => classifyViva(v).type === "needs-review");
+      expect(needsReview).toEqual([]);
     }
   });
   test("the enabled list is exactly the reviewed slice (change deliberately)", () => {
@@ -301,29 +305,93 @@ describe("rollout gate (docs/four-mode-rollout-gate.md, section A)", () => {
   });
 });
 
-describe("viva splitter across the whole registry", () => {
-  const items = drugs.flatMap((d) => (d.examLens?.mbbs?.viva ?? []).map((v) => ({ slug: d.slug, v })));
-  test("splitting never loses or alters source text", () => {
-    const lossy = items.filter(({ v }) => {
-      const s = splitViva(v);
-      const t = v.trim();
-      if (s.answer === null) return s.question !== t;
-      const rebuilt = `${s.question} (${s.answer})`;
-      return rebuilt !== t && `${rebuilt}.` !== t;
-    });
-    expect(lossy.map((x) => x.slug + ": " + x.v.slice(0, 60))).toEqual([]);
+describe("viva content types", () => {
+  const items = drugs.flatMap((d) => (d.examLens?.mbbs?.viva ?? []).map((v) => ({ slug: d.slug, v, c: classifyViva(v) })));
+  const of = (t: string) => items.filter((i) => i.c.type === t);
+  const COMMAND = /^(name|list|define|describe|explain|enumerate|state|mention|write|classify|outline|give|compare|differentiate|discuss|identify)\b/i;
+
+  test("classification is total and the registry counts are pinned (update deliberately when content changes)", () => {
+    expect(items.length).toBe(602);
+    // 71 = 66 items with a "?" prompt + 5 with an exam command ("Name 5 ...", "Name the triad.").
+    expect(of("qa").length).toBe(71);
+    expect(of("statement").length).toBe(529);
+    expect(of("needs-review").length).toBe(2);
+    expect(of("qa").length + of("statement").length + of("needs-review").length).toBe(items.length);
   });
-  test("only question-like prompts get a hidden answer", () => {
-    const bad = items.filter(({ v }) => {
-      const s = splitViva(v);
-      return s.answer !== null && !/\?|^(name|list|define|describe|explain|enumerate|state|mention|write|classify|outline|give|compare|differentiate|discuss|identify)\b/i.test(s.question);
-    });
-    expect(bad).toEqual([]);
+
+  test("the two items needing review are the known malformed/ambiguous ones, with reasons", () => {
+    const nr = of("needs-review").map((i) => `${i.slug}:${i.c.type === "needs-review" ? i.c.reason : ""}`).sort();
+    expect(nr).toEqual(["clomipramine:unbalanced-parentheses", "tacrine:question-without-parsable-answer"]);
   });
-  test("the enabled medication keeps a reveal on every viva item", () => {
-    const sertraline = items.filter((i) => i.slug === "sertraline");
-    expect(sertraline.length).toBe(6);
-    for (const { v } of sertraline) expect(splitViva(v).answer).not.toBeNull();
+
+  test("source text is preserved exactly for every type", () => {
+    const lossy = items.filter(({ v, c }) => {
+      if (c.type !== "qa") return false;
+      const rebuilt = `${c.question} (${c.answer})`;
+      return rebuilt !== v.trim() && `${rebuilt}.` !== v.trim();
+    });
+    expect(lossy).toEqual([]);
+    // splitViva never alters a statement or a needs-review item.
+    for (const { v, c } of items) if (c.type !== "qa") expect(splitViva(v)).toEqual({ question: v.trim(), answer: null });
+  });
+
+  test("only question-like prompts become question-and-answer", () => {
+    for (const { c } of of("qa")) if (c.type === "qa") expect(c.question.includes("?") || COMMAND.test(c.question)).toBe(true);
+  });
+
+  test("unit cases: nested, unbalanced, statements, malformed", () => {
+    expect(classifyViva("Why? (Because (a) and (b))")).toEqual({ type: "qa", question: "Why?", answer: "Because (a) and (b)" });
+    expect(classifyViva("Why? (Because (a) and (b)")).toEqual({ type: "needs-review", reason: "unbalanced-parentheses" });
+    expect(classifyViva("Why? Because X.")).toEqual({ type: "needs-review", reason: "question-without-parsable-answer" });
+    expect(classifyViva("Why? (Because) and more")).toEqual({ type: "needs-review", reason: "question-without-parsable-answer" });
+    expect(classifyViva("   ")).toEqual({ type: "needs-review", reason: "empty" });
+    expect(classifyViva("Uses of X: depression (treatment-resistant)")).toEqual({ type: "statement" });
+    expect(classifyViva("Mechanism: SERT blockade; (see below) and more")).toEqual({ type: "statement" });
+  });
+
+  test("the enabled medication has only question-and-answer viva items", () => {
+    const s = items.filter((i) => i.slug === "sertraline");
+    expect(s.length).toBe(6);
+    for (const i of s) expect(i.c.type).toBe("qa");
+  });
+
+  const mbbs = (slug: string) => {
+    const { drug, lenses } = lensFor(slug);
+    return { drug, html: renderToStaticMarkup(React.createElement(ModeLensView, { drugName: drug.genericName, lenses, mode: "mbbs" })) };
+  };
+
+  test("renders question-and-answer with reveal buttons only", () => {
+    const { html } = mbbs("sertraline");
+    expect(html).toContain('data-viva-type="qa"');
+    expect(html).not.toContain('data-viva-type="statement"');
+    expect(html).not.toContain('data-viva-type="needs-review"');
+    expect((html.match(/Reveal answer/g) ?? []).length).toBe(6);
+  });
+
+  test("renders statements whole, with no reveal button and no invented question", () => {
+    const { drug, html } = mbbs("tianeptine");
+    expect(html).toContain('data-viva-type="statement"');
+    expect(html).not.toContain('data-viva-type="qa"');
+    expect(html).not.toContain("Reveal answer");
+    expect(html).not.toContain("Viva questions");
+    const first = drug.examLens!.mbbs.viva[0].replace(/&/g, "&amp;").replace(/'/g, "&#x27;");
+    expect(html).toContain(first.slice(0, 40));
+  });
+
+  test("renders needs-review items whole under a review label, alongside valid items", () => {
+    const { html } = mbbs("clomipramine");
+    expect(html).toContain('data-viva-type="qa"');
+    expect(html).toContain('data-viva-type="needs-review"');
+    expect(html).toContain("Display format under review:");
+    expect((html.match(/Reveal answer/g) ?? []).length).toBe(5);
+  });
+
+  test("the validator fails needs-review content and passes statements", () => {
+    const bad = lensFor("clomipramine");
+    const issues = validateLensSet(bad.lenses, bad.drug, bad.patientGuide).filter((i) => i.code === "viva-needs-review");
+    expect(issues.map((i) => i.detail)).toEqual(["examLens.mbbs.viva[4]:unbalanced-parentheses"]);
+    const stmt = lensFor("tianeptine");
+    expect(validateLensSet(stmt.lenses, stmt.drug, stmt.patientGuide).filter((i) => i.code.startsWith("viva-"))).toEqual([]);
   });
 });
 

@@ -32,9 +32,12 @@ src/components/kyp/sections/drug/mode-lens.tsx   mode-specific UI (ModeLensView 
 | Mode | Objective | Blocks | Interaction |
 |---|---|---|---|
 | Patient | Understand the medicine, take it safely, know when to seek help | urgent-help (first), plain-summary, key-points, tell-your-doctor | Read and act |
-| MBBS | Explain target-to-effect; answer viva questions | mechanism-walkthrough, pharmacology-card, viva-qa | Step through the mechanism; reveal viva answers |
+| MBBS | Explain target-to-effect; answer viva questions | mechanism-walkthrough, pharmacology-card, viva | Step through the mechanism; reveal viva answers |
 | NEET PG | Recall high-yield facts and discriminate options | high-yield-recall, pyq-concepts, mcq-drill | Commit to an MCQ answer, then see the explanation |
 | Resident | Apply to a patient; avoid common errors | case-reasoner, decision-path, pitfalls | Staged case (diagnosis withheld until revealed); walk the decision path |
+
+## Viva content types
+`classifyViva` types each `examLens.mbbs.viva` string without altering it: **qa** (the prompt reads as a question or exam command and a trailing balanced parenthesised group is the answer; revealable), **statement** (shown whole), **needs-review** (empty, unbalanced parentheses, or a "?" with no parsable answer; shown whole under a review label and fails the validator). Registry today: 71 qa, 529 statements, 2 needs-review (clomipramine, tacrine).
 
 ## Adding a medication
 1. Add its slug to `LENS_ENABLED_SLUGS` only after its source content has had qualified clinical review.

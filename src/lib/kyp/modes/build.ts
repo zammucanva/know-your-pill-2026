@@ -10,6 +10,8 @@ import type {
   ModeLensSet,
   Sourced,
   UnavailableBlock,
+  VivaItem,
+  VivaReviewReason,
 } from "./types";
 
 /**
@@ -43,16 +45,26 @@ function list(values: unknown, base: string): Sourced[] {
 const QUESTION_LIKE =
   /\?|^(name|list|define|describe|explain|enumerate|state|mention|write|classify|outline|give|compare|differentiate|discuss|identify)\b/i;
 
+export type VivaClass =
+  | { type: "qa"; question: string; answer: string }
+  | { type: "statement" }
+  | { type: "needs-review"; reason: VivaReviewReason };
+
 /**
- * Splits "Question (answer)" for display only; `full` stays the verbatim source.
- * The answer is the FIRST parenthesised group, and only when that group runs to
- * the end of the string (balanced, optional trailing full stop) AND the text before
- * it reads as a question. Statement-style items that merely end in a parenthetical
- * ("Mechanism: ... (hydrazine class)") are shown whole with no reveal rather than
- * being presented as a question with a hidden answer.
+ * Classifies one viva entry without changing it. `full` is always displayed from
+ * the source; question/answer are display splits only.
+ *  - qa: first "(" group is balanced, runs to the end (optional full stop) and the
+ *    text before it reads as a question or exam command.
+ *  - needs-review: empty; unbalanced parentheses; or contains a "?" but no
+ *    parsable answer (a question with an inline or trailing answer we will not guess at).
+ *  - statement: everything else, shown whole.
  */
-export function splitViva(full: string): { question: string; answer: string | null } {
+export function classifyViva(full: string): VivaClass {
   const text = full.trim();
+  if (!text) return { type: "needs-review", reason: "empty" };
+  const opens = (text.match(/\(/g) ?? []).length;
+  const closes = (text.match(/\)/g) ?? []).length;
+  if (opens !== closes) return { type: "needs-review", reason: "unbalanced-parentheses" };
   const open = text.indexOf("(");
   if (open > 0) {
     let depth = 0;
@@ -63,13 +75,20 @@ export function splitViva(full: string): { question: string; answer: string | nu
         if (tail === "" || tail === ".") {
           const question = text.slice(0, open).trim();
           const answer = text.slice(open + 1, i).trim();
-          if (question && answer && QUESTION_LIKE.test(question)) return { question, answer };
+          if (question && answer && QUESTION_LIKE.test(question)) return { type: "qa", question, answer };
         }
         break;
       }
     }
   }
-  return { question: text, answer: null };
+  if (text.includes("?")) return { type: "needs-review", reason: "question-without-parsable-answer" };
+  return { type: "statement" };
+}
+
+/** Back-compat display split: only a classified qa has an answer. */
+export function splitViva(full: string): { question: string; answer: string | null } {
+  const c = classifyViva(full);
+  return c.type === "qa" ? { question: c.question, answer: c.answer } : { question: full.trim(), answer: null };
 }
 
 type Builder = (i: LensInputs) => LensBlock | { unavailable: string };
@@ -139,14 +158,21 @@ const BUILDERS: Record<BlockKind, Builder> = {
       ? { kind: "pharmacology-card", review: REVIEW, rows }
       : { unavailable: "Fewer than three pharmacology facts in the registry." };
   },
-  "viva-qa": ({ drug }) => {
-    const items = list(drug.examLens?.mbbs?.viva, "examLens.mbbs.viva").map((full) => ({
-      full,
-      ...splitViva(full.text),
-    }));
+  "viva": ({ drug }) => {
+    const raw = drug.examLens?.mbbs?.viva;
+    const items: VivaItem[] = Array.isArray(raw)
+      ? raw.flatMap((text, i): VivaItem[] => {
+          if (typeof text !== "string") return [];
+          const full = S(text, `examLens.mbbs.viva[${i}]`);
+          const c = classifyViva(text);
+          if (c.type === "qa") return [{ type: "qa", full, question: c.question, answer: c.answer }];
+          if (c.type === "statement") return [{ type: "statement", full }];
+          return [{ type: "needs-review", full, reason: c.reason }];
+        })
+      : [];
     return items.length
-      ? { kind: "viva-qa", review: REVIEW, items }
-      : { unavailable: "No MBBS viva questions in the registry." };
+      ? { kind: "viva", review: REVIEW, items }
+      : { unavailable: "No MBBS viva items in the registry." };
   },
   "high-yield-recall": ({ drug }) => {
     const items = list(drug.examLens?.neetPg?.highYield, "examLens.neetPg.highYield");
