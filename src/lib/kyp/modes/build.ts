@@ -39,10 +39,31 @@ function list(values: unknown, base: string): Sourced[] {
   return out;
 }
 
-/** Splits "Question? (answer)" for display only; `full` stays the verbatim source. */
+/**
+ * Splits "Question (answer)" for display only; `full` stays the verbatim source.
+ * The answer is the FIRST parenthesised group, and only when that group runs to
+ * the end of the string (balanced, optional trailing full stop). Anything else is
+ * shown whole with no reveal rather than guessed at.
+ */
 export function splitViva(full: string): { question: string; answer: string | null } {
-  const m = /^([\s\S]*?\?)\s*\(([\s\S]*)\)\.?\s*$/.exec(full.trim());
-  return m ? { question: m[1].trim(), answer: m[2].trim() } : { question: full.trim(), answer: null };
+  const text = full.trim();
+  const open = text.indexOf("(");
+  if (open > 0) {
+    let depth = 0;
+    for (let i = open; i < text.length; i++) {
+      if (text[i] === "(") depth++;
+      else if (text[i] === ")" && --depth === 0) {
+        const tail = text.slice(i + 1).trim();
+        if (tail === "" || tail === ".") {
+          const question = text.slice(0, open).trim();
+          const answer = text.slice(open + 1, i).trim();
+          if (question && answer) return { question, answer };
+        }
+        break;
+      }
+    }
+  }
+  return { question: text, answer: null };
 }
 
 type Builder = (i: LensInputs) => LensBlock | { unavailable: string };

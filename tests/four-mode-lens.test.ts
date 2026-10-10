@@ -90,6 +90,12 @@ describe("vertical slice: sertraline", () => {
     for (const it of viva.items) expect(it.full.text).toBe(drug.examLens!.mbbs.viva[Number(/\[(\d+)\]/.exec(it.full.source)![1])]);
     expect(splitViva("What is X? (Because Y)")).toEqual({ question: "What is X?", answer: "Because Y" });
     expect(splitViva("Plain statement").answer).toBeNull();
+    // Questions without a "?" or with a second sentence before the answer still split.
+    expect(splitViva("Name the triad. (A + B + C.)")).toEqual({ question: "Name the triad.", answer: "A + B + C." });
+    expect(splitViva("What is X? Name two. (Y and Z)").answer).toBe("Y and Z");
+    // Nested parentheses stay inside the answer; trailing text after the group means no split.
+    expect(splitViva("Why? (Because (a) and (b))").answer).toBe("Because (a) and (b)");
+    expect(splitViva("Why? (Because) and more").answer).toBeNull();
   });
 
   test("MCQ drill carries the authored questions unchanged", () => {
@@ -282,6 +288,9 @@ describe("rollout gate (docs/four-mode-rollout-gate.md, section A)", () => {
       const { drug, patientGuide, lenses } = lensFor(slug);
       for (const m of MODE_ORDER) expect(lenses[m].unavailable).toEqual([]);
       expect(validateLensSet(lenses, drug, patientGuide)).toEqual([]);
+      // Every viva item of an enabled medicine must offer a reveal (no question shown with its answer inline).
+      const noReveal = (drug.examLens?.mbbs?.viva ?? []).filter((v) => splitViva(v).answer === null);
+      expect(noReveal).toEqual([]);
     }
   });
   test("the enabled list is exactly the reviewed slice (change deliberately)", () => {
