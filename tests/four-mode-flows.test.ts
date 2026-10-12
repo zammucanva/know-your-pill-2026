@@ -25,6 +25,7 @@ import {
   recallUnanswered,
   topicBreakdown,
   recallProgress,
+  recallRetryTopic,
   recallRetryMissed,
   recallScore,
   recallSelect,
@@ -538,5 +539,30 @@ describe("topic feedback, revision path and labelled sources", () => {
     expect(h).toContain(FLOW_COPY.shell.sourceGuide);
     expect(FLOW_COPY.shell.sourceGuide).toMatch(/No qualified clinical review is recorded/);
     expect(FLOW_COPY.shell.sourceRegistry).toMatch(/not reviewed/);
+  });
+});
+
+describe("per-topic retry, viva self-notes and monitoring filter", () => {
+  test("retrying one topic asks only the missed questions of that topic and leaves every key untouched", () => {
+    const Q = [
+      { options: ["a", "b"], correctIndex: 0, category: { id: "t1", label: "T1" } },
+      { options: ["a", "b"], correctIndex: 0, category: { id: "t2", label: "T2" } },
+      { options: ["a", "b"], correctIndex: 0, category: { id: "t1", label: "T1" } },
+      { options: ["a", "b"], correctIndex: 0 },
+    ];
+    let s = recallStart(4);
+    for (const pick of [1, 1, 0, 1]) s = recallNext(recallSubmit(recallSelect(s, pick, Q))); // Q0, Q1, Q3 wrong; Q2 right
+    expect(recallRetryTopic(s, Q, "t1").queue).toEqual([0]);
+    expect(recallRetryTopic(s, Q, "t2").queue).toEqual([1]);
+    expect(recallRetryTopic(s, Q, "nothing")).toBe(s); // unknown topic: no change
+    expect(recallRetryTopic(s, Q, "t1").chosen).toEqual({}); // answers are re-asked, not carried over
+    expect(Q.map((q) => q.correctIndex)).toEqual([0, 0, 0, 0]);
+  });
+  test("viva self-notes are labelled as the learner's own and unscored; monitoring filter copy says it is not a clinical check", () => {
+    const h = render(base, "mbbs");
+    expect(h).not.toContain("data-viva-rating-summary"); // nothing noted yet
+    expect(FLOW_COPY.mbbs.ratingSummary(1, 2)).toMatch(/not scored/);
+    expect(FLOW_COPY.resident.allPlanned).toMatch(/not a clinical check/);
+    expect(render(base, "resident")).not.toContain('data-action="monitoring-filter"'); // appears once something is ticked
   });
 });

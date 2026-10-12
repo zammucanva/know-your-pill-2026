@@ -65,8 +65,9 @@ import { PatientHidden } from "@/components/kyp/ui/patient-hidden";
 import { PatientModeSwitch } from "@/components/kyp/ui/patient-mode-switch";
 import { PatientGuideSection } from "@/components/kyp/sections/drug/patient-guide-section";
 import { getPatientGuide } from "@/lib/kyp/patient";
-import { getModeLenses } from "@/lib/kyp/modes";
+import { buildModeLens, explainPatient, getModeLenses } from "@/lib/kyp/modes";
 import { ModeLensSection } from "@/components/kyp/sections/drug/mode-lens";
+import { PatientExplainer, PatientProvenanceNote } from "@/components/kyp/sections/drug/patient-explainer";
 
 import { getDrugBySlug, getAllDrugSlugs } from "@/lib/kyp/data";
 import { DRUG_COURSE_NAV_ITEMS } from "@/lib/kyp/drug-course-sections";
@@ -146,6 +147,10 @@ export default async function DrugPage({ params }: PageProps) {
   // has no guide, in which case medical content is shown in every mode.
   const patientGuide = getPatientGuide(drug.slug);
   const modeLenses = getModeLenses(drug.slug);
+  // Patient explanation: one shared structure for every medication, labelled by source (see modes/patient-explanation).
+  const patientExplanation = explainPatient(drug, patientGuide);
+  const patientInteractions =
+    buildModeLens("patient", { drug, patientGuide, mcqs: [] }).blocks.find((b) => b.kind === "patient-interactions") ?? null;
 
   const navItems = getNavItems();
   const lessons = drug.lessonGroups ?? [];
@@ -378,9 +383,12 @@ export default async function DrugPage({ params }: PageProps) {
           <PatientModeSwitch
             patient={
               patientGuide ? (
-                <PatientGuideSection drug={drug} guide={patientGuide} />
+                <>
+                  <PatientProvenanceNote />
+                  <PatientGuideSection drug={drug} guide={patientGuide} />
+                </>
               ) : (
-                <DrugPatientEducation drug={drug} />
+                <PatientExplainer drugName={drug.genericName} explanation={patientExplanation} interactions={patientInteractions} />
               )
             }
             medical={<DrugPatientEducation drug={drug} />}

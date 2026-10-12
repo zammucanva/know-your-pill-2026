@@ -173,7 +173,7 @@ export function StickyLearningNav({ items, drugSlug }: StickyLearningNavProps) {
     const check = () => {
       raf = 0;
       const vh = window.innerHeight;
-      const hit = Array.from(document.querySelectorAll("[data-mode-lens]")).some((el) => {
+      const hit = Array.from(document.querySelectorAll("[data-mode-lens], [data-patient-explainer]")).some((el) => {
         if (el.closest("[hidden]")) return false;
         const r = el.getBoundingClientRect();
         return r.bottom > 0 && r.top < vh && r.width > 0;

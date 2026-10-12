@@ -66,6 +66,35 @@
     "medicationsWithNames": 145,
     "medicationsWithoutPatientWording": 0
   },
+  "patientExplanation": {
+    "note": "Separate measures. Rendering the Patient explanation slot is not content completeness, and content completeness is not clinical approval.",
+    "patientUiSlot": {
+      "medications": 145
+    },
+    "byLevel": {
+      "authored-guide": 12,
+      "registry-specific": 117,
+      "template-only": 16
+    },
+    "source": {
+      "patient-guide": 12,
+      "registry-wording": 133
+    },
+    "documentedUses": {
+      "listed": 145
+    },
+    "sentenceOrigins": {
+      "authored-guide": 115,
+      "registry-specific": 576,
+      "class-shared": 283,
+      "template": 1290
+    },
+    "standardPurposeSentence": {
+      "none": 14,
+      "matches-registry-indication": 131
+    },
+    "clinicallyReviewed": 0
+  },
   "flows": {
     "note": "What each learning flow has to work with. Counts of authored material only: not a measure of quality or of clinical completeness.",
     "questions": {

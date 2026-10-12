@@ -1,3 +1,4 @@
+import { EXPLANATION_COPY } from "@/lib/kyp/modes/explanation-copy";
 import { describe, expect, test } from "bun:test";
 import * as React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
@@ -46,6 +47,10 @@ const render = (mode: ModeId, slug: string) => {
   const { drug, lenses } = lensFor(slug);
   return renderToStaticMarkup(React.createElement(ModeLensView, { drugName: drug.genericName, lenses, mode }));
 };
+
+const explanationCopyStrings = (): string[] => [
+  ...Object.values(EXPLANATION_COPY).flatMap((v) => (typeof v === "string" ? [v] : Object.values(v).flatMap((x) => (typeof x === "string" ? [x] : [x(2), x(3)])))),
+];
 
 describe("mode specifications", () => {
   test("four modes, each with a distinct objective and interaction", () => {
@@ -291,6 +296,7 @@ describe("content fidelity of rendered text", () => {
         REVIEW_NOTICE.body,
         ...Object.values(PATIENT_INTERACTION_COPY).flatMap((v) => (typeof v === "string" ? [v] : Object.values(v))),
         ...flowCopyStrings(),
+        ...explanationCopyStrings(),
         MODE_TASKS[m].title,
         MODE_TASKS[m].summary,
         ...UI_COPY,

@@ -987,3 +987,9 @@ html[data-reduced-motion="true"] .dash-drawer {
   outline: 2px solid var(--foreground);
   outline-offset: 2px;
 }
+
+/* Patient explanation: same visible keyboard focus ring as the learning flows. */
+[data-patient-explainer] :is(button, input, a):focus-visible {
+  outline: 2px solid var(--foreground);
+  outline-offset: 2px;
+}

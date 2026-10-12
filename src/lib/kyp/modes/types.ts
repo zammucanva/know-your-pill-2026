@@ -31,10 +31,14 @@ export interface BlockBase {
   review: ReviewState;
 }
 
+import type { ExplanationSegment } from "./explanation-copy";
+
 /* ---------- Patient ---------- */
 export interface PlainSummaryBlock extends BlockBase {
   kind: "plain-summary";
   summary: Sourced;
+  /** The same text split into verbatim sentences, each labelled with where its wording comes from. */
+  explanation: ExplanationSegment[];
 }
 export interface KeyPointsBlock extends BlockBase {
   kind: "key-points";

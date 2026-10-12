@@ -157,3 +157,9 @@ export function topicBreakdown(s: RecallState, questions: readonly RecallQuestio
   const sorted = [...rows.values()].sort((a, b) => b.missed.length - a.missed.length || a.label.localeCompare(b.label));
   return { rows: sorted, untagged };
 }
+
+/** Retry only the missed questions that carry one authored topic. Nothing else changes. */
+export function recallRetryTopic(s: RecallState, questions: readonly RecallQuestionLite[], topicId: string): RecallState {
+  const missed = recallScore(s, questions).missed.filter((i) => questions[i].category?.id === topicId);
+  return missed.length ? recallStart(questions.length, missed) : s;
+}

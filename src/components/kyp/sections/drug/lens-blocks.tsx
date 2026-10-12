@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { FLOW_COPY as FC } from "@/lib/kyp/modes/flow-copy";
 import { PATIENT_INTERACTION_COPY as PIC, summarizeTicks } from "@/lib/kyp/modes/patient-interactions";
 import type { BlockKind, LensBlock } from "@/lib/kyp/modes/types";
+import { ExplanationText } from "./explanation-text";
 import {
   CASE_STAGES,
   clampStep,
@@ -18,6 +19,7 @@ import {
   recallPrev,
   recallProgress,
   recallRetryMissed,
+  recallRetryTopic,
   recallScore,
   recallSelect,
   recallResume,
@@ -87,7 +89,9 @@ function PlainSummary({ b }: { b: B<"plain-summary"> }) {
   return (
     <div data-block="plain-summary" className={card}>
       <h3 className="font-semibold">In plain words</h3>
-      <p className="mt-2 text-sm leading-relaxed">{b.summary.text}</p>
+      <div className="mt-2 text-sm">
+        <ExplanationText segments={b.explanation} />
+      </div>
     </div>
   );
 }
@@ -451,6 +455,12 @@ function Viva({ b }: { b: B<"viva"> }) {
   const review = b.items.filter((x) => x.type === "needs-review");
   const revealed = qa.filter((q) => open[q.full.source]).length;
   useReport("viva", FC.mbbs.vivaLabel, revealed, qa.length);
+  // Self-rating is the learner's own note after revealing an answer; it is not scored or checked.
+  const [rating, setRating] = React.useState<Record<string, "knew" | "revisit">>({});
+  const [onlyRevisit, setOnlyRevisit] = React.useState(false);
+  const knew = qa.filter((q) => rating[q.full.source] === "knew").length;
+  const revisit = qa.filter((q) => rating[q.full.source] === "revisit").length;
+  const shownQa = onlyRevisit ? qa.filter((q) => rating[q.full.source] === "revisit") : qa;
   return (
     <div data-block="viva" className={card}>
       {qa.length > 0 && (
@@ -470,8 +480,19 @@ function Viva({ b }: { b: B<"viva"> }) {
           <p role="status" data-viva-progress className="mt-1 text-xs text-muted-foreground">
             {FC.mbbs.revealedCount(revealed, qa.length)}
           </p>
+          {(knew > 0 || revisit > 0) && (
+            <div className="mt-1 flex flex-wrap items-center gap-2">
+              <p role="status" data-viva-rating-summary className="text-xs text-muted-foreground">
+                {FC.mbbs.ratingSummary(knew, revisit)}
+              </p>
+              <button type="button" data-action="viva-only-revisit" aria-pressed={onlyRevisit} onClick={() => setOnlyRevisit((v) => !v)} className={cn(linkBtn, onlyRevisit && "font-semibold")}>
+                {onlyRevisit ? FC.mbbs.showAllQuestions : FC.mbbs.onlyRevisit}
+              </button>
+            </div>
+          )}
+          {onlyRevisit && shownQa.length === 0 && <p data-viva-none className="mt-2 text-sm">{FC.mbbs.noRevisit}</p>}
           <ol className="mt-3 space-y-3">
-            {qa.map((q) => (
+            {shownQa.map((q) => (
               <li key={q.full.source} className="text-sm">
                 <p>{q.question}</p>
                 {open[q.full.source] && (
@@ -490,6 +511,22 @@ function Viva({ b }: { b: B<"viva"> }) {
                 >
                   {open[q.full.source] ? FC.mbbs.hideAnswer : FC.mbbs.revealAnswer}
                 </button>
+                {open[q.full.source] && (
+                  <span role="group" aria-label={`${FC.mbbs.ratingLabel}: ${q.question}`} className="ml-2 inline-flex gap-1.5">
+                    {(["knew", "revisit"] as const).map((r) => (
+                      <button
+                        key={r}
+                        type="button"
+                        data-rate={r}
+                        aria-pressed={rating[q.full.source] === r}
+                        onClick={() => setRating((x) => (x[q.full.source] === r ? Object.fromEntries(Object.entries(x).filter(([k]) => k !== q.full.source)) : { ...x, [q.full.source]: r }))}
+                        className={cn(linkBtn, "rounded-md border border-border px-2", rating[q.full.source] === r && "border-foreground bg-foreground text-background no-underline")}
+                      >
+                        {r === "knew" ? FC.mbbs.iKnewIt : FC.mbbs.revisitIt}
+                      </button>
+                    ))}
+                  </span>
+                )}
               </li>
             ))}
           </ol>
@@ -615,6 +652,17 @@ function RecallSession({ b }: { b: B<"mcq-drill"> }) {
                   <span>
                     {FC.recall.topicScore(t.correct, t.asked)}
                     {t.missed.length > 0 && <span data-topic-revisit className="ml-2 rounded-full border border-border px-2 text-xs">{FC.recall.topicRevisit}</span>}
+                    {t.missed.length > 0 && (
+                      <button
+                        type="button"
+                        data-action="retry-topic"
+                        aria-label={FC.recall.retryTopic(t.label)}
+                        onClick={() => { setState((s) => recallRetryTopic(s, qs, t.id)); setRound("retry"); }}
+                        className={cn(linkBtn, "ml-2")}
+                      >
+                        {FC.recall.retryTopic(t.label)}
+                      </button>
+                    )}
                   </span>
                 </li>
               ))}
@@ -1059,14 +1107,21 @@ function InteractionsPanel({ b }: { b: B<"interactions"> }) {
 }
 function MonitoringPlan({ b }: { b: B<"monitoring-plan"> }) {
   const [planned, setPlanned] = React.useState<Record<string, boolean>>({});
+  const [onlyOpen, setOnlyOpen] = React.useState(false);
   const done = b.monitoring.filter((m) => planned[m.parameter.source]).length;
   useReport("monitoring", FC.resident.monitoringLabel, done, b.monitoring.length);
   return (
     <div data-block="monitoring-plan" className={card}>
       <h3 className="font-semibold">Monitoring plan</h3>
       <p className="mt-1 text-xs text-muted-foreground">{FC.resident.monitoringHint}</p>
+      {done > 0 && (
+        <button type="button" data-action="monitoring-filter" aria-pressed={onlyOpen} onClick={() => setOnlyOpen((v) => !v)} className={cn(linkBtn, "mt-1")}>
+          {onlyOpen ? FC.resident.showAllMonitoring : FC.resident.onlyUnplanned}
+        </button>
+      )}
+      {onlyOpen && done === b.monitoring.length && <p data-monitoring-all-planned className="mt-2 text-sm">{FC.resident.allPlanned}</p>}
       <TickList
-        items={b.monitoring.map((m) => ({
+        items={b.monitoring.filter((m) => !onlyOpen || !planned[m.parameter.source]).map((m) => ({
           key: m.parameter.source,
           node: (
             <>
@@ -1154,4 +1209,9 @@ export function renderBlock(b: LensBlock): React.ReactNode {
     case "monitoring-plan": return <MonitoringPlan b={b} />;
     case "pitfalls": return <Pitfalls b={b} />;
   }
+}
+
+/** Lets a server component render one lens block (the block is plain data). */
+export function LensBlockView({ block }: { block: LensBlock }) {
+  return <>{renderBlock(block)}</>;
 }

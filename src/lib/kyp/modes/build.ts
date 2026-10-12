@@ -4,6 +4,7 @@ import type { StahlMcq } from "@/lib/kyp/stahl-mcqs";
 import { STAHL_TOPIC_LABELS } from "@/lib/kyp/stahl-mcqs/facts";
 import { originOf } from "./patient-interactions";
 import { quizSectionCategory } from "./mcq-topics";
+import { guideSegments, segmentRegistryText } from "./patient-explanation";
 import { MODE_ORDER, MODE_SPECS } from "./specs";
 import type {
   AdverseEffect,
@@ -115,9 +116,9 @@ type Builder = (i: LensInputs) => LensBlock | { unavailable: string };
 const BUILDERS: Record<BlockKind, Builder> = {
   "plain-summary": ({ drug, patientGuide }) => {
     if (patientGuide && clean(patientGuide.whatIsThis))
-      return { kind: "plain-summary", review: REVIEW, summary: S(patientGuide.whatIsThis, "patientGuide.whatIsThis") };
+      return { kind: "plain-summary", review: REVIEW, summary: S(patientGuide.whatIsThis, "patientGuide.whatIsThis"), explanation: guideSegments(patientGuide.whatIsThis) };
     if (clean(drug.patientExplanation))
-      return { kind: "plain-summary", review: REVIEW, summary: S(drug.patientExplanation, "patientExplanation") };
+      return { kind: "plain-summary", review: REVIEW, summary: S(drug.patientExplanation, "patientExplanation"), explanation: segmentRegistryText(drug.patientExplanation, drug) };
     return { unavailable: "No patient-grade explanation in the registry." };
   },
   "key-points": ({ drug, patientGuide }) => {

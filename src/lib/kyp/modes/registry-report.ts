@@ -5,6 +5,7 @@ import { buildModeLenses, classifyViva } from "./build";
 import { findContradictions, type Contradiction } from "./consistency";
 import { collectFacts } from "./facts";
 import { MODE_ORDER } from "./specs";
+import { explainPatient, type PatientExplanation } from "./patient-explanation";
 import type { BlockKind, ModeId } from "./types";
 import { validateLensSet, type LensIssue } from "./validate";
 
@@ -54,6 +55,14 @@ export interface DrugValidation {
   /** Patient interaction wording: where it came from (never inferred), and how many names are listed. */
   patientInteractions: { origin: "authored-guide" | "authored-registry" | "template" | "missing"; names: number };
   /** What each mode's learning flow actually has to work with, counted from the built blocks. */
+  /** Patient explanation: provenance of the plain-language wording, counted per sentence. Not a quality or review measure. */
+  explanation: {
+    level: PatientExplanation["level"];
+    source: PatientExplanation["source"];
+    uses: PatientExplanation["uses"]["state"];
+    sentences: Record<"authored-guide" | "registry-specific" | "class-shared" | "template", number>;
+    standardPurposeSentence: "none" | "matches-registry-indication" | "not-matched";
+  };
   flows: {
     questions: { quiz: number; stahl: number; total: number; skipped: number; withoutRationale: number };
     examPrep: { practical: number; longAnswer: number };
@@ -116,6 +125,17 @@ export function validateDrug(
   const ep = lenses.mbbs.blocks.find((b) => b.kind === "exam-prep");
   const cs = lenses.resident.blocks.find((b) => b.kind === "clinical-summary");
   const se = lenses.patient.blocks.find((b) => b.kind === "patient-side-effects");
+  const ex = explainPatient(drug, patientGuide);
+  const exSentences = { "authored-guide": 0, "registry-specific": 0, "class-shared": 0, template: 0 };
+  for (const seg of [...ex.plainWords, ...ex.summary, ...ex.reminders, ...ex.sideEffects]) exSentences[seg.origin]++;
+  const std = [...ex.plainWords, ...ex.summary].find((x) => x.indicationCheck);
+  const explanation: DrugValidation["explanation"] = {
+    level: ex.level,
+    source: ex.source,
+    uses: ex.uses.state,
+    sentences: exSentences,
+    standardPurposeSentence: std?.indicationCheck ?? "none",
+  };
   const flows: DrugValidation["flows"] = {
     questions:
       mq && mq.kind === "mcq-drill"
@@ -161,6 +181,7 @@ export function validateDrug(
     },
     interactions,
     patientInteractions,
+    explanation,
     flows,
     clinical: {
       factsReviewRequired: facts.used.filter((f) => f.status === "review-required").length,

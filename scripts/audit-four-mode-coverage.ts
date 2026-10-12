@@ -235,6 +235,19 @@ const lensSummary = {
     medicationsWithNames: validations.filter((v) => v.patientInteractions.names > 0).length,
     medicationsWithoutPatientWording: validations.filter((v) => v.patientInteractions.origin === "missing").length,
   },
+  patientExplanation: {
+    note: "Separate measures. Rendering the Patient explanation slot is not content completeness, and content completeness is not clinical approval.",
+    patientUiSlot: { medications: validations.length },
+    byLevel: validations.reduce<Record<string, number>>((m, v) => ((m[v.explanation.level] = (m[v.explanation.level] ?? 0) + 1), m), {}),
+    source: validations.reduce<Record<string, number>>((m, v) => ((m[v.explanation.source] = (m[v.explanation.source] ?? 0) + 1), m), {}),
+    documentedUses: validations.reduce<Record<string, number>>((m, v) => ((m[v.explanation.uses] = (m[v.explanation.uses] ?? 0) + 1), m), {}),
+    sentenceOrigins: validations.reduce<Record<string, number>>((m, v) => {
+      for (const [k, n] of Object.entries(v.explanation.sentences)) m[k] = (m[k] ?? 0) + n;
+      return m;
+    }, {}),
+    standardPurposeSentence: validations.reduce<Record<string, number>>((m, v) => ((m[v.explanation.standardPurposeSentence] = (m[v.explanation.standardPurposeSentence] ?? 0) + 1), m), {}),
+    clinicallyReviewed: 0,
+  },
   flows: {
     note: "What each learning flow has to work with. Counts of authored material only: not a measure of quality or of clinical completeness.",
     questions: {
@@ -265,6 +278,20 @@ const lensSummary = {
   },
   structuralDefectList: structural,
 };
+// Gaps for the content owner / clinical reviewer: nothing here is written for them, only listed.
+const gapHead = ["slug", "explanationLevel", "source", "documentedUses", "authoredGuideSentences", "registrySpecificSentences", "classSharedSentences", "templateSentences", "needsContentOwner"];
+const gapRows = validations.map((v) => [
+  v.slug,
+  v.explanation.level,
+  v.explanation.source,
+  v.explanation.uses,
+  v.explanation.sentences["authored-guide"],
+  v.explanation.sentences["registry-specific"],
+  v.explanation.sentences["class-shared"],
+  v.explanation.sentences.template,
+  v.explanation.level === "template-only" ? "needs a medicine-specific patient explanation" : v.explanation.level === "missing" ? "needs any patient explanation" : v.explanation.level === "registry-specific" ? "needs clinical review before reliance" : "needs clinical review before reliance",
+]);
+writeFileSync(`${OUT}/patient-explanation-gaps.csv`, [gapHead, ...gapRows].map((r) => r.map((c) => csv(String(c))).join(",")).join("\n") + "\n");
 writeFileSync(`${OUT}/lens-summary.json`, JSON.stringify(lensSummary, null, 2) + "\n");
 console.log("\n== lens contract validation ==\n" + JSON.stringify({ ...lensSummary, layers: { ...lensSummary.layers, quality: { ...lensSummary.layers.quality, possibleContradictions: lensSummary.layers.quality.possibleContradictions.length } } }, null, 1));
 if (process.argv.includes("--check") && structural.length) {

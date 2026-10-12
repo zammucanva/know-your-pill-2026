@@ -29,3 +29,5 @@ export { validateDrug } from "./registry-report";
 export type { DrugValidation } from "./registry-report";
 export * from "./patient-interactions";
 export { FLOW_COPY, flowCopyStrings } from "./flow-copy";
+
+export * from "./patient-explanation";
