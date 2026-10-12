@@ -431,3 +431,31 @@ describe("accessibility and missing-data wording", () => {
     expect(render(base, "patient")).toContain(FLOW_COPY.patient.takeHeading);
   });
 });
+
+describe("session progress and new self-test interactions", () => {
+  test("MBBS mechanism offers a recall mode (pressed state, off by default) and the shell has the progress hook", () => {
+    const h = render(base, "mbbs");
+    expect(h).toContain('data-action="mechanism-recall"');
+    expect(h).toContain('aria-pressed="false"');
+    expect(h).not.toContain("data-step-hidden"); // nothing is hidden until the learner opts in
+  });
+  test("Resident monitoring items are tickable with a progress line, and the case asks for the learner's own plan first", () => {
+    const h = render(base, "resident");
+    expect(h).toContain("data-monitoring-progress");
+    expect(h).toContain(FLOW_COPY.resident.monitoringProgress(0, 6));
+    expect(h).toContain(FLOW_COPY.resident.myPlanLabel);
+    expect(h).toContain(FLOW_COPY.resident.myPlanHint); // says it is not saved or marked
+    expect(h).not.toContain("data-my-plan");
+  });
+  test("every registry medication still renders every mode with the new controls (no throw)", () => {
+    for (const d of drugs) {
+      for (const m of ["patient", "mbbs", "neetPg", "resident"] as const) {
+        expect(() => render(d, m)).not.toThrow();
+      }
+    }
+  });
+  test("the patient list summary is empty-safe and never claims safety", () => {
+    expect(FLOW_COPY.shell.listEmpty).toBe("Nothing ticked yet.");
+    expect(FLOW_COPY.shell.listHint).toMatch(/does not mean it is unimportant or safe/);
+  });
+});

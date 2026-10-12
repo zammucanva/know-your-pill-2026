@@ -40,7 +40,21 @@ const btn = "inline-flex min-h-9 items-center gap-1 rounded-md border border-bor
 const linkBtn = "inline-flex min-h-9 items-center px-1 text-xs underline underline-offset-2";
 
 /** The shell lets resident panels jump to another step. */
-export const FlowContext = React.createContext<{ goTo: (stepId: string) => void }>({ goTo: () => {} });
+export interface FlowApi {
+  goTo: (stepId: string) => void;
+  /** A panel reports how far the learner has got, for the shell's session progress line. */
+  report: (key: string, label: string, done: number, total: number) => void;
+  /** Patient panels report the items the learner ticked (verbatim text), for the "your list" summary. */
+  pick: (key: string, items: string[]) => void;
+}
+export const FlowContext = React.createContext<FlowApi>({ goTo: () => {}, report: () => {}, pick: () => {} });
+
+function useReport(key: string, label: string, done: number, total: number) {
+  const { report } = React.useContext(FlowContext);
+  React.useEffect(() => {
+    if (total > 0) report(key, label, done, total);
+  }, [report, key, label, done, total]);
+}
 
 /* ====================== shared pieces ====================== */
 const STATUS_LABEL = { "fda-approved": "FDA-approved", "off-label": "Off-label", guideline: "Guideline" } as const;
@@ -190,6 +204,9 @@ function PatientInteractionsPanel({ b }: { b: B<"patient-interactions"> }) {
   const names = b.names.map((n) => n.text);
   const keys = b.names.map((n) => n.source);
   const sum = summarizeTicks(names, ticked, keys);
+  const { pick } = React.useContext(FlowContext);
+  const namesKey = b.names.filter((n) => ticked[n.source]).map((n) => n.text).join("\u0001");
+  React.useEffect(() => pick("interactions", namesKey ? namesKey.split("\u0001") : []), [pick, namesKey]);
   return (
     <div data-block="patient-interactions" data-origin={b.statement?.origin ?? "missing"} className={card}>
       <h3 className="font-semibold">{PIC.heading}</h3>
@@ -228,6 +245,9 @@ function PatientInteractionsPanel({ b }: { b: B<"patient-interactions"> }) {
 }
 function TellDoctor({ b }: { b: B<"tell-your-doctor"> }) {
   const [ticked, setTicked] = React.useState<Record<string, boolean>>({});
+  const { pick } = React.useContext(FlowContext);
+  const tickedKey = b.items.filter((p) => ticked[p.source]).map((p) => p.text).join("\u0001");
+  React.useEffect(() => pick("tell", tickedKey ? tickedKey.split("\u0001") : []), [pick, tickedKey]);
   return (
     <div data-block="tell-your-doctor" className={card}>
       <h3 className="font-semibold">Tell your doctor or pharmacist</h3>
@@ -240,17 +260,37 @@ function TellDoctor({ b }: { b: B<"tell-your-doctor"> }) {
 /* ====================== MBBS ====================== */
 function MechanismWalkthrough({ b }: { b: B<"mechanism-walkthrough"> }) {
   const [step, setStep] = React.useState(0);
+  const [recall, setRecall] = React.useState(false);
+  const [shown, setShown] = React.useState<Record<number, boolean>>({});
   const i = clampStep(step, b.steps.length);
+  const hidden = recall && !shown[i];
+  const revealedCount = recall ? Object.values(shown).filter(Boolean).length : 0;
+  useReport("mechanism", FC.mbbs.stepsLabel, revealedCount, recall ? b.steps.length : 0);
   return (
-    <div data-block="mechanism-walkthrough" className={card}>
-      <h3 className="font-semibold">Mechanism, step by step</h3>
+    <div data-block="mechanism-walkthrough" data-recall={recall} className={card}>
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <h3 className="font-semibold">Mechanism, step by step</h3>
+        <button type="button" aria-pressed={recall} data-action="mechanism-recall" onClick={() => setRecall((r) => !r)} className={btn}>
+          {recall ? FC.mbbs.recallModeOff : FC.mbbs.recallMode}
+        </button>
+      </div>
       <p className="mt-1 text-xs text-muted-foreground">Target: {b.target.text}</p>
       <p className="mt-3 text-sm leading-relaxed" aria-live="polite">
         <span className="font-mono text-xs text-muted-foreground">
           Step {i + 1} of {b.steps.length}.{" "}
         </span>
-        {b.steps[i].text}
+        {hidden ? <span data-step-hidden className="text-muted-foreground">{FC.mbbs.recallPrompt}</span> : b.steps[i].text}
       </p>
+      {hidden && (
+        <button type="button" data-action="mechanism-reveal" onClick={() => setShown((x) => ({ ...x, [i]: true }))} className={cn(btn, "mt-2")}>
+          {FC.mbbs.revealStep}
+        </button>
+      )}
+      {recall && (
+        <p role="status" data-mechanism-progress className="mt-2 text-xs text-muted-foreground">
+          {FC.mbbs.stepsRecalled(revealedCount, b.steps.length)}
+        </p>
+      )}
       <div className="mt-3 flex gap-2">
         <button type="button" onClick={() => setStep(clampStep(i - 1, b.steps.length))} disabled={i === 0} className={btn}>
           <ChevronLeft className="h-4 w-4" aria-hidden /> Back
@@ -259,7 +299,7 @@ function MechanismWalkthrough({ b }: { b: B<"mechanism-walkthrough"> }) {
           Next <ChevronRight className="h-4 w-4" aria-hidden />
         </button>
       </div>
-      {i === b.steps.length - 1 && (
+      {i === b.steps.length - 1 && !hidden && (
         <p className="mt-3 text-sm">
           <span className="font-medium">Net effect: </span>
           {b.effect.text}
@@ -370,6 +410,7 @@ function ExamPrep({ b }: { b: B<"exam-prep"> }) {
   const [ticked, setTicked] = React.useState<Record<string, boolean>>({});
   const all = [...b.practical, ...b.longAnswer];
   const done = all.filter((x) => ticked[x.source]).length;
+  useReport("exam", FC.mbbs.examLabel, done, all.length);
   const group = (title: string, items: typeof b.practical) =>
     items.length ? (
       <div className="mt-4 first:mt-0">
@@ -398,6 +439,7 @@ function Viva({ b }: { b: B<"viva"> }) {
   const facts = b.items.filter((x) => x.type === "statement");
   const review = b.items.filter((x) => x.type === "needs-review");
   const revealed = qa.filter((q) => open[q.full.source]).length;
+  useReport("viva", FC.mbbs.vivaLabel, revealed, qa.length);
   return (
     <div data-block="viva" className={card}>
       {qa.length > 0 && (
@@ -505,6 +547,7 @@ function RecallSession({ b }: { b: B<"mcq-drill"> }) {
   const qs = b.questions;
   const [state, setState] = React.useState<RecallState>(() => recallStart(qs.length));
   const [round, setRound] = React.useState<"all" | "retry">("all");
+  const [reviewFilter, setReviewFilter] = React.useState<"all" | "missed">("all");
   const headingRef = React.useRef<HTMLHeadingElement | null>(null);
   const optRefs = React.useRef<(HTMLButtonElement | null)[]>([]);
   const cur = recallCurrent(state);
@@ -514,6 +557,7 @@ function RecallSession({ b }: { b: B<"mcq-drill"> }) {
   const chosen = cur !== null ? state.chosen[cur] : undefined;
   const isLast = state.pos + 1 >= state.queue.length;
   const score = recallScore(state, qs);
+  useReport("questions", FC.recall.answeredLabel, prog.answered, prog.total);
 
   // Move focus to the question when it changes so the 1-4 shortcuts work from the keyboard.
   React.useEffect(() => {
@@ -535,32 +579,45 @@ function RecallSession({ b }: { b: B<"mcq-drill"> }) {
         <h3 className="flex items-center gap-2 font-semibold">
           <ClipboardCheck className="h-4 w-4" aria-hidden /> {FC.recall.resultsHeading}
         </h3>
+        <p data-session-complete className="mt-1 text-xs uppercase tracking-wide text-muted-foreground">{FC.recall.sessionComplete}</p>
         <p role="status" data-recall-score className="mt-2 text-sm font-medium">
           {FC.recall.score(score.correct, score.asked)}
         </p>
         {recallUnanswered(state) > 0 && <p data-recall-unanswered className="mt-1 text-sm text-muted-foreground">{FC.recall.notAttempted(recallUnanswered(state))}</p>}
         {score.missed.length === 0 && score.asked > 0 && recallUnanswered(state) === 0 && <p className="mt-1 text-sm">{FC.recall.allCorrect}</p>}
         <h4 className="mt-4 text-sm font-semibold">{FC.recall.reviewHeading}</h4>
-        <ol className="mt-2 space-y-3 text-sm">
-          {state.queue.filter((i) => state.submitted[i]).map((i) => {
-            const ok = state.chosen[i] === qs[i].correctIndex;
-            return (
-              <li key={qs[i].id} data-review-result={ok ? "correct" : "incorrect"} className="rounded-lg border border-border/70 p-3">
-                <p className="font-medium">{qs[i].stem}</p>
-                <p className="mt-1">
-                  <span className="text-muted-foreground">{FC.recall.yourAnswer} </span>
-                  {qs[i].options[state.chosen[i]]} <span className="text-xs">({ok ? FC.recall.correct : FC.recall.incorrect})</span>
-                </p>
-                {!ok && (
+        <div role="group" aria-label={FC.recall.filterLabel} className="mt-2 flex flex-wrap gap-2">
+          {(["all", "missed"] as const).map((f) => (
+            <button key={f} type="button" data-review-filter={f} aria-pressed={reviewFilter === f} onClick={() => setReviewFilter(f)} className={cn(btn, reviewFilter === f && "border-foreground bg-foreground text-background")}>
+              {f === "all" ? FC.recall.filterAll : FC.recall.filterMissed}
+            </button>
+          ))}
+        </div>
+        <ol className="mt-3 space-y-3 text-sm">
+          {state.queue
+            .filter((i) => state.submitted[i] && (reviewFilter === "all" || state.chosen[i] !== qs[i].correctIndex))
+            .map((i) => {
+              const ok = state.chosen[i] === qs[i].correctIndex;
+              return (
+                <li key={qs[i].id} data-review-result={ok ? "correct" : "incorrect"} className="rounded-lg border border-border/70 p-3">
+                  <p className="font-medium">{qs[i].stem}</p>
                   <p className="mt-1">
-                    <span className="text-muted-foreground">{FC.recall.correctAnswer} </span>
-                    {qs[i].options[qs[i].correctIndex]}
+                    <span className="text-muted-foreground">{FC.recall.yourAnswer} </span>
+                    {qs[i].options[state.chosen[i]]} <span className="text-xs">({ok ? FC.recall.correct : FC.recall.incorrect})</span>
                   </p>
-                )}
-              </li>
-            );
-          })}
+                  {!ok && (
+                    <p className="mt-1">
+                      <span className="text-muted-foreground">{FC.recall.correctAnswer} </span>
+                      {qs[i].options[qs[i].correctIndex]}
+                    </p>
+                  )}
+                  <p className="mt-2 text-xs font-semibold">{FC.recall.rationale}</p>
+                  <p data-review-rationale className="mt-0.5 leading-relaxed">{qs[i].explanation ?? FC.recall.noRationale}</p>
+                </li>
+              );
+            })}
         </ol>
+        {reviewFilter === "missed" && score.missed.length === 0 && <p data-review-none className="mt-2 text-sm">{FC.recall.reviewNone}</p>}
         <div className="mt-4 flex flex-wrap max-lg:pl-24 justify-end gap-2 lg:justify-start">
           {recallUnanswered(state) > 0 && (
             <button type="button" data-action="resume" className={btn} onClick={() => setState((x) => recallResume(x))}>
@@ -744,6 +801,9 @@ function ClinicalSummary({ b }: { b: B<"clinical-summary"> }) {
 }
 function CaseReasoner({ b }: { b: B<"case-reasoner"> }) {
   const [revealed, setRevealed] = React.useState(2); // presentation, history and examination first
+  const [plan, setPlan] = React.useState("");
+  const planId = React.useId();
+  useReport("case", FC.resident.caseLabel, revealed + 1, CASE_STAGES.length);
   const text = {
     presentation: b.presentation.text,
     history: b.history.text,
@@ -757,6 +817,13 @@ function CaseReasoner({ b }: { b: B<"case-reasoner"> }) {
     <div data-block="case-reasoner" className={card}>
       <h3 className="font-semibold">Case: {b.title.text}</h3>
       <p className="mt-1 text-xs text-muted-foreground">Decide your diagnosis and plan before revealing each step.</p>
+      {revealed < 3 && (
+        <div className="mt-3">
+          <label htmlFor={planId} className="text-sm font-medium">{FC.resident.myPlanLabel}</label>
+          <p id={`${planId}-hint`} className="text-xs text-muted-foreground">{FC.resident.myPlanHint}</p>
+          <textarea id={planId} aria-describedby={`${planId}-hint`} value={plan} onChange={(e) => setPlan(e.target.value)} rows={3} className="mt-1 w-full rounded-md border border-border bg-background p-2 text-sm" />
+        </div>
+      )}
       <ol aria-live="polite" className="mt-3 space-y-3 text-sm">
         {CASE_STAGES.map((s, i) =>
           i <= revealed ? (
@@ -767,6 +834,12 @@ function CaseReasoner({ b }: { b: B<"case-reasoner"> }) {
           ) : null
         )}
       </ol>
+      {revealed >= 3 && plan.trim() && (
+        <p data-my-plan className="mt-3 rounded-md bg-muted/50 p-2 text-sm">
+          <span className="font-medium">{FC.resident.myPlanShown}: </span>
+          {plan}
+        </p>
+      )}
       {/* One button for the whole case, so keyboard focus is never dropped when the last stage appears. */}
       <button
         type="button"
@@ -780,8 +853,9 @@ function CaseReasoner({ b }: { b: B<"case-reasoner"> }) {
   );
 }
 function DecisionPath({ b }: { b: B<"decision-path"> }) {
-  const [node, setNode] = React.useState<string | null>(null);
-  const current = b.nodes.find((n) => n.id === (node ?? b.startNodeId)) ?? b.nodes[0];
+  const [trail, setTrail] = React.useState<{ id: string; via?: string }[]>([]);
+  const nodeId = trail.length ? trail[trail.length - 1].id : b.startNodeId;
+  const current = b.nodes.find((n) => n.id === nodeId) ?? b.nodes[0];
   const qRef = React.useRef<HTMLParagraphElement | null>(null);
   const first = React.useRef(true);
   // After choosing a branch the buttons are replaced: move focus to the new question so keyboard and
@@ -792,26 +866,41 @@ function DecisionPath({ b }: { b: B<"decision-path"> }) {
       return;
     }
     qRef.current?.focus({ preventScroll: true });
-  }, [node]);
+  }, [trail.length]);
   return (
     <div data-block="decision-path" className={card}>
       <h3 className="font-semibold">{b.title.text}</h3>
+      {trail.length > 0 && (
+        <div data-path-trail className="mt-2 text-xs text-muted-foreground">
+          <p className="font-medium">{FC.resident.pathTrail}</p>
+          <ol className="mt-1 list-decimal space-y-0.5 pl-5">
+            {trail.map((t, k) => (
+              <li key={`${t.id}-${k}`}>{t.via}</li>
+            ))}
+          </ol>
+        </div>
+      )}
       <p ref={qRef} tabIndex={-1} aria-live="polite" className="mt-3 text-sm font-medium outline-none">{current.question.text}</p>
       {current.recommendation && <p className="mt-2 text-sm">{current.recommendation.text}</p>}
       {current.reasoning && <p className="mt-1 text-sm text-muted-foreground">{current.reasoning.text}</p>}
       {current.branches.length > 0 && (
         <div className="mt-3 flex flex-wrap gap-2">
           {current.branches.map((br) => (
-            <button key={br.label} type="button" onClick={() => setNode(followBranch(b.nodes, current.id, br.label))} className={btn}>
+            <button key={br.label} type="button" onClick={() => setTrail((t) => [...t, { id: followBranch(b.nodes, current.id, br.label), via: br.label }])} className={btn}>
               {br.label}
             </button>
           ))}
         </div>
       )}
-      {current.id !== b.startNodeId && (
-        <button type="button" onClick={() => setNode(null)} className={cn(linkBtn, "mt-3")}>
-          Back to start
-        </button>
+      {trail.length > 0 && (
+        <div className="mt-3 flex flex-wrap gap-2">
+          <button type="button" data-action="path-back" onClick={() => setTrail((t) => t.slice(0, -1))} className={btn}>
+            {FC.resident.pathBack}
+          </button>
+          <button type="button" onClick={() => setTrail([])} className={linkBtn}>
+            Back to start
+          </button>
+        </div>
       )}
     </div>
   );
@@ -819,6 +908,7 @@ function DecisionPath({ b }: { b: B<"decision-path"> }) {
 function PrescribingChecks({ b }: { b: B<"prescribing-checks"> }) {
   const [checked, setChecked] = React.useState<Record<string, boolean>>({});
   const done = b.items.filter((c) => checked[c.name.source]).length;
+  useReport("checks", FC.resident.checksLabel, done, b.items.length);
   return (
     <div data-block="prescribing-checks" className={card}>
       <h3 className="font-semibold">Pre-prescribing checks</h3>
@@ -909,19 +999,32 @@ function InteractionsPanel({ b }: { b: B<"interactions"> }) {
   );
 }
 function MonitoringPlan({ b }: { b: B<"monitoring-plan"> }) {
+  const [planned, setPlanned] = React.useState<Record<string, boolean>>({});
+  const done = b.monitoring.filter((m) => planned[m.parameter.source]).length;
+  useReport("monitoring", FC.resident.monitoringLabel, done, b.monitoring.length);
   return (
     <div data-block="monitoring-plan" className={card}>
       <h3 className="font-semibold">Monitoring plan</h3>
-      <ul className="mt-2 space-y-2.5 text-sm">
-        {b.monitoring.map((m) => (
-          <li key={m.parameter.source}>
-            <p>
+      <p className="mt-1 text-xs text-muted-foreground">{FC.resident.monitoringHint}</p>
+      <TickList
+        items={b.monitoring.map((m) => ({
+          key: m.parameter.source,
+          node: (
+            <>
               <span className="font-medium">{m.parameter.text}</span> <span className="text-xs text-muted-foreground">{m.frequency.text}</span>
-            </p>
-            <p className="text-muted-foreground">{m.rationale.text}</p>
-          </li>
-        ))}
-      </ul>
+              <span className="block text-muted-foreground">{m.rationale.text}</span>
+            </>
+          ),
+        }))}
+        ticked={planned}
+        setTicked={setPlanned}
+        label="Monitoring items"
+      />
+      {b.monitoring.length > 0 && (
+        <p role="status" data-monitoring-progress className="mt-3 text-xs text-muted-foreground">
+          {FC.resident.monitoringProgress(done, b.monitoring.length)}
+        </p>
+      )}
       {b.boxedWarnings.length > 0 && (
         <div className="mt-5">
           <h3 className="font-semibold">Boxed warnings</h3>

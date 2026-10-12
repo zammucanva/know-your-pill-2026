@@ -68,6 +68,14 @@ function ModeFlow({ mode, lens }: { mode: ModeId; lens: ModeLens }) {
   const panelRefs = React.useRef<(HTMLDivElement | null)[]>([]);
   const flowRef = React.useRef<HTMLDivElement | null>(null);
   const moved = React.useRef(false);
+  const [progress, setProgress] = React.useState<Record<string, { label: string; done: number; total: number }>>({});
+  const [picked, setPicked] = React.useState<Record<string, string[]>>({});
+  const report = React.useCallback((key: string, label: string, done: number, total: number) => {
+    setProgress((p) => (p[key] && p[key].done === done && p[key].total === total && p[key].label === label ? p : { ...p, [key]: { label, done, total } }));
+  }, []);
+  const pick = React.useCallback((key: string, items: string[]) => {
+    setPicked((p) => (JSON.stringify(p[key] ?? []) === JSON.stringify(items) ? p : { ...p, [key]: items }));
+  }, []);
 
   const go = React.useCallback(
     (i: number, focus = false) => {
@@ -100,12 +108,20 @@ function ModeFlow({ mode, lens }: { mode: ModeId; lens: ModeLens }) {
   };
 
   return (
-    <FlowContext.Provider value={{ goTo }}>
+    <FlowContext.Provider value={{ goTo, report, pick }}>
       <div ref={flowRef} className="mt-4 scroll-mt-24" data-flow-mode={mode}>
         <div className="flex flex-wrap items-center justify-between gap-2">
           <p data-flow-progress role="status" className="text-xs font-medium text-muted-foreground">
             <span>{FC.shell.stepOf(active + 1, steps.length)}</span> · <span>{FC.shell.visited(visited.size, steps.length)}</span>
           </p>
+          {Object.keys(progress).length > 0 && (
+            <div data-session-progress role="status" className="w-full text-xs text-muted-foreground">
+              <span className="font-medium">{FC.shell.sessionProgress}: </span>
+              {Object.values(progress)
+                .map((p) => `${p.label} ${p.done} of ${p.total}`)
+                .join(" · ")}
+            </div>
+          )}
           {visited.size === steps.length && (
             <p data-flow-complete role="status" className="w-full text-xs text-muted-foreground">
               <Check className="mr-1 inline h-3.5 w-3.5" aria-hidden />
@@ -183,6 +199,23 @@ function ModeFlow({ mode, lens }: { mode: ModeId; lens: ModeLens }) {
           </div>
         ))}
 
+        {mode === "patient" && (steps[active]?.id === "ask" || steps[active]?.id === "others") && (
+          <section data-patient-list aria-label={FC.shell.listHeading} className="mt-5 rounded-xl border border-border/70 p-4 text-sm">
+            <h3 className="font-semibold">{FC.shell.listHeading}</h3>
+            <p className="mt-1 text-xs text-muted-foreground">{FC.shell.listHint}</p>
+            {Object.values(picked).flat().length === 0 ? (
+              <p className="mt-2">{FC.shell.listEmpty}</p>
+            ) : (
+              <ul className="mt-2 list-disc space-y-1 pl-5">
+                {Object.values(picked)
+                  .flat()
+                  .map((t, k) => (
+                    <li key={`${k}-${t}`}>{t}</li>
+                  ))}
+              </ul>
+            )}
+          </section>
+        )}
         <div className="mt-5 flex items-center justify-between gap-2 max-lg:pl-24">
           <button type="button" data-nav="back" disabled={active === 0} onClick={() => go(active - 1)} className="inline-flex min-h-9 items-center gap-1 rounded-md border border-border px-3 text-sm disabled:opacity-40">
             <ChevronLeft className="h-4 w-4" aria-hidden /> {FC.shell.back}
