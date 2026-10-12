@@ -13,13 +13,17 @@ import {
   followBranch,
   nextCaseStage,
   recallCurrent,
+  recallEnd,
   recallNext,
+  recallPrev,
   recallProgress,
   recallRetryMissed,
   recallScore,
   recallSelect,
+  recallResume,
   recallStart,
   recallSubmit,
+  recallUnanswered,
   type RecallState,
 } from "@/lib/kyp/modes/interactions";
 
@@ -523,10 +527,11 @@ function RecallSession({ b }: { b: B<"mcq-drill"> }) {
         <p role="status" data-recall-score className="mt-2 text-sm font-medium">
           {FC.recall.score(score.correct, score.asked)}
         </p>
-        {score.missed.length === 0 && <p className="mt-1 text-sm">{FC.recall.allCorrect}</p>}
+        {recallUnanswered(state) > 0 && <p data-recall-unanswered className="mt-1 text-sm text-muted-foreground">{FC.recall.notAttempted(recallUnanswered(state))}</p>}
+        {score.missed.length === 0 && score.asked > 0 && recallUnanswered(state) === 0 && <p className="mt-1 text-sm">{FC.recall.allCorrect}</p>}
         <h4 className="mt-4 text-sm font-semibold">{FC.recall.reviewHeading}</h4>
         <ol className="mt-2 space-y-3 text-sm">
-          {state.queue.map((i) => {
+          {state.queue.filter((i) => state.submitted[i]).map((i) => {
             const ok = state.chosen[i] === qs[i].correctIndex;
             return (
               <li key={qs[i].id} data-review-result={ok ? "correct" : "incorrect"} className="rounded-lg border border-border/70 p-3">
@@ -545,7 +550,12 @@ function RecallSession({ b }: { b: B<"mcq-drill"> }) {
             );
           })}
         </ol>
-        <div className="mt-4 flex flex-wrap gap-2">
+        <div className="mt-4 flex flex-wrap max-lg:pl-24 justify-end gap-2 lg:justify-start">
+          {recallUnanswered(state) > 0 && (
+            <button type="button" data-action="resume" className={btn} onClick={() => setState((x) => recallResume(x))}>
+              {FC.recall.resume}
+            </button>
+          )}
           {score.missed.length > 0 && (
             <button type="button" className={btn} onClick={() => { setState((s) => recallRetryMissed(s, qs)); setRound("retry"); }}>
               {FC.recall.retryMissed(score.missed.length)}
@@ -640,7 +650,12 @@ function RecallSession({ b }: { b: B<"mcq-drill"> }) {
               <p className="mt-0.5 leading-relaxed">{q.explanation ?? FC.recall.noRationale}</p>
             </div>
           ) : null}
-          <div className="mt-3 flex flex-wrap gap-2">
+          <div className="mt-3 flex flex-wrap max-lg:pl-24 justify-end gap-2 lg:justify-start">
+            {state.pos > 0 && (
+              <button type="button" data-action="prev" onClick={() => setState((x) => recallPrev(x))} className={btn}>
+                {FC.recall.previous}
+              </button>
+            )}
             {!submitted ? (
               <button type="button" data-action="submit" disabled={chosen === undefined} onClick={() => setState((s) => recallSubmit(s))} className={btn}>
                 {FC.recall.submit}
@@ -650,6 +665,9 @@ function RecallSession({ b }: { b: B<"mcq-drill"> }) {
                 {isLast ? FC.recall.seeResults : FC.recall.next}
               </button>
             )}
+            <button type="button" data-action="end" onClick={() => setState((x) => recallEnd(x))} className={btn}>
+              {FC.recall.endSession}
+            </button>
           </div>
         </div>
       )}

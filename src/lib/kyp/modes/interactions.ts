@@ -110,3 +110,19 @@ export function recallRetryMissed(s: RecallState, questions: readonly RecallQues
 export function recallProgress(s: RecallState) {
   return { position: Math.min(s.pos + 1, s.queue.length), total: s.queue.length, answered: s.queue.filter((i) => s.submitted[i]).length };
 }
+
+/** Step back to look at an earlier question. Submitted answers stay locked: this never reopens one. */
+export function recallPrev(s: RecallState): RecallState {
+  if (s.phase !== "question" || s.pos === 0) return s;
+  return { ...s, pos: s.pos - 1 };
+}
+/** Finish early. Only submitted answers count; unanswered questions are reported as not attempted. */
+export function recallEnd(s: RecallState): RecallState {
+  return s.phase === "question" ? { ...s, phase: "summary" } : s;
+}
+/** Leave an early summary and carry on at the first question not yet submitted. Answers already given are kept. */
+export function recallResume(s: RecallState): RecallState {
+  const next = s.queue.findIndex((i) => !s.submitted[i]);
+  return next === -1 ? s : { ...s, phase: "question", pos: next };
+}
+export const recallUnanswered = (s: RecallState): number => s.queue.filter((i) => !s.submitted[i]).length;

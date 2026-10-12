@@ -65,16 +65,30 @@ function ModeFlow({ mode, lens }: { mode: ModeId; lens: ModeLens }) {
   const [active, setActive] = React.useState(0);
   const [visited, setVisited] = React.useState<ReadonlySet<number>>(new Set([0]));
   const tabRefs = React.useRef<(HTMLButtonElement | null)[]>([]);
+  const panelRefs = React.useRef<(HTMLDivElement | null)[]>([]);
+  const flowRef = React.useRef<HTMLDivElement | null>(null);
+  const moved = React.useRef(false);
 
   const go = React.useCallback(
     (i: number, focus = false) => {
       const n = Math.max(0, Math.min(i, steps.length - 1));
+      moved.current = !focus;
       setActive(n);
       setVisited((v) => new Set(v).add(n));
       if (focus) tabRefs.current[n]?.focus();
     },
     [steps.length]
   );
+  // After Back / Next / a jump link, bring the new step into view and move focus to it, so a keyboard
+  // or screen-reader user lands on the new content instead of staying on a control that has gone.
+  React.useEffect(() => {
+    if (!moved.current) return;
+    moved.current = false;
+    panelRefs.current[active]?.focus({ preventScroll: true });
+    const top = flowRef.current?.getBoundingClientRect().top ?? 0;
+    if (top < 0) flowRef.current?.scrollIntoView({ block: "start", behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+  }, [active]);
+
   const goTo = React.useCallback((id: string) => go(Math.max(0, steps.findIndex((s) => s.id === id)), false), [go, steps]);
 
   const onTabKey = (e: React.KeyboardEvent, i: number) => {
@@ -87,11 +101,17 @@ function ModeFlow({ mode, lens }: { mode: ModeId; lens: ModeLens }) {
 
   return (
     <FlowContext.Provider value={{ goTo }}>
-      <div className="mt-4" data-flow-mode={mode}>
+      <div ref={flowRef} className="mt-4 scroll-mt-24" data-flow-mode={mode}>
         <div className="flex flex-wrap items-center justify-between gap-2">
           <p data-flow-progress role="status" className="text-xs font-medium text-muted-foreground">
             <span>{FC.shell.stepOf(active + 1, steps.length)}</span> · <span>{FC.shell.visited(visited.size, steps.length)}</span>
           </p>
+          {visited.size === steps.length && (
+            <p data-flow-complete role="status" className="w-full text-xs text-muted-foreground">
+              <Check className="mr-1 inline h-3.5 w-3.5" aria-hidden />
+              {FC.shell.complete(steps.length)}
+            </p>
+          )}
           {mode === "patient" && lens.blocks.some((b) => b.kind === "urgent-help") && (
             <button type="button" data-nav="urgent" onClick={() => goTo("watch")} className="inline-flex min-h-9 items-center rounded-md border border-destructive/40 px-3 text-sm">
               {FC.patient.urgentLink}
@@ -138,6 +158,9 @@ function ModeFlow({ mode, lens }: { mode: ModeId; lens: ModeLens }) {
             id={`${baseId}-panel-${s.id}`}
             aria-labelledby={`${baseId}-tab-${s.id}`}
             hidden={i !== active}
+            ref={(el) => {
+              panelRefs.current[i] = el;
+            }}
             data-step-panel={s.id}
             tabIndex={-1}
             className="mt-4 space-y-4"
@@ -154,13 +177,19 @@ function ModeFlow({ mode, lens }: { mode: ModeId; lens: ModeLens }) {
           </div>
         ))}
 
-        <div className="mt-5 flex items-center justify-between gap-2">
+        <div className="mt-5 flex items-center justify-between gap-2 max-lg:pl-24">
           <button type="button" data-nav="back" disabled={active === 0} onClick={() => go(active - 1)} className="inline-flex min-h-9 items-center gap-1 rounded-md border border-border px-3 text-sm disabled:opacity-40">
             <ChevronLeft className="h-4 w-4" aria-hidden /> {FC.shell.back}
           </button>
-          <button type="button" data-nav="next" disabled={active === steps.length - 1} onClick={() => go(active + 1)} className="inline-flex min-h-9 items-center gap-1 rounded-md border border-border px-3 text-sm disabled:opacity-40">
-            {FC.shell.next} <ChevronRight className="h-4 w-4" aria-hidden />
-          </button>
+          {active === steps.length - 1 ? (
+            <button type="button" data-nav="restart" onClick={() => go(0)} className="inline-flex min-h-9 items-center gap-1 rounded-md border border-border px-3 text-sm">
+              {FC.shell.restart}
+            </button>
+          ) : (
+            <button type="button" data-nav="next" onClick={() => go(active + 1)} className="inline-flex min-h-9 items-center gap-1 rounded-md border border-border px-3 text-sm">
+              {FC.shell.next} <ChevronRight className="h-4 w-4" aria-hidden />
+            </button>
+          )}
         </div>
       </div>
     </FlowContext.Provider>

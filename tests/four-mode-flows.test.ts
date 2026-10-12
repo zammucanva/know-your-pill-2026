@@ -18,7 +18,11 @@ import {
 } from "@/lib/kyp/modes";
 import {
   recallCurrent,
+  recallEnd,
   recallNext,
+  recallPrev,
+  recallResume,
+  recallUnanswered,
   recallProgress,
   recallRetryMissed,
   recallScore,
@@ -188,6 +192,35 @@ describe("NEET PG question session (authored questions only)", () => {
     expect(recallRetryMissed(recallStart(0), Q).phase).toBe("summary");
   });
 
+  test("back, end early and resume never reopen, alter or invent an answer", () => {
+    const Q = [
+      { options: ["a", "b", "c"], correctIndex: 1 },
+      { options: ["a", "b", "c"], correctIndex: 2 },
+      { options: ["a", "b", "c"], correctIndex: 0 },
+    ];
+    let s = recallStart(3);
+    expect(recallPrev(s)).toBe(s); // nothing before the first question
+    s = recallNext(recallSubmit(recallSelect(s, 0, Q))); // Q0 wrong, now on Q1
+    s = recallPrev(s);
+    expect(recallCurrent(s)).toBe(0);
+    expect(recallSelect(s, 1, Q).chosen[0]).toBe(0); // still locked after going back
+    expect(recallSubmit(s)).toBe(s);
+    s = recallNext(s); // forward again to the unanswered Q1
+    expect(recallCurrent(s)).toBe(1);
+    s = recallEnd(s);
+    expect(s.phase).toBe("summary");
+    expect(recallUnanswered(s)).toBe(2);
+    expect(recallScore(s, Q)).toEqual({ asked: 1, correct: 0, missed: [0] }); // unattempted questions are not scored
+    expect(recallEnd(s)).toBe(s);
+    const r = recallResume(s);
+    expect(r.phase).toBe("question");
+    expect(recallCurrent(r)).toBe(1); // first not-yet-submitted question
+    expect(r.chosen).toEqual(s.chosen);
+    expect(r.submitted).toEqual(s.submitted);
+    const done = { ...s, submitted: { 0: true, 1: true, 2: true }, chosen: { 0: 0, 1: 2, 2: 0 } };
+    expect(recallResume(done)).toBe(done); // nothing left to resume
+  });
+
   test("the session renders one question with a locked-until-submitted flow, progress and no result yet", () => {
     const h = render(base, "neetPg");
     const total = qs(lensesOf(base)).questions.length;
@@ -354,5 +387,20 @@ describe("registry validation still holds with the new flows", () => {
   test("every block kind of every mode has a distinct interaction contract entry", () => {
     const kinds: BlockKind[] = MODE_ORDER.flatMap((m) => [...MODE_SPECS[m].blocks]);
     expect(new Set(kinds).size).toBe(kinds.length);
+  });
+});
+
+describe("flow shell: completion and navigation states", () => {
+  test("first step offers Next, not restart, and is not yet marked complete; pills and session actions stay clear of the floating progress pill on small screens", () => {
+    for (const mode of ["patient", "mbbs", "neetPg", "resident"] as const) {
+      const h = render(base, mode);
+      expect(h).toContain('data-nav="next"');
+      expect(h).not.toContain('data-nav="restart"');
+      expect(h).not.toContain("data-flow-complete");
+      expect(h).toContain("max-lg:pl-24"); // shell Back/Next row keeps clear of the fixed section-navigator pill
+    }
+    const q = render(base, "neetPg");
+    expect(q).toContain('data-action="end"'); // a session can be ended early
+    expect(q).not.toContain('data-action="prev"'); // nothing before the first question
   });
 });
