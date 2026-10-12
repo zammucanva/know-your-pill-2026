@@ -1,3 +1,4 @@
+import { quizSectionCategory } from "./mcq-topics";
 import type { Drug } from "@/lib/kyp/data";
 import type { PatientGuide } from "@/lib/kyp/patient/types";
 import { CATEGORY_MODES, categoryOfSource } from "./contracts";
@@ -43,6 +44,7 @@ export interface LensIssue {
     | "interaction-record-incomplete"
     | "mcq-differs-from-source"
     | "mcq-invalid"
+    | "mcq-category-differs"
     | "viva-needs-review"
     | "viva-split-lossy";
   detail: string;
@@ -61,6 +63,7 @@ export interface StahlLike {
   options: readonly string[];
   correctIndex: number;
   explanation: string;
+  topic?: string;
 }
 
 export function validateLensSet(set: ModeLensSet, drug: Drug, patientGuide?: PatientGuide, stahl?: readonly StahlLike[]): LensIssue[] {
@@ -93,10 +96,14 @@ export function validateLensSet(set: ModeLensSet, drug: Drug, patientGuide?: Pat
             const c = m ? drug.microQuizzes?.[Number(m[1])] : undefined;
             if (!c || c.question !== q.stem || c.correctIndex !== q.correctIndex || c.options.join("\u0000") !== q.options.join("\u0000") || (c.explanation?.trim() ? c.explanation : null) !== q.explanation)
               issues.push({ code: "mcq-differs-from-source", severity: "error", detail: q.id });
+            if (c && (q.category?.id ?? null) !== (quizSectionCategory(c.afterSectionId)?.id ?? null))
+              issues.push({ code: "mcq-category-differs", severity: "error", detail: q.id });
           } else if (stahl) {
             const c = stahl.find((x) => `stahl:${x.id}` === q.source);
             if (!c || c.question !== q.stem || c.correctIndex !== q.correctIndex || c.options.join("\u0000") !== q.options.join("\u0000") || c.explanation !== q.explanation)
               issues.push({ code: "mcq-differs-from-source", severity: "error", detail: q.id });
+            if (c && (q.category?.id ?? null) !== (c.topic ?? null))
+              issues.push({ code: "mcq-category-differs", severity: "error", detail: q.id });
           }
         }
       }

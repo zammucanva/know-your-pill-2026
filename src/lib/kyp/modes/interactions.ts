@@ -63,6 +63,8 @@ export function filterInteractions<T extends { severity: string; drug: { text: s
 export interface RecallQuestionLite {
   options: readonly string[];
   correctIndex: number;
+  /** Authored topic, when the question has a reliable one. */
+  category?: { id: string; label: string } | null;
 }
 export interface RecallState {
   /** Indices (into the question list) in the order they are asked this round. */
@@ -126,3 +128,32 @@ export function recallResume(s: RecallState): RecallState {
   return next === -1 ? s : { ...s, phase: "question", pos: next };
 }
 export const recallUnanswered = (s: RecallState): number => s.queue.filter((i) => !s.submitted[i]).length;
+
+export interface TopicRow {
+  id: string;
+  label: string;
+  asked: number;
+  correct: number;
+  /** Question indices answered wrongly, in the order asked. */
+  missed: number[];
+}
+/**
+ * Session feedback by authored topic. Only submitted answers count. Questions without a reliable authored
+ * topic are reported together as `untagged`; they are never assigned a topic by guesswork.
+ */
+export function topicBreakdown(s: RecallState, questions: readonly RecallQuestionLite[]): { rows: TopicRow[]; untagged: Omit<TopicRow, "id" | "label"> } {
+  const rows = new Map<string, TopicRow>();
+  const untagged = { asked: 0, correct: 0, missed: [] as number[] };
+  for (const i of s.queue) {
+    if (!s.submitted[i]) continue;
+    const ok = s.chosen[i] === questions[i].correctIndex;
+    const cat = questions[i].category;
+    const row = cat ? (rows.get(cat.id) ?? { id: cat.id, label: cat.label, asked: 0, correct: 0, missed: [] as number[] }) : untagged;
+    row.asked += 1;
+    if (ok) row.correct += 1;
+    else row.missed.push(i);
+    if (cat) rows.set(cat.id, row as TopicRow);
+  }
+  const sorted = [...rows.values()].sort((a, b) => b.missed.length - a.missed.length || a.label.localeCompare(b.label));
+  return { rows: sorted, untagged };
+}

@@ -4,7 +4,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { drugs } from "@/lib/kyp/data";
 import { getPatientGuide, patientGuides } from "@/lib/kyp/patient";
 import { stahlMcqs } from "@/lib/kyp/stahl-mcqs";
-import { ModeLensView } from "@/components/kyp/sections/drug/mode-lens";
+import { ModeLensView, RevisionPath } from "@/components/kyp/sections/drug/mode-lens";
 import {
   FLOW_COPY,
   MODE_ORDER,
@@ -23,6 +23,7 @@ import {
   recallPrev,
   recallResume,
   recallUnanswered,
+  topicBreakdown,
   recallProgress,
   recallRetryMissed,
   recallScore,
@@ -457,5 +458,85 @@ describe("session progress and new self-test interactions", () => {
   test("the patient list summary is empty-safe and never claims safety", () => {
     expect(FLOW_COPY.shell.listEmpty).toBe("Nothing ticked yet.");
     expect(FLOW_COPY.shell.listHint).toMatch(/does not mean it is unimportant or safe/);
+  });
+});
+
+describe("topic feedback, revision path and labelled sources", () => {
+  test("topic feedback groups only by authored tags and never assigns one", () => {
+    const Q = [
+      { options: ["a", "b"], correctIndex: 0, category: { id: "monitoring", label: "Monitoring" } },
+      { options: ["a", "b"], correctIndex: 0, category: { id: "monitoring", label: "Monitoring" } },
+      { options: ["a", "b"], correctIndex: 1, category: { id: "adverse-effects", label: "Adverse effects" } },
+      { options: ["a", "b"], correctIndex: 1 },
+      { options: ["a", "b"], correctIndex: 1, category: null },
+    ];
+    let s = recallStart(5);
+    for (const pick of [1, 0, 1, 0]) s = recallNext(recallSubmit(recallSelect(s, pick, Q))); // Q4 left unanswered
+    const t = topicBreakdown(s, Q);
+    expect(t.rows.map((r) => [r.id, r.correct, r.asked, r.missed])).toEqual([
+      ["monitoring", 1, 2, [0]],
+      ["adverse-effects", 1, 1, []],
+    ]);
+    expect(t.untagged).toEqual({ asked: 1, correct: 0, missed: [3] });
+  });
+  test("every authored question's category equals its source's own tag (registry-wide)", () => {
+    let tagged = 0;
+    let total = 0;
+    for (const d of drugs) {
+      const mq = lensesOf(d).neetPg.blocks.find((b) => b.kind === "mcq-drill");
+      if (!mq || mq.kind !== "mcq-drill") continue;
+      for (const q of mq.questions) {
+        total++;
+        if (q.category) tagged++;
+        if (q.origin === "stahl-bank") {
+          const src = stahlMcqs.find((x) => `stahl:${x.id}` === q.source)!;
+          expect(q.category?.id).toBe(src.topic);
+        }
+        if (q.category?.basis === "quiz-section") expect(["mechanism", "timeline", "side-effects", "monitoring", "contraindications", "interactions", "clinical-uses", "evidence-practice"]).toContain(q.category.id);
+      }
+    }
+    expect(total).toBe(1824);
+    expect(tagged).toBeGreaterThan(0);
+    expect(tagged).toBeLessThan(total); // untagged questions stay ungrouped, not guessed
+  });
+  test("the MBBS revision path orders the four parts, shows overall progress and points to the first unfinished part", () => {
+    const steps = [
+      { id: "mechanism", label: "Mechanism" },
+      { id: "safety", label: "Safety" },
+      { id: "exam", label: "Exam practice" },
+      { id: "viva", label: "Viva" },
+    ];
+    const progress = {
+      exam: { label: "Exam tasks practised", done: 0, total: 6 },
+      mechanism: { label: "Mechanism steps seen", done: 6, total: 6 },
+      viva: { label: "Viva answers revealed", done: 3, total: 6 },
+      safety: { label: "Safety items self-tested", done: 0, total: 13 },
+    };
+    const h = renderToStaticMarkup(React.createElement(RevisionPath, { progress, steps, onGo: () => {} }));
+    expect(h).toContain("data-revision-path");
+    expect(h.indexOf('data-revision-row="mechanism"')).toBeLessThan(h.indexOf('data-revision-row="safety"'));
+    expect(h.indexOf('data-revision-row="safety"')).toBeLessThan(h.indexOf('data-revision-row="viva"'));
+    expect(h.indexOf('data-revision-row="viva"')).toBeLessThan(h.indexOf('data-revision-row="exam"'));
+    expect(h).toContain(FLOW_COPY.mbbs.revisionOverall(Math.round((9 / 31) * 100)));
+    expect(h).toContain(FLOW_COPY.mbbs.revisionContinue("Safety")); // first part not finished
+    const done = renderToStaticMarkup(
+      React.createElement(RevisionPath, { progress: { mechanism: { label: "m", done: 1, total: 1 } }, steps, onGo: () => {} })
+    );
+    expect(done).toContain("data-revision-done");
+    expect(renderToStaticMarkup(React.createElement(RevisionPath, { progress: {}, steps, onGo: () => {} }))).toBe("");
+    expect(render(base, "resident")).not.toContain("data-revision-path");
+  });
+  test("Resident states that learner entries are not clinical validation", () => {
+    const h = render(base, "resident");
+    expect(h).toContain("data-not-validation");
+    expect(FLOW_COPY.resident.notValidation).toMatch(/not clinical validation/);
+    expect(h).toContain('data-action="case-step"');
+  });
+  test("every patient step names where its wording comes from, or says nothing", () => {
+    const h = render(base, "patient");
+    expect(h).toContain("data-source-line");
+    expect(h).toContain(FLOW_COPY.shell.sourceGuide);
+    expect(FLOW_COPY.shell.sourceGuide).toMatch(/No qualified clinical review is recorded/);
+    expect(FLOW_COPY.shell.sourceRegistry).toMatch(/not reviewed/);
   });
 });

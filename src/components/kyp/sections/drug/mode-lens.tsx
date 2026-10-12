@@ -8,6 +8,7 @@ import { MODE_SPECS, MODE_TASKS, REVIEW_NOTICE } from "@/lib/kyp/modes/specs";
 import { FLOW_COPY as FC } from "@/lib/kyp/modes/flow-copy";
 import type { BlockKind, ModeId, ModeLens, ModeLensSet } from "@/lib/kyp/modes/types";
 import { FlowContext, renderBlock } from "./lens-blocks";
+import { PATIENT_INTERACTION_COPY as PIC } from "@/lib/kyp/modes/patient-interactions";
 
 /**
  * ModeLensSection: the mode-specific learning TASK for one medication.
@@ -51,6 +52,71 @@ function Unavailable({ items }: { items: ModeLens["unavailable"] }) {
         </li>
       ))}
     </ul>
+  );
+}
+
+/** Where a patient step's wording comes from, only where the block itself records it. */
+function patientSourceLine(blocks: ModeLens["blocks"]): string | null {
+  const parts: string[] = [];
+  for (const b of blocks) {
+    if (b.kind === "patient-how-to-take" || b.kind === "urgent-help" || b.kind === "tell-your-doctor") parts.push(FC.shell.sourceGuide);
+    if (b.kind === "patient-side-effects") parts.push(b.source === "guide" ? FC.shell.sourceGuide : FC.shell.sourceRegistry);
+    if (b.kind === "patient-interactions" && b.statement) parts.push(PIC.originLabel[b.statement.origin]);
+  }
+  return parts.length ? Array.from(new Set(parts)).join(" ") : null;
+}
+
+const REVISION_ORDER: { key: string; step: string }[] = [
+  { key: "mechanism", step: "mechanism" },
+  { key: "safety", step: "safety" },
+  { key: "viva", step: "viva" },
+  { key: "exam", step: "exam" },
+];
+
+/** MBBS revision path: mechanism recall, safety self-test, viva and exam prompts as one tracked sequence. */
+export function RevisionPath({
+  progress,
+  steps,
+  onGo,
+}: {
+  progress: Record<string, { label: string; done: number; total: number }>;
+  steps: { id: string; label: string }[];
+  onGo: (id: string) => void;
+}) {
+  const rows = REVISION_ORDER.filter((r) => progress[r.key]).map((r) => ({ ...r, ...progress[r.key], stepLabel: steps.find((x) => x.id === r.step)?.label ?? r.step }));
+  if (!rows.length) return null;
+  const done = rows.reduce((n, r) => n + r.done, 0);
+  const total = rows.reduce((n, r) => n + r.total, 0);
+  const pct = total ? Math.round((done / total) * 100) : 0;
+  const next = rows.find((r) => r.done < r.total);
+  return (
+    <section data-session-progress data-revision-path aria-label={FC.mbbs.revisionHeading} className="mt-3 rounded-xl border border-border/70 p-3 text-sm">
+      <h3 className="font-semibold">{FC.mbbs.revisionHeading}</h3>
+      <p className="mt-1 text-xs text-muted-foreground">{FC.mbbs.revisionHint}</p>
+      <div role="progressbar" aria-label={FC.mbbs.revisionHeading} aria-valuemin={0} aria-valuemax={100} aria-valuenow={pct} className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-muted">
+        <div className="h-full bg-foreground/70" style={{ width: `${pct}%` }} />
+      </div>
+      <p role="status" data-revision-overall className="mt-1 text-xs">{FC.mbbs.revisionOverall(pct)}</p>
+      <ul className="mt-2 space-y-1">
+        {rows.map((r) => (
+          <li key={r.key} data-revision-row={r.key} className="flex flex-wrap items-center justify-between gap-2">
+            <span>
+              {r.label}: {r.done} of {r.total}
+            </span>
+            <button type="button" onClick={() => onGo(r.step)} className="inline-flex min-h-9 items-center px-1 text-xs underline underline-offset-2" aria-label={`${FC.mbbs.revisionGo}: ${r.stepLabel}`}>
+              {FC.mbbs.revisionGo}
+            </button>
+          </li>
+        ))}
+      </ul>
+      {next ? (
+        <button type="button" data-action="revision-continue" onClick={() => onGo(next.step)} className="mt-2 inline-flex min-h-9 items-center rounded-md border border-border px-3 text-sm">
+          {FC.mbbs.revisionContinue(next.stepLabel)}
+        </button>
+      ) : (
+        <p data-revision-done className="mt-2 text-xs">{FC.mbbs.revisionAllDone}</p>
+      )}
+    </section>
   );
 }
 
@@ -114,7 +180,7 @@ function ModeFlow({ mode, lens }: { mode: ModeId; lens: ModeLens }) {
           <p data-flow-progress role="status" className="text-xs font-medium text-muted-foreground">
             <span>{FC.shell.stepOf(active + 1, steps.length)}</span> · <span>{FC.shell.visited(visited.size, steps.length)}</span>
           </p>
-          {Object.keys(progress).length > 0 && (
+          {mode !== "mbbs" && Object.keys(progress).length > 0 && (
             <div data-session-progress role="status" className="w-full text-xs text-muted-foreground">
               <span className="font-medium">{FC.shell.sessionProgress}: </span>
               {Object.values(progress)
@@ -134,6 +200,18 @@ function ModeFlow({ mode, lens }: { mode: ModeId; lens: ModeLens }) {
             </button>
           )}
         </div>
+        {mode === "mbbs" && (
+          <RevisionPath
+            progress={progress}
+            steps={steps.map((x) => ({ id: x.id, label: x.label }))}
+            onGo={(id) => goTo(id)}
+          />
+        )}
+        {mode === "resident" && (
+          <p data-not-validation className="mt-2 rounded-md bg-muted/50 p-2 text-xs text-muted-foreground">
+            {FC.resident.notValidation}
+          </p>
+        )}
         <div role="tablist" aria-label={FC.shell.stepsLabel} className="mt-2 flex flex-wrap gap-2">
           {steps.map((s, i) => {
             const selected = i === active;
@@ -181,6 +259,13 @@ function ModeFlow({ mode, lens }: { mode: ModeId; lens: ModeLens }) {
             tabIndex={-1}
             className="mt-4 space-y-4"
           >
+            <h3 className="text-lg font-semibold">{s.label}</h3>
+            {mode === "patient" && patientSourceLine(s.built) && (
+              <p data-source-line className="text-xs text-muted-foreground">
+                <span className="font-medium">{FC.shell.sourceLabel} </span>
+                {patientSourceLine(s.built)}
+              </p>
+            )}
             {s.built.map((b) => (
               <React.Fragment key={b.kind}>{renderBlock(b)}</React.Fragment>
             ))}

@@ -24,6 +24,7 @@ import {
   recallStart,
   recallSubmit,
   recallUnanswered,
+  topicBreakdown,
   type RecallState,
 } from "@/lib/kyp/modes/interactions";
 
@@ -264,13 +265,20 @@ function MechanismWalkthrough({ b }: { b: B<"mechanism-walkthrough"> }) {
   const [shown, setShown] = React.useState<Record<number, boolean>>({});
   const i = clampStep(step, b.steps.length);
   const hidden = recall && !shown[i];
-  const revealedCount = recall ? Object.values(shown).filter(Boolean).length : 0;
-  useReport("mechanism", FC.mbbs.stepsLabel, revealedCount, recall ? b.steps.length : 0);
+  // A step counts as seen once its text has been on screen (in recall mode, once it has been revealed).
+  const [seen, setSeen] = React.useState<Record<number, boolean>>({ 0: true });
+  const goStep = (n: number) => {
+    const t = clampStep(n, b.steps.length);
+    setStep(t);
+    if (!recall || shown[t]) setSeen((x) => (x[t] ? x : { ...x, [t]: true }));
+  };
+  const revealedCount = Object.values(seen).filter(Boolean).length;
+  useReport("mechanism", FC.mbbs.stepsLabel, revealedCount, b.steps.length);
   return (
     <div data-block="mechanism-walkthrough" data-recall={recall} className={card}>
       <div className="flex flex-wrap items-center justify-between gap-2">
         <h3 className="font-semibold">Mechanism, step by step</h3>
-        <button type="button" aria-pressed={recall} data-action="mechanism-recall" onClick={() => setRecall((r) => !r)} className={btn}>
+        <button type="button" aria-pressed={recall} data-action="mechanism-recall" onClick={() => { if (recall) setSeen((x) => ({ ...x, [i]: true })); setRecall((r) => !r); }} className={btn}>
           {recall ? FC.mbbs.recallModeOff : FC.mbbs.recallMode}
         </button>
       </div>
@@ -282,20 +290,20 @@ function MechanismWalkthrough({ b }: { b: B<"mechanism-walkthrough"> }) {
         {hidden ? <span data-step-hidden className="text-muted-foreground">{FC.mbbs.recallPrompt}</span> : b.steps[i].text}
       </p>
       {hidden && (
-        <button type="button" data-action="mechanism-reveal" onClick={() => setShown((x) => ({ ...x, [i]: true }))} className={cn(btn, "mt-2")}>
+        <button type="button" data-action="mechanism-reveal" onClick={() => { setShown((x) => ({ ...x, [i]: true })); setSeen((x) => ({ ...x, [i]: true })); }} className={cn(btn, "mt-2")}>
           {FC.mbbs.revealStep}
         </button>
       )}
-      {recall && (
+      {(
         <p role="status" data-mechanism-progress className="mt-2 text-xs text-muted-foreground">
           {FC.mbbs.stepsRecalled(revealedCount, b.steps.length)}
         </p>
       )}
       <div className="mt-3 flex gap-2">
-        <button type="button" onClick={() => setStep(clampStep(i - 1, b.steps.length))} disabled={i === 0} className={btn}>
+        <button type="button" onClick={() => goStep(i - 1)} disabled={i === 0} className={btn}>
           <ChevronLeft className="h-4 w-4" aria-hidden /> Back
         </button>
-        <button type="button" onClick={() => setStep(clampStep(i + 1, b.steps.length))} disabled={i === b.steps.length - 1} className={btn}>
+        <button type="button" onClick={() => goStep(i + 1)} disabled={i === b.steps.length - 1} className={btn}>
           Next <ChevronRight className="h-4 w-4" aria-hidden />
         </button>
       </div>
@@ -371,6 +379,9 @@ function EffectList({ items, cover, open, setOpen }: { items: B<"adverse-effects
 function AdverseEffects({ b }: { b: B<"adverse-effects"> }) {
   const [cover, setCover] = React.useState(false);
   const [open, setOpen] = React.useState<Record<string, boolean>>({});
+  const allItems = [...b.serious, ...b.common];
+  // Self-test progress: items whose hidden description the learner has revealed while testing themselves.
+  useReport("safety", FC.mbbs.safetyLabel, cover ? allItems.filter((e) => open[e.name.source]).length : 0, allItems.length);
   return (
     <div data-block="adverse-effects" data-cover={cover || undefined} className={card}>
       <div className="flex flex-wrap items-center justify-between gap-2">
@@ -548,6 +559,7 @@ function RecallSession({ b }: { b: B<"mcq-drill"> }) {
   const [state, setState] = React.useState<RecallState>(() => recallStart(qs.length));
   const [round, setRound] = React.useState<"all" | "retry">("all");
   const [reviewFilter, setReviewFilter] = React.useState<"all" | "missed">("all");
+  const [grouped, setGrouped] = React.useState(false);
   const headingRef = React.useRef<HTMLHeadingElement | null>(null);
   const optRefs = React.useRef<(HTMLButtonElement | null)[]>([]);
   const cur = recallCurrent(state);
@@ -557,6 +569,14 @@ function RecallSession({ b }: { b: B<"mcq-drill"> }) {
   const chosen = cur !== null ? state.chosen[cur] : undefined;
   const isLast = state.pos + 1 >= state.queue.length;
   const score = recallScore(state, qs);
+  const topics = topicBreakdown(state, qs);
+  const shown = state.queue.filter((i) => state.submitted[i] && (reviewFilter === "all" || state.chosen[i] !== qs[i].correctIndex));
+  const reviewGroups: { key: string; label: string; items: number[] }[] = grouped
+    ? [
+        ...topics.rows.map((t) => ({ key: t.id, label: t.label, items: shown.filter((i) => qs[i].category?.id === t.id) })),
+        { key: "untagged", label: FC.recall.topicUntagged, items: shown.filter((i) => !qs[i].category) },
+      ].filter((g) => g.items.length > 0)
+    : [{ key: "all", label: "", items: shown }];
   useReport("questions", FC.recall.answeredLabel, prog.answered, prog.total);
 
   // Move focus to the question when it changes so the 1-4 shortcuts work from the keyboard.
@@ -585,6 +605,29 @@ function RecallSession({ b }: { b: B<"mcq-drill"> }) {
         </p>
         {recallUnanswered(state) > 0 && <p data-recall-unanswered className="mt-1 text-sm text-muted-foreground">{FC.recall.notAttempted(recallUnanswered(state))}</p>}
         {score.missed.length === 0 && score.asked > 0 && recallUnanswered(state) === 0 && <p className="mt-1 text-sm">{FC.recall.allCorrect}</p>}
+        {(topics.rows.length > 0 || topics.untagged.asked > 0) && (
+          <div data-topic-feedback className="mt-4">
+            <h4 className="text-sm font-semibold">{FC.recall.topicHeading}</h4>
+            <ul className="mt-2 space-y-1 text-sm">
+              {topics.rows.map((t) => (
+                <li key={t.id} data-topic-row={t.id} className="flex flex-wrap items-baseline justify-between gap-2">
+                  <span>{t.label}</span>
+                  <span>
+                    {FC.recall.topicScore(t.correct, t.asked)}
+                    {t.missed.length > 0 && <span data-topic-revisit className="ml-2 rounded-full border border-border px-2 text-xs">{FC.recall.topicRevisit}</span>}
+                  </span>
+                </li>
+              ))}
+              {topics.untagged.asked > 0 && (
+                <li data-topic-row="untagged" className="flex flex-wrap items-baseline justify-between gap-2 text-muted-foreground">
+                  <span>{FC.recall.topicUntagged}</span>
+                  <span>{FC.recall.topicScore(topics.untagged.correct, topics.untagged.asked)}</span>
+                </li>
+              )}
+            </ul>
+            <p className="mt-2 text-xs text-muted-foreground">{FC.recall.topicBasis}</p>
+          </div>
+        )}
         <h4 className="mt-4 text-sm font-semibold">{FC.recall.reviewHeading}</h4>
         <div role="group" aria-label={FC.recall.filterLabel} className="mt-2 flex flex-wrap gap-2">
           {(["all", "missed"] as const).map((f) => (
@@ -592,31 +635,39 @@ function RecallSession({ b }: { b: B<"mcq-drill"> }) {
               {f === "all" ? FC.recall.filterAll : FC.recall.filterMissed}
             </button>
           ))}
+          {topics.rows.length > 0 && (
+            <button type="button" data-review-group aria-pressed={grouped} onClick={() => setGrouped((g) => !g)} className={cn(btn, grouped && "border-foreground bg-foreground text-background")}>
+              {grouped ? FC.recall.ungrouped : FC.recall.groupByTopic}
+            </button>
+          )}
         </div>
-        <ol className="mt-3 space-y-3 text-sm">
-          {state.queue
-            .filter((i) => state.submitted[i] && (reviewFilter === "all" || state.chosen[i] !== qs[i].correctIndex))
-            .map((i) => {
-              const ok = state.chosen[i] === qs[i].correctIndex;
-              return (
-                <li key={qs[i].id} data-review-result={ok ? "correct" : "incorrect"} className="rounded-lg border border-border/70 p-3">
-                  <p className="font-medium">{qs[i].stem}</p>
-                  <p className="mt-1">
-                    <span className="text-muted-foreground">{FC.recall.yourAnswer} </span>
-                    {qs[i].options[state.chosen[i]]} <span className="text-xs">({ok ? FC.recall.correct : FC.recall.incorrect})</span>
-                  </p>
-                  {!ok && (
+        {reviewGroups.map((g) => (
+          <div key={g.key} data-review-group-block={g.key} className="mt-3">
+            {grouped && <h5 className="text-sm font-semibold">{g.label}</h5>}
+            <ol className="mt-2 space-y-3 text-sm">
+              {g.items.map((i) => {
+                const ok = state.chosen[i] === qs[i].correctIndex;
+                return (
+                  <li key={qs[i].id} data-review-result={ok ? "correct" : "incorrect"} className="rounded-lg border border-border/70 p-3">
+                    <p className="font-medium">{qs[i].stem}</p>
                     <p className="mt-1">
-                      <span className="text-muted-foreground">{FC.recall.correctAnswer} </span>
-                      {qs[i].options[qs[i].correctIndex]}
+                      <span className="text-muted-foreground">{FC.recall.yourAnswer} </span>
+                      {qs[i].options[state.chosen[i]]} <span className="text-xs">({ok ? FC.recall.correct : FC.recall.incorrect})</span>
                     </p>
-                  )}
-                  <p className="mt-2 text-xs font-semibold">{FC.recall.rationale}</p>
-                  <p data-review-rationale className="mt-0.5 leading-relaxed">{qs[i].explanation ?? FC.recall.noRationale}</p>
-                </li>
-              );
-            })}
-        </ol>
+                    {!ok && (
+                      <p className="mt-1">
+                        <span className="text-muted-foreground">{FC.recall.correctAnswer} </span>
+                        {qs[i].options[qs[i].correctIndex]}
+                      </p>
+                    )}
+                    <p className="mt-2 text-xs font-semibold">{FC.recall.rationale}</p>
+                    <p data-review-rationale className="mt-0.5 leading-relaxed">{qs[i].explanation ?? FC.recall.noRationale}</p>
+                  </li>
+                );
+              })}
+            </ol>
+          </div>
+        ))}
         {reviewFilter === "missed" && score.missed.length === 0 && <p data-review-none className="mt-2 text-sm">{FC.recall.reviewNone}</p>}
         <div className="mt-4 flex flex-wrap max-lg:pl-24 justify-end gap-2 lg:justify-start">
           {recallUnanswered(state) > 0 && (
@@ -816,6 +867,9 @@ function CaseReasoner({ b }: { b: B<"case-reasoner"> }) {
   return (
     <div data-block="case-reasoner" className={card}>
       <h3 className="font-semibold">Case: {b.title.text}</h3>
+      <p data-stage-position className="mt-1 text-xs text-muted-foreground" aria-label={FC.resident.caseStages}>
+        <span>{label[CASE_STAGES[revealed]]}</span> · <span>{FC.resident.stageOf(revealed + 1, CASE_STAGES.length)}</span>
+      </p>
       <p className="mt-1 text-xs text-muted-foreground">Decide your diagnosis and plan before revealing each step.</p>
       {revealed < 3 && (
         <div className="mt-3">
@@ -839,6 +893,11 @@ function CaseReasoner({ b }: { b: B<"case-reasoner"> }) {
           <span className="font-medium">{FC.resident.myPlanShown}: </span>
           {plan}
         </p>
+      )}
+      {revealed > 2 && (
+        <button type="button" data-action="case-back" onClick={() => setRevealed((r) => Math.max(2, r - 1))} className={cn(btn, "mt-3 mr-2")}>
+          {FC.resident.caseBack}
+        </button>
       )}
       {/* One button for the whole case, so keyboard focus is never dropped when the last stage appears. */}
       <button

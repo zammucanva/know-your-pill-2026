@@ -1,7 +1,9 @@
 import type { Drug } from "@/lib/kyp/data";
 import type { PatientGuide } from "@/lib/kyp/patient/types";
 import type { StahlMcq } from "@/lib/kyp/stahl-mcqs";
+import { STAHL_TOPIC_LABELS } from "@/lib/kyp/stahl-mcqs/facts";
 import { originOf } from "./patient-interactions";
+import { quizSectionCategory } from "./mcq-topics";
 import { MODE_ORDER, MODE_SPECS } from "./specs";
 import type {
   AdverseEffect,
@@ -341,6 +343,7 @@ const BUILDERS: Record<BlockKind, Builder> = {
         options: [...q.options],
         correctIndex: q.correctIndex,
         explanation: clean(q.explanation) ? q.explanation : null,
+        category: quizSectionCategory(q.afterSectionId),
       });
     });
     for (const q of mcqs ?? [])
@@ -352,6 +355,7 @@ const BUILDERS: Record<BlockKind, Builder> = {
         options: [...q.options],
         correctIndex: q.correctIndex,
         explanation: clean(q.explanation) ? q.explanation : null,
+        category: q.topic && STAHL_TOPIC_LABELS[q.topic] ? { id: q.topic, label: STAHL_TOPIC_LABELS[q.topic], basis: "stahl-topic" } : null,
       });
     return questions.length
       ? { kind: "mcq-drill", review: REVIEW, questions, skipped }

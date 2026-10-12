@@ -158,6 +158,16 @@ export interface PyqConceptsBlock extends BlockBase {
 }
 /** Where an authored question comes from. Never generated here. */
 export type McqOrigin = "authored-quiz" | "stahl-bank";
+/**
+ * A topic taken from the question's own authored metadata, never inferred from its wording.
+ * `stahl-topic`: the Stahl bank's `topic` field. `quiz-section`: the page section an authored quiz is placed
+ * after (only where that section id names a topic).
+ */
+export interface McqCategory {
+  id: string;
+  label: string;
+  basis: "stahl-topic" | "quiz-section";
+}
 export interface McqQuestion {
   id: string;
   /** Path to the stem for a quiz (`microQuizzes[i].question`), or `stahl:<id>`. */
@@ -168,6 +178,8 @@ export interface McqQuestion {
   correctIndex: number;
   /** The authored rationale, or null when none is recorded (never invented). */
   explanation: string | null;
+  /** Authored topic, or null when the question carries no reliable one (it is then not grouped). */
+  category: McqCategory | null;
 }
 export interface McqDrillBlock extends BlockBase {
   kind: "mcq-drill";
