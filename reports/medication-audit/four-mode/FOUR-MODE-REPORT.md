@@ -39,6 +39,21 @@ See `docs/four-mode-architecture.md`. Implemented for **sertraline** (Patient Gu
 6. Raise the coverage floors in `tests/four-mode-lens.test.ts` as content lands.
 Dependencies on other tracks: Wave 1 (habit-forming, 104 medicines) and the timeline-contradiction work affect patient/resident wording; do not enable lenses for those medicines until their claims are reviewed.
 
+## 4a. Work log (updated 2026-10-12; branch `feat/four-mode-medication-experience`)
+Completed
+- Slice (sertraline), viva typing (71 qa / 529 statement / 2 needs-review), readiness script, gate doc, checklist.
+- Canonical fact engine: `src/lib/kyp/modes/{facts,contracts,consistency,registry-report}.ts`; five new blocks (MBBS indications, adverse effects, contraindications; Resident prescribing checks, monitoring plan) built from existing canonical arrays present for all 145 medications; Patient `checklist` and Resident `audit-checklist` interactions; `fact-not-allowed-in-mode` validator rule.
+- One registry command: `bun run audit:four-mode` writes `lens-validation.csv` and `lens-summary.json` (three separate layers) beside the existing coverage output.
+Registry findings (145 medications, `lens-summary.json`)
+- Mechanical: 12 fully built (the 12 with Patient Guides); 0 structural defects. 133 lack urgent-help, tell-your-doctor, decision-path and pitfalls; for those 133 the Patient mode has no distinctive interaction. MBBS, NEET PG and Resident each offer a distinctive interaction for all 145.
+- Shared facts across modes: all 145 (contraindications and monitoring-related safety facts).
+- Quality signals (not proof of quality): 132 medications repeat a sentence across fields; 2 viva items need review (clomipramine, tacrine); 0 half-life contradictions from the heuristic.
+- Clinical: 0 facts approved (no review records exist); 1 explicitly flagged (sertraline Patient Guide addiction line); 837 facts review-required across 114 medications (dependence/withdrawal/stopping language).
+Blocked / requires humans
+- Clinical review of any medication's content (reviewer TBD); authorship of Patient Guides (133), decision paths (133) and common mistakes (133).
+Next executable step
+- Batch-enable nothing yet: pick the next medicine with a Patient Guide (fluoxetine already meets the mechanical gate), obtain its clinical review record, then add the review to `REVIEW_RECORDS` and the slug to `LENS_ENABLED_SLUGS`. Engineering-only alternative: a Resident medication-interaction block from canonical `interactions` (shared with MBBS), following the same contract pattern.
+
 ## 5. Not done / limits
 - One medication enabled, not 145. No UI integration with progress tracking or search (no regression, no new tracking).
 - No visual browser verification in this report (see commit notes for what was and was not checked).

@@ -1,0 +1,41 @@
+{
+  "generatedFrom": "scripts/audit-four-mode-coverage.ts (lens contract validation)",
+  "medications": 145,
+  "layers": {
+    "mechanical": {
+      "note": "Contract blocks built, references valid, a distinctive interaction per mode. NOT content quality and NOT clinical approval.",
+      "allBlocksBuilt": 12,
+      "mechanicalOk": 12,
+      "structuralDefects": 0,
+      "modesWithoutDistinctiveInteraction": {
+        "patient": 133,
+        "mbbs": 0,
+        "neetPg": 0,
+        "resident": 0
+      },
+      "unavailableBlocksByKind": {
+        "urgent-help": 133,
+        "tell-your-doctor": 133,
+        "decision-path": 133,
+        "pitfalls": 133
+      }
+    },
+    "quality": {
+      "note": "Signals only: duplicated sentences, heuristic contradictions, viva items needing review. Absence of a signal is not proof of quality.",
+      "withDuplicateAcrossFields": 132,
+      "withPossibleContradictions": 0,
+      "possibleContradictions": [],
+      "vivaNeedsReview": 2,
+      "medicationsWithSharedFactsAcrossModes": 145
+    },
+    "clinical": {
+      "note": "Approval exists only through a recorded review (REVIEW_RECORDS). Everything else is unreviewed.",
+      "factsApproved": 0,
+      "factsFlagged": 1,
+      "factsReviewRequired": 837,
+      "factsUnverified": 0,
+      "medicationsWithReviewRequiredFacts": 114
+    }
+  },
+  "structuralDefectList": []
+}

@@ -20,7 +20,8 @@
     "test:security": "bun test tests/security.test.ts tests/privacy.test.ts tests/idor.test.ts",
     "db:deploy": "bunx prisma migrate deploy",
     "lint:content": "bun scripts/concept-content-lint.ts",
-    "lint:dashes": "node scripts/lint-dashes.mjs"
+    "lint:dashes": "node scripts/lint-dashes.mjs",
+    "audit:four-mode": "bun scripts/audit-four-mode-coverage.ts --check"
   },
   "dependencies": {
     "@prisma/client": "^6.11.1",

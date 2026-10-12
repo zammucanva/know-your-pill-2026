@@ -119,9 +119,9 @@ describe("rendered mode experiences", () => {
   test("each mode renders its own blocks and none of the other modes' blocks", () => {
     const expected: Record<ModeId, string[]> = {
       patient: ["urgent-help", "plain-summary", "key-points", "tell-your-doctor"],
-      mbbs: ["mechanism-walkthrough", "pharmacology-card", "viva"],
+      mbbs: ["mechanism-walkthrough", "pharmacology-card", "indications", "adverse-effects", "contraindications", "viva"],
       neetPg: ["high-yield-recall", "pyq-concepts", "mcq-drill"],
-      resident: ["case-reasoner", "decision-path", "pitfalls"],
+      resident: ["case-reasoner", "decision-path", "prescribing-checks", "monitoring-plan", "pitfalls"],
     };
     for (const m of MODE_ORDER) {
       const html = render(m, "sertraline");
@@ -244,6 +244,8 @@ describe("content fidelity of rendered text", () => {
   const UI_COPY = [
     "Answer aloud first, then reveal.",
     "Key facts for viva",
+    "Tick the items you want to remember to mention.",
+    "Check each item as you clear it. Absolute contraindications come first.",
     "Display format under review:",
     "Pick an answer; it is final once chosen.",
     "Decide your diagnosis and plan before revealing each step.",

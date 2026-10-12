@@ -1,5 +1,6 @@
 import type { Drug } from "@/lib/kyp/data";
 import type { PatientGuide } from "@/lib/kyp/patient/types";
+import { CATEGORY_MODES, categoryOfSource } from "./contracts";
 import { MODE_ORDER, MODE_SPECS, modeOfBlock } from "./specs";
 import type { LensBlock, ModeLensSet, Sourced } from "./types";
 
@@ -13,7 +14,7 @@ export function readPath(root: unknown, path: string): unknown {
   return cur;
 }
 
-function* sourcedIn(block: LensBlock): Generator<Sourced> {
+export function* sourcedIn(block: LensBlock): Generator<Sourced> {
   const walk = function* (v: unknown): Generator<Sourced> {
     if (Array.isArray(v)) {
       for (const x of v) yield* walk(x);
@@ -38,6 +39,7 @@ export interface LensIssue {
     | "unreviewed-state-missing"
     | "kind-both-built-and-unavailable"
     | "kind-unaccounted"
+    | "fact-not-allowed-in-mode"
     | "viva-needs-review"
     | "viva-split-lossy";
   detail: string;
@@ -84,6 +86,8 @@ export function validateLensSet(set: ModeLensSet, drug: Drug, patientGuide?: Pat
         const actual = readPath(root, s.source);
         if (actual === undefined) issues.push({ code: "source-missing", severity: "error", detail: `${mode}:${s.source}` });
         else if (actual !== s.text) issues.push({ code: "text-differs-from-source", severity: "error", detail: `${mode}:${s.source}` });
+        if (!s.source.startsWith("stahl:") && !CATEGORY_MODES[categoryOfSource(s.source)].includes(mode))
+          issues.push({ code: "fact-not-allowed-in-mode", severity: "error", detail: `${mode}:${s.source}` });
         const prior = bySource.get(s.source);
         if (prior !== undefined && prior !== s.text) issues.push({ code: "conflicting-text-for-source", severity: "error", detail: s.source });
         bySource.set(s.source, s.text);
@@ -94,7 +98,8 @@ export function validateLensSet(set: ModeLensSet, drug: Drug, patientGuide?: Pat
   const byText = new Map<string, string>();
   for (const [src, text] of bySource) {
     const prior = byText.get(text);
-    if (prior !== undefined && prior !== src) issues.push({ code: "duplicate-across-fields", severity: "warning", detail: `${prior} / ${src}` });
+    // Short repeated values (e.g. an age-group label on two indications) are categorical, not a sentence authored twice.
+    if (text.length >= 40 && prior !== undefined && prior !== src) issues.push({ code: "duplicate-across-fields", severity: "warning", detail: `${prior} / ${src}` });
     byText.set(text, src);
   }
   return issues;

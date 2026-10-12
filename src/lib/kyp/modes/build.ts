@@ -3,7 +3,9 @@ import type { PatientGuide } from "@/lib/kyp/patient/types";
 import type { StahlMcq } from "@/lib/kyp/stahl-mcqs";
 import { MODE_ORDER, MODE_SPECS } from "./specs";
 import type {
+  AdverseEffect,
   BlockKind,
+  ContraindicationItem,
   LensBlock,
   ModeId,
   ModeLens,
@@ -91,6 +93,14 @@ export function splitViva(full: string): { question: string; answer: string | nu
   return c.type === "qa" ? { question: c.question, answer: c.answer } : { question: full.trim(), answer: null };
 }
 
+function contraindicationItems(drug: Drug): ContraindicationItem[] {
+  return (drug.contraindications ?? []).flatMap((c, i) =>
+    clean(c.name) && clean(c.rationale)
+      ? [{ name: S(c.name, `contraindications[${i}].name`), severity: c.severity, rationale: S(c.rationale, `contraindications[${i}].rationale`) }]
+      : []
+  );
+}
+
 type Builder = (i: LensInputs) => LensBlock | { unavailable: string };
 
 const BUILDERS: Record<BlockKind, Builder> = {
@@ -173,6 +183,79 @@ const BUILDERS: Record<BlockKind, Builder> = {
     return items.length
       ? { kind: "viva", review: REVIEW, items }
       : { unavailable: "No MBBS viva items in the registry." };
+  },
+  indications: ({ drug }) => {
+    const items = (drug.indications ?? []).flatMap((x, i) =>
+      clean(x.name) && clean(x.description)
+        ? [
+            {
+              name: S(x.name, `indications[${i}].name`),
+              status: x.status,
+              description: S(x.description, `indications[${i}].description`),
+              ageGroup: clean(x.ageGroup) ? S(x.ageGroup, `indications[${i}].ageGroup`) : null,
+            },
+          ]
+        : []
+    );
+    return items.length
+      ? { kind: "indications", review: REVIEW, items }
+      : { unavailable: "No indications in the registry." };
+  },
+  "adverse-effects": ({ drug }) => {
+    const conv = (arr: Drug["seriousSideEffects"], base: string): AdverseEffect[] =>
+      (arr ?? []).flatMap((x, i) =>
+        clean(x.name) && clean(x.description)
+          ? [
+              {
+                name: S(x.name, `${base}[${i}].name`),
+                severity: x.severity,
+                frequency: x.frequency,
+                description: S(x.description, `${base}[${i}].description`),
+                management: clean(x.management) ? S(x.management, `${base}[${i}].management`) : null,
+              },
+            ]
+          : []
+      );
+    const serious = conv(drug.seriousSideEffects, "seriousSideEffects");
+    const common = conv(drug.commonSideEffects, "commonSideEffects");
+    return serious.length
+      ? { kind: "adverse-effects", review: REVIEW, serious, common }
+      : { unavailable: "No serious adverse effects in the registry." };
+  },
+  contraindications: ({ drug }) => {
+    const items = contraindicationItems(drug);
+    return items.length
+      ? { kind: "contraindications", review: REVIEW, items }
+      : { unavailable: "No contraindications in the registry." };
+  },
+  "prescribing-checks": ({ drug }) => {
+    const items = contraindicationItems(drug);
+    // Same canonical facts as the MBBS list; only the order differs (absolute first, stable otherwise).
+    const ordered = [...items].sort((a, b) => Number(b.severity === "absolute") - Number(a.severity === "absolute"));
+    return ordered.length
+      ? { kind: "prescribing-checks", review: REVIEW, items: ordered }
+      : { unavailable: "No contraindications in the registry." };
+  },
+  "monitoring-plan": ({ drug }) => {
+    const monitoring = (drug.monitoring ?? []).flatMap((m, i) =>
+      clean(m.parameter) && clean(m.frequency) && clean(m.rationale)
+        ? [
+            {
+              parameter: S(m.parameter, `monitoring[${i}].parameter`),
+              frequency: S(m.frequency, `monitoring[${i}].frequency`),
+              rationale: S(m.rationale, `monitoring[${i}].rationale`),
+            },
+          ]
+        : []
+    );
+    const boxedWarnings = (drug.blackBoxWarnings ?? []).flatMap((w, i) =>
+      clean(w.title) && clean(w.text)
+        ? [{ title: S(w.title, `blackBoxWarnings[${i}].title`), text: S(w.text, `blackBoxWarnings[${i}].text`) }]
+        : []
+    );
+    return monitoring.length
+      ? { kind: "monitoring-plan", review: REVIEW, monitoring, boxedWarnings }
+      : { unavailable: "No monitoring parameters in the registry." };
   },
   "high-yield-recall": ({ drug }) => {
     const items = list(drug.examLens?.neetPg?.highYield, "examLens.neetPg.highYield");

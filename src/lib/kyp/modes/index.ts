@@ -21,3 +21,9 @@ export function getModeLenses(slug: string): ModeLensSet | null {
     mcqs: stahlMcqs.filter((q) => q.drugSlug === slug),
   });
 }
+export * from "./contracts";
+export * from "./facts";
+export { findContradictions, hoursRanges } from "./consistency";
+export type { Contradiction } from "./consistency";
+export { validateDrug } from "./registry-report";
+export type { DrugValidation } from "./registry-report";

@@ -66,8 +66,32 @@ function Unavailable({ items }: { items: ModeLens["unavailable"] }) {
   );
 }
 
+const STATUS_LABEL = { "fda-approved": "FDA-approved", "off-label": "Off-label", guideline: "Guideline" } as const;
+const SEVERITY_LABEL = { mild: "mild", moderate: "moderate", severe: "severe", "life-threatening": "life-threatening" } as const;
+const FREQUENCY_LABEL = { "very-common": "very common", common: "common", uncommon: "uncommon", rare: "rare", unknown: "frequency unknown" } as const;
+
+function EffectList({ items }: { items: Extract<LensBlock, { kind: "adverse-effects" }>["serious"] }) {
+  return (
+    <ul className="mt-2 space-y-2.5 text-sm">
+      {items.map((e) => (
+        <li key={e.name.source}>
+          <p>
+            <span className="font-medium">{e.name.text}</span>{" "}
+            <span className="text-xs text-muted-foreground">
+              ({SEVERITY_LABEL[e.severity]}, {FREQUENCY_LABEL[e.frequency]})
+            </span>
+          </p>
+          <p className="text-muted-foreground">{e.description.text}</p>
+          {e.management && <p>{e.management.text}</p>}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 /* ---------------- Patient ---------------- */
 function PatientBlocks({ blocks }: { blocks: LensBlock[] }) {
+  const [ticked, setTicked] = React.useState<Record<string, boolean>>({});
   // Urgent help leads: patients should see what to act on before the explanation.
   const order = ["urgent-help", "plain-summary", "key-points", "tell-your-doctor"];
   const sorted = [...blocks].sort((a, b) => order.indexOf(a.kind) - order.indexOf(b.kind));
@@ -111,9 +135,20 @@ function PatientBlocks({ blocks }: { blocks: LensBlock[] }) {
           return (
             <div key={b.kind} data-block="tell-your-doctor" className={card}>
               <h3 className="font-semibold">Tell your doctor or pharmacist</h3>
-              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm">
+              <p className="mt-1 text-xs text-muted-foreground">Tick the items you want to remember to mention.</p>
+              <ul className="mt-2 space-y-1.5 text-sm">
                 {b.items.map((p) => (
-                  <li key={p.source}>{p.text}</li>
+                  <li key={p.source}>
+                    <label className="flex min-h-9 cursor-pointer items-start gap-2">
+                      <input
+                        type="checkbox"
+                        checked={!!ticked[p.source]}
+                        onChange={() => setTicked((t) => ({ ...t, [p.source]: !t[p.source] }))}
+                        className="mt-1 h-4 w-4 shrink-0"
+                      />
+                      <span>{p.text}</span>
+                    </label>
+                  </li>
                 ))}
               </ul>
             </div>
@@ -170,6 +205,54 @@ function MbbsBlocks({ blocks }: { blocks: LensBlock[] }) {
                 </React.Fragment>
               ))}
             </dl>
+          );
+        if (b.kind === "indications")
+          return (
+            <div key={b.kind} data-block="indications" className={card}>
+              <h3 className="font-semibold">Indications</h3>
+              <ul className="mt-2 space-y-2.5 text-sm">
+                {b.items.map((x) => (
+                  <li key={x.name.source}>
+                    <p>
+                      <span className="font-medium">{x.name.text}</span>{" "}
+                      <span className="text-xs text-muted-foreground">({STATUS_LABEL[x.status]})</span>
+                    </p>
+                    <p className="text-muted-foreground">{x.description.text}</p>
+                    {x.ageGroup && <p className="text-xs text-muted-foreground">{x.ageGroup.text}</p>}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+        if (b.kind === "adverse-effects")
+          return (
+            <div key={b.kind} data-block="adverse-effects" className={card}>
+              <h3 className="font-semibold">Serious adverse effects</h3>
+              <EffectList items={b.serious} />
+              {b.common.length > 0 && (
+                <>
+                  <h3 className="mt-5 font-semibold">Common adverse effects</h3>
+                  <EffectList items={b.common} />
+                </>
+              )}
+            </div>
+          );
+        if (b.kind === "contraindications")
+          return (
+            <div key={b.kind} data-block="contraindications" className={card}>
+              <h3 className="font-semibold">Contraindications</h3>
+              <ul className="mt-2 space-y-2.5 text-sm">
+                {b.items.map((c) => (
+                  <li key={c.name.source}>
+                    <p>
+                      <span className="font-medium">{c.name.text}</span>{" "}
+                      <span className="text-xs text-muted-foreground">({c.severity})</span>
+                    </p>
+                    <p className="text-muted-foreground">{c.rationale.text}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
           );
         if (b.kind === "viva") {
           const qa = b.items.filter((x): x is Extract<typeof x, { type: "qa" }> => x.type === "qa");
@@ -313,6 +396,7 @@ function NeetBlocks({ blocks }: { blocks: LensBlock[] }) {
 function ResidentBlocks({ blocks }: { blocks: LensBlock[] }) {
   const [revealed, setRevealed] = React.useState(2); // presentation + history + examination shown first
   const [node, setNode] = React.useState<string | null>(null);
+  const [checked, setChecked] = React.useState<Record<string, boolean>>({});
   return (
     <div className="space-y-4">
       {blocks.map((b) => {
@@ -373,6 +457,67 @@ function ResidentBlocks({ blocks }: { blocks: LensBlock[] }) {
             </div>
           );
         }
+        if (b.kind === "prescribing-checks") {
+          const done = b.items.filter((c) => checked[c.name.source]).length;
+          return (
+            <div key={b.kind} data-block="prescribing-checks" className={card}>
+              <h3 className="font-semibold">Pre-prescribing checks</h3>
+              <p className="mt-1 text-xs text-muted-foreground">Check each item as you clear it. Absolute contraindications come first.</p>
+              <ul className="mt-3 space-y-2 text-sm">
+                {b.items.map((c) => (
+                  <li key={c.name.source}>
+                    <label className="flex min-h-9 cursor-pointer items-start gap-2">
+                      <input
+                        type="checkbox"
+                        checked={!!checked[c.name.source]}
+                        onChange={() => setChecked((t) => ({ ...t, [c.name.source]: !t[c.name.source] }))}
+                        className="mt-1 h-4 w-4 shrink-0"
+                      />
+                      <span>
+                        <span className="font-medium">{c.name.text}</span>{" "}
+                        <span className="text-xs text-muted-foreground">({c.severity})</span>
+                        <span className="block text-muted-foreground">{c.rationale.text}</span>
+                      </span>
+                    </label>
+                  </li>
+                ))}
+              </ul>
+              <p role="status" data-checks-progress className="mt-3 text-xs text-muted-foreground">
+                {done} of {b.items.length} checks cleared
+              </p>
+            </div>
+          );
+        }
+        if (b.kind === "monitoring-plan")
+          return (
+            <div key={b.kind} data-block="monitoring-plan" className={card}>
+              <h3 className="font-semibold">Monitoring plan</h3>
+              <ul className="mt-2 space-y-2.5 text-sm">
+                {b.monitoring.map((m) => (
+                  <li key={m.parameter.source}>
+                    <p>
+                      <span className="font-medium">{m.parameter.text}</span>{" "}
+                      <span className="text-xs text-muted-foreground">{m.frequency.text}</span>
+                    </p>
+                    <p className="text-muted-foreground">{m.rationale.text}</p>
+                  </li>
+                ))}
+              </ul>
+              {b.boxedWarnings.length > 0 && (
+                <div className="mt-5">
+                  <h3 className="font-semibold">Boxed warnings</h3>
+                  <ul className="mt-2 space-y-2.5 text-sm">
+                    {b.boxedWarnings.map((w) => (
+                      <li key={w.title.source}>
+                        <p className="font-medium">{w.title.text}</p>
+                        <p className="text-muted-foreground">{w.text.text}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          );
         if (b.kind === "pitfalls")
           return (
             <div key={b.kind} data-block="pitfalls" className={card}>

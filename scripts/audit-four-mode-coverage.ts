@@ -7,7 +7,18 @@
  *
  *   bun scripts/audit-four-mode-coverage.ts
  *
- * Output (reports/medication-audit/four-mode/): coverage.csv, summary.json
+ * Output (reports/medication-audit/four-mode/): coverage.csv, summary.json,
+ * lens-validation.csv, lens-summary.json
+ *
+ * Two parts, one command:
+ *   1. content depth per mode (size/uniqueness indicators, below)
+ *   2. lens contract validation per medication (src/lib/kyp/modes): mechanical,
+ *      quality and clinical layers kept SEPARATE; see validateDrug().
+ *
+ *   bun scripts/audit-four-mode-coverage.ts --check
+ * exits 1 only for structural defects (invalid fact references, text that differs
+ * from its canonical source, facts shown in a mode the contract forbids, lossy
+ * viva splits). Missing content, duplicates and review states are reported, not failed.
  *
  * Status per (medication, mode):
  *   dedicated  >= 60% of the mode's indicators are substantive and not shared boilerplate
@@ -21,7 +32,8 @@
 import { mkdirSync, writeFileSync } from "fs";
 import { drugs } from "@/lib/kyp/data";
 import { patientGuides } from "@/lib/kyp/patient";
-import { STAHL_MCQ_BANK } from "@/lib/kyp/stahl-mcqs";
+import { STAHL_MCQ_BANK, stahlMcqs } from "@/lib/kyp/stahl-mcqs";
+import { validateDrug, type DrugValidation } from "@/lib/kyp/modes";
 import type { Drug, GuidedLearningMode } from "@/lib/kyp/data";
 
 const OUT = "reports/medication-audit/four-mode";
@@ -153,3 +165,61 @@ const summary = {
 };
 writeFileSync(`${OUT}/summary.json`, JSON.stringify(summary, null, 2) + "\n");
 console.log(JSON.stringify({ ...summary, indicators: undefined, modes: Object.fromEntries(MODES.map((m) => [m, { d: modeStats[m].dedicated, p: modeStats[m].partial, x: modeStats[m].missing }])) }, null, 1));
+
+/* ---------------- Part 2: lens contract validation (all medications) ---------------- */
+const names = drugs.map((d) => d.genericName);
+const validations: DrugValidation[] = drugs.map((d) => {
+  const mcqs = stahlMcqs.filter((q) => q.drugSlug === d.slug);
+  return validateDrug(d, patientGuides[d.slug], mcqs.map((q) => q.id), mcqs, names);
+});
+const STRUCTURAL = new Set(["source-missing", "text-differs-from-source", "fact-not-allowed-in-mode", "conflicting-text-for-source", "wrong-mode", "viva-split-lossy", "kind-unaccounted", "kind-both-built-and-unavailable", "unreviewed-state-missing"]);
+const structural = validations.flatMap((v) => v.issues.filter((i) => STRUCTURAL.has(i.code)).map((i) => `${v.slug}:${i.code}:${i.detail}`));
+
+const lensHead = ["slug", "blocks_built", "blocks_expected", "unavailable_blocks", "missing_facts", "invalid_refs", "modes_without_distinctive_interaction", "mechanical_ok", "duplicate_across_fields", "possible_contradictions", "viva_statements", "viva_needs_review", "shared_facts_across_modes", "facts_review_required", "facts_flagged", "facts_approved"];
+const lensRows = validations.map((v) => [
+  v.slug, v.mechanical.blocksBuilt, v.mechanical.blocksExpected, v.mechanical.unavailableBlocks, v.mechanical.missingFacts, v.mechanical.invalidReferences,
+  v.mechanical.modesWithoutDistinctiveInteraction.join("|"), v.mechanical.ok, v.quality.duplicateAcrossFields, v.quality.possibleContradictions.length,
+  v.quality.vivaStatements, v.quality.vivaNeedsReview, v.quality.sharedFactsAcrossModes, v.clinical.factsReviewRequired, v.clinical.factsFlagged, v.clinical.factsApproved,
+].map(String));
+writeFileSync(`${OUT}/lens-validation.csv`, [lensHead, ...lensRows].map((r) => r.map(csv).join(",")).join("\n") + "\n");
+
+const count = (f: (v: DrugValidation) => boolean) => validations.filter(f).length;
+const lensSummary = {
+  generatedFrom: "scripts/audit-four-mode-coverage.ts (lens contract validation)",
+  medications: validations.length,
+  layers: {
+    mechanical: {
+      note: "Contract blocks built, references valid, a distinctive interaction per mode. NOT content quality and NOT clinical approval.",
+      allBlocksBuilt: count((v) => v.mechanical.unavailableBlocks === 0),
+      mechanicalOk: count((v) => v.mechanical.ok),
+      structuralDefects: structural.length,
+      modesWithoutDistinctiveInteraction: Object.fromEntries(
+        (["patient", "mbbs", "neetPg", "resident"] as const).map((m) => [m, count((v) => v.mechanical.modesWithoutDistinctiveInteraction.includes(m))])
+      ),
+      unavailableBlocksByKind: validations.flatMap((v) => Object.values(v.modes).flatMap((m) => m.unavailable.map((u) => u.kind))).reduce<Record<string, number>>((a, k) => ((a[k] = (a[k] ?? 0) + 1), a), {}),
+    },
+    quality: {
+      note: "Signals only: duplicated sentences, heuristic contradictions, viva items needing review. Absence of a signal is not proof of quality.",
+      withDuplicateAcrossFields: count((v) => v.quality.duplicateAcrossFields > 0),
+      withPossibleContradictions: count((v) => v.quality.possibleContradictions.length > 0),
+      possibleContradictions: validations.flatMap((v) => v.quality.possibleContradictions.map((c) => ({ slug: v.slug, ...c }))),
+      vivaNeedsReview: validations.reduce((n, v) => n + v.quality.vivaNeedsReview, 0),
+      medicationsWithSharedFactsAcrossModes: count((v) => v.quality.sharedFactsAcrossModes > 0),
+    },
+    clinical: {
+      note: "Approval exists only through a recorded review (REVIEW_RECORDS). Everything else is unreviewed.",
+      factsApproved: validations.reduce((n, v) => n + v.clinical.factsApproved, 0),
+      factsFlagged: validations.reduce((n, v) => n + v.clinical.factsFlagged, 0),
+      factsReviewRequired: validations.reduce((n, v) => n + v.clinical.factsReviewRequired, 0),
+      factsUnverified: validations.reduce((n, v) => n + v.clinical.factsUnverified, 0),
+      medicationsWithReviewRequiredFacts: count((v) => v.clinical.factsReviewRequired > 0),
+    },
+  },
+  structuralDefectList: structural,
+};
+writeFileSync(`${OUT}/lens-summary.json`, JSON.stringify(lensSummary, null, 2) + "\n");
+console.log("\n== lens contract validation ==\n" + JSON.stringify({ ...lensSummary, layers: { ...lensSummary.layers, quality: { ...lensSummary.layers.quality, possibleContradictions: lensSummary.layers.quality.possibleContradictions.length } } }, null, 1));
+if (process.argv.includes("--check") && structural.length) {
+  console.error(`\n--check FAILED: ${structural.length} structural defect(s)`);
+  process.exit(1);
+}

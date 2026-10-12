@@ -15,7 +15,16 @@
 import { drugs } from "@/lib/kyp/data";
 import { getPatientGuide } from "@/lib/kyp/patient";
 import { stahlMcqs } from "@/lib/kyp/stahl-mcqs";
-import { LENS_ENABLED_SLUGS, MODE_ORDER, buildModeLenses, classifyViva, validateLensSet } from "@/lib/kyp/modes";
+import {
+  LENS_ENABLED_SLUGS,
+  MODE_ORDER,
+  buildModeLenses,
+  classifyViva,
+  collectFacts,
+  distinctiveInteractions,
+  validateLensSet,
+  type BlockKind,
+} from "@/lib/kyp/modes";
 
 const slug = process.argv[2];
 const drug = drugs.find((d) => d.slug === slug);
@@ -56,16 +65,27 @@ console.log(
   `\nviva items: ${viva.length} (question with reveal: ${vivaCount("qa")}, statement shown whole: ${vivaCount("statement")}, needs review: ${vivaNeedsReview.length})`
 );
 for (const { v, c } of vivaNeedsReview) console.log(`   needs review (${c.type === "needs-review" ? c.reason : ""}): ${v.slice(0, 120)}`);
+const facts = collectFacts(lenses, { drug, patientGuide, mcqIds: mcqs.map((q) => q.id) });
+const distinct = distinctiveInteractions(
+  Object.fromEntries(MODE_ORDER.map((m) => [m, lenses[m].blocks.map((b) => b.kind)])) as Record<(typeof MODE_ORDER)[number], BlockKind[]>
+);
+const reviewRequired = facts.used.filter((f) => f.status === "review-required").length;
+console.log(
+  `\nfacts: ${facts.used.length} used (review-required ${reviewRequired}, flagged ${facts.used.filter((f) => f.review === "flagged").length}, approved ${facts.used.filter((f) => f.review === "approved").length}, shared across modes ${facts.used.filter((f) => f.usedIn.length > 1).length}), missing slots ${facts.missing.length}`
+);
+for (const m of facts.missing) console.log(`   missing ${m.id}: ${m.reviewReasons[0]}`);
+console.log("distinctive interactions: " + MODE_ORDER.map((m) => `${m}=[${distinct[m].join(", ")}]`).join("  "));
 console.log(`\nvalidator issues: ${issues.length}`);
 for (const i of issues) console.log(`   ${i.severity} ${i.code} ${i.detail}`);
 console.log(`\nstatements for clinical review (addiction/dependence/withdrawal/stopping): ${flagged.length}`);
 for (const f of flagged) console.log(`   ${f}`);
 
 const unavailable = MODE_ORDER.reduce((n, m) => n + lenses[m].unavailable.length, 0);
-const mechanical = unavailable === 0 && issues.length === 0;
+const modesWithoutDistinct = MODE_ORDER.filter((m) => distinct[m].length === 0);
+const mechanical = unavailable === 0 && issues.length === 0 && modesWithoutDistinct.length === 0;
 const enabled = LENS_ENABLED_SLUGS.includes(slug);
 console.log("\n== STATUS (three separate gates) ==");
-console.log(`MECHANICAL:       ${mechanical ? "MET" : "NOT MET"} (unavailable blocks=${unavailable}, validator issues=${issues.length}, viva needing review=${vivaNeedsReview.length})`);
+console.log(`MECHANICAL:       ${mechanical ? "MET" : "NOT MET"} (unavailable blocks=${unavailable}, validator issues=${issues.length}, viva needing review=${vivaNeedsReview.length}, modes without a distinctive interaction=${modesWithoutDistinct.length})`);
 console.log("CLINICAL REVIEW:  NOT ASSESSED by this tool (a recorded qualified reviewer is required; see docs/four-mode-readiness-checklist.md)");
 console.log(`RELEASE:          NOT AUTHORISED by this tool (currently ${enabled ? "ENABLED in LENS_ENABLED_SLUGS" : "not enabled"}; this script never enables anything)`);
 // Exit code reports the mechanical gate only. It is NOT an authorisation to enable.

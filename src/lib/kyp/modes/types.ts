@@ -80,6 +80,37 @@ export interface VivaBlock extends BlockBase {
   items: VivaItem[];
 }
 
+export interface IndicationsBlock extends BlockBase {
+  kind: "indications";
+  items: {
+    name: Sourced;
+    status: "fda-approved" | "off-label" | "guideline";
+    description: Sourced;
+    ageGroup: Sourced | null;
+  }[];
+}
+export interface AdverseEffect {
+  name: Sourced;
+  severity: "mild" | "moderate" | "severe" | "life-threatening";
+  frequency: "very-common" | "common" | "uncommon" | "rare" | "unknown";
+  description: Sourced;
+  management: Sourced | null;
+}
+export interface AdverseEffectsBlock extends BlockBase {
+  kind: "adverse-effects";
+  serious: AdverseEffect[];
+  common: AdverseEffect[];
+}
+export interface ContraindicationItem {
+  name: Sourced;
+  severity: "absolute" | "relative";
+  rationale: Sourced;
+}
+export interface ContraindicationsBlock extends BlockBase {
+  kind: "contraindications";
+  items: ContraindicationItem[];
+}
+
 /* ---------- NEET PG ---------- */
 export interface HighYieldRecallBlock extends BlockBase {
   kind: "high-yield-recall";
@@ -102,6 +133,16 @@ export interface McqDrillBlock extends BlockBase {
 }
 
 /* ---------- Resident ---------- */
+export interface PrescribingChecksBlock extends BlockBase {
+  kind: "prescribing-checks";
+  /** The same canonical contraindications MBBS shows, ordered absolute-first for a pre-prescribing check. */
+  items: ContraindicationItem[];
+}
+export interface MonitoringPlanBlock extends BlockBase {
+  kind: "monitoring-plan";
+  monitoring: { parameter: Sourced; frequency: Sourced; rationale: Sourced }[];
+  boxedWarnings: { title: Sourced; text: Sourced }[];
+}
 export interface CaseReasonerBlock extends BlockBase {
   kind: "case-reasoner";
   title: Sourced;
@@ -137,6 +178,11 @@ export type LensBlock =
   | TellDoctorBlock
   | MechanismWalkthroughBlock
   | PharmacologyCardBlock
+  | IndicationsBlock
+  | AdverseEffectsBlock
+  | ContraindicationsBlock
+  | PrescribingChecksBlock
+  | MonitoringPlanBlock
   | VivaBlock
   | HighYieldRecallBlock
   | PyqConceptsBlock

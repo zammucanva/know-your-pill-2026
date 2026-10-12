@@ -32,9 +32,19 @@ src/components/kyp/sections/drug/mode-lens.tsx   mode-specific UI (ModeLensView 
 | Mode | Objective | Blocks | Interaction |
 |---|---|---|---|
 | Patient | Understand the medicine, take it safely, know when to seek help | urgent-help (first), plain-summary, key-points, tell-your-doctor | Read and act |
-| MBBS | Explain target-to-effect; answer viva questions | mechanism-walkthrough, pharmacology-card, viva | Step through the mechanism; reveal viva answers |
+| MBBS | Explain target-to-effect; know indications, adverse effects and contraindications; answer viva questions | mechanism-walkthrough, pharmacology-card, indications, adverse-effects, contraindications, viva | Step through the mechanism; reveal viva answers |
 | NEET PG | Recall high-yield facts and discriminate options | high-yield-recall, pyq-concepts, mcq-drill | Commit to an MCQ answer, then see the explanation |
-| Resident | Apply to a patient; avoid common errors | case-reasoner, decision-path, pitfalls | Staged case (diagnosis withheld until revealed); walk the decision path |
+| Resident | Apply to a patient; check before prescribing; monitor; avoid common errors | case-reasoner, decision-path, prescribing-checks, monitoring-plan, pitfalls | Staged case (diagnosis withheld until revealed); walk the decision path; clear pre-prescribing checks |
+
+## Canonical fact references and contracts
+A **fact** (`src/lib/kyp/modes/facts.ts`) is an addressable view of a value that already lives in the registry, the Patient Guide or the authored MCQ bank: id `<slug>#<canonical path>`, verbatim value, category, status (`present` / `missing` / `unverified` / `review-required`), review state (`unreviewed` / `flagged` / `approved`), the modes allowed to present it, and the modes that do. It is not a second registry and holds no copy of clinical text beyond what a lens block already shows.
+- **Provenance** is only what the registry records: the drug's `reviewers` field (free-text source notes, not reviewer identities), its reference lists and its authored `lastReviewed` field (not evidence of a qualified review). There is no per-fact source; the layer does not claim one.
+- **Review:** `approved` is only possible through a `ReviewRecord` in `REVIEW_RECORDS` (empty). Statements about addiction, dependence, withdrawal or stopping are `review-required`; `REVIEW_FLAGS` holds explicit reviewer flags.
+- **Contracts** (`contracts.ts`): each block kind names its mode, interaction kind, pedagogy and the canonical slots it needs. A slot the registry cannot fill is reported as a missing fact; nothing is generated. `CATEGORY_MODES` says which modes may present which fact category; the validator fails a fact shown in a forbidden mode.
+- **Shared facts:** MBBS `contraindications` and Resident `prescribing-checks` reference the same canonical contraindication facts (different pedagogy: reading vs an absolute-first audit checklist). Mechanism and safety categories are shareable; patient-guide, exam and case categories are single-mode.
+- **Distinct interactions:** Patient `checklist` (tick items to mention), MBBS `stepper` and `reveal`, NEET PG `commit-answer`, Resident `staged-reveal`, `branching` and `audit-checklist`. A mode with no interactive kind no other mode offers is reported (Patient, for the 133 medicines without a Patient Guide).
+- **Consistency:** `consistency.ts` flags a mode statement whose half-life disagrees with `mechanism.halfLife` (conservative heuristic; a hit is for a human, not a verdict).
+- **One command:** `bun run audit:four-mode` (`scripts/audit-four-mode-coverage.ts --check`) reports three layers separately, mechanical, content-quality signals and clinical, and exits 1 only for structural defects. `scripts/four-mode-readiness.ts <slug>` previews one medication.
 
 ## Viva content types
 `classifyViva` types each `examLens.mbbs.viva` string without altering it: **qa** (the prompt reads as a question or exam command and a trailing balanced parenthesised group is the answer; revealable), **statement** (shown whole), **needs-review** (empty, unbalanced parentheses, or a "?" with no parsable answer; shown whole under a review label and fails the validator). Registry today: 71 qa, 529 statements, 2 needs-review (clomipramine, tacrine).
