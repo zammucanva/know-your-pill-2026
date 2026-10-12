@@ -194,7 +194,8 @@ describe("NEET PG question session (authored questions only)", () => {
     expect(h).toContain(FLOW_COPY.recall.progress(1, total));
     expect(h).toContain('role="progressbar"');
     expect(h).toContain('role="radiogroup"');
-    expect((h.match(/type="radio"/g) ?? []).length).toBe(4);
+    expect((h.match(/role="radio"/g) ?? []).length).toBe(4);
+    expect(h).not.toContain('type="radio"'); // no native radios: see the note in lens-blocks.tsx
     expect(h).toContain('data-action="submit"');
     expect(h).toContain("disabled");
     expect(h).not.toContain("data-mcq-result");

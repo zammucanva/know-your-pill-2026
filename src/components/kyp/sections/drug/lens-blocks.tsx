@@ -491,6 +491,7 @@ function RecallSession({ b }: { b: B<"mcq-drill"> }) {
   const [state, setState] = React.useState<RecallState>(() => recallStart(qs.length));
   const [round, setRound] = React.useState<"all" | "retry">("all");
   const headingRef = React.useRef<HTMLHeadingElement | null>(null);
+  const optRefs = React.useRef<(HTMLButtonElement | null)[]>([]);
   const cur = recallCurrent(state);
   const q = cur === null ? null : qs[cur];
   const prog = recallProgress(state);
@@ -585,29 +586,43 @@ function RecallSession({ b }: { b: B<"mcq-drill"> }) {
               const right = submitted && i === q.correctIndex;
               const wrong = submitted && picked && i !== q.correctIndex;
               return (
-                <label
+                // Buttons with role="radio" (not native radios): native radios share a `name` across the
+                // document, which collides with the hidden server-rendered copy of the page that streaming
+                // can leave in the DOM. Arrow keys, Space and Enter work as for a radio group.
+                <button
                   key={o}
+                  ref={(el) => {
+                    optRefs.current[i] = el;
+                  }}
+                  type="button"
+                  role="radio"
+                  aria-checked={picked}
+                  disabled={submitted}
+                  tabIndex={picked || (chosen === undefined && i === 0) ? 0 : -1}
+                  data-option={i + 1}
+                  onClick={() => setState((s) => recallSelect(s, i, qs))}
+                  onKeyDown={(e) => {
+                    const last = q.options.length - 1;
+                    const next = e.key === "ArrowDown" || e.key === "ArrowRight" ? (i === last ? 0 : i + 1) : e.key === "ArrowUp" || e.key === "ArrowLeft" ? (i === 0 ? last : i - 1) : null;
+                    if (next === null) return;
+                    e.preventDefault();
+                    setState((s) => recallSelect(s, next, qs));
+                    optRefs.current[next]?.focus();
+                  }}
                   className={cn(
-                    "flex min-h-10 cursor-pointer items-start gap-2 rounded-md border px-3 py-2",
+                    "flex min-h-10 w-full items-start gap-2 rounded-md border px-3 py-2 text-left",
                     picked && !submitted && "border-foreground",
                     right && "border-emerald-500/60 bg-emerald-500/10",
                     wrong && "border-destructive/60 bg-destructive/10",
                     submitted && "cursor-default"
                   )}
                 >
-                  <input
-                    type="radio"
-                    name={`recall-${q.id}`}
-                    checked={picked}
-                    disabled={submitted}
-                    onChange={() => setState((s) => recallSelect(s, i, qs))}
-                    className="mt-1 h-4 w-4 shrink-0"
-                  />
+                  <span aria-hidden className={cn("mt-1 h-4 w-4 shrink-0 rounded-full border", picked ? "border-foreground bg-foreground" : "border-muted-foreground")} />
                   <span>
                     <span className="mr-1 text-xs text-muted-foreground">{i + 1}.</span>
                     {o}
                   </span>
-                </label>
+                </button>
               );
             })}
           </div>
