@@ -162,6 +162,38 @@ export function StickyLearningNav({ items, drugSlug }: StickyLearningNavProps) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const openButtonRef = React.useRef<HTMLButtonElement | null>(null);
   const closeButtonRef = React.useRef<HTMLButtonElement | null>(null);
+  // The floating pill must never cover interactive content. While a mode learning flow
+  // ([data-mode-lens]: question options, reveal controls, checklists) is on screen the pill steps aside
+  // (hidden and inert), and returns when the flow leaves the viewport. The flow has its own steps.
+  const [flowInView, setFlowInView] = React.useState(false);
+  React.useEffect(() => {
+    // A throttled scroll/resize check rather than an IntersectionObserver: the lens mounts after hydration and is
+    // replaced when the mode changes, so a fixed observer target would go stale.
+    let raf = 0;
+    const check = () => {
+      raf = 0;
+      const vh = window.innerHeight;
+      const hit = Array.from(document.querySelectorAll("[data-mode-lens]")).some((el) => {
+        if (el.closest("[hidden]")) return false;
+        const r = el.getBoundingClientRect();
+        return r.bottom > 0 && r.top < vh && r.width > 0;
+      });
+      setFlowInView(hit);
+    };
+    const queue = () => {
+      if (!raf) raf = window.setTimeout(check, 100);
+    };
+    check();
+    window.addEventListener("scroll", queue, { passive: true });
+    window.addEventListener("resize", queue);
+    const timer = window.setInterval(queue, 1000); // picks up the lens mounting or changing mode
+    return () => {
+      window.removeEventListener("scroll", queue);
+      window.removeEventListener("resize", queue);
+      window.clearInterval(timer);
+      if (raf) window.clearTimeout(raf);
+    };
+  }, []);
 
   // Escape + focus management + scroll lock while the sheet is open
   // (D-4 — the same contract the drug lesson's MobileLessonNav already
@@ -284,7 +316,15 @@ export function StickyLearningNav({ items, drugSlug }: StickyLearningNavProps) {
         type="button"
         ref={openButtonRef}
         onClick={() => setMobileOpen(true)}
-        className="lg:hidden fixed bottom-20 left-4 z-40 flex items-center gap-2 rounded-full border border-border/70 bg-card/90 backdrop-blur-xl px-4 py-2.5 shadow-[var(--shadow-lift)] print:hidden"
+        data-nav-pill
+        data-stepped-aside={flowInView && !mobileOpen}
+        {...(flowInView && !mobileOpen ? { inert: true, "aria-hidden": true } : {})}
+        style={{
+          bottom: "calc(5rem + env(safe-area-inset-bottom))",
+          left: "max(1rem, env(safe-area-inset-left))",
+          ...(flowInView && !mobileOpen ? { opacity: 0, pointerEvents: "none" as const } : null),
+        }}
+        className="lg:hidden fixed z-40 flex items-center gap-2 rounded-full border border-border/70 bg-card/90 backdrop-blur-xl px-4 py-2.5 shadow-[var(--shadow-lift)] transition-opacity print:hidden"
         aria-label="Open section navigator"
         aria-expanded={mobileOpen}
         aria-controls="section-navigator-sheet"

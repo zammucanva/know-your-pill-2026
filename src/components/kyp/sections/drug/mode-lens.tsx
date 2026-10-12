@@ -171,9 +171,15 @@ function ModeFlow({ mode, lens }: { mode: ModeId; lens: ModeLens }) {
             {s.built.length === 0 && (
               <p data-step-unavailable className="rounded-lg border border-border/70 p-4 text-sm">
                 {FC.shell.stepUnavailable}
+                {mode === "patient" ? ` ${FC.shell.patientUnavailableDirection}` : ""}
               </p>
             )}
             <Unavailable items={s.missing} />
+            {mode === "patient" && s.built.length > 0 && s.missing.length > 0 && (
+              <p data-patient-direction className="text-xs text-muted-foreground">
+                {FC.shell.patientUnavailableDirection}
+              </p>
+            )}
           </div>
         ))}
 

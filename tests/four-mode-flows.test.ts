@@ -404,3 +404,30 @@ describe("flow shell: completion and navigation states", () => {
     expect(q).not.toContain('data-action="prev"'); // nothing before the first question
   });
 });
+
+describe("accessibility and missing-data wording", () => {
+  test("viva reveal controls are named by their question and expose expanded state", () => {
+    const h = render(base, "mbbs");
+    const buttons = h.match(/<button[^>]*aria-expanded="false"[^>]*aria-label="Reveal answer: [^"]+"/g) ?? [];
+    expect(buttons.length).toBeGreaterThan(0);
+  });
+  test("a patient step with missing content never reads as 'no risk' and points to a prescriber or pharmacist", () => {
+    const noGuide = drugs.find((d) => !getPatientGuide(d.slug))!;
+    const bare = JSON.parse(JSON.stringify(noGuide));
+    delete bare.patientMode;
+    delete bare.patientExplanation;
+    delete bare.patientEducationPoints;
+    const h = renderToStaticMarkup(
+      React.createElement(ModeLensView, { drugName: bare.name ?? bare.slug, lenses: buildModeLenses({ drug: bare, patientGuide: undefined, mcqs: [] }), mode: "patient" })
+    );
+    expect(h).toContain(FLOW_COPY.shell.patientUnavailableDirection);
+    expect(FLOW_COPY.shell.patientUnavailableDirection).toMatch(/not a sign that the medicine is safe/);
+    expect(FLOW_COPY.shell.patientUnavailableDirection).toMatch(/prescriber or pharmacist/);
+    expect(h).not.toMatch(/no (known )?(risk|interactions|side effects)/i);
+  });
+  test("the resident case uses one persistent button so focus is never dropped, and the patient how-to-take step has a heading", () => {
+    const h = render(base, "resident");
+    expect((h.match(/data-action="case-step"/g) ?? []).length).toBe(1);
+    expect(render(base, "patient")).toContain(FLOW_COPY.patient.takeHeading);
+  });
+});

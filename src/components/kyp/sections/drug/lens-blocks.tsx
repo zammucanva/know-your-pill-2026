@@ -98,6 +98,7 @@ function HowToTake({ b }: { b: B<"patient-how-to-take"> }) {
   ];
   return (
     <div data-block="patient-how-to-take" className={card}>
+      <h3 className="mb-3 font-semibold">{FC.patient.takeHeading}</h3>
       <dl className="space-y-4 text-sm">
         {rows.map(([label, v]) =>
           v ? (
@@ -391,6 +392,7 @@ function ExamPrep({ b }: { b: B<"exam-prep"> }) {
   );
 }
 function Viva({ b }: { b: B<"viva"> }) {
+  const vivaId = React.useId();
   const [open, setOpen] = React.useState<Record<string, boolean>>({});
   const qa = b.items.filter((x): x is Extract<typeof x, { type: "qa" }> => x.type === "qa");
   const facts = b.items.filter((x) => x.type === "statement");
@@ -419,13 +421,22 @@ function Viva({ b }: { b: B<"viva"> }) {
             {qa.map((q) => (
               <li key={q.full.source} className="text-sm">
                 <p>{q.question}</p>
-                {open[q.full.source] ? (
-                  <p className="mt-1 rounded-md bg-muted/50 p-2">{q.answer}</p>
-                ) : (
-                  <button type="button" onClick={() => setOpen((o) => ({ ...o, [q.full.source]: true }))} className={linkBtn}>
-                    Reveal answer
-                  </button>
+                {open[q.full.source] && (
+                  <p id={`${vivaId}-${q.full.source}`} className="mt-1 rounded-md bg-muted/50 p-2">
+                    {q.answer}
+                  </p>
                 )}
+                {/* One toggle that keeps focus: revealing no longer removes the control the learner is on. */}
+                <button
+                  type="button"
+                  aria-expanded={!!open[q.full.source]}
+                  aria-controls={open[q.full.source] ? `${vivaId}-${q.full.source}` : undefined}
+                  aria-label={`${open[q.full.source] ? FC.mbbs.hideAnswer : FC.mbbs.revealAnswer}: ${q.question}`}
+                  onClick={() => setOpen((o) => ({ ...o, [q.full.source]: !o[q.full.source] }))}
+                  className={linkBtn}
+                >
+                  {open[q.full.source] ? FC.mbbs.hideAnswer : FC.mbbs.revealAnswer}
+                </button>
               </li>
             ))}
           </ol>
@@ -746,7 +757,7 @@ function CaseReasoner({ b }: { b: B<"case-reasoner"> }) {
     <div data-block="case-reasoner" className={card}>
       <h3 className="font-semibold">Case: {b.title.text}</h3>
       <p className="mt-1 text-xs text-muted-foreground">Decide your diagnosis and plan before revealing each step.</p>
-      <ol className="mt-3 space-y-3 text-sm">
+      <ol aria-live="polite" className="mt-3 space-y-3 text-sm">
         {CASE_STAGES.map((s, i) =>
           i <= revealed ? (
             <li key={s}>
@@ -756,21 +767,36 @@ function CaseReasoner({ b }: { b: B<"case-reasoner"> }) {
           ) : null
         )}
       </ol>
-      {revealed < CASE_STAGES.length - 1 && (
-        <button type="button" onClick={() => setRevealed((r) => nextCaseStage(r))} className={cn(btn, "mt-3")}>
-          Reveal {label[CASE_STAGES[revealed + 1]].toLowerCase()}
-        </button>
-      )}
+      {/* One button for the whole case, so keyboard focus is never dropped when the last stage appears. */}
+      <button
+        type="button"
+        data-action="case-step"
+        onClick={() => setRevealed((r) => (r >= CASE_STAGES.length - 1 ? 0 : nextCaseStage(r)))}
+        className={cn(btn, "mt-3")}
+      >
+        {revealed < CASE_STAGES.length - 1 ? `Reveal ${label[CASE_STAGES[revealed + 1]].toLowerCase()}` : FC.resident.caseAgain}
+      </button>
     </div>
   );
 }
 function DecisionPath({ b }: { b: B<"decision-path"> }) {
   const [node, setNode] = React.useState<string | null>(null);
   const current = b.nodes.find((n) => n.id === (node ?? b.startNodeId)) ?? b.nodes[0];
+  const qRef = React.useRef<HTMLParagraphElement | null>(null);
+  const first = React.useRef(true);
+  // After choosing a branch the buttons are replaced: move focus to the new question so keyboard and
+  // screen-reader users land on it.
+  React.useEffect(() => {
+    if (first.current) {
+      first.current = false;
+      return;
+    }
+    qRef.current?.focus({ preventScroll: true });
+  }, [node]);
   return (
     <div data-block="decision-path" className={card}>
       <h3 className="font-semibold">{b.title.text}</h3>
-      <p className="mt-3 text-sm font-medium">{current.question.text}</p>
+      <p ref={qRef} tabIndex={-1} aria-live="polite" className="mt-3 text-sm font-medium outline-none">{current.question.text}</p>
       {current.recommendation && <p className="mt-2 text-sm">{current.recommendation.text}</p>}
       {current.reasoning && <p className="mt-1 text-sm text-muted-foreground">{current.reasoning.text}</p>}
       {current.branches.length > 0 && (

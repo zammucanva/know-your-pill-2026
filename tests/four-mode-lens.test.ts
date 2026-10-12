@@ -394,7 +394,7 @@ describe("viva content types", () => {
     expect(html).toContain('data-viva-type="qa"');
     expect(html).not.toContain('data-viva-type="statement"');
     expect(html).not.toContain('data-viva-type="needs-review"');
-    expect((html.match(/Reveal answer/g) ?? []).length).toBe(6);
+    expect((html.match(/>Reveal answer<[/]button>/g) ?? []).length).toBe(6);
   });
 
   test("renders statements whole, with no reveal button and no invented question", () => {
@@ -412,7 +412,7 @@ describe("viva content types", () => {
     expect(html).toContain('data-viva-type="qa"');
     expect(html).toContain('data-viva-type="needs-review"');
     expect(html).toContain("Display format under review:");
-    expect((html.match(/Reveal answer/g) ?? []).length).toBe(5);
+    expect((html.match(/>Reveal answer<[/]button>/g) ?? []).length).toBe(5);
   });
 
   test("the validator fails needs-review content and passes statements", () => {

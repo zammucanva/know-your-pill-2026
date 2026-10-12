@@ -6,6 +6,8 @@
 
 export const FLOW_COPY = {
   shell: {
+    patientUnavailableDirection:
+      "Missing wording is not a sign that the medicine is safe or risk-free. If you are unsure or feel unwell, ask your prescriber or pharmacist, or contact emergency services if it is serious.",
     stepsLabel: "Steps in this task",
     back: "Back",
     next: "Next step",
@@ -47,6 +49,8 @@ export const FLOW_COPY = {
     coverFacts: "Test myself: cover the facts",
     showDescriptions: "Show descriptions",
     reveal: "Reveal",
+    revealAnswer: "Reveal answer",
+    hideAnswer: "Hide answer",
     revealedCount: (r: number, n: number) => `${r} of ${n} revealed`,
     revealAll: "Reveal all",
     hideAll: "Hide all",
@@ -57,6 +61,7 @@ export const FLOW_COPY = {
     noKeys: "These are prompts to rehearse. This guide holds no answer keys for them.",
   },
   resident: {
+    caseAgain: "Start the case again",
     overviewHeading: "What this guide holds for this medicine",
     overviewNote:
       "Counts come straight from the guide's records. An empty or missing record is not a finding that nothing applies: check the current label and local guidance.",
@@ -70,6 +75,7 @@ export const FLOW_COPY = {
     goToStep: "Open this step",
   },
   patient: {
+    takeHeading: "Taking this medicine safely",
     howToTake: "How to take it",
     missedDose: "If you miss a dose",
     stopping: "Stopping",
