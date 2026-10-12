@@ -39,8 +39,8 @@ export const MODE_SPECS: Record<ModeId, ModeSpec> = {
     audience: "Residents and clinicians reasoning about patients.",
     objective:
       "Apply the drug to a patient: decide, anticipate pitfalls, and know when not to use it.",
-    blocks: ["case-reasoner", "decision-path", "prescribing-checks", "monitoring-plan", "pitfalls"],
-    interaction: "Work the case step by step, walk the decision path, then run the pre-prescribing checks.",
+    blocks: ["case-reasoner", "decision-path", "prescribing-checks", "interactions", "monitoring-plan", "pitfalls"],
+    interaction: "Work the case step by step, walk the decision path, run the pre-prescribing checks, then review interactions.",
   },
 };
 

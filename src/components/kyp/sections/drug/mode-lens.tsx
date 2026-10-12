@@ -9,6 +9,7 @@ import type { LensBlock, ModeId, ModeLens, ModeLensSet } from "@/lib/kyp/modes/t
 import {
   CASE_STAGES,
   chooseMcq,
+  filterInteractions,
   clampStep,
   followBranch,
   initialMcq,
@@ -392,6 +393,81 @@ function NeetBlocks({ blocks }: { blocks: LensBlock[] }) {
   );
 }
 
+const INTERACTION_SEVERITIES = ["contraindicated", "major", "moderate", "minor"] as const;
+const SEVERITY_STYLE: Record<(typeof INTERACTION_SEVERITIES)[number], string> = {
+  contraindicated: "border-destructive/50 bg-destructive/10",
+  major: "border-amber-500/50 bg-amber-500/10",
+  moderate: "border-border bg-muted/40",
+  minor: "border-border bg-muted/20",
+};
+
+function InteractionsPanel({ block }: { block: Extract<LensBlock, { kind: "interactions" }> }) {
+  const [sev, setSev] = React.useState<ReadonlySet<string>>(new Set());
+  const [query, setQuery] = React.useState("");
+  const shown = filterInteractions(block.items, sev, query);
+  const counts = INTERACTION_SEVERITIES.map((s) => [s, block.items.filter((i) => i.severity === s).length] as const);
+  const inputId = React.useId();
+  return (
+    <div data-block="interactions" data-interactions-state={block.state} className={card}>
+      <h3 className="font-semibold">Drug interactions</h3>
+      {block.state === "empty" ? (
+        <p data-interactions-empty className="mt-2 text-sm">
+          No interaction records are listed for this medicine in this guide. An empty list does not mean it has no interactions.
+        </p>
+      ) : (
+        <>
+          <p className="mt-1 text-xs text-muted-foreground">Filter by severity or search by drug name.</p>
+          <div className="mt-3 flex flex-wrap gap-2" role="group" aria-label="Filter interactions by severity">
+            {counts.map(([s, n]) =>
+              n === 0 ? null : (
+                <button
+                  key={s}
+                  type="button"
+                  aria-pressed={sev.has(s)}
+                  onClick={() => setSev((cur) => { const nx = new Set(cur); if (nx.has(s)) nx.delete(s); else nx.add(s); return nx; })}
+                  className={cn("min-h-9 rounded-full border px-3 text-sm", sev.has(s) ? "border-foreground bg-foreground text-background" : "border-border")}
+                >
+                  {s} ({n})
+                </button>
+              )
+            )}
+          </div>
+          <label htmlFor={inputId} className="mt-3 block text-xs text-muted-foreground">
+            Search by interacting drug
+          </label>
+          <input
+            id={inputId}
+            type="search"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            className="mt-1 min-h-9 w-full rounded-md border border-border bg-background px-3 text-sm"
+          />
+          <p role="status" data-interactions-count className="mt-3 text-xs text-muted-foreground">
+            Showing {shown.length} of {block.items.length} interactions
+          </p>
+          <ul className="mt-2 space-y-3 text-sm">
+            {shown.map((i) => (
+              <li key={i.drug.source} data-severity={i.severity} className={cn("rounded-lg border p-3", SEVERITY_STYLE[i.severity])}>
+                <p>
+                  <span className="font-medium">{i.drug.text}</span>{" "}
+                  <span className="text-xs uppercase tracking-wide text-muted-foreground">{i.severity}</span>
+                </p>
+                <p className="mt-1 text-muted-foreground">{i.mechanism.text}</p>
+                <p className="mt-1">{i.action.text}</p>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+      {block.incomplete > 0 && (
+        <p data-interactions-incomplete className="mt-3 text-xs text-muted-foreground">
+          {block.incomplete} record(s) are incomplete in the guide and are not shown.
+        </p>
+      )}
+    </div>
+  );
+}
+
 /* ---------------- Resident ---------------- */
 function ResidentBlocks({ blocks }: { blocks: LensBlock[] }) {
   const [revealed, setRevealed] = React.useState(2); // presentation + history + examination shown first
@@ -488,6 +564,7 @@ function ResidentBlocks({ blocks }: { blocks: LensBlock[] }) {
             </div>
           );
         }
+        if (b.kind === "interactions") return <InteractionsPanel key={b.kind} block={b} />;
         if (b.kind === "monitoring-plan")
           return (
             <div key={b.kind} data-block="monitoring-plan" className={card}>

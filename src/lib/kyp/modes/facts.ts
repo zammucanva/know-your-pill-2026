@@ -176,11 +176,16 @@ export function collectFacts(lenses: ModeLensSet, inputs: FactInputs): FactSet {
       }
       if (!filled) {
         const path = slot.anyOf[0];
+        const list = (drug as unknown as Record<string, unknown>)[path.split("[")[0]];
+        const note =
+          path.startsWith("interactions[") && Array.isArray(list)
+            ? `${c.kind}: the registry records an EMPTY interaction list (none listed), which is not a claim that none exist`
+            : `${c.kind}: ${slot.label} not in the registry`;
         const category = categoryOfSource(path);
         const jid = factId(slug, path);
         missing.push({
           id: jid, slug, path, category, value: null, status: "missing", review: "unreviewed",
-          reviewReasons: [`${c.kind}: ${slot.label} not in the registry`], provenance: prov,
+          reviewReasons: [note], provenance: prov,
           usableIn: CATEGORY_MODES[category], usedIn: [],
         });
       }

@@ -15,6 +15,7 @@ export type FactCategory =
   | "mechanism"
   | "clinical-use"
   | "safety"
+  | "interactions"
   | "exam-mbbs"
   | "exam-neet"
   | "mcq"
@@ -29,6 +30,7 @@ export const CATEGORY_MODES: Record<FactCategory, readonly ModeId[]> = {
   mechanism: ["mbbs", "resident"],
   "clinical-use": ["mbbs"],
   safety: ["mbbs", "resident"],
+  interactions: ["mbbs", "resident"],
   "exam-mbbs": ["mbbs"],
   "exam-neet": ["neetPg"],
   mcq: ["neetPg"],
@@ -44,6 +46,7 @@ export function categoryOfSource(source: string): FactCategory {
   if (source === "patientExplanation" || source.startsWith("patientEducationPoints")) return "patient-summary";
   if (source.startsWith("mechanism.")) return "mechanism";
   if (source.startsWith("indications[")) return "clinical-use";
+  if (source.startsWith("interactions[")) return "interactions";
   if (/^(contraindications|seriousSideEffects|commonSideEffects|monitoring|blackBoxWarnings)\[/.test(source)) return "safety";
   if (source.startsWith("examLens.mbbs")) return "exam-mbbs";
   if (source.startsWith("examLens.neetPg")) return "exam-neet";
@@ -65,7 +68,8 @@ export type InteractionKind =
   | "commit-answer" // learner commits to one answer, then sees the explanation
   | "staged-reveal" // case unfolds stage by stage
   | "branching" // learner follows decision branches
-  | "audit-checklist"; // learner ticks each pre-prescribing check as done
+  | "audit-checklist" // learner ticks each pre-prescribing check as done
+  | "filter"; // learner narrows a list by severity or search
 
 export const INTERACTIVE_KINDS: ReadonlySet<InteractionKind> = new Set([
   "checklist",
@@ -75,6 +79,7 @@ export const INTERACTIVE_KINDS: ReadonlySet<InteractionKind> = new Set([
   "staged-reveal",
   "branching",
   "audit-checklist",
+  "filter",
 ]);
 
 /** A canonical slot a block needs. `anyOf` lists acceptable paths; the first is the expected one. */
@@ -182,6 +187,13 @@ export const BLOCK_CONTRACTS: Record<BlockKind, BlockContract> = {
     interaction: "audit-checklist",
     pedagogy: "The same contraindications, ordered absolute-first, as checks to clear before prescribing.",
     slots: [{ label: "contraindications", anyOf: ["contraindications[0].name"] }],
+  },
+  interactions: {
+    kind: "interactions",
+    mode: "resident",
+    interaction: "filter",
+    pedagogy: "Recorded drug interactions with canonical severity, mechanism and action; filter by severity or search by drug.",
+    slots: [{ label: "interaction records", anyOf: ["interactions[0].drug"] }],
   },
   "monitoring-plan": {
     kind: "monitoring-plan",

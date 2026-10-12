@@ -230,7 +230,7 @@ describe("registry-wide four-mode validation (all medications)", () => {
     expect(r.modes.patient.distinctive).toEqual(["checklist"]);
     expect([...r.modes.mbbs.distinctive].sort()).toEqual(["reveal", "stepper"]);
     expect(r.modes.neetPg.distinctive).toEqual(["commit-answer"]);
-    expect([...r.modes.resident.distinctive].sort()).toEqual(["audit-checklist", "branching", "staged-reveal"]);
+    expect([...r.modes.resident.distinctive].sort()).toEqual(["audit-checklist", "branching", "filter", "staged-reveal"]);
   });
 
   test("clinical layer: nothing approved anywhere; review-required facts are counted separately", () => {

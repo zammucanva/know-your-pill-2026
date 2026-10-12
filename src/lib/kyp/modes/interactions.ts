@@ -43,3 +43,13 @@ export function followBranch(
   const branch = node?.branches.find((b) => b.label === label);
   return branch && nodes.some((n) => n.id === branch.next) ? branch.next : currentId;
 }
+
+/** Resident interactions filter: narrow by severity and/or drug-name text. Pure and order-preserving. */
+export function filterInteractions<T extends { severity: string; drug: { text: string } }>(
+  items: readonly T[],
+  severities: ReadonlySet<string>,
+  query: string
+): T[] {
+  const q = query.trim().toLowerCase();
+  return items.filter((i) => (severities.size === 0 || severities.has(i.severity)) && (!q || i.drug.text.toLowerCase().includes(q)));
+}

@@ -6,6 +6,7 @@ import type {
   AdverseEffect,
   BlockKind,
   ContraindicationItem,
+  InteractionRecord,
   LensBlock,
   ModeId,
   ModeLens,
@@ -235,6 +236,24 @@ const BUILDERS: Record<BlockKind, Builder> = {
     return ordered.length
       ? { kind: "prescribing-checks", review: REVIEW, items: ordered }
       : { unavailable: "No contraindications in the registry." };
+  },
+  interactions: ({ drug }) => {
+    const raw = drug.interactions as unknown;
+    // Absent (field missing or not a list) is NOT the same as an explicit empty list.
+    if (!Array.isArray(raw)) return { unavailable: "No interaction records field in the registry (absent, not an empty list). This does not mean the medicine has no interactions." };
+    const items: InteractionRecord[] = [];
+    let incomplete = 0;
+    (raw as Drug["interactions"]).forEach((x, i) => {
+      if (clean(x?.drug) && clean(x?.mechanism) && clean(x?.action) && ["contraindicated", "major", "moderate", "minor"].includes(x.severity))
+        items.push({
+          drug: S(x.drug, `interactions[${i}].drug`),
+          severity: x.severity,
+          mechanism: S(x.mechanism, `interactions[${i}].mechanism`),
+          action: S(x.action, `interactions[${i}].action`),
+        });
+      else incomplete++;
+    });
+    return { kind: "interactions", review: REVIEW, state: raw.length === 0 ? "empty" : "listed", items, incomplete };
   },
   "monitoring-plan": ({ drug }) => {
     const monitoring = (drug.monitoring ?? []).flatMap((m, i) =>

@@ -6,7 +6,7 @@ Status today: sertraline is enabled as the vertical slice. It is **not clinicall
 
 ## A. Mechanical criteria (enforced by `tests/four-mode-lens.test.ts`)
 1. All four lenses build with **zero unavailable blocks**.
-2. `validateLensSet` returns **no issues at all** (no errors, no duplicate-text warnings): every displayed string equals its canonical source, and no sentence is authored twice across fields.
+2. `validateLensSet` returns **no errors**: every displayed string equals its canonical source, every fact is shown only in modes its category allows, and records are complete. Duplicate-sentence **warnings** (one sentence authored in two registry fields) are content, not a rendering defect: they are listed by the readiness script and must be accepted or fixed at source by the reviewer (section B), not by the lens.
    - Viva items are typed, not forced into one shape: a **question with a revealable answer** gets a reveal; a **statement or fact** is shown whole and is valid as it is (no hidden answer is invented, nothing is converted into a question); **malformed or ambiguous** text (empty, unbalanced parentheses, or a "?" with no parsable answer) fails the gate and is shown whole under a review label until its source is corrected. Statements never fail the gate.
    - Each mode must offer at least one interactive kind no other mode offers (`distinctiveInteractions`); `bun scripts/four-mode-readiness.ts <slug>` prints them and the missing fact slots. Missing facts are listed, never filled.
 3. Every long rendered fragment is canonical text or declared presentation copy (`UI_COPY` / mode specs / `REVIEW_NOTICE`). New wording in the lens must be added there on purpose.
@@ -15,9 +15,10 @@ Status today: sertraline is enabled as the vertical slice. It is **not clinicall
 
 ## B. Content criteria (human, not automatable)
 1. The medication's source content (registry fields, Patient Guide, MCQs) has a **recorded qualified clinical review**: reviewer name and qualification, date, sources.
-2. Open Wave 1 findings for the medication are resolved or explicitly accepted (for example the habit-forming claim, 104 medicines; timeline contradictions).
-3. The Patient Guide statements shown in Patient mode (urgent help, key points) were read by the reviewer in the context of this view.
-4. MCQ answers and explanations are unchanged from the authored bank; any change goes through its own review.
+2. Duplicate-sentence warnings listed by the readiness script (one sentence authored in two registry fields) are accepted or fixed at source. Sertraline currently has one: `interactions[1].mechanism` repeats `whenNotToUse[2].reason`.
+3. Open Wave 1 findings for the medication are resolved or explicitly accepted (for example the habit-forming claim, 104 medicines; timeline contradictions).
+4. The Patient Guide statements shown in Patient mode (urgent help, key points) were read by the reviewer in the context of this view.
+5. MCQ answers and explanations are unchanged from the authored bank; any change goes through its own review.
 
 ## C. Experience criteria (browser)
 1. All four modes exercised in a real browser on desktop and 375 px mobile: no horizontal overflow, no console errors from the lens, mode switching works.

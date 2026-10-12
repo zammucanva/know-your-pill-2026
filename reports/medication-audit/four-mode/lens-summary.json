@@ -22,7 +22,7 @@
     },
     "quality": {
       "note": "Signals only: duplicated sentences, heuristic contradictions, viva items needing review. Absence of a signal is not proof of quality.",
-      "withDuplicateAcrossFields": 132,
+      "withDuplicateAcrossFields": 133,
       "withPossibleContradictions": 0,
       "possibleContradictions": [],
       "vivaNeedsReview": 2,
@@ -32,9 +32,27 @@
       "note": "Approval exists only through a recorded review (REVIEW_RECORDS). Everything else is unreviewed.",
       "factsApproved": 0,
       "factsFlagged": 1,
-      "factsReviewRequired": 837,
+      "factsReviewRequired": 883,
       "factsUnverified": 0,
       "medicationsWithReviewRequiredFacts": 114
+    }
+  },
+  "interactions": {
+    "note": "Resident interactions block. 'absent' (field missing) is reported separately from 'empty' (explicit empty list); neither means the medicine has no interactions.",
+    "states": {
+      "listed": 145
+    },
+    "records": 596,
+    "incompleteRecords": 0,
+    "bySeverity": {
+      "contraindicated": 130,
+      "major": 276,
+      "moderate": 179,
+      "minor": 11
+    },
+    "recordsPerMedication": {
+      "min": 1,
+      "max": 15
     }
   },
   "structuralDefectList": []

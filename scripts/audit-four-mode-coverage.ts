@@ -215,6 +215,20 @@ const lensSummary = {
       medicationsWithReviewRequiredFacts: count((v) => v.clinical.factsReviewRequired > 0),
     },
   },
+  interactions: {
+    note: "Resident interactions block. 'absent' (field missing) is reported separately from 'empty' (explicit empty list); neither means the medicine has no interactions.",
+    states: validations.reduce<Record<string, number>>((m, v) => ((m[v.interactions.state] = (m[v.interactions.state] ?? 0) + 1), m), {}),
+    records: validations.reduce((n, v) => n + v.interactions.records, 0),
+    incompleteRecords: validations.reduce((n, v) => n + v.interactions.incomplete, 0),
+    bySeverity: validations.reduce<Record<string, number>>((m, v) => {
+      for (const [k, n] of Object.entries(v.interactions.bySeverity)) m[k] = (m[k] ?? 0) + n;
+      return m;
+    }, {}),
+    recordsPerMedication: {
+      min: Math.min(...validations.map((v) => v.interactions.records)),
+      max: Math.max(...validations.map((v) => v.interactions.records)),
+    },
+  },
   structuralDefectList: structural,
 };
 writeFileSync(`${OUT}/lens-summary.json`, JSON.stringify(lensSummary, null, 2) + "\n");

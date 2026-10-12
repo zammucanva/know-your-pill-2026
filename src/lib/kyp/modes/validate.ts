@@ -40,6 +40,7 @@ export interface LensIssue {
     | "kind-both-built-and-unavailable"
     | "kind-unaccounted"
     | "fact-not-allowed-in-mode"
+    | "interaction-record-incomplete"
     | "viva-needs-review"
     | "viva-split-lossy";
   detail: string;
@@ -70,6 +71,8 @@ export function validateLensSet(set: ModeLensSet, drug: Drug, patientGuide?: Pat
       if (modeOfBlock(b.kind) !== mode) issues.push({ code: "wrong-mode", severity: "error", detail: `${b.kind} in ${mode}` });
       if (b.review !== "pending-clinical-review")
         issues.push({ code: "unreviewed-state-missing", severity: "error", detail: `${mode}:${b.kind}` });
+      if (b.kind === "interactions" && b.incomplete > 0)
+        issues.push({ code: "interaction-record-incomplete", severity: "error", detail: `${b.incomplete} record(s) with a blank field or unknown severity` });
       if (b.kind === "viva") {
         for (const it of b.items) {
           if (it.type === "needs-review")

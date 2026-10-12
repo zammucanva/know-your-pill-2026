@@ -82,10 +82,11 @@ for (const f of flagged) console.log(`   ${f}`);
 
 const unavailable = MODE_ORDER.reduce((n, m) => n + lenses[m].unavailable.length, 0);
 const modesWithoutDistinct = MODE_ORDER.filter((m) => distinct[m].length === 0);
-const mechanical = unavailable === 0 && issues.length === 0 && modesWithoutDistinct.length === 0;
+const errors = issues.filter((i) => i.severity === "error");
+const mechanical = unavailable === 0 && errors.length === 0 && modesWithoutDistinct.length === 0;
 const enabled = LENS_ENABLED_SLUGS.includes(slug);
 console.log("\n== STATUS (three separate gates) ==");
-console.log(`MECHANICAL:       ${mechanical ? "MET" : "NOT MET"} (unavailable blocks=${unavailable}, validator issues=${issues.length}, viva needing review=${vivaNeedsReview.length}, modes without a distinctive interaction=${modesWithoutDistinct.length})`);
+console.log(`MECHANICAL:       ${mechanical ? "MET" : "NOT MET"} (unavailable blocks=${unavailable}, validator errors=${errors.length}, warnings=${issues.length - errors.length}, viva needing review=${vivaNeedsReview.length}, modes without a distinctive interaction=${modesWithoutDistinct.length})`);
 console.log("CLINICAL REVIEW:  NOT ASSESSED by this tool (a recorded qualified reviewer is required; see docs/four-mode-readiness-checklist.md)");
 console.log(`RELEASE:          NOT AUTHORISED by this tool (currently ${enabled ? "ENABLED in LENS_ENABLED_SLUGS" : "not enabled"}; this script never enables anything)`);
 // Exit code reports the mechanical gate only. It is NOT an authorisation to enable.

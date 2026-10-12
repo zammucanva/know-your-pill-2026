@@ -138,6 +138,27 @@ export interface PrescribingChecksBlock extends BlockBase {
   /** The same canonical contraindications MBBS shows, ordered absolute-first for a pre-prescribing check. */
   items: ContraindicationItem[];
 }
+export type InteractionSeverity = "contraindicated" | "major" | "moderate" | "minor";
+export interface InteractionRecord {
+  drug: Sourced;
+  /** Canonical severity enum, shown as recorded. Never inferred. */
+  severity: InteractionSeverity;
+  mechanism: Sourced;
+  action: Sourced;
+}
+/**
+ * `listed`: one or more complete records. `empty`: the registry holds an explicit empty
+ * list (recorded as none listed, which is NOT a claim that no interactions exist).
+ * An absent field is not a state here: it is an UnavailableBlock.
+ */
+export type InteractionsState = "listed" | "empty";
+export interface InteractionsBlock extends BlockBase {
+  kind: "interactions";
+  state: InteractionsState;
+  items: InteractionRecord[];
+  /** Canonical records skipped because a required field was blank (reported, not repaired). */
+  incomplete: number;
+}
 export interface MonitoringPlanBlock extends BlockBase {
   kind: "monitoring-plan";
   monitoring: { parameter: Sourced; frequency: Sourced; rationale: Sourced }[];
@@ -182,6 +203,7 @@ export type LensBlock =
   | AdverseEffectsBlock
   | ContraindicationsBlock
   | PrescribingChecksBlock
+  | InteractionsBlock
   | MonitoringPlanBlock
   | VivaBlock
   | HighYieldRecallBlock

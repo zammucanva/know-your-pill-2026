@@ -44,6 +44,13 @@ export interface DrugValidation {
     sharedFactsAcrossModes: number;
     factsPerMode: Record<ModeId, number>;
   };
+  /** Interaction data state: absent (field missing) is reported separately from empty (explicit empty list). */
+  interactions: {
+    state: "absent" | "empty" | "listed";
+    records: number;
+    incomplete: number;
+    bySeverity: Record<string, number>;
+  };
   clinical: { factsReviewRequired: number; factsFlagged: number; factsApproved: number; factsUnverified: number };
   issues: LensIssue[];
 }
@@ -81,6 +88,16 @@ export function validateDrug(
   const noDistinct = MODE_ORDER.filter((m) => modes[m].distinctive.length === 0);
   const unavailableBlocks = MODE_ORDER.reduce((n, m) => n + lenses[m].unavailable.length, 0);
 
+  const ib = lenses.resident.blocks.find((b) => b.kind === "interactions");
+  const interactions: DrugValidation["interactions"] =
+    ib && ib.kind === "interactions"
+      ? {
+          state: ib.state,
+          records: ib.items.length,
+          incomplete: ib.incomplete,
+          bySeverity: ib.items.reduce<Record<string, number>>((a, i) => ((a[i.severity] = (a[i.severity] ?? 0) + 1), a), {}),
+        }
+      : { state: "absent", records: 0, incomplete: 0, bySeverity: {} };
   const viva = (drug.examLens?.mbbs?.viva ?? []).map(classifyViva);
   return {
     slug: drug.slug,
@@ -102,6 +119,7 @@ export function validateDrug(
       sharedFactsAcrossModes: facts.used.filter((f) => f.usedIn.length > 1).length,
       factsPerMode: Object.fromEntries(MODE_ORDER.map((m) => [m, modes[m].factsUsed])) as Record<ModeId, number>,
     },
+    interactions,
     clinical: {
       factsReviewRequired: facts.used.filter((f) => f.status === "review-required").length,
       factsFlagged: facts.used.filter((f) => f.review === "flagged").length,
