@@ -221,13 +221,16 @@ describe("registry-wide four-mode validation (all medications)", () => {
     }
   });
 
-  test("every medication without a Patient Guide has no distinctive Patient interaction (reported, not hidden)", () => {
-    for (const r of reports.filter((x) => !patientGuides[x.slug])) expect(r.mechanical.modesWithoutDistinctiveInteraction).toContain("patient");
+  test("every medication offers Patient a distinctive interaction (the personal interaction list), with or without a Patient Guide", () => {
+    for (const r of reports) {
+      expect(r.modes.patient.distinctive).toContain("personal-list");
+      expect(r.mechanical.modesWithoutDistinctiveInteraction).toEqual([]);
+    }
   });
 
   test("sertraline's four modes each offer a distinctive interaction", () => {
     const r = reports.find((x) => x.slug === "sertraline")!;
-    expect(r.modes.patient.distinctive).toEqual(["checklist"]);
+    expect([...r.modes.patient.distinctive].sort()).toEqual(["checklist", "personal-list"]);
     expect([...r.modes.mbbs.distinctive].sort()).toEqual(["reveal", "stepper"]);
     expect(r.modes.neetPg.distinctive).toEqual(["commit-answer"]);
     expect([...r.modes.resident.distinctive].sort()).toEqual(["audit-checklist", "branching", "filter", "staged-reveal"]);

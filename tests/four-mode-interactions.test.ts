@@ -132,20 +132,22 @@ describe("Resident interactions: absent vs empty vs incomplete", () => {
 });
 
 describe("Resident interactions: mode eligibility", () => {
-  test("the block and its facts belong to Resident only; no other mode builds or may show them", () => {
+  test("mechanism and action belong to Resident/MBBS only; Patient may show only the interaction names", () => {
     expect(BLOCK_CONTRACTS.interactions.mode).toBe("resident");
-    expect(CATEGORY_MODES[categoryOfSource("interactions[0].drug")]).not.toContain("patient");
+    expect(CATEGORY_MODES[categoryOfSource("interactions[0].mechanism")]).not.toContain("patient");
+    expect(CATEGORY_MODES[categoryOfSource("interactions[0].action")]).not.toContain("neetPg");
+    expect(CATEGORY_MODES[categoryOfSource("interactions[0].drug")]).toContain("patient");
     expect(CATEGORY_MODES[categoryOfSource("interactions[0].drug")]).not.toContain("neetPg");
     const l = lensesOf(base);
     for (const m of ["patient", "mbbs", "neetPg"] as const) expect(l[m].blocks.some((b) => b.kind === "interactions")).toBe(false);
   });
 
-  test("showing an interaction fact in Patient mode is a validation error", () => {
+  test("showing an interaction mechanism in Patient mode is a validation error", () => {
     const l = structuredClone(lensesOf(base));
     l.patient.blocks.push({
       kind: "key-points",
       review: "pending-clinical-review",
-      points: [{ text: base.interactions[0].drug, source: "interactions[0].drug" }],
+      points: [{ text: base.interactions[0].mechanism, source: "interactions[0].mechanism" }],
     });
     expect(validateLensSet(l, base, getPatientGuide(base.slug)).map((i) => i.code)).toContain("fact-not-allowed-in-mode");
   });

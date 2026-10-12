@@ -51,6 +51,8 @@ export interface DrugValidation {
     incomplete: number;
     bySeverity: Record<string, number>;
   };
+  /** Patient interaction wording: where it came from (never inferred), and how many names are listed. */
+  patientInteractions: { origin: "authored-guide" | "authored-registry" | "template" | "missing"; names: number };
   clinical: { factsReviewRequired: number; factsFlagged: number; factsApproved: number; factsUnverified: number };
   issues: LensIssue[];
 }
@@ -98,6 +100,11 @@ export function validateDrug(
           bySeverity: ib.items.reduce<Record<string, number>>((a, i) => ((a[i.severity] = (a[i.severity] ?? 0) + 1), a), {}),
         }
       : { state: "absent", records: 0, incomplete: 0, bySeverity: {} };
+  const pb = lenses.patient.blocks.find((b) => b.kind === "patient-interactions");
+  const patientInteractions: DrugValidation["patientInteractions"] =
+    pb && pb.kind === "patient-interactions"
+      ? { origin: pb.statement ? pb.statement.origin : "missing", names: pb.names.length }
+      : { origin: "missing", names: 0 };
   const viva = (drug.examLens?.mbbs?.viva ?? []).map(classifyViva);
   return {
     slug: drug.slug,
@@ -120,6 +127,7 @@ export function validateDrug(
       factsPerMode: Object.fromEntries(MODE_ORDER.map((m) => [m, modes[m].factsUsed])) as Record<ModeId, number>,
     },
     interactions,
+    patientInteractions,
     clinical: {
       factsReviewRequired: facts.used.filter((f) => f.status === "review-required").length,
       factsFlagged: facts.used.filter((f) => f.review === "flagged").length,

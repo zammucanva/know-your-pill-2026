@@ -5,6 +5,7 @@ import { AlertTriangle, ChevronRight, ChevronLeft, ClipboardCheck, ShieldAlert, 
 import { cn } from "@/lib/utils";
 import { useGuidedLearning } from "@/components/kyp/ui/guided-learning-toggle";
 import { MODE_SPECS, REVIEW_NOTICE } from "@/lib/kyp/modes/specs";
+import { PATIENT_INTERACTION_COPY as PIC, summarizeTicks } from "@/lib/kyp/modes/patient-interactions";
 import type { LensBlock, ModeId, ModeLens, ModeLensSet } from "@/lib/kyp/modes/types";
 import {
   CASE_STAGES,
@@ -91,10 +92,66 @@ function EffectList({ items }: { items: Extract<LensBlock, { kind: "adverse-effe
 }
 
 /* ---------------- Patient ---------------- */
+function PatientInteractionsPanel({ block }: { block: Extract<LensBlock, { kind: "patient-interactions" }> }) {
+  const [ticked, setTicked] = React.useState<Record<string, boolean>>({});
+  const names = block.names.map((n) => n.text);
+  const keys = block.names.map((n) => n.source);
+  const sum = summarizeTicks(names, ticked, keys);
+  return (
+    <div data-block="patient-interactions" data-origin={block.statement?.origin ?? "missing"} className={card}>
+      <h3 className="font-semibold">{PIC.heading}</h3>
+      {block.statement ? (
+        <>
+          <p className="mt-2 text-sm leading-relaxed">{block.statement.text.text}</p>
+          <p data-origin-label className="mt-2 text-xs text-muted-foreground">
+            {PIC.originLabel[block.statement.origin]}
+          </p>
+        </>
+      ) : (
+        <p data-statement-missing className="mt-2 text-sm">
+          {PIC.missingStatement}
+        </p>
+      )}
+      <p data-limitation className="mt-3 rounded-md bg-muted/50 p-2 text-sm">
+        {PIC.limitation}
+      </p>
+      <h4 className="mt-5 text-sm font-semibold">{PIC.listHeading}</h4>
+      {names.length === 0 ? (
+        <p data-names-missing className="mt-1 text-sm">
+          {PIC.noList}
+        </p>
+      ) : (
+        <>
+          <p className="mt-1 text-xs text-muted-foreground">{PIC.listIntro}</p>
+          <ul className="mt-2 space-y-1.5 text-sm">
+            {block.names.map((n) => (
+              <li key={n.source}>
+                <label className="flex min-h-9 cursor-pointer items-start gap-2">
+                  <input
+                    type="checkbox"
+                    checked={!!ticked[n.source]}
+                    onChange={() => setTicked((t) => ({ ...t, [n.source]: !t[n.source] }))}
+                    className="mt-1 h-4 w-4 shrink-0"
+                  />
+                  <span>{n.text}</span>
+                </label>
+              </li>
+            ))}
+          </ul>
+          <p role="status" data-ticked-summary className="mt-3 text-sm">
+            {sum.count === 0 ? "Nothing ticked yet." : `You ticked ${sum.count}. Show this list to your pharmacist.`}
+          </p>
+          <p className="mt-1 text-xs text-muted-foreground">{PIC.listCaveat}</p>
+        </>
+      )}
+    </div>
+  );
+}
+
 function PatientBlocks({ blocks }: { blocks: LensBlock[] }) {
   const [ticked, setTicked] = React.useState<Record<string, boolean>>({});
   // Urgent help leads: patients should see what to act on before the explanation.
-  const order = ["urgent-help", "plain-summary", "key-points", "tell-your-doctor"];
+  const order = ["urgent-help", "plain-summary", "key-points", "patient-interactions", "tell-your-doctor"];
   const sorted = [...blocks].sort((a, b) => order.indexOf(a.kind) - order.indexOf(b.kind));
   return (
     <div className="space-y-4">
@@ -132,6 +189,7 @@ function PatientBlocks({ blocks }: { blocks: LensBlock[] }) {
               </ul>
             </div>
           );
+        if (b.kind === "patient-interactions") return <PatientInteractionsPanel key={b.kind} block={b} />;
         if (b.kind === "tell-your-doctor")
           return (
             <div key={b.kind} data-block="tell-your-doctor" className={card}>

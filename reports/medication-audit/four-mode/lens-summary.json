@@ -8,7 +8,7 @@
       "mechanicalOk": 12,
       "structuralDefects": 0,
       "modesWithoutDistinctiveInteraction": {
-        "patient": 133,
+        "patient": 0,
         "mbbs": 0,
         "neetPg": 0,
         "resident": 0
@@ -32,9 +32,9 @@
       "note": "Approval exists only through a recorded review (REVIEW_RECORDS). Everything else is unreviewed.",
       "factsApproved": 0,
       "factsFlagged": 1,
-      "factsReviewRequired": 883,
+      "factsReviewRequired": 1015,
       "factsUnverified": 0,
-      "medicationsWithReviewRequiredFacts": 114
+      "medicationsWithReviewRequiredFacts": 145
     }
   },
   "interactions": {
@@ -54,6 +54,16 @@
       "min": 1,
       "max": 15
     }
+  },
+  "patientInteractions": {
+    "note": "Patient wording is existing registry/Patient Guide text shown verbatim. 'template' = the shared lead-in plus a fixed general alcohol sentence (review-required). Nothing is paraphrased or inferred.",
+    "origins": {
+      "authored-guide": 12,
+      "template": 131,
+      "authored-registry": 2
+    },
+    "medicationsWithNames": 145,
+    "medicationsWithoutPatientWording": 0
   },
   "structuralDefectList": []
 }

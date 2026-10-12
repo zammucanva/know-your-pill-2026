@@ -46,6 +46,13 @@ export interface UrgentHelpBlock extends BlockBase {
   signs: Sourced[];
   action: Sourced;
 }
+export interface PatientInteractionsBlock extends BlockBase {
+  kind: "patient-interactions";
+  /** The existing patient-facing wording, verbatim, with its origin. Null when the registry has none. */
+  statement: { text: Sourced; origin: "authored-guide" | "authored-registry" | "template" } | null;
+  /** Canonical interaction names (clinical terms), verbatim. Empty when none are recorded. */
+  names: Sourced[];
+}
 export interface TellDoctorBlock extends BlockBase {
   kind: "tell-your-doctor";
   items: Sourced[];
@@ -197,6 +204,7 @@ export type LensBlock =
   | KeyPointsBlock
   | UrgentHelpBlock
   | TellDoctorBlock
+  | PatientInteractionsBlock
   | MechanismWalkthroughBlock
   | PharmacologyCardBlock
   | IndicationsBlock

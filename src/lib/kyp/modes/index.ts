@@ -27,3 +27,4 @@ export { findContradictions, hoursRanges } from "./consistency";
 export type { Contradiction } from "./consistency";
 export { validateDrug } from "./registry-report";
 export type { DrugValidation } from "./registry-report";
+export * from "./patient-interactions";

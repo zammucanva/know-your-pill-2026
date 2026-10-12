@@ -1,6 +1,7 @@
 import type { Drug } from "@/lib/kyp/data";
 import type { PatientGuide } from "@/lib/kyp/patient/types";
 import { BLOCK_CONTRACTS, CATEGORY_MODES, categoryOfSource, type FactCategory } from "./contracts";
+import { isTemplateText } from "./patient-interactions";
 import { MODE_ORDER } from "./specs";
 import type { BlockKind, LensBlock, ModeId, ModeLensSet, Sourced } from "./types";
 import { readPath, sourcedIn } from "./validate";
@@ -101,6 +102,8 @@ function judge(slug: string, path: string, value: string | null, prov: FactProve
   if (flag) reasons.push(flag.reason);
   const sens = value ? sensitiveReason(value) : null;
   if (sens) reasons.push(sens);
+  if (value && path === "patientMode.interactions" && isTemplateText(value))
+    reasons.push("standard template wording shared by many medicines, including a general alcohol sentence that is not specific to this medicine");
   const record = REVIEW_RECORDS.some((r) => r.slug === slug && (r.path === path || r.path === "*"));
   const review: FactReview = record ? "approved" : flag ? "flagged" : "unreviewed";
   let status: FactStatus = "present";

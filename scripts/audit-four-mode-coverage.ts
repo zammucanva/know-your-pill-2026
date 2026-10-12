@@ -229,6 +229,12 @@ const lensSummary = {
       max: Math.max(...validations.map((v) => v.interactions.records)),
     },
   },
+  patientInteractions: {
+    note: "Patient wording is existing registry/Patient Guide text shown verbatim. 'template' = the shared lead-in plus a fixed general alcohol sentence (review-required). Nothing is paraphrased or inferred.",
+    origins: validations.reduce<Record<string, number>>((m, v) => ((m[v.patientInteractions.origin] = (m[v.patientInteractions.origin] ?? 0) + 1), m), {}),
+    medicationsWithNames: validations.filter((v) => v.patientInteractions.names > 0).length,
+    medicationsWithoutPatientWording: validations.filter((v) => v.patientInteractions.origin === "missing").length,
+  },
   structuralDefectList: structural,
 };
 writeFileSync(`${OUT}/lens-summary.json`, JSON.stringify(lensSummary, null, 2) + "\n");

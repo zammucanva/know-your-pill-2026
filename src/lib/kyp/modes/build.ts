@@ -1,6 +1,7 @@
 import type { Drug } from "@/lib/kyp/data";
 import type { PatientGuide } from "@/lib/kyp/patient/types";
 import type { StahlMcq } from "@/lib/kyp/stahl-mcqs";
+import { originOf } from "./patient-interactions";
 import { MODE_ORDER, MODE_SPECS } from "./specs";
 import type {
   AdverseEffect,
@@ -131,6 +132,22 @@ const BUILDERS: Record<BlockKind, Builder> = {
       signs: list(u.signs, "patientGuide.urgentHelp.signs"),
       action: S(u.action, "patientGuide.urgentHelp.action"),
     };
+  },
+  "patient-interactions": ({ drug, patientGuide }) => {
+    const guideText = patientGuide?.interactions;
+    const modeText = (drug.patientMode as { interactions?: unknown } | undefined)?.interactions;
+    const statement = clean(guideText)
+      ? { text: S(guideText, "patientGuide.interactions"), origin: originOf("patientGuide.interactions", guideText) }
+      : clean(modeText)
+        ? { text: S(modeText, "patientMode.interactions"), origin: originOf("patientMode.interactions", modeText) }
+        : null;
+    const rawList = drug.interactions as unknown;
+    const names = Array.isArray(rawList)
+      ? (rawList as Drug["interactions"]).flatMap((x, i) => (clean(x?.drug) ? [S(x.drug, `interactions[${i}].drug`)] : []))
+      : [];
+    if (!statement && !names.length)
+      return { unavailable: "No patient wording and no interaction names in the registry. This does not mean the medicine has no interactions." };
+    return { kind: "patient-interactions", review: REVIEW, statement, names };
   },
   "tell-your-doctor": ({ patientGuide }) => {
     const items = list(patientGuide?.tellYourDoctor, "patientGuide.tellYourDoctor");

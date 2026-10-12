@@ -16,6 +16,7 @@ export type FactCategory =
   | "clinical-use"
   | "safety"
   | "interactions"
+  | "interaction-names"
   | "exam-mbbs"
   | "exam-neet"
   | "mcq"
@@ -31,6 +32,7 @@ export const CATEGORY_MODES: Record<FactCategory, readonly ModeId[]> = {
   "clinical-use": ["mbbs"],
   safety: ["mbbs", "resident"],
   interactions: ["mbbs", "resident"],
+  "interaction-names": ["patient", "mbbs", "resident"],
   "exam-mbbs": ["mbbs"],
   "exam-neet": ["neetPg"],
   mcq: ["neetPg"],
@@ -46,7 +48,9 @@ export function categoryOfSource(source: string): FactCategory {
   if (source === "patientExplanation" || source.startsWith("patientEducationPoints")) return "patient-summary";
   if (source.startsWith("mechanism.")) return "mechanism";
   if (source.startsWith("indications[")) return "clinical-use";
+  if (/^interactions\[\d+\]\.drug$/.test(source)) return "interaction-names";
   if (source.startsWith("interactions[")) return "interactions";
+  if (source.startsWith("patientMode.")) return "patient-summary";
   if (/^(contraindications|seriousSideEffects|commonSideEffects|monitoring|blackBoxWarnings)\[/.test(source)) return "safety";
   if (source.startsWith("examLens.mbbs")) return "exam-mbbs";
   if (source.startsWith("examLens.neetPg")) return "exam-neet";
@@ -69,7 +73,8 @@ export type InteractionKind =
   | "staged-reveal" // case unfolds stage by stage
   | "branching" // learner follows decision branches
   | "audit-checklist" // learner ticks each pre-prescribing check as done
-  | "filter"; // learner narrows a list by severity or search
+  | "filter" // learner narrows a list by severity or search
+  | "personal-list"; // learner marks which listed items apply to them
 
 export const INTERACTIVE_KINDS: ReadonlySet<InteractionKind> = new Set([
   "checklist",
@@ -80,6 +85,7 @@ export const INTERACTIVE_KINDS: ReadonlySet<InteractionKind> = new Set([
   "branching",
   "audit-checklist",
   "filter",
+  "personal-list",
 ]);
 
 /** A canonical slot a block needs. `anyOf` lists acceptable paths; the first is the expected one. */
@@ -126,6 +132,16 @@ export const BLOCK_CONTRACTS: Record<BlockKind, BlockContract> = {
       { label: "urgent-help intro", anyOf: [`${g}urgentHelp.intro`] },
       { label: "urgent-help signs", anyOf: [`${g}urgentHelp.signs[0]`] },
       { label: "urgent-help action", anyOf: [`${g}urgentHelp.action`] },
+    ],
+  },
+  "patient-interactions": {
+    kind: "patient-interactions",
+    mode: "patient",
+    interaction: "personal-list",
+    pedagogy: "Existing patient wording about other medicines, labelled by origin, plus the guide's own interaction names to tick and show a pharmacist. It never checks the patient's medicines.",
+    slots: [
+      { label: "patient interaction wording", anyOf: ["patientGuide.interactions", "patientMode.interactions"] },
+      { label: "interaction names", anyOf: ["interactions[0].drug"] },
     ],
   },
   "tell-your-doctor": {

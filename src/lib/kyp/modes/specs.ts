@@ -12,7 +12,7 @@ export const MODE_SPECS: Record<ModeId, ModeSpec> = {
     audience: "People taking, or considering, this medicine and their carers.",
     objective:
       "Understand what the medicine is for, how to take it safely, and when to seek help.",
-    blocks: ["plain-summary", "key-points", "urgent-help", "tell-your-doctor"],
+    blocks: ["plain-summary", "key-points", "urgent-help", "patient-interactions", "tell-your-doctor"],
     interaction: "Read and act: urgent-help signs come first, with what to do.",
   },
   mbbs: {

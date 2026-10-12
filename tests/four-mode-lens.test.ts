@@ -9,6 +9,7 @@ import {
   MODE_ORDER,
   MODE_SPECS,
   REVIEW_NOTICE,
+  PATIENT_INTERACTION_COPY,
   buildModeLenses,
   getModeLenses,
   modeOfBlock,
@@ -122,7 +123,7 @@ describe("vertical slice: sertraline", () => {
 describe("rendered mode experiences", () => {
   test("each mode renders its own blocks and none of the other modes' blocks", () => {
     const expected: Record<ModeId, string[]> = {
-      patient: ["urgent-help", "plain-summary", "key-points", "tell-your-doctor"],
+      patient: ["urgent-help", "plain-summary", "key-points", "patient-interactions", "tell-your-doctor"],
       mbbs: ["mechanism-walkthrough", "pharmacology-card", "indications", "adverse-effects", "contraindications", "viva"],
       neetPg: ["high-yield-recall", "pyq-concepts", "mcq-drill"],
       resident: ["case-reasoner", "decision-path", "prescribing-checks", "monitoring-plan", "pitfalls"],
@@ -251,6 +252,7 @@ describe("content fidelity of rendered text", () => {
     "Tick the items you want to remember to mention.",
     "Check each item as you clear it. Absolute contraindications come first.",
     "Display format under review:",
+    "Nothing ticked yet.",
     "Filter by severity or search by drug name.",
     "Search by interacting drug",
     "No interaction records are listed for this medicine in this guide. An empty list does not mean it has no interactions.",
@@ -274,11 +276,12 @@ describe("content fidelity of rendered text", () => {
         MODE_SPECS[m].label + " view",
         REVIEW_NOTICE.heading,
         REVIEW_NOTICE.body,
+        ...Object.values(PATIENT_INTERACTION_COPY).flatMap((v) => (typeof v === "string" ? [v] : Object.values(v))),
         ...UI_COPY,
       ];
       const html = render(m, "sertraline");
       for (const raw of html.split(/<[^>]+>/)) {
-        const t = decode(raw).trim().replace(/^Showing \d+ of \d+ interactions$/, "Filter by severity or search by drug name.").replace(/^(Target|Case|Avoid|Net effect): /, "").replace(/^\d+\. /, "");
+        const t = decode(raw).trim().replace(/^Showing \d+ of \d+ interactions$/, "Filter by severity or search by drug name.").replace(/^You ticked \d+\. Show this list to your pharmacist\.$/, "Nothing ticked yet.").replace(/^(Target|Case|Avoid|Net effect): /, "").replace(/^\d+\. /, "");
         if (t.length < 25) continue;
         const ok = canon.some((c) => c.includes(t)) || declared.some((d) => d.includes(t));
         if (!ok) unknown.push(`${m}: ${t.slice(0, 80)}`);
