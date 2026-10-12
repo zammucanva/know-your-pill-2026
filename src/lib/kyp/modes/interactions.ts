@@ -53,3 +53,60 @@ export function filterInteractions<T extends { severity: string; drug: { text: s
   const q = query.trim().toLowerCase();
   return items.filter((i) => (severities.size === 0 || severities.has(i.severity)) && (!q || i.drug.text.toLowerCase().includes(q)));
 }
+
+/* ------------------------------------------------------------------
+   NEET PG question session: one question at a time, answers lock on
+   submit, a results summary, and a retry of the questions missed.
+   Pure state transitions; the questions and keys are authored elsewhere
+   and are only ever READ here.
+------------------------------------------------------------------- */
+export interface RecallQuestionLite {
+  options: readonly string[];
+  correctIndex: number;
+}
+export interface RecallState {
+  /** Indices (into the question list) in the order they are asked this round. */
+  queue: number[];
+  /** Position within the queue. */
+  pos: number;
+  /** question index -> chosen option (set on selection, final once submitted). */
+  chosen: Record<number, number>;
+  submitted: Record<number, boolean>;
+  phase: "question" | "summary";
+}
+
+export function recallStart(total: number, only?: readonly number[]): RecallState {
+  const queue = only ? [...only] : Array.from({ length: total }, (_, i) => i);
+  return { queue, pos: 0, chosen: {}, submitted: {}, phase: queue.length ? "question" : "summary" };
+}
+export const recallCurrent = (s: RecallState): number | null => (s.phase === "question" ? (s.queue[s.pos] ?? null) : null);
+
+export function recallSelect(s: RecallState, option: number, questions: readonly RecallQuestionLite[]): RecallState {
+  const q = recallCurrent(s);
+  if (q === null || s.submitted[q]) return s; // locked once submitted
+  if (!Number.isInteger(option) || option < 0 || option >= questions[q].options.length) return s;
+  return { ...s, chosen: { ...s.chosen, [q]: option } };
+}
+export function recallSubmit(s: RecallState): RecallState {
+  const q = recallCurrent(s);
+  if (q === null || s.submitted[q] || s.chosen[q] === undefined) return s; // an answer is required to submit
+  return { ...s, submitted: { ...s.submitted, [q]: true } };
+}
+export function recallNext(s: RecallState): RecallState {
+  const q = recallCurrent(s);
+  if (q === null || !s.submitted[q]) return s; // cannot skip past an unsubmitted question
+  return s.pos + 1 >= s.queue.length ? { ...s, phase: "summary" } : { ...s, pos: s.pos + 1 };
+}
+export function recallScore(s: RecallState, questions: readonly RecallQuestionLite[]) {
+  const asked = Object.keys(s.submitted).map(Number).filter((i) => s.submitted[i]);
+  const correct = asked.filter((i) => s.chosen[i] === questions[i].correctIndex);
+  const missed = s.queue.filter((i) => s.submitted[i] && s.chosen[i] !== questions[i].correctIndex);
+  return { asked: asked.length, correct: correct.length, missed };
+}
+export function recallRetryMissed(s: RecallState, questions: readonly RecallQuestionLite[]): RecallState {
+  const { missed } = recallScore(s, questions);
+  return missed.length ? recallStart(questions.length, missed) : s;
+}
+export function recallProgress(s: RecallState) {
+  return { position: Math.min(s.pos + 1, s.queue.length), total: s.queue.length, answered: s.queue.filter((i) => s.submitted[i]).length };
+}

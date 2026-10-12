@@ -154,7 +154,7 @@ describe("Resident interactions: mode eligibility", () => {
 
   test("a Resident lens with interactions keeps its other distinctive interactions and gains a filter", () => {
     const l = lensesOf(base);
-    expect(l.resident.blocks.map((b) => b.kind)).toEqual(["case-reasoner", "decision-path", "prescribing-checks", "interactions", "monitoring-plan", "pitfalls"]);
+    expect(l.resident.blocks.map((b) => b.kind)).toEqual(["clinical-summary", "case-reasoner", "decision-path", "prescribing-checks", "interactions", "monitoring-plan", "pitfalls"]);
     expect(BLOCK_CONTRACTS.interactions.interaction).toBe("filter");
   });
 });

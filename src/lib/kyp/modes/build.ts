@@ -7,6 +7,8 @@ import type {
   AdverseEffect,
   BlockKind,
   ContraindicationItem,
+  DataState,
+  McqQuestion,
   InteractionRecord,
   LensBlock,
   ModeId,
@@ -31,6 +33,9 @@ export interface LensInputs {
   /** The Stahl MCQs for this drug (read-only, authored elsewhere). */
   mcqs?: readonly StahlMcq[];
 }
+
+/** A list when the registry holds one, else empty: malformed or absent data never throws. */
+const asList = <T,>(v: unknown): T[] => (Array.isArray(v) ? (v as T[]) : []);
 
 const clean = (s: unknown): s is string => typeof s === "string" && s.trim().length > 0;
 const S = (text: string, source: string): Sourced => ({ text, source });
@@ -96,7 +101,7 @@ export function splitViva(full: string): { question: string; answer: string | nu
 }
 
 function contraindicationItems(drug: Drug): ContraindicationItem[] {
-  return (drug.contraindications ?? []).flatMap((c, i) =>
+  return asList<Drug["contraindications"][number]>(drug.contraindications).flatMap((c, i) =>
     clean(c.name) && clean(c.rationale)
       ? [{ name: S(c.name, `contraindications[${i}].name`), severity: c.severity, rationale: S(c.rationale, `contraindications[${i}].rationale`) }]
       : []
@@ -203,7 +208,7 @@ const BUILDERS: Record<BlockKind, Builder> = {
       : { unavailable: "No MBBS viva items in the registry." };
   },
   indications: ({ drug }) => {
-    const items = (drug.indications ?? []).flatMap((x, i) =>
+    const items = asList<Drug["indications"][number]>(drug.indications).flatMap((x, i) =>
       clean(x.name) && clean(x.description)
         ? [
             {
@@ -217,11 +222,11 @@ const BUILDERS: Record<BlockKind, Builder> = {
     );
     return items.length
       ? { kind: "indications", review: REVIEW, items }
-      : { unavailable: "No indications in the registry." };
+      : { unavailable: "Indications are not recorded in the registry for this medicine." };
   },
   "adverse-effects": ({ drug }) => {
     const conv = (arr: Drug["seriousSideEffects"], base: string): AdverseEffect[] =>
-      (arr ?? []).flatMap((x, i) =>
+      asList<Drug["seriousSideEffects"][number]>(arr).flatMap((x, i) =>
         clean(x.name) && clean(x.description)
           ? [
               {
@@ -238,13 +243,13 @@ const BUILDERS: Record<BlockKind, Builder> = {
     const common = conv(drug.commonSideEffects, "commonSideEffects");
     return serious.length
       ? { kind: "adverse-effects", review: REVIEW, serious, common }
-      : { unavailable: "No serious adverse effects in the registry." };
+      : { unavailable: "Serious adverse effects are not recorded in the registry for this medicine. This is not a finding that none exist." };
   },
   contraindications: ({ drug }) => {
     const items = contraindicationItems(drug);
     return items.length
       ? { kind: "contraindications", review: REVIEW, items }
-      : { unavailable: "No contraindications in the registry." };
+      : { unavailable: "Contraindications are not recorded in the registry for this medicine. This is not a finding that none exist." };
   },
   "prescribing-checks": ({ drug }) => {
     const items = contraindicationItems(drug);
@@ -252,7 +257,7 @@ const BUILDERS: Record<BlockKind, Builder> = {
     const ordered = [...items].sort((a, b) => Number(b.severity === "absolute") - Number(a.severity === "absolute"));
     return ordered.length
       ? { kind: "prescribing-checks", review: REVIEW, items: ordered }
-      : { unavailable: "No contraindications in the registry." };
+      : { unavailable: "Contraindications are not recorded in the registry for this medicine. This is not a finding that none exist." };
   },
   interactions: ({ drug }) => {
     const raw = drug.interactions as unknown;
@@ -273,7 +278,7 @@ const BUILDERS: Record<BlockKind, Builder> = {
     return { kind: "interactions", review: REVIEW, state: raw.length === 0 ? "empty" : "listed", items, incomplete };
   },
   "monitoring-plan": ({ drug }) => {
-    const monitoring = (drug.monitoring ?? []).flatMap((m, i) =>
+    const monitoring = asList<Drug["monitoring"][number]>(drug.monitoring).flatMap((m, i) =>
       clean(m.parameter) && clean(m.frequency) && clean(m.rationale)
         ? [
             {
@@ -284,14 +289,14 @@ const BUILDERS: Record<BlockKind, Builder> = {
           ]
         : []
     );
-    const boxedWarnings = (drug.blackBoxWarnings ?? []).flatMap((w, i) =>
+    const boxedWarnings = asList<Drug["blackBoxWarnings"][number]>(drug.blackBoxWarnings).flatMap((w, i) =>
       clean(w.title) && clean(w.text)
         ? [{ title: S(w.title, `blackBoxWarnings[${i}].title`), text: S(w.text, `blackBoxWarnings[${i}].text`) }]
         : []
     );
     return monitoring.length
       ? { kind: "monitoring-plan", review: REVIEW, monitoring, boxedWarnings }
-      : { unavailable: "No monitoring parameters in the registry." };
+      : { unavailable: "Monitoring parameters are not recorded in the registry for this medicine. This is not a finding that none are needed." };
   },
   "high-yield-recall": ({ drug }) => {
     const items = list(drug.examLens?.neetPg?.highYield, "examLens.neetPg.highYield");
@@ -305,18 +310,134 @@ const BUILDERS: Record<BlockKind, Builder> = {
       ? { kind: "pyq-concepts", review: REVIEW, items }
       : { unavailable: "No previous-year-question concepts in the registry." };
   },
-  "mcq-drill": ({ mcqs }) => {
-    const questions = (mcqs ?? []).map((q) => ({
-      id: q.id,
-      source: `stahl:${q.id}`,
-      stem: q.question,
-      options: [...q.options],
-      correctIndex: q.correctIndex,
-      explanation: q.explanation,
-    }));
+  "mcq-drill": ({ drug, mcqs }) => {
+    const questions: McqQuestion[] = [];
+    let skipped = 0;
+    const seen = new Set<string>();
+    const add = (q: McqQuestion) => {
+      const key = `${q.stem}|${q.options.join("|")}`;
+      if (seen.has(key)) return;
+      seen.add(key);
+      questions.push(q);
+    };
+    asList<NonNullable<Drug["microQuizzes"]>[number]>(drug.microQuizzes).forEach((q, i) => {
+      const ok =
+        clean(q.question) &&
+        Array.isArray(q.options) &&
+        q.options.length >= 2 &&
+        q.options.every(clean) &&
+        Number.isInteger(q.correctIndex) &&
+        q.correctIndex >= 0 &&
+        q.correctIndex < q.options.length;
+      if (!ok) {
+        skipped++;
+        return;
+      }
+      add({
+        id: `${drug.slug}:quiz:${q.id}`,
+        source: `microQuizzes[${i}].question`,
+        origin: "authored-quiz",
+        stem: q.question,
+        options: [...q.options],
+        correctIndex: q.correctIndex,
+        explanation: clean(q.explanation) ? q.explanation : null,
+      });
+    });
+    for (const q of mcqs ?? [])
+      add({
+        id: q.id,
+        source: `stahl:${q.id}`,
+        origin: "stahl-bank",
+        stem: q.question,
+        options: [...q.options],
+        correctIndex: q.correctIndex,
+        explanation: clean(q.explanation) ? q.explanation : null,
+      });
     return questions.length
-      ? { kind: "mcq-drill", review: REVIEW, questions }
+      ? { kind: "mcq-drill", review: REVIEW, questions, skipped }
       : { unavailable: "No authored MCQs for this medicine." };
+  },
+  "exam-prep": ({ drug }) => {
+    const practical = list(drug.examLens?.mbbs?.practical, "examLens.mbbs.practical");
+    const longAnswer = list(drug.examLens?.mbbs?.longAnswer, "examLens.mbbs.longAnswer");
+    return practical.length || longAnswer.length
+      ? { kind: "exam-prep", review: REVIEW, practical, longAnswer }
+      : { unavailable: "No MBBS practical tasks or long-answer prompts in the registry." };
+  },
+  "patient-how-to-take": ({ patientGuide }) => {
+    const g = patientGuide;
+    const one = (v: unknown, path: string) => (clean(v) ? S(v, path) : null);
+    const b = {
+      usuallyTaken: one(g?.usuallyTaken, "patientGuide.usuallyTaken"),
+      missedDose: one(g?.missedDose, "patientGuide.missedDose"),
+      stopping: one(g?.stopping, "patientGuide.stopping"),
+      monitoring: one(g?.monitoring, "patientGuide.monitoring"),
+      timeline: one(g?.timelineShort, "patientGuide.timelineShort"),
+    };
+    return Object.values(b).some(Boolean)
+      ? { kind: "patient-how-to-take", review: REVIEW, ...b }
+      : { unavailable: "No Patient Guide how-to-take sections for this medicine (guide-only content; the registry has no equivalent)." };
+  },
+  "patient-side-effects": ({ drug, patientGuide }) => {
+    const c = patientGuide?.commonSideEffects;
+    const imp = patientGuide?.importantSideEffects;
+    if (patientGuide && (clean(c?.intro) || (c?.list?.length ?? 0) > 0 || (imp?.items?.length ?? 0) > 0)) {
+      const important = asList<NonNullable<typeof imp>["items"][number]>(imp?.items).flatMap((x, i) =>
+        clean(x.name) && clean(x.whatItMeans) && clean(x.whatToDo)
+          ? [
+              {
+                name: S(x.name, `patientGuide.importantSideEffects.items[${i}].name`),
+                whatItMeans: S(x.whatItMeans, `patientGuide.importantSideEffects.items[${i}].whatItMeans`),
+                whatToDo: S(x.whatToDo, `patientGuide.importantSideEffects.items[${i}].whatToDo`),
+              },
+            ]
+          : []
+      );
+      return {
+        kind: "patient-side-effects",
+        review: REVIEW,
+        source: "guide",
+        intro: clean(c?.intro) ? S(c!.intro, "patientGuide.commonSideEffects.intro") : null,
+        common: list(c?.list, "patientGuide.commonSideEffects.list"),
+        note: clean(c?.note) ? S(c!.note as string, "patientGuide.commonSideEffects.note") : null,
+        importantIntro: clean(imp?.intro) ? S(imp!.intro, "patientGuide.importantSideEffects.intro") : null,
+        important,
+        registryText: null,
+      };
+    }
+    const text = (drug.patientMode as { sideEffects?: unknown } | undefined)?.sideEffects;
+    if (clean(text))
+      return {
+        kind: "patient-side-effects",
+        review: REVIEW,
+        source: "registry",
+        intro: null,
+        common: [],
+        note: null,
+        importantIntro: null,
+        important: [],
+        registryText: S(text, "patientMode.sideEffects"),
+      };
+    return { unavailable: "No patient side-effect wording in the Patient Guide or the registry." };
+  },
+  "clinical-summary": ({ drug }) => {
+    const state = (v: unknown): { state: DataState; count: number } =>
+      Array.isArray(v) ? { state: v.length ? "listed" : "empty", count: v.length } : { state: "absent", count: 0 };
+    const ci = state(drug.contraindications);
+    const ix = state(drug.interactions);
+    const mo = state(drug.monitoring);
+    const bb = state(drug.blackBoxWarnings);
+    return {
+      kind: "clinical-summary",
+      review: REVIEW,
+      contraindications: { ...ci, absolute: asList<Drug["contraindications"][number]>(drug.contraindications).filter((c) => c?.severity === "absolute").length },
+      interactions: { ...ix, contraindicated: asList<Drug["interactions"][number]>(drug.interactions).filter((x) => x?.severity === "contraindicated").length },
+      monitoring: mo,
+      boxedWarnings: bb,
+      decisionPath: { state: drug.clinicalDecisionPath?.nodes?.length ? "present" : "absent" },
+      pitfalls: { state: asList(drug.commonMistakes).length + asList(drug.whenNotToUse).length > 0 ? "present" : "absent" },
+      derivedFrom: ["contraindications", "interactions", "monitoring", "blackBoxWarnings", "clinicalDecisionPath", "commonMistakes", "whenNotToUse"],
+    };
   },
   "case-reasoner": ({ drug }) => {
     const c = drug.clinicalCases?.[0];
@@ -350,7 +471,7 @@ const BUILDERS: Record<BlockKind, Builder> = {
       nodes: dp.nodes.map((n, i) => ({
         id: n.id,
         question: S(n.question, `clinicalDecisionPath.nodes[${i}].question`),
-        branches: (n.branches ?? []).map((b) => ({ label: b.label, next: b.next })),
+        branches: asList<{ label: string; next: string }>(n.branches).map((b) => ({ label: b.label, next: b.next })),
         recommendation: clean(n.recommendation)
           ? S(n.recommendation, `clinicalDecisionPath.nodes[${i}].recommendation`)
           : null,
@@ -359,7 +480,7 @@ const BUILDERS: Record<BlockKind, Builder> = {
     };
   },
   pitfalls: ({ drug }) => {
-    const mistakes = (drug.commonMistakes ?? []).flatMap((c, i) =>
+    const mistakes = asList<NonNullable<Drug["commonMistakes"]>[number]>(drug.commonMistakes).flatMap((c, i) =>
       clean(c.mistake) && clean(c.why) && clean(c.correction)
         ? [
             {
@@ -370,7 +491,7 @@ const BUILDERS: Record<BlockKind, Builder> = {
           ]
         : []
     );
-    const whenNotToUse = (drug.whenNotToUse ?? []).flatMap((w, i) =>
+    const whenNotToUse = asList<NonNullable<Drug["whenNotToUse"]>[number]>(drug.whenNotToUse).flatMap((w, i) =>
       clean(w.scenario) && clean(w.reason)
         ? [
             {
@@ -383,7 +504,7 @@ const BUILDERS: Record<BlockKind, Builder> = {
     );
     return mistakes.length || whenNotToUse.length
       ? { kind: "pitfalls", review: REVIEW, mistakes, whenNotToUse }
-      : { unavailable: "No common mistakes or when-not-to-use entries in the registry." };
+      : { unavailable: "Common errors and when-not-to-use entries are not recorded in the registry for this medicine. This is not a finding that none apply." };
   },
 };
 

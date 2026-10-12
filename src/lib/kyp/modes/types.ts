@@ -53,6 +53,29 @@ export interface PatientInteractionsBlock extends BlockBase {
   /** Canonical interaction names (clinical terms), verbatim. Empty when none are recorded. */
   names: Sourced[];
 }
+/** Patient Guide how-to-take sections, verbatim. Guide-only: there is no registry fallback. */
+export interface PatientHowToTakeBlock extends BlockBase {
+  kind: "patient-how-to-take";
+  usuallyTaken: Sourced | null;
+  missedDose: Sourced | null;
+  stopping: Sourced | null;
+  monitoring: Sourced | null;
+  timeline: Sourced | null;
+}
+/**
+ * Patient side-effect learning. `guide`: the Patient Guide structured text (authored, 12 medicines).
+ * `registry`: the registry single patient-wording string (all medicines), verbatim.
+ */
+export interface PatientSideEffectsBlock extends BlockBase {
+  kind: "patient-side-effects";
+  source: "guide" | "registry";
+  intro: Sourced | null;
+  common: Sourced[];
+  note: Sourced | null;
+  importantIntro: Sourced | null;
+  important: { name: Sourced; whatItMeans: Sourced; whatToDo: Sourced }[];
+  registryText: Sourced | null;
+}
 export interface TellDoctorBlock extends BlockBase {
   kind: "tell-your-doctor";
   items: Sourced[];
@@ -87,6 +110,12 @@ export interface VivaBlock extends BlockBase {
   items: VivaItem[];
 }
 
+/** MBBS exam preparation: practical tasks and long-answer prompts, verbatim. No answer keys exist for these. */
+export interface ExamPrepBlock extends BlockBase {
+  kind: "exam-prep";
+  practical: Sourced[];
+  longAnswer: Sourced[];
+}
 export interface IndicationsBlock extends BlockBase {
   kind: "indications";
   items: {
@@ -127,16 +156,24 @@ export interface PyqConceptsBlock extends BlockBase {
   kind: "pyq-concepts";
   items: Sourced[];
 }
+/** Where an authored question comes from. Never generated here. */
+export type McqOrigin = "authored-quiz" | "stahl-bank";
+export interface McqQuestion {
+  id: string;
+  /** Path to the stem for a quiz (`microQuizzes[i].question`), or `stahl:<id>`. */
+  source: string;
+  origin: McqOrigin;
+  stem: string;
+  options: string[];
+  correctIndex: number;
+  /** The authored rationale, or null when none is recorded (never invented). */
+  explanation: string | null;
+}
 export interface McqDrillBlock extends BlockBase {
   kind: "mcq-drill";
-  questions: {
-    id: string;
-    source: string;
-    stem: string;
-    options: string[];
-    correctIndex: number;
-    explanation: string;
-  }[];
+  questions: McqQuestion[];
+  /** Authored questions skipped because they were malformed (reported, never repaired). */
+  skipped: number;
 }
 
 /* ---------- Resident ---------- */
@@ -165,6 +202,19 @@ export interface InteractionsBlock extends BlockBase {
   items: InteractionRecord[];
   /** Canonical records skipped because a required field was blank (reported, not repaired). */
   incomplete: number;
+}
+/** What the registry holds for each clinical-reasoning input. States are explicit; counts are derived, never inferred. */
+export type DataState = "listed" | "empty" | "absent";
+export interface ClinicalSummaryBlock extends BlockBase {
+  kind: "clinical-summary";
+  contraindications: { state: DataState; count: number; absolute: number };
+  interactions: { state: DataState; count: number; contraindicated: number };
+  monitoring: { state: DataState; count: number };
+  boxedWarnings: { state: DataState; count: number };
+  decisionPath: { state: "present" | "absent" };
+  pitfalls: { state: "present" | "absent" };
+  /** Canonical paths the counts were derived from. */
+  derivedFrom: string[];
 }
 export interface MonitoringPlanBlock extends BlockBase {
   kind: "monitoring-plan";
@@ -216,6 +266,10 @@ export type LensBlock =
   | VivaBlock
   | HighYieldRecallBlock
   | PyqConceptsBlock
+  | ExamPrepBlock
+  | PatientHowToTakeBlock
+  | PatientSideEffectsBlock
+  | ClinicalSummaryBlock
   | McqDrillBlock
   | CaseReasonerBlock
   | DecisionPathBlock

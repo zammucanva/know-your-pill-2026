@@ -161,7 +161,7 @@ export function collectFacts(lenses: ModeLensSet, inputs: FactInputs): FactSet {
 
   // Contract slots the registry could not fill become explicit missing facts.
   const missing: Fact[] = [];
-  const mcqCount = inputs.mcqIds?.length ?? 0;
+  const mcqCount = (inputs.mcqIds?.length ?? 0) + (drug.microQuizzes?.length ?? 0);
   for (const kind of Object.keys(BLOCK_CONTRACTS) as BlockKind[]) {
     const c = BLOCK_CONTRACTS[kind];
     let optionalFilled = 0;

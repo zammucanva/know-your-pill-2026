@@ -29,6 +29,7 @@ import {
   nextCaseStage,
 } from "@/lib/kyp/modes/interactions";
 import { ModeLensView } from "@/components/kyp/sections/drug/mode-lens";
+import { MODE_TASKS, flowCopyStrings } from "@/lib/kyp/modes";
 
 const lensFor = (slug: string) => {
   const drug = drugs.find((d) => d.slug === slug)!;
@@ -107,15 +108,25 @@ describe("vertical slice: sertraline", () => {
     expect(splitViva("Third hydrazine IRREVERSIBLE MAOI (with phenelzine, and historically iproniazid)").answer).toBeNull();
   });
 
-  test("MCQ drill carries the authored questions unchanged", () => {
+  test("the question session carries every authored question unchanged (quizzes and Stahl bank)", () => {
     const drill = lenses.neetPg.blocks.find((b) => b.kind === "mcq-drill");
     if (!drill || drill.kind !== "mcq-drill") throw new Error("no drill");
-    const bank = stahlMcqs.filter((q) => q.drugSlug === "sertraline");
-    expect(drill.questions.length).toBe(bank.length);
-    drill.questions.forEach((q, i) => {
-      expect(q.options).toEqual(bank[i].options);
-      expect(q.correctIndex).toBe(bank[i].correctIndex);
-      expect(q.explanation).toBe(bank[i].explanation);
+    const quizzes = drill.questions.filter((q) => q.origin === "authored-quiz");
+    const bank = drill.questions.filter((q) => q.origin === "stahl-bank");
+    expect(quizzes.length).toBe(drug.microQuizzes!.length);
+    quizzes.forEach((q, i) => {
+      const c = drug.microQuizzes![i];
+      expect(q.stem).toBe(c.question);
+      expect(q.options).toEqual(c.options);
+      expect(q.correctIndex).toBe(c.correctIndex);
+      expect(q.explanation).toBe(c.explanation);
+    });
+    const authoredBank = stahlMcqs.filter((q) => q.drugSlug === "sertraline");
+    expect(bank.length).toBe(authoredBank.length);
+    bank.forEach((q, i) => {
+      expect(q.options).toEqual(authoredBank[i].options);
+      expect(q.correctIndex).toBe(authoredBank[i].correctIndex);
+      expect(q.explanation).toBe(authoredBank[i].explanation);
     });
   });
 });
@@ -138,9 +149,11 @@ describe("rendered mode experiences", () => {
     }
   });
 
-  test("patient view puts urgent help before the explanation", () => {
+  test("patient flow keeps urgent help one tap away from every step and first within its own step", () => {
     const html = render("patient", "sertraline");
-    expect(html.indexOf('data-block="urgent-help"')).toBeLessThan(html.indexOf('data-block="plain-summary"'));
+    expect(html).toContain('data-nav="urgent"');
+    const watch = html.split('data-step-panel="watch"')[1].split("data-step-panel=")[0];
+    expect(watch.indexOf('data-block="urgent-help"')).toBeLessThan(watch.indexOf('data-block="patient-side-effects"'));
   });
 
   test("the resident case starts with the data and withholds the diagnosis", () => {
@@ -277,13 +290,17 @@ describe("content fidelity of rendered text", () => {
         REVIEW_NOTICE.heading,
         REVIEW_NOTICE.body,
         ...Object.values(PATIENT_INTERACTION_COPY).flatMap((v) => (typeof v === "string" ? [v] : Object.values(v))),
+        ...flowCopyStrings(),
+        MODE_TASKS[m].title,
+        MODE_TASKS[m].summary,
         ...UI_COPY,
       ];
       const html = render(m, "sertraline");
       for (const raw of html.split(/<[^>]+>/)) {
         const t = decode(raw).trim().replace(/^Showing \d+ of \d+ interactions$/, "Filter by severity or search by drug name.").replace(/^You ticked \d+\. Show this list to your pharmacist\.$/, "Nothing ticked yet.").replace(/^(Target|Case|Avoid|Net effect): /, "").replace(/^\d+\. /, "");
         if (t.length < 25) continue;
-        const ok = canon.some((c) => c.includes(t)) || declared.some((d) => d.includes(t));
+        const norm = (x: string) => x.replace(/\d+/g, "#");
+        const ok = canon.some((c) => c.includes(t)) || declared.some((d) => d.includes(t) || norm(d).includes(norm(t)));
         if (!ok) unknown.push(`${m}: ${t.slice(0, 80)}`);
       }
     }

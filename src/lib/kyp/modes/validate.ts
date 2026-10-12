@@ -41,6 +41,8 @@ export interface LensIssue {
     | "kind-unaccounted"
     | "fact-not-allowed-in-mode"
     | "interaction-record-incomplete"
+    | "mcq-differs-from-source"
+    | "mcq-invalid"
     | "viva-needs-review"
     | "viva-split-lossy";
   detail: string;
@@ -53,7 +55,15 @@ export interface LensIssue {
  *  - one source path never shows two different texts across modes;
  *  - every schema block is either built or listed as unavailable.
  */
-export function validateLensSet(set: ModeLensSet, drug: Drug, patientGuide?: PatientGuide): LensIssue[] {
+export interface StahlLike {
+  id: string;
+  question: string;
+  options: readonly string[];
+  correctIndex: number;
+  explanation: string;
+}
+
+export function validateLensSet(set: ModeLensSet, drug: Drug, patientGuide?: PatientGuide, stahl?: readonly StahlLike[]): LensIssue[] {
   const issues: LensIssue[] = [];
   const bySource = new Map<string, string>();
   const root = { ...drug, patientGuide } as unknown;
@@ -73,6 +83,23 @@ export function validateLensSet(set: ModeLensSet, drug: Drug, patientGuide?: Pat
         issues.push({ code: "unreviewed-state-missing", severity: "error", detail: `${mode}:${b.kind}` });
       if (b.kind === "interactions" && b.incomplete > 0)
         issues.push({ code: "interaction-record-incomplete", severity: "error", detail: `${b.incomplete} record(s) with a blank field or unknown severity` });
+      if (b.kind === "mcq-drill") {
+        if (b.skipped > 0) issues.push({ code: "mcq-invalid", severity: "error", detail: `${b.skipped} authored question(s) malformed and skipped` });
+        for (const q of b.questions) {
+          if (!(q.correctIndex >= 0 && q.correctIndex < q.options.length) || q.options.length < 2)
+            issues.push({ code: "mcq-invalid", severity: "error", detail: q.id });
+          if (q.origin === "authored-quiz") {
+            const m = /^microQuizzes\[(\d+)\]\.question$/.exec(q.source);
+            const c = m ? drug.microQuizzes?.[Number(m[1])] : undefined;
+            if (!c || c.question !== q.stem || c.correctIndex !== q.correctIndex || c.options.join("\u0000") !== q.options.join("\u0000") || (c.explanation?.trim() ? c.explanation : null) !== q.explanation)
+              issues.push({ code: "mcq-differs-from-source", severity: "error", detail: q.id });
+          } else if (stahl) {
+            const c = stahl.find((x) => `stahl:${x.id}` === q.source);
+            if (!c || c.question !== q.stem || c.correctIndex !== q.correctIndex || c.options.join("\u0000") !== q.options.join("\u0000") || c.explanation !== q.explanation)
+              issues.push({ code: "mcq-differs-from-source", severity: "error", detail: q.id });
+          }
+        }
+      }
       if (b.kind === "viva") {
         for (const it of b.items) {
           if (it.type === "needs-review")

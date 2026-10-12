@@ -53,6 +53,13 @@ export interface DrugValidation {
   };
   /** Patient interaction wording: where it came from (never inferred), and how many names are listed. */
   patientInteractions: { origin: "authored-guide" | "authored-registry" | "template" | "missing"; names: number };
+  /** What each mode's learning flow actually has to work with, counted from the built blocks. */
+  flows: {
+    questions: { quiz: number; stahl: number; total: number; skipped: number; withoutRationale: number };
+    examPrep: { practical: number; longAnswer: number };
+    resident: { decisionPath: boolean; pitfalls: boolean; boxedWarnings: "listed" | "empty" | "absent" };
+    patient: { howToTake: boolean; sideEffects: "guide" | "registry" | "missing" };
+  };
   clinical: { factsReviewRequired: number; factsFlagged: number; factsApproved: number; factsUnverified: number };
   issues: LensIssue[];
 }
@@ -65,7 +72,7 @@ export function validateDrug(
   allNames: readonly string[]
 ): DrugValidation {
   const lenses = buildModeLenses({ drug, patientGuide, mcqs });
-  const issues = validateLensSet(lenses, drug, patientGuide);
+  const issues = validateLensSet(lenses, drug, patientGuide, mcqs ?? undefined);
   const facts = collectFacts(lenses, { drug, patientGuide, mcqIds });
   const contradictions = findContradictions(lenses, drug, allNames);
 
@@ -105,6 +112,32 @@ export function validateDrug(
     pb && pb.kind === "patient-interactions"
       ? { origin: pb.statement ? pb.statement.origin : "missing", names: pb.names.length }
       : { origin: "missing", names: 0 };
+  const mq = lenses.neetPg.blocks.find((b) => b.kind === "mcq-drill");
+  const ep = lenses.mbbs.blocks.find((b) => b.kind === "exam-prep");
+  const cs = lenses.resident.blocks.find((b) => b.kind === "clinical-summary");
+  const se = lenses.patient.blocks.find((b) => b.kind === "patient-side-effects");
+  const flows: DrugValidation["flows"] = {
+    questions:
+      mq && mq.kind === "mcq-drill"
+        ? {
+            quiz: mq.questions.filter((q) => q.origin === "authored-quiz").length,
+            stahl: mq.questions.filter((q) => q.origin === "stahl-bank").length,
+            total: mq.questions.length,
+            skipped: mq.skipped,
+            withoutRationale: mq.questions.filter((q) => q.explanation === null).length,
+          }
+        : { quiz: 0, stahl: 0, total: 0, skipped: 0, withoutRationale: 0 },
+    examPrep: ep && ep.kind === "exam-prep" ? { practical: ep.practical.length, longAnswer: ep.longAnswer.length } : { practical: 0, longAnswer: 0 },
+    resident: {
+      decisionPath: !!cs && cs.kind === "clinical-summary" && cs.decisionPath.state === "present",
+      pitfalls: !!cs && cs.kind === "clinical-summary" && cs.pitfalls.state === "present",
+      boxedWarnings: cs && cs.kind === "clinical-summary" ? cs.boxedWarnings.state : "absent",
+    },
+    patient: {
+      howToTake: lenses.patient.blocks.some((b) => b.kind === "patient-how-to-take"),
+      sideEffects: se && se.kind === "patient-side-effects" ? se.source : "missing",
+    },
+  };
   const viva = (drug.examLens?.mbbs?.viva ?? []).map(classifyViva);
   return {
     slug: drug.slug,
@@ -128,6 +161,7 @@ export function validateDrug(
     },
     interactions,
     patientInteractions,
+    flows,
     clinical: {
       factsReviewRequired: facts.used.filter((f) => f.status === "review-required").length,
       factsFlagged: facts.used.filter((f) => f.review === "flagged").length,

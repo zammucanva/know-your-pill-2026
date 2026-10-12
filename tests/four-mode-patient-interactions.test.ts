@@ -127,7 +127,8 @@ describe("Patient interactions: missing and empty data", () => {
     expect(h).toContain("data-statement-missing");
     expect(h).toContain(COPY.missingStatement);
     expect(h).toContain(COPY.limitation);
-    expect(h).not.toContain("data-origin-label");
+    const block = h.split('data-block="patient-interactions"')[1].split("data-block=")[0];
+    expect(block).not.toContain("data-origin-label");
     for (const n of b.names) expect(h).toContain(esc(n.text));
   });
 

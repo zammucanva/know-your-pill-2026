@@ -14,6 +14,7 @@
         "resident": 0
       },
       "unavailableBlocksByKind": {
+        "patient-how-to-take": 133,
         "urgent-help": 133,
         "tell-your-doctor": 133,
         "decision-path": 133,
@@ -32,7 +33,7 @@
       "note": "Approval exists only through a recorded review (REVIEW_RECORDS). Everything else is unreviewed.",
       "factsApproved": 0,
       "factsFlagged": 1,
-      "factsReviewRequired": 1015,
+      "factsReviewRequired": 1182,
       "factsUnverified": 0,
       "medicationsWithReviewRequiredFacts": 145
     }
@@ -64,6 +65,40 @@
     },
     "medicationsWithNames": 145,
     "medicationsWithoutPatientWording": 0
+  },
+  "flows": {
+    "note": "What each learning flow has to work with. Counts of authored material only: not a measure of quality or of clinical completeness.",
+    "questions": {
+      "total": 1824,
+      "authoredQuiz": 1644,
+      "stahlBank": 180,
+      "skippedMalformed": 0,
+      "withoutRationale": 0,
+      "perMedication": {
+        "min": 12,
+        "max": 21
+      }
+    },
+    "mbbsExamPrep": {
+      "medications": 145,
+      "practicalTasks": 314,
+      "longAnswerPrompts": 421
+    },
+    "resident": {
+      "withDecisionPath": 12,
+      "withCommonErrors": 12,
+      "boxedWarnings": {
+        "listed": 111,
+        "empty": 34
+      }
+    },
+    "patient": {
+      "howToTakeFromGuide": 12,
+      "sideEffects": {
+        "guide": 12,
+        "registry": 133
+      }
+    }
   },
   "structuralDefectList": []
 }

@@ -51,6 +51,7 @@ export function categoryOfSource(source: string): FactCategory {
   if (/^interactions\[\d+\]\.drug$/.test(source)) return "interaction-names";
   if (source.startsWith("interactions[")) return "interactions";
   if (source.startsWith("patientMode.")) return "patient-summary";
+  if (source.startsWith("microQuizzes[")) return "mcq";
   if (/^(contraindications|seriousSideEffects|commonSideEffects|monitoring|blackBoxWarnings)\[/.test(source)) return "safety";
   if (source.startsWith("examLens.mbbs")) return "exam-mbbs";
   if (source.startsWith("examLens.neetPg")) return "exam-neet";
@@ -74,7 +75,9 @@ export type InteractionKind =
   | "branching" // learner follows decision branches
   | "audit-checklist" // learner ticks each pre-prescribing check as done
   | "filter" // learner narrows a list by severity or search
-  | "personal-list"; // learner marks which listed items apply to them
+  | "personal-list" // learner marks which listed items apply to them
+  | "practice-tracker" // learner ticks tasks as practised
+  | "question-session"; // one question at a time with locked answers, rationale and review
 
 export const INTERACTIVE_KINDS: ReadonlySet<InteractionKind> = new Set([
   "checklist",
@@ -86,6 +89,8 @@ export const INTERACTIVE_KINDS: ReadonlySet<InteractionKind> = new Set([
   "audit-checklist",
   "filter",
   "personal-list",
+  "practice-tracker",
+  "question-session",
 ]);
 
 /** A canonical slot a block needs. `anyOf` lists acceptable paths; the first is the expected one. */
@@ -143,6 +148,20 @@ export const BLOCK_CONTRACTS: Record<BlockKind, BlockContract> = {
       { label: "patient interaction wording", anyOf: ["patientGuide.interactions", "patientMode.interactions"] },
       { label: "interaction names", anyOf: ["interactions[0].drug"] },
     ],
+  },
+  "patient-how-to-take": {
+    kind: "patient-how-to-take",
+    mode: "patient",
+    interaction: "read",
+    pedagogy: "How the Patient Guide says to take the medicine, what to do about a missed dose, stopping and monitoring.",
+    slots: [{ label: "how to take it", anyOf: ["patientGuide.usuallyTaken"] }],
+  },
+  "patient-side-effects": {
+    kind: "patient-side-effects",
+    mode: "patient",
+    interaction: "read",
+    pedagogy: "Side effects in the patient words: the Patient Guide where it exists, otherwise the registry patient wording.",
+    slots: [{ label: "patient side-effect wording", anyOf: ["patientGuide.commonSideEffects.intro", "patientMode.sideEffects"] }],
   },
   "tell-your-doctor": {
     kind: "tell-your-doctor",
@@ -211,12 +230,29 @@ export const BLOCK_CONTRACTS: Record<BlockKind, BlockContract> = {
     pedagogy: "Recorded drug interactions with canonical severity, mechanism and action; filter by severity or search by drug.",
     slots: [{ label: "interaction records", anyOf: ["interactions[0].drug"] }],
   },
+  "clinical-summary": {
+    kind: "clinical-summary",
+    mode: "resident",
+    interaction: "read",
+    pedagogy: "What the guide holds for each reasoning input, with absent, empty and listed kept apart. Counts only; no judgement.",
+    slots: [],
+  },
   "monitoring-plan": {
     kind: "monitoring-plan",
     mode: "resident",
     interaction: "read",
     pedagogy: "What to monitor, how often and why, with the boxed warnings.",
     slots: [{ label: "monitoring parameters", anyOf: ["monitoring[0].parameter"] }],
+  },
+  "exam-prep": {
+    kind: "exam-prep",
+    mode: "mbbs",
+    interaction: "practice-tracker",
+    pedagogy: "Practical tasks and long-answer prompts to rehearse; tick each as practised. No answer keys exist for these.",
+    slots: [
+      { label: "practical tasks", anyOf: ["examLens.mbbs.practical[0]"] },
+      { label: "long-answer prompts", anyOf: ["examLens.mbbs.longAnswer[0]"] },
+    ],
   },
   viva: {
     kind: "viva",
@@ -242,8 +278,8 @@ export const BLOCK_CONTRACTS: Record<BlockKind, BlockContract> = {
   "mcq-drill": {
     kind: "mcq-drill",
     mode: "neetPg",
-    interaction: "commit-answer",
-    pedagogy: "Commit to an answer, then read the authored explanation.",
+    interaction: "question-session",
+    pedagogy: "A question session over authored questions: lock each answer, read the authored rationale, review and retry what was missed.",
     slots: [{ label: "authored MCQs", anyOf: ["stahl:mcq"] }],
   },
   "case-reasoner": {

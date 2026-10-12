@@ -231,8 +231,8 @@ describe("registry-wide four-mode validation (all medications)", () => {
   test("sertraline's four modes each offer a distinctive interaction", () => {
     const r = reports.find((x) => x.slug === "sertraline")!;
     expect([...r.modes.patient.distinctive].sort()).toEqual(["checklist", "personal-list"]);
-    expect([...r.modes.mbbs.distinctive].sort()).toEqual(["reveal", "stepper"]);
-    expect(r.modes.neetPg.distinctive).toEqual(["commit-answer"]);
+    expect([...r.modes.mbbs.distinctive].sort()).toEqual(["practice-tracker", "reveal", "stepper"]);
+    expect(r.modes.neetPg.distinctive).toEqual(["question-session"]);
     expect([...r.modes.resident.distinctive].sort()).toEqual(["audit-checklist", "branching", "filter", "staged-reveal"]);
   });
 

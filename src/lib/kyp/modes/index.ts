@@ -6,7 +6,7 @@ import { LENS_ENABLED_SLUGS } from "./specs";
 import type { ModeLensSet } from "./types";
 
 export * from "./types";
-export { MODE_SPECS, MODE_ORDER, LENS_ENABLED_SLUGS, REVIEW_NOTICE, modeOfBlock } from "./specs";
+export { MODE_SPECS, MODE_ORDER, LENS_ENABLED_SLUGS, REVIEW_NOTICE, MODE_TASKS, modeOfBlock } from "./specs";
 export { buildModeLens, buildModeLenses, classifyViva, splitViva } from "./build";
 export { validateLensSet, readPath } from "./validate";
 
@@ -28,3 +28,4 @@ export type { Contradiction } from "./consistency";
 export { validateDrug } from "./registry-report";
 export type { DrugValidation } from "./registry-report";
 export * from "./patient-interactions";
+export { FLOW_COPY, flowCopyStrings } from "./flow-copy";

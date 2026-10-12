@@ -172,7 +172,7 @@ const validations: DrugValidation[] = drugs.map((d) => {
   const mcqs = stahlMcqs.filter((q) => q.drugSlug === d.slug);
   return validateDrug(d, patientGuides[d.slug], mcqs.map((q) => q.id), mcqs, names);
 });
-const STRUCTURAL = new Set(["source-missing", "text-differs-from-source", "fact-not-allowed-in-mode", "conflicting-text-for-source", "wrong-mode", "viva-split-lossy", "kind-unaccounted", "kind-both-built-and-unavailable", "unreviewed-state-missing"]);
+const STRUCTURAL = new Set(["source-missing", "text-differs-from-source", "fact-not-allowed-in-mode", "conflicting-text-for-source", "wrong-mode", "viva-split-lossy", "kind-unaccounted", "kind-both-built-and-unavailable", "unreviewed-state-missing", "mcq-differs-from-source", "mcq-invalid"]);
 const structural = validations.flatMap((v) => v.issues.filter((i) => STRUCTURAL.has(i.code)).map((i) => `${v.slug}:${i.code}:${i.detail}`));
 
 const lensHead = ["slug", "blocks_built", "blocks_expected", "unavailable_blocks", "missing_facts", "invalid_refs", "modes_without_distinctive_interaction", "mechanical_ok", "duplicate_across_fields", "possible_contradictions", "viva_statements", "viva_needs_review", "shared_facts_across_modes", "facts_review_required", "facts_flagged", "facts_approved"];
@@ -234,6 +234,34 @@ const lensSummary = {
     origins: validations.reduce<Record<string, number>>((m, v) => ((m[v.patientInteractions.origin] = (m[v.patientInteractions.origin] ?? 0) + 1), m), {}),
     medicationsWithNames: validations.filter((v) => v.patientInteractions.names > 0).length,
     medicationsWithoutPatientWording: validations.filter((v) => v.patientInteractions.origin === "missing").length,
+  },
+  flows: {
+    note: "What each learning flow has to work with. Counts of authored material only: not a measure of quality or of clinical completeness.",
+    questions: {
+      total: validations.reduce((n, v) => n + v.flows.questions.total, 0),
+      authoredQuiz: validations.reduce((n, v) => n + v.flows.questions.quiz, 0),
+      stahlBank: validations.reduce((n, v) => n + v.flows.questions.stahl, 0),
+      skippedMalformed: validations.reduce((n, v) => n + v.flows.questions.skipped, 0),
+      withoutRationale: validations.reduce((n, v) => n + v.flows.questions.withoutRationale, 0),
+      perMedication: {
+        min: Math.min(...validations.map((v) => v.flows.questions.total)),
+        max: Math.max(...validations.map((v) => v.flows.questions.total)),
+      },
+    },
+    mbbsExamPrep: {
+      medications: validations.filter((v) => v.flows.examPrep.practical + v.flows.examPrep.longAnswer > 0).length,
+      practicalTasks: validations.reduce((n, v) => n + v.flows.examPrep.practical, 0),
+      longAnswerPrompts: validations.reduce((n, v) => n + v.flows.examPrep.longAnswer, 0),
+    },
+    resident: {
+      withDecisionPath: validations.filter((v) => v.flows.resident.decisionPath).length,
+      withCommonErrors: validations.filter((v) => v.flows.resident.pitfalls).length,
+      boxedWarnings: validations.reduce<Record<string, number>>((m, v) => ((m[v.flows.resident.boxedWarnings] = (m[v.flows.resident.boxedWarnings] ?? 0) + 1), m), {}),
+    },
+    patient: {
+      howToTakeFromGuide: validations.filter((v) => v.flows.patient.howToTake).length,
+      sideEffects: validations.reduce<Record<string, number>>((m, v) => ((m[v.flows.patient.sideEffects] = (m[v.flows.patient.sideEffects] ?? 0) + 1), m), {}),
+    },
   },
   structuralDefectList: structural,
 };
