@@ -4,6 +4,8 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { drugs } from "@/lib/kyp/data";
 import { getPatientGuide } from "@/lib/kyp/patient";
 import { buildModeLens, EXPLANATION_COPY as EC, explainPatient, normaliseSentence, splitSentences } from "@/lib/kyp/modes";
+import { claimsFor } from "@/lib/kyp/evidence";
+import { PART_ORDER, PART_TITLE } from "@/lib/kyp/evidence/patient-sections";
 import { PatientExplainer, PatientProvenanceNote } from "@/components/kyp/sections/drug/patient-explainer";
 import { groupSegments } from "@/components/kyp/sections/drug/explanation-text";
 
@@ -26,9 +28,14 @@ describe("patient explanation: every medication has the slot, with honest proven
       const h = render(d);
       expect(h).toContain("data-patient-explainer");
       expect(h).toContain(EC.reviewNotice);
-      expect(h).toContain("What this medicine is");
-      expect(h).toContain(EC.usesHeading);
-      expect(h).toContain(EC.askHeading);
+      for (const p of PART_ORDER) {
+        expect(h).toContain(PART_TITLE[p]);
+        expect(h).toContain(`id="pe-${p}"`);
+      }
+      expect(h).toContain("data-part-state=");
+      expect(h).toContain(EC.part.personalNote);
+      expect(h).toContain(EC.part.sourcesIndia);
+      expect(h).toContain(EC.part.reviewLine);
       expect(h).not.toMatch(/\b(approved by|verified by|reviewed by)\b/i);
     }
   });
@@ -112,10 +119,17 @@ describe("patient explanation: every medication has the slot, with honest proven
       const e = explainPatient(d);
       expect(e.level).toBe("missing");
       const h = renderToStaticMarkup(React.createElement(PatientExplainer, { drugName: d.genericName, explanation: e, interactions: null }));
-      expect(h).toContain(EC.unavailable);
+      // Every part is unavailable for the fully absent medicine; the "empty" variant keeps its side-effect wording.
+      for (const k of (d === absent ? ["what", "how", "precautions", "side-effects", "interactions"] : ["what", "how", "precautions"]) as ("what" | "how" | "precautions" | "side-effects" | "interactions")[]) {
+        expect(h).toContain(EC.part.unavailable[k]);
+        expect(EC.part.unavailable[k]).toMatch(/pharmacist/);
+      }
       expect(h).toContain('data-state="unavailable"');
-      expect(EC.unavailable).toMatch(/does not mean the medicine is safe or risk-free/);
-      expect(EC.unavailable).toMatch(/pharmacist or prescriber/);
+      expect(h).toContain('data-part-state="unavailable"');
+      expect(h).toContain("data-questions"); // the gaps become questions to ask
+      expect(EC.part.unavailable.precautions).toMatch(/not a sign that there are none/);
+      expect(EC.part.unavailable["side-effects"]).toMatch(/does not mean it cannot happen/);
+      expect(EC.part.unavailable.interactions).toMatch(/does not mean it has no interactions/);
       expect(h).not.toMatch(/no (known )?(risk|side effects)\b/i);
     }
     expect(renderToStaticMarkup(React.createElement(PatientExplainer, { drugName: "x", explanation: explainPatient(absent), interactions: null }))).toContain(EC.usesAbsent);
@@ -123,7 +137,7 @@ describe("patient explanation: every medication has the slot, with honest proven
   });
 
   test("template-only wording carries an explicit warning and per-run labels", () => {
-    const t = drugs.find((d) => !getPatientGuide(d.slug) && explainPatient(d).level === "template-only")!;
+    const t = drugs.find((d) => !getPatientGuide(d.slug) && explainPatient(d).level === "template-only" && claimsFor(d.slug).length === 0)!;
     expect(t).toBeDefined();
     const h = render(t);
     expect(h).toContain('data-state="template-only"');

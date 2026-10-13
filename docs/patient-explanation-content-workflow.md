@@ -40,3 +40,9 @@ Indian sources: CDSCO and IPC/PvPI entry points were reached but no per-medicine
 
 ## Clinical review record (template, NOT a record)
 Nothing here has been reviewed. A completed record needs a real reviewer. Fields to capture when one exists: reviewer name or approved professional identifier; qualifications; scope (which claim ids or Patient Guide sections); evidence examined (source ids, Indian product information); decision per claim (approve / edit / reject); date; unresolved concerns. Start with sertraline and fluoxetine (see `reports/medication-audit/four-mode/review-notes-sertraline-fluoxetine.md`). Do not enable another medication in the stepped experience without a completed record and explicit release authorisation.
+
+## Medication Guide capture (patient-directed text, quoted exactly)
+`bun scripts/evidence/medguide.ts [slug...]` stores the question-headed sections of a US label's Medication Guide (`data/medguides.json`). A Medication Guide is FDA-required text written for patients, so each section is quoted EXACTLY as an "exact-quote" claim (no paraphrase). Headings map to the nine Patient parts in `src/lib/kyp/evidence/medguide-claims.ts`. US-only contacts (FDA, poison control, 911) are flagged on the claim. Medicines with a Patient Guide or hand-authored claims are not regenerated. "No Medication Guide in the labels checked" means only that: it does not say none exists.
+
+## The nine parts and the coverage matrix
+`src/lib/kyp/evidence/patient-sections.ts` defines what each part holds for each medicine (authored-guide, source-backed, registry-wording, standard-wording, general-direction, unavailable). `india-first-dashboard.csv` has one `part_*` column per part. Rendering all 145 pages is UI coverage; the `part_*` columns are content coverage; sources and clinical review are separate columns. Do not add them together.

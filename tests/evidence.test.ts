@@ -35,7 +35,7 @@ const NO_US_LABEL = ["moclobemide", "dothiepin", "lofepramine", "maprotiline", "
 describe("evidence layer: integrity", () => {
   test("every stored source and claim is internally consistent (passage really is in the source)", () => {
     expect(validateEvidence()).toEqual([]);
-    expect(SOURCE_RECORDS.length).toBe(11);
+    expect(SOURCE_RECORDS.length).toBe(70); // 11 hand-picked labels + 59 Medication Guides
     expect(CLAIM_RECORDS.length).toBeGreaterThanOrEqual(50);
   });
 
@@ -64,7 +64,7 @@ describe("evidence layer: integrity", () => {
       expect(s.jurisdiction).toBe("US");
       expect(s.type).toBe("us-product-label");
       expect(c.review).toBe("not-reviewed");
-      expect(c.limitations.join(" ")).toMatch(/US label/i);
+      expect(c.limitations.join(" ")).toMatch(/US (label|Medication Guide)/i);
       expect(c.verification).toBe("passage-found-in-source");
     }
     expect(INDIAN_SOURCE_SEARCH.outcome).toBe("unresolved-for-every-medication");
@@ -149,8 +149,11 @@ describe("evidence layer: rendering and honesty", () => {
     expect(claimsFor("phenelzine").find((c) => c.category === "onset")!.limitations.join(" ")).toMatch(/prescriber sets/);
   });
 
-  test("medicines without sourced claims are unchanged: no evidence section", () => {
-    expect(html("alprazolam")).not.toContain("data-evidence-claims");
+  test("medicines without sourced claims show no source-backed cards and say so", () => {
+    const none = drugs.find((d) => !getPatientGuide(d.slug) && claimsFor(d.slug).length === 0)!;
+    const h = html(none.slug);
+    expect(h).not.toContain("data-claim=");
+    expect(h).toContain("No product label has been retrieved for this medicine");
   });
 
   test("the sourced claim set never contains dosing instructions beyond numbers present in the label passage", () => {
@@ -172,7 +175,8 @@ describe("India-first dashboard: separate measures, honest numbers", () => {
     expect(sum.patientUiRenders).toBe(145);
     expect(sum.patientGuides).toBe(12);
     expect(sum.claimsWithTraceableSource).toBe(CLAIM_RECORDS.length);
-    expect(sum.medicationsWithSourcedClaims).toBe(11);
+    expect(sum.medicationsWithSourcedClaims).toBe(new Set(CLAIM_RECORDS.map((c) => c.slug)).size);
+    expect(sum.medicationsWithSourcedClaims).toBeGreaterThanOrEqual(60);
     expect(sum.medicationsWithSourcedOnsetClaim).toBe(7);
     expect(sum.usLabelDiscovery["candidates-found"] + sum.usLabelDiscovery["none-found"]).toBe(145);
     expect(Object.keys(sum)).not.toContain("percent");

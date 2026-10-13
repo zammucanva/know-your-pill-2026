@@ -302,17 +302,17 @@ const gapRows = validations.map((v) => [
   v.explanation.sentences["class-shared"],
   v.explanation.sentences.template,
   v.explanation.withheldRules.join("; "),
-  v.explanation.missingElements.join("; "),
+  indiaRows.find((r) => r.slug === v.slug)!.missingElements,
   "not clinically reviewed",
-  v.explanation.level === "template-only" || v.explanation.level === "missing"
-    ? "Content owner: supply a medicine-specific, source-backed patient explanation; then clinical review"
-    : v.explanation.source === "patient-guide"
-      ? "Clinical reviewer: review the Patient Guide and confirm or edit"
-      : "Content owner: confirm or replace the registry wording and the withheld shared sentences; then clinical review",
+  indiaRows.find((r) => r.slug === v.slug)!.nextAction,
 ]);
 writeFileSync(`${OUT}/patient-explanation-gaps.csv`, [gapHead, ...gapRows].map((r) => r.map((c) => csv(String(c))).join(",")).join("\n") + "\n");
-const idxHead = Object.keys(indiaRows[0]);
-writeFileSync(`${OUT}/india-first-dashboard.csv`, [idxHead, ...indiaRows.map((r) => idxHead.map((k) => String((r as unknown as Record<string, unknown>)[k])))].map((r) => r.map((c) => csv(String(c))).join(",")).join("\n") + "\n");
+const flat = indiaRows.map((r) => {
+  const { parts, ...rest } = r;
+  return { ...rest, ...Object.fromEntries(Object.entries(parts).map(([k, v]) => [`part_${k}`, v])) } as Record<string, unknown>;
+});
+const idxHead = Object.keys(flat[0]);
+writeFileSync(`${OUT}/india-first-dashboard.csv`, [idxHead, ...flat.map((r) => idxHead.map((k) => String(r[k])))].map((r) => r.map((c) => csv(String(c))).join(",")).join("\n") + "\n");
 const swHead = ["ruleId", "kind", "category", "handling", "medications", "fields", "originalWording", "whyHandledThisWay", "reviewStatus", "nextAction", "affectedSlugs"];
 const swRows = [...sharedWording.rows, ...sharedWording.unclassified].map((r) => [r.id, r.kind, r.category, r.handling, r.medications, r.fields.join("; "), r.wording, r.why, r.reviewStatus, r.nextAction, r.slugs.join("; ")]);
 writeFileSync(`${OUT}/shared-wording-review.csv`, [swHead, ...swRows].map((r) => r.map((c) => csv(String(c))).join(",")).join("\n") + "\n");

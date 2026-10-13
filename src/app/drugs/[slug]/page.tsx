@@ -389,7 +389,7 @@ export default async function DrugPage({ params }: PageProps) {
                   <PatientGuideSection drug={drug} guide={patientGuide} />
                 </>
               ) : (
-                <PatientExplainer drugName={drug.genericName} explanation={patientExplanation} interactions={patientInteractions} evidence={evidenceViews(drug.slug)} />
+                <PatientExplainer drugName={drug.genericName} explanation={patientExplanation} interactions={patientInteractions} evidence={evidenceViews(drug.slug)} hasGuide={false} />
               )
             }
             medical={<DrugPatientEducation drug={drug} />}

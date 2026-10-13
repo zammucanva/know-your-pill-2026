@@ -1,15 +1,22 @@
 import { SHARED_CLAIM_RULES } from "@/lib/kyp/modes/shared-claims";
 import discoveryJson from "./data/discovery.json";
 import onsetScanJson from "./data/onset-scan.json";
+import medguidesJson from "./data/medguides.json";
+import { deriveMedGuideEvidence } from "./medguide-claims";
 import sourcesJson from "./data/sources.json";
-import { CLAIM_RECORDS } from "./claims";
-import type { ClaimRecord, DiscoveryRecord, EvidenceClaimView, SourceRecord } from "./types";
+import { CLAIM_RECORDS as HAND_CLAIMS } from "./claims";
+import type { ClaimRecord, DiscoveryRecord, EvidenceClaimView, MedGuideRecord, SourceRecord } from "./types";
 
 export * from "./types";
-export { CLAIM_RECORDS } from "./claims";
 
-/** Retrieved sources (verbatim excerpts). Regenerate with scripts/evidence/fetch-label.ts. */
-export const SOURCE_RECORDS = sourcesJson as unknown as SourceRecord[];
+/** Captured US Medication Guides (verbatim sections). Regenerate with scripts/evidence/medguide.ts. */
+export const MEDGUIDE_RECORDS = medguidesJson as unknown as MedGuideRecord[];
+const MG = deriveMedGuideEvidence(MEDGUIDE_RECORDS);
+
+/** Retrieved sources (verbatim excerpts): hand-picked labels (fetch-label.ts) plus Medication Guides (medguide.ts). */
+export const SOURCE_RECORDS: SourceRecord[] = [...(sourcesJson as unknown as SourceRecord[]), ...MG.sources];
+/** Hand-authored claims (claims.ts) plus exact-quote claims derived from Medication Guides. */
+export const CLAIM_RECORDS: ClaimRecord[] = [...HAND_CLAIMS, ...MG.claims];
 /** Candidate labels found on DailyMed for every medication. Regenerate with scripts/evidence/discover.ts. */
 export const DISCOVERY_RECORDS = discoveryJson as unknown as DiscoveryRecord[];
 

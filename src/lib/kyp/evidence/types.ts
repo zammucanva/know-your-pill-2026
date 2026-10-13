@@ -123,3 +123,22 @@ export interface EvidenceClaimView {
   claim: ClaimRecord;
   source: Pick<SourceRecord, "title" | "url" | "identifier" | "publishedDate" | "accessedAt" | "organisation" | "jurisdiction" | "formulation" | "type">;
 }
+
+/** One question-headed section of a US Medication Guide, captured verbatim by scripts/evidence/medguide.ts. */
+export interface MedGuideSection {
+  heading: string;
+  text: string;
+  truncated: boolean;
+}
+export interface MedGuideRecord {
+  slug: string;
+  status: "medication-guide-found" | "no-medication-guide-in-labels-checked" | "no-us-label-found" | "error";
+  labelTitle?: string;
+  setid?: string;
+  publishedDate?: string;
+  version?: number;
+  accessedAt: string;
+  labelsChecked: number;
+  sections: MedGuideSection[];
+  note?: string;
+}

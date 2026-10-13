@@ -1,8 +1,10 @@
 import { drugs } from "@/lib/kyp/data";
 import { getPatientGuide } from "@/lib/kyp/patient";
 import { explainPatient } from "@/lib/kyp/modes/patient-explanation";
-import { CLAIM_RECORDS, DISCOVERY_RECORDS, ONSET_SCAN, SOURCE_RECORDS } from "./index";
+import { CLAIM_RECORDS, DISCOVERY_RECORDS, MEDGUIDE_RECORDS, ONSET_SCAN, SOURCE_RECORDS } from "./index";
 import { readability } from "./readability";
+import { buildModeLens } from "@/lib/kyp/modes/build";
+import { PART_ORDER, partStates, type PartId, type PartState } from "./patient-sections";
 
 /**
  * India-first content dashboard, one row per medication. The columns are separate on purpose: they measure
@@ -26,6 +28,11 @@ export interface DashboardRow {
   /** Screening only: label sentences that may state onset, for a person to read. Not a claim. */
   onsetLabelCandidates: string;
   patientGuide: boolean;
+  /** What each of the nine Patient parts holds for this medicine. See patient-sections.ts. */
+  parts: Record<PartId, PartState>;
+  claimsExactQuote: number;
+  claimsRestated: number;
+  medicationGuideStatus: string;
   explanationLevel: string;
   medicineSpecificSentences: number;
   sharedOrTemplateSentences: number;
@@ -50,12 +57,11 @@ export function dashboardRows(): DashboardRow[] {
     const withheld = segs.filter((s) => s.handling === "withhold");
     const text = [...shown.map((s) => s.text), ...claims.map((c) => c.patientWording)].join(" ");
     const r = readability(text);
-    const missing: string[] = [];
-    if (e.level === "template-only" || e.level === "missing") missing.push("medicine-specific plain explanation");
-    if (!guide) {
-      for (const [cat, label] of [["how-to-take", "how to take it"], ["urgent-help", "when to get help"], ["onset", "onset or timeline"], ["interactions", "other medicines"], ["side-effects", "side effects specific to the medicine"]] as const)
-        if (!claims.some((c) => c.category === cat) && (cat !== "side-effects" || !e.sideEffects.some((s) => s.origin === "registry-specific" && s.handling === "show"))) missing.push(`${label} (no source-backed claim)`);
-    }
+    const block = buildModeLens("patient", { drug: d, patientGuide: guide, mcqs: [] }).blocks.find((b) => b.kind === "patient-interactions");
+    const inter = block && block.kind === "patient-interactions" ? block : null;
+    const parts = partStates({ explanation: e, claims, hasGuide: !!guide, interactionsStatement: inter?.statement?.origin ?? "missing", interactionNames: inter?.names.length ?? 0 });
+    const missing = PART_ORDER.filter((p) => !["sources", "questions", "seek-help"].includes(p) && (parts[p] === "unavailable" || parts[p] === "standard-wording")).map((p) => `${p} (${parts[p]})`);
+    if (!guide && !claims.some((c) => c.category === "onset")) missing.push("onset or timeline (no source-backed claim)");
     const sourced = SOURCE_RECORDS.filter((s) => s.slug === d.slug).length;
     let next: string;
     if (guide) next = "Clinical reviewer: review the Patient Guide";
@@ -78,6 +84,10 @@ export function dashboardRows(): DashboardRow[] {
         return !o ? "not-scanned" : o.status === "no-us-label-found" ? "no-us-label" : o.status === "error" ? "scan-error" : o.matches.length ? `${o.matches.length} candidate sentence(s) to read` : "none found by the screen";
       })(),
       patientGuide: !!guide,
+      parts,
+      claimsExactQuote: claims.filter((c) => c.wordingKind === "exact-quote").length,
+      claimsRestated: claims.filter((c) => c.wordingKind === "paraphrase").length,
+      medicationGuideStatus: guide ? "patient-guide" : MEDGUIDE_RECORDS.find((m) => m.slug === d.slug)?.status ?? (claims.length ? "hand-picked-label" : "not-checked"),
       explanationLevel: e.level,
       medicineSpecificSentences: shown.filter((s) => s.origin === "registry-specific" || s.origin === "authored-guide").length,
       sharedOrTemplateSentences: shown.filter((s) => s.origin === "class-shared" || s.origin === "template").length,
@@ -114,6 +124,12 @@ export function dashboardSummary(rows: DashboardRow[]) {
       withCandidateSentencesButNoSourcedClaim: ONSET_SCAN.filter((o) => o.matches.length > 0 && !CLAIM_RECORDS.some((c) => c.slug === o.slug && c.category === "onset")).length,
     },
     patientGuides: count((r) => r.patientGuide),
+    claimsExactQuote: rows.reduce((n, r) => n + r.claimsExactQuote, 0),
+    claimsRestated: rows.reduce((n, r) => n + r.claimsRestated, 0),
+    medicationGuideStatus: rows.reduce<Record<string, number>>((m, r) => ((m[r.medicationGuideStatus] = (m[r.medicationGuideStatus] ?? 0) + 1), m), {}),
+    parts: Object.fromEntries(
+      PART_ORDER.map((p) => [p, rows.reduce<Record<string, number>>((m, r) => ((m[r.parts[p]] = (m[r.parts[p]] ?? 0) + 1), m), {})])
+    ),
     explanationLevel: rows.reduce<Record<string, number>>((m, r) => ((m[r.explanationLevel] = (m[r.explanationLevel] ?? 0) + 1), m), {}),
     medicationsWithWithheldSharedClaims: count((r) => r.withheldSharedClaims > 0),
     medicationsWithMissingElements: count((r) => r.missingElements.length > 0),
