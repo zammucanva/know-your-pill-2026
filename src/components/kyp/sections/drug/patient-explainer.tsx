@@ -4,6 +4,8 @@ import { Section } from "@/components/kyp/ui/section";
 import { SectionHeader } from "@/components/kyp/ui/section-header";
 import { EXPLANATION_COPY as EC, type PatientExplanation } from "@/lib/kyp/modes/explanation-copy";
 import { ExplanationText } from "./explanation-text";
+import { EvidenceClaims } from "./evidence-claims";
+import type { EvidenceClaimView } from "@/lib/kyp/evidence/types";
 import type { LensBlock } from "@/lib/kyp/modes/types";
 import { LensBlockView } from "./lens-blocks";
 
@@ -16,7 +18,7 @@ import { LensBlockView } from "./lens-blocks";
  * Server Component (the personal interaction list is a client block passed as plain data).
  */
 
-export function PatientExplainer({ drugName, explanation, interactions }: { drugName: string; explanation: PatientExplanation; interactions?: LensBlock | null }) {
+export function PatientExplainer({ drugName, explanation, interactions, evidence = [] }: { drugName: string; explanation: PatientExplanation; interactions?: LensBlock | null; evidence?: EvidenceClaimView[] }) {
   const e = explanation;
   return (
     <Section id="patient-education" className="bg-muted/20" data-patient-explainer="" data-level={e.level}>
@@ -25,6 +27,9 @@ export function PatientExplainer({ drugName, explanation, interactions }: { drug
         <nav aria-label="In this section" className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-sm">
           <a href="#pe-what" className="underline underline-offset-2">What it is</a>
           <a href="#pe-uses" className="underline underline-offset-2">What it is for</a>
+          {evidence.length > 0 && (
+            <a href="#pe-source" className="underline underline-offset-2">From the product label</a>
+          )}
           <a href="#pe-watch" className="underline underline-offset-2">What to watch for</a>
           <a href="#pe-others" className="underline underline-offset-2">Other medicines</a>
           <a href="#pe-ask" className="underline underline-offset-2">If anything is unclear</a>
@@ -84,6 +89,8 @@ export function PatientExplainer({ drugName, explanation, interactions }: { drug
               </p>
             )}
           </section>
+
+          <EvidenceClaims views={evidence} />
 
           {e.reminders.length > 0 && (
             <section id="pe-remember" aria-labelledby="pe-remember-h" className="scroll-mt-24">

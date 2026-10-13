@@ -25,3 +25,18 @@ For each row in `shared-wording-review.csv`: either supply medicine-specific, so
 
 ## Not covered here
 Enabling a medication in the stepped four-mode experience needs a documented qualified clinical review and explicit release authorisation.
+
+## Evidence pipeline (source-backed claims)
+Code: `src/lib/kyp/evidence/` (types, validation, claims, readability, dashboard). Scripts: `scripts/evidence/`.
+
+1. `bun scripts/evidence/discover.ts [slug...]`: lists candidate US labels on DailyMed for each medication (`data/discovery.json`). It chooses nothing.
+2. `bun scripts/evidence/fetch-label.ts <slug> <setid> "<formulation>"`: retrieves one candidate label and stores verbatim excerpts (indications, dosage, contraindications, warnings, adverse reactions, patient information, medication guide, clinical pharmacology) in `data/sources.json`. Say which formulation the label covers.
+3. `bun scripts/evidence/scan-onset.ts`: screens every discovered label for sentences that may state onset (`data/onset-scan.json`). Candidates only: noisy, not claims.
+4. Author a claim in `claims.ts`: one patient-facing statement, tied to one excerpt, with the label's exact passage, who it applies to and what must not be assumed. A restatement may not add numbers the passage does not contain (the validator checks).
+5. `bun test tests/evidence.test.ts` proves the passage is in the stored source. It does not prove the claim is correct or applicable.
+6. `bun run audit:four-mode` regenerates `india-first-dashboard.csv` (one row per medication; separate measures) and the summary.
+
+Indian sources: CDSCO and IPC/PvPI entry points were reached but no per-medicine record could be retrieved by script, so every medication is recorded as "Indian source unresolved". A person with access to the CDSCO "Prescribing Information" and IPC/PvPI material should add `indian-product-label` or `indian-safety-communication` sources and re-check each claim against them; an Indian label may differ from the US one.
+
+## Clinical review record (template, NOT a record)
+Nothing here has been reviewed. A completed record needs a real reviewer. Fields to capture when one exists: reviewer name or approved professional identifier; qualifications; scope (which claim ids or Patient Guide sections); evidence examined (source ids, Indian product information); decision per claim (approve / edit / reject); date; unresolved concerns. Start with sertraline and fluoxetine (see `reports/medication-audit/four-mode/review-notes-sertraline-fluoxetine.md`). Do not enable another medication in the stepped experience without a completed record and explicit release authorisation.

@@ -1,0 +1,1573 @@
+[
+ {
+  "slug": "sertraline",
+  "status": "scanned",
+  "labelTitle": "SERTRALINE HCL (SERTRALINE HYDROCHLORIDE) CAPSULE [UMEDICA LABORATORIES USA INC.]",
+  "setid": "a6d0f35c-f4f4-456d-b8d9-d56297261ad6",
+  "publishedDate": "Aug 18, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "fluoxetine",
+  "status": "scanned",
+  "labelTitle": "OLANZAPINE AND FLUOXETINE (OLANZAPINE AND FUOXETINE) CAPSULE [PAR HEALTH USA, LLC]",
+  "setid": "2f6ceda3-3edc-4427-98a6-23e3c930c44d",
+  "publishedDate": "Sep 10, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "escitalopram",
+  "status": "scanned",
+  "labelTitle": "ESCITALOPRAM TABLET, FILM COATED [RISING PHARMA HOLDINGS, INC.]",
+  "setid": "ccbe97b5-da68-4fff-929a-240dd705fe6f",
+  "publishedDate": "Oct 08, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": [
+   {
+    "loinc": "34090-1",
+    "section": "CLINICAL PHARMACOLOGY",
+    "sentence": "Tolerance to a model of antidepressant effect in rats was not induced by long-term (up to 5 weeks) treatment with escitalopram."
+   }
+  ]
+ },
+ {
+  "slug": "paroxetine",
+  "status": "scanned",
+  "labelTitle": "PAXIL CR (PAROXETINE HYDROCHLORIDE) TABLET, FILM COATED, EXTENDED RELEASE [APOTEX CORP]",
+  "setid": "483bd97f-c4d0-4e23-aaa8-6334f4471e0c",
+  "publishedDate": "Oct 02, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "citalopram",
+  "status": "scanned",
+  "labelTitle": "CITALOPRAM CAPSULE [ALMATICA PHARMA LLC]",
+  "setid": "2f815b0c-6da7-cb61-e89c-7de628092d0d",
+  "publishedDate": "Oct 09, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "fluvoxamine",
+  "status": "scanned",
+  "labelTitle": "FLUVOXAMINE MALEATE CAPSULE, EXTENDED RELEASE [UPSHER-SMITH LABORATORIES, LLC]",
+  "setid": "49601858-df61-4522-ac99-0d2892f92e11",
+  "publishedDate": "Sep 15, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": [
+   {
+    "loinc": "34067-9",
+    "section": "INDICATIONS AND USAGE",
+    "sentence": "Efficacy was demonstrated in: One 12-week study with fluvoxamine maleate extended-release capsules in adults (14.1)."
+   }
+  ]
+ },
+ {
+  "slug": "venlafaxine",
+  "status": "scanned",
+  "labelTitle": "VENLAFAXINE HYDROCHLORIDE, EXTENDED RELEASE TABLET [EDENBRIDGE PHARMACEUTICALS LLC.]",
+  "setid": "38431a76-6185-4c17-994f-8278b6cd7510",
+  "publishedDate": "Sep 22, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": [
+   {
+    "loinc": "34068-7",
+    "section": "DOSAGE AND ADMINISTRATION",
+    "sentence": "It is generally agreed that acute episodes of major depressive disorder require several months or longer of sustained pharmacological therapy beyond response to the acute episode."
+   }
+  ]
+ },
+ {
+  "slug": "duloxetine",
+  "status": "scanned",
+  "labelTitle": "DULOXETINE CAPSULE, DELAYED RELEASE [HAWAII REPACK, INC.]",
+  "setid": "79bfd6be-a1ff-4786-b4e2-abbd0a3e3932",
+  "publishedDate": "Sep 11, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "bupropion",
+  "status": "scanned",
+  "labelTitle": "BUPROPION HYDROCHLORIDE TABLET, FILM COATED, EXTENDED RELEASE [GRANULES PHARMACEUTICALS INC.]",
+  "setid": "61e9cbe3-8211-42f3-b68f-581f56651919",
+  "publishedDate": "Oct 12, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": [
+   {
+    "loinc": "34067-9",
+    "section": "INDICATIONS AND USAGE",
+    "sentence": "The efficacy of bupropion in the treatment of a major depressive episode was established in two 4-week controlled inpatient trials and one 6-week controlled outpatient trial of adult subjects with MDD [see Clinical Studies (14)]."
+   },
+   {
+    "loinc": "34067-9",
+    "section": "INDICATIONS AND USAGE",
+    "sentence": "The efficacy of bupropion hydrochloride extended-release tablets (SR) in maintaining an antidepressant response for up to 44 weeks following 8 weeks of acute treatment was demonstrated in a placebo-controlled trial [see Clinical Studies (14)]."
+   },
+   {
+    "loinc": "34068-7",
+    "section": "DOSAGE AND ADMINISTRATION",
+    "sentence": "It is generally agreed that acute episodes of depression require several months or longer of antidepressant drug treatment beyond the response in the acute episode."
+   }
+  ]
+ },
+ {
+  "slug": "mirtazapine",
+  "status": "scanned",
+  "labelTitle": "MIRTAZAPINE (MIRTAZAPINE) TABLET, FILM COATED [CAMBER PHARMACEUTICALS, INC.]",
+  "setid": "b4b9b66e-87a1-4dbb-9eaf-71221bcb2265",
+  "publishedDate": "Oct 02, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": [
+   {
+    "loinc": "43685-7",
+    "section": "WARNINGS AND PRECAUTIONS",
+    "sentence": "For these 3 patients, onset of severe neutropenia was detected on days 61, 9, and 14 of treatment, respectively."
+   }
+  ]
+ },
+ {
+  "slug": "amitriptyline",
+  "status": "scanned",
+  "labelTitle": "AMITRIPTYLINE HYDROCHLORIDE TABLET, FILM COATED [SUN PHARMACEUTICAL INDUSTRIES, INC.]",
+  "setid": "4e520c63-1cf6-40f6-a51c-3f9b0e181342",
+  "publishedDate": "Sep 10, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": [
+   {
+    "loinc": "34068-7",
+    "section": "DOSAGE AND ADMINISTRATION",
+    "sentence": "A sedative effect may be apparent before the antidepressant effect is noted, but an adequate therapeutic effect may take as long as 30 days to develop."
+   }
+  ]
+ },
+ {
+  "slug": "clomipramine",
+  "status": "scanned",
+  "labelTitle": "CLOMIPRAMINE HCL POWDER [AX PHARMACEUTICAL CORP]",
+  "setid": "c33d02b1-9a00-4b4a-8f8e-d2679c3838bc",
+  "publishedDate": "Apr 14, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "tianeptine",
+  "status": "no-us-label-found",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "isocarboxazid",
+  "status": "scanned",
+  "labelTitle": "MARPLAN (ISOCARBOXAZID) TABLET [LIFSA DRUGS LLC]",
+  "setid": "95fde749-44ad-4668-86c4-0ff17bca0074",
+  "publishedDate": "May 07, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": [
+   {
+    "loinc": "34090-1",
+    "section": "CLINICAL PHARMACOLOGY",
+    "sentence": "Clinical Efficacy Data The effectiveness of Marplan was demonstrated in two 6-week placebo-controlled studies conducted in adult outpatients with depressive symptoms that corresponded to the DSM-IV category of major depressive disorder."
+   },
+   {
+    "loinc": "34067-9",
+    "section": "INDICATIONS AND USAGE",
+    "sentence": "The efficacy of Marplan in the treatment of depression was established in 6-week controlled trials of depressed outpatients."
+   }
+  ]
+ },
+ {
+  "slug": "moclobemide",
+  "status": "no-us-label-found",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "phenelzine",
+  "status": "scanned",
+  "labelTitle": "PHENELZINE SULFATE TABLET, FILM COATED [MYLAN PHARMACEUTICALS INC.]",
+  "setid": "fa041652-fdde-4794-a8d2-279dd309e075",
+  "publishedDate": "May 25, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "selegiline",
+  "status": "scanned",
+  "labelTitle": "SELEGILINE HYDROCHLORIDE CAPSULE [APOTEX CORP.]",
+  "setid": "1924db3d-6a16-4496-cfd0-6903be146925",
+  "publishedDate": "Sep 21, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "tranylcypromine",
+  "status": "scanned",
+  "labelTitle": "TRANYLCYPROMINE SULFATE TABLET, FILM COATED [ACTAVIS PHARMA, INC.]",
+  "setid": "6a0b609b-0625-4c26-91a1-59ee3ece3ddf",
+  "publishedDate": "Jul 28, 2025",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "l-methylfolate",
+  "status": "scanned",
+  "labelTitle": "DROSPIRENONE/ETHINYL ESTRADIOL/LEVOMEFOLATE CALCIUM AND LEVOMEFOLATE CALCIUM KIT [SANDOZ INC]",
+  "setid": "6928f186-190d-4c40-beab-81cf80cd45cb",
+  "publishedDate": "Mar 05, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": [
+   {
+    "loinc": "34068-7",
+    "section": "DOSAGE AND ADMINISTRATION",
+    "sentence": "2.2 How to Start Drospirenone/Ethinyl Estradiol/Levomefolate Calcium and Levomefolate Calcium Instruct the patient to begin taking Drospirenone/Ethinyl Estradiol/Levomefolate Calcium and Levomefolate Calcium either on the first day of her menstrual period (Day 1 Start) or on the first Sunday after the onset of her menstrual period (Sunday Start)."
+   }
+  ]
+ },
+ {
+  "slug": "agomelatine",
+  "status": "no-us-label-found",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "vortioxetine",
+  "status": "scanned",
+  "labelTitle": "TRINTELLIX (VORTIOXETINE) TABLET, FILM COATED [TAKEDA PHARMACEUTICALS AMERICA, INC.]",
+  "setid": "1a5b68e2-14d0-419d-9ec6-1ca97145e838",
+  "publishedDate": "Mar 11, 2025",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "ketamine",
+  "status": "scanned",
+  "labelTitle": "KETASET (KETAMINE HYDROCHLORIDE) INJECTION [ZOETIS INC.]",
+  "setid": "00931aa1-4b45-41f2-ae2f-f966d308c518",
+  "publishedDate": "Oct 09, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "reboxetine",
+  "status": "no-us-label-found",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "nefazodone",
+  "status": "scanned",
+  "labelTitle": "NEFAZODONE HYDROCHLORIDE TABLET [TEVA PHARMACEUTICALS USA, INC.]",
+  "setid": "51ff7db5-aaf9-4c3c-86e6-958ebf16b60f",
+  "publishedDate": "Nov 17, 2025",
+  "accessedAt": "2026-10-13",
+  "matches": [
+   {
+    "loinc": "34090-1",
+    "section": "CLINICAL PHARMACOLOGY",
+    "sentence": "Clinical Efficacy Trial Results Studies in Outpatients with Depression During its premarketing development, the efficacy of nefazodone was evaluated at doses within the therapeutic range in five well-controlled, short-term (6 to 8 weeks) clinical investigations."
+   },
+   {
+    "loinc": "34067-9",
+    "section": "INDICATIONS AND USAGE",
+    "sentence": "The efficacy of nefazodone in the treatment of depression was established in 6 to 8 week controlled trials of outpatients and in a 6 week controlled trial of depressed inpatients whose diagnoses corresponded most closely to the DSM-III or DSM-IIIR category of major depressive disorder (see CLINICAL PHARMACOLOGY )."
+   },
+   {
+    "loinc": "34067-9",
+    "section": "INDICATIONS AND USAGE",
+    "sentence": "The efficacy of nefazodone in reducing relapse in patients with major depression who were judged to have had a satisfactory clinical response to 16 weeks of open-label nefazodone treatment for an acute depressive episode has been demonstrated in a randomized placebo-controlled trial (see CLINICAL PHARMACOLOGY )."
+   },
+   {
+    "loinc": "34076-0",
+    "section": "INFORMATION FOR PATIENTS",
+    "sentence": "Time to Response/Continuation As with all antidepressants, several weeks on treatment may be required to obtain the full antidepressant effect."
+   },
+   {
+    "loinc": "34068-7",
+    "section": "DOSAGE AND ADMINISTRATION",
+    "sentence": "As with all antidepressants, several weeks on treatment may be required to obtain a full antidepressant response."
+   }
+  ]
+ },
+ {
+  "slug": "trazodone",
+  "status": "scanned",
+  "labelTitle": "TRAZODONE HYDROCHLORIDE TABLET, FILM COATED [TRUPHARMA LLC]",
+  "setid": "a57da4f8-151d-4a74-8710-6158d1da3852",
+  "publishedDate": "Sep 07, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "desvenlafaxine",
+  "status": "scanned",
+  "labelTitle": "DESVENLAFAXINE TABLET, EXTENDED RELEASE [ADVAGEN PHARMA LTD]",
+  "setid": "ff837eb1-24c3-4c63-9b4b-c6b5935a9b47",
+  "publishedDate": "Aug 24, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "levomilnacipran",
+  "status": "scanned",
+  "labelTitle": "FETZIMA (LEVOMILNACIPRAN HYDROCHLORIDE) CAPSULE, EXTENDED RELEASE FETZIMA (LEVOMILNACIPRAN HYDROCHLORIDE) KIT [ALLERGAN, INC.]",
+  "setid": "f371258d-91b3-4b6a-ac99-434a1964c3af",
+  "publishedDate": "Feb 23, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "milnacipran",
+  "status": "scanned",
+  "labelTitle": "MILNACIPRAN HCL TABLET [AMNEAL PHARMACEUTICALS LLC]",
+  "setid": "eaa14195-1b9c-423c-9412-d2fe0857e39d",
+  "publishedDate": "Sep 24, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "vilazodone",
+  "status": "scanned",
+  "labelTitle": "VILAZODONE HYDROCHLORIDE TABLET [APOTEX CORP.]",
+  "setid": "a70fd858-cbef-7336-d7ce-c78499031644",
+  "publishedDate": "Sep 21, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "triiodothyronine",
+  "status": "scanned",
+  "labelTitle": "EVEXITHROID (LEVOTHYROXINE AND LIOTHYRONINE) TABLET [TRIFLUENT PHARMA, LLC]",
+  "setid": "40fa228f-9bfc-fc71-e063-6394a90a9ab6",
+  "publishedDate": "Oct 06, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "amoxapine",
+  "status": "scanned",
+  "labelTitle": "AMOXAPINE TABLET [ACTAVIS PHARMA, INC.]",
+  "setid": "a16297df-3158-48db-85e5-5cd506885556",
+  "publishedDate": "Oct 12, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": [
+   {
+    "loinc": "34090-1",
+    "section": "CLINICAL PHARMACOLOGY",
+    "sentence": "The initial clinical effect may occur within four to seven days and occurs within two weeks in over 80% of responders."
+   }
+  ]
+ },
+ {
+  "slug": "desipramine",
+  "status": "scanned",
+  "labelTitle": "DESIPRAMINE HYDROCHLORIDE (DESIPRAMINE) TABLET, FILM COATED [AMNEAL PHARMACEUTICALS LLC]",
+  "setid": "a3b4b25d-0ddb-4531-badb-f1ba3168ac07",
+  "publishedDate": "Sep 18, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": [
+   {
+    "loinc": "34090-1",
+    "section": "CLINICAL PHARMACOLOGY",
+    "sentence": "Earliest therapeutic effects may occasionally be seen in 2 to 5 days, but full treatment benefit usually requires 2 to 3 weeks to obtain."
+   }
+  ]
+ },
+ {
+  "slug": "dothiepin",
+  "status": "no-us-label-found",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "doxepin",
+  "status": "scanned",
+  "labelTitle": "DOXEPIN HYDROCHLORIDE CREAM [SUN PHARMACEUTICAL INDUSTRIES, INC.]",
+  "setid": "0d4bff5c-4e3d-459e-aba2-9c4c34b5ba7b",
+  "publishedDate": "Oct 02, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "imipramine",
+  "status": "scanned",
+  "labelTitle": "IMIPRAMINE HYDROCHLORIDE TABLET, FILM COATED [LEADING PHARMA, LLC]",
+  "setid": "490263ce-b4d2-428a-87da-fcd07f85499a",
+  "publishedDate": "Aug 12, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "lofepramine",
+  "status": "no-us-label-found",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "maprotiline",
+  "status": "no-us-label-found",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "mianserin",
+  "status": "no-us-label-found",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "nortriptyline",
+  "status": "scanned",
+  "labelTitle": "NORTRIPTYLINE HYDROCHLORIDE CAPSULE [SUN PHARMACEUTICAL INDUSTRIES, INC.]",
+  "setid": "aee2c1a1-d848-4c3b-8c6d-8a4f6ce94c28",
+  "publishedDate": "Jul 16, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "protriptyline",
+  "status": "scanned",
+  "labelTitle": "PROTRIPTYLINE HYDROCHLORIDE TABLET, FILM COATED [EPIC PHARMA, LLC]",
+  "setid": "c6c7c39e-e510-4f4a-bf7a-926f0e075d3a",
+  "publishedDate": "Dec 21, 2023",
+  "accessedAt": "2026-10-13",
+  "matches": [
+   {
+    "loinc": "34090-1",
+    "section": "CLINICAL PHARMACOLOGY",
+    "sentence": "The initial clinical effect may occur within one week."
+   }
+  ]
+ },
+ {
+  "slug": "trimipramine",
+  "status": "scanned",
+  "labelTitle": "TRIMIPRAMINE CAPSULE [BRECKENRIDGE PHARMACEUTICAL, INC.]",
+  "setid": "4f31df66-7dc2-1f04-e054-00144ff88e88",
+  "publishedDate": "Mar 26, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": [
+   {
+    "loinc": "34068-7",
+    "section": "DOSAGE AND ADMINISTRATION",
+    "sentence": "Most antidepressant drugs have a lag period of ten days to four weeks before a therapeutic response is noted."
+   }
+  ]
+ },
+ {
+  "slug": "amisulpride",
+  "status": "scanned",
+  "labelTitle": "BARHEMSYS (AMISULPRIDE) INJECTION, SOLUTION [ACACIA PHARMA LTD]",
+  "setid": "ab23bc6e-b6a8-165f-e053-2a95a90ab144",
+  "publishedDate": "Jun 23, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "asenapine",
+  "status": "scanned",
+  "labelTitle": "ASENAPINE (ASENAPINE MALEATE) TABLET [BRECKENRIDGE PHARMACEUTICAL, INC.]",
+  "setid": "f5cd9abb-40e3-4cb5-a1b2-40cdba8a1c7e",
+  "publishedDate": "Oct 08, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "blonanserin",
+  "status": "no-us-label-found",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "clozapine",
+  "status": "scanned",
+  "labelTitle": "VERSACLOZ (CLOZAPINE) SUSPENSION [TRUPHARMA LLC]",
+  "setid": "2592c9a8-fd74-4e0d-a895-b07b014cf355",
+  "publishedDate": "Sep 08, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "iloperidone",
+  "status": "scanned",
+  "labelTitle": "FANAPT (ILOPERIDONE) TABLET FANAPT (ILOPERIDONE) KIT [VANDA PHARMACEUTICALS INC.]",
+  "setid": "33f60b40-3fca-11de-8f56-0002a5d5c51b",
+  "publishedDate": "May 13, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "lurasidone",
+  "status": "scanned",
+  "labelTitle": "LURASIDONE HYDROCHLORIDE TABLET, COATED [ZYDUS PHARMACEUTICALS USA INC.]",
+  "setid": "bceb350e-4b88-4de1-9629-9629365a27a7",
+  "publishedDate": "Jul 29, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "olanzapine",
+  "status": "scanned",
+  "labelTitle": "ZYPREXA (OLANZAPINE) TABLET ZYPREXA ZYDIS (OLANZAPINE) TABLET, ORALLY DISINTEGRATING ZYPREXA INTRAMUSCULAR (OLANZAPINE) INJECTION, POWDER, FOR SOLUTION [H2-PHARMA LLC]",
+  "setid": "b418946a-1ab4-4d89-a012-d94fc361a3c4",
+  "publishedDate": "Oct 09, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": [
+   {
+    "loinc": "34067-9",
+    "section": "INDICATIONS AND USAGE",
+    "sentence": "(1.1) Adults: Efficacy was established in three clinical trials in patients with schizophrenia: two 6-week trials and one maintenance trial."
+   },
+   {
+    "loinc": "34067-9",
+    "section": "INDICATIONS AND USAGE",
+    "sentence": "(14.1) Adolescents (ages 13-17): Efficacy was established in one 6-week trial in patients with schizophrenia (14.1)."
+   },
+   {
+    "loinc": "34067-9",
+    "section": "INDICATIONS AND USAGE",
+    "sentence": "(1.2) Adults: Efficacy was established in three clinical trials in patients with manic or mixed episodes of bipolar I disorder: two 3- to 4-week trials and one maintenance trial."
+   },
+   {
+    "loinc": "34067-9",
+    "section": "INDICATIONS AND USAGE",
+    "sentence": "(14.2) Adolescents (ages 13-17): Efficacy was established in one 3-week trial in patients with manic or mixed episodes associated with bipolar I disorder (14.2)."
+   },
+   {
+    "loinc": "34067-9",
+    "section": "INDICATIONS AND USAGE",
+    "sentence": "(1.2) Efficacy was established in two 6-week clinical trials in adults (14.2)."
+   },
+   {
+    "loinc": "34067-9",
+    "section": "INDICATIONS AND USAGE",
+    "sentence": "(1.4) Efficacy was established in three 1-day trials in adults."
+   },
+   {
+    "loinc": "34067-9",
+    "section": "INDICATIONS AND USAGE",
+    "sentence": "Efficacy was established in three clinical trials in adult patients with schizophrenia: two 6-week trials and one maintenance trial."
+   },
+   {
+    "loinc": "34067-9",
+    "section": "INDICATIONS AND USAGE",
+    "sentence": "In adolescent patients with schizophrenia (ages 13-17), efficacy was established in one 6-week trial [see Clinical Studies (14.1)]."
+   }
+  ]
+ },
+ {
+  "slug": "paliperidone",
+  "status": "scanned",
+  "labelTitle": "PALIPERIDONE TABLET, EXTENDED RELEASE [ANI PHARMACEUTICALS, INC.]",
+  "setid": "bbbaa057-f587-4eb9-a0d2-463dbcd57661",
+  "publishedDate": "Jul 29, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": [
+   {
+    "loinc": "34067-9",
+    "section": "INDICATIONS AND USAGE",
+    "sentence": "INDICATIONS AND USAGE Paliperidone is an atypical antipsychotic agent indicated for Treatment of schizophrenia ( 1.1) Adults: Efficacy was established in three 6-week trials and one maintenance trial."
+   },
+   {
+    "loinc": "34067-9",
+    "section": "INDICATIONS AND USAGE",
+    "sentence": "( 14.1) Adolescents (ages 12-17): Efficacy was established in one 6-week trial."
+   },
+   {
+    "loinc": "34067-9",
+    "section": "INDICATIONS AND USAGE",
+    "sentence": "( 1.2) Efficacy was established in two 6-week trials in adult patients."
+   },
+   {
+    "loinc": "34067-9",
+    "section": "INDICATIONS AND USAGE",
+    "sentence": "The efficacy of paliperidone in schizophrenia was established in three 6-week trials in adults and one 6-week trial in adolescents, as well as one maintenance trial in adults."
+   },
+   {
+    "loinc": "34067-9",
+    "section": "INDICATIONS AND USAGE",
+    "sentence": "The efficacy of paliperidone in schizoaffective disorder was established in two 6-week trials in adults."
+   }
+  ]
+ },
+ {
+  "slug": "perospirone",
+  "status": "no-us-label-found",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "pimavanserin",
+  "status": "scanned",
+  "labelTitle": "NUPLAZID (PIMAVANSERIN TARTRATE) CAPSULE NUPLAZID (PIMAVANSERIN TARTRATE) TABLET, COATED [ACADIA PHARMACEUTICALS INC.]",
+  "setid": "1e6bea44-57d6-4bac-9328-46e1ee59f83b",
+  "publishedDate": "Jun 22, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "quetiapine",
+  "status": "scanned",
+  "labelTitle": "QUETIAPINE FUMARATE TABLET [QUALLENT PHARMACEUTICALS HEALTH LLC]",
+  "setid": "d51c5bf6-950d-493b-be55-de575c5ef2e7",
+  "publishedDate": "Sep 23, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": [
+   {
+    "loinc": "34067-9",
+    "section": "INDICATIONS AND USAGE",
+    "sentence": "The efficacy of quetiapine tablets in schizophrenia was established in three 6-week trials in adults and one 6-week trial in adolescents (13 to 17 years)."
+   },
+   {
+    "loinc": "34067-9",
+    "section": "INDICATIONS AND USAGE",
+    "sentence": "Efficacy was established in two 12-week monotherapy trials in adults, in one 3-week adjunctive trial in adults, and in one 3-week monotherapy trial in pediatric patients (10 to 17 years) [see CLINICAL STUDIES ( 14.2 )]."
+   },
+   {
+    "loinc": "34067-9",
+    "section": "INDICATIONS AND USAGE",
+    "sentence": "Efficacy was established in two 8-week monotherapy trials in adult patients with bipolar I and bipolar II disorder [see CLINICAL STUDIES ( 14.2 )]."
+   }
+  ]
+ },
+ {
+  "slug": "risperidone",
+  "status": "scanned",
+  "labelTitle": "UZEDY (RISPERIDONE) INJECTION, SUSPENSION, EXTENDED RELEASE [TEVA PHARMACEUTICALS USA, INC.]",
+  "setid": "734eb776-4be0-4808-834b-0d8b0f9e021e",
+  "publishedDate": "Sep 14, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "sertindole",
+  "status": "no-us-label-found",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "sulpiride",
+  "status": "scanned",
+  "labelTitle": "SULPIRIDE POWDER [DARMERICA, LLC]",
+  "setid": "50a8c251-35ab-41f5-b7b7-3a4dd2222906",
+  "publishedDate": "Jan 06, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "ziprasidone",
+  "status": "scanned",
+  "labelTitle": "ZIPRASIDONE MESYLATE 20 MG/ML (ZIPRASIDONE MESYLATE) INJECTION, POWDER, LYOPHILIZED, FOR SOLUTION [ARMAS PHARMACEUTICALS INC.]",
+  "setid": "c5c27f0f-4e45-4bca-bb9a-2d3f1c243348",
+  "publishedDate": "Sep 24, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "zotepine",
+  "status": "no-us-label-found",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "aripiprazole",
+  "status": "scanned",
+  "labelTitle": "ARIPIPRAZOLE TABLET [SOLCO HEALTHCARE U.S., LLC]",
+  "setid": "abb8ad7e-7998-4485-a09f-a2892190f4ad",
+  "publishedDate": "Sep 29, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": [
+   {
+    "loinc": "34068-7",
+    "section": "DOSAGE AND ADMINISTRATION",
+    "sentence": "Maintenance Treatment: Maintenance of efficacy in schizophrenia was demonstrated in a trial involving patients with schizophrenia who had been symptomatically stable on other antipsychotic medications for periods of 3 months or longer."
+   }
+  ]
+ },
+ {
+  "slug": "brexpiprazole",
+  "status": "scanned",
+  "labelTitle": "REXULTI (BREXPIPRAZOLE) TABLET REXULTI (BREXPIPRAZOLE) KIT [OTSUKA AMERICA PHARMACEUTICAL, INC.]",
+  "setid": "2d301358-6291-4ec1-bd87-37b4ad9bd850",
+  "publishedDate": "May 28, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "cariprazine",
+  "status": "scanned",
+  "labelTitle": "VRAYLAR (CARIPRAZINE) CAPSULE, GELATIN COATED VRAYLAR (CARIPRAZINE) KIT [ALLERGAN, INC.]",
+  "setid": "4b5f7c65-aa2d-452a-b3db-bc85c06ff12f",
+  "publishedDate": "Aug 20, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "chlorpromazine",
+  "status": "scanned",
+  "labelTitle": "CHLORPROMAZINE HYDROCHLORIDE TABLET, FILM COATED [NORTHSTAR RX LLC]",
+  "setid": "2bd42d3a-bf89-4d74-a252-9b914106a570",
+  "publishedDate": "Aug 27, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": [
+   {
+    "loinc": "34068-7",
+    "section": "DOSAGE AND ADMINISTRATION",
+    "sentence": "Maximum improvement may not be seen for weeks or even months."
+   }
+  ]
+ },
+ {
+  "slug": "cyamemazine",
+  "status": "no-us-label-found",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "flupenthixol",
+  "status": "no-us-label-found",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "fluphenazine",
+  "status": "scanned",
+  "labelTitle": "FLUPHENAZINE DECANOATE INJECTION, SOLUTION [PAR HEALTH USA, LLC]",
+  "setid": "970e6fde-9cc8-475b-8a9e-bde0579a72a7",
+  "publishedDate": "Aug 28, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": [
+   {
+    "loinc": "34068-7",
+    "section": "DOSAGE AND ADMINISTRATION",
+    "sentence": "The onset of action generally appears between 24 and 72 hours after injection and the effects of the drug on psychotic symptoms becomes significant within 48 to 96 hours."
+   }
+  ]
+ },
+ {
+  "slug": "haloperidol",
+  "status": "scanned",
+  "labelTitle": "HALOPERIDOL (HALOPERIDOL LACTATE) INJECTION, SOLUTION [FRESENIUS KABI USA, LLC]",
+  "setid": "b1ad2abd-a9d6-44e3-957b-36a73260f4f5",
+  "publishedDate": "Oct 01, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": [
+   {
+    "loinc": "34068-7",
+    "section": "DOSAGE AND ADMINISTRATION",
+    "sentence": "Depending on the response of the patient, subsequent doses may be given, administered as often as every hour, although 4 to 8 hour intervals may be satisfactory."
+   }
+  ]
+ },
+ {
+  "slug": "loxapine",
+  "status": "scanned",
+  "labelTitle": "ADASUVE (LOXAPINE) AEROSOL, POWDER [ALEXZA PHARMACEUTICALS, INC.]",
+  "setid": "50e11732-7387-452d-b3e6-db3a431d5c4a",
+  "publishedDate": "Oct 05, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "mesoridazine",
+  "status": "no-us-label-found",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "molindone",
+  "status": "scanned",
+  "labelTitle": "MOLINDONE HYDROCHLORIDE TABLET [EPIC PHARMA, LLC]",
+  "setid": "1275e92f-9573-4d0c-8e77-1c9ac47696d2",
+  "publishedDate": "Dec 19, 2025",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "perphenazine",
+  "status": "scanned",
+  "labelTitle": "PERPHENAZINE TABLET, FILM COATED [PAR HEALTH USA, LLC]",
+  "setid": "5fbfe9da-26e8-4705-98f3-42acd3d7b439",
+  "publishedDate": "Sep 10, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "pimozide",
+  "status": "scanned",
+  "labelTitle": "PIMOZIDE TABLET [PAR HEALTH USA, LLC]",
+  "setid": "70b079e2-a1f7-4a93-8685-d60a4d7c1280",
+  "publishedDate": "Sep 07, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "pipothiazine",
+  "status": "no-us-label-found",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "thioridazine",
+  "status": "scanned",
+  "labelTitle": "THIORIDAZINE HYDROCHLORIDE TABLET, FILM COATED [MYLAN INSTITUTIONAL INC.]",
+  "setid": "52fea941-0b47-41c1-b00d-f88150e8ab93",
+  "publishedDate": "Nov 17, 2025",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "thiothixene",
+  "status": "scanned",
+  "labelTitle": "THIOTHIXENE CAPSULE [AMNEAL PHARMACEUTICALS NY LLC]",
+  "setid": "81c40311-7dc4-4332-8920-a39a8466aea6",
+  "publishedDate": "Mar 24, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "trifluoperazine",
+  "status": "scanned",
+  "labelTitle": "TRIFLUOPERAZINE HYDROCHLORIDE TABLET, FILM COATED [MYLAN INSTITUTIONAL INC.]",
+  "setid": "f742a579-411a-4140-91c4-edc735d638fa",
+  "publishedDate": "Jul 24, 2025",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "zuclopenthixol",
+  "status": "no-us-label-found",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "gabapentin",
+  "status": "scanned",
+  "labelTitle": "GABAPENTIN TABLET, FILM COATED [GRANULES PHARMACEUTICALS INC.]",
+  "setid": "e847bcfa-f3de-404a-8a57-d8a414691e6a",
+  "publishedDate": "Oct 12, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "levetiracetam",
+  "status": "scanned",
+  "labelTitle": "LEVETIRACETAM TABLET, FILM COATED [GRANULES PHARMACEUTICALS INC.]",
+  "setid": "b4781ec4-43ad-4052-9a6a-b24fda119b32",
+  "publishedDate": "Oct 12, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": [
+   {
+    "loinc": "43685-7",
+    "section": "WARNINGS AND PRECAUTIONS",
+    "sentence": "The median time of onset is reported to be 14 to 17 days, but cases have been reported at least four months after initiation of treatment."
+   },
+   {
+    "loinc": "42231-1",
+    "section": "MEDICATION GUIDE",
+    "sentence": "Levetiracetam tablet is a prescription medicine taken by mouth that is used to treat partial-onset seizures in people 1 month of age and older."
+   },
+   {
+    "loinc": "42231-1",
+    "section": "MEDICATION GUIDE",
+    "sentence": "It is not known if levetiracetam tablets are safe or effective in children under: 1 month of age to treat partial-onset seizures 12 years of age to treat myoclonic seizures 6 years of age to treat primary generalized tonic-clonic seizures Before taking your medicine, make sure you have received the correct medicine."
+   }
+  ]
+ },
+ {
+  "slug": "pregabalin",
+  "status": "scanned",
+  "labelTitle": "PREGABALIN CAPSULE [ASCEND LABORATORIES, LLC]",
+  "setid": "e48db3c2-7351-41f2-a451-5a8341c4125c",
+  "publishedDate": "Aug 06, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": [
+   {
+    "loinc": "34068-7",
+    "section": "DOSAGE AND ADMINISTRATION",
+    "sentence": "| Adjunctive Therapy for Partial-Onset Seizures in Pediatric Patients Weighing Less than 30 kg (2.4) | 1 month to less than 4 years: 3 divided doses per day 4 years and older: 2 or 3 divided doses per day | 14mg/kg/day."
+   },
+   {
+    "loinc": "34068-7",
+    "section": "DOSAGE AND ADMINISTRATION",
+    "sentence": "2.4 Adjunctive Therapy for Partial-Onset Seizures in Patients 1 Month of Age and Older The recommended dosages for adults and pediatric patients 1 month of age and older are included in Table 1."
+   },
+   {
+    "loinc": "43685-7",
+    "section": "WARNINGS AND PRECAUTIONS",
+    "sentence": "In the pregabalin controlled trials in pediatric patients 4 to less than 17 years of age and 1 month to less than 4 years of age for the treatment of partial-onset seizures, somnolence was reported in 21% and 15% of pregabalin-treated patients compared to 14% and 9% of placebo-treated patients, respectively, and occurred more frequently at higher doses."
+   },
+   {
+    "loinc": "42231-1",
+    "section": "MEDICATION GUIDE",
+    "sentence": "Pregabalin capsule is a prescription medicine used in people 1 month of age and older to treat: partial-onset seizures when taken together with other seizure medicines."
+   },
+   {
+    "loinc": "42231-1",
+    "section": "MEDICATION GUIDE",
+    "sentence": "For the treatment of partial-onset seizures when taken together with other seizure medicines, it is not known if pregabalin capsules is safe and effective in children under1 month of age."
+   }
+  ]
+ },
+ {
+  "slug": "tiagabine",
+  "status": "scanned",
+  "labelTitle": "TIAGABINE HYDROCHLORIDE TABLET, FILM COATED [TEVA PHARMACEUTICALS USA, INC.]",
+  "setid": "953ef3cc-e3cb-480f-b9ea-256520fd62b8",
+  "publishedDate": "Apr 15, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "topiramate",
+  "status": "scanned",
+  "labelTitle": "TOPAMAX (TOPIRAMATE) TABLET, COATED TOPAMAX (TOPIRAMATE) CAPSULE, COATED PELLETS [JANSSEN PHARMACEUTICALS, INC.]",
+  "setid": "21628112-0c47-11df-95b3-498d55d89593",
+  "publishedDate": "Oct 06, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "zonisamide",
+  "status": "scanned",
+  "labelTitle": "ZONISAMIDE CAPSULE [ZYDUS LIFESCIENCES LIMITED]",
+  "setid": "4a4de4ca-6e4a-4b62-b2b4-26cef6dafb2f",
+  "publishedDate": "Oct 09, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "carbamazepine",
+  "status": "scanned",
+  "labelTitle": "CARBAMAZEPINE TABLET [NIVAGEN PHARMACEUTICALS, INC.]",
+  "setid": "e68998cb-5f91-4d7e-85a6-555efb8b0384",
+  "publishedDate": "Oct 01, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "lamotrigine",
+  "status": "scanned",
+  "labelTitle": "LAMOTRIGINE TABLET [SUN PHARMACEUTICAL INDUSTRIES, INC.]",
+  "setid": "83297e2e-9199-4b3d-9f44-a921787758fe",
+  "publishedDate": "Sep 28, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "lithium",
+  "status": "scanned",
+  "labelTitle": "LITHIUM SOLUTION [ADVAGEN PHARMA LTD]",
+  "setid": "ff9baf45-830f-4a8a-8986-5caeaa1b38cf",
+  "publishedDate": "Sep 14, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "oxcarbazepine",
+  "status": "scanned",
+  "labelTitle": "OXTELLAR XR (OXCARBAZEPINE) TABLET [SUPERNUS PHARMACEUTICALS, INC.]",
+  "setid": "aa610e56-1d1d-11e1-8bc2-0800200c9a66",
+  "publishedDate": "Oct 06, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": [
+   {
+    "loinc": "43685-7",
+    "section": "WARNINGS AND PRECAUTIONS",
+    "sentence": "The median time of onset for reported cases was 19 days."
+   }
+  ]
+ },
+ {
+  "slug": "valproate",
+  "status": "scanned",
+  "labelTitle": "VALPROIC ACID SOLUTION [PAI HOLDINGS, LLC DBA PAI PHARMA]",
+  "setid": "7d5cb52e-37dd-4dfa-a6f4-09f9548846c6",
+  "publishedDate": "Aug 17, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "prazosin",
+  "status": "scanned",
+  "labelTitle": "PRAZOSIN HYDROCHLORIDE CAPSULE [GRANULES PHARMACEUTICALS INC.]",
+  "setid": "d01b8927-a422-43b3-89de-088506fdee3c",
+  "publishedDate": "Oct 12, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "diphenhydramine",
+  "status": "scanned",
+  "labelTitle": "SLEEP AID (DIPHENHYDRAMINE HCL) TABLET, FILM COATED [AMERISOURCE BERGEN]",
+  "setid": "147adc14-ca7c-45f5-9925-ea569edbfe96",
+  "publishedDate": "Oct 12, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "hydroxyzine",
+  "status": "scanned",
+  "labelTitle": "HYDROXYZINE HYDROCHLORIDE TABLET, FILM COATED [ST MARY'S MEDICAL PARK PHARMACY]",
+  "setid": "9ef6a4b7-362d-61b4-e053-2995a90a0ebb",
+  "publishedDate": "Jul 29, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "buspirone",
+  "status": "scanned",
+  "labelTitle": "BUSPIRONE HYDROCHLORIDE TABLET [AIPING PHARMACEUTICAL, INC.]",
+  "setid": "55810b17-4796-49d0-90e4-8e075d62eda4",
+  "publishedDate": "Jul 31, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "alprazolam",
+  "status": "scanned",
+  "labelTitle": "XANAX (ALPRAZOLAM) TABLET [VIATRIS SPECIALTY LLC]",
+  "setid": "bb5cf72e-3a41-41a8-9a38-80f974eca33f",
+  "publishedDate": "Oct 12, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "chlordiazepoxide",
+  "status": "scanned",
+  "labelTitle": "CHLORDIAZEPOXIDE HYDROCHLORIDE CAPSULE [UNIT DOSE SOLUTIONS, INC.]",
+  "setid": "53c278b6-d22d-79bd-e063-6294a90a82cd",
+  "publishedDate": "Jun 22, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "clonazepam",
+  "status": "scanned",
+  "labelTitle": "CLONAZEPAM TABLET [UNIT DOSE SOLUTIONS, INC.]",
+  "setid": "5c2ccdcf-4f47-df06-e063-6294a90a42eb",
+  "publishedDate": "Sep 25, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": [
+   {
+    "loinc": "34067-9",
+    "section": "INDICATIONS AND USAGE",
+    "sentence": "The efficacy of clonazepam tablets was established in two 6- to 9-week trials in panic disorder patients whose diagnoses corresponded to the DSM-IIIR category of panic disorder (see CLINICAL PHARMACOLOGY: Clinical Trials )."
+   }
+  ]
+ },
+ {
+  "slug": "clorazepate",
+  "status": "scanned",
+  "labelTitle": "CLORAZEPATE DIPOTASSIUM TABLET [APOTEX CORP.]",
+  "setid": "6e07efe5-29b6-6d1e-661a-f696c4b17f43",
+  "publishedDate": "Sep 11, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "diazepam",
+  "status": "scanned",
+  "labelTitle": "VALIUM (DIAZEPAM) TABLET [WAYLIS THERAPEUTICS LLC]",
+  "setid": "260e2041-2bb3-482f-850e-b5d47a7bdbe6",
+  "publishedDate": "Oct 09, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "loflazepate",
+  "status": "no-us-label-found",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "lorazepam",
+  "status": "scanned",
+  "labelTitle": "LOREEV XR (LORAZEPAM) CAPSULE, EXTENDED RELEASE [ALMATICA PHARMA LLC]",
+  "setid": "227734c1-bf01-9607-73ea-5a1f38a89bd9",
+  "publishedDate": "Oct 09, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "midazolam",
+  "status": "scanned",
+  "labelTitle": "MIDAZOLAM IN SODIUM CHLORIDE (MIDAZOLAM) INJECTION, SOLUTION [WG CRITICAL CARE, LLC.]",
+  "setid": "f051776f-94c5-4e34-80ed-f45b9c36881e",
+  "publishedDate": "Sep 23, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": [
+   {
+    "loinc": "34090-1",
+    "section": "CLINICAL PHARMACOLOGY",
+    "sentence": "Intravenous induction doses of midazolam depress the ventilatory response to carbon dioxide stimulation for 15 minutes or more beyond the duration of ventilatory depression following administration of thiopental in adults."
+   }
+  ]
+ },
+ {
+  "slug": "oxazepam",
+  "status": "scanned",
+  "labelTitle": "OXAZEPAM CAPSULE [EPIC PHARMA, LLC]",
+  "setid": "bb6d9142-3647-4591-8f84-31b61b755634",
+  "publishedDate": "Oct 02, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "flumazenil",
+  "status": "scanned",
+  "labelTitle": "FLUMAZENIL INJECTION, SOLUTION [HF ACQUISITION CO LLC, DBA HEALTHFIRST]",
+  "setid": "56452ba8-521d-1f84-e063-6294a90af6fc",
+  "publishedDate": "Jul 13, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": [
+   {
+    "loinc": "34090-1",
+    "section": "CLINICAL PHARMACOLOGY",
+    "sentence": "The onset of reversal is usually evident within 1 to 2 minutes after the injection is completed."
+   },
+   {
+    "loinc": "34090-1",
+    "section": "CLINICAL PHARMACOLOGY",
+    "sentence": "Eighty percent response will be reached within 3 minutes, with the peak effect occurring at 6 to 10 minutes."
+   }
+  ]
+ },
+ {
+  "slug": "propranolol",
+  "status": "scanned",
+  "labelTitle": "HEMANGEOL (PROPRANOLOL HYDROCHLORIDE) SOLUTION [ETON PHARMACEUTICALS, INC.]",
+  "setid": "4f8341ee-dac6-1ca9-e063-6394a90ac960",
+  "publishedDate": "Sep 14, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "estazolam",
+  "status": "scanned",
+  "labelTitle": "ESTAZOLAM TABLET [ACTAVIS PHARMA, INC.]",
+  "setid": "a1e3b4bf-22e9-430a-a768-4d86ae886c9e",
+  "publishedDate": "Jun 26, 2025",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "flunitrazepam",
+  "status": "no-us-label-found",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "flurazepam",
+  "status": "scanned",
+  "labelTitle": "FLURAZEPAM HYDROCHLORIDE CAPSULE [CHARTWELL RX, LLC]",
+  "setid": "8f476891-1346-4e8c-ac1b-f8cbdc64f5a1",
+  "publishedDate": "Oct 30, 2024",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "quazepam",
+  "status": "scanned",
+  "labelTitle": "QUAZEPAM TABLET [ATLAND PHARMACEUTICALS, LLC]",
+  "setid": "f7d63f3f-5303-48ab-bce2-35fd62c45799",
+  "publishedDate": "Nov 17, 2025",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "temazepam",
+  "status": "scanned",
+  "labelTitle": "TEMAZEPAM CAPSULE [ASCEND LABORATORIES, LLC]",
+  "setid": "8f54731f-c5b7-492c-acb0-444c5fbb7029",
+  "publishedDate": "Aug 07, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": [
+   {
+    "loinc": "34067-9",
+    "section": "INDICATIONS AND USAGE",
+    "sentence": "The clinical trials performed in support of efficacy were 2 weeks in duration with the final formal assessment of sleep latency performed at the end of treatment."
+   }
+  ]
+ },
+ {
+  "slug": "triazolam",
+  "status": "scanned",
+  "labelTitle": "TRIAZOLAM TABLET [MYLAN PHARMACEUTICALS INC.]",
+  "setid": "5add318e-11b9-42f8-b052-0d8cebb32fcf",
+  "publishedDate": "Jul 13, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "suvorexant",
+  "status": "scanned",
+  "labelTitle": "BELSOMRA (SUVOREXANT) TABLET, FILM COATED [MERCK SHARP & DOHME LLC]",
+  "setid": "e5b72731-1acb-45b7-9c13-290ad12d3951",
+  "publishedDate": "Mar 24, 2025",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "ramelteon",
+  "status": "scanned",
+  "labelTitle": "RAMELTEON TABLET, FILM COATED [XIROMED, LLC]",
+  "setid": "5c1ba52a-8e7a-844a-6c48-d1c9bf9fff0e",
+  "publishedDate": "Oct 09, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": [
+   {
+    "loinc": "34067-9",
+    "section": "INDICATIONS AND USAGE",
+    "sentence": "The clinical trials performed in support of efficacy were up to six months in duration."
+   }
+  ]
+ },
+ {
+  "slug": "tasimelteon",
+  "status": "scanned",
+  "labelTitle": "TASIMELTEON CAPSULE [APOTEX CORP.]",
+  "setid": "46b09064-a675-92d5-24a7-dac0410f77ae",
+  "publishedDate": "Sep 21, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "eszopiclone",
+  "status": "scanned",
+  "labelTitle": "ESZOPICLONE TABLET, FILM COATED [ST MARY'S MEDICAL PARK PHARMACY]",
+  "setid": "c4ff1d6a-918e-c046-e053-2a95a90a9c9b",
+  "publishedDate": "Sep 02, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": [
+   {
+    "loinc": "34067-9",
+    "section": "INDICATIONS AND USAGE",
+    "sentence": "The clinical trials performed in support of efficacy were up to 6 months in duration."
+   }
+  ]
+ },
+ {
+  "slug": "zaleplon",
+  "status": "scanned",
+  "labelTitle": "ZALEPLON CAPSULE [HIKMA PHARMACEUTICALS USA INC.]",
+  "setid": "cadd9d75-2139-4fab-94ce-2992e6a55780",
+  "publishedDate": "Mar 31, 2025",
+  "accessedAt": "2026-10-13",
+  "matches": [
+   {
+    "loinc": "34067-9",
+    "section": "INDICATIONS AND USAGE",
+    "sentence": "Zaleplon has been shown to decrease the time to sleep onset for up to 30 days in controlled clinical studies (see Clinical Trials under CLINICAL PHARMACOLOGY )."
+   },
+   {
+    "loinc": "34067-9",
+    "section": "INDICATIONS AND USAGE",
+    "sentence": "The clinical trials performed in support of efficacy ranged from a single night to 5 weeks in duration."
+   }
+  ]
+ },
+ {
+  "slug": "zolpidem",
+  "status": "scanned",
+  "labelTitle": "ZOLPIDEM TARTRATE TABLET [TORRENT PHARMACEUTICALS LIMITED]",
+  "setid": "1584bad1-7bf4-4805-bdd9-7eb0fac92721",
+  "publishedDate": "Sep 02, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": [
+   {
+    "loinc": "34067-9",
+    "section": "INDICATIONS AND USAGE",
+    "sentence": "The clinical trials performed in support of efficacy were 4 to 5 weeks in duration with the final formal assessments of sleep latency performed at the end of treatment."
+   }
+  ]
+ },
+ {
+  "slug": "zopiclone",
+  "status": "no-us-label-found",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "clonidine",
+  "status": "scanned",
+  "labelTitle": "CLONIDINE TRANSDERMAL SYSTEM USP, 0.1 MG/DAY (CLONIDINE TRANSDERMAL SYSTEM) PATCH CLONIDINE TRANSDERMAL SYSTEM USP, 0.2 MG/DAY (CLONIDINE TRANSDERMAL SYSTEM) PATCH CLONIDINE TRANSDERMAL SYSTEM USP, 0.3 MG/DAY (CLONIDINE TRANSDERMAL SYSTEM) PATCH [TRUPHARMA, LLC]",
+  "setid": "05d520bf-3ab7-4337-9f38-4418e5e7e1e9",
+  "publishedDate": "Oct 12, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "guanfacine",
+  "status": "scanned",
+  "labelTitle": "GUANFACINE EXTENDED-RELEASE (GUANFACINE) TABLET, EXTENDED RELEASE [UPSHER-SMITH LABORATORIES, LLC]",
+  "setid": "07a701e2-39b7-4bb1-a7c7-d9baed4ab18a",
+  "publishedDate": "Oct 01, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "atomoxetine",
+  "status": "scanned",
+  "labelTitle": "ATOMOXETINE CAPSULE [GLENMARK PHARMACEUTICALS INC., USA]",
+  "setid": "0ab8d905-e890-4e91-a730-3e5d12f5c23f",
+  "publishedDate": "Oct 09, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "dexamphetamine",
+  "status": "scanned",
+  "labelTitle": "DEXTROAMPHETAMINE SULFATE CAPSULE, EXTENDED RELEASE [ACTAVIS PHARMA, INC.]",
+  "setid": "9e92ccc3-d81c-461d-a19f-7e9b582be357",
+  "publishedDate": "Oct 02, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "amphetamine",
+  "status": "scanned",
+  "labelTitle": "AMPHETAMINE EXTENDED-RELEASE TABLET, ORALLY DISINTEGRATING [NEOS THERAPEUTICS, LP]",
+  "setid": "48d0f55c-f847-4d26-b2ed-94b5a2770228",
+  "publishedDate": "Oct 05, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "lisdexamfetamine",
+  "status": "scanned",
+  "labelTitle": "LISDEXAMFETAMINE DIMESYLATE TABLET, CHEWABLE [SPECGX LLC]",
+  "setid": "3a79b2ab-4131-4978-99a0-0119df57d5fe",
+  "publishedDate": "Sep 28, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "dexmethylphenidate",
+  "status": "scanned",
+  "labelTitle": "DEXMETHYLPHENIDATE HYDROCHLORIDE CAPSULE, EXTENDED RELEASE [GRANULES PHARMACEUTICALS INC.]",
+  "setid": "abe6862b-3cf3-4aad-98ea-05a5fb54ebec",
+  "publishedDate": "Oct 12, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "methylphenidate",
+  "status": "scanned",
+  "labelTitle": "METHYLPHENIDATE HYDROCHLORIDE CAPSULE, EXTENDED RELEASE [GRANULES PHARMACEUTICALS INC.]",
+  "setid": "27ea91ad-f64e-43d7-ab10-6f988bca5379",
+  "publishedDate": "Oct 12, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "pemoline",
+  "status": "no-us-label-found",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "armodafinil",
+  "status": "scanned",
+  "labelTitle": "NUVIGIL (ARMODAFINIL) TABLET [APOTEX CORP.]",
+  "setid": "a69631d0-1263-769e-b232-4ab9160e0fa3",
+  "publishedDate": "Sep 15, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": [
+   {
+    "loinc": "43685-7",
+    "section": "WARNINGS AND PRECAUTIONS",
+    "sentence": "In cases where the time to onset was reported, serious rash occurred 1 day to 2 months after initiation of treatment, but isolated cases of serious dermatologic reactions have been reported with symptoms beginning after prolonged treatment (e.g., 3 months)."
+   }
+  ]
+ },
+ {
+  "slug": "modafinil",
+  "status": "scanned",
+  "labelTitle": "MODAFINIL TABLET [HERITAGE PHARMACEUTICALS INC. D/B/A AVET PHARMACEUTICALS INC.]",
+  "setid": "1a309416-bd6a-45b1-982f-b689b097453d",
+  "publishedDate": "Sep 07, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "donepezil",
+  "status": "scanned",
+  "labelTitle": "ARICEPT (DONEPEZIL HYDROCHLORIDE) TABLET, FILM COATED ARICEPT ODT (DONEPEZIL HYDROCHLORIDE) TABLET, ORALLY DISINTEGRATING [EISAI INC.]",
+  "setid": "98e451e1-e4d7-4439-a675-c5457ba20975",
+  "publishedDate": "Jun 30, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "galantamine",
+  "status": "scanned",
+  "labelTitle": "GALANTAMINE TABLET, FILM COATED [UPSHER-SMITH LABORATORIES, LLC]",
+  "setid": "10497273-d907-0514-e063-6294a90a1362",
+  "publishedDate": "Jun 03, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "rivastigmine",
+  "status": "scanned",
+  "labelTitle": "RIVASTIGMINE PATCH, EXTENDED RELEASE [NORTHSTAR RX LLC.]",
+  "setid": "8b809739-8381-4cc1-ab4a-5b17ab902a3d",
+  "publishedDate": "Nov 18, 2025",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "tacrine",
+  "status": "no-us-label-found",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "caprylidene",
+  "status": "no-us-label-found",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "memantine",
+  "status": "scanned",
+  "labelTitle": "MEMANTINE (MEMANTINE HYDROCHLORIDE) SOLUTION [APOTEX CORP.]",
+  "setid": "4076d3ef-d0a9-96c5-1a15-812c1e42929c",
+  "publishedDate": "Sep 23, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "acamprosate",
+  "status": "scanned",
+  "labelTitle": "ACAMPROSATE CALCIUM TABLET, DELAYED RELEASE [NCS HEALTHCARE OF KY, LLC DBA VANGARD LABS]",
+  "setid": "06b63fc8-572e-4b3d-8150-73b7854a9238",
+  "publishedDate": "Sep 21, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "buprenorphine",
+  "status": "scanned",
+  "labelTitle": "ETHIQA XR (BUPRENORPHINE HYDROCHLORIDE) INJECTION, SUSPENSION, EXTENDED RELEASE [FIDELIS ANIMAL HEALTH, INC.]",
+  "setid": "6205ff58-853f-4987-b099-c1e263385fc8",
+  "publishedDate": "Oct 12, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "disulfiram",
+  "status": "scanned",
+  "labelTitle": "DISULFIRAM TABLET [ALVOGEN INC.]",
+  "setid": "b90f8ff4-4fb3-46ab-8149-cb55f24a4044",
+  "publishedDate": "Nov 17, 2025",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "nalmefene",
+  "status": "scanned",
+  "labelTitle": "ZURNAI (NALMEFENE HYDROCHLORIDE) INJECTION, SOLUTION [KNOA PHARMA LLC ]",
+  "setid": "a59a5847-9fe4-4341-a203-be0a5e6d3e36",
+  "publishedDate": "Aug 19, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": [
+   {
+    "loinc": "34090-1",
+    "section": "CLINICAL PHARMACOLOGY",
+    "sentence": "Following ZURNAI administration the time to onset of effect, that is onset of reversal of respiratory depression, was observed between 2.5 to 5 minutes (Figure 1 and Figure 2)."
+   }
+  ]
+ },
+ {
+  "slug": "naltrexone",
+  "status": "scanned",
+  "labelTitle": "NALTREXONE HYDROCHLORIDE TABLET, FILM COATED [SPECGX LLC]",
+  "setid": "06ff2d5a-e62b-4fa4-bbdb-01938535bc65",
+  "publishedDate": "Sep 09, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "naltrexone-bupropion",
+  "status": "scanned",
+  "labelTitle": "CONTRAVE EXTENDED-RELEASE (NALTREXONE HYDROCHLORIDE AND BUPROPION HYDROCHLORIDE) TABLET, EXTENDED RELEASE [NALPROPION PHARMACEUTICALS LLC]",
+  "setid": "485ff360-32c8-11df-928b-0002a5d5c51b",
+  "publishedDate": "Nov 17, 2025",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "varenicline",
+  "status": "scanned",
+  "labelTitle": "TYRVAYA (VARENICLINE) SPRAY [OYSTER POINT PHARMA, INC.]",
+  "setid": "014c93dc-5737-479c-a9f0-aaadac1ac298",
+  "publishedDate": "Sep 30, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "benztropine",
+  "status": "scanned",
+  "labelTitle": "BENZTROPINE MESYLATE TABLET [PAR HEALTH USA, LLC]",
+  "setid": "c19664aa-a797-4192-b5f3-e906a7cac048",
+  "publishedDate": "Sep 29, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "trihexyphenidyl",
+  "status": "scanned",
+  "labelTitle": "TRIHEXYPHENIDYL HYDROCHLORIDE SOLUTION [CHARTWELL RX, LLC]",
+  "setid": "e8e2ac3b-80dc-4449-9365-2586d6d57e10",
+  "publishedDate": "Jul 20, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "flibanserin",
+  "status": "scanned",
+  "labelTitle": "ADDYI (FLIBANSERIN) TABLET, FILM COATED [SPROUT PHARMACEUTICALS, INC.]",
+  "setid": "3819daf3-e935-2c53-c527-e1d57922f394",
+  "publishedDate": "Dec 23, 2025",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "dextromethorphan",
+  "status": "scanned",
+  "labelTitle": "SUPRESS DX PEDIATRIC DROPS (DEXTROMETHORPHAN HYDROBROMIDE, GUAIFENESIN, PHENYLEPHRINE HYDROCHLORIDE) SYRUP [KRAMER NOVIS]",
+  "setid": "04f41623-c6f9-4950-b74a-811d54c689c9",
+  "publishedDate": "Oct 12, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "sodium-oxybate",
+  "status": "scanned",
+  "labelTitle": "LUMRYZ (SODIUM OXYBATE) FOR SUSPENSION, EXTENDED RELEASE LUMRYZ (SODIUM OXYBATE) KIT [ALKERMES, INC.]",
+  "setid": "10e5e40c-52f3-4c73-8a34-2c29c690a934",
+  "publishedDate": "Sep 17, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "lorcaserin",
+  "status": "no-us-label-found",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ },
+ {
+  "slug": "phentermine-topiramate",
+  "status": "scanned",
+  "labelTitle": "PHENTERMINE AND TOPIRAMATE CAPSULE, EXTENDED RELEASE [TEVA PHARMACEUTICALS, INC.]",
+  "setid": "918df93d-e033-4419-adcc-e21655ef8158",
+  "publishedDate": "Aug 21, 2026",
+  "accessedAt": "2026-10-13",
+  "matches": []
+ }
+]

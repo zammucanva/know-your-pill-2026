@@ -35,6 +35,8 @@ import { patientGuides } from "@/lib/kyp/patient";
 import { STAHL_MCQ_BANK, stahlMcqs } from "@/lib/kyp/stahl-mcqs";
 import { sharedWordingReport, validateDrug, type DrugValidation } from "@/lib/kyp/modes";
 import type { Drug, GuidedLearningMode } from "@/lib/kyp/data";
+import { dashboardRows, dashboardSummary } from "@/lib/kyp/evidence/dashboard";
+import { INDIAN_SOURCE_SEARCH, validateEvidence } from "@/lib/kyp/evidence";
 
 const OUT = "reports/medication-audit/four-mode";
 const SHARED_MIN = 10;
@@ -151,6 +153,8 @@ const distinct = Object.fromEntries(MODES.map((m) => [m, pathSets[m].size]));
 const noPath = drugs.filter((d) => !d.learningPaths?.length).map((d) => d.slug);
 
 const sharedWording = sharedWordingReport();
+const indiaRows = dashboardRows();
+const evidenceIssues = validateEvidence();
 const summary = {
   generatedFrom: "scripts/audit-four-mode-coverage.ts",
   medications: drugs.length,
@@ -248,6 +252,7 @@ const lensSummary = {
     }, {}),
     standardPurposeSentence: validations.reduce<Record<string, number>>((m, v) => ((m[v.explanation.standardPurposeSentence] = (m[v.explanation.standardPurposeSentence] ?? 0) + 1), m), {}),
     clinicallyReviewed: 0,
+    indiaFirst: { ...dashboardSummary(indiaRows), indianSourceSearch: INDIAN_SOURCE_SEARCH, evidenceIntegrityIssues: evidenceIssues.length },
     sharedWording: {
       note: "Standard sentences used across medicines. Claims are withheld from guidance; directions stay visible as standard wording. Nothing here is reviewed.",
       rules: sharedWording.rows.map((r) => ({ id: r.id, kind: r.kind, category: r.category, handling: r.handling, medications: r.medications })),
@@ -306,6 +311,8 @@ const gapRows = validations.map((v) => [
       : "Content owner: confirm or replace the registry wording and the withheld shared sentences; then clinical review",
 ]);
 writeFileSync(`${OUT}/patient-explanation-gaps.csv`, [gapHead, ...gapRows].map((r) => r.map((c) => csv(String(c))).join(",")).join("\n") + "\n");
+const idxHead = Object.keys(indiaRows[0]);
+writeFileSync(`${OUT}/india-first-dashboard.csv`, [idxHead, ...indiaRows.map((r) => idxHead.map((k) => String((r as unknown as Record<string, unknown>)[k])))].map((r) => r.map((c) => csv(String(c))).join(",")).join("\n") + "\n");
 const swHead = ["ruleId", "kind", "category", "handling", "medications", "fields", "originalWording", "whyHandledThisWay", "reviewStatus", "nextAction", "affectedSlugs"];
 const swRows = [...sharedWording.rows, ...sharedWording.unclassified].map((r) => [r.id, r.kind, r.category, r.handling, r.medications, r.fields.join("; "), r.wording, r.why, r.reviewStatus, r.nextAction, r.slugs.join("; ")]);
 writeFileSync(`${OUT}/shared-wording-review.csv`, [swHead, ...swRows].map((r) => r.map((c) => csv(String(c))).join(",")).join("\n") + "\n");

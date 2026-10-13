@@ -94,6 +94,68 @@
       "matches-registry-indication": 131
     },
     "clinicallyReviewed": 0,
+    "indiaFirst": {
+      "note": "Separate measures. Never add them into one percentage. Sources are not review; a draft is not approval; rendering is not content.",
+      "medications": 145,
+      "patientUiRenders": 145,
+      "indianSourcesVerified": 0,
+      "indianSourcesUnresolved": 145,
+      "usLabelDiscovery": {
+        "candidates-found": 121,
+        "none-found": 24
+      },
+      "medicationsWithRetrievedSource": 11,
+      "medicationsWithSourcedClaims": 11,
+      "claimsWithTraceableSource": 58,
+      "medicationsWithSourcedOnsetClaim": 7,
+      "onsetScan": {
+        "note": "Screening of US labels for sentences that may state onset. Candidates for a person to read in context; noisy; not claims.",
+        "scanned": 121,
+        "noUsLabel": 24,
+        "withCandidateSentences": 33,
+        "withCandidateSentencesButNoSourcedClaim": 28
+      },
+      "patientGuides": 12,
+      "explanationLevel": {
+        "authored-guide": 12,
+        "registry-specific": 117,
+        "template-only": 16
+      },
+      "medicationsWithWithheldSharedClaims": 132,
+      "medicationsWithMissingElements": 133,
+      "readability": {
+        "note": "Automated screening heuristic (Flesch-Kincaid grade, sentence length). Not a comprehension test.",
+        "medicationsAboveGrade10": 126,
+        "medicationsWithLongSentences": 51
+      },
+      "clinicallyReviewed": 0,
+      "indianSourceSearch": {
+        "accessedAt": "2026-10-13",
+        "outcome": "unresolved-for-every-medication",
+        "organisations": [
+          {
+            "name": "CDSCO (Central Drugs Standard Control Organisation)",
+            "url": "https://cdsco.gov.in/opencms/opencms/en/Home/",
+            "found": "Home page with menus named \"New Drugs\", \"Subsequent New Drugs\", \"Approval\", \"Drugs@CDSCO\", \"Prescribing Information\", \"Alerts\" and \"Adverse Drug Reaction related Notifications\".",
+            "perMedicineRecordsRetrievable": false,
+            "reason": "No per-medicine index was reachable by script. cdscoonline.gov.in returned no readable content without a browser session. No Indian label text was retrieved, so none is claimed."
+          },
+          {
+            "name": "IPC / PvPI (Indian Pharmacopoeia Commission, Pharmacovigilance Programme of India)",
+            "url": "https://www.ipc.gov.in/",
+            "found": "Home page with Indian Pharmacopoeia editions, National Formulary of India, PvPI (ADR reporting, publications, orders and circulars). No page named 'Drug Safety Alerts' was found on the home page.",
+            "perMedicineRecordsRetrievable": false,
+            "reason": "Pharmacopoeial monographs and PvPI publications were not retrieved per medicine. Nothing from them is claimed."
+          }
+        ],
+        "supplementary": {
+          "name": "DailyMed (US FDA labelling)",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/",
+          "use": "Supplementary international evidence only. A US label is not an Indian label."
+        }
+      },
+      "evidenceIntegrityIssues": 0
+    },
     "sharedWording": {
       "note": "Standard sentences used across medicines. Claims are withheld from guidance; directions stay visible as standard wording. Nothing here is reviewed.",
       "rules": [

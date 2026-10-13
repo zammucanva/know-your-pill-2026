@@ -48,9 +48,16 @@ const render = (mode: ModeId, slug: string) => {
   return renderToStaticMarkup(React.createElement(ModeLensView, { drugName: drug.genericName, lenses, mode }));
 };
 
-const explanationCopyStrings = (): string[] => [
-  ...Object.values(EXPLANATION_COPY).flatMap((v) => (typeof v === "string" ? [v] : Object.values(v).flatMap((x) => (typeof x === "string" ? [x] : [x(2), x(3)])))),
-];
+const explanationCopyStrings = (): string[] => {
+  const out: string[] = [];
+  const walk = (v: unknown) => {
+    if (typeof v === "string") out.push(v);
+    else if (typeof v === "function") out.push((v as (n: number) => string)(2), (v as (n: number) => string)(3));
+    else if (v && typeof v === "object") Object.values(v).forEach(walk);
+  };
+  walk(EXPLANATION_COPY);
+  return out;
+};
 
 describe("mode specifications", () => {
   test("four modes, each with a distinct objective and interaction", () => {
