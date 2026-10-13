@@ -93,7 +93,126 @@
       "none": 14,
       "matches-registry-indication": 131
     },
-    "clinicallyReviewed": 0
+    "clinicallyReviewed": 0,
+    "sharedWording": {
+      "note": "Standard sentences used across medicines. Claims are withheld from guidance; directions stay visible as standard wording. Nothing here is reviewed.",
+      "rules": [
+        {
+          "id": "onset-works-gradually",
+          "kind": "claim",
+          "category": "onset",
+          "handling": "withheld from guidance",
+          "medications": 131
+        },
+        {
+          "id": "onset-like-every-medicine",
+          "kind": "claim",
+          "category": "onset",
+          "handling": "withheld from guidance",
+          "medications": 13
+        },
+        {
+          "id": "onset-benefit-builds",
+          "kind": "claim",
+          "category": "onset",
+          "handling": "withheld from guidance",
+          "medications": 125
+        },
+        {
+          "id": "onset-do-not-judge",
+          "kind": "claim",
+          "category": "onset",
+          "handling": "withheld from guidance",
+          "medications": 125
+        },
+        {
+          "id": "ae-usually-early-settle",
+          "kind": "claim",
+          "category": "adverse-effects",
+          "handling": "withheld from guidance",
+          "medications": 132
+        },
+        {
+          "id": "ae-almost-always-solution",
+          "kind": "claim",
+          "category": "adverse-effects",
+          "handling": "withheld from guidance",
+          "medications": 132
+        },
+        {
+          "id": "admin-same-time-daily",
+          "kind": "claim",
+          "category": "administration",
+          "handling": "withheld from guidance",
+          "medications": 86
+        },
+        {
+          "id": "contra-allergy-only",
+          "kind": "claim",
+          "category": "contraindication-scope",
+          "handling": "withheld from guidance",
+          "medications": 120
+        },
+        {
+          "id": "dir-contact-urgently",
+          "kind": "direction",
+          "category": "safety-direction",
+          "handling": "shown as standard wording",
+          "medications": 131
+        },
+        {
+          "id": "dir-report-persistent",
+          "kind": "direction",
+          "category": "safety-direction",
+          "handling": "shown as standard wording",
+          "medications": 86
+        },
+        {
+          "id": "dir-do-not-stop-suddenly",
+          "kind": "direction",
+          "category": "safety-direction",
+          "handling": "shown as standard wording",
+          "medications": 103
+        },
+        {
+          "id": "dir-tell-every-doctor",
+          "kind": "direction",
+          "category": "interaction-direction",
+          "handling": "shown as standard wording",
+          "medications": 125
+        },
+        {
+          "id": "dir-tell-everything-you-take",
+          "kind": "direction",
+          "category": "interaction-direction",
+          "handling": "shown as standard wording",
+          "medications": 131
+        },
+        {
+          "id": "dir-avoid-alcohol-unless-safe",
+          "kind": "direction",
+          "category": "interaction-direction",
+          "handling": "shown as standard wording",
+          "medications": 131
+        },
+        {
+          "id": "dir-share-history",
+          "kind": "direction",
+          "category": "interaction-direction",
+          "handling": "shown as standard wording",
+          "medications": 133
+        },
+        {
+          "id": "dir-keep-appointments",
+          "kind": "direction",
+          "category": "monitoring-direction",
+          "handling": "shown as standard wording",
+          "medications": 133
+        }
+      ],
+      "unclassifiedSharedSentences": 0,
+      "medicationsWithAnyWithheldClaim": 132
+    }
   },
   "flows": {
     "note": "What each learning flow has to work with. Counts of authored material only: not a measure of quality or of clinical completeness.",

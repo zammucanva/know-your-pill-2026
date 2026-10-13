@@ -12,6 +12,13 @@ export interface ExplanationSegment {
    * medicine's own registry indication records. It is a check against existing data, not a clinical judgement.
    */
   indicationCheck?: "matches-registry-indication" | "not-matched";
+  /**
+   * "withhold": a shared claim (or an unclassified sentence shared by 20+ medicines) that is NOT shown as guidance
+   * for this medicine. The original sentence is kept for review. See shared-claims.ts.
+   */
+  handling: "show" | "withhold";
+  /** The shared-wording rule this sentence matched, if any. */
+  rule?: { id: string; kind: "claim" | "direction" | "unclassified"; category: string; why: string };
 }
 
 export interface ExplainedUse {
@@ -77,6 +84,11 @@ export const EXPLANATION_COPY = {
   sideEffectsNote: "Registry wording for patients. It may not list every effect. Not seeing an effect here does not mean it cannot happen.",
   sideEffectsNone:
     "This guide shows no patient wording about side effects here. That is not a sign that there are none. Ask your pharmacist or prescriber what to watch for.",
+  withheldSummary: (n: number) => `${n} standard sentence${n === 1 ? "" : "s"} not shown as guidance (needs review)`,
+  withheldNote:
+    "The same wording is used for many medicines and nothing in this guide confirms it for this one, so it is not shown as advice. It is kept here, unchanged, for review. Ask your pharmacist or prescriber about timing, how to take it, and what to expect.",
+  withheldLabel: "Not confirmed for this medicine",
+  directionLabel: "Standard advice used for many medicines (not specific to this one)",
   askHeading: "If anything here is unclear",
   ask: "Ask your pharmacist or prescriber. They can explain it for your situation.",
 } as const;

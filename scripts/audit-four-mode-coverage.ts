@@ -33,7 +33,7 @@ import { mkdirSync, writeFileSync } from "fs";
 import { drugs } from "@/lib/kyp/data";
 import { patientGuides } from "@/lib/kyp/patient";
 import { STAHL_MCQ_BANK, stahlMcqs } from "@/lib/kyp/stahl-mcqs";
-import { validateDrug, type DrugValidation } from "@/lib/kyp/modes";
+import { sharedWordingReport, validateDrug, type DrugValidation } from "@/lib/kyp/modes";
 import type { Drug, GuidedLearningMode } from "@/lib/kyp/data";
 
 const OUT = "reports/medication-audit/four-mode";
@@ -150,6 +150,7 @@ for (const d of drugs) for (const a of MODES) for (const b of MODES) {
 const distinct = Object.fromEntries(MODES.map((m) => [m, pathSets[m].size]));
 const noPath = drugs.filter((d) => !d.learningPaths?.length).map((d) => d.slug);
 
+const sharedWording = sharedWordingReport();
 const summary = {
   generatedFrom: "scripts/audit-four-mode-coverage.ts",
   medications: drugs.length,
@@ -247,6 +248,12 @@ const lensSummary = {
     }, {}),
     standardPurposeSentence: validations.reduce<Record<string, number>>((m, v) => ((m[v.explanation.standardPurposeSentence] = (m[v.explanation.standardPurposeSentence] ?? 0) + 1), m), {}),
     clinicallyReviewed: 0,
+    sharedWording: {
+      note: "Standard sentences used across medicines. Claims are withheld from guidance; directions stay visible as standard wording. Nothing here is reviewed.",
+      rules: sharedWording.rows.map((r) => ({ id: r.id, kind: r.kind, category: r.category, handling: r.handling, medications: r.medications })),
+      unclassifiedSharedSentences: sharedWording.unclassified.length,
+      medicationsWithAnyWithheldClaim: validations.filter((v) => v.explanation.withheldRules.length > 0).length,
+    },
   },
   flows: {
     note: "What each learning flow has to work with. Counts of authored material only: not a measure of quality or of clinical completeness.",
@@ -279,7 +286,7 @@ const lensSummary = {
   structuralDefectList: structural,
 };
 // Gaps for the content owner / clinical reviewer: nothing here is written for them, only listed.
-const gapHead = ["slug", "explanationLevel", "source", "documentedUses", "authoredGuideSentences", "registrySpecificSentences", "classSharedSentences", "templateSentences", "needsContentOwner"];
+const gapHead = ["slug", "explanationLevel", "source", "documentedUses", "authoredGuideSentences", "registrySpecificSentences", "classSharedSentences", "templateSentences", "withheldSharedClaims", "missingElements", "reviewStatus", "nextAction"];
 const gapRows = validations.map((v) => [
   v.slug,
   v.explanation.level,
@@ -289,9 +296,19 @@ const gapRows = validations.map((v) => [
   v.explanation.sentences["registry-specific"],
   v.explanation.sentences["class-shared"],
   v.explanation.sentences.template,
-  v.explanation.level === "template-only" ? "needs a medicine-specific patient explanation" : v.explanation.level === "missing" ? "needs any patient explanation" : v.explanation.level === "registry-specific" ? "needs clinical review before reliance" : "needs clinical review before reliance",
+  v.explanation.withheldRules.join("; "),
+  v.explanation.missingElements.join("; "),
+  "not clinically reviewed",
+  v.explanation.level === "template-only" || v.explanation.level === "missing"
+    ? "Content owner: supply a medicine-specific, source-backed patient explanation; then clinical review"
+    : v.explanation.source === "patient-guide"
+      ? "Clinical reviewer: review the Patient Guide and confirm or edit"
+      : "Content owner: confirm or replace the registry wording and the withheld shared sentences; then clinical review",
 ]);
 writeFileSync(`${OUT}/patient-explanation-gaps.csv`, [gapHead, ...gapRows].map((r) => r.map((c) => csv(String(c))).join(",")).join("\n") + "\n");
+const swHead = ["ruleId", "kind", "category", "handling", "medications", "fields", "originalWording", "whyHandledThisWay", "reviewStatus", "nextAction", "affectedSlugs"];
+const swRows = [...sharedWording.rows, ...sharedWording.unclassified].map((r) => [r.id, r.kind, r.category, r.handling, r.medications, r.fields.join("; "), r.wording, r.why, r.reviewStatus, r.nextAction, r.slugs.join("; ")]);
+writeFileSync(`${OUT}/shared-wording-review.csv`, [swHead, ...swRows].map((r) => r.map((c) => csv(String(c))).join(",")).join("\n") + "\n");
 writeFileSync(`${OUT}/lens-summary.json`, JSON.stringify(lensSummary, null, 2) + "\n");
 console.log("\n== lens contract validation ==\n" + JSON.stringify({ ...lensSummary, layers: { ...lensSummary.layers, quality: { ...lensSummary.layers.quality, possibleContradictions: lensSummary.layers.quality.possibleContradictions.length } } }, null, 1));
 if (process.argv.includes("--check") && structural.length) {

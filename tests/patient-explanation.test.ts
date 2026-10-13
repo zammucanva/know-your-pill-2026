@@ -135,7 +135,7 @@ describe("patient explanation: every medication has the slot, with honest proven
     const d = drugs.find((x) => !getPatientGuide(x.slug))!;
     const e = explainPatient(d);
     const groups = groupSegments(e.plainWords);
-    expect(groups.flatMap((g) => g.sentences)).toEqual(e.plainWords);
+    expect(groups.flatMap((g) => g.sentences)).toEqual(e.plainWords.filter((s) => s.handling === "show"));
     for (let i = 1; i < groups.length; i++) expect(groups[i].label).not.toBe(groups[i - 1].label);
   });
 

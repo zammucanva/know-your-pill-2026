@@ -8,7 +8,8 @@ import { EXPLANATION_COPY as EC, originLabel, type ExplanationSegment } from "@/
 export function groupSegments(segments: ExplanationSegment[]): { key: string; origin: ExplanationSegment["origin"]; label: string; sentences: ExplanationSegment[] }[] {
   const out: { key: string; origin: ExplanationSegment["origin"]; label: string; sentences: ExplanationSegment[] }[] = [];
   for (const s of segments) {
-    const label = originLabel(s);
+    if (s.handling === "withhold") continue; // withheld sentences are never grouped as guidance
+    const label = s.rule?.kind === "direction" ? EC.directionLabel : originLabel(s);
     const last = out[out.length - 1];
     if (last && last.label === label) last.sentences.push(s);
     else out.push({ key: `${out.length}-${label}`, origin: s.origin, label, sentences: [s] });
@@ -24,6 +25,7 @@ const tone: Record<ExplanationSegment["origin"], string> = {
 };
 
 export function ExplanationText({ segments, id }: { segments: ExplanationSegment[]; id?: string }) {
+  const withheld = segments.filter((s) => s.handling === "withhold");
   return (
     <div id={id} className="space-y-3">
       {groupSegments(segments).map((g) => (
@@ -48,7 +50,23 @@ export function ExplanationText({ segments, id }: { segments: ExplanationSegment
           )}
         </div>
       ))}
+      {withheld.length > 0 && (
+        <details data-withheld className="rounded-lg border border-dashed border-amber-500/50 p-3 text-sm">
+          <summary className="cursor-pointer font-medium">{EC.withheldSummary(withheld.length)}</summary>
+          <p className="mt-2 text-xs text-muted-foreground">{EC.withheldNote}</p>
+          <ul className="mt-2 space-y-2">
+            {withheld.map((s, i) => (
+              <li key={i} data-withheld-rule={s.rule?.id} className="rounded-md bg-muted/40 p-2">
+                <p>{s.text}</p>
+                <p className="mt-1 text-xs text-muted-foreground">
+                  {EC.withheldLabel}
+                  {s.sharedBy ? `. Same wording on ${s.sharedBy} medicines.` : "."} {s.rule?.why}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </details>
+      )}
     </div>
   );
 }
-

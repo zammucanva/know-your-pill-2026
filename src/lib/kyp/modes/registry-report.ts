@@ -62,6 +62,10 @@ export interface DrugValidation {
     uses: PatientExplanation["uses"]["state"];
     sentences: Record<"authored-guide" | "registry-specific" | "class-shared" | "template", number>;
     standardPurposeSentence: "none" | "matches-registry-indication" | "not-matched";
+    /** Shared-claim rules whose sentences are withheld from guidance for this medicine (original wording kept). */
+    withheldRules: string[];
+    /** What a content owner still has to supply for an easy, medicine-specific explanation. Nothing is generated. */
+    missingElements: string[];
   };
   flows: {
     questions: { quiz: number; stahl: number; total: number; skipped: number; withoutRationale: number };
@@ -129,12 +133,24 @@ export function validateDrug(
   const exSentences = { "authored-guide": 0, "registry-specific": 0, "class-shared": 0, template: 0 };
   for (const seg of [...ex.plainWords, ...ex.summary, ...ex.reminders, ...ex.sideEffects]) exSentences[seg.origin]++;
   const std = [...ex.plainWords, ...ex.summary].find((x) => x.indicationCheck);
+  const allSegs = [...ex.plainWords, ...ex.summary, ...ex.reminders, ...ex.sideEffects];
+  const withheldRules = Array.from(new Set(allSegs.filter((x) => x.handling === "withhold").map((x) => x.rule?.id ?? "unclassified-shared"))).sort();
+  const missingElements: string[] = [];
+  if (ex.level === "template-only" || ex.level === "missing") missingElements.push("medicine-specific plain explanation");
+  if (ex.source !== "patient-guide") {
+    missingElements.push("how to take it (Patient Guide only)", "urgent-help guidance (Patient Guide only)", "questions to ask a prescriber or pharmacist (Patient Guide only)");
+    if (!ex.sideEffects.some((x) => x.origin === "registry-specific" && x.handling === "show")) missingElements.push("side-effect wording specific to the medicine");
+    if (withheldRules.some((r) => r.startsWith("onset"))) missingElements.push("onset and timeline wording specific to the medicine");
+  }
+  if (ex.uses.state !== "listed") missingElements.push("documented uses");
   const explanation: DrugValidation["explanation"] = {
     level: ex.level,
     source: ex.source,
     uses: ex.uses.state,
     sentences: exSentences,
     standardPurposeSentence: std?.indicationCheck ?? "none",
+    withheldRules,
+    missingElements,
   };
   const flows: DrugValidation["flows"] = {
     questions:

@@ -1,6 +1,7 @@
 import { drugs } from "@/lib/kyp/data";
 import type { Drug } from "@/lib/kyp/data";
 import type { PatientGuide } from "@/lib/kyp/patient/types";
+import { matchSharedClaim } from "./shared-claims";
 import type { ExplanationLevel, ExplanationSegment, ExplainedUse, PatientExplanation } from "./explanation-copy";
 export * from "./explanation-copy";
 
@@ -78,25 +79,37 @@ function indicationMatches(condition: string, d: Drug): boolean {
 export function segmentRegistryText(text: unknown, d: Drug): ExplanationSegment[] {
   if (!clean(text)) return [];
   const share = sentenceShare();
-  return splitSentences(text).map((s) => {
+  return splitSentences(text).map((s): ExplanationSegment => {
     const norm = normaliseSentence(s, d);
+    const rule = matchSharedClaim(s);
     const std = STANDARD_PURPOSE.exec(norm);
-    if (std)
-      return {
-        text: s,
-        origin: "template" as const,
-        sharedBy: share.get(norm),
-        indicationCheck: indicationMatches(std[1], d) ? ("matches-registry-indication" as const) : ("not-matched" as const),
-      };
     const n = share.get(norm) ?? 1;
-    if (n >= TEMPLATE_THRESHOLD) return { text: s, origin: "template" as const, sharedBy: n };
-    if (n >= 2) return { text: s, origin: "class-shared" as const, sharedBy: n };
-    return { text: s, origin: "registry-specific" as const };
+    let seg: ExplanationSegment;
+    if (std)
+      seg = {
+        text: s,
+        origin: "template",
+        sharedBy: n,
+        indicationCheck: indicationMatches(std[1], d) ? "matches-registry-indication" : "not-matched",
+        handling: "show",
+      };
+    else if (n >= TEMPLATE_THRESHOLD) seg = { text: s, origin: "template", sharedBy: n, handling: "show" };
+    else if (n >= 2) seg = { text: s, origin: "class-shared", sharedBy: n, handling: "show" };
+    else seg = { text: s, origin: "registry-specific", handling: "show" };
+    if (rule) {
+      seg.rule = { id: rule.id, kind: rule.kind, category: rule.category, why: rule.why };
+      if (rule.kind === "claim") seg.handling = "withhold";
+    } else if (!std && n >= TEMPLATE_THRESHOLD) {
+      // Shared by 20+ medicines and not classified: never shown as guidance until a person classifies it.
+      seg.rule = { id: "unclassified-shared", kind: "unclassified", category: "unclassified", why: "Shared by 20 or more medicines and not yet classified by a content owner." };
+      seg.handling = "withhold";
+    }
+    return seg;
   });
 }
 
 export function guideSegments(...texts: unknown[]): ExplanationSegment[] {
-  return texts.filter(clean).flatMap((t) => splitSentences(t)).map((text) => ({ text, origin: "authored-guide" as const }));
+  return texts.filter(clean).flatMap((t) => splitSentences(t)).map((text): ExplanationSegment => ({ text, origin: "authored-guide", handling: "show" }));
 }
 
 export function explainPatient(drug: Drug, guide?: PatientGuide): PatientExplanation {
@@ -120,7 +133,7 @@ export function explainPatient(drug: Drug, guide?: PatientGuide): PatientExplana
   else if (drug.indications.length === 0) uses = { state: "empty", items: [] };
   else uses = { state: "listed", items: drug.indications.filter((i) => clean(i?.name)).map((i) => ({ name: i.name, status: STATUS_LABEL[i.status] ?? String(i.status) })) };
 
-  const specific = plainWords.some((s) => s.origin === "registry-specific");
+  const specific = plainWords.some((s) => s.origin === "registry-specific" && s.handling === "show");
   const level: ExplanationLevel = hasGuide ? "authored-guide" : plainWords.length === 0 ? "missing" : specific ? "registry-specific" : "template-only";
   return {
     level,
