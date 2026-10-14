@@ -43,3 +43,7 @@ Limitations: this is one comparison per side, and the load-dependent suites are 
 - `bun test tests/`: **2,038 pass, 0 fail, 0 skipped, 0 timeouts** (81 files, 243 s).
 - So the 47 earlier failures were the missing database, not defects in the branch or in the tests.
 
+## Release-candidate run (2026-10-15, after the evidence and review hardening)
+- A fresh download of the same EnterpriseDB PostgreSQL 16.9 zip had the identical SHA-256 as the first, which is consistent but still not a vendor-published digest. The instance was handled exactly as before (user process, localhost only, test-only role, deleted afterwards and verified).
+- `bun test tests/`: **2,060 pass, 0 fail, 0 skipped, 0 timeouts** (83 files, 277 s).
+
