@@ -17,6 +17,7 @@
 
 import { setDefaultTimeout } from "bun:test";
 import { spawn, execSync } from "child_process";
+import { connect } from "net";
 import { createWriteStream, existsSync } from "fs";
 import { tmpdir } from "os";
 import { join, resolve } from "path";
@@ -74,6 +75,30 @@ const DB_ENV = { DATABASE_URL: TEST_DB_URL, DIRECT_URL: TEST_DB_URL };
 let serverProc: ReturnType<typeof spawn> | null = null;
 let serverReady = false;
 
+/** Fails fast, with the prerequisite named, when no database is listening. The tests that need one FAIL: they are
+ * never skipped, because a skipped security test reads as a passing one. */
+async function assertDatabaseReachable(): Promise<void> {
+  const u = new URL(TEST_DB_URL);
+  const port = Number(u.port || 5432);
+  const ok = await new Promise<boolean>((resolveOk) => {
+    const sock = connect({ host: u.hostname, port });
+    const done = (v: boolean) => {
+      sock.destroy();
+      resolveOk(v);
+    };
+    sock.setTimeout(2000, () => done(false));
+    sock.once("connect", () => done(true));
+    sock.once("error", () => done(false));
+  });
+  if (!ok) {
+    throw new Error(
+      `TEST PREREQUISITE MISSING: no PostgreSQL is listening at ${u.hostname}:${port}. ` +
+        `Start a disposable local one (for example: docker run --rm -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=kyp_test postgres:16) ` +
+        `or point KYP_TEST_DATABASE_URL at a local database whose name contains "test". This suite needs it and is not skipped.`
+    );
+  }
+}
+
 /** Recreate the test DB from the VERSIONED Prisma migrations (fresh, zero
  * rows). Using `migrate deploy` — never `db push` — means every test run
  * also proves the production migration path works end-to-end. */
@@ -106,12 +131,16 @@ export async function ensureServer(): Promise<string> {
   // Kill any STALE server from a previous run. Next.js renames the standalone
   // process to "next-server (vX.Y.Z)", so a plain `pkill -f server.js` will
   // NOT match it — match on the renamed title instead.
-  try {
-    execSync('pkill -f "next-server" || true');
-  } catch {
-    // no stale process — fine
+  if (process.platform !== "win32") {
+    // (pkill does not exist on Windows; there, a stale server on the test port must be stopped by hand.)
+    try {
+      execSync('pkill -f "next-server" || true');
+    } catch {
+      // no stale process — fine
+    }
   }
   await Bun.sleep(500);
+  await assertDatabaseReachable();
   await resetTestDatabase();
   serverProc = spawn("node", [resolve(process.cwd(), ".next/standalone/server.js")], {
     env: {
