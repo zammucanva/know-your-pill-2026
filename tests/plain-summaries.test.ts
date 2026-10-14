@@ -63,6 +63,50 @@ describe("plain-language 'In short' summaries over quoted Medication Guide text"
     expect(n).toBeLessThan(guideQuotes.length + 1);
   });
 
+  describe("a summary line never says more, or less, than the sentence it stands for (audit regressions)", () => {
+    const ids = (t: string) => plainSummaryFor(fake(t))?.ids ?? [];
+    test("alcohol: qualified advice is not flattened into 'do not drink alcohol'", () => {
+      expect(ids("Do not drink alcohol while taking quetiapine tablets.")).toContain("alcohol");
+      expect(ids("Do not drink a lot of alcohol while taking CONTRAVE.")).not.toContain("alcohol");
+      expect(ids("Do not drink alcohol close to the time you take your ADDYI dose.")).not.toContain("alcohol");
+      const until = "Do not drink alcohol or take other medicines that make you sleepy or dizzy while taking clonazepam tablets until you talk to your healthcare provider.";
+      expect(ids(until)).toContain("alcohol-until-talk");
+      expect(ids(until)).not.toContain("alcohol");
+    });
+    test("swallow whole: not when the label also allows splitting the tablet", () => {
+      expect(ids("Swallow FETZIMA capsules whole.")).toContain("swallow-whole");
+      expect(ids("Trazodone tablets should be swallowed whole or broken in half along the score line.")).not.toContain("swallow-whole");
+    });
+    test("keep safe: 'away from children' only when the label says it", () => {
+      expect(ids("Keep XANAX in a safe place to prevent misuse and abuse.")).toEqual(["keep-safe-misuse"]);
+      expect(ids("Keep it in a safe place and away from children.")).toContain("keep-safe-children");
+    });
+    test("overdose help needs the overdose and the help in the same sentence", () => {
+      expect(ids("There is a risk of overdose and coma. Call your healthcare provider if you feel unwell. Go to the hospital emergency room.")).not.toContain("overdose-get-help");
+      expect(ids("If you take too much, call your healthcare provider or go to the nearest hospital emergency room right away.")).toContain("overdose-get-help");
+    });
+    test("withdrawal: the 'stopping suddenly' part must be in the text; a duration condition blocks the line", () => {
+      expect(ids("It can cause physical dependence and withdrawal reactions, which can be life-threatening.")).not.toContain("physical-dependence-withdrawal");
+      expect(ids("It can cause physical dependence and withdrawal reactions. Stopping suddenly or lowering the dose too quickly can cause withdrawal reactions that can be life-threatening.")).toContain("physical-dependence-withdrawal");
+      expect(ids("It can cause physical dependence and withdrawal reactions, especially if you take it for several weeks. Stopping suddenly can cause withdrawal reactions that can be life-threatening.")).not.toContain("physical-dependence-withdrawal");
+    });
+    test("allergic reaction: 'such as your liver' is not a list of signs", () => {
+      expect(ids("It may cause a serious allergic reaction that may affect parts of your body such as your liver. Call your healthcare provider right away.")).not.toContain("allergic-reaction");
+      expect(ids("Call your healthcare provider right away if you have signs of a serious allergic reaction: swelling of the face.")).toContain("allergic-reaction");
+    });
+    test("timing and numbers in the source are kept or the line is dropped", () => {
+      const early = ids("Antidepressant medicines may increase suicidal thoughts or actions in some children, teenagers, and young adults within the first few months of treatment or when the dose is changed.");
+      expect(early).toEqual(["antidepressant-suicidality-early-or-dose"]);
+      expect(ids("Antidepressant medicines may increase suicidal thoughts or actions in some children, teenagers, and young adults within the first few months of treatment.")).toEqual(["antidepressant-suicidality-early"]);
+      expect(ids("Antidepressant medicines may increase suicidal thoughts or actions in some children, teenagers, and young adults.")).toEqual(["antidepressant-suicidality"]);
+      expect(ids("Like other antiepileptic drugs, it may cause suicidal thoughts or actions in a very small number of people, about 1 in 500.")).not.toContain("antiepileptic-suicidality");
+      expect(ids("Do not drive or operate machinery until at least 6 hours after you take it and until you know how it affects you.")).not.toContain("driving");
+      expect(ids("Do not drive or operate machinery until you know how it affects you.")).toContain("driving");
+      // a phone number is not a clinical number
+      expect(ids("If you take too much, call your healthcare provider or Poison Control Center at 1-800-222-1222 or go to the nearest hospital emergency room right away.")).toContain("overdose-get-help");
+    });
+  });
+
   test("the page shows the summary first, says it is unreviewed, and keeps the label's own words one click away", () => {
     const h = html("alprazolam");
     expect(h).toContain("data-plain-summary");
