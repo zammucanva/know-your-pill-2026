@@ -14,7 +14,7 @@ import type { PatientExplanation } from "@/lib/kyp/modes/explanation-copy";
  *   general-direction  : only the page's general "ask your pharmacist or prescriber" direction.
  *   unavailable        : nothing supported to show; the page says so and says who can help.
  */
-export type PartState = "authored-guide" | "source-backed" | "registry-wording" | "standard-wording" | "general-direction" | "unavailable";
+export type PartState = "authored-guide" | "source-backed" | "registry-wording" | "standard-wording" | "general-direction" | "safety-alert-only" | "unavailable";
 
 export type PartId = "what" | "uses" | "how" | "precautions" | "side-effects" | "interactions" | "seek-help" | "questions" | "sources";
 
@@ -56,6 +56,8 @@ export interface PartInputs {
 
 /** A Medication Guide "What is X?" statement usually says what the medicine is used for as well. */
 export const usesStatedInWhat = (claims: ClaimRecord[]) => claims.some((c) => c.category === "what-it-is" && /\bused\b/i.test(c.patientWording));
+/** A statement taken from the Indian PvPI safety-alert list: a signal from reports, not a product label. */
+export const isSafetyAlertClaim = (c: ClaimRecord) => c.sourceId.split(":")[1] === "indian-safety-communication";
 const any = (claims: ClaimRecord[], cats: ClaimCategory[]) => claims.some((c) => cats.includes(c.category));
 const shown = (segs: PatientExplanation["plainWords"]) => segs.filter((s) => s.handling === "show");
 const specific = (segs: PatientExplanation["plainWords"]) => shown(segs).some((s) => s.origin === "registry-specific");
@@ -63,14 +65,16 @@ const specific = (segs: PatientExplanation["plainWords"]) => shown(segs).some((s
 export function partStates(i: PartInputs): Record<PartId, PartState> {
   const e = i.explanation;
   const g = i.hasGuide;
-  const has = (p: PartId) => any(i.claims, PART_CATEGORIES[p]);
+  const has = (p: PartId) => any(i.claims.filter((c) => !isSafetyAlertClaim(c)), PART_CATEGORIES[p]);
+  /** Only safety-alert signals support this part: it must not be labelled as covered by a product label. */
+  const alertOnly = (p: PartId) => !has(p) && any(i.claims.filter(isSafetyAlertClaim), PART_CATEGORIES[p]);
   const registryOrStandard = (segs: PatientExplanation["plainWords"]): PartState => (specific(segs) ? "registry-wording" : shown(segs).length ? "standard-wording" : "unavailable");
   const out: Record<PartId, PartState> = {
     what: g ? "authored-guide" : has("what") ? "source-backed" : e.level === "missing" ? "unavailable" : registryOrStandard(e.plainWords),
     uses: g ? "authored-guide" : has("uses") || usesStatedInWhat(i.claims) ? "source-backed" : e.uses.state === "listed" ? "registry-wording" : "unavailable",
     how: g ? "authored-guide" : has("how") ? "source-backed" : registryOrStandard(e.reminders) === "registry-wording" ? "registry-wording" : "unavailable",
     precautions: g ? "authored-guide" : has("precautions") ? "source-backed" : "unavailable",
-    "side-effects": g ? "authored-guide" : has("side-effects") ? "source-backed" : registryOrStandard(e.sideEffects),
+    "side-effects": g ? "authored-guide" : has("side-effects") ? "source-backed" : alertOnly("side-effects") ? "safety-alert-only" : registryOrStandard(e.sideEffects),
     interactions: g ? "authored-guide" : has("interactions") ? "source-backed" : i.interactionsStatement === "authored-registry" ? "registry-wording" : i.interactionsStatement === "template" ? "standard-wording" : "unavailable",
     "seek-help": g ? "authored-guide" : has("seek-help") ? "source-backed" : "general-direction",
     questions: "general-direction",
@@ -79,7 +83,8 @@ export function partStates(i: PartInputs): Record<PartId, PartState> {
   // Questions are prompts built from what the guide could not tell the reader, plus the guide's own list if any.
   out.questions = g ? "authored-guide" : "general-direction";
   const sourced = i.claims.length > 0 || g;
-  out.sources = sourced ? (g ? "authored-guide" : "source-backed") : "unavailable";
+  const onlyAlerts = i.claims.length > 0 && i.claims.every(isSafetyAlertClaim);
+  out.sources = sourced ? (g ? "authored-guide" : onlyAlerts ? "safety-alert-only" : "source-backed") : "unavailable";
   return out;
 }
 
@@ -134,7 +139,7 @@ export interface QuestionItem {
 
 export function questionsFor(states: Record<PartId, PartState>, ctx?: QuestionContext): QuestionItem[] {
   const fromParts: QuestionItem[] = (Object.keys(QUESTION_PROMPTS) as PartId[])
-    .filter((p) => states[p] === "unavailable" || states[p] === "standard-wording" || states[p] === "general-direction")
+    .filter((p) => states[p] === "unavailable" || states[p] === "standard-wording" || states[p] === "general-direction" || states[p] === "safety-alert-only")
     .map((p) => ({ key: p, part: p, question: QUESTION_PROMPTS[p]! }));
   if (!ctx || ctx.hasGuide) return fromParts;
   const extra: QuestionItem[] = [];

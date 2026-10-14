@@ -133,6 +133,7 @@ export const EXPLANATION_COPY = {
       "registry-wording": "Patient wording from this guide's own records. Not clinically reviewed.",
       "standard-wording": "Standard wording used for many medicines. Not specific to this one.",
       "general-direction": "A general direction, not information about this medicine.",
+      "safety-alert-only": "Only an Indian drug safety alert list entry supports this part. That list records safety signals from reports. It is not a product label and does not describe the medicine fully.",
       unavailable: "Nothing supported to show here. This is not a sign that nothing applies.",
     },
     chip: {
@@ -141,6 +142,7 @@ export const EXPLANATION_COPY = {
       "registry-wording": "Guide wording",
       "standard-wording": "Standard wording only",
       "general-direction": "General direction",
+      "safety-alert-only": "Safety alert signal only",
       unavailable: "Not available",
     },
     unavailable: {

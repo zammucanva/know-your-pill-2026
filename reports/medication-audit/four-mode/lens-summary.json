@@ -164,7 +164,8 @@
         "side-effects": {
           "authored-guide": 12,
           "registry-wording": 8,
-          "source-backed": 124,
+          "source-backed": 122,
+          "safety-alert-only": 2,
           "standard-wording": 1
         },
         "interactions": {

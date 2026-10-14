@@ -29,6 +29,7 @@
  * clinical quality; every row still needs qualified clinical review.
  */
 
+import { gapMatrix, gapMatrixCsv, gapMatrixMarkdown } from "@/lib/kyp/evidence/gap-matrix";
 import { mkdirSync, writeFileSync } from "fs";
 import { drugs } from "@/lib/kyp/data";
 import { patientGuides } from "@/lib/kyp/patient";
@@ -313,6 +314,9 @@ const flat = indiaRows.map((r) => {
 });
 const idxHead = Object.keys(flat[0]);
 writeFileSync(`${OUT}/india-first-dashboard.csv`, [idxHead, ...flat.map((r) => idxHead.map((k) => String(r[k])))].map((r) => r.map((c) => csv(String(c))).join(",")).join("\n") + "\n");
+const matrix = gapMatrix(indiaRows);
+writeFileSync(`${OUT}/patient-section-matrix.csv`, gapMatrixCsv(matrix));
+writeFileSync(`${OUT}/patient-section-matrix.md`, gapMatrixMarkdown(matrix));
 const swHead = ["ruleId", "kind", "category", "handling", "medications", "fields", "originalWording", "whyHandledThisWay", "reviewStatus", "nextAction", "affectedSlugs"];
 const swRows = [...sharedWording.rows, ...sharedWording.unclassified].map((r) => [r.id, r.kind, r.category, r.handling, r.medications, r.fields.join("; "), r.wording, r.why, r.reviewStatus, r.nextAction, r.slugs.join("; ")]);
 writeFileSync(`${OUT}/shared-wording-review.csv`, [swHead, ...swRows].map((r) => r.map((c) => csv(String(c))).join(",")).join("\n") + "\n");
