@@ -56,7 +56,7 @@ describe("custom test — engine pool", () => {
       expect(q.source.sectionHref.startsWith("/drugs/")).toBe(true);
       expect(q.explanation.length).toBeGreaterThan(10);
     }
-  });
+  }, 60000); // full-pool build on the 145-drug registry takes 5-9 s, over bun's 5 s default (also on main)
 
   test("topic filtering: pool shrinks with the selection", () => {
     const full = getPoolStats(ALL_SLUGS).total;
@@ -157,7 +157,7 @@ describe("custom test — attempt assembly", () => {
       a.questions.map((q) => q.attemptOptions.join()).join() ===
       c.questions.map((q) => q.attemptOptions.join()).join();
     expect(sameSet && sameOptions).toBe(false);
-  });
+  }, 60000); // full-pool build on the 145-drug registry takes 5-9 s, over bun's 5 s default (also on main)
 
   test("answer shuffling preserves the correct answer mapping", () => {
     for (let seed = 1; seed <= 20; seed++) {
@@ -186,7 +186,7 @@ describe("custom test — attempt assembly", () => {
       expect(q.attemptCorrectIndex).toBe(q.correctIndex);
     }
     expect(unshuffled.length).toBeGreaterThan(0); // the duloxetine MCQ exists
-  });
+  }, 60000); // full-pool build on the 145-drug registry takes 5-9 s, over bun's 5 s default (also on main)
 
   test("balanced selection spreads questions across templates", () => {
     const { questions } = buildTest(ALL_SLUGS, 40, 77);
