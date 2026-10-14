@@ -1,5 +1,6 @@
 import type { ClaimCategory, ClaimRecord } from "./types";
 import { batch2, type Make } from "./claims-batch2";
+import { batch3 } from "./claims-batch3";
 
 /**
  * Patient-facing claims, each tied to one stored excerpt of one retrieved source.
@@ -59,6 +60,7 @@ export const CLAIM_SOURCE_SETID: Record<string, string> = {
   tasimelteon: "46b09064-a675-92d5-24a7-dac0410f77ae",
   triiodothyronine: "548d684a-86f5-4e57-9844-d8cf0a84e068",
   diphenhydramine: "147adc14-ca7c-45f5-9925-ea569edbfe96",
+  "l-methylfolate": "76386336-417d-4f90-8171-1f745198ded2",
 };
 
 const IND = "34067-9";
@@ -383,5 +385,6 @@ export const CLAIM_RECORDS: ClaimRecord[] = [
   claim("selegiline", "interactions", GUIDE, "Especially tell your healthcare provider if you take: other medicines to treat depression (antidepressants) including other MAOI medicines decongestant medicines to treat cold or cough symptoms over-the-counter diet pills or herbal weight-loss products any herbal or dietary supplement that contains tyramine medicines called stimulants or uppers (amphetamines) buspirone, an anxiety medicine Some of these medicines need to be stopped for up to 5 weeks before you can start using EMSAM and for 2 weeks after you stop using EMSAM.", "Especially tell your healthcare provider if you take other antidepressants (including other MAOIs), decongestants for cold or cough, over-the-counter diet pills or herbal weight-loss products, herbal or dietary supplements that contain tyramine, stimulants (amphetamines) or buspirone. Some of these need to be stopped for up to 5 weeks before you start Emsam and for 2 weeks after you stop it.", { limitations: ["US label for the EMSAM skin patch only: it does not describe selegiline tablets or capsules.", "US Medication Guide only: Indian approval, strengths and warnings may differ.", "General information, not advice for any one person."] }),
   ...PI_CLAIMS(),
   ...batch2(piClaim),
+  ...batch3(piClaim),
   claim("selegiline", "how-to-take", GUIDE, "Use EMSAM exactly as your healthcare provider tells you to use it. Use only 1 patch at a time. Apply your patch right after you open the sealed pouch. Change your patch 1 time each day at the same time each day. Choose a time of day that works best for you. Your healthcare provider may need to change your dose of EMSAM until it is the right dose for you.", "Use Emsam exactly as your healthcare provider tells you. Use only 1 patch at a time. Apply the patch right after you open the sealed pouch. Change the patch once a day, at the same time each day. Your provider may need to change your dose until it is right for you.", { limitations: ["These directions are for the EMSAM skin patch only. They do not apply to selegiline tablets or capsules.", "US Medication Guide only: Indian approval, strengths and warnings may differ.", "General information, not advice for any one person."] }),
 ];

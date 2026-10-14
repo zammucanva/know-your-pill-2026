@@ -104,9 +104,9 @@
         "candidates-found": 121,
         "none-found": 24
       },
-      "medicationsWithRetrievedSource": 119,
-      "medicationsWithSourcedClaims": 119,
-      "claimsWithTraceableSource": 1365,
+      "medicationsWithRetrievedSource": 120,
+      "medicationsWithSourcedClaims": 120,
+      "claimsWithTraceableSource": 1382,
       "medicationsWithSourcedOnsetClaim": 19,
       "onsetScan": {
         "note": "Screening of US labels for sentences that may state onset. Candidates for a person to read in context; noisy; not claims.",
@@ -119,53 +119,53 @@
       "claimsExactQuote": 455,
       "guideSectionsSummarised": 233,
       "medicationsBySourceCountry": {
-        "none": 26,
-        "US": 108,
+        "none": 25,
+        "US": 109,
         "UK": 10,
         "IE": 1
       },
-      "claimsRestated": 910,
+      "claimsRestated": 927,
       "medicationGuideStatus": {
         "patient-guide": 12,
         "no-us-label-found": 12,
-        "us-prescribing-information-used": 39,
+        "us-prescribing-information-used": 40,
         "non-us-document-used": 40,
-        "no-medication-guide-in-labels-checked": 2,
-        "medication-guide-found": 40
+        "medication-guide-found": 40,
+        "no-medication-guide-in-labels-checked": 1
       },
       "parts": {
         "what": {
           "authored-guide": 12,
-          "registry-wording": 54,
+          "registry-wording": 53,
           "standard-wording": 10,
-          "source-backed": 69
+          "source-backed": 70
         },
         "uses": {
           "authored-guide": 12,
-          "registry-wording": 14,
-          "source-backed": 119
+          "registry-wording": 13,
+          "source-backed": 120
         },
         "how": {
           "authored-guide": 12,
-          "unavailable": 12,
-          "source-backed": 119,
+          "unavailable": 11,
+          "source-backed": 120,
           "registry-wording": 2
         },
         "precautions": {
           "authored-guide": 12,
-          "unavailable": 14,
-          "source-backed": 119
+          "unavailable": 13,
+          "source-backed": 120
         },
         "side-effects": {
           "authored-guide": 12,
-          "registry-wording": 12,
-          "source-backed": 119,
+          "registry-wording": 11,
+          "source-backed": 120,
           "standard-wording": 2
         },
         "interactions": {
           "authored-guide": 12,
-          "standard-wording": 87,
-          "source-backed": 44,
+          "standard-wording": 86,
+          "source-backed": 45,
           "registry-wording": 2
         },
         "seek-help": {
@@ -179,8 +179,8 @@
         },
         "sources": {
           "authored-guide": 12,
-          "unavailable": 14,
-          "source-backed": 119
+          "unavailable": 13,
+          "source-backed": 120
         }
       },
       "explanationLevel": {
@@ -193,7 +193,7 @@
       "readability": {
         "note": "Automated screening heuristic (Flesch-Kincaid grade, sentence length). Not a comprehension test.",
         "medicationsAboveGrade10": 127,
-        "medicationsWithLongSentences": 122
+        "medicationsWithLongSentences": 123
       },
       "clinicallyReviewed": 0,
       "indianSourceSearch": {

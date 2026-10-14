@@ -29,7 +29,7 @@ const QUERY_NAME: Record<string, string> = {
   "loflazepate": "ethyl loflazepate",
   "dexamphetamine": "dextroamphetamine",
   "sodium-oxybate": "sodium oxybate",
-  "l-methylfolate": "levomefolate",
+  "l-methylfolate": "l-methylfolate",
   "naltrexone-bupropion": "naltrexone and bupropion",
   "phentermine-topiramate": "phentermine and topiramate",
 };

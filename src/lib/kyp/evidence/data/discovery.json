@@ -3061,57 +3061,9 @@
  },
  {
   "slug": "l-methylfolate",
-  "queryUsed": "levomefolate",
+  "queryUsed": "l-methylfolate",
   "status": "candidates-found",
   "candidates": [
-   {
-    "title": "DROSPIRENONE/ETHINYL ESTRADIOL/LEVOMEFOLATE CALCIUM AND LEVOMEFOLATE CALCIUM KIT [SANDOZ INC]",
-    "setid": "6928f186-190d-4c40-beab-81cf80cd45cb",
-    "publishedDate": "Mar 05, 2026",
-    "version": 17
-   },
-   {
-    "title": "SAFYRAL (DROSPIRENONE/ETHINYL ESTRADIOL/LEVOMEFOLATE CALCIUM AND LEVOMEFOLATE CALCIUM) KIT [BAYER HEALTHCARE PHARMACEUTICALS INC.]",
-    "setid": "97563516-306a-4e17-9690-edbda49ecd83",
-    "publishedDate": "Mar 05, 2026",
-    "version": 23
-   },
-   {
-    "title": "BEYAZ (DROSPIRENONE/ETHINYL ESTRADIOL/LEVOMEFOLATE CALCIUM AND LEVOMEFOLATE CALCIUM) KIT [BAYER HEALTHCARE PHARMACEUTICALS INC.]",
-    "setid": "8132454a-6135-4bac-b206-83a55eb8dbc6",
-    "publishedDate": "Mar 04, 2026",
-    "version": 23
-   },
-   {
-    "title": "TYDEMY (DROSPIRENONE, ETHINYL ESTRADIOL AND LEVOMEFOLATE CALCIUM AND LEVOMEFOLATE CALCIUM) KIT [LUPIN PHARMACEUTICALS, INC.]",
-    "setid": "e4766132-4faa-4f76-89fe-75d4a6fd737b",
-    "publishedDate": "Dec 31, 2025",
-    "version": 8
-   },
-   {
-    "title": "DROSPIRENONE, ETHINYL ESTRADIOL AND LEVOMEFOLATE CALCIUM AND LEVOMEFOLATE CALCIUM ( DROSPIRENONE, ETHINYL ESTRADIOL AND LEVOMEFOLATE CALCIUM AND LEVOMEFOLATE CALCIUM ) KIT [LUPIN PHARMACEUTICALS, INC.]",
-    "setid": "48f4301c-0426-43cd-af37-c4d8fc7aeb67",
-    "publishedDate": "Dec 09, 2025",
-    "version": 9
-   },
-   {
-    "title": "DROSPIRENONE/ETHINYL ESTRADIOL/LEVOMEFOLATE CALCIUM AND LEVOMEFOLATE CALCIUM KIT [SANDOZ INC]",
-    "setid": "58cd12d3-39b1-4375-b7e0-09ba2378a52b",
-    "publishedDate": "Dec 09, 2024",
-    "version": 14
-   },
-   {
-    "title": "DROSPIRENONE, ETHINYL ESTRADIOL AND LEVOMEFOLATE CALCIUM AND LEVOMEFOLATE CALCIUM (DROSPIRENONE, ETHINYL ESTRADIOL AND LEVOMEFOLATE CALCIUM AND LEVOMEFOLATE CALCIUM) KIT [LUPIN PHARMACEUTICALS, INC.]",
-    "setid": "786fb677-58c9-44ca-9c67-595d6be0fe7f",
-    "publishedDate": "Nov 19, 2020",
-    "version": 1
-   },
-   {
-    "title": "LORMATE (LEVOMEFOLATE CALCIUM, METHYLCOBALAMIN, AND TURMERIC) CAPSULE [REDMONT PHARMACETUICALS, LLC]",
-    "setid": "1385e302-db37-4a77-be82-d07ffe39b962",
-    "publishedDate": "May 07, 2020",
-    "version": 2
-   },
    {
     "title": "L-METHYLFOLATE CALCIUM (LEVOMEFOLATE CALCIUM) TABLET, COATED [VIRTUS PHARMACEUTICALS]",
     "setid": "76386336-417d-4f90-8171-1f745198ded2",
@@ -3125,8 +3077,8 @@
     "version": 101
    }
   ],
-  "totalFound": 10,
-  "accessedAt": "2026-10-13"
+  "totalFound": 2,
+  "accessedAt": "2026-10-14"
  },
  {
   "slug": "agomelatine",
