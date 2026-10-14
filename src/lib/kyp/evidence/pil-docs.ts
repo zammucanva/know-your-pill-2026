@@ -1,0 +1,315 @@
+import type { ClaimCategory, ClaimRecord, SourceRecord } from "./types";
+
+/**
+ * UK patient leaflets (package leaflets) used as supplementary evidence for medicines that have no US label.
+ *
+ * A package leaflet is the patient-directed text that regulators approve for a product. These are UK documents
+ * published on medicines.org.uk (the electronic medicines compendium). They are NOT Indian labels, and nothing
+ * here says they apply to an Indian product. Each is the leaflet of ONE named UK product.
+ *
+ * For each claim:
+ *   - `passage` is a short extract copied word for word from the leaflet. It is the only part of the leaflet
+ *     stored in this repository (a few sentences per statement, not the leaflet).
+ *   - `wording` is a plain-language restatement of that passage. It adds no dose, number, warning or
+ *     condition that the passage does not contain (tests check the numbers).
+ *   - scripts/evidence/pil-verify.ts re-downloads each leaflet and checks every passage is really in it.
+ *     That proves the quote is real. It does not prove the statement is right for any one patient.
+ *
+ * Nothing here is clinically reviewed.
+ */
+
+export type PilClaim = [category: ClaimCategory, passage: string, wording: string, extra?: { replacesRule?: string; limitations?: string[] }];
+
+export interface PilDoc {
+  slug: string;
+  /** emc file id, e.g. "10614" for https://www.medicines.org.uk/emc/files/pil.10614.pdf */
+  file: string;
+  product: string;
+  title: string;
+  holder: string;
+  /** The leaflet's own "last revised / approved" statement. */
+  revised: string;
+  formulation: string;
+  /** Where the document is published, if not the emc leaflet URL (e.g. a Drugs@FDA label). */
+  url?: string;
+  /** "leaflet" (default): a UK patient leaflet. "fda-label": an FDA-approved US label from the Drugs@FDA archive. "indian-label": an Indian product label or package insert (add its host to ALLOWED_SOURCE_HOSTS first). */
+  kind?: "leaflet" | "fda-label" | "indian-label";
+  /** Extra limits that apply to every claim from this leaflet. */
+  limits: string[];
+  accessedAt: string;
+  claims: PilClaim[];
+}
+
+const ON = "onset-works-gradually";
+
+export const PIL_DOCS: PilDoc[] = [
+  {
+    slug: "moclobemide",
+    file: "10614",
+    product: "Manerix 150 mg and 300 mg film-coated tablets",
+    title: "Patient Information Leaflet: Manerix 150 mg and 300 mg film-coated Tablets (moclobemide)",
+    holder: "Viatris Products Limited (UK)",
+    revised: "02/2026",
+    formulation: "150 mg and 300 mg film-coated tablets",
+    limits: ["The leaflet gives adult directions and says the tablets are not suitable for children or adolescents."],
+    accessedAt: "2026-10-14",
+    claims: [
+      ["what-it-is", "Manerix contains a medicine called moclobemide. This belongs to a group of medicines called antidepressants.", "Moclobemide is an antidepressant. This leaflet is for Manerix, a UK brand that contains moclobemide."],
+      ["what-it-is", "Manerix works by increasing the levels of important chemical messengers in your brain.", "It works by raising the levels of important chemical messengers in the brain."],
+      ["used-for", "Manerix is used to treat depression and social phobia.", "This leaflet says it is used to treat depression and social phobia."],
+      ["contraindication", "You are allergic to moclobemide or any of the other ingredients of this medicine (listed in Section 6). You have a severe mental problem which may make you confused, lose contact with reality or become unable to think and judge clearly. You have a growth on one of your adrenal glands (phaeochromocytoma).", "Do not take it if you are allergic to moclobemide or anything else in the tablet. Do not take it if you have a severe mental problem that makes you confused, lose contact with reality, or unable to think and judge clearly. Do not take it if you have a growth on one of your adrenal glands (phaeochromocytoma)."],
+      ["precaution", "Manerix is not suitable for children or adolescents", "The leaflet says it is not suitable for children or adolescents."],
+      ["precaution", "You have a ‘bi-polar disorder’, sometimes call manic depression. You have ever thought about, or tried to harm or kill yourself. You have an overactive thyroid. You have serious liver disease. You require pain relief with buprenorphine.", "Check with your doctor or pharmacist before taking it if you have bipolar disorder (also called manic depression), if you have ever thought about or tried to harm or kill yourself, if you have an overactive thyroid, if you have serious liver disease, or if you need pain relief with buprenorphine."],
+      ["interactions", "Do not take Manerix, and tell your doctor or pharmacist, if you are taking the following: Other medicines for your depression or anxiety, such as fluoxetine, bupropion, paroxetine or clomipramine Buprenorphine Dextromethorphan, which is found in many cough medicines Pethidine (for pain relief) Selegiline (for Parkinson’s disease) Triptans (for migraines) Tramadol (for pain relief) Linezolid (for the treatment of infections) St John‘s Wort (for anxiety)", "Do not take it, and tell your doctor or pharmacist, if you take: other medicines for depression or anxiety (such as fluoxetine, bupropion, paroxetine or clomipramine), buprenorphine, dextromethorphan (found in many cough medicines), pethidine (for pain), selegiline (for Parkinson’s disease), triptans (for migraines), tramadol (for pain), linezolid (for infections) or St John’s Wort."],
+      ["interactions", "Tell your doctor or pharmacist if you are taking any of the following medicines: Cimetidine (used to treat stomach ulcers and acid indigestion or reflux). Ephedrine, pseudoephedrine and phenylpropanolamine, found in many cough and cold medicines. Morphine, Codeine or fentanyl (for pain relief).", "Tell your doctor or pharmacist if you take cimetidine (for stomach ulcers, acidity or reflux), ephedrine, pseudoephedrine or phenylpropanolamine (found in many cough and cold medicines), or morphine, codeine or fentanyl (for pain)."],
+      ["interactions", "Please tell your doctor or pharmacist if you are taking or have recently taken any other medicines. This includes medicines that you buy without a prescription and herbal medicines.", "Tell your doctor or pharmacist about every other medicine you take or have recently taken, including medicines you buy without a prescription and herbal medicines."],
+      ["precaution", "Do not eat large quantities of foods containing tyramine when you are taking Manerix. These include: Mature cheese Yeast extract Fermented soya bean products.", "Do not eat large amounts of foods that contain tyramine while taking it. The leaflet names mature cheese, yeast extract and fermented soya bean products."],
+      ["precaution", "Do not take Manerix if you are pregnant, trying to get pregnant or are breastfeeding, unless your doctor has told you to.", "Do not take it if you are pregnant, trying to get pregnant or breastfeeding, unless your doctor has told you to."],
+      ["precaution", "The medicine can affect your ability to drive as it may make you sleepy or dizzy. Do not drive while taking this medicine until you know how it affects you.", "It can make you sleepy or dizzy and so can affect driving. Do not drive until you know how it affects you."],
+      ["how-to-take", "Take your tablets at the end of a meal. Swallow each tablet with a drink of water.", "Take the tablets at the end of a meal and swallow each tablet with a drink of water."],
+      ["how-to-take", "The usual starting dose is 300 mg a day, split into two - three doses. Your doctor will adjust the dose up or down to find the right dose for you. The maximum dose is 600 mg a day.", "For depression, this leaflet gives a usual starting dose of 300 mg a day, split into two or three doses. Your doctor adjusts it up or down to find the right dose for you, and the leaflet gives 600 mg a day as the maximum. Your own dose is set by your prescriber.", { limitations: ["These are the doses in the UK leaflet for depression. Do not use them to change your own dose."] }],
+      ["how-to-take", "If you forget to take a dose, take it as soon as you remember. If it is nearly time for the next dose, skip the missed dose. Do not take a double dose to make up for a forgotten dose.", "If you miss a dose, take it as soon as you remember. If it is nearly time for the next dose, skip the missed dose. Never take a double dose to make up for it."],
+      ["stopping", "Even when you start to feel better, you should keep taking your tablets for as long as your doctor tells you to. Do not stop taking this medicine without talking to your doctor first.", "Keep taking the tablets for as long as your doctor tells you, even when you start to feel better. Do not stop without talking to your doctor first."],
+      ["onset", "since these medicines all take time to work, usually about two weeks but sometimes longer", "In its warning about suicidal thoughts, the leaflet says antidepressants take time to work, usually about two weeks but sometimes longer. It gives no separate timing for moclobemide.", { replacesRule: ON, limitations: ["This is the leaflet's general statement about antidepressants, not a moclobemide-specific trial result."] }],
+      ["urgent-help", "If you take more Manerix than you should or someone else takes your medicine by mistake, talk to a doctor or go to a hospital straight away. Take the medicine pack with you.", "If you (or someone else) take more than you should, talk to a doctor or go to a hospital straight away, and take the medicine pack with you."],
+      ["urgent-help", "If you have thoughts of harming or killing yourself at any time, contact your doctor or go to a hospital straight away.", "If you ever have thoughts of harming or killing yourself, contact your doctor or go to a hospital straight away."],
+      ["urgent-help", "Some side effects could be serious. If you have any of the side effects listed below, stop taking this medicine and seek urgent medical advice: swelling of your throat, face, lips and mouth. This may make it difficult to breath or swallow. sudden swelling of your hands, feet or ankles. a raised, itchy skin rash (hives), itchy skin or flushing.", "Stop taking it and get urgent medical advice if you have swelling of your throat, face, lips or mouth (which can make it hard to breathe or swallow), sudden swelling of your hands, feet or ankles, or a raised, itchy skin rash (hives), itchy skin or flushing."],
+      ["side-effects", "Very common (affects more than 1 in 10 people): Trouble sleeping Headache Feeling dizzy Dry mouth Feeling sick", "Very common side effects, which affect more than 1 in 10 people: trouble sleeping, headache, feeling dizzy, dry mouth and feeling sick.", { limitations: ["The leaflet's frequency labels for the other groups were not used because they could not be read reliably here."] }],
+      ["side-effects", "Serotonin syndrome, you may experience symptoms such as involuntary, rhythmic contractions of muscles, including the muscles that control movement of the eye, agitation, hallucinations, coma, excessive sweating, tremor, exaggeration of reflexes, increased muscle tension, body temperature above 38°C, irregular heartbeat, losing consciousness or having fits (seizures). Contact your doctor when experiencing such symptoms.", "A rare but serious problem called serotonin syndrome can cause involuntary rhythmic muscle contractions (including in the muscles that move the eyes), agitation, hallucinations, coma, heavy sweating, tremor, exaggerated reflexes, increased muscle tension, a body temperature above 38°C, an irregular heartbeat, losing consciousness or fits. Contact your doctor if you have such symptoms."],
+    ],
+  },
+  {
+    slug: "mianserin",
+    file: "2741",
+    product: "Mianserin 10 mg and 30 mg film-coated tablets",
+    title: "Package leaflet: Information for the patient: Mianserin 10 mg and 30 mg film-coated tablets",
+    holder: "Viatris (UK)",
+    revised: "06/2026",
+    formulation: "10 mg and 30 mg film-coated tablets",
+    limits: ["The leaflet is for adults. It says mianserin is not recommended for children and adolescents."],
+    accessedAt: "2026-10-14",
+    claims: [
+      ["what-it-is", "Mianserin belongs to a group of medicines called tetra-cyclic antidepressants.", "Mianserin is a tetracyclic antidepressant."],
+      ["what-it-is", "Mianserin is believed to work by increasing the levels of two naturally occurring chemicals within the brain, noradrenaline and 5 hydroxytryptamine (also called serotonin).", "It is believed to work by raising the levels of two natural chemicals in the brain, noradrenaline and 5 hydroxytryptamine (also called serotonin)."],
+      ["used-for", "Your doctor will prescribe Mianserin to help relieve the symptoms of depression.", "This leaflet says it is prescribed to help relieve the symptoms of depression."],
+      ["contraindication", "are allergic to mianserin or any of the other ingredients of this medicine (listed in section 6) suffer from severe liver disease have been or are being treated for mania (feeling over-excited with unusual behaviour)", "Do not take it if you are allergic to mianserin or anything else in the tablet, if you have severe liver disease, or if you have been or are being treated for mania (feeling over-excited with unusual behaviour)."],
+      ["interactions", "You should not take mianserin at the same time or within 2 weeks of taking an MAOI. If you have taken mianserin, you should wait 1-2 weeks before you take a MAOI", "Do not take it at the same time as, or within 2 weeks of taking, a type of antidepressant called an MAOI. If you have taken mianserin, wait 1 to 2 weeks before taking an MAOI."],
+      ["interactions", "You should not start taking mianserin within 1 week of taking an MAO-A inhibitor.", "Do not start mianserin within 1 week of taking an MAO-A inhibitor such as moclobemide."],
+      ["interactions", "Tell your doctor or pharmacist if you are taking, have recently taken or might take any other medicines, including medicines obtained without a prescription, or the following: medicines that affect the way your blood clots, e.g. warfarin and other ‘coumarins’ (blood thinning medicines)", "Tell your doctor or pharmacist about all the medicines you take, have recently taken or might take, including ones bought without a prescription. The leaflet names medicines that affect the way blood clots, such as warfarin and other coumarins (blood thinning medicines)."],
+      ["interactions", "any medicine for epilepsy such as phenytoin, carbamazepine, phenobarbital and primidone", "The leaflet also names medicines for epilepsy, such as phenytoin, carbamazepine, phenobarbital and primidone. It lists more medicines than are shown here."],
+      ["interactions", "medicines for allergy (antihistamines – in some cases these may also be given to help you sleep, such as diphenhydramine)", "It also names medicines for allergy (antihistamines), some of which are also given to help sleep, such as diphenhydramine."],
+      ["precaution", "have a heart disorder such as cardiovascular insufficiency (when the heart cannot pump enough blood around the body). In this case your doctor may monitor your heart function are recovering from a recent heart attack (myocardial infarction) or suffer from a condition known as heart block, or have an abnormal heart rhythm", "Talk to your doctor or pharmacist before taking it if you have a heart disorder in which the heart cannot pump enough blood, are recovering from a recent heart attack, or have heart block or an abnormal heart rhythm. Your doctor may monitor your heart function."],
+      ["precaution", "suffer from a tumour in your adrenal gland (phaeochromocytoma) are diabetic, as your diabetic medicine may need to be adjusted have kidney or other liver problems", "Talk to your doctor or pharmacist before taking it if you have a tumour in an adrenal gland (phaeochromocytoma), if you are diabetic (your diabetes medicine may need adjusting), or if you have kidney or other liver problems."],
+      ["monitoring", "This medicine may affect your blood or the way your liver works. You will need regular blood tests – usually every 4 weeks during the first 3 months of treatment. Tell your doctor straight away if you develop a fever, sore throat, sore mouth or any other signs of an infection.", "It may affect your blood or how your liver works, so you will need regular blood tests, usually every 4 weeks during the first 3 months of treatment. Tell your doctor straight away if you get a fever, sore throat, sore mouth or any other sign of infection."],
+      ["precaution", "Mianserin should not normally be used by children and adolescents under 18 years.", "It should not normally be used by children and adolescents under 18 years."],
+      ["precaution", "Information from clinical trials has shown an increased risk of suicidal behaviour in young adults (less than 25 years old) with psychiatric conditions who were treated with an antidepressant.", "Clinical trials have shown an increased risk of suicidal behaviour in young adults (under 25 years old) with psychiatric conditions who were treated with an antidepressant."],
+      ["precaution", "Do not drink alcohol whilst taking this medicine. Alcohol can make the feeling of drowsiness worse.", "Do not drink alcohol while taking it. Alcohol can make drowsiness worse."],
+      ["precaution", "There is limited information on the use of Mianserin during pregnancy and therefore you should not take Mianserin if you are pregnant, think you may be pregnant or are trying to become pregnant.", "There is limited information on its use in pregnancy, so do not take it if you are pregnant, think you may be pregnant or are trying to become pregnant."],
+      ["precaution", "Mianserin may reach your baby through the breast milk. Therefore, do not take Mianserin if you are breast-feeding.", "It may reach your baby through breast milk, so do not take it if you are breast-feeding."],
+      ["precaution", "Do not drive or operate machinery because this medicine may make you feel drowsy and can cause blurred vision.", "Do not drive or operate machinery, because it may make you drowsy and can cause blurred vision."],
+      ["how-to-take", "The tablets should be swallowed whole with a drink of water. Do not chew them.", "Swallow the tablets whole with a drink of water. Do not chew them."],
+      ["how-to-take", "The recommended starting dose is 30 mg or 40 mg per day, increasing gradually, normally up to a maximum of 90 mg per day. Your dose may be taken as a single dose at bedtime (which may help you sleep) or split into 2 or 3 doses taken throughout the day.", "For adults, this leaflet gives a starting dose of 30 mg or 40 mg a day, increased gradually, normally up to a maximum of 90 mg a day. It may be taken as a single dose at bedtime (which may help you sleep) or split into 2 or 3 doses through the day. Your own dose is set by your prescriber.", { limitations: ["These are the adult doses in the UK leaflet. Do not use them to change your own dose."] }],
+      ["how-to-take", "Take the next dose as soon as you remember unless it is almost time for your next dose. Do not take a double dose to make up for a forgotten dose.", "If you miss a dose, take the next dose as soon as you remember, unless it is almost time for your next dose. Never take a double dose to make up for it."],
+      ["onset", "you may need to take Mianserin for 2 to 4 weeks before you begin to feel better", "The leaflet says you may need to take mianserin for 2 to 4 weeks before you begin to feel better.", { replacesRule: ON }],
+      ["stopping", "Speak to your doctor first before stopping this medicine. Your doctor will tell you how to gradually reduce your medication. This will help avoid unwanted side effects such as sweating, shaking, being sick, feeling sick, aggression, anxiety, or experiencing blurred vision or hallucinations (seeing or hearing things that are not real).", "Speak to your doctor before stopping. Your doctor will tell you how to reduce it gradually, which helps avoid side effects such as sweating, shaking, being sick, feeling sick, aggression, anxiety, blurred vision or hallucinations (seeing or hearing things that are not real)."],
+      ["urgent-help", "Contact your doctor or nearest hospital emergency department immediately. Take the container and any remaining tablets with you.", "If you take more than you should, contact your doctor or the nearest hospital emergency department immediately, and take the container and any remaining tablets with you."],
+      ["urgent-help", "If you have thoughts of harming or killing yourself at any time, contact your doctor or go to a hospital straight away.", "If you ever have thoughts of harming or killing yourself, contact your doctor or go to a hospital straight away."],
+      ["urgent-help", "If you begin to experience any of the following side effects stop taking Mianserin and contact your doctor immediately: Sore throat, mouth ulcers, cold sores, or other infections, inflammation of the mouth lining, fever, feeling tired, weak or pale. These may be signs of changes in the numbers of certain blood cells which may indicate a problem with the bone marrow (where these cells are produced), more common in elderly patients Thoughts of harming or killing yourself, or behaviours consistent with trying to harm or kill yourself Fits (convulsions) Yellowing of the skin or whites of the eyes", "Stop taking it and contact your doctor immediately if you have a sore throat, mouth ulcers, cold sores or other infections, inflammation of the mouth lining, fever, or feel tired, weak or pale (these can be signs of a bone marrow problem, more common in elderly patients); thoughts of harming or killing yourself; fits (convulsions); or yellowing of the skin or whites of the eyes."],
+      ["side-effects", "Interference with sexual function in adults Breast enlargement in men Nipple tenderness Production of breast milk (in men, or in women who are not expecting to produce milk) Disturbances of liver function, or low levels of sodium in the blood (these may show up in blood tests, more common in elderly patients) Joint pain and swollen joints Dizziness, light-headedness or fainting on standing up (these may be a sign of low blood pressure). Fluid retention Skin rash Sweating Shaking", "Other possible side effects in the leaflet include: interference with sexual function in adults, breast enlargement in men, nipple tenderness, production of breast milk (in men, or in women who are not expecting to produce milk), liver function changes or low sodium in the blood (these may show up in blood tests and are more common in elderly patients), joint pain and swollen joints, dizziness, light-headedness or fainting on standing up (possible low blood pressure), fluid retention, skin rash, sweating and shaking."],
+    ],
+  },
+  {
+    slug: "dothiepin",
+    file: "102250",
+    product: "Prothiaden 75 mg tablets (dosulepin hydrochloride)",
+    title: "Package leaflet: Information for the user: Prothiaden 75 mg tablets (dosulepin hydrochloride)",
+    holder: "Teofarma S.r.l. (Italy; UK leaflet)",
+    revised: "approved December 2016",
+    formulation: "75 mg tablets",
+    limits: ["Dothiepin and dosulepin are two names for the same medicine.", "This leaflet is older than the others (approved December 2016). A newer leaflet for another dosulepin product may differ.", "The doses are for 75 mg tablets. Tablets or capsules of another strength differ."],
+    accessedAt: "2026-10-14",
+    claims: [
+      ["what-it-is", "Prothiaden belongs to a group of medicines called antidepressants.", "Dosulepin (dothiepin) is an antidepressant. This leaflet is for Prothiaden, a UK brand of it."],
+      ["used-for", "This medicine is used to treat depression and can also help reduce feelings of anxiety. This medicine will only be used when other medicines have been found to be unsuitable.", "It is used to treat depression and can also help reduce feelings of anxiety. The leaflet says it will only be used when other medicines have been found to be unsuitable."],
+      ["contraindication", "Do not take Prothiaden tablets and speak to your doctor if: you know that you are allergic (hypersensitive) to dosulepin or any of the other ingredients (listed in section 6 of this leaflet) in your tablets you have an irregular heart beat or any other heart problems you have liver problems you have an eye condition known as glaucoma you are a man that has prostate problems (difficulty in passing water) you have been diagnosed as having mania (feeling over-excited with unusual behaviour) you have fits (epilepsy)", "Do not take the tablets, and speak to your doctor, if you are allergic to dosulepin or anything else in the tablets, have an irregular heartbeat or other heart problems, have liver problems, have the eye condition glaucoma, are a man with prostate problems (difficulty passing water), have been diagnosed with mania (feeling over-excited with unusual behaviour), or have fits (epilepsy)."],
+      ["precaution", "you are going to have general or dental surgery, tell your surgeon or dentist you are taking the tablets. It may affect the anaesthetic used.", "If you are going to have general or dental surgery, tell your surgeon or dentist you are taking these tablets. It may affect the anaesthetic used."],
+      ["interactions", "You should not take your tablets at the same time as MAOIs or within 14 days of stopping them.", "Do not take the tablets at the same time as a type of antidepressant called an MAOI, or within 14 days of stopping an MAOI."],
+      ["interactions", "Other medicines used to treat depression called SSRIs (selective serotonin re-uptake inhibitors). Any medicines given to you for treating high blood pressure (hypertension). Any hay fever/allergy medicines which contains terfenadine or astemizole. Sotalol (a medicine for heart or blood pressure problems) or halofantrine (a medicine for malaria).", "Tell your doctor if you take or have taken other medicines that may affect how the tablets work: SSRI antidepressants, medicines for high blood pressure, hay fever or allergy medicines containing terfenadine or astemizole, sotalol (for heart or blood pressure problems) or halofantrine (for malaria)."],
+      ["interactions", "Any medicines called barbiturates (e.g. phenobarbitone for fits, amylobarbitone for sleeplessness) or methylphenidate (used to treat behavioural problems).", "The leaflet also names barbiturates (for example phenobarbitone for fits or amylobarbitone for sleeplessness) and methylphenidate (used to treat behavioural problems). It lists more medicines than are shown here."],
+      ["interactions", "Please tell your doctor or pharmacist if you are taking or have recently taken any other medicines, including medicines obtained without a prescription.", "Tell your doctor or pharmacist about any other medicines you take or have recently taken, including ones you get without a prescription."],
+      ["precaution", "If you are depressed and/or have anxiety disorders you can sometimes have thoughts of harming or killing yourself. These may be increased when first starting antidepressants", "People with depression or anxiety can sometimes have thoughts of harming or killing themselves. These may increase when you first start an antidepressant."],
+      ["precaution", "If you are or think you might be pregnant or you plan to become pregnant, or if you are breast-feeding you must tell your doctor before you take this medicine. Your doctor will decide if you can take these tablets.", "If you are or might be pregnant, plan to become pregnant or are breast-feeding, tell your doctor before you take it. Your doctor will decide if you can take these tablets."],
+      ["precaution", "These tablets can make you feel drowsy. Do not drive, operate machinery or do anything that requires you to be alert until you know how the tablets will affect you.", "It can make you drowsy. Do not drive, use machinery or do anything that needs you to be alert until you know how the tablets affect you."],
+      ["precaution", "If you drink alcohol with these tablets this can make the feeling of drowsiness worse.", "Drinking alcohol with these tablets can make the drowsiness worse."],
+      ["how-to-take", "The tablets should be swallowed whole with a drink of water. Do not chew the tablets as you may get a bitter taste in your mouth and a temporary numbness of your tongue.", "Swallow the tablets whole with a drink of water. Do not chew them: you may get a bitter taste and temporary numbness of the tongue."],
+      ["how-to-take", "The usual starting dose is 1 tablet a day. Your doctor may ask you to increase this to 2 or 3 tablets a day. Your doctor will tell you if you should take the tablets as separate doses throughout the day, or a single dose each evening, usually a couple of hours before you go to bed. Normally, not more than 3 tablets should be taken each day.", "For adults, this leaflet gives a usual starting dose of 1 tablet a day. Your doctor may increase it to 2 or 3 tablets a day, and will tell you whether to take them as separate doses through the day or as a single dose each evening, usually a couple of hours before bed. Normally no more than 3 tablets are taken in a day. Your own dose is set by your prescriber.", { limitations: ["These are the doses in the UK leaflet for 75 mg tablets. Do not use them to change your own dose."] }],
+      ["how-to-take", "Do not worry. Simply leave out that dose completely and then take your next dose at the right time. Do not take a double dose to make up for a forgotten tablet.", "If you miss a dose, leave it out and take your next dose at the right time. Never take a double dose to make up for a forgotten tablet."],
+      ["how-to-take", "Keep these tablets in the original container, and in a safe place (preferably a locked cupboard) where children cannot see or reach them. Your medicine could seriously harm them.", "Keep the tablets in the original container in a safe place, preferably a locked cupboard, where children cannot see or reach them. They could seriously harm a child."],
+      ["onset", "It may take two to four weeks of treatment before you begin to see an improvement in your mood although you might feel there is an improvement in your anxiety symptoms before then.", "The leaflet says it may take two to four weeks of treatment before your mood begins to improve, although you might feel your anxiety symptoms improve before then.", { replacesRule: ON }],
+      ["stopping", "Do not stop taking these tablets just because you feel better. If you stop taking the tablets too soon, your condition may get worse. If your doctor wants you to stop taking these tablets, your doctor will ask you to stop gradually.", "Do not stop just because you feel better: if you stop too soon your condition may get worse. If your doctor wants you to stop, they will ask you to stop gradually."],
+      ["urgent-help", "These tablets may seriously harm you and may be life threatening if you take too many tablets. You should seek immediate help if a child takes any tablets or if you or anybody else accidentally takes too many tablets. Remember to take the pack with you, even if it is empty.", "Taking too many tablets may seriously harm you and may be life threatening. Seek immediate help if a child takes any tablets, or if you or anyone else accidentally takes too many. Take the pack with you, even if it is empty."],
+      ["urgent-help", "If you have thoughts of harming or killing yourself at any time, contact your doctor or go to a hospital straight away.", "If you ever have thoughts of harming or killing yourself, contact your doctor or go to a hospital straight away."],
+      ["urgent-help", "If you get any of the following symptoms after taking these tablets, you should contact your doctor immediately: a fever (high temperature, sweating, shivering) discomfort around the right lower rib cage hepatitis (damage to the liver causing dark urine, jaundice (yellowing of the skin or whites of the eyes), nausea and fever)", "Contact your doctor immediately if you get a fever (high temperature, sweating, shivering), discomfort around the right lower rib cage, or hepatitis (liver damage causing dark urine, jaundice, nausea and fever)."],
+      ["side-effects", "The most common side effects (that affect less than 1 person in 10) are: dry mouth blurred vision changes in the heart beat constipation and difficulty in passing water. These side effect tend to improve with time.", "The leaflet lists as the most common side effects (affecting less than 1 person in 10): dry mouth, blurred vision, changes in the heartbeat, constipation and difficulty passing water. It says these tend to improve with time."],
+      ["side-effects", "Other side effects you may also experience are: drowsiness increased sweating skin rashes tremor (shaking) changes in sexual function low blood pressure, which may cause dizziness or fainting.", "Other side effects you may get: drowsiness, increased sweating, skin rashes, tremor (shaking), changes in sexual function, and low blood pressure, which may cause dizziness or fainting."],
+      ["side-effects", "Rare side effects (that affect less than 1 person in 1000) are: changes in the blood and changes in hormone levels (these will be found if you have blood tests) severe mood changes such as extreme excitability fits An increased risk of bone fractures has been observed in patients taking this type of medicines.", "Rare side effects (affecting less than 1 person in 1000) are changes in the blood and in hormone levels (found with blood tests), severe mood changes such as extreme excitability, and fits. An increased risk of bone fractures has been seen in people taking this type of medicine."],
+    ],
+  },
+  {
+    slug: "lofepramine",
+    file: "13878",
+    product: "Lofepramine 70mg/5ml Oral Suspension",
+    title: "Package leaflet: Information for the user: Lofepramine 70mg/5ml Oral Suspension",
+    holder: "Essential Pharma Ltd (UK)",
+    revised: "06/2024",
+    formulation: "70 mg/5 ml oral suspension (a liquid)",
+    limits: ["This is the leaflet for the LIQUID (oral suspension). It is not the leaflet for lofepramine tablets, and directions such as 'shake the bottle' and the dose in ml apply to the liquid only."],
+    accessedAt: "2026-10-14",
+    claims: [
+      ["what-it-is", "This belongs to a group of medicines called tricyclic antidepressants.", "Lofepramine is a tricyclic antidepressant."],
+      ["what-it-is", "Lofepramine alters the levels of chemicals in your brain to relieve the symptoms of depression.", "It alters the levels of chemicals in the brain to relieve the symptoms of depression."],
+      ["used-for", "Lofepramine can be used to treat the symptoms of depression.", "It can be used to treat the symptoms of depression."],
+      ["contraindication", "you are allergic (hypersensitive) to lofepramine, other tricyclic antidepressants such as clomipramine and imipramine or any other ingredients in this liquid (listed in section 6). An allergic reaction can include a rash, itching or shortness of breath you are pregnant, likely to become pregnant or breast-feeding you suffer from periods of increased and exaggerated unusual behaviour (mania) you have liver or kidney disease", "Do not take it, and tell your doctor, if you are allergic to lofepramine, other tricyclic antidepressants (such as clomipramine and imipramine) or anything else in the liquid (an allergic reaction can include a rash, itching or shortness of breath); are pregnant, likely to become pregnant or breast-feeding; have periods of increased and exaggerated unusual behaviour (mania); or have liver or kidney disease."],
+      ["contraindication", "you have heart problems including unusual heart beats, heart block or if you have recently had a heart attack you have untreated glaucoma (raised pressure of the fluid inside the eye) you suffer from prostate problems and have problems passing urine you suffer from chronic constipation you are suffering from alcohol or drug poisoning you are suffering from mental confusion (deliria)", "Do not take it, and tell your doctor, if you have heart problems including unusual heartbeats or heart block, or have recently had a heart attack; have untreated glaucoma (raised pressure in the eye); have prostate problems with problems passing urine; have chronic constipation; are suffering from alcohol or drug poisoning; or are mentally confused (deliria)."],
+      ["precaution", "Talk to your doctor or pharmacist before taking Lofepramine if: you have epilepsy or you are experiencing withdrawal from alcohol or epileptic drugs you have an enlarged prostate gland you have increased pressure in your eye (known as narrow-angle glaucoma) you have thyroid problems or you are taking medicine to treat a thyroid problem you have a mental illness such as manic depression you are having electroconvulsive therapy (ECT)", "Talk to your doctor or pharmacist before taking it if you have epilepsy or are going through withdrawal from alcohol or epilepsy medicines, an enlarged prostate, narrow-angle glaucoma (increased pressure in the eye), thyroid problems or take medicine for a thyroid problem, a mental illness such as manic depression, or are having electroconvulsive therapy (ECT)."],
+      ["precaution", "you have a problem with your blood called porphyria or other blood problems you have tumour of the adrenal gland (phaeochromocytoma or neuroblastoma) you have high blood pressure. Your doctor may want to check your blood pressure before starting you on treatment with lofepramine you or members of your family have a history of irregular heart beats or other heart problems you have been told by your doctor that you have low sodium or potassium levels.", "Also talk to your doctor or pharmacist first if you have a blood problem called porphyria or other blood problems, a tumour of the adrenal gland, high blood pressure (your doctor may want to check it before you start), a personal or family history of irregular heartbeats or other heart problems, or low sodium or potassium levels."],
+      ["precaution", "Information from clinical trials has shown an increased risk of suicidal behaviour in adults less than 25 years with psychiatric conditions who were treated with an antidepressant.", "Clinical trials have shown an increased risk of suicidal behaviour in adults under 25 years with psychiatric conditions who were treated with an antidepressant."],
+      ["precaution", "Lofepramine is not suitable for use in children or adolescents under the age of 18.", "It is not suitable for children or adolescents under the age of 18."],
+      ["precaution", "Tell your doctor, anaesthetist or dentist that you are taking lofepramine if you are going to have an anaesthetic for an operation or dental treatment.", "Tell your doctor, anaesthetist or dentist you are taking it if you are going to have an anaesthetic for an operation or dental treatment."],
+      ["precaution", "Do not drink alcohol whilst taking Lofepramine.", "Do not drink alcohol while taking it."],
+      ["precaution", "Lofepramine may make you feel drowsy. If you experience this, do not drive or use machinery.", "It may make you drowsy. If it does, do not drive or use machinery."],
+      ["interactions", "Do not take Lofepramine if you are taking the following medicines: medicines to treat depression known as Monoamine Oxidase Inhibitors (MAOIs) such as phenelzine or you have taken MAOIs within the last 14 days pimozide and sertindole, anti-psychotics used to treat schizophrenia amiodarone, used to control the way your heart beats terfenadine, used to treat allergies entacapone, used to treat Parkinson’s disease.", "Do not take it if you take a type of antidepressant called an MAOI (such as phenelzine) or took an MAOI within the last 14 days, or if you take pimozide or sertindole (antipsychotics), amiodarone (for the heart beat), terfenadine (for allergies) or entacapone (for Parkinson’s disease)."],
+      ["interactions", "In particular tell your doctor if you are taking any of the following medicines: other medicines used to treat depression including Serotonin Selective Reuptake Inhibitors (SSRIs) such as fluoxetine and fluvoxamine or drugs that control your moods or alprazolam which makes you feel less anxious", "Tell your doctor if you take other medicines for depression, including SSRIs such as fluoxetine and fluvoxamine, drugs that control your moods, or alprazolam (which makes you feel less anxious). The leaflet lists many more medicines than are shown here."],
+      ["interactions", "warfarin used to prevent your blood clotting. Your doctor may want to perform some tests diuretics (water tablets) medicines used to treat anxiety or difficulty in sleeping.", "Tell your doctor if you take warfarin (your doctor may want to do some tests), diuretics (water tablets), or medicines for anxiety or difficulty sleeping."],
+      ["interactions", "Tell your doctor or pharmacist if you are taking, have recently taken or might take any other medicines. This includes medicines bought without a prescription, including herbal medicines.", "Tell your doctor or pharmacist about all other medicines you take, have recently taken or might take, including ones bought without a prescription and herbal medicines."],
+      ["how-to-take", "this medicine contains 70mg of lofepramine in each 5ml take this medicine by mouth shake the bottle well before using.", "This liquid contains 70 mg of lofepramine in each 5 ml. Take it by mouth and shake the bottle well before using.", { limitations: ["Applies to the liquid only."] }],
+      ["how-to-take", "The usual dose is 70mg (5ml of suspension) two to three times a day.", "For adults, the usual dose in this leaflet is 70 mg (5 ml of the liquid) two to three times a day. Your own dose is set by your prescriber.", { limitations: ["This is the dose in the UK leaflet for the liquid. Do not use it to change your own dose."] }],
+      ["how-to-take", "Your doctor will start you on a lower dose and gradually increase it as you may be more sensitive to the medicine.", "Older people are started on a lower dose that is increased gradually, as they may be more sensitive to the medicine."],
+      ["how-to-take", "If you forget a dose, take it as soon as you remember it. However, if it is nearly time for the next dose, skip the missed dose Do not take a double dose (two doses at the same time) to make up for a forgotten dose.", "If you miss a dose, take it as soon as you remember. If it is nearly time for the next dose, skip the missed dose. Never take a double dose to make up for it."],
+      ["stopping", "Do not stop taking the medicine unless your doctor tells you to. If you stop taking the medicine abruptly, you may get withdrawal effects such as feeling irritable, unable to sleep and sweating more than usual.", "Do not stop unless your doctor tells you to. Stopping suddenly can cause withdrawal effects such as feeling irritable, being unable to sleep and sweating more than usual."],
+      ["onset", "This is because these medicines all take about two weeks but sometimes longer to work properly.", "In its warning about suicidal thoughts, the leaflet says antidepressants all take about two weeks, sometimes longer, to work properly. It gives no separate timing for lofepramine.", { replacesRule: ON, limitations: ["This is the leaflet's general statement about antidepressants."] }],
+      ["urgent-help", "If you take more of this medicine than you should, talk to a doctor or go to your nearest hospital straight away. Take the medicine pack with you.", "If you take more than you should, talk to a doctor or go to your nearest hospital straight away, and take the medicine pack with you."],
+      ["urgent-help", "If you have thoughts of harming or killing yourself at any time, contact your doctor or go to a hospital straight away.", "If you ever have thoughts of harming or killing yourself, contact your doctor or go to a hospital straight away."],
+      ["urgent-help", "Stop taking Lofepramine and see a doctor straight away if you have: an allergic reaction. Signs may include swelling of your face, lips, tongue or throat or difficulty breathing or swallowing severe itching of your skin with raised lumps a serious effect on your blood, such as low sodium levels. Signs may include fever or chills, sore throat, ulcers in your mouth or throat, unusual tiredness or weakness, unusual bleeding or unexplained bruises.", "Stop taking it and see a doctor straight away if you have an allergic reaction (swelling of your face, lips, tongue or throat, difficulty breathing or swallowing, or severe itching of the skin with raised lumps) or a serious effect on your blood, such as low sodium levels (fever or chills, sore throat, ulcers in your mouth or throat, unusual tiredness or weakness, unusual bleeding or unexplained bruises)."],
+      ["urgent-help", "If you feel more depressed, including thinking about suicide.", "Tell a doctor straight away if you feel more depressed, including thinking about suicide."],
+      ["side-effects", "Effects on your heart: feeling faint and dizzy when standing up, change in blood pressure, fast or unusual heart beats, heart failure becoming worse", "See your doctor as soon as possible if you have effects on your heart: feeling faint and dizzy when standing up, change in blood pressure, fast or unusual heartbeats, or heart failure becoming worse."],
+      ["side-effects", "Effects on your stomach and intestines: feeling or being sick, nasty taste in your mouth, dry mouth, constipation, diarrhoea", "Tell your doctor about effects on your stomach and intestines: feeling or being sick, a nasty taste in the mouth, dry mouth, constipation and diarrhoea."],
+      ["side-effects", "General effects: headache, dizziness, tiredness, increased sweating, difficulty passing water, shaking. An increased risk of bone fractures has been observed in patients taking this type of medicine.", "General effects to tell your doctor about: headache, dizziness, tiredness, increased sweating, difficulty passing water and shaking. An increased risk of bone fractures has been seen in people taking this type of medicine."],
+    ],
+  },
+  {
+    slug: "maprotiline",
+    file: "072285s021",
+    kind: "fda-label",
+    url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2014/072285s021lbl.pdf",
+    product: "Maprotiline Hydrochloride Tablets, USP 25 mg, 50 mg and 75 mg (Mylan)",
+    title: "Maprotiline Hydrochloride Tablets, USP 25 mg, 50 mg and 75 mg: FDA-approved label (Drugs@FDA archive)",
+    holder: "Mylan Pharmaceuticals Inc. (US)",
+    revised: "5/2014",
+    formulation: "25 mg, 50 mg and 75 mg film-coated tablets",
+    limits: ["This is prescribing information written for clinicians, not a patient leaflet. No current DailyMed label or patient leaflet for maprotiline was found.", "It is an archived label: FDA states it 'may not be the latest approved'."],
+    accessedAt: "2026-10-14",
+    claims: [
+      ["used-for", "Maprotiline hydrochloride tablets are indicated for the treatment of depressive illness in patients with depressive neurosis (dysthymic disorder) and manic depressive illness, depressed type (major depressive disorder). Maprotiline is also effective for the relief of anxiety associated with depression.", "Maprotiline is used to treat depressive illness (including dysthymic disorder and major depressive disorder). The label says it is also effective for relieving the anxiety that goes with depression."],
+      ["contraindication", "Maprotiline hydrochloride tablets are contraindicated in patients hypersensitive to maprotiline and in patients with known or suspected seizure disorders.", "Maprotiline must not be used by people who are hypersensitive (allergic) to it, or who have known or suspected seizure disorders."],
+      ["contraindication", "The drug is not recommended for use during the acute phase of myocardial infarction.", "It is not recommended during the acute phase of a heart attack (myocardial infarction)."],
+      ["interactions", "It should not be given concomitantly with monoamine oxidase (MAO) inhibitors. A minimum of 14 days should be allowed to elapse after discontinuation of MAO inhibitors before treatment with maprotiline is initiated.", "Maprotiline should not be given together with monoamine oxidase (MAO) inhibitors, another group of antidepressants. At least 14 days should pass after an MAO inhibitor is stopped before maprotiline is started."],
+      ["interactions", "The risk of seizures may be increased when maprotiline is taken concomitantly with phenothiazines or when the dosage of benzodiazepines is rapidly tapered in patients receiving maprotiline.", "The risk of seizures may be higher if maprotiline is taken with phenothiazines, or if the dose of a benzodiazepine is reduced quickly in someone taking maprotiline."],
+      ["interactions", "Close supervision and careful adjustment of dosage are required when administering maprotiline concomitantly with anticholinergic or sympathomimetic drugs because of the possibility of additive atropine like effects.", "Close supervision and careful dose adjustment are needed if maprotiline is taken with anticholinergic or sympathomimetic medicines, because their atropine-like effects can add up."],
+      ["interactions", "Caution should be exercised when administering maprotiline to hyperthyroid patients or those on thyroid medication because of the possibility of enhanced potential for cardiovascular toxicity of maprotiline.", "Caution is needed if you have an overactive thyroid or take thyroid medicine, because maprotiline may be more likely to harm the heart and circulation."],
+      ["interactions", "the plasma concentration of maprotiline may be increased when the drug is given concomitantly with hepatic enzyme inhibitors (e.g., cimetidine, fluoxetine) and decreased by concomitant administration with hepatic enzyme inducers (e.g., barbiturates, phenytoin)", "The amount of maprotiline in the blood may be increased by medicines such as cimetidine and fluoxetine, and decreased by medicines such as barbiturates and phenytoin. The label says the maprotiline dose may need adjusting."],
+      ["precaution", "Maprotiline should be administered with caution in patients with history of urinary retention, or history of narrow angle glaucoma because of the drug’s anticholinergic properties.", "Maprotiline should be used with caution if you have ever had urinary retention (difficulty passing urine) or narrow-angle glaucoma."],
+      ["precaution", "Prior to elective surgery, maprotiline should be discontinued for as long as clinically feasible, since little is known about the interaction between maprotiline and general anesthetics.", "Before planned (elective) surgery, maprotiline should be stopped for as long as is clinically possible, because little is known about how it interacts with general anaesthetics."],
+      ["precaution", "Because animal reproduction studies are not always predictive of human response, this drug should be used during pregnancy only if clearly needed.", "The label says maprotiline should be used during pregnancy only if clearly needed, because animal studies do not always predict what happens in people."],
+      ["precaution", "Maprotiline is excreted in breast milk.", "Maprotiline passes into breast milk. The label advises caution when it is given to a nursing woman."],
+      ["precaution", "Safety and effectiveness in the pediatric population have not been established", "Its safety and effectiveness in children and adolescents have not been established."],
+      ["precaution", "Patients should be advised that taking maprotiline can cause mild pupillary dilation, which in susceptible individuals, can lead to an episode of angle-closure glaucoma.", "Maprotiline can cause mild widening of the pupil (pupillary dilation), which in people who are susceptible can lead to an episode of angle-closure glaucoma, a sudden eye pressure problem."],
+      ["onset", "Therapeutic effects are sometimes seen within 3 to 7 days, although as long as 2 to 3 weeks are usually necessary.", "The label says effects are sometimes seen within 3 to 7 days, although as long as 2 to 3 weeks are usually necessary.", { replacesRule: ON, limitations: ["A figure from a US prescribing label, not a promise of timing for any one person."] }],
+      ["how-to-take", "A single daily dose is an alternative to divided daily doses.", "Maprotiline can be taken as a single daily dose or as divided doses through the day."],
+      ["how-to-take", "Because of the long half-life of maprotiline, the initial dosage should be maintained for 2 weeks.", "Because maprotiline stays in the body for a long time, the starting dose is usually kept for 2 weeks before it is increased."],
+      ["how-to-take", "In general, lower dosages are recommended for patients over 60 years of age.", "In general, lower doses are recommended for patients over 60 years of age."],
+      ["how-to-take", "Dosage during prolonged maintenance therapy should be kept at the lowest effective level.", "During long-term treatment the dose should be kept at the lowest level that works."],
+      ["monitoring", "Maprotiline should be discontinued if there is evidence of pathological neutrophil depression. Leukocyte and differential counts should be performed in patients who develop fever and sore throat during therapy.", "If you get a fever and sore throat during treatment, tell your prescriber: a white blood cell count should be done, and maprotiline should be stopped if there is a harmful fall in a type of white cell (neutrophils)."],
+      ["stopping", "Never stop an antidepressant medicine without first talking to a healthcare provider. Stopping an antidepressant medicine suddenly can cause other symptoms.", "Do not stop an antidepressant without first talking to a healthcare provider. Stopping suddenly can cause other symptoms.", { limitations: ["From the antidepressant Medication Guide reprinted in the label (it covers all antidepressants, not maprotiline alone)."] }],
+      ["urgent-help", "Call the healthcare provider right away to report new or sudden changes in mood, behavior, thoughts, or feelings.", "Call your healthcare provider right away to report new or sudden changes in mood, behaviour, thoughts or feelings.", { limitations: ["From the antidepressant Medication Guide reprinted in the label (it covers all antidepressants, not maprotiline alone)."] }],
+      ["side-effects", "Neurological: Drowsiness (16%), dizziness (8%), tremor (3%), and, rarely, numbness, tingling, motor hyperactivity, akathisia, seizures, EEG alterations, tinnitus, extrapyramidal symptoms, ataxia, and dysarthria.", "Nervous system effects listed: drowsiness (16%), dizziness (8%), tremor (3%) and, rarely, numbness, tingling, overactivity, restlessness (akathisia), seizures, ringing in the ears (tinnitus), movement problems and speech difficulty."],
+      ["side-effects", "Anticholinergic: Dry mouth (22%), constipation (6%), and blurred vision (4%); rarely, accommodation disturbances, mydriasis, urinary retention, and delayed micturition.", "Drying effects listed: dry mouth (22%), constipation (6%) and blurred vision (4%); rarely, trouble focusing, widened pupils and difficulty passing urine."],
+      ["side-effects", "Psychiatric: Nervousness (6%), anxiety (3%), insomnia (2%), and agitation (2%); rarely, confusional states (especially in the elderly), hallucinations, disorientation, delusions, restlessness, nightmares, hypomania, mania, exacerbation of psychosis, decrease in memory, and feelings of unreality.", "Mental and emotional effects listed: nervousness (6%), anxiety (3%), insomnia (2%) and agitation (2%); rarely, confusion (especially in the elderly), hallucinations, disorientation, delusions, restlessness, nightmares, hypomania, mania, worsening of psychosis, poorer memory and feelings of unreality."],
+      ["side-effects", "Other: Weakness and fatigue (4%) and headache (4%); rarely, altered liver function, jaundice, weight loss or gain, excessive perspiration, flushing, urinary frequency, increased salivation, nasal congestion and alopecia.", "Other effects listed: weakness and tiredness (4%) and headache (4%); rarely, changed liver function, jaundice (yellowing of the skin and eyes), weight loss or gain, heavy sweating, flushing, passing urine often, more saliva, a blocked nose and hair loss."],
+    ],
+  },
+];
+
+const nrm =(t: string) => t.replace(/\s+/g, " ").trim();
+
+/** What each kind of document is, in one place: how it is typed, labelled and described to the reader. */
+const KINDS = {
+  leaflet: { type: "international-patient-information", jurisdiction: "UK", prefix: "pil", noun: "UK package leaflet", dated: "leaflet", nonIndian: true },
+  "fda-label": { type: "us-product-label", jurisdiction: "US", prefix: "fda", noun: "US label", dated: "label", nonIndian: true },
+  "indian-label": { type: "indian-product-label", jurisdiction: "IN", prefix: "in", noun: "Indian product label", dated: "label", nonIndian: false },
+} as const;
+
+export function deriveFromPilDocs(docs: PilDoc[] = PIL_DOCS): { sources: SourceRecord[]; claims: ClaimRecord[] } {
+  const sources: SourceRecord[] = [];
+  const claims: ClaimRecord[] = [];
+  for (const d of docs) {
+    const k = KINDS[d.kind ?? "leaflet"];
+    const sourceId = `${d.slug}:${k.type}:${k.prefix}.${d.file}`;
+    const excerpts = d.claims.map((c, i) => ({ id: `${d.slug}:pil:${i}`, section: "Extract used for one statement", text: nrm(c[1]), truncated: false }));
+    sources.push({
+      id: sourceId,
+      slug: d.slug,
+      ingredient: d.slug,
+      productTitle: d.product,
+      formulation: d.formulation,
+      organisation: d.holder,
+      type: k.type,
+      jurisdiction: k.jurisdiction,
+      title: d.title,
+      url: d.url ?? `https://www.medicines.org.uk/emc/files/pil.${d.file}.pdf`,
+      identifier: `${k.prefix}.${d.file}`,
+      publishedDate: `${k.dated} ${d.revised}`,
+      accessedAt: d.accessedAt,
+      excerpts,
+      limitations: [
+        k.nonIndian
+          ? `${k.noun} for ${d.product}${d.kind === "fda-label" ? " (FDA Drugs@FDA archive)" : ""}. It is not an Indian label, and Indian brands, strengths, forms and warnings may differ.`
+          : `${k.noun} for ${d.product}. It applies to this product only: other Indian brands, strengths and forms may differ.`,
+        "Only short extracts are stored here, one per statement. The full document at the link is the complete text.",
+        ...d.limits,
+      ],
+    });
+    const perCat = new Map<string, number>();
+    d.claims.forEach(([category, passage, wording, extra], i) => {
+      const key = `${d.slug}:${category}`;
+      const n = (perCat.get(key) ?? 0) + 1;
+      perCat.set(key, n);
+      claims.push({
+        id: `${key}:${k.prefix}${n}`,
+        slug: d.slug,
+        category,
+        patientWording: wording,
+        wordingKind: "paraphrase",
+        sourceId,
+        excerptId: `${d.slug}:pil:${i}`,
+        passage: nrm(passage),
+        applicability: [`As written in the ${k.noun} for ${d.product}, ${d.formulation}.`, "Adults unless the statement says otherwise."],
+        limitations: [
+          d.kind === "fda-label"
+            ? `US label only (not an Indian label): this label was revised ${d.revised}, FDA marks archived labels as possibly not the latest, and an Indian product may differ.`
+            : k.nonIndian
+              ? `UK leaflet only (not an Indian label): the leaflet was last revised ${d.revised}, and the current leaflet or an Indian product may differ.`
+              : `Indian product label, revised ${d.revised}: it applies to the named product only.`,
+          "General information, not advice for any one person.",
+          ...d.limits,
+          ...(extra?.limitations ?? []),
+        ],
+        replacesRule: extra?.replacesRule,
+        verification: "passage-found-in-source",
+        review: "not-reviewed",
+        openQuestions: k.nonIndian ? ["Compare with the Indian product information for the brand the patient is actually given."] : ["Confirm this is the label of the brand the patient is actually given."],
+      });
+    });
+  }
+  return { sources, claims };
+}

@@ -17,9 +17,12 @@
 import { existsSync, readFileSync, writeFileSync } from "fs";
 import type { DiscoveryRecord, MedGuideRecord, MedGuideSection } from "@/lib/kyp/evidence/types";
 import { sections, textOf } from "./spl";
-import { REPACKAGERS } from "./repackagers";
 import { CLAIM_SOURCE_SETID } from "@/lib/kyp/evidence/claims";
 import { getPatientGuide } from "@/lib/kyp/patient";
+import { chooseCandidates } from "./choose";
+
+/** Patient-directed sections of a US label: the Medication Guide, and the Patient Package Insert / patient instruction sheet. */
+const PATIENT_LOINC: Record<string, MedGuideRecord["guideKind"]> = { "42231-1": "medication-guide", "42230-3": "patient-information", "68498-5": "patient-information" };
 
 const DISC = "src/lib/kyp/evidence/data/discovery.json";
 const OUT = "src/lib/kyp/evidence/data/medguides.json";
@@ -66,7 +69,6 @@ if (import.meta.main) {
   const disc = JSON.parse(readFileSync(DISC, "utf8")) as DiscoveryRecord[];
   const prev: MedGuideRecord[] = existsSync(OUT) ? JSON.parse(readFileSync(OUT, "utf8")) : [];
   const bySlug = new Map(prev.map((r) => [r.slug, r]));
-  const pub = (d: string) => new Date(d).getTime() || 0;
   // Medicines whose claims are authored by hand from a specific label keep that label: not regenerated here.
   const HAND = new Set(Object.keys(CLAIM_SOURCE_SETID));
 
@@ -78,9 +80,8 @@ if (import.meta.main) {
       bySlug.set(r.slug, { slug: r.slug, status: "no-us-label-found", accessedAt, labelsChecked: 0, sections: [], note: "No US label was found; this says nothing about Indian product information." });
       continue;
     }
-    const ordered = [...r.candidates].sort((a, b) => pub(b.publishedDate) - pub(a.publishedDate));
-    const pool = [...ordered.filter((c) => !REPACKAGERS.test(c.title)), ...ordered.filter((c) => REPACKAGERS.test(c.title))].slice(0, 6);
-    let rec: MedGuideRecord = { slug: r.slug, status: "no-medication-guide-in-labels-checked", accessedAt, labelsChecked: 0, sections: [], note: "None of the labels checked contained a Medication Guide. Not a statement that none exists." };
+    const pool = chooseCandidates(r.slug, r.candidates);
+    let rec: MedGuideRecord = { slug: r.slug, status: "no-medication-guide-in-labels-checked", accessedAt, labelsChecked: 0, sections: [], note: "None of the labels checked contained a Medication Guide or patient information section that could be split into its own question headings. Not a statement that none exists." };
     try {
       for (const c of pool) {
         rec.labelsChecked++;
@@ -88,11 +89,18 @@ if (import.meta.main) {
         await sleep(300);
         if (!res.ok) continue;
         const xml = await res.text();
-        const mg = sections(xml).find((s) => s.loinc === "42231-1");
-        if (!mg) continue;
-        const secs = splitGuide(textOf(mg.body));
+        let secs: MedGuideSection[] = [];
+        let guideKind: MedGuideRecord["guideKind"];
+        for (const s of sections(xml)) {
+          if (!PATIENT_LOINC[s.loinc]) continue;
+          const got = splitGuide(textOf(s.body));
+          if (got.length > secs.length) {
+            secs = got;
+            guideKind = PATIENT_LOINC[s.loinc];
+          }
+        }
         if (!secs.length) continue;
-        rec = { slug: r.slug, status: "medication-guide-found", labelTitle: c.title, setid: c.setid, publishedDate: c.publishedDate, version: c.version, accessedAt, labelsChecked: rec.labelsChecked, sections: secs };
+        rec = { slug: r.slug, status: "medication-guide-found", guideKind, labelTitle: c.title, setid: c.setid, publishedDate: c.publishedDate, version: c.version, accessedAt, labelsChecked: rec.labelsChecked, sections: secs };
         break;
       }
     } catch (e) {

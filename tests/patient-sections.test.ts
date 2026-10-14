@@ -11,6 +11,7 @@ import { CLAIM_SOURCE_SETID } from "@/lib/kyp/evidence/claims";
 import { categoryOfHeading, deriveMedGuideEvidence } from "@/lib/kyp/evidence/medguide-claims";
 import { PART_ORDER, PART_TITLE, QUESTION_PROMPTS, partStates, questionsFor } from "@/lib/kyp/evidence/patient-sections";
 import { dashboardRows, dashboardSummary } from "@/lib/kyp/evidence/dashboard";
+import { PIL_DOCS } from "@/lib/kyp/evidence/pil-docs";
 import { splitGuide } from "../scripts/evidence/medguide";
 
 const html = (slug: string) => {
@@ -115,26 +116,27 @@ describe("Medication Guide evidence: exact quotes, correctly categorised, never 
     for (const c of mg) {
       expect(c.wordingKind).toBe("exact-quote");
       expect(c.patientWording).toBe(c.passage);
-      expect(c.limitations.join(" ")).toMatch(/US Medication Guide/);
+      expect(c.limitations.join(" ")).toMatch(/US (Medication Guide|patient information sheet)/);
       expect(c.review).toBe("not-reviewed");
       if (/\b(FDA|1-800|poison control|911)\b/.test(c.patientWording)) expect(c.limitations.join(" ")).toMatch(/do not apply in India/);
     }
     expect(validateEvidence()).toEqual([]);
   });
   test("hand-authored medicines and Patient Guide medicines are not regenerated from a different label", () => {
-    for (const r of MEDGUIDE_RECORDS) {
+    for (const r of MEDGUIDE_RECORDS.filter((x) => x.status === "medication-guide-found")) {
       expect(Object.keys(CLAIM_SOURCE_SETID)).not.toContain(r.slug);
       expect(getPatientGuide(r.slug)).toBeUndefined();
     }
     const derived = deriveMedGuideEvidence(MEDGUIDE_RECORDS);
     expect(derived.sources.length).toBe(MEDGUIDE_RECORDS.filter((r) => r.status === "medication-guide-found").length);
-    expect(SOURCE_RECORDS.length).toBe(11 + derived.sources.length);
+    expect(SOURCE_RECORDS.length).toBe(Object.keys(CLAIM_SOURCE_SETID).length + derived.sources.length + PIL_DOCS.length);
   });
   test("records say honestly when no Medication Guide or no US label was found", () => {
     for (const r of MEDGUIDE_RECORDS) {
       if (r.status === "no-medication-guide-in-labels-checked") expect(r.note).toMatch(/Not a statement that none exists/);
       if (r.status === "no-us-label-found") expect(r.note).toMatch(/nothing about Indian/);
-      if (r.status !== "medication-guide-found") expect(claimsFor(r.slug)).toEqual([]);
+      // No Medication Guide claim exists for them; the only claims that can exist rest on a named non-US document.
+      if (r.status !== "medication-guide-found") for (const c of claimsFor(r.slug)) expect(PIL_DOCS.some((d) => d.slug === r.slug && c.sourceId.includes(d.file)) || Object.keys(CLAIM_SOURCE_SETID).includes(r.slug)).toBe(true);
     }
   });
   test("a medicine's source-backed cards appear in the right part, with source, date and review status", () => {

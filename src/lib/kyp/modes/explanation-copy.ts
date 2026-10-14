@@ -92,8 +92,13 @@ export const EXPLANATION_COPY = {
   evidence: {
     heading: "From the product label",
     intro:
-      "These statements come from the product label named under each one. They are rewritten in plain words, have not been reviewed by a clinician, and do not replace advice from your pharmacist or prescriber.",
-    jurisdiction: "This is a US product label. Indian product information has not been checked, and Indian labels may differ.",
+      "These statements come from the product label or leaflet named under each one. They are rewritten in plain words, have not been reviewed by a clinician, and do not replace advice from your pharmacist or prescriber.",
+    jurisdiction: {
+      US: "This is a US product label. Indian product information has not been checked, and Indian labels may differ.",
+      UK: "This is a UK package leaflet. Indian product information has not been checked, and Indian leaflets may differ.",
+      IN: "This is an Indian product label. It applies to the product named, and other Indian brands, strengths and forms may differ.",
+    },
+    formNote: (form: string) => `This statement was written for a ${form}. If you take a different form, ask your pharmacist whether it applies to you.`,
     notReviewed: "Not clinically reviewed",
     exactWords: "Show the label's exact words",
     replaces: "A source-backed statement for this medicine. The standard sentence that was withheld for it stays in the review list.",
@@ -116,7 +121,7 @@ export const EXPLANATION_COPY = {
     legendHeading: "How to read the labels on this page",
     legend: {
       "authored-guide": "Written for patients in this medicine's Patient Guide. Not clinically reviewed.",
-      "source-backed": "Taken from a product label that is named under each statement. Not clinically reviewed. A US label unless it says otherwise.",
+      "source-backed": "Taken from a product label or leaflet that is named, with its country, under each statement. Not clinically reviewed. None is an Indian label.",
       "registry-wording": "Patient wording from this guide's own records. Not clinically reviewed.",
       "standard-wording": "Standard wording used for many medicines. Not specific to this one.",
       "general-direction": "A general direction, not information about this medicine.",
@@ -124,7 +129,7 @@ export const EXPLANATION_COPY = {
     },
     chip: {
       "authored-guide": "Patient Guide",
-      "source-backed": "From a product label",
+      "source-backed": "From a product label or leaflet",
       "registry-wording": "Guide wording",
       "standard-wording": "Standard wording only",
       "general-direction": "General direction",
@@ -143,7 +148,7 @@ export const EXPLANATION_COPY = {
     questionsGuide: "Prompts you can take to your pharmacist or prescriber:",
     personalNote: "Your selections stay on this page as your own notes. They are not a check of your medicines and are not saved or sent.",
     sourcesNone: "No product label has been retrieved for this medicine, so nothing on this page is source-backed.",
-    sourcesIndia: "Indian product information (CDSCO, IPC/PvPI) has not been checked for any medicine on this page. Indian labels may differ from the US ones named here.",
+    sourcesIndia: "Indian product information (CDSCO, IPC/PvPI) has not been checked for any medicine on this page. Indian labels may differ from the US or UK documents named here.",
     reviewLine: "Clinical review: none recorded for this medicine.",
     usesFromWhat: "The product label statement under \"What this medicine is\" also says what it is used for. The list below is from this guide's own records.",
     longRest: "Read the rest of this section",

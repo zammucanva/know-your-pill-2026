@@ -36,7 +36,8 @@ export function deriveMedGuideEvidence(records: MedGuideRecord[]): { sources: So
   for (const r of records) {
     if (r.status !== "medication-guide-found" || !r.setid || !r.labelTitle) continue;
     const sourceId = `${r.slug}:us-product-label:${r.setid}`;
-    const excerpts = r.sections.map((s, i) => ({ id: `${r.slug}:mg:${i}`, section: `Medication Guide: ${s.heading}`, text: s.text, truncated: s.truncated }));
+    const doc = r.guideKind === "patient-information" ? "patient information sheet" : "Medication Guide";
+    const excerpts = r.sections.map((s, i) => ({ id: `${r.slug}:mg:${i}`, section: `${doc}: ${s.heading}`, text: s.text, truncated: s.truncated }));
     sources.push({
       id: sourceId,
       slug: r.slug,
@@ -46,7 +47,7 @@ export function deriveMedGuideEvidence(records: MedGuideRecord[]): { sources: So
       organisation: /\[(.+)\]\s*$/.exec(r.labelTitle)?.[1] ?? "unknown labeler",
       type: "us-product-label",
       jurisdiction: "US",
-      title: `${r.labelTitle} (Medication Guide)`,
+      title: `${r.labelTitle} (${doc})`,
       url: `https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=${r.setid}`,
       identifier: r.setid,
       publishedDate: r.publishedDate,
@@ -54,7 +55,7 @@ export function deriveMedGuideEvidence(records: MedGuideRecord[]): { sources: So
       accessedAt: r.accessedAt,
       excerpts,
       limitations: [
-        "US Medication Guide for this US product. It is not an Indian product label, and Indian approval, indications, strengths and warnings may differ.",
+        `US ${doc} for this US product. It is not an Indian product label, and Indian approval, indications, strengths and warnings may differ.`,
         "Applies to the product named in this record only.",
       ],
     });
@@ -66,7 +67,7 @@ export function deriveMedGuideEvidence(records: MedGuideRecord[]): { sources: So
       const n = (perCat.get(key) ?? 0) + 1;
       perCat.set(key, n);
       const limits = [
-        "US Medication Guide only: Indian approval, strengths and warnings may differ.",
+        `US ${doc} only: Indian approval, strengths and warnings may differ.`,
         "Quoted exactly as published. Spacing and list layout follow the source document and may contain small typographical artefacts.",
         "General information, not advice for any one person.",
       ];
@@ -81,7 +82,7 @@ export function deriveMedGuideEvidence(records: MedGuideRecord[]): { sources: So
         sourceId,
         excerptId: `${r.slug}:mg:${i}`,
         passage: s.text,
-        applicability: [`As written in the US Medication Guide for: ${r.labelTitle}. Heading in the guide: "${s.heading}"`],
+        applicability: [`As written in the US ${doc} for: ${r.labelTitle}. Heading in the guide: "${s.heading}"`],
         limitations: limits,
         verification: "passage-found-in-source",
         review: "not-reviewed",

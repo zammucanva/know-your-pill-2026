@@ -137,7 +137,7 @@ describe("patient explanation: every medication has the slot, with honest proven
   });
 
   test("template-only wording carries an explicit warning and per-run labels", () => {
-    const t = drugs.find((d) => !getPatientGuide(d.slug) && explainPatient(d).level === "template-only" && claimsFor(d.slug).length === 0)!;
+    const t = drugs.find((d) => !getPatientGuide(d.slug) && explainPatient(d).level === "template-only" && !claimsFor(d.slug).some((c) => c.category === "what-it-is"))!;
     expect(t).toBeDefined();
     const h = render(t);
     expect(h).toContain('data-state="template-only"');

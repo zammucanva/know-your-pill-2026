@@ -52,12 +52,20 @@ if (!res.ok) {
 const xml = await res.text();
 const found = sections(xml).filter((s) => WANTED[s.loinc]);
 const excerpts: SourceExcerpt[] = [];
-const seen = new Set<string>();
+// A label may split one heading (e.g. Indications) into several same-coded sub-sections. All of them are kept, in
+// label order, so a claim can rest on any; a sub-section already contained in another one is not repeated.
+const byCode = new Map<string, { title: string; texts: string[] }>();
 for (const s of found) {
-  if (seen.has(s.loinc)) continue; // first occurrence only
-  seen.add(s.loinc);
   const t = textOf(s.body);
-  excerpts.push({ id: `${slug}:${s.loinc}`, section: s.title || WANTED[s.loinc], loinc: s.loinc, text: t.slice(0, CAP), truncated: t.length > CAP });
+  const g = byCode.get(s.loinc) ?? { title: s.title || WANTED[s.loinc], texts: [] };
+  if (g.texts.some((x) => x.includes(t))) continue;
+  g.texts = g.texts.filter((x) => !t.includes(x));
+  g.texts.push(t);
+  byCode.set(s.loinc, g);
+}
+for (const [loinc, g] of byCode) {
+  const t = g.texts.join("\n");
+  excerpts.push({ id: `${slug}:${loinc}`, section: g.title, loinc, text: t.slice(0, CAP), truncated: t.length > CAP });
 }
 
 const labeler = /\[(.+)\]\s*$/.exec(cand.title)?.[1] ?? "unknown labeler";

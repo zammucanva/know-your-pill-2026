@@ -133,6 +133,8 @@ export interface MedGuideSection {
 export interface MedGuideRecord {
   slug: string;
   status: "medication-guide-found" | "no-medication-guide-in-labels-checked" | "no-us-label-found" | "error";
+  /** Which patient-directed part of the label the sections come from (absent in older records: a Medication Guide). */
+  guideKind?: "medication-guide" | "patient-information";
   labelTitle?: string;
   setid?: string;
   publishedDate?: string;

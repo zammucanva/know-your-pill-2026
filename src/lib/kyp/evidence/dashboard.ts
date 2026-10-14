@@ -16,9 +16,9 @@ import { PART_ORDER, partStates, type PartId, type PartState } from "./patient-s
 export interface DashboardRow {
   slug: string;
   patientUi: "renders";
-  /** Verified Indian sources retrieved for this medication. Always 0 today: see INDIAN_SOURCE_SEARCH. */
+  /** Indian sources retrieved for this medication (a stored, quote-verified Indian label or insert). 0 until a person adds one: see INDIAN_SOURCE_SEARCH. */
   indianSourcesVerified: number;
-  indianSourceStatus: "unresolved";
+  indianSourceStatus: "unresolved" | "retrieved";
   usLabelDiscovery: "candidates-found" | "none-found" | "error" | "not-run";
   usLabelCandidates: number;
   sourcesRetrieved: number;
@@ -71,8 +71,8 @@ export function dashboardRows(): DashboardRow[] {
     return {
       slug: d.slug,
       patientUi: "renders" as const,
-      indianSourcesVerified: 0,
-      indianSourceStatus: "unresolved" as const,
+      indianSourcesVerified: SOURCE_RECORDS.filter((s) => s.slug === d.slug && s.jurisdiction === "IN").length,
+      indianSourceStatus: SOURCE_RECORDS.some((s) => s.slug === d.slug && s.jurisdiction === "IN") ? ("retrieved" as const) : ("unresolved" as const),
       usLabelDiscovery: disc?.status ?? "not-run",
       usLabelCandidates: disc?.totalFound ?? 0,
       sourcesRetrieved: sourced,

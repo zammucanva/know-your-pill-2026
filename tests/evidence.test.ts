@@ -9,6 +9,7 @@ import {
   CLAIM_RECORDS,
   DISCOVERY_RECORDS,
   INDIAN_SOURCE_SEARCH,
+  MEDGUIDE_RECORDS,
   ONSET_SCAN,
   SOURCE_RECORDS,
   claimsFor,
@@ -20,6 +21,8 @@ import {
 } from "@/lib/kyp/evidence";
 import { dashboardRows, dashboardSummary } from "@/lib/kyp/evidence/dashboard";
 import { readability } from "@/lib/kyp/evidence/readability";
+import { PIL_DOCS } from "@/lib/kyp/evidence/pil-docs";
+import { CLAIM_SOURCE_SETID } from "@/lib/kyp/evidence/claims";
 
 const squash = (t: string) => t.replace(/\s+/g, " ").trim();
 const visible = (html: string) => html.replace(/<details data-withheld[\s\S]*?<\/details>/g, "");
@@ -30,12 +33,16 @@ const html = (slug: string) => {
   return renderToStaticMarkup(React.createElement(PatientExplainer, { drugName: d.genericName, explanation: explainPatient(d, g), interactions, evidence: evidenceViews(slug) }));
 };
 const TEMPLATE_ONLY = ["isocarboxazid", "moclobemide", "phenelzine", "selegiline", "tranylcypromine", "amoxapine", "desipramine", "dothiepin", "doxepin", "imipramine", "lofepramine", "maprotiline", "mianserin", "nortriptyline", "protriptyline", "trimipramine"];
+const sourcesOf = (slug: string) => SOURCE_RECORDS.filter((s) => s.slug === slug);
 const NO_US_LABEL = ["moclobemide", "dothiepin", "lofepramine", "maprotiline", "mianserin"];
 
 describe("evidence layer: integrity", () => {
   test("every stored source and claim is internally consistent (passage really is in the source)", () => {
     expect(validateEvidence()).toEqual([]);
-    expect(SOURCE_RECORDS.length).toBe(70); // 11 hand-picked labels + 59 Medication Guides
+    const guides = MEDGUIDE_RECORDS.filter((r) => r.status === "medication-guide-found").length;
+    expect(guides).toBe(60);
+    expect(SOURCE_RECORDS.length).toBe(Object.keys(CLAIM_SOURCE_SETID).length + guides + PIL_DOCS.length); // hand-picked US labels + patient-directed US sections + non-US documents
+    expect(Object.keys(CLAIM_SOURCE_SETID).length).toBe(24);
     expect(CLAIM_RECORDS.length).toBeGreaterThanOrEqual(50);
   });
 
@@ -58,13 +65,13 @@ describe("evidence layer: integrity", () => {
     expect(numbersIn("ten days to four weeks, 60 mg, 1 to 3").size).toBe(5);
   });
 
-  test("no claim is an Indian label claim, none is reviewed, and every one says it is a US label claim", () => {
+  test("no claim is an Indian label claim, none is reviewed, and every one says which non-Indian document it rests on", () => {
     for (const c of CLAIM_RECORDS) {
       const s = SOURCE_RECORDS.find((x) => x.id === c.sourceId)!;
-      expect(s.jurisdiction).toBe("US");
-      expect(s.type).toBe("us-product-label");
+      expect(["US", "UK"]).toContain(s.jurisdiction);
+      expect(["us-product-label", "international-patient-information"]).toContain(s.type);
       expect(c.review).toBe("not-reviewed");
-      expect(c.limitations.join(" ")).toMatch(/US (label|Medication Guide)/i);
+      expect(c.limitations.join(" ")).toMatch(s.jurisdiction === "UK" ? /UK (leaflet|package leaflet)/i : /US (label|Medication Guide|patient information|prescribing information)/i);
       expect(c.verification).toBe("passage-found-in-source");
     }
     expect(INDIAN_SOURCE_SEARCH.outcome).toBe("unresolved-for-every-medication");
@@ -92,7 +99,7 @@ describe("evidence layer: integrity", () => {
 describe("evidence layer: rendering and honesty", () => {
   test("a sourced onset statement replaces the generic one for exactly the medicines whose label states one", () => {
     const withOnset = CLAIM_RECORDS.filter((c) => c.category === "onset").map((c) => c.slug).sort();
-    expect(withOnset).toEqual(["amoxapine", "desipramine", "imipramine", "isocarboxazid", "phenelzine", "protriptyline", "trimipramine"]);
+    expect(withOnset).toEqual(["amoxapine", "chlorpromazine", "desipramine", "dothiepin", "imipramine", "isocarboxazid", "lofepramine", "maprotiline", "mianserin", "moclobemide", "phenelzine", "propranolol", "protriptyline", "trimipramine"]);
     for (const slug of withOnset) {
       const h = html(slug);
       expect(h).toContain('data-claim-category="onset"');
@@ -114,15 +121,24 @@ describe("evidence layer: rendering and honesty", () => {
     }
   });
 
-  test("medicines with no US label get no sourced claim, no evidence section, and say so", () => {
+  test("medicines with no DailyMed label rest only on a named non-US document, and say which", () => {
     for (const slug of NO_US_LABEL) {
-      expect(claimsFor(slug)).toEqual([]);
+      const claims = claimsFor(slug);
+      expect(claims.length).toBeGreaterThan(15);
+      for (const c of claims) {
+        const s = SOURCE_RECORDS.find((x) => x.id === c.sourceId)!;
+        expect(s.url).not.toContain("dailymed");
+        expect(c.wordingKind).toBe("paraphrase");
+        expect(c.passage.length).toBeLessThan(1300); // short extracts only, never the whole document
+      }
       const h = html(slug);
-      expect(h).not.toContain("data-evidence-claims");
+      expect(h).toContain("data-evidence-claims");
+      expect(h).toContain("not an Indian label");
       expect(visible(h).toLowerCase()).not.toContain("works gradually, most people notice");
       const row = dashboardRows().find((r) => r.slug === slug)!;
-      expect(row.usLabelDiscovery).toBe("none-found");
-      expect(row.nextAction).toMatch(/no US label found/i);
+      expect(row.usLabelDiscovery).toBe("none-found"); // DailyMed still has nothing: that column does not change
+      expect(row.nextAction).not.toMatch(/no US label found/i);
+      expect(row.indianSourcesVerified).toBe(0);
     }
   });
 
@@ -177,17 +193,17 @@ describe("India-first dashboard: separate measures, honest numbers", () => {
     expect(sum.claimsWithTraceableSource).toBe(CLAIM_RECORDS.length);
     expect(sum.medicationsWithSourcedClaims).toBe(new Set(CLAIM_RECORDS.map((c) => c.slug)).size);
     expect(sum.medicationsWithSourcedClaims).toBeGreaterThanOrEqual(60);
-    expect(sum.medicationsWithSourcedOnsetClaim).toBe(7);
+    expect(sum.medicationsWithSourcedOnsetClaim).toBe(14);
     expect(sum.usLabelDiscovery["candidates-found"] + sum.usLabelDiscovery["none-found"]).toBe(145);
     expect(Object.keys(sum)).not.toContain("percent");
     expect(Object.keys(sum).some((k) => /percent|score|overall/i.test(k))).toBe(false);
   });
-  test("the 16 template-only medicines are tracked: sourced where a US label exists, unresolved where it does not", () => {
+  test("the 16 template-only medicines are all tracked and all have sourced statements; five rest on non-US documents only", () => {
     const t = rows.filter((r) => r.explanationLevel === "template-only").map((r) => r.slug).sort();
     expect(t).toEqual([...TEMPLATE_ONLY].sort());
     const sourced = t.filter((s) => claimsFor(s).length > 0);
-    expect(sourced.length).toBe(11);
-    for (const s of t.filter((x) => !sourced.includes(x))) expect(NO_US_LABEL).toContain(s);
+    expect(sourced.length).toBe(16);
+    for (const s of NO_US_LABEL) expect(sourcesOf(s).every((x) => !x.url.includes("dailymed"))).toBe(true);
     // Sourced claims do not make the registry wording medicine-specific: the level stays template-only.
     for (const s of sourced) expect(rows.find((r) => r.slug === s)!.explanationLevel).toBe("template-only");
   });
@@ -205,8 +221,8 @@ describe("India-first dashboard: separate measures, honest numbers", () => {
     expect(sum.onsetScan.noUsLabel).toBe(24);
     expect(sum.onsetScan.note).toMatch(/not claims/);
   });
-  test("every retrieved source is a discovered candidate label (traceable to the listing)", () => {
-    for (const s of SOURCE_RECORDS) expect(DISCOVERY_RECORDS.find((r) => r.slug === s.slug)!.candidates.some((c) => c.setid === s.identifier)).toBe(true);
+  test("every DailyMed source is a discovered candidate label (traceable to the listing)", () => {
+    for (const s of SOURCE_RECORDS.filter((x) => x.url.includes("dailymed"))) expect(DISCOVERY_RECORDS.find((r) => r.slug === s.slug)!.candidates.some((c) => c.setid === s.identifier)).toBe(true);
   });
   test("readability is an automated screen, defined and bounded", () => {
     const easy = readability("Take it with food. Call your doctor if you feel unwell.");

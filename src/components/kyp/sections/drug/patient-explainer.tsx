@@ -7,6 +7,7 @@ import { EXPLANATION_COPY as EC, type PatientExplanation } from "@/lib/kyp/modes
 import type { LensBlock } from "@/lib/kyp/modes/types";
 import type { EvidenceClaimView } from "@/lib/kyp/evidence/types";
 import { PART_CATEGORIES, PART_ORDER, PART_TITLE, partStates, questionsFor, usesStatedInWhat, type PartId, type PartState } from "@/lib/kyp/evidence/patient-sections";
+import { sourceIdLabel, sourceKind } from "@/lib/kyp/evidence/source-label";
 import { ExplanationText } from "./explanation-text";
 import { EvidenceClaimCards } from "./evidence-claims";
 import { LensBlockView } from "./lens-blocks";
@@ -250,8 +251,8 @@ export function PatientExplainer({
                     <a href={s.url} rel="noopener noreferrer" className="underline underline-offset-2">
                       {s.title}
                     </a>
-                    . {s.organisation}, {s.jurisdiction === "US" ? "US product label" : "source"}
-                    {s.publishedDate ? `, published ${s.publishedDate}` : ""}. DailyMed set id {s.identifier}. Accessed {s.accessedAt}.
+                    . {s.organisation}, {sourceKind(s)}
+                    {s.publishedDate ? `, published ${s.publishedDate}` : ""}. {sourceIdLabel(s)}. Accessed {s.accessedAt}.
                   </li>
                 ))}
               </ul>

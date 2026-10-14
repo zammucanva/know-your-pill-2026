@@ -1,6 +1,8 @@
 import * as React from "react";
 import { EXPLANATION_COPY as EC } from "@/lib/kyp/modes/explanation-copy";
 import type { EvidenceClaimView } from "@/lib/kyp/evidence/types";
+import { sourceIdLabel, sourceKind } from "@/lib/kyp/evidence/source-label";
+import { formOf } from "@/lib/kyp/evidence/label-form";
 
 /**
  * Source-backed statements for one part of the Patient explanation. Each card shows the statement, a one-line
@@ -38,16 +40,27 @@ export function EvidenceClaimCards({ views }: { views: EvidenceClaimView[] }) {
             <Wording text={claim.patientWording} />
           </div>
           <p data-claim-source="" className="mt-2 text-xs text-muted-foreground">
-            {EC.evidence.sourcePrefix} <a href={source.url} rel="noopener noreferrer" className="underline underline-offset-2">{source.title}</a>
-            {source.publishedDate ? `, published ${source.publishedDate}` : ""}. {source.jurisdiction === "US" ? "US label" : source.organisation}. DailyMed set id {source.identifier}. Accessed {source.accessedAt}.
+            {EC.evidence.sourcePrefix} <a href={source.url} rel="noopener noreferrer" className="underline underline-offset-2">{source.title}</a>. {sourceKind(source)}.
           </p>
+          {(() => {
+            const form = formOf(source.formulation ?? source.title);
+            return form.plainOral ? null : (
+              <p data-claim-form={form.label} className="mt-1 rounded border border-amber-500/50 px-2 py-1 text-xs">
+                {EC.evidence.formNote(form.label)}
+              </p>
+            );
+          })()}
           <p data-claim-review="" className="mt-1 inline-block rounded-full border border-border px-2 text-xs">
             {EC.evidence.notReviewed}
           </p>
           <details className="mt-2">
             <summary className="cursor-pointer text-xs underline underline-offset-2">About this statement</summary>
+            <p data-claim-source-detail="" className="mt-1 text-xs text-muted-foreground">
+              {source.organisation}
+              {source.publishedDate ? `, published ${source.publishedDate}` : ""}. {sourceIdLabel(source)}. Accessed {source.accessedAt}.
+            </p>
             <p data-jurisdiction-note="" className="mt-1 text-xs">
-              {EC.evidence.jurisdiction}
+              {EC.evidence.jurisdiction[source.jurisdiction === "UK" || source.jurisdiction === "IN" ? source.jurisdiction : "US"]}
             </p>
             <ul className="mt-1 list-disc space-y-0.5 pl-5 text-xs text-muted-foreground">
               {[...claim.applicability, ...claim.limitations].map((t, i) => (

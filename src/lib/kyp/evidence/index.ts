@@ -3,6 +3,7 @@ import discoveryJson from "./data/discovery.json";
 import onsetScanJson from "./data/onset-scan.json";
 import medguidesJson from "./data/medguides.json";
 import { deriveMedGuideEvidence } from "./medguide-claims";
+import { deriveFromPilDocs } from "./pil-docs";
 import sourcesJson from "./data/sources.json";
 import { CLAIM_RECORDS as HAND_CLAIMS } from "./claims";
 import type { ClaimRecord, DiscoveryRecord, EvidenceClaimView, MedGuideRecord, SourceRecord } from "./types";
@@ -12,11 +13,12 @@ export * from "./types";
 /** Captured US Medication Guides (verbatim sections). Regenerate with scripts/evidence/medguide.ts. */
 export const MEDGUIDE_RECORDS = medguidesJson as unknown as MedGuideRecord[];
 const MG = deriveMedGuideEvidence(MEDGUIDE_RECORDS);
+const PIL = deriveFromPilDocs();
 
 /** Retrieved sources (verbatim excerpts): hand-picked labels (fetch-label.ts) plus Medication Guides (medguide.ts). */
-export const SOURCE_RECORDS: SourceRecord[] = [...(sourcesJson as unknown as SourceRecord[]), ...MG.sources];
+export const SOURCE_RECORDS: SourceRecord[] = [...(sourcesJson as unknown as SourceRecord[]), ...MG.sources, ...PIL.sources];
 /** Hand-authored claims (claims.ts) plus exact-quote claims derived from Medication Guides. */
-export const CLAIM_RECORDS: ClaimRecord[] = [...HAND_CLAIMS, ...MG.claims];
+export const CLAIM_RECORDS: ClaimRecord[] = [...HAND_CLAIMS, ...MG.claims, ...PIL.claims];
 /** Candidate labels found on DailyMed for every medication. Regenerate with scripts/evidence/discover.ts. */
 export const DISCOVERY_RECORDS = discoveryJson as unknown as DiscoveryRecord[];
 
@@ -39,14 +41,15 @@ export const claimsFor = (slug: string): ClaimRecord[] => CLAIM_RECORDS.filter((
 export const sourcesFor = (slug: string): SourceRecord[] => SOURCE_RECORDS.filter((s) => s.slug === slug);
 
 /** Allowed hosts. A source URL outside this list is a defect until a person adds the host on purpose. */
-export const ALLOWED_SOURCE_HOSTS = ["dailymed.nlm.nih.gov", "medlineplus.gov", "cdsco.gov.in", "cdscoonline.gov.in", "ipc.gov.in", "pvpi.gov.in", "www.ipc.gov.in", "labeling.pfizer.com"];
+export const ALLOWED_SOURCE_HOSTS = ["dailymed.nlm.nih.gov", "medlineplus.gov", "cdsco.gov.in", "cdscoonline.gov.in", "ipc.gov.in", "pvpi.gov.in", "www.ipc.gov.in", "labeling.pfizer.com", "www.medicines.org.uk", "www.accessdata.fda.gov"];
 
 const WORD_NUM: Record<string, string> = { one: "1", two: "2", three: "3", four: "4", five: "5", six: "6", seven: "7", eight: "8", nine: "9", ten: "10", twelve: "12" };
-const norm = (t: string) => t.replace(/[•]/g, " ").replace(/\s+/g, " ").trim();
+/** Layout only: list markers ("•", a lone "o" or "○") and table bars ("|") are removed and whitespace collapsed. Words are never changed. */
+const norm = (t: string) => t.replace(/[•○]/g, " ").replace(/(^|\s)[o|](?=\s|$)/g, " ").replace(/\s+/g, " ").trim();
 /** Numbers in a text, digits and number words alike, as digit strings. */
 export function numbersIn(t: string): Set<string> {
   const out = new Set<string>();
-  for (const m of t.toLowerCase().matchAll(/\b(\d+(?:\.\d+)?)\b|\b(one|two|three|four|five|six|seven|eight|nine|ten|twelve)\b/g)) out.add(m[1] ?? WORD_NUM[m[2]]);
+  for (const m of t.toLowerCase().matchAll(/(\d+(?:\.\d+)?)|\b(one|two|three|four|five|six|seven|eight|nine|ten|twelve)\b/g)) out.add(m[1] ?? WORD_NUM[m[2]]);
   return out;
 }
 

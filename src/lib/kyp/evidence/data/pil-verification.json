@@ -1,0 +1,57 @@
+[
+ {
+  "slug": "moclobemide",
+  "file": "10614",
+  "url": "https://www.medicines.org.uk/emc/files/pil.10614.pdf",
+  "httpStatus": 200,
+  "sha256": "3cc3fd21d65841d92ff8869c2d64281fe2d1e2723c20ea70ceec39902304c7a6",
+  "checkedAt": "2026-10-14",
+  "passages": 22,
+  "passagesFound": 22,
+  "missing": []
+ },
+ {
+  "slug": "mianserin",
+  "file": "2741",
+  "url": "https://www.medicines.org.uk/emc/files/pil.2741.pdf",
+  "httpStatus": 200,
+  "sha256": "890a2bf29f72285304c338a985b06877f7d0188c6c958a0559e5f1161ed680fd",
+  "checkedAt": "2026-10-14",
+  "passages": 27,
+  "passagesFound": 27,
+  "missing": []
+ },
+ {
+  "slug": "dothiepin",
+  "file": "102250",
+  "url": "https://www.medicines.org.uk/emc/files/pil.102250.pdf",
+  "httpStatus": 200,
+  "sha256": "5dc7d79b53871c4a6eda38b1877dd54fef09c152df0946e6ba544b62b1293904",
+  "checkedAt": "2026-10-14",
+  "passages": 24,
+  "passagesFound": 24,
+  "missing": []
+ },
+ {
+  "slug": "lofepramine",
+  "file": "13878",
+  "url": "https://www.medicines.org.uk/emc/files/pil.13878.pdf",
+  "httpStatus": 200,
+  "sha256": "2e7aa5414df6bdaae60adbc2e57b266f8158c7d736d95b9a750c8569e85faddc",
+  "checkedAt": "2026-10-14",
+  "passages": 29,
+  "passagesFound": 29,
+  "missing": []
+ },
+ {
+  "slug": "maprotiline",
+  "file": "072285s021",
+  "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2014/072285s021lbl.pdf",
+  "httpStatus": 200,
+  "sha256": "df8c835a123cb1560c611857d071936ca585ff90129bbd9c406beab5c0169313",
+  "checkedAt": "2026-10-14",
+  "passages": 26,
+  "passagesFound": 26,
+  "missing": []
+ }
+]
