@@ -11,10 +11,10 @@ Engineering status and clinical status are separate. A green run below says the 
 6. Tests: `bun test tests/`. Without a database the 47 database-dependent tests fail with `TEST PREREQUISITE MISSING`; they are never skipped.
 7. Browser: serve the standalone build (`PORT=3310 HOSTNAME=127.0.0.1 node .next/standalone/server.js`), run axe-core on the pages listed in `docs/test-baseline.md`, in light and dark and at 375 px and desktop width, with transitions disabled for the dark check.
 
-## Recorded results at the release candidate (2026-10-15)
+## Recorded results at the release candidate (2026-10-16)
 | Check | Result |
 |---|---|
-| `bun test tests/` with an isolated PostgreSQL 16.9 | 2,060 pass, 0 fail, 0 skipped, 0 timeouts (83 files) |
+| `bun test tests/` with an isolated PostgreSQL 16.9 | 2,084 pass, 0 fail, 0 skipped, 0 timeouts (88 files, 252 s) |
 | `tsc`, `lint:dashes`, four-mode audit, ESLint on changed files | clean |
 | Content lock | 165/165 |
 | Production build | exit 0 |
