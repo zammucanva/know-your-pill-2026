@@ -7,8 +7,10 @@ import type { PatientExplanation } from "@/lib/kyp/modes/explanation-copy";
  *
  * States, from strongest to weakest evidence (none of them is "clinically reviewed"):
  *   authored-guide     : the medicine's Patient Guide covers it.
- *   source-backed      : at least one statement quoted/restated from a retrieved product label (US unless an
- *                        Indian source exists), with its source shown.
+ *   source-backed      : at least one statement quoted/restated from a retrieved product label, leaflet,
+ *                        monograph or formulary entry (US unless an Indian source exists), with its source shown.
+ *   info-page-only     : supported only by a MedlinePlus patient-information page: not a product label.
+ *   safety-alert-only  : supported only by an Indian PvPI safety-alert list entry: a signal, not a label.
  *   registry-wording   : the registry's patient wording has at least one sentence written for this medicine.
  *   standard-wording   : only standard sentences used for many medicines (labelled as such).
  *   general-direction  : only the page's general "ask your pharmacist or prescriber" direction.
