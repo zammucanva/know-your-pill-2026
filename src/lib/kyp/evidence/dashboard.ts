@@ -8,6 +8,7 @@ import { CLAIM_SOURCE_SETID } from "./claims";
 import { buildModeLens } from "@/lib/kyp/modes/build";
 import { PART_ORDER, partStates, type PartId, type PartState } from "./patient-sections";
 import { formOf } from "./label-form";
+import { splitList } from "./list-text";
 
 /**
  * India-first content dashboard, one row per medication. The columns are separate on purpose: they measure
@@ -72,7 +73,12 @@ export function dashboardRows(): DashboardRow[] {
     const segs = [...e.plainWords, ...e.summary, ...e.reminders, ...e.sideEffects];
     const shown = segs.filter((s) => s.handling === "show");
     const withheld = segs.filter((s) => s.handling === "withhold");
-    const text = [...shown.map((s) => s.text), ...claims.map((c) => c.patientWording)].join(" ");
+    // A restated statement that the page shows as a bulleted list is measured item by item, as the reader sees it.
+    const asShown = (w: string) => {
+      const l = splitList(w);
+      return l ? [l.intro, ...l.items, l.outro].filter(Boolean).map((t) => t.replace(/[.:;,\s]+$/, "") + ".").join(" ") : w;
+    };
+    const text = [...shown.map((s) => s.text), ...claims.map((c) => (c.wordingKind === "paraphrase" ? asShown(c.patientWording) : c.patientWording))].join(" ");
     const r = readability(text);
     const block = buildModeLens("patient", { drug: d, patientGuide: guide, mcqs: [] }).blocks.find((b) => b.kind === "patient-interactions");
     const inter = block && block.kind === "patient-interactions" ? block : null;

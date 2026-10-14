@@ -136,6 +136,14 @@ describe("long lists in restated statements are shown as lists without changing 
       if (parts) expect(words([parts.intro, ...parts.items, parts.outro].join(" "))).toEqual(words(c.patientWording));
     }
   });
+  test("comma lists of five or more short items are split too, never inside brackets or numbers, and ordinary sentences are left alone", () => {
+    const l = splitList("Rare (up to 1 in 1,000 people): serious skin eruption (rash, with blisters), swelling of the face, hepatitis, jaundice, and seizures. Tell your doctor.")!;
+    expect(l.intro).toBe("Rare (up to 1 in 1,000 people):");
+    expect(l.items).toEqual(["serious skin eruption (rash, with blisters)", "swelling of the face", "hepatitis", "jaundice", "seizures"]);
+    expect(l.outro).toBe("Tell your doctor.");
+    expect(splitList("You may notice: headache, nausea, dizziness, rash.")).toBeNull(); // only four items
+    expect(splitList("Do not take it if you have: a long sentence, which goes on. And another, with commas, in it, again, and again.")).toBeNull();
+  });
   test("the page shows the long contraindication list as a list", () => {
     const h = html("doxepin");
     expect(h).toContain("data-statement-list");
