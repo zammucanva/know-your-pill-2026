@@ -40,7 +40,7 @@ describe("a safety-alert signal alone is never labelled as a product-label sourc
 
   test("the rendered page shows the distinct chip and explains it", () => {
     const d = drugs.find((x) => x.slug === "quetiapine")!;
-    const h = renderToStaticMarkup(React.createElement(PatientExplainer, { drugName: d.genericName, explanation: explainPatient(d, null), interactions: null, evidence: evidenceViews("quetiapine"), hasGuide: false }));
+    const h = renderToStaticMarkup(React.createElement(PatientExplainer, { drugName: d.genericName, explanation: explainPatient(d, undefined), interactions: null, evidence: evidenceViews("quetiapine"), hasGuide: false }));
     expect(h).toContain("Safety alert signal only");
     expect(h).toContain("not a product label");
   });
