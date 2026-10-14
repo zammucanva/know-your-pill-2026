@@ -206,3 +206,17 @@ describe("the viva findings are reviewable in the same record format", () => {
     expect(validateReviewRecord(done, reviewItems(VIVA_PACKET), NOW)).toEqual([]);
   });
 });
+
+describe("a decision on an 'In short' sentence goes stale when the source wordings it stands for change", () => {
+  test("hash depends on the sentence, its patterns and the set of source wordings", async () => {
+    const { inShortItemHash, inShortUses } = await import("@/lib/kyp/evidence/review-packet");
+    const { PLAIN_SENTENCES } = await import("@/lib/kyp/evidence/plain-summaries");
+    const b = PLAIN_SENTENCES[0];
+    const base = inShortItemHash(b, ["wording A", "wording B"]);
+    expect(inShortItemHash(b, ["wording B", "wording A"])).toBe(base); // order does not matter
+    expect(inShortItemHash(b, ["wording A"])).not.toBe(base);
+    expect(inShortItemHash(b, ["wording A", "wording B", "wording C"])).not.toBe(base);
+    expect(inShortItemHash({ ...b, text: b.text + " " }, ["wording A", "wording B"])).not.toBe(base);
+    expect(inShortUses().size).toBeGreaterThan(10);
+  });
+});

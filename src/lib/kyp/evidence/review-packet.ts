@@ -53,7 +53,10 @@ export interface ReviewItem {
 }
 export function reviewItems(slug: string): ReviewItem[] {
   if (slug === VIVA_PACKET) return vivaFindings().map((v) => ({ id: v.id, hash: contentHash(JSON.stringify([v.id, v.text, v.reason])) }));
-  if (slug === IN_SHORT_PACKET) return PLAIN_SENTENCES.map((b) => ({ id: b.id, hash: contentHash(JSON.stringify([b.id, b.text, b.support.map((r) => r.source)])) }));
+  if (slug === IN_SHORT_PACKET) {
+    const uses = inShortUses();
+    return PLAIN_SENTENCES.map((b) => ({ id: b.id, hash: inShortItemHash(b, [...(uses.get(b.id)?.keys() ?? [])]) }));
+  }
   const guide = getPatientGuide(slug);
   const items: ReviewItem[] = [];
   if (guide) for (const [k, v] of Object.entries(guide)) if (k !== "slug") items.push({ id: `guide:${k}`, hash: contentHash(JSON.stringify([slug, k, v])) });
@@ -62,6 +65,8 @@ export function reviewItems(slug: string): ReviewItem[] {
   return items;
 }
 /** Everything a decision on one statement depends on. A change to any part (wording, passage, source, formulation or population in `applicability`, limits) makes an old decision stale. */
+/** A decision on a bank sentence depends on its wording, its support patterns AND the source wordings it stands for. */
+export const inShortItemHash = (b: { id: string; text: string; support: RegExp[] }, wordings: string[]): string => contentHash(JSON.stringify([b.id, b.text, b.support.map((r) => r.source), [...wordings].sort()]));
 export const claimItemHash = (c: Pick<ClaimRecord, "id" | "slug" | "category" | "patientWording" | "wordingKind" | "passage" | "sourceId" | "applicability" | "limitations">, s?: Pick<SourceRecord, "title" | "url" | "identifier" | "publishedDate" | "formulation" | "jurisdiction" | "type" | "productTitle" | "organisation">): string =>
   contentHash(JSON.stringify([c.id, c.slug, c.category, c.patientWording, c.wordingKind, c.passage, c.sourceId, c.applicability, c.limitations, s ? [s.title, s.url, s.identifier, s.publishedDate ?? null, s.formulation ?? null, s.jurisdiction, s.type, s.productTitle, s.organisation] : null]));
 export const reviewItemIds = (slug: string): string[] => reviewItems(slug).map((i) => i.id);
@@ -133,17 +138,8 @@ export function reviewPacket(slug: string): string {
   return L.join("\n");
 }
 
-/**
- * A packet for the "In short" sentence bank: each plain sentence, how many quoted guide sections it is shown above,
- * and the distinct source wordings it stands for. Like the medicine packets it is NOT a review record: no decision,
- * no reviewer, and every decision field is blank.
- */
-export function inShortReviewPacket(): string {
-  const L: string[] = [];
-  L.push("# Review packet: the 'In short' sentence bank", "");
-  L.push("**Status: NOT REVIEWED.** Each sentence below is shown above quoted Medication Guide text on medicine pages. A sentence is shown only when the quoted section matches every support pattern listed. It is not a review record; every decision field is blank.", "");
-  L.push("For each sentence, check that it says the same as EVERY source wording listed, keeps any condition, number or limit those wordings carry, and cannot be read as a promise or as advice for one person.", "");
-  L.push(...reviewerBlock);
+/** For each bank sentence: the distinct source wordings it is shown above (with counts). What a sentence stands for changes when these change. */
+export function inShortUses(): Map<string, Map<string, number>> {
   const uses = new Map<string, Map<string, number>>();
   for (const c of CLAIM_RECORDS) {
     const s = plainSummaryFor(c);
@@ -157,6 +153,21 @@ export function inShortReviewPacket(): string {
       uses.set(id, m);
     }
   }
+  return uses;
+}
+
+/**
+ * A packet for the "In short" sentence bank: each plain sentence, how many quoted guide sections it is shown above,
+ * and the distinct source wordings it stands for. Like the medicine packets it is NOT a review record: no decision,
+ * no reviewer, and every decision field is blank.
+ */
+export function inShortReviewPacket(): string {
+  const L: string[] = [];
+  L.push("# Review packet: the 'In short' sentence bank", "");
+  L.push("**Status: NOT REVIEWED.** Each sentence below is shown above quoted Medication Guide text on medicine pages. A sentence is shown only when the quoted section matches every support pattern listed. It is not a review record; every decision field is blank.", "");
+  L.push("For each sentence, check that it says the same as EVERY source wording listed, keeps any condition, number or limit those wordings carry, and cannot be read as a promise or as advice for one person.", "");
+  L.push(...reviewerBlock);
+  const uses = inShortUses();
   for (const bank of PLAIN_SENTENCES) {
     const m = uses.get(bank.id) ?? new Map<string, number>();
     const n = [...m.values()].reduce((a, b) => a + b, 0);
