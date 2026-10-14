@@ -14,3 +14,7 @@
 
 ## What the tests use instead
 Tests never read `.env.local`. They use `KYP_TEST_DATABASE_URL` (a local database whose name contains "test") or the CI service defaults, and the harness refuses any non-local target. A temporary PostgreSQL used for verification was removed afterwards.
+
+## Diagnostics hardening (done in the repository)
+- `scripts/create-password-reset.ts` used to print the whole database URL, password included, in one error message (when no account matched). It now prints only protocol, host, port and database name (`src/lib/kyp/redact-url.ts`, tested). If you ever ran that script and kept its output or a shell history, treat the output as sensitive.
+- `tests/test-env-isolation.test.ts` fails if any test touches the database without the guarded harness, reads `.env.local`, or reads a production connection variable directly. `tests/no-secrets.test.ts` fails if a credential-shaped value appears in a tracked or trackable file.
