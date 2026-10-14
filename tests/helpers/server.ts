@@ -76,6 +76,27 @@ const DB_ENV = { DATABASE_URL: TEST_DB_URL, DIRECT_URL: TEST_DB_URL };
 let serverProc: ReturnType<typeof spawn> | null = null;
 let serverReady = false;
 
+/** Throws if something is already listening on the test port, so the tests can never talk to a stale or foreign server. */
+async function assertPortFree(port: number): Promise<void> {
+  const inUse = await new Promise<boolean>((resolveUse) => {
+    const sock = connect({ host: "127.0.0.1", port });
+    sock.setTimeout(1000, () => {
+      sock.destroy();
+      resolveUse(false);
+    });
+    sock.once("connect", () => {
+      sock.destroy();
+      resolveUse(true);
+    });
+    sock.once("error", () => resolveUse(false));
+  });
+  if (inUse) {
+    throw new Error(
+      `TEST PREREQUISITE MISSING: port ${port} is already in use. Stop whatever is listening there (often a server left by an earlier interrupted test run) and run the tests again. The harness does not kill processes by name.`
+    );
+  }
+}
+
 /** Fails fast, with the prerequisite named, when no database is listening. The tests that need one FAIL: they are
  * never skipped, because a skipped security test reads as a passing one. */
 async function assertDatabaseReachable(): Promise<void> {
@@ -129,18 +150,9 @@ export async function ensureServer(): Promise<string> {
       "Standalone build missing — run `bun run build` before tests"
     );
   }
-  // Kill any STALE server from a previous run. Next.js renames the standalone
-  // process to "next-server (vX.Y.Z)", so a plain `pkill -f server.js` will
-  // NOT match it — match on the renamed title instead.
-  if (process.platform !== "win32") {
-    // (pkill does not exist on Windows; there, a stale server on the test port must be stopped by hand.)
-    try {
-      execSync('pkill -f "next-server" || true');
-    } catch {
-      // no stale process — fine
-    }
-  }
-  await Bun.sleep(500);
+  // A server already listening on the test port would answer the tests instead of ours, possibly with another
+  // database behind it. Never kill processes by name (that could stop an unrelated `next dev`); refuse and say why.
+  await assertPortFree(TEST_PORT);
   await assertDatabaseReachable();
   try {
     await resetTestDatabase();

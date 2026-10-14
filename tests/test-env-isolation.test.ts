@@ -42,3 +42,12 @@ describe("tests cannot reach the production database by accident", () => {
     for (const m of ci.matchAll(/(?:DATABASE_URL|DIRECT_URL):\s*(\S+)/g)) expect(m[1]).toMatch(/@(?:127\.0\.0\.1|localhost):5432\/\w*test\w*$/);
   });
 });
+
+describe("the harness cannot test a stale or foreign server", () => {
+  test("it refuses a busy test port with an explicit message and never kills processes by name", () => {
+    const h = readFileSync("tests/helpers/server.ts", "utf8");
+    expect(h).toContain("await assertPortFree(TEST_PORT)");
+    expect(h).toMatch(/port \$\{port\} is already in use/);
+    expect(h).not.toMatch(/pkill|taskkill|killall/);
+  });
+});
