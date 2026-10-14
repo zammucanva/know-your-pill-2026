@@ -36,3 +36,10 @@ Limitations: this is one comparison per side, and the load-dependent suites are 
 - The same 47 test names fail on `main` and on the branch (name-for-name comparison with the earlier `main` run). Nothing fails on the branch that does not fail on `main`.
 - To run them: start a disposable local Postgres (`docker run --rm -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=kyp_test postgres:16`) or set `KYP_TEST_DATABASE_URL` to a local database whose name contains `test`.
 
+## Full suite with the database prerequisite met (2026-10-15)
+- Setup: PostgreSQL 16.9 (the major version CI uses), the EnterpriseDB Windows binaries zip from `get.enterprisedb.com`, the vendor linked from postgresql.org. The zip is not Authenticode-signed and EnterpriseDB publishes no checksum, so integrity rests on the TLS connection to the vendor host, a matching download size, and the binaries' own version resources (PostgreSQL Global Development Group 16.9), not on a vendor digest. SHA-256 of the zip as downloaded: `304EB7DAB70717015C4FD09986122E470D53A57A3A2B443D31E2C1D83D88DB88`.
+- The instance ran as an ordinary user process (no service, no administrator rights) in a temporary directory, bound to 127.0.0.1 only on a non-default port, with a random test-only role and a database named `kyp_test`, handed to the tests through `KYP_TEST_DATABASE_URL`. The harness's own guard refuses anything that is not local with "test" in its name. Nothing used `.env.local`, and production was not contacted.
+- The 16 database-dependent files: 708 pass, 0 fail.
+- `bun test tests/`: **2,038 pass, 0 fail, 0 skipped, 0 timeouts** (81 files, 243 s).
+- So the 47 earlier failures were the missing database, not defects in the branch or in the tests.
+
