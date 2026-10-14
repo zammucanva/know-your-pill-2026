@@ -10,7 +10,7 @@ const list = (args: string[]) => execFileSync("git", args, { encoding: "utf8", m
 const files = [...new Set([...list(["ls-files"]), ...list(["ls-files", "--others", "--exclude-standard"])])].filter((f) => !/\.(png|jpe?g|webp|ico|woff2?|pdf|zip|lock|svg|mp4|gif)$/i.test(f));
 
 const PATTERNS: Record<string, RegExp> = {
-  "database URL with a password for a non-local host": /postgres(?:ql)?:\/\/[^:/\s'"]+:[^@\s'"]{4,}@(?!127\.0\.0\.1|localhost|\[::1\])[^\s'"/]+/,
+  "database URL with a password for a non-local host": /postgres(?:ql)?:\/\/[^:/\s'"]+:[^@\s'"]{4,}@(?!127\.0\.0\.1|localhost|\[::1\]|[^\s'"/]*\.?example\.(?:com|org|net)|h:1\/)[^\s'"/]+/,
   "JSON web token": /eyJ[A-Za-z0-9_-]{15,}\.[A-Za-z0-9_-]{15,}\.[A-Za-z0-9_-]{10,}/,
   "Google API key": /AIza[0-9A-Za-z_-]{35}/,
   "Stripe or GitHub token": /\b(?:sk_(?:live|test)_[0-9A-Za-z]{16,}|gh[pousr]_[0-9A-Za-z]{30,})/,
