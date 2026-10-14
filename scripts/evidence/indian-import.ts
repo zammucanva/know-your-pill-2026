@@ -32,6 +32,15 @@ import type { ClaimCategory } from "@/lib/kyp/evidence/types";
 import { ALLOWED_SOURCE_HOSTS, numbersIn } from "@/lib/kyp/evidence";
 import { drugs } from "@/lib/kyp/data";
 
+/** Words that would make an imported wording read as a review or approval. Importing never does either. */
+const APPROVAL_LANGUAGE = /\b(clinically (reviewed|approved|verified)|reviewed by|approved by|signed off|endorsed)\b/i;
+/** The names a document about this medicine can use: generic name words and brand names (4+ letters). */
+function namesFor(slug: string): string[] {
+  const d = drugs.find((x) => x.slug === slug);
+  if (!d) return [];
+  return [...new Set([slug, d.genericName, ...(d.brandNames ?? [])].flatMap((n) => String(n).toLowerCase().split(/[^a-z]+/)).filter((w) => w.length >= 4 && !["sodium", "hydrochloride", "tablet", "tablets"].includes(w)))];
+}
+
 export interface IndianImportSpec {
   slug: string;
   pdf: string;
@@ -66,6 +75,18 @@ export function validateSpec(spec: IndianImportSpec, text: string): string[] {
   for (const f of ["product", "holder", "revised", "formulation"] as const) if (!spec[f]?.trim()) problems.push(`${f} is required`);
   if (!spec.claims?.length) problems.push("at least one claim is required");
   const flatText = flat(text);
+  if (flatText.length < 200) problems.push("the document has almost no readable text (scanned image or damaged PDF?): nothing can be checked against it");
+  else {
+    const names = namesFor(spec.slug);
+    if (names.length && !names.some((n) => flatText.toLowerCase().includes(n))) problems.push(`the document never names ${spec.slug} (looked for: ${names.slice(0, 6).join(", ")}): wrong medicine or wrong document`);
+    // Strengths in the stated formulation (for example "50 mg") must appear in the document, so a spec cannot claim a strength the document lacks.
+    for (const m of spec.formulation?.matchAll(/(\d+(?:\.\d+)?)\s*(mg|mcg|g|ml|%)/gi) ?? []) {
+      const re = new RegExp(`(^|[^0-9.])${m[1].replace(".", "\\.")}\\s*${m[2].replace("%", "\\%")}(?![a-z])`, "i");
+      if (!re.test(flatText)) problems.push(`formulation says ${m[0]} but the document never states that strength`);
+    }
+  }
+  if (spec.url && !/^https:\/\//i.test(spec.url)) problems.push("url must be https");
+  const seen = new Set<string>();
   spec.claims?.forEach((c, i) => {
     const tag = `claim ${i + 1} (${c.category})`;
     if (!CATEGORIES.includes(c.category)) problems.push(`${tag}: unknown category`);
@@ -75,6 +96,11 @@ export function validateSpec(spec: IndianImportSpec, text: string): string[] {
       const extra = [...numbersIn(c.wording)].filter((n) => !numbersIn(c.passage).has(n));
       if (extra.length) problems.push(`${tag}: wording has number(s) ${extra.join(", ")} that the passage does not`);
       if (flat(c.wording) === flat(c.passage)) problems.push(`${tag}: wording equals the passage; give a plain-language rewrite or leave it out`);
+      if (flat(c.passage).length < 25) problems.push(`${tag}: passage is too short to identify where it came from (25 characters minimum)`);
+      if (APPROVAL_LANGUAGE.test(c.wording)) problems.push(`${tag}: wording claims a review or approval; an import is never reviewed`);
+      const key = `${c.category}|${flat(c.passage)}`;
+      if (seen.has(key)) problems.push(`${tag}: duplicates an earlier claim (same category and passage)`);
+      seen.add(key);
       if (c.passage.length > 1300) problems.push(`${tag}: passage is longer than 1300 characters; store a shorter extract`);
     }
   });
@@ -88,7 +114,12 @@ export function readPdfText(pdf: string): string {
 
 export function importIndianLabel(spec: IndianImportSpec, out: string, today = new Date().toLocaleDateString("en-CA")) {
   if (!existsSync(spec.pdf)) throw new Error(`PDF not found: ${spec.pdf}`);
-  const text = readPdfText(spec.pdf);
+  let text: string;
+  try {
+    text = readPdfText(spec.pdf);
+  } catch (e) {
+    return { ok: false as const, problems: [`the PDF could not be read (${(e as Error).message.slice(0, 120)}): malformed file or pdftotext missing`] };
+  }
   const problems = validateSpec(spec, text);
   if (problems.length) return { ok: false as const, problems };
   const sha256 = createHash("sha256").update(readFileSync(spec.pdf)).digest("hex");
