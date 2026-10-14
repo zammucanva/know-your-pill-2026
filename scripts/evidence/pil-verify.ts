@@ -49,7 +49,7 @@ for (const d of PIL_DOCS) {
   const pdf = join(dir, `pil.${d.file}.pdf`);
   writeFileSync(pdf, buf);
   // A web page (the Singapore formulary) is read as visible text; every other document is a PDF.
-  const text = normalise(d.kind === "sg-formulary" ? htmlToText(buf.toString("utf8")) : execFileSync("pdftotext", ["-enc", "UTF-8", ...(d.kind === "fda-label" || d.layout === false ? [] : ["-layout"]), pdf, "-"], { encoding: "utf8" }));
+  const text = normalise(d.kind === "sg-formulary" ? htmlToText(buf.toString("utf8")) : execFileSync("pdftotext", ["-enc", "UTF-8", ...(d.kind === "fda-label" || d.kind === "ca-monograph" || d.layout === false ? [] : ["-layout"]), pdf, "-"], { encoding: "utf8" }));
   const missing = d.claims.map((c) => normalise(c[1])).filter((p) => !text.includes(p));
   results.push({
     slug: d.slug,

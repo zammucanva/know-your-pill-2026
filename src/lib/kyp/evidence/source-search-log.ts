@@ -30,14 +30,6 @@ export const SOURCE_SEARCH_LOG: Record<string, SearchLogEntry> = {
     next: "Obtain the package insert of the Indian brand being taken, then import it.",
   },
   cyamemazine: { date: D, checked: [...BASE], notUsed: [], next: "French regulator information has not been looked for yet." },
-  pipothiazine: {
-    date: D,
-    checked: [...BASE, "A web search for a patient leaflet for Piportil"],
-    notUsed: [
-      "An Irish prescriber document (summary of product characteristics, 2006) and French and Canadian documents exist. They are written for clinicians, not patients, and were not imported.",
-    ],
-    next: "A patient leaflet, or a decision to restate a prescriber document, has to come from a person.",
-  },
   loflazepate: { date: D, checked: [...BASE], notUsed: [], next: "French regulator information has not been looked for yet." },
   flunitrazepam: { date: D, checked: [...BASE], notUsed: [], next: "A regulator document from a country where it is sold has not been looked for yet." },
   tacrine: {

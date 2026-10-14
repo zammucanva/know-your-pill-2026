@@ -47,7 +47,7 @@ export const claimsFor = (slug: string): ClaimRecord[] => CLAIM_RECORDS.filter((
 export const sourcesFor = (slug: string): SourceRecord[] => SOURCE_RECORDS.filter((s) => s.slug === slug);
 
 /** Allowed hosts. A source URL outside this list is a defect until a person adds the host on purpose. */
-export const ALLOWED_SOURCE_HOSTS = ["dailymed.nlm.nih.gov", "medlineplus.gov", "cdsco.gov.in", "cdscoonline.gov.in", "ipc.gov.in", "pvpi.gov.in", "www.ipc.gov.in", "labeling.pfizer.com", "www.medicines.org.uk", "www.accessdata.fda.gov", "assets.hpra.ie", "www.ndf.gov.sg"];
+export const ALLOWED_SOURCE_HOSTS = ["dailymed.nlm.nih.gov", "medlineplus.gov", "cdsco.gov.in", "cdscoonline.gov.in", "ipc.gov.in", "pvpi.gov.in", "www.ipc.gov.in", "labeling.pfizer.com", "www.medicines.org.uk", "www.accessdata.fda.gov", "assets.hpra.ie", "www.ndf.gov.sg", "pdf.hres.ca"];
 
 const WORD_NUM: Record<string, string> = { one: "1", two: "2", three: "3", four: "4", five: "5", six: "6", seven: "7", eight: "8", nine: "9", ten: "10", twelve: "12" };
 /** Layout only: list markers ("•", a lone "o" or "○") and table bars ("|") are removed and whitespace collapsed. Words are never changed. */

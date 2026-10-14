@@ -35,7 +35,7 @@ export interface PilDoc {
   /** Where the document is published, if not the emc leaflet URL (e.g. a Drugs@FDA label). */
   url?: string;
   /** "leaflet" (default): a UK patient leaflet. "fda-label": an FDA-approved US label from the Drugs@FDA archive. "indian-label": an Indian product label or package insert (add its host to ALLOWED_SOURCE_HOSTS first). */
-  kind?: "leaflet" | "fda-label" | "ie-leaflet" | "sg-formulary" | "indian-label";
+  kind?: "leaflet" | "fda-label" | "ie-leaflet" | "sg-formulary" | "ca-monograph" | "indian-label";
   /** Who the document is written about, when that is not adults (replaces the default "Adults unless the statement says otherwise"). */
   population?: string;
   /** Extra limits that apply to every claim from this leaflet. */
@@ -628,6 +628,40 @@ export const PIL_DOCS: PilDoc[] = [
       ["contraindication", "Hypersensitivity to drug substance or to any of the excipients", "It must not be used if you are hypersensitive (allergic) to the active substance or to any of the other ingredients (excipients)."],
     ],
   },
+  {
+    slug: "pipothiazine",
+    file: "00014620",
+    kind: "ca-monograph",
+    url: "https://pdf.hres.ca/dpd_pm/00014620.PDF",
+    product: "Piportil L4 (pipotiazine palmitate injection) 25 mg/mL and 50 mg/mL",
+    title: "Product Monograph: Piportil L4 (pipotiazine palmitate injection), Health Canada Drug Product Database",
+    holder: "sanofi-aventis Canada Inc.",
+    revised: "October 31, 2011",
+    formulation: "long-acting injection (25 mg/mL and 50 mg/mL), given into a muscle",
+    limits: [
+      "This is a product monograph written for clinicians, not a patient leaflet, and it is a Canadian document from 2011. A Health Canada shortage database entry (reported by a web search, not checked here) lists the 50 mg product as cancelled, so it may no longer be sold.",
+      "It is a long-acting injection given by a clinician, not a tablet.",
+    ],
+    accessedAt: "2026-10-14",
+    claims: [
+      ["what-it-is", "is the palmitic ester of pipotiazine, a piperidine phenothiazine with antipsychotic properties and weak sedative activity.", "Pipotiazine palmitate (the Piportil injection) is a long-acting form of pipotiazine, an antipsychotic of the phenothiazine group that has weak sedative activity."],
+      ["used-for", "Piportil L4 (pipotiazine palmitate) is indicated in the maintenance treatment of chronic non-agitated schizophrenic patients.", "It is used for maintenance (keeping-up) treatment of chronic schizophrenia in people who are not agitated."],
+      ["onset", "The onset of action appears usually within the first 2 to 3 days after injection and the effects of the drug on psychotic symptoms are significant within one week. Improvement in symptomatology lasts from 3 to 6 weeks, but adequate control may frequently be maintained with one injection every 4 weeks.", "The monograph says the action usually starts within the first 2 to 3 days after the injection and the effect on psychotic symptoms is significant within one week. Improvement lasts from 3 to 6 weeks, but adequate control can often be kept with an injection every 4 weeks.", { replacesRule: ON }],
+      ["how-to-take", "Piportil L4 (pipotiazine palmitate) is to be administered as an intramuscular injection only.", "It is given only as an injection into a muscle."],
+      ["how-to-take", "However, it is frequently possible to achieve adequate control with a dosage between 75 and 150 mg administered every 4 weeks.", "The monograph says adequate control can frequently be achieved with a dose between 75 and 150 mg every 4 weeks. Your own dose and timing are set by your prescriber."],
+      ["how-to-take", "Severe adverse reactions requiring immediate medical attention may occur and are difficult to predict. Therefore, Piportil L4 (pipotiazine palmitate) should be administered under the supervision of physicians experienced in the use of psychotropic drugs and facilities should be readily available to cope with any emergency situation.", "Severe reactions needing immediate medical attention may occur and are difficult to predict. So it should be given under the supervision of doctors experienced with medicines that act on the mind, with facilities ready to cope with an emergency."],
+      ["contraindication", "Piportil L4 (pipotiazine palmitate) should not be administered in the presence of circulatory collapse, altered states of consciousness or comatose states, particularly when these are due to intoxication with central depressant drugs (alcohol, hypnotics, narcotics, etc.).", "It should not be given when the circulation has collapsed, when consciousness is altered, or in a coma, particularly when this is due to poisoning with medicines that slow the brain (alcohol, sleeping medicines, narcotics and similar)."],
+      ["contraindication", "It is contraindicated in severely depressed patients, in the presence of blood dyscrasias, liver disease, renal insufficiency, pheochromocytoma, or in patients with severe cardiovascular disorders or a history of hypersensitivity to phenothiazine derivatives.", "It must not be used in people who are severely depressed, who have blood disorders (blood dyscrasias), liver disease, kidney insufficiency, pheochromocytoma (a rare adrenal gland tumour), severe heart or blood vessel disorders, or a history of hypersensitivity (allergy) to phenothiazine medicines."],
+      ["contraindication", "The safety and efficacy of pipotiazine palmitate in children have not been established. Therefore, Piportil L4 is not indicated for use in children.", "Its safety and effectiveness in children have not been established, so it is not for use in children."],
+      ["precaution", "Piportil L4 is not indicated for the treatment of patients with dementia", "It is not for treating people with dementia."],
+      ["precaution", "Observational studies suggest that, similar to atypical antipsychotic drugs, treatment with conventional antipsychotic drugs may increase mortality.", "Observational studies suggest that, like newer (atypical) antipsychotics, conventional antipsychotics may increase the risk of death in elderly people with dementia."],
+      ["precaution", "The use of this drug may impair the mental and physical abilities required for the performance of potentially hazardous tasks, such as driving a car or operating machinery. Potentiation of the effects of alcohol may also occur.", "It may impair the mental and physical abilities needed for hazardous tasks such as driving or operating machinery. The effects of alcohol may also be increased."],
+      ["precaution", "As with other neuroleptics, very rare cases of QT interval prolongation have been reported with Piportil L4.", "As with other antipsychotics (neuroleptics), very rare cases of QT interval prolongation (a heart rhythm change) have been reported."],
+      ["side-effects", "However, it produces a high incidence of extrapyramidal reactions.", "It produces a high rate of extrapyramidal reactions (movement problems such as stiffness, tremor and restlessness)."],
+      ["side-effects", "Tardive Dyskinesia: As with all antipsychotic agents, tardive dyskinesia may appear in some patients on long-term therapy or after drug discontinuation. The syndrome is mainly characterized by rhythmical involuntary movements of the tongue, face, mouth or jaw.", "As with all antipsychotics, tardive dyskinesia may appear in some people on long-term treatment or after stopping. It is mainly rhythmical involuntary movements of the tongue, face, mouth or jaw."],
+      ["urgent-help", "Neuroleptic malignant syndrome (NMS) may occur in patients receiving antipsychotic drugs. NMS is characterized by hyperthermia, muscle rigidity, altered consciousness, and signs of autonomic instability including irregular blood pressure, tachycardia, cardiac arrhythmias and diaphoresis.", "Neuroleptic malignant syndrome (NMS) may occur in people receiving antipsychotics. It is marked by a very high temperature (hyperthermia), muscle rigidity, altered consciousness and signs of an unstable nervous system, including irregular blood pressure, fast heartbeat, abnormal heart rhythms and heavy sweating (diaphoresis)."],
+    ],
+  },
 ];
 
 const nrm = (t: string) => t.replace(/\s+/g, " ").trim();
@@ -638,6 +672,7 @@ const KINDS = {
   "fda-label": { type: "us-product-label", jurisdiction: "US", prefix: "fda", noun: "US label", dated: "label", nonIndian: true },
   "ie-leaflet": { type: "international-patient-information", jurisdiction: "IE", prefix: "hpra", noun: "Irish package leaflet", dated: "leaflet", nonIndian: true },
   "sg-formulary": { type: "international-regulator-label", jurisdiction: "SG", prefix: "sg", noun: "Singapore National Drug Formulary entry", dated: "page", nonIndian: true },
+  "ca-monograph": { type: "international-regulator-label", jurisdiction: "CA", prefix: "ca", noun: "Canadian product monograph", dated: "monograph", nonIndian: true },
   "indian-label": { type: "indian-product-label", jurisdiction: "IN", prefix: "in", noun: "Indian product label", dated: "label", nonIndian: false },
 } as const;
 
@@ -690,7 +725,7 @@ export function deriveFromPilDocs(docs: PilDoc[] = PIL_DOCS): { sources: SourceR
           d.kind === "fda-label"
             ? `US label only (not an Indian label): this label was revised ${d.revised}, FDA marks archived labels as possibly not the latest, and an Indian product may differ.`
             : k.nonIndian
-              ? `${d.kind === "ie-leaflet" ? "Irish leaflet" : d.kind === "sg-formulary" ? "Singapore formulary entry" : "UK leaflet"} only (not an Indian label): the document was last revised ${d.revised}, and the current document or an Indian product may differ.`
+              ? `${d.kind === "ie-leaflet" ? "Irish leaflet" : d.kind === "sg-formulary" ? "Singapore formulary entry" : d.kind === "ca-monograph" ? "Canadian product monograph" : "UK leaflet"} only (not an Indian label): the document was last revised ${d.revised}, and the current document or an Indian product may differ.`
               : `Indian product label, revised ${d.revised}: it applies to the named product only.`,
           "General information, not advice for any one person.",
           ...d.limits,

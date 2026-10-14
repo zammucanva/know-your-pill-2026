@@ -68,10 +68,10 @@ describe("evidence layer: integrity", () => {
   test("no claim is an Indian label claim, none is reviewed, and every one says which non-Indian document it rests on", () => {
     for (const c of CLAIM_RECORDS) {
       const s = SOURCE_RECORDS.find((x) => x.id === c.sourceId)!;
-      expect(["US", "UK", "IE", "SG"]).toContain(s.jurisdiction);
+      expect(["US", "UK", "IE", "SG", "CA"]).toContain(s.jurisdiction);
       expect(["us-product-label", "international-patient-information", "international-regulator-label"]).toContain(s.type);
       expect(c.review).toBe("not-reviewed");
-      expect(c.limitations.join(" ")).toMatch(s.jurisdiction === "UK" || s.jurisdiction === "IE" || s.jurisdiction === "SG" ? /(UK|Irish|Singapore) (leaflet|package leaflet|formulary entry)/i : /US (label|Medication Guide|patient information|prescribing information|drug-information page)/i);
+      expect(c.limitations.join(" ")).toMatch(s.jurisdiction === "UK" || s.jurisdiction === "IE" || s.jurisdiction === "SG" || s.jurisdiction === "CA" ? /(UK|Irish|Singapore|Canadian) (leaflet|package leaflet|formulary entry|product monograph)/i : /US (label|Medication Guide|patient information|prescribing information|drug-information page)/i);
       expect(c.verification).toBe("passage-found-in-source");
     }
     expect(INDIAN_SOURCE_SEARCH.outcome).toBe("unresolved-for-every-medication");
@@ -99,7 +99,7 @@ describe("evidence layer: integrity", () => {
 describe("evidence layer: rendering and honesty", () => {
   test("a sourced onset statement replaces the generic one for exactly the medicines whose label states one", () => {
     const withOnset = [...new Set(CLAIM_RECORDS.filter((c) => c.category === "onset").map((c) => c.slug))].sort();
-    expect(withOnset).toEqual(["agomelatine", "amoxapine", "chlorpromazine", "desipramine", "dothiepin", "flupenthixol", "imipramine", "isocarboxazid", "lofepramine", "maprotiline", "mianserin", "moclobemide", "pemoline", "phenelzine", "propranolol", "protriptyline", "reboxetine", "tasimelteon", "trimipramine", "zuclopenthixol"]);
+    expect(withOnset).toEqual(["agomelatine", "amoxapine", "chlorpromazine", "desipramine", "dothiepin", "flupenthixol", "imipramine", "isocarboxazid", "lofepramine", "maprotiline", "mianserin", "moclobemide", "pemoline", "phenelzine", "pipothiazine", "propranolol", "protriptyline", "reboxetine", "tasimelteon", "trimipramine", "zuclopenthixol"]);
     // pemoline never carried the generic sentence, so there is nothing for its onset statement to replace
     for (const slug of withOnset.filter((x) => claimsFor(x).some((c) => c.category === "onset" && c.replacesRule))) {
       const h = html(slug);
@@ -194,7 +194,7 @@ describe("India-first dashboard: separate measures, honest numbers", () => {
     expect(sum.claimsWithTraceableSource).toBe(CLAIM_RECORDS.length);
     expect(sum.medicationsWithSourcedClaims).toBe(new Set(CLAIM_RECORDS.map((c) => c.slug)).size);
     expect(sum.medicationsWithSourcedClaims).toBeGreaterThanOrEqual(60);
-    expect(sum.medicationsWithSourcedOnsetClaim).toBe(20);
+    expect(sum.medicationsWithSourcedOnsetClaim).toBe(21);
     expect(sum.usLabelDiscovery["candidates-found"] + sum.usLabelDiscovery["none-found"]).toBe(145);
     expect(Object.keys(sum)).not.toContain("percent");
     expect(Object.keys(sum).some((k) => /percent|score|overall/i.test(k))).toBe(false);
