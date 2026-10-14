@@ -93,7 +93,7 @@ describe("source classification: label, patient-information page, safety alert",
     for (const s of SOURCE_RECORDS) {
       const e = expected[new URL(s.url).host];
       expect(e).toBeTruthy();
-      expect(s.jurisdiction).toBe(e.j);
+      expect(s.jurisdiction).toBe(e.j as typeof s.jurisdiction);
       expect(s.type).toMatch(e.t);
     }
   });

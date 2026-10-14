@@ -23,6 +23,9 @@ import {
   recallScore,
   recallSelect,
   recallResume,
+  recallKey,
+  recallRemember,
+  recallRestore,
   recallStart,
   recallSubmit,
   recallUnanswered,
@@ -593,8 +596,12 @@ function RecallList({ kind, title, items, ordered }: { kind: "high-yield-recall"
 
 function RecallSession({ b }: { b: B<"mcq-drill"> }) {
   const qs = b.questions;
-  const [state, setState] = React.useState<RecallState>(() => recallStart(qs.length));
-  const [round, setRound] = React.useState<"all" | "retry">("all");
+  const memKey = recallKey(qs.map((q) => q.id));
+  const [state, setState] = React.useState<RecallState>(() => recallRestore(memKey, qs.length)?.state ?? recallStart(qs.length));
+  const [round, setRound] = React.useState<"all" | "retry">(() => recallRestore(memKey, qs.length)?.round ?? "all");
+  React.useEffect(() => {
+    recallRemember(memKey, state, round);
+  }, [memKey, state, round]);
   const [reviewFilter, setReviewFilter] = React.useState<"all" | "missed">("all");
   const [grouped, setGrouped] = React.useState(false);
   const headingRef = React.useRef<HTMLHeadingElement | null>(null);

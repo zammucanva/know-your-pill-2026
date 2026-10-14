@@ -77,6 +77,24 @@ export interface RecallState {
   phase: "question" | "summary";
 }
 
+/**
+ * Keeps a drill in memory for this page load only, so switching to another mode and back does not throw away answers.
+ * Nothing is written to storage and a reload starts fresh. The server never fills it (it is written from the browser).
+ */
+const SESSION_MEMORY = new Map<string, { state: RecallState; round: "all" | "retry" }>();
+export const recallKey = (ids: readonly string[]): string => `${ids.length}:${ids[0] ?? ""}:${ids[ids.length - 1] ?? ""}`;
+export function recallRemember(key: string, state: RecallState, round: "all" | "retry"): void {
+  SESSION_MEMORY.set(key, { state, round });
+}
+/** A remembered session, only if it still fits this question list (every index in range). */
+export function recallRestore(key: string, total: number): { state: RecallState; round: "all" | "retry" } | null {
+  const m = SESSION_MEMORY.get(key);
+  if (!m) return null;
+  const ok = m.state.queue.every((i) => Number.isInteger(i) && i >= 0 && i < total) && m.state.pos >= 0 && m.state.pos <= m.state.queue.length;
+  return ok ? m : null;
+}
+export const recallForgetAll = (): void => SESSION_MEMORY.clear();
+
 export function recallStart(total: number, only?: readonly number[]): RecallState {
   const queue = only ? [...only] : Array.from({ length: total }, (_, i) => i);
   return { queue, pos: 0, chosen: {}, submitted: {}, phase: queue.length ? "question" : "summary" };
