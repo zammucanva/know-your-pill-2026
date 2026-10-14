@@ -82,3 +82,19 @@ describe("drug-class accent colours are used as text (classes.ts accentClass) an
     }
   }
 });
+
+describe("hard-coded text colours in the header have a dark-mode counterpart", () => {
+  test("the Emergency link text colour (dark red) is replaced by a light one in dark mode", () => {
+    const nav = readFileSync("src/components/kyp/sections/navbar.tsx", "utf8");
+    const line = nav.split(/\r?\n/).find((l) => l.includes("text-[oklch(0.4_0.16_25)]"))!;
+    expect(line).toContain("dark:text-[oklch(");
+  });
+  test("a fixed dark text colour (oklch lightness 0.45 or lower) in a component always carries a dark: counterpart", () => {
+    const bad: string[] = [];
+    const walk = (d: string): string[] => readdirSync(d).flatMap((f) => (statSync(join(d, f)).isDirectory() ? walk(join(d, f)) : /\.tsx$/.test(f) ? [join(d, f)] : []));
+    for (const f of walk("src/components")) for (const [i, l] of readFileSync(f, "utf8").split(/\r?\n/).entries()) {
+      for (const m of l.matchAll(/(?<![:\w-])text-\[oklch\((0?\.\d+)_/g)) if (Number(m[1]) <= 0.45 && !/dark:text-\[/.test(l)) bad.push(`${f}:${i + 1}`);
+    }
+    expect(bad).toEqual([]);
+  });
+});
