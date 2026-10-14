@@ -7,6 +7,7 @@ import { plainSummaryFor } from "./plain-summaries";
 import { CLAIM_SOURCE_SETID } from "./claims";
 import { buildModeLens } from "@/lib/kyp/modes/build";
 import { PART_ORDER, partStates, type PartId, type PartState } from "./patient-sections";
+import { formOf } from "./label-form";
 
 /**
  * India-first content dashboard, one row per medication. The columns are separate on purpose: they measure
@@ -49,8 +50,18 @@ export interface DashboardRow {
   avgWordsPerSentence: number;
   longSentences: number;
   clinicalReview: "not reviewed";
+  /** Concrete open items for this medicine, regenerated from the records: parts without a source, dated or non-US sources, other-form labels, withheld shared claims, readability. */
+  worklist: string;
   nextAction: string;
 }
+
+const yearOf = (t: string | undefined) => {
+  const m = /\b((?:19|20)\d{2})\b/.exec(t ?? "") ?? /\b\d{1,2}\/((?:19|20)\d{2})\b/.exec(t ?? "");
+  return m ? Number(m[1]) : null;
+};
+/** A source older than this many years is listed as dated. A screening rule, not a judgement that the text is wrong. */
+const DATED_AFTER_YEARS = 5;
+const THIS_YEAR = 2026;
 
 export function dashboardRows(): DashboardRow[] {
   return drugs.map((d) => {
@@ -69,6 +80,24 @@ export function dashboardRows(): DashboardRow[] {
     const missing = PART_ORDER.filter((p) => !["sources", "questions", "seek-help"].includes(p) && (parts[p] === "unavailable" || parts[p] === "standard-wording")).map((p) => `${p} (${parts[p]})`);
     if (!guide && !claims.some((c) => c.category === "onset")) missing.push("onset or timeline (no source-backed claim)");
     const sourced = SOURCE_RECORDS.filter((s) => s.slug === d.slug).length;
+    const work: string[] = [];
+    if (!guide) {
+      for (const p of PART_ORDER) if (!["sources", "questions", "what", "uses"].includes(p) && parts[p] !== "source-backed") work.push(`${p}: ${parts[p]}`);
+      if (parts.what !== "source-backed") work.push(`what: ${parts.what}`);
+      if (parts.uses !== "source-backed") work.push(`uses: ${parts.uses}`);
+      if (!claims.some((c) => c.category === "onset")) work.push("onset: no source-backed statement");
+    }
+    const srcs = SOURCE_RECORDS.filter((x) => x.slug === d.slug);
+    for (const x of srcs) {
+      const y = yearOf(x.publishedDate);
+      if (y === null) work.push(`dated source: ${x.identifier} has no date`);
+      else if (THIS_YEAR - y > DATED_AFTER_YEARS) work.push(`dated source: ${x.identifier} published ${y}`);
+    }
+    if (srcs.some((x) => !x.identifier.startsWith("mlp.") && !formOf(x.formulation ?? x.title).plainOral)) work.push("label is for a non-plain form");
+    if (srcs.length && !srcs.some((x) => x.jurisdiction === "US")) work.push("no US document: non-US source only");
+    if (srcs.length && !srcs.some((x) => x.jurisdiction === "IN")) work.push("no Indian source");
+    if (withheld.length) work.push(`${withheld.length} withheld shared claim(s)`);
+    if (r.grade > 10) work.push(`reading grade ${r.grade} above 10 (screen only)`);
     let next: string;
     if (guide) next = "Clinical reviewer: review the Patient Guide";
     else if (claims.length) next = "Clinical reviewer: review the source-backed claims; content owner: add Indian product information";
@@ -112,6 +141,7 @@ export function dashboardRows(): DashboardRow[] {
       avgWordsPerSentence: r.avgWordsPerSentence,
       longSentences: r.longSentences,
       clinicalReview: "not reviewed" as const,
+      worklist: work.join("; "),
       nextAction: next,
     };
   });
