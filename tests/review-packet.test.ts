@@ -10,7 +10,7 @@ describe("clinical review packets are preparation, never a review record", () =>
       const p = reviewPacket(slug);
       expect(p).toContain("Status: NOT REVIEWED");
       expect(p).toContain("It is not a review record");
-      expect(p).toContain("Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____");
+      expect(p).toContain("Decision (accept / amend / reject / request-evidence / unresolved): ____   Amended wording (if amend): ____");
       expect(p).toContain("## Reviewer identity");
       expect(p).not.toMatch(/\b(approved by|reviewed by|signed off|clinically approved)\b/i);
       expect(p).not.toMatch(/^(Name|Professional qualification[^:]*|Registration body and number[^:]*|Affiliation|Date of review): (?!_)/m);
@@ -33,8 +33,34 @@ describe("the 'In short' sentence bank has a review packet that is not a review 
     const p = inShortReviewPacket();
     expect(p).toContain("Status: NOT REVIEWED");
     for (const s of PLAIN_SENTENCES) expect(p).toContain(`## ${s.id} (`);
-    expect(p.match(/Decision \(accept \/ amend \/ reject \/ request-evidence\): ____/g)?.length).toBe(PLAIN_SENTENCES.length);
+    expect(p.match(/Decision \(accept \/ amend \/ reject \/ request-evidence \/ unresolved\): ____/g)?.length).toBe(PLAIN_SENTENCES.length);
     expect(p).toContain("## Reviewer identity");
     expect(p).not.toMatch(/\b(approved by|reviewed by|signed off)\b/i);
+  });
+});
+
+describe("each statement block gives a reviewer the source facts they need", () => {
+  test("source kind, jurisdiction, date, form and address appear in every statement block of a source-backed medicine", () => {
+    const p = reviewPacket("moclobemide");
+    const blocks = p.split(/^### /m).slice(1).filter((b) => /^moclobemide:/.test(b));
+    expect(blocks.length).toBe(claimsFor("moclobemide").length);
+    for (const b of blocks) {
+      expect(b).toMatch(/^Source: /m);
+      expect(b).toMatch(/- Kind: /);
+      expect(b).toMatch(/- Jurisdiction: [A-Z]+; type: /);
+      expect(b).toMatch(/- Source date: .+; accessed \d{4}-\d{2}-\d{2}; identifier /);
+      expect(b).toMatch(/- Form the source describes: /);
+      expect(b).toMatch(/- Address: https:\/\//);
+      expect(b).toMatch(/Exact passage: /);
+      expect(b).toMatch(/Applies to: /);
+      expect(b).toMatch(/Limits: /);
+    }
+  });
+});
+
+describe("saved packets are exactly what the code generates", () => {
+  test("viva and 'In short' packets on disk match the generator (so a stale packet cannot be reviewed by mistake)", () => {
+    expect(readFileSync("reports/medication-audit/review-packets/viva-findings.md", "utf8").replace(/\r\n/g, "\n")).toBe(reviewPacket("viva-findings") + "\n");
+    expect(readFileSync("reports/medication-audit/review-packets/in-short-bank.md", "utf8").replace(/\r\n/g, "\n")).toBe(inShortReviewPacket() + "\n");
   });
 });

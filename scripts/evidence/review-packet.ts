@@ -11,6 +11,10 @@ import { inShortReviewPacket, reviewPacket } from "@/lib/kyp/evidence/review-pac
 
 const OUT = "reports/medication-audit/review-packets";
 mkdirSync(OUT, { recursive: true });
+if (process.argv.includes("--viva")) {
+  writeFileSync(`${OUT}/viva-findings.md`, reviewPacket("viva-findings") + "\n");
+  console.log("wrote", `${OUT}/viva-findings.md`);
+}
 if (process.argv.includes("--in-short")) {
   writeFileSync(`${OUT}/in-short-bank.md`, inShortReviewPacket() + "\n");
   console.log("wrote", `${OUT}/in-short-bank.md`);

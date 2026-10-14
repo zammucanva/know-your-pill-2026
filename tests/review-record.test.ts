@@ -3,6 +3,7 @@ import { existsSync, readFileSync, readdirSync } from "fs";
 import { CLAIM_RECORDS } from "@/lib/kyp/evidence";
 import { IN_SHORT_PACKET, blankRecordTemplate, claimItemHash, reviewItemIds, reviewItems, reviewPacket } from "@/lib/kyp/evidence/review-packet";
 import { validateReviewRecord, type ReviewRecord } from "@/lib/kyp/evidence/review-record";
+import { SOURCE_RECORDS } from "@/lib/kyp/evidence";
 
 const NOW = new Date("2026-10-14");
 const filled = (slug: string): ReviewRecord => ({
@@ -164,3 +165,44 @@ describe("integrity of review records against stale, transferred and self-made d
   });
 });
 
+describe("unresolved items and source changes", () => {
+  test("an item can be left unresolved, but only with a note saying what evidence is missing", () => {
+    const r = filled("moclobemide");
+    r.decisions[0] = { ...r.decisions[0], decision: "unresolved" };
+    expect(validateReviewRecord(r, reviewItems("moclobemide"), NOW).join()).toMatch(/unresolved needs a note/);
+    r.decisions[0] = { ...r.decisions[0], decision: "unresolved", notes: "No Indian product information available to compare with" };
+    expect(validateReviewRecord(r, reviewItems("moclobemide"), NOW)).toEqual([]);
+  });
+  test("a change to the source record (date, form, title, jurisdiction) makes the decision stale even when the wording is unchanged", () => {
+    const c = CLAIM_RECORDS.find((x) => x.slug === "moclobemide")!;
+    const s = SOURCE_RECORDS.find((x) => x.id === c.sourceId)!;
+    const base = claimItemHash(c, s);
+    expect(claimItemHash(c, { ...s })).toBe(base);
+    expect(claimItemHash(c, { ...s, publishedDate: "1999-01-01" })).not.toBe(base);
+    expect(claimItemHash(c, { ...s, formulation: "a different formulation" })).not.toBe(base);
+    expect(claimItemHash(c, { ...s, jurisdiction: s.jurisdiction === "IN" ? "US" : "IN" })).not.toBe(base);
+    expect(claimItemHash(c, { ...s, title: s.title + " (revised)" })).not.toBe(base);
+    expect(claimItemHash(c)).not.toBe(base);
+  });
+});
+
+describe("the viva findings are reviewable in the same record format", () => {
+  test("the viva packet lists exactly the registry entries the lens cannot show, verbatim, with blank decisions", async () => {
+    const { VIVA_PACKET, vivaFindings } = await import("@/lib/kyp/evidence/review-packet");
+    const f = vivaFindings();
+    expect(f.map((x) => x.id).sort()).toEqual(["clomipramine#viva[4]", "tacrine#viva[2]"]);
+    const p = reviewPacket(VIVA_PACKET);
+    expect(p).toContain("Status: NOT REVIEWED");
+    expect(p).toContain("protected medication data and are not changed");
+    for (const x of f) {
+      expect(p).toContain(`### ${x.id}`);
+      expect(p).toContain(`Registry text (verbatim): ${x.text}`);
+    }
+    expect(p.match(/Decision \(accept/g)?.length).toBe(f.length);
+    const blank = blankRecordTemplate(VIVA_PACKET) as unknown as ReviewRecord;
+    expect(validateReviewRecord(blank, reviewItems(VIVA_PACKET), NOW).length).toBeGreaterThan(5);
+    const done = filled(VIVA_PACKET);
+    done.decisions = done.decisions.map((d, i) => ({ ...d, decision: i === 0 ? "amend" : "unresolved", amendedWording: "close the bracket", notes: "pending evidence" }));
+    expect(validateReviewRecord(done, reviewItems(VIVA_PACKET), NOW)).toEqual([]);
+  });
+});

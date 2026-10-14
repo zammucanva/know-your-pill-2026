@@ -3,15 +3,18 @@ import { getPatientGuide } from "@/lib/kyp/patient";
 import { CLAIM_RECORDS, claimsFor, sourcesFor } from "./index";
 import { PLAIN_SENTENCES, plainSummaryFor } from "./plain-summaries";
 import { contentHash } from "@/lib/kyp/content-hash";
-import type { ClaimRecord } from "./types";
+import { classifyViva } from "@/lib/kyp/modes/build";
+import type { ClaimRecord, SourceRecord } from "./types";
+import { formOfSource } from "./label-form";
+import { sourceKind } from "./source-label";
 
 /**
  * A packet a qualified clinical reviewer can work from. It is NOT a review record: it states no decision, names no
  * reviewer, and every decision field is blank. Producing it is an engineering step; clinical approval is a person's.
  */
-export const DECISIONS = ["accept", "amend", "reject", "request-evidence"] as const;
+export const DECISIONS = ["accept", "amend", "reject", "request-evidence", "unresolved"] as const;
 export type Decision = (typeof DECISIONS)[number];
-const blankDecision = "Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____";
+const blankDecision = "Decision (accept / amend / reject / request-evidence / unresolved): ____   Amended wording (if amend): ____   Notes (required unless accept): ____";
 const reviewerBlock = [
   "## Reviewer identity (once per packet; no decision below counts without all of it)",
   "",
@@ -28,22 +31,39 @@ const reviewerBlock = [
 ];
 /** Items a reviewer can decide on, in packet order: Patient Guide groups (by top-level key), then claim ids. */
 export const IN_SHORT_PACKET = "in-short-bank";
+export const VIVA_PACKET = "viva-findings";
+/** MBBS viva entries in the registry that the lens cannot show as a question and answer. Read-only: the registry is never changed. */
+export function vivaFindings(): { id: string; slug: string; index: number; reason: string; text: string; reviewed: string }[] {
+  const out: { id: string; slug: string; index: number; reason: string; text: string; reviewed: string }[] = [];
+  for (const d of drugs) {
+    const raw = (d as unknown as { examLens?: { mbbs?: { viva?: unknown } } }).examLens?.mbbs?.viva;
+    if (!Array.isArray(raw)) continue;
+    raw.forEach((t, index) => {
+      if (typeof t !== "string") return;
+      const c = classifyViva(t);
+      if (c.type === "needs-review") out.push({ id: `${d.slug}#viva[${index}]`, slug: d.slug, index, reason: c.reason, text: t, reviewed: `lastReviewed ${d.lastReviewed ?? "not stated"}; sources noted by the registry: ${(d.reviewers ?? []).join(" | ") || "none"}` });
+    });
+  }
+  return out;
+}
 export interface ReviewItem {
   id: string;
   /** Hash of everything a decision depends on: the wording, the exact passage, the source, and where it applies. */
   hash: string;
 }
 export function reviewItems(slug: string): ReviewItem[] {
+  if (slug === VIVA_PACKET) return vivaFindings().map((v) => ({ id: v.id, hash: contentHash(JSON.stringify([v.id, v.text, v.reason])) }));
   if (slug === IN_SHORT_PACKET) return PLAIN_SENTENCES.map((b) => ({ id: b.id, hash: contentHash(JSON.stringify([b.id, b.text, b.support.map((r) => r.source)])) }));
   const guide = getPatientGuide(slug);
   const items: ReviewItem[] = [];
   if (guide) for (const [k, v] of Object.entries(guide)) if (k !== "slug") items.push({ id: `guide:${k}`, hash: contentHash(JSON.stringify([slug, k, v])) });
-  for (const c of claimsFor(slug)) items.push({ id: c.id, hash: claimItemHash(c) });
+  const srcs = new Map(sourcesFor(slug).map((s) => [s.id, s]));
+  for (const c of claimsFor(slug)) items.push({ id: c.id, hash: claimItemHash(c, srcs.get(c.sourceId)) });
   return items;
 }
 /** Everything a decision on one statement depends on. A change to any part (wording, passage, source, formulation or population in `applicability`, limits) makes an old decision stale. */
-export const claimItemHash = (c: Pick<ClaimRecord, "id" | "slug" | "category" | "patientWording" | "wordingKind" | "passage" | "sourceId" | "applicability" | "limitations">): string =>
-  contentHash(JSON.stringify([c.id, c.slug, c.category, c.patientWording, c.wordingKind, c.passage, c.sourceId, c.applicability, c.limitations]));
+export const claimItemHash = (c: Pick<ClaimRecord, "id" | "slug" | "category" | "patientWording" | "wordingKind" | "passage" | "sourceId" | "applicability" | "limitations">, s?: Pick<SourceRecord, "title" | "url" | "identifier" | "publishedDate" | "formulation" | "jurisdiction" | "type" | "productTitle" | "organisation">): string =>
+  contentHash(JSON.stringify([c.id, c.slug, c.category, c.patientWording, c.wordingKind, c.passage, c.sourceId, c.applicability, c.limitations, s ? [s.title, s.url, s.identifier, s.publishedDate ?? null, s.formulation ?? null, s.jurisdiction, s.type, s.productTitle, s.organisation] : null]));
 export const reviewItemIds = (slug: string): string[] => reviewItems(slug).map((i) => i.id);
 /** The empty record a reviewer fills in. It is deliberately invalid until every field is real. */
 export function blankRecordTemplate(slug: string) {
@@ -62,7 +82,18 @@ function walk(v: unknown, path: string, out: string[]) {
   else if (v && typeof v === "object") for (const [k, x] of Object.entries(v)) if (k !== "slug") walk(x, path ? `${path} > ${k}` : k, out);
 }
 
+export function vivaReviewPacket(): string {
+  const L: string[] = ["# Clinical review packet: MBBS viva items the lens cannot show", ""];
+  L.push("**Status: NOT REVIEWED.** These registry entries are protected medication data and are not changed by this packet. The lens shows them as \"needs review\" instead of guessing where the question ends. A decision here is a recommendation about the registry text; applying it needs the applicable authorisation and a content-lock baseline update. See reports/medication-audit/four-mode/viva-review-findings.md.", "");
+  L.push(...reviewerBlock);
+  for (const v of vivaFindings()) {
+    L.push(`### ${v.id}`, "", `Registry text (verbatim): ${v.text}`, "", `Why the lens cannot show it: ${v.reason}`, "", `Registry review metadata: ${v.reviewed}`, "", blankDecision, "");
+  }
+  return L.join("\n");
+}
+
 export function reviewPacket(slug: string): string {
+  if (slug === VIVA_PACKET) return vivaReviewPacket();
   const d = drugs.find((x) => x.slug === slug);
   if (!d) throw new Error(`unknown medicine ${slug}`);
   const guide = getPatientGuide(slug);
@@ -90,7 +121,10 @@ export function reviewPacket(slug: string): string {
   if (claims.length) {
     L.push("## Statements (one block each)", "");
     for (const c of claims) {
-      L.push(`### ${c.id} [${c.category}]`, "", `Patient wording (${c.wordingKind}): ${c.patientWording.replace(/\n+/g, " ")}`, "", `Exact passage: ${c.passage.replace(/\n+/g, " ")}`, "", `Applies to: ${c.applicability.join(" ")}`, "", `Limits: ${c.limitations.join(" ")}`, "");
+      const src = sources.find((s) => s.id === c.sourceId);
+      L.push(`### ${c.id} [${c.category}]`, "");
+      if (src) L.push(`Source: ${src.title}`, `- Kind: ${sourceKind(src)}`, `- Jurisdiction: ${src.jurisdiction}; type: ${src.type}; organisation: ${src.organisation}`, `- Source date: ${src.publishedDate ?? "not stated"}; accessed ${src.accessedAt}; identifier ${src.identifier}`, `- Form the source describes: ${formOfSource(src).label}${src.formulation ? ` (source record says: ${src.formulation})` : ""}`, `- Address: ${src.url}`, "");
+      L.push(`Patient wording (${c.wordingKind}): ${c.patientWording.replace(/\n+/g, " ")}`, "", `Exact passage: ${c.passage.replace(/\n+/g, " ")}`, "", `Applies to: ${c.applicability.join(" ")}`, "", `Limits: ${c.limitations.join(" ")}`, "");
       if (c.openQuestions.length) L.push(`Open questions: ${c.openQuestions.join(" ")}`, "");
       L.push(blankDecision, "");
     }

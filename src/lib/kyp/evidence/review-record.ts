@@ -36,6 +36,7 @@ export function validateReviewRecord(r: ReviewRecord, expectedItems: ReviewItem[
     else {
       if (d.decision === "amend" && !real(d.amendedWording)) p.push(`decision for "${d.id}": amend needs the amended wording`);
       if (d.decision !== "accept" && !real(d.notes)) p.push(`decision for "${d.id}": ${d.decision} needs notes saying why`);
+      if (d.decision === "unresolved" && !real(d.notes)) p.push(`decision for "${d.id}": leaving an item unresolved needs a note saying what evidence is missing`);
     }
   }
   const missing = expectedItemIds.filter((id) => !seen.has(id));

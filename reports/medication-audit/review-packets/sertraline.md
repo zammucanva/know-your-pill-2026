@@ -24,13 +24,13 @@ Each line is shown to patients. Check it against current Indian product informat
 
 - classInPlainWords: Sertraline is an SSRI (selective serotonin reuptake inhibitor), one of the most commonly prescribed types of antidepressant in the world.
 
-Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
+Decision (accept / amend / reject / request-evidence / unresolved): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ### guide:whatIsThis
 
 - whatIsThis: A medicine that helps your brain keep more of a mood-regulating chemical (serotonin) available for longer.
 
-Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
+Decision (accept / amend / reject / request-evidence / unresolved): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ### guide:usedFor
 
@@ -57,32 +57,32 @@ Decision (accept / amend / reject / request-evidence): ____   Amended wording (i
 - usedFor > uses[7] > plain: Ongoing worry that is hard to control. Doctors prescribe sertraline for this even though it is not officially approved for it.
 - usedFor > uses[7] > status: off-label
 
-Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
+Decision (accept / amend / reject / request-evidence / unresolved): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ### guide:howItWorks
 
 - howItWorks > simple: Your brain uses a chemical called serotonin to regulate mood, anxiety, sleep, and appetite. Normally, after serotonin is released between nerve cells, it gets quickly taken back up (recycled). Sertraline blocks this recycling, so more serotonin stays available between the nerve cells for longer. Over 4–6 weeks, this helps your brain's mood-regulation system work better, but it doesn't happen immediately.
 - howItWorks > medicalDetail: Sertraline selectively blocks the serotonin transporter (SERT), increasing serotonin concentration in the synaptic cleft and enhancing serotonergic neurotransmission.
 
-Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
+Decision (accept / amend / reject / request-evidence / unresolved): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ### guide:whenNotice
 
 - whenNotice: Some early changes (sleep, appetite, energy) can happen within 1–2 weeks, but clearer mood benefit typically takes 4–6 weeks for depression. For anxiety disorders, PTSD, and social anxiety, full effect may take 8–12 weeks. Don't stop early just because you don't feel better yet.
 
-Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
+Decision (accept / amend / reject / request-evidence / unresolved): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ### guide:timelineShort
 
 - timelineShort: 4–6 weeks for depression; 8–12 for anxiety
 
-Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
+Decision (accept / amend / reject / request-evidence / unresolved): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ### guide:usuallyTaken
 
 - usuallyTaken: In the morning, with food if it upsets your stomach
 
-Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
+Decision (accept / amend / reject / request-evidence / unresolved): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ### guide:commonSideEffects
 
@@ -98,7 +98,7 @@ Decision (accept / amend / reject / request-evidence): ____   Amended wording (i
 - commonSideEffects > list[9]: Sexual side effects: lower interest or difficulty reaching orgasm
 - commonSideEffects > note: Sexual side effects are common and can persist. Talk to your doctor if this bothers you: there are solutions. Do not just stop the medicine on your own.
 
-Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
+Decision (accept / amend / reject / request-evidence / unresolved): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ### guide:importantSideEffects
 
@@ -119,7 +119,7 @@ Decision (accept / amend / reject / request-evidence): ____   Amended wording (i
 - importantSideEffects > items[5] > whatItMeans: In people with unrecognised bipolar disorder, an antidepressant can trigger a period of racing thoughts, high energy, and poor judgment.
 - importantSideEffects > items[5] > whatToDo: Tell your doctor if your mood becomes unusually high, you feel unstoppable, or you make risky decisions.
 
-Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
+Decision (accept / amend / reject / request-evidence / unresolved): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ### guide:tellYourDoctor
 
@@ -130,31 +130,31 @@ Decision (accept / amend / reject / request-evidence): ____   Amended wording (i
 - tellYourDoctor[5]: If you drink alcohol regularly.
 - tellYourDoctor[6]: If you are over 65: your doctor may check your blood sodium in the first weeks.
 
-Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
+Decision (accept / amend / reject / request-evidence / unresolved): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ### guide:interactions
 
 - interactions: The main thing to know: avoid alcohol or keep it to a minimum. It can make you more drowsy and worsen mood symptoms. Tell your pharmacist about everything you take, including over-the-counter products, because several common medicines can interact with sertraline. The most dangerous combinations are with other medicines that affect serotonin: your doctor or pharmacist will check for these automatically.
 
-Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
+Decision (accept / amend / reject / request-evidence / unresolved): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ### guide:missedDose
 
 - missedDose: Take the missed dose as soon as you remember, unless it is within 8 hours of your next dose. In that case, skip the missed dose and continue normally. Do not double up to make up for a missed dose.
 
-Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
+Decision (accept / amend / reject / request-evidence / unresolved): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ### guide:stopping
 
 - stopping: Do not stop sertraline suddenly without medical guidance. Your doctor will recommend a gradual taper over several weeks, depending on your dose, how long you have taken it, and your symptoms. Stopping suddenly after several weeks can cause uncomfortable withdrawal-like symptoms: dizziness, 'brain zaps', nausea, and irritability. Also, for a first episode of depression, treatment usually continues for 6–12 months after you feel better, because stopping earlier raises the risk of the depression coming back.
 
-Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
+Decision (accept / amend / reject / request-evidence / unresolved): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ### guide:monitoring
 
 - monitoring: You'll have check-ins with your doctor at 2 weeks, 4 weeks, and 6 weeks to see how you're responding. They'll ask about your mood, side effects, and any new thoughts. You may be asked to fill in a short questionnaire (PHQ-9) so your progress can be tracked. If you're over 65, your doctor may check your blood sodium in the first 2 weeks.
 
-Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
+Decision (accept / amend / reject / request-evidence / unresolved): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ### guide:urgentHelp
 
@@ -165,7 +165,7 @@ Decision (accept / amend / reject / request-evidence): ____   Amended wording (i
 - urgentHelp > signs[4]: Any allergic reaction: rash, swelling of the face or throat, or trouble breathing.
 - urgentHelp > action: If you think someone is in immediate danger, call your local emergency number straight away. KYP lists India-specific helplines in the Emergency Help section at the bottom of every page.
 
-Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
+Decision (accept / amend / reject / request-evidence / unresolved): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ### guide:keyReminders
 
@@ -176,7 +176,7 @@ Decision (accept / amend / reject / request-evidence): ____   Amended wording (i
 - keyReminders[5]: Keep alcohol to a minimum or avoid it: it can make you more drowsy and worsen mood symptoms.
 - keyReminders[6]: Tell every doctor, dentist, and pharmacist that you take sertraline. If you take the liquid form, tell them before you start disulfiram (a medicine for alcohol dependence): the liquid contains alcohol.
 
-Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
+Decision (accept / amend / reject / request-evidence / unresolved): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## Documents the statements rest on
 
@@ -185,6 +185,13 @@ Decision (accept / amend / reject / request-evidence): ____   Amended wording (i
 ## Statements (one block each)
 
 ### sertraline:side-effects:in1 [side-effects]
+
+Source: List of Drugs Safety Alerts issued by PvPI from March 2016 to till date (Indian Pharmacopoeia Commission)
+- Kind: Indian drug safety alert list (IPC, PvPI): a safety signal from reports, not a product label
+- Jurisdiction: IN; type: indian-safety-communication; organisation: Indian Pharmacopoeia Commission, Pharmacovigilance Programme of India (PvPI)
+- Source date: list 30th September, 2026 (file P.17019/03/2026-DSA); accessed 2026-10-14; identifier in.pvpi-dsa-list
+- Form the source describes: product form not stated (source record says: not stated: the list names the medicine, not a product or strength)
+- Address: https://ipc.gov.in/images/pvpi/List-of-drug-safety-alerts-issued-by-PvPI.pdf
 
 Patient wording (paraphrase): India's Pharmacovigilance Programme (PvPI) lists sertraline as a suspected cause of maculopathy (a disorder of the centre of the retina at the back of the eye). This comes from analysing reports sent to the programme: it is a safety signal, it does not say how often this happens, and it does not mean it will happen to you.
 
@@ -196,5 +203,5 @@ Limits: Indian safety-alert list (IPC, PvPI), 30th September, 2026 (file P.17019
 
 Open questions: Confirm this is the label of the brand the patient is actually given.
 
-Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
+Decision (accept / amend / reject / request-evidence / unresolved): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
