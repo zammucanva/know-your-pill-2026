@@ -11,7 +11,7 @@ export interface ListText {
 
 export function splitList(text: string): ListText | null {
   const colon = text.indexOf(": ");
-  if (colon < 10 || colon > 240) return null;
+  if (colon < 10 || colon > 240) return cueList(text);
   const intro = text.slice(0, colon + 1);
   const rest = text.slice(colon + 2);
   const parts = rest.split(/;\s+/);
@@ -51,4 +51,21 @@ function commaList(intro: string, rest: string): ListText | null {
   const cleaned = items.map((i) => i.trim().replace(/^(or|and)\s+/i, "").trim()).filter(Boolean);
   if (cleaned.length < 5 || cleaned.some((i) => i.split(/\s+/).length > 14 || /[.!?]\s/.test(i))) return null;
   return { intro, items: cleaned, outro };
+}
+
+/**
+ * A single sentence whose list follows a cue phrase instead of a colon ("... if you have a, b, c, d, and e."). Only the
+ * first cue is tried, the same five-short-items rule applies, and the cue stays at the end of the intro so the words
+ * read in the same order. Presentation only.
+ */
+const CUE = /\b(?:if you(?: or a family member)? (?:have|get|notice|develop|experience)|include|includes|including|such as)\s+(?=\S)/i;
+function cueList(text: string): ListText | null {
+  const m = CUE.exec(text);
+  if (!m || m.index < 10) return null;
+  const before = text.slice(0, m.index);
+  if ((before.match(/\(/g) ?? []).length !== (before.match(/\)/g) ?? []).length) return null; // the cue is inside brackets
+  const cut = m.index + m[0].length;
+  const intro = text.slice(0, cut).trimEnd();
+  const list = commaList(intro, text.slice(cut));
+  return list;
 }

@@ -144,6 +144,17 @@ describe("long lists in restated statements are shown as lists without changing 
     expect(splitList("You may notice: headache, nausea, dizziness, rash.")).toBeNull(); // only four items
     expect(splitList("Do not take it if you have: a long sentence, which goes on. And another, with commas, in it, again, and again.")).toBeNull();
   });
+  test("a list that follows a cue phrase instead of a colon is split, with every word kept and the cue left in the intro", () => {
+    const t = "Contact your doctor if you or a family member have a very high fever, muscle stiffness, confusion or delirium, a fast heartbeat, sweating or an irregular heart rhythm.";
+    const l = splitList(t)!;
+    expect(l.intro).toBe("Contact your doctor if you or a family member have");
+    expect(l.items).toEqual(["a very high fever", "muscle stiffness", "confusion or delirium", "a fast heartbeat", "sweating or an irregular heart rhythm"]);
+    expect(words([l.intro, ...l.items, l.outro].join(" "))).toEqual(words(t));
+    // a cue inside brackets is not a list start
+    expect(splitList("Tell us about other antidepressants (including other MAOIs, SSRIs, SNRIs, tricyclics, or tetracyclics) that you take.")).toBeNull();
+    // fewer than five items stays a sentence
+    expect(splitList("Side effects include nausea, headache and dizziness.")).toBeNull();
+  });
   test("the page shows the long contraindication list as a list", () => {
     const h = html("doxepin");
     expect(h).toContain("data-statement-list");
