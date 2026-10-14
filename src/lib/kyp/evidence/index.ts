@@ -5,6 +5,7 @@ import medguidesJson from "./data/medguides.json";
 import { deriveMedGuideEvidence } from "./medguide-claims";
 import { deriveFromPilDocs } from "./pil-docs";
 import mlpJson from "./data/medlineplus.json";
+import { INTERACTION_CLAIMS } from "./claims-interactions";
 import { deriveMedlinePlusEvidence, type MlpRecordData } from "./medlineplus-claims";
 import sourcesJson from "./data/sources.json";
 import { CLAIM_RECORDS as HAND_CLAIMS } from "./claims";
@@ -23,7 +24,7 @@ const MLP = deriveMedlinePlusEvidence(MEDLINEPLUS_RECORDS, [...HAND_CLAIMS, ...M
 /** Retrieved sources (verbatim excerpts): hand-picked labels (fetch-label.ts) plus Medication Guides (medguide.ts). */
 export const SOURCE_RECORDS: SourceRecord[] = [...(sourcesJson as unknown as SourceRecord[]), ...MG.sources, ...PIL.sources, ...MLP.sources];
 /** Hand-authored claims (claims.ts) plus exact-quote claims derived from Medication Guides. */
-export const CLAIM_RECORDS: ClaimRecord[] = [...HAND_CLAIMS, ...MG.claims, ...PIL.claims, ...MLP.claims];
+export const CLAIM_RECORDS: ClaimRecord[] = [...HAND_CLAIMS, ...MG.claims, ...PIL.claims, ...MLP.claims, ...INTERACTION_CLAIMS];
 /** Candidate labels found on DailyMed for every medication. Regenerate with scripts/evidence/discover.ts. */
 export const DISCOVERY_RECORDS = discoveryJson as unknown as DiscoveryRecord[];
 

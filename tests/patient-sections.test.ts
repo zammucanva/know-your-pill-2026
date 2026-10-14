@@ -128,7 +128,7 @@ describe("Medication Guide evidence: exact quotes, correctly categorised, never 
       expect(getPatientGuide(r.slug)).toBeUndefined();
     }
     const derived = deriveMedGuideEvidence(MEDGUIDE_RECORDS);
-    expect(derived.sources.length).toBe(MEDGUIDE_RECORDS.filter((r) => r.status === "medication-guide-found" && !(r.slug in CLAIM_SOURCE_SETID)).length);
+    expect(derived.sources.filter((x) => !x.identifier.endsWith(".pi")).length).toBe(MEDGUIDE_RECORDS.filter((r) => r.status === "medication-guide-found" && !(r.slug in CLAIM_SOURCE_SETID)).length);
     expect(SOURCE_RECORDS.length).toBe(Object.keys(CLAIM_SOURCE_SETID).length + derived.sources.length + PIL_DOCS.length + SOURCE_RECORDS.filter((x) => x.identifier.startsWith("mlp.")).length);
   });
   test("records say honestly when no Medication Guide or no US label was found", () => {

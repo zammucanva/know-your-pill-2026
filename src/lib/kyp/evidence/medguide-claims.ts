@@ -1,5 +1,17 @@
 import type { ClaimCategory, ClaimRecord, MedGuideRecord, SourceRecord } from "./types";
 import { CLAIM_SOURCE_SETID } from "./claims";
+import piSectionsJson from "./data/pi-sections.json";
+
+/** Prescribing-information sections of the same label a stored Medication Guide came from (scripts/evidence/pi-sections.ts). */
+export interface PiSectionsData {
+  slug: string;
+  setid: string;
+  accessedAt: string;
+  excerpts: { id: string; loinc: string; section: string; text: string; truncated: boolean }[];
+}
+export const PI_SECTIONS = piSectionsJson as unknown as PiSectionsData[];
+/** Suffix that marks the prescribing-information record of a label (the Medication Guide record keeps the bare set id). */
+export const PI_SUFFIX = ".pi";
 
 /**
  * Turns the captured US Medication Guide sections into sources and EXACT-QUOTE claims. Nothing is written
@@ -31,7 +43,7 @@ export function categoryOfHeading(heading: string): ClaimCategory | null {
 
 const US_ONLY = /\b(FDA|1-800|poison control|911|MedWatch)\b/;
 
-export function deriveMedGuideEvidence(records: MedGuideRecord[]): { sources: SourceRecord[]; claims: ClaimRecord[] } {
+export function deriveMedGuideEvidence(records: MedGuideRecord[], pi: PiSectionsData[] = PI_SECTIONS): { sources: SourceRecord[]; claims: ClaimRecord[] } {
   const sources: SourceRecord[] = [];
   const claims: ClaimRecord[] = [];
   for (const r of records) {
@@ -61,6 +73,31 @@ export function deriveMedGuideEvidence(records: MedGuideRecord[]): { sources: So
         "Applies to the product named in this record only.",
       ],
     });
+    // The same label's prescribing information is a separate source record, so a statement taken from it is never
+    // shown as if it came from the Medication Guide.
+    const piRec = pi.find((x) => x.slug === r.slug && x.setid === r.setid);
+    if (piRec?.excerpts.length)
+      sources.push({
+        id: `${r.slug}:us-product-label:${r.setid}${PI_SUFFIX}`,
+        slug: r.slug,
+        ingredient: r.slug,
+        productTitle: r.labelTitle,
+        formulation: r.labelTitle,
+        organisation: /\[(.+)\]\s*$/.exec(r.labelTitle)?.[1] ?? "unknown labeler",
+        type: "us-product-label",
+        jurisdiction: "US",
+        title: `${r.labelTitle} (prescribing information)`,
+        url: `https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=${r.setid}`,
+        identifier: `${r.setid}${PI_SUFFIX}`,
+        publishedDate: r.publishedDate,
+        revision: r.version,
+        accessedAt: piRec.accessedAt,
+        excerpts: piRec.excerpts.map((e) => ({ id: e.id, section: `Prescribing information: ${e.section}`, text: e.text, truncated: e.truncated })),
+        limitations: [
+          "US prescribing information for this US product, written for clinicians. It is not an Indian product label, and Indian approval, indications, strengths and warnings may differ.",
+          "Applies to the product named in this record only.",
+        ],
+      });
     const perCat = new Map<string, number>();
     r.sections.forEach((s, i) => {
       const category = categoryOfHeading(s.heading);

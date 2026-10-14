@@ -41,7 +41,7 @@ describe("evidence layer: integrity", () => {
     expect(validateEvidence()).toEqual([]);
     const guides = MEDGUIDE_RECORDS.filter((r) => r.status === "medication-guide-found" && !(r.slug in CLAIM_SOURCE_SETID)).length; // a hand-picked label replaces a stored guide
     expect(guides).toBe(59);
-    expect(SOURCE_RECORDS.length).toBe(Object.keys(CLAIM_SOURCE_SETID).length + guides + PIL_DOCS.length + SOURCE_RECORDS.filter((x) => x.identifier.startsWith("mlp.")).length); // hand-picked US labels + patient-directed US sections + non-US documents
+    expect(SOURCE_RECORDS.length).toBe(Object.keys(CLAIM_SOURCE_SETID).length + guides + PIL_DOCS.length + SOURCE_RECORDS.filter((x) => x.identifier.startsWith("mlp.")).length + SOURCE_RECORDS.filter((x) => x.identifier.endsWith(".pi")).length); // hand-picked US labels + patient-directed US sections + non-US documents
     expect(Object.keys(CLAIM_SOURCE_SETID).length).toBe(45);
     expect(CLAIM_RECORDS.length).toBeGreaterThanOrEqual(50);
   });
@@ -223,7 +223,7 @@ describe("India-first dashboard: separate measures, honest numbers", () => {
     expect(sum.onsetScan.note).toMatch(/not claims/);
   });
   test("every DailyMed source is a discovered candidate label (traceable to the listing)", () => {
-    for (const s of SOURCE_RECORDS.filter((x) => x.url.includes("dailymed"))) expect(DISCOVERY_RECORDS.find((r) => r.slug === s.slug)!.candidates.some((c) => c.setid === s.identifier)).toBe(true);
+    for (const s of SOURCE_RECORDS.filter((x) => x.url.includes("dailymed"))) expect(DISCOVERY_RECORDS.find((r) => r.slug === s.slug)!.candidates.some((c) => c.setid === s.identifier.replace(/\.pi$/, ""))).toBe(true);
   });
   test("readability is an automated screen, defined and bounded", () => {
     const easy = readability("Take it with food. Call your doctor if you feel unwell.");
