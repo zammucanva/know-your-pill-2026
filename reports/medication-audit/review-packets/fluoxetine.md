@@ -85,3 +85,37 @@ Each line is shown to patients. Check it against current Indian product informat
 
 Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
 
+## Documents the statements rest on
+
+- List of Drugs Safety Alerts issued by PvPI from March 2016 to till date (Indian Pharmacopoeia Commission) (IN; indian-safety-communication; Indian Pharmacopoeia Commission, Pharmacovigilance Programme of India (PvPI); list 30th September, 2026 (file P.17019/03/2026-DSA); accessed 2026-10-14) https://ipc.gov.in/images/pvpi/List-of-drug-safety-alerts-issued-by-PvPI.pdf
+
+## Statements (one block each)
+
+### fluoxetine:side-effects:in1 [side-effects]
+
+Patient wording (paraphrase): India's Pharmacovigilance Programme (PvPI) lists fluoxetine as a suspected cause of urinary incontinence (leaking urine). This comes from analysing reports sent to the programme: it is a safety signal, it does not say how often this happens, and it does not mean it will happen to you.
+
+Exact passage: Fluoxetine Fluoxetine is a SSRI antidepressant which is used in psychological disorders and also in premature ejaculation Urinary incontinence
+
+Applies to: As written in the Indian PvPI drug safety alert list for Drug safety alerts issued by PvPI (not a product label), not stated: the list names the medicine, not a product or strength. Adults unless the statement says otherwise.
+
+Limits: Indian safety-alert list (IPC, PvPI), 30th September, 2026 (file P.17019/03/2026-DSA): a signal from reports, not a rate or a cause, and not a product label. General information, not advice for any one person. This is a list of safety signals from adverse-drug-reaction reports. It names a suspected reaction, not a rate, a cause or advice for one person. It is not a package insert and says nothing about dose, onset, interactions or how to take the medicine.
+
+Open questions: Confirm this is the label of the brand the patient is actually given.
+
+Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+
+### fluoxetine:side-effects:in2 [side-effects]
+
+Patient wording (paraphrase): India's Pharmacovigilance Programme (PvPI) lists fluoxetine as a suspected cause of hypoacusis (hearing impairment). This comes from analysing reports sent to the programme: it is a safety signal, it does not say how often this happens, and it does not mean it will happen to you.
+
+Exact passage: Fluoxetine Used for the treatment of Bipolar disorder, Depressive episode Hypoacusis (Hearing impairment)
+
+Applies to: As written in the Indian PvPI drug safety alert list for Drug safety alerts issued by PvPI (not a product label), not stated: the list names the medicine, not a product or strength. Adults unless the statement says otherwise.
+
+Limits: Indian safety-alert list (IPC, PvPI), 30th September, 2026 (file P.17019/03/2026-DSA): a signal from reports, not a rate or a cause, and not a product label. General information, not advice for any one person. This is a list of safety signals from adverse-drug-reaction reports. It names a suspected reaction, not a rate, a cause or advice for one person. It is not a package insert and says nothing about dose, onset, interactions or how to take the medicine.
+
+Open questions: Confirm this is the label of the brand the patient is actually given.
+
+Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+
