@@ -36,6 +36,8 @@ export interface PilDoc {
   url?: string;
   /** "leaflet" (default): a UK patient leaflet. "fda-label": an FDA-approved US label from the Drugs@FDA archive. "indian-label": an Indian product label or package insert (add its host to ALLOWED_SOURCE_HOSTS first). */
   kind?: "leaflet" | "fda-label" | "ie-leaflet" | "indian-label";
+  /** Who the document is written about, when that is not adults (replaces the default "Adults unless the statement says otherwise"). */
+  population?: string;
   /** Extra limits that apply to every claim from this leaflet. */
   limits: string[];
   accessedAt: string;
@@ -521,6 +523,44 @@ export const PIL_DOCS: PilDoc[] = [
       ["urgent-help", "Cases of suicidal ideation and suicidal behaviours have been reported during reboxetine therapy or early after treatment discontinuation", "Cases of suicidal thoughts and suicidal behaviour have been reported during treatment with reboxetine or soon after stopping it."],
     ],
   },
+  {
+    slug: "pemoline",
+    file: "016832s022",
+    kind: "fda-label",
+    url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2003/016832s022_017703s018lbl.pdf",
+    product: "Cylert (pemoline) tablets 18.75 mg, 37.5 mg and 75 mg, and chewable tablets 37.5 mg (Abbott)",
+    title: "Cylert (pemoline) tablets and chewable tablets: FDA-approved label (Drugs@FDA archive)",
+    holder: "Abbott Laboratories (US)",
+    revised: "12/2002",
+    formulation: "18.75 mg, 37.5 mg and 75 mg tablets and 37.5 mg chewable tablets",
+    population: "The label is written about children with attention deficit hyperactivity disorder (ADHD) unless a statement says otherwise.",
+    limits: [
+      "This is prescribing information written for clinicians, not a patient leaflet. It is an old label (revised December 2002) from the Drugs@FDA archive, which says it 'may not be the latest approved'.",
+      "No current DailyMed label or patient leaflet for pemoline was found, and the product may no longer be sold. Do not use this page to decide whether to take or stop it.",
+    ],
+    accessedAt: "2026-10-14",
+    claims: [
+      ["what-it-is", "CYLERT (pemoline) is a central nervous system stimulant.", "Pemoline (Cylert) is a central nervous system stimulant."],
+      ["used-for", "CYLERT (pemoline) is indicated in Attention Deficit Hyperactivity Disorder (ADHD).", "Pemoline (Cylert) was used for attention deficit hyperactivity disorder (ADHD)."],
+      ["precaution", "Because of its association with life threatening hepatic failure, CYLERT should not ordinarily be considered as first line drug therapy for ADHD", "Because it has been linked to life-threatening liver failure, the label says it should not ordinarily be the first medicine tried for ADHD."],
+      ["precaution", "Of the 15 cases reported as of December 1998, 12 resulted in death or liver transplantation, usually within four weeks of the onset of signs and symptoms of liver failure.", "Of 15 cases of acute liver failure reported by December 1998, 12 ended in death or a liver transplant, usually within four weeks of the first signs of liver failure."],
+      ["contraindication", "CYLERT (pemoline) is contraindicated in patients with known hypersensitivity or idiosyncrasy to the drug. CYLERT should not be administered to patients with impaired hepatic function", "Do not take it if you are known to be hypersensitive (allergic) to it or have had an unusual reaction (idiosyncrasy) to it. It should not be given to people with impaired liver function."],
+      ["monitoring", "Serum ALT (SGPT) levels should be determined at baseline, and every two weeks thereafter.", "A blood test of liver function (serum ALT) should be done before starting and then every two weeks."],
+      ["monitoring", "CYLERT should be discontinued if serum ALT (SGPT) is increased to a clinically significant level", "It should be stopped if the liver blood test (serum ALT) rises to a clinically significant level."],
+      ["urgent-help", "Patients should be advised to be alert for signs of liver dysfunction (jaundice, anorexia, gastrointestinal complaints, malaise, etc.) and to report them to their doctor immediately if they should occur.", "Watch for signs of liver problems (jaundice, loss of appetite, stomach or bowel complaints, feeling generally unwell, and similar) and tell your doctor immediately if they occur."],
+      ["how-to-take", "CYLERT (pemoline) is administered as a single oral dose each morning.", "The label says it is given as a single dose by mouth each morning. Your own dose is set by your prescriber."],
+      ["how-to-take", "The recommended starting dose is 37.5 mg/day. This daily dose should be gradually increased by 18.75 mg at one week intervals until the desired clinical response is obtained.", "The label gives a starting dose of 37.5 mg a day, raised gradually by 18.75 mg at one-week intervals until the wanted response is reached. Your own dose is set by your prescriber."],
+      ["onset", "CYLERT (pemoline) has a gradual onset of action. Using the recommended schedule of dosage titration, significant clinical benefit may not be evident until the third or fourth week of drug administration.", "The label says it has a gradual onset of action. With the recommended dose schedule, a clear benefit may not be seen until the third or fourth week."],
+      ["stopping", "Because CYLERT provides an observable symptomatic benefit, patients who fail to show substantial clinical benefit within 3 weeks of completing dose titration, should be withdrawn from CYLERT therapy.", "The label says people who do not show a substantial benefit within 3 weeks of finishing the dose build-up should be taken off it. That decision is for the prescriber."],
+      ["interactions", "The interaction of CYLERT (pemoline) with other drugs has not been studied in humans. Patients who are receiving CYLERT concurrently with other drugs, especially drugs with CNS activity, should be monitored carefully.", "The label says its interaction with other medicines has not been studied in humans. People who take other medicines with it, especially medicines that act on the brain and nerves (CNS), should be monitored carefully."],
+      ["interactions", "Decreased seizure threshold has been reported in patients receiving CYLERT concomitantly with antiepileptic medications.", "A lower seizure threshold (seizures happening more easily) has been reported in people taking it together with medicines for epilepsy."],
+      ["side-effects", "Insomnia is the most frequently reported side effect of CYLERT", "Trouble sleeping (insomnia) is the side effect reported most often."],
+      ["side-effects", "Anorexia and weight loss may occur during the first weeks of therapy.", "Loss of appetite and weight loss may occur in the first weeks of treatment."],
+      ["precaution", "Decrements in the predicted growth (i.e., weight gain and/or height) rate have been reported with the long-term use of stimulants in children.", "Slower than expected growth (weight gain and/or height) has been reported with long-term use of stimulants in children."],
+      ["precaution", "Safety and effectiveness in children below the age of 6 years have not been established.", "Safety and effectiveness in children below the age of 6 years have not been established."],
+      ["precaution", "this drug should be used during pregnancy only if clearly needed.", "The label says it should be used during pregnancy only if clearly needed."],
+    ],
+  },
 ];
 
 const nrm = (t: string) => t.replace(/\s+/g, " ").trim();
@@ -577,7 +617,7 @@ export function deriveFromPilDocs(docs: PilDoc[] = PIL_DOCS): { sources: SourceR
         sourceId,
         excerptId: `${d.slug}:pil:${i}`,
         passage: nrm(passage),
-        applicability: [`As written in the ${k.noun} for ${d.product}, ${d.formulation}.`, "Adults unless the statement says otherwise."],
+        applicability: [`As written in the ${k.noun} for ${d.product}, ${d.formulation}.`, d.population ?? "Adults unless the statement says otherwise."],
         limitations: [
           d.kind === "fda-label"
             ? `US label only (not an Indian label): this label was revised ${d.revised}, FDA marks archived labels as possibly not the latest, and an Indian product may differ.`

@@ -130,5 +130,16 @@
   "passages": 27,
   "passagesFound": 27,
   "missing": []
+ },
+ {
+  "slug": "pemoline",
+  "file": "016832s022",
+  "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2003/016832s022_017703s018lbl.pdf",
+  "httpStatus": 200,
+  "sha256": "66138167fbe8c2d2f05768e614b0943fb3d47f87099700e037f4454c012c8d76",
+  "checkedAt": "2026-10-14",
+  "passages": 19,
+  "passagesFound": 19,
+  "missing": []
  }
 ]

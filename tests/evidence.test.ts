@@ -99,8 +99,9 @@ describe("evidence layer: integrity", () => {
 describe("evidence layer: rendering and honesty", () => {
   test("a sourced onset statement replaces the generic one for exactly the medicines whose label states one", () => {
     const withOnset = [...new Set(CLAIM_RECORDS.filter((c) => c.category === "onset").map((c) => c.slug))].sort();
-    expect(withOnset).toEqual(["agomelatine", "amoxapine", "chlorpromazine", "desipramine", "dothiepin", "flupenthixol", "imipramine", "isocarboxazid", "lofepramine", "maprotiline", "mianserin", "moclobemide", "phenelzine", "propranolol", "protriptyline", "reboxetine", "tasimelteon", "trimipramine", "zuclopenthixol"]);
-    for (const slug of withOnset) {
+    expect(withOnset).toEqual(["agomelatine", "amoxapine", "chlorpromazine", "desipramine", "dothiepin", "flupenthixol", "imipramine", "isocarboxazid", "lofepramine", "maprotiline", "mianserin", "moclobemide", "pemoline", "phenelzine", "propranolol", "protriptyline", "reboxetine", "tasimelteon", "trimipramine", "zuclopenthixol"]);
+    // pemoline never carried the generic sentence, so there is nothing for its onset statement to replace
+    for (const slug of withOnset.filter((x) => claimsFor(x).some((c) => c.category === "onset" && c.replacesRule))) {
       const h = html(slug);
       expect(h).toContain('data-claim-category="onset"');
       expect(visible(h).toLowerCase()).not.toContain("works gradually, most people notice");
@@ -193,7 +194,7 @@ describe("India-first dashboard: separate measures, honest numbers", () => {
     expect(sum.claimsWithTraceableSource).toBe(CLAIM_RECORDS.length);
     expect(sum.medicationsWithSourcedClaims).toBe(new Set(CLAIM_RECORDS.map((c) => c.slug)).size);
     expect(sum.medicationsWithSourcedClaims).toBeGreaterThanOrEqual(60);
-    expect(sum.medicationsWithSourcedOnsetClaim).toBe(19);
+    expect(sum.medicationsWithSourcedOnsetClaim).toBe(20);
     expect(sum.usLabelDiscovery["candidates-found"] + sum.usLabelDiscovery["none-found"]).toBe(145);
     expect(Object.keys(sum)).not.toContain("percent");
     expect(Object.keys(sum).some((k) => /percent|score|overall/i.test(k))).toBe(false);
