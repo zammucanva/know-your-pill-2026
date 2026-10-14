@@ -93,7 +93,7 @@ async function assertDatabaseReachable(): Promise<void> {
   if (!ok) {
     throw new Error(
       `TEST PREREQUISITE MISSING: no PostgreSQL is listening at ${u.hostname}:${port}. ` +
-        `Start a disposable local one (for example: docker run --rm -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=kyp_test postgres:16) ` +
+        `Start a disposable local one (for example: docker run --rm -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=kyp_test postgres:16.9) ` +
         `or point KYP_TEST_DATABASE_URL at a local database whose name contains "test". This suite needs it and is not skipped.`
     );
   }

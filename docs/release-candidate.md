@@ -7,7 +7,7 @@ Engineering status and clinical status are separate. A green run below says the 
 2. Static: `npx tsc --noEmit`; `npm run lint:dashes`; `bun scripts/audit-four-mode-coverage.ts --check`; ESLint on changed files (repo-wide ESLint has known older debt, see `docs/test-baseline.md`).
 3. Content lock: `bun scripts/content-lock.ts` (165/165 files, LF-normalised hash).
 4. Build: `rm -rf .next/standalone && npm run build` (the server tests need `.next/standalone`).
-5. Database: start a disposable local PostgreSQL (for example `docker run --rm -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=kyp_test postgres:16`) or set `KYP_TEST_DATABASE_URL` to a local database whose name contains `test`. The harness refuses anything else. Never use `.env.local` values.
+5. Database: start a disposable local PostgreSQL (for example `docker run --rm -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=kyp_test postgres:16.9`) or set `KYP_TEST_DATABASE_URL` to a local database whose name contains `test`. The harness refuses anything else. Never use `.env.local` values.
 6. Tests: `bun test tests/`. Without a database the 47 database-dependent tests fail with `TEST PREREQUISITE MISSING`; they are never skipped.
 7. Browser: serve the standalone build (`PORT=3310 HOSTNAME=127.0.0.1 node .next/standalone/server.js`), run axe-core on the pages listed in `docs/test-baseline.md`, in light and dark and at 375 px and desktop width, with transitions disabled for the dark check.
 
