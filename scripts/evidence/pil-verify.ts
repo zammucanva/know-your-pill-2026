@@ -27,6 +27,7 @@ export function normalise(t: string): string {
     .replace(/Reference ID: \d+/g, " ")
     .replace(/This label may not be the latest approved by FDA\. For current labeling information, please visit https:\/\/www\.fda\.gov\/drugsatfda/g, " ")
     .replace(/Lof70mgin5mlSusp-PL-UK-3/g, " ")
+    .replace(/REG_\d+ v\.\d+\.\d+/g, " ")
     .replace(/[‘’]/g, "'")
     .replace(/[“”]/g, '"')
     .replace(/[–—]/g, "-")

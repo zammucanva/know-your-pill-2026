@@ -141,5 +141,16 @@
   "passages": 19,
   "passagesFound": 19,
   "missing": []
+ },
+ {
+  "slug": "sertindole",
+  "file": "21514",
+  "url": "https://assets.hpra.ie/products/Human/21514/ie-pl-present-2155811-26082015155550-635762013513620000.pdf",
+  "httpStatus": 200,
+  "sha256": "2e2a4d439e340441e2594178a5ad36f832ef1591b8a2a2f6d5e9bc5d632120c0",
+  "checkedAt": "2026-10-14",
+  "passages": 26,
+  "passagesFound": 26,
+  "missing": []
  }
 ]
