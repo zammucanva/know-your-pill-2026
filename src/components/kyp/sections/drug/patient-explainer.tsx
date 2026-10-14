@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { EXPLANATION_COPY as EC, type PatientExplanation } from "@/lib/kyp/modes/explanation-copy";
 import type { LensBlock } from "@/lib/kyp/modes/types";
 import type { EvidenceClaimView } from "@/lib/kyp/evidence/types";
-import { PART_CATEGORIES, PART_ORDER, PART_TITLE, partStates, questionsFor, usesStatedInWhat, type PartId, type PartState } from "@/lib/kyp/evidence/patient-sections";
+import { PART_CATEGORIES, PART_ORDER, PART_TITLE, partStates, questionsFor, urgentPointers, usesStatedInWhat, type PartId, type PartState } from "@/lib/kyp/evidence/patient-sections";
 import { formOf } from "@/lib/kyp/evidence/label-form";
 import { sourceIdLabel, sourceKind } from "@/lib/kyp/evidence/source-label";
 import type { SearchLogEntry } from "@/lib/kyp/evidence/source-search-log";
@@ -228,6 +228,11 @@ export function PatientExplainer({
           <section id="pe-seek-help" aria-labelledby="pe-seek-help-h" className="scroll-mt-24">
             <PartHeader id="seek-help" state={states["seek-help"]} />
             <EvidenceClaimCards views={forPart("seek-help")} />
+            {states["seek-help"] !== "authored-guide" && urgentPointers(claims).length > 0 && (
+              <p data-seek-help-pointer="" className="mt-3 text-sm">
+                {EC.part.seekHelpPointer(urgentPointers(claims).map((p) => PART_TITLE[p].toLowerCase()).join(", "))}
+              </p>
+            )}
             <p data-seek-help-general="" className="mt-3 rounded-lg border border-border/70 p-3 text-sm">
               {EC.part.seekHelpGeneral}
             </p>

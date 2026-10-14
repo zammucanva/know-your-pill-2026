@@ -148,6 +148,7 @@ export const EXPLANATION_COPY = {
       "side-effects": "This guide has no supported side-effect information for this medicine. Not seeing an effect here does not mean it cannot happen. Ask your pharmacist or prescriber what to watch for.",
       interactions: "This guide has no supported information on other medicines for this one. That does not mean it has no interactions. Ask your pharmacist before you start, stop or combine any medicine.",
     },
+    seekHelpPointer: (parts: string) => `Some statements in these parts of this page also tell you to call or get help right away: ${parts}. Look for the words "right away", "immediately" or "emergency". Parts not listed are not shown to be free of such advice.`,
     seekHelpGeneral: "If you feel unwell after taking this medicine, or you are unsure about anything, contact your pharmacist or prescriber. If it is an emergency, go to the nearest hospital. This is a general direction, not from a product label.",
     questionsIntro: "These prompts are built from the parts of this page that have no supported information for this medicine. They are questions to ask, not medical advice.",
     questionsGuide: "Prompts you can take to your pharmacist or prescriber:",

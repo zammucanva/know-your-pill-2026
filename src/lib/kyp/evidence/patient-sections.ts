@@ -83,6 +83,18 @@ export function partStates(i: PartInputs): Record<PartId, PartState> {
   return out;
 }
 
+/** Words in a stored passage that tell the reader to get help quickly. */
+const URGENT_PASSAGE = /\b(call|contact|get|go|seek|stop taking)\b[^.\n]{0,100}\b(right away|immediately|straight away|emergency|nearest hospital)/i;
+/**
+ * Parts of this page, other than "when to get advice or help", whose source-backed statements contain words that
+ * tell the reader to call or get help right away. It points the reader there; it says nothing new, and a part
+ * not listed is not shown to be free of such advice.
+ */
+export function urgentPointers(claims: ClaimRecord[]): PartId[] {
+  const parts: PartId[] = ["how", "precautions", "side-effects", "interactions"];
+  return parts.filter((p) => claims.some((c) => PART_CATEGORIES[p].includes(c.category) && URGENT_PASSAGE.test(c.passage)));
+}
+
 /** Plain question prompts for the parts the guide could not fill. Navigation aids, not medical advice. */
 export const QUESTION_PROMPTS: Partial<Record<PartId, string>> = {
   what: "What is this medicine, in simple words?",
