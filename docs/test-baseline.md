@@ -28,3 +28,11 @@ Limitations: this is one comparison per side, and the load-dependent suites are 
 - `bun test tests/`: 1,194 pass, 47 fail, 0 timeouts (75 files, 318 s), after the fixes above.
 - All 47 failures are in `main`'s failing list (signup, password reset, CSP, test-database: no database or auth service in this environment). None is new. Six `main` failures no longer occur on the branch (the timeouts and CRLF readers).
 - Content lock: `bun scripts/content-lock.ts` 165/165 and the LF-hash module has tests showing real changes still change the hash (`tests/content-lock-line-endings.test.ts`).
+
+## Final run, second sprint (2026-10-15)
+- `bun test tests/`: 1,328 pass, 47 fail, 0 skipped, 0 timeouts (79 files, 173 s).
+- Every one of the 47 failures needs a PostgreSQL at 127.0.0.1:5432 (signup, password reset, password change, CSP-with-server, test-database suites). 46 now stop with `TEST PREREQUISITE MISSING: no PostgreSQL is listening ...`; the 47th is Prisma's own initialisation error in the database suite. This environment has no PostgreSQL, Docker or psql. They are environmental and reproducible; they fail, they are not skipped, and no assertion was weakened. They cannot be shown to pass here.
+- The CSP header itself was checked by hand against the production build (`Content-Security-Policy` present on `/`), which is evidence the CSP failures are the database prerequisite, not the header. It is not a substitute for the suite.
+- The same 47 test names fail on `main` and on the branch (name-for-name comparison with the earlier `main` run). Nothing fails on the branch that does not fail on `main`.
+- To run them: start a disposable local Postgres (`docker run --rm -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=kyp_test postgres:16`) or set `KYP_TEST_DATABASE_URL` to a local database whose name contains `test`.
+
