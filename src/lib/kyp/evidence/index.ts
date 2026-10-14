@@ -19,7 +19,7 @@ const MG = deriveMedGuideEvidence(MEDGUIDE_RECORDS);
 const PIL = deriveFromPilDocs();
 /** Captured MedlinePlus drug-information pages (scripts/evidence/medlineplus.ts), used only for parts with no other source. */
 export const MEDLINEPLUS_RECORDS = mlpJson as unknown as MlpRecordData[];
-const MLP = deriveMedlinePlusEvidence(MEDLINEPLUS_RECORDS, [...HAND_CLAIMS, ...MG.claims, ...PIL.claims]);
+const MLP = deriveMedlinePlusEvidence(MEDLINEPLUS_RECORDS, [...HAND_CLAIMS, ...MG.claims, ...PIL.claims, ...INTERACTION_CLAIMS]);
 
 /** Retrieved sources (verbatim excerpts): hand-picked labels (fetch-label.ts) plus Medication Guides (medguide.ts). */
 export const SOURCE_RECORDS: SourceRecord[] = [...(sourcesJson as unknown as SourceRecord[]), ...MG.sources, ...PIL.sources, ...MLP.sources];

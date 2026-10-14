@@ -106,7 +106,7 @@
       },
       "medicationsWithRetrievedSource": 125,
       "medicationsWithSourcedClaims": 125,
-      "claimsWithTraceableSource": 1803,
+      "claimsWithTraceableSource": 1806,
       "medicationsWithSourcedOnsetClaim": 21,
       "onsetScan": {
         "note": "Screening of US labels for sentences that may state onset. Candidates for a person to read in context; noisy; not claims.",
@@ -116,7 +116,7 @@
         "withCandidateSentencesButNoSourcedClaim": 27
       },
       "patientGuides": 12,
-      "claimsExactQuote": 455,
+      "claimsExactQuote": 458,
       "guideSectionsSummarised": 233,
       "medicationsBySourceCountry": {
         "none": 20,
@@ -165,8 +165,8 @@
         },
         "interactions": {
           "authored-guide": 12,
-          "standard-wording": 15,
-          "source-backed": 117,
+          "standard-wording": 12,
+          "source-backed": 120,
           "registry-wording": 1
         },
         "seek-help": {

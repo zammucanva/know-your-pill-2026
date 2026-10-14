@@ -51,7 +51,7 @@ export function deriveMedlinePlusEvidence(records: MlpRecordData[], other: Claim
     if (r.status !== "page-found" || !r.pageId) continue;
     const have = new Set(other.filter((c) => c.slug === r.slug).map((c) => c.category));
     const wanted = r.sections.filter((s) => CATEGORY[s.id] && !have.has(CATEGORY[s.id]));
-    if (!wanted.length) continue;
+    if (!wanted.length && have.has("interactions")) continue;
     const title = r.title ?? r.slug;
     const sourceId = `${r.slug}:international-patient-information:${MLP_PREFIX}${r.pageId}`;
     const offMarket = [r.footnote ?? "", ...r.sections.map((s) => s.text)].some((t) => OFF_MARKET.test(t));
@@ -75,6 +75,37 @@ export function deriveMedlinePlusEvidence(records: MlpRecordData[], other: Claim
         ...(offMarket ? ["The page says this product is no longer sold in the United States. It may still be sold or prescribed elsewhere; check what you were actually given."] : []),
       ],
     });
+    // The one explicit interaction line a MedlinePlus page carries ("the following ... products may interact with X: ...").
+    // It is quoted whole, only when no other source gives this medicine an interactions statement.
+    if (!have.has("interactions")) {
+      let n = 0;
+      for (const sec of r.sections.filter((x) => x.id === "precautions")) {
+        for (const raw of sec.text.split("\n")) {
+          const line = raw.replace(/^\u2022\s*/, "").trim();
+          if (!/\bmay interact with\b/i.test(line)) continue;
+          n++;
+          claims.push({
+            id: `${r.slug}:interactions:mp${n}`,
+            slug: r.slug,
+            category: "interactions",
+            patientWording: line,
+            wordingKind: "exact-quote",
+            sourceId,
+            excerptId: `${r.slug}:mlp:${sec.id}`,
+            passage: line,
+            applicability: [`As written in the MedlinePlus page "${title}", section "${sec.heading}", last revised ${r.lastRevised ?? "date not stated"}.`],
+            limitations: [
+              "US drug-information page, not an Indian label. Indian approval, strengths and warnings may differ.",
+              "Quoted exactly as published. It names a few non-prescription or herbal products only: it is not a complete list, and a product that is not named is not shown to be free of interactions.",
+              "General information, not advice for any one person.",
+            ],
+            verification: "passage-found-in-source",
+            review: "not-reviewed",
+            openQuestions: ["Compare with the Indian product information for the brand the patient is actually given."],
+          });
+        }
+      }
+    }
     const perCat = new Map<string, number>();
     for (const s of wanted) {
       const category = CATEGORY[s.id];
