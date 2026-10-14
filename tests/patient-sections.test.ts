@@ -86,7 +86,7 @@ describe("part states are computed from evidence, never assumed", () => {
       const s = states(d.slug);
       for (const q of questionsFor(s)) {
         expect(Object.values(QUESTION_PROMPTS)).toContain(q.question);
-        expect(["unavailable", "standard-wording", "general-direction", "safety-alert-only"]).toContain(s[q.part!]);
+        expect(["unavailable", "standard-wording", "general-direction", "safety-alert-only", "info-page-only"]).toContain(s[q.part!]);
       }
     }
     expect(questionsFor(states("fluoxetine"))).toEqual(questionsFor(states("fluoxetine"))); // deterministic

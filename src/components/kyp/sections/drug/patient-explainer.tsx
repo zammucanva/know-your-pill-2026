@@ -31,6 +31,7 @@ const chipTone: Record<PartState, string> = {
   "standard-wording": "border-amber-500/50",
   "general-direction": "border-border",
   "safety-alert-only": "border-amber-500/50",
+  "info-page-only": "border-amber-500/50",
   unavailable: "border-dashed border-amber-500/60",
 };
 

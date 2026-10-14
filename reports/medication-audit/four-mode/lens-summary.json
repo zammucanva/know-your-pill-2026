@@ -147,37 +147,43 @@
         },
         "uses": {
           "authored-guide": 12,
-          "source-backed": 125,
+          "source-backed": 102,
+          "info-page-only": 23,
           "registry-wording": 8
         },
         "how": {
           "authored-guide": 12,
-          "source-backed": 125,
+          "source-backed": 108,
+          "info-page-only": 17,
           "unavailable": 7,
           "registry-wording": 1
         },
         "precautions": {
           "authored-guide": 12,
-          "source-backed": 125,
-          "unavailable": 8
+          "source-backed": 117,
+          "unavailable": 8,
+          "info-page-only": 8
         },
         "side-effects": {
           "authored-guide": 12,
           "registry-wording": 8,
-          "source-backed": 122,
+          "source-backed": 104,
+          "info-page-only": 18,
           "safety-alert-only": 2,
           "standard-wording": 1
         },
         "interactions": {
           "authored-guide": 12,
           "standard-wording": 11,
-          "source-backed": 121,
+          "source-backed": 118,
+          "info-page-only": 3,
           "registry-wording": 1
         },
         "seek-help": {
           "authored-guide": 12,
           "general-direction": 28,
-          "source-backed": 105
+          "source-backed": 87,
+          "info-page-only": 18
         },
         "questions": {
           "authored-guide": 12,
@@ -185,8 +191,9 @@
         },
         "sources": {
           "authored-guide": 12,
-          "source-backed": 125,
-          "unavailable": 8
+          "source-backed": 121,
+          "unavailable": 8,
+          "info-page-only": 4
         }
       },
       "explanationLevel": {
