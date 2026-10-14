@@ -83,7 +83,9 @@ interface Baseline {
 }
 
 function sha256File(path: string): string {
-  return createHash("sha256").update(readFileSync(path)).digest("hex");
+  // Line endings are not content: a Windows checkout may hold CRLF where the index holds LF. Hash the LF form.
+  const text = readFileSync(path, "utf8").replace(/\r\n/g, "\n");
+  return createHash("sha256").update(text).digest("hex");
 }
 
 async function collectCounts() {

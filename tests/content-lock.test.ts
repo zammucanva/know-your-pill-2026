@@ -71,7 +71,8 @@ describe("content lock — 165 locked medical data files", () => {
     test(`${i + 1}/${files.length} ${file.replace("src/lib/kyp/data/", "")} unchanged`, () => {
       const absolute = resolve(ROOT, file);
       expect(existsSync(absolute)).toBe(true);
-      const actual = createHash("sha256").update(readFileSync(absolute)).digest("hex");
+      // Line endings are not content (a Windows checkout may hold CRLF where the index holds LF): hash the LF form.
+      const actual = createHash("sha256").update(readFileSync(absolute, "utf8").replace(/\r\n/g, "\n")).digest("hex");
       expect(actual).toBe(baseline.files[file]);
     });
   }
