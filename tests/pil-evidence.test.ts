@@ -97,8 +97,8 @@ describe("non-US source documents (UK leaflets, an archived FDA label)", () => {
   test("sourced pages explain in plain words how to read the sources; unsourced pages do not claim any", () => {
     expect(html("moclobemide")).toContain("data-provenance-how");
     expect(html("moclobemide")).toContain("How to read this page");
-    expect(html("ketamine")).not.toContain("data-provenance-how");
-    expect(html("ketamine")).not.toContain("data-claim=");
+    expect(html("blonanserin")).not.toContain("data-provenance-how");
+    expect(html("blonanserin")).not.toContain("data-claim=");
   });
 
   test("a leaflet's onset sentence replaces the generic one only when the leaflet states it, and says what it is", () => {

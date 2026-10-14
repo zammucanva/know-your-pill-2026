@@ -18,12 +18,6 @@ const D = "2026-10-14";
 const BASE = ["US DailyMed labels (searched by generic name)", "MedlinePlus drug-information pages (searched by generic name)"];
 
 export const SOURCE_SEARCH_LOG: Record<string, SearchLogEntry> = {
-  ketamine: {
-    date: D,
-    checked: [...BASE],
-    notUsed: ["DailyMed has ketamine injection labels written for anaesthesia. They describe a different use and form, so they were not used for this page."],
-    next: "A source for the use this page is about, if any, has to be chosen by a person.",
-  },
   blonanserin: { date: D, checked: [...BASE], notUsed: [], next: "Product information from the Japanese or Korean regulator, or an Indian insert if sold in India, has not been looked for yet." },
   perospirone: { date: D, checked: [...BASE], notUsed: [], next: "Product information from the Japanese regulator has not been looked for yet." },
   zotepine: {

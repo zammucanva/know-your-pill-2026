@@ -61,6 +61,7 @@ export const CLAIM_SOURCE_SETID: Record<string, string> = {
   triiodothyronine: "548d684a-86f5-4e57-9844-d8cf0a84e068",
   diphenhydramine: "147adc14-ca7c-45f5-9925-ea569edbfe96",
   "l-methylfolate": "76386336-417d-4f90-8171-1f745198ded2",
+  ketamine: "14e8f864-8b8a-4e7e-8439-e510d3107063",
 };
 
 const IND = "34067-9";

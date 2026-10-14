@@ -42,7 +42,7 @@ describe("evidence layer: integrity", () => {
     const guides = MEDGUIDE_RECORDS.filter((r) => r.status === "medication-guide-found" && !(r.slug in CLAIM_SOURCE_SETID)).length; // a hand-picked label replaces a stored guide
     expect(guides).toBe(59);
     expect(SOURCE_RECORDS.length).toBe(Object.keys(CLAIM_SOURCE_SETID).length + guides + PIL_DOCS.length + SOURCE_RECORDS.filter((x) => x.identifier.startsWith("mlp.")).length + SOURCE_RECORDS.filter((x) => x.identifier.endsWith(".pi")).length); // hand-picked US labels + patient-directed US sections + non-US documents
-    expect(Object.keys(CLAIM_SOURCE_SETID).length).toBe(45);
+    expect(Object.keys(CLAIM_SOURCE_SETID).length).toBe(46);
     expect(CLAIM_RECORDS.length).toBeGreaterThanOrEqual(50);
   });
 

@@ -11,7 +11,7 @@ import { REPACKAGERS } from "./repackagers";
 /** The only medicines in the registry that are themselves a fixed combination: a combination label is right for these and wrong for every other medicine. */
 export const COMBINATION_MEDICINES = ["naltrexone-bupropion", "phentermine-topiramate"];
 /** Medicines whose registry form is itself an injection or similar. */
-export const NON_ORAL_MEDICINES = ["nalmefene", "flumazenil"];
+export const NON_ORAL_MEDICINES = ["nalmefene", "flumazenil", "ketamine"];
 
 const pub = (d: string) => new Date(d).getTime() || 0;
 /** 0 = ordinary oral tablet/capsule, 1 = another oral form, 2 = injection, patch or inhaled product. */
