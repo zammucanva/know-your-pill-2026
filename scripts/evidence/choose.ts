@@ -29,8 +29,14 @@ export function chooseCandidates(slug: string, candidates: DiscoveryCandidate[],
 if (import.meta.main) {
   const { readFileSync } = await import("fs");
   const disc = JSON.parse(readFileSync("src/lib/kyp/evidence/data/discovery.json", "utf8")) as { slug: string; candidates: DiscoveryCandidate[] }[];
-  for (const slug of process.argv.slice(2)) {
+  const ids = process.argv.includes("--ids");
+  for (const slug of process.argv.slice(2).filter((x) => !x.startsWith("--"))) {
     const r = disc.find((d) => d.slug === slug);
+    if (ids) {
+      const top = r ? chooseCandidates(slug, r.candidates, 1)[0] : undefined;
+      if (top) console.log(slug, top.setid);
+      continue;
+    }
     const top = r ? chooseCandidates(slug, r.candidates, 3) : [];
     console.log(slug.padEnd(20), top.map((c) => `${c.setid} ${c.title.slice(0, 60)} (${c.publishedDate})`).join(" | ") || "no candidate");
   }

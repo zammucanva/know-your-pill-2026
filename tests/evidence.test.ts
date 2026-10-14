@@ -42,7 +42,7 @@ describe("evidence layer: integrity", () => {
     const guides = MEDGUIDE_RECORDS.filter((r) => r.status === "medication-guide-found").length;
     expect(guides).toBe(60);
     expect(SOURCE_RECORDS.length).toBe(Object.keys(CLAIM_SOURCE_SETID).length + guides + PIL_DOCS.length); // hand-picked US labels + patient-directed US sections + non-US documents
-    expect(Object.keys(CLAIM_SOURCE_SETID).length).toBe(24);
+    expect(Object.keys(CLAIM_SOURCE_SETID).length).toBe(42);
     expect(CLAIM_RECORDS.length).toBeGreaterThanOrEqual(50);
   });
 
@@ -98,8 +98,8 @@ describe("evidence layer: integrity", () => {
 
 describe("evidence layer: rendering and honesty", () => {
   test("a sourced onset statement replaces the generic one for exactly the medicines whose label states one", () => {
-    const withOnset = CLAIM_RECORDS.filter((c) => c.category === "onset").map((c) => c.slug).sort();
-    expect(withOnset).toEqual(["amoxapine", "chlorpromazine", "desipramine", "dothiepin", "imipramine", "isocarboxazid", "lofepramine", "maprotiline", "mianserin", "moclobemide", "phenelzine", "propranolol", "protriptyline", "trimipramine"]);
+    const withOnset = [...new Set(CLAIM_RECORDS.filter((c) => c.category === "onset").map((c) => c.slug))].sort();
+    expect(withOnset).toEqual(["agomelatine", "amoxapine", "chlorpromazine", "desipramine", "dothiepin", "flupenthixol", "imipramine", "isocarboxazid", "lofepramine", "maprotiline", "mianserin", "moclobemide", "phenelzine", "propranolol", "protriptyline", "tasimelteon", "trimipramine", "zuclopenthixol"]);
     for (const slug of withOnset) {
       const h = html(slug);
       expect(h).toContain('data-claim-category="onset"');
@@ -193,7 +193,7 @@ describe("India-first dashboard: separate measures, honest numbers", () => {
     expect(sum.claimsWithTraceableSource).toBe(CLAIM_RECORDS.length);
     expect(sum.medicationsWithSourcedClaims).toBe(new Set(CLAIM_RECORDS.map((c) => c.slug)).size);
     expect(sum.medicationsWithSourcedClaims).toBeGreaterThanOrEqual(60);
-    expect(sum.medicationsWithSourcedOnsetClaim).toBe(14);
+    expect(sum.medicationsWithSourcedOnsetClaim).toBe(18);
     expect(sum.usLabelDiscovery["candidates-found"] + sum.usLabelDiscovery["none-found"]).toBe(145);
     expect(Object.keys(sum)).not.toContain("percent");
     expect(Object.keys(sum).some((k) => /percent|score|overall/i.test(k))).toBe(false);

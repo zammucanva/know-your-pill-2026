@@ -53,5 +53,71 @@
   "passages": 26,
   "passagesFound": 26,
   "missing": []
+ },
+ {
+  "slug": "amisulpride",
+  "file": "102571",
+  "url": "https://www.medicines.org.uk/emc/files/pil.102571.pdf",
+  "httpStatus": 200,
+  "sha256": "5788185c8589d1361166c0c5b18b399de819680cd0359b4c7a458bdcb88f377b",
+  "checkedAt": "2026-10-14",
+  "passages": 25,
+  "passagesFound": 25,
+  "missing": []
+ },
+ {
+  "slug": "flupenthixol",
+  "file": "998",
+  "url": "https://www.medicines.org.uk/emc/files/pil.998.pdf",
+  "httpStatus": 200,
+  "sha256": "88840e6a42853d8b1bf5a62afadc735ef3b8de510ab9754c66324b8c5cb0233f",
+  "checkedAt": "2026-10-14",
+  "passages": 30,
+  "passagesFound": 30,
+  "missing": []
+ },
+ {
+  "slug": "zuclopenthixol",
+  "file": "994",
+  "url": "https://www.medicines.org.uk/emc/files/pil.994.pdf",
+  "httpStatus": 200,
+  "sha256": "fcc0468ff7e7347ecc7c8f6dfb3611b56ba366ff7899dc2d04a49e8af5c86ac4",
+  "checkedAt": "2026-10-14",
+  "passages": 24,
+  "passagesFound": 24,
+  "missing": []
+ },
+ {
+  "slug": "sulpiride",
+  "file": "101499",
+  "url": "https://www.medicines.org.uk/emc/files/pil.101499.pdf",
+  "httpStatus": 200,
+  "sha256": "e621d40501ad2e3e0d8f59cb83aebf0a4939836026876a1e7bafac0bf3613af6",
+  "checkedAt": "2026-10-14",
+  "passages": 21,
+  "passagesFound": 21,
+  "missing": []
+ },
+ {
+  "slug": "zopiclone",
+  "file": "10590",
+  "url": "https://www.medicines.org.uk/emc/files/pil.10590.pdf",
+  "httpStatus": 200,
+  "sha256": "363865517f01f0841f5c84cff78d7b277785acd46740ddecb7c597a421956f12",
+  "checkedAt": "2026-10-14",
+  "passages": 35,
+  "passagesFound": 35,
+  "missing": []
+ },
+ {
+  "slug": "agomelatine",
+  "file": "9875",
+  "url": "https://www.medicines.org.uk/emc/files/pil.9875.pdf",
+  "httpStatus": 200,
+  "sha256": "2b5baa26ff96b7751f8502460a2ecda07faa705cd8738431f3c8811b6ea8c403",
+  "checkedAt": "2026-10-14",
+  "passages": 24,
+  "passagesFound": 24,
+  "missing": []
  }
 ]
