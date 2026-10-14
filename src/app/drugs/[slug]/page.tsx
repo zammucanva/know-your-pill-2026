@@ -69,6 +69,7 @@ import { buildModeLens, explainPatient, getModeLenses } from "@/lib/kyp/modes";
 import { evidenceViews } from "@/lib/kyp/evidence";
 import { ModeLensSection } from "@/components/kyp/sections/drug/mode-lens";
 import { PatientExplainer, PatientProvenanceNote } from "@/components/kyp/sections/drug/patient-explainer";
+import { searchLogFor } from "@/lib/kyp/evidence/source-search-log";
 
 import { getDrugBySlug, getAllDrugSlugs } from "@/lib/kyp/data";
 import { DRUG_COURSE_NAV_ITEMS } from "@/lib/kyp/drug-course-sections";
@@ -389,7 +390,7 @@ export default async function DrugPage({ params }: PageProps) {
                   <PatientGuideSection drug={drug} guide={patientGuide} />
                 </>
               ) : (
-                <PatientExplainer drugName={drug.genericName} explanation={patientExplanation} interactions={patientInteractions} evidence={evidenceViews(drug.slug)} hasGuide={false} />
+                <PatientExplainer drugName={drug.genericName} explanation={patientExplanation} interactions={patientInteractions} evidence={evidenceViews(drug.slug)} hasGuide={false} searchLog={searchLogFor(drug.slug)} />
               )
             }
             medical={<DrugPatientEducation drug={drug} />}

@@ -9,6 +9,7 @@ import type { EvidenceClaimView } from "@/lib/kyp/evidence/types";
 import { PART_CATEGORIES, PART_ORDER, PART_TITLE, partStates, questionsFor, usesStatedInWhat, type PartId, type PartState } from "@/lib/kyp/evidence/patient-sections";
 import { formOf } from "@/lib/kyp/evidence/label-form";
 import { sourceIdLabel, sourceKind } from "@/lib/kyp/evidence/source-label";
+import type { SearchLogEntry } from "@/lib/kyp/evidence/source-search-log";
 import { ExplanationText } from "./explanation-text";
 import { EvidenceClaimCards } from "./evidence-claims";
 import { LensBlockView } from "./lens-blocks";
@@ -59,12 +60,14 @@ export function PatientExplainer({
   interactions,
   evidence = [],
   hasGuide = false,
+  searchLog = null,
 }: {
   drugName: string;
   explanation: PatientExplanation;
   interactions?: LensBlock | null;
   evidence?: EvidenceClaimView[];
   hasGuide?: boolean;
+  searchLog?: SearchLogEntry | null;
 }) {
   const e = explanation;
   const claims = evidence.map((v) => v.claim);
@@ -265,7 +268,36 @@ export function PatientExplainer({
                 ))}
               </ul>
             ) : (
-              <p className="mt-3 text-sm">{EC.part.sourcesNone}</p>
+              <>
+                <p className="mt-3 text-sm">{EC.part.sourcesNone}</p>
+                {searchLog && (
+                  <div data-search-log="" className="mt-3 rounded-lg border border-border/70 p-3 text-sm">
+                    <p className="font-medium">
+                      {EC.part.searchHeading} <span className="font-normal text-muted-foreground">({searchLog.date})</span>
+                    </p>
+                    <p className="mt-2 text-xs font-medium">{EC.part.searchChecked}</p>
+                    <ul className="list-disc space-y-0.5 pl-5">
+                      {searchLog.checked.map((t) => (
+                        <li key={t}>{t}</li>
+                      ))}
+                    </ul>
+                    {searchLog.notUsed.length > 0 && (
+                      <>
+                        <p className="mt-2 text-xs font-medium">{EC.part.searchNotUsed}</p>
+                        <ul className="list-disc space-y-0.5 pl-5">
+                          {searchLog.notUsed.map((t) => (
+                            <li key={t}>{t}</li>
+                          ))}
+                        </ul>
+                      </>
+                    )}
+                    <p className="mt-2">
+                      <span className="text-xs font-medium">{EC.part.searchNext}</span> {searchLog.next}
+                    </p>
+                    <p className="mt-2 text-xs text-muted-foreground">{EC.part.searchNote}</p>
+                  </div>
+                )}
+              </>
             )}
             {distinctSources.length > 0 && (
               <p data-provenance-how="" className="mt-3 text-sm">
