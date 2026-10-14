@@ -168,3 +168,15 @@ describe("Indian PvPI safety-alert rows are Indian sources, labelled as safety s
     expect(h).toContain("it is a safety signal, it does not say how often this happens");
   });
 });
+
+describe("the form a source describes is the stricter of its formulation text and its title", () => {
+  test("a vague formulation ('oral') does not hide or blur the title's form", async () => {
+    const { formOfSource } = await import("@/lib/kyp/evidence/label-form");
+    expect(formOfSource({ formulation: "oral", title: "ACAMPROSATE CALCIUM TABLET, DELAYED RELEASE [NCS]" }).label).toBe("delayed-release product");
+    expect(formOfSource({ formulation: "oral", title: "PALIPERIDONE TABLET, EXTENDED RELEASE [ANI]" }).plainOral).toBe(false);
+    expect(formOfSource({ formulation: "oral", title: "ASENAPINE TABLET [BRECKENRIDGE]" })).toEqual({ label: "tablet", plainOral: true });
+    expect(formOfSource({ formulation: "extended-release tablets", title: "DRUG TABLET [X]" }).plainOral).toBe(false);
+    expect(formOfSource({ formulation: "tablets", title: "DRUG TABLET, EXTENDED RELEASE [X]" }).plainOral).toBe(false);
+    expect(formOfSource({ title: "KIT [X]" }).label).toBe("injection");
+  });
+});

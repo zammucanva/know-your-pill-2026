@@ -12,6 +12,21 @@ export interface LabelForm {
 
 export const isCombinationTitle = (title: string) => / AND [A-Z]/.test(title.replace(/\[.*$/, ""));
 
+/**
+ * The form a stored source describes. A source's `formulation` field is free text and is sometimes only a route
+ * word ("oral"), which names no form; the label title then decides. The stricter reading always wins: if either the
+ * formulation or the title names a special form (extended-release, injection, liquid, patch, ...), that form is
+ * used, so a note about it is never hidden behind a vague formulation string.
+ */
+export function formOfSource(s: { formulation?: string; title: string }): LabelForm {
+  const t = formOf(s.title);
+  const f = s.formulation ? formOf(s.formulation) : null;
+  if (!f || f.label === "product form not stated") return t;
+  if (!f.plainOral) return f;
+  if (!t.plainOral) return t;
+  return t.label === "product form not stated" ? f : t;
+}
+
 export function formOf(title: string): LabelForm {
   const t = title.toUpperCase();
   const oral = /TABLET|CAPSULE/.test(t);

@@ -7,7 +7,7 @@ import { plainSummaryFor } from "./plain-summaries";
 import { CLAIM_SOURCE_SETID } from "./claims";
 import { buildModeLens } from "@/lib/kyp/modes/build";
 import { PART_ORDER, partStates, type PartId, type PartState } from "./patient-sections";
-import { formOf } from "./label-form";
+import { formOfSource } from "./label-form";
 import { splitList } from "./list-text";
 
 /**
@@ -101,7 +101,7 @@ export function dashboardRows(): DashboardRow[] {
       if (y === null) work.push(`dated source: ${x.identifier} has no date`);
       else if (THIS_YEAR - y > DATED_AFTER_YEARS) work.push(`dated source: ${x.identifier} published ${y}`);
     }
-    if (srcs.some((x) => !x.identifier.startsWith("mlp.") && !formOf(x.formulation ?? x.title).plainOral)) work.push("label is for a non-plain form");
+    if (srcs.some((x) => !x.identifier.startsWith("mlp.") && !formOfSource(x).plainOral)) work.push("label is for a non-plain form");
     if (srcs.length && !srcs.some((x) => x.jurisdiction === "US")) work.push("no US document: non-US source only");
     if (srcs.length && !srcs.some((x) => x.jurisdiction === "IN" && x.type !== "indian-safety-communication")) work.push("no Indian product label or insert");
     if (withheld.length) work.push(`${withheld.length} withheld shared claim(s)`);

@@ -2,7 +2,7 @@ import * as React from "react";
 import { EXPLANATION_COPY as EC } from "@/lib/kyp/modes/explanation-copy";
 import type { EvidenceClaimView } from "@/lib/kyp/evidence/types";
 import { jurisdictionNoteKey, sourceIdLabel, sourceKind } from "@/lib/kyp/evidence/source-label";
-import { formOf } from "@/lib/kyp/evidence/label-form";
+import { formOfSource } from "@/lib/kyp/evidence/label-form";
 import { plainSummaryFor } from "@/lib/kyp/evidence/plain-summaries";
 import { splitList } from "@/lib/kyp/evidence/list-text";
 
@@ -87,7 +87,7 @@ export function EvidenceClaimCards({ views }: { views: EvidenceClaimView[] }) {
             {EC.evidence.sourcePrefix} <a href={source.url} rel="noopener noreferrer" className="underline underline-offset-2">{source.title}</a>. {sourceKind(source)}.
           </p>
           {(() => {
-            const form = formOf(source.formulation ?? source.title);
+            const form = formOfSource(source);
             return form.plainOral || source.identifier.startsWith("mlp.") ? null : (
               <p data-claim-form={form.label} className="mt-1 rounded border border-amber-500/50 px-2 py-1 text-xs">
                 {EC.evidence.formNote(form.label)}

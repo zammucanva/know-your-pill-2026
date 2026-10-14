@@ -7,7 +7,7 @@ import { EXPLANATION_COPY as EC, type PatientExplanation } from "@/lib/kyp/modes
 import type { LensBlock } from "@/lib/kyp/modes/types";
 import type { EvidenceClaimView } from "@/lib/kyp/evidence/types";
 import { PART_CATEGORIES, PART_ORDER, PART_TITLE, partStates, questionsFor, urgentPointers, usesStatedInWhat, type PartId, type PartState } from "@/lib/kyp/evidence/patient-sections";
-import { formOf } from "@/lib/kyp/evidence/label-form";
+import { formOfSource } from "@/lib/kyp/evidence/label-form";
 import { sourceIdLabel, sourceKind } from "@/lib/kyp/evidence/source-label";
 import type { SearchLogEntry } from "@/lib/kyp/evidence/source-search-log";
 import { ExplanationText } from "./explanation-text";
@@ -82,7 +82,7 @@ export function PatientExplainer({
     hasOnsetClaim: claims.some((c) => c.category === "onset"),
     hasStoppingClaim: claims.some((c) => c.category === "stopping"),
     hasMonitoringClaim: claims.some((c) => c.category === "monitoring"),
-    nonPlainForm: evidence.some((v) => !formOf(v.source.formulation ?? v.source.title).plainOral),
+    nonPlainForm: evidence.some((v) => !formOfSource(v.source).plainOral),
   });
   const distinctSources = Array.from(new Map(evidence.map((v) => [v.source.identifier, v.source])).values());
 
