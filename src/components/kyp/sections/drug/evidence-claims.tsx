@@ -3,6 +3,8 @@ import { EXPLANATION_COPY as EC } from "@/lib/kyp/modes/explanation-copy";
 import type { EvidenceClaimView } from "@/lib/kyp/evidence/types";
 import { sourceIdLabel, sourceKind } from "@/lib/kyp/evidence/source-label";
 import { formOf } from "@/lib/kyp/evidence/label-form";
+import { plainSummaryFor } from "@/lib/kyp/evidence/plain-summaries";
+import { splitList } from "@/lib/kyp/evidence/list-text";
 
 /**
  * Source-backed statements for one part of the Patient explanation. Each card shows the statement, a one-line
@@ -13,7 +15,24 @@ import { formOf } from "@/lib/kyp/evidence/label-form";
 
 const LEAD_LINES = 4;
 
-function Wording({ text }: { text: string }) {
+function Wording({ text, restated = false }: { text: string; restated?: boolean }) {
+  if (restated) {
+    // Our own plain wording is short enough to read whole; a list inside it is shown as a list.
+    const list = splitList(text);
+    if (list)
+      return (
+        <>
+          <p className="leading-relaxed">{list.intro}</p>
+          <ul data-statement-list="" className="mt-1 list-disc space-y-0.5 pl-5">
+            {list.items.map((i) => (
+              <li key={i}>{i}</li>
+            ))}
+          </ul>
+          {list.outro && <p className="mt-1 leading-relaxed">{list.outro}</p>}
+        </>
+      );
+    return <p className="whitespace-pre-line leading-relaxed">{text}</p>;
+  }
   const lines = text.split("\n");
   if (lines.length <= LEAD_LINES + 1 && text.length < 700) return <p className="whitespace-pre-line leading-relaxed">{text}</p>;
   const lead = lines.slice(0, LEAD_LINES).join("\n");
@@ -36,9 +55,34 @@ export function EvidenceClaimCards({ views }: { views: EvidenceClaimView[] }) {
       {views.map(({ claim, source }) => (
         <li key={claim.id} data-claim={claim.id} data-claim-category={claim.category} data-claim-kind={claim.wordingKind} className="rounded-lg border border-sky-500/30 p-3 text-sm">
           <p className="text-xs font-medium text-muted-foreground">{EC.evidence.group[claim.category]}</p>
-          <div className="mt-1">
-            <Wording text={claim.patientWording} />
-          </div>
+          {(() => {
+            const summary = plainSummaryFor(claim);
+            if (!summary)
+              return (
+                <div className="mt-1">
+                  <Wording text={claim.patientWording} restated={claim.wordingKind === "paraphrase"} />
+                </div>
+              );
+            return (
+              <>
+                <div data-plain-summary={summary.ids.join(" ")} className="mt-2 rounded-md bg-sky-500/10 p-3">
+                  <p className="text-xs font-semibold">{EC.evidence.summaryHeading}</p>
+                  <ul className="mt-1 list-disc space-y-1 pl-5">
+                    {summary.sentences.map((t) => (
+                      <li key={t}>{t}</li>
+                    ))}
+                  </ul>
+                  <p className="mt-2 text-xs text-muted-foreground">{EC.evidence.summaryNote}</p>
+                </div>
+                <details data-label-text="" className="mt-2">
+                  <summary className="cursor-pointer text-xs underline underline-offset-2">{EC.evidence.labelWords}</summary>
+                  <div className="mt-2">
+                    <Wording text={claim.patientWording} />
+                  </div>
+                </details>
+              </>
+            );
+          })()}
           <p data-claim-source="" className="mt-2 text-xs text-muted-foreground">
             {EC.evidence.sourcePrefix} <a href={source.url} rel="noopener noreferrer" className="underline underline-offset-2">{source.title}</a>. {sourceKind(source)}.
           </p>
@@ -60,7 +104,7 @@ export function EvidenceClaimCards({ views }: { views: EvidenceClaimView[] }) {
               {source.publishedDate ? `, published ${source.publishedDate}` : ""}. {sourceIdLabel(source)}. Accessed {source.accessedAt}.
             </p>
             <p data-jurisdiction-note="" className="mt-1 text-xs">
-              {EC.evidence.jurisdiction[source.jurisdiction === "UK" || source.jurisdiction === "IN" ? source.jurisdiction : "US"]}
+              {EC.evidence.jurisdiction[source.jurisdiction === "UK" || source.jurisdiction === "IN" || source.jurisdiction === "IE" ? source.jurisdiction : "US"]}
             </p>
             <ul className="mt-1 list-disc space-y-0.5 pl-5 text-xs text-muted-foreground">
               {[...claim.applicability, ...claim.limitations].map((t, i) => (

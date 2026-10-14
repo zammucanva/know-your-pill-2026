@@ -15,7 +15,7 @@
  * by an assistant, grounded in a stored excerpt, and validated in tests.
  */
 
-export type EvidenceJurisdiction = "IN" | "US" | "UK" | "EU" | "other";
+export type EvidenceJurisdiction = "IN" | "US" | "UK" | "IE" | "EU" | "other";
 
 export type SourceType =
   | "indian-regulatory-record" // CDSCO approval / licensing record

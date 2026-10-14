@@ -1,4 +1,5 @@
 import type { ClaimCategory, ClaimRecord, MedGuideRecord, SourceRecord } from "./types";
+import { CLAIM_SOURCE_SETID } from "./claims";
 
 /**
  * Turns the captured US Medication Guide sections into sources and EXACT-QUOTE claims. Nothing is written
@@ -35,6 +36,7 @@ export function deriveMedGuideEvidence(records: MedGuideRecord[]): { sources: So
   const claims: ClaimRecord[] = [];
   for (const r of records) {
     if (r.status !== "medication-guide-found" || !r.setid || !r.labelTitle) continue;
+    if (r.slug in CLAIM_SOURCE_SETID) continue; // this medicine's statements rest on a specific, hand-picked label (see claims.ts)
     const sourceId = `${r.slug}:us-product-label:${r.setid}`;
     const doc = r.guideKind === "patient-information" ? "patient information sheet" : "Medication Guide";
     const excerpts = r.sections.map((s, i) => ({ id: `${r.slug}:mg:${i}`, section: `${doc}: ${s.heading}`, text: s.text, truncated: s.truncated }));

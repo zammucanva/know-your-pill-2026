@@ -80,7 +80,7 @@ describe("non-US source documents (UK leaflets, an archived FDA label)", () => {
     expect(mocl).not.toContain("DailyMed set id pil");
     const lofe = html("lofepramine");
     expect(lofe).toContain('data-claim-form="liquid"'); // the leaflet is for the oral suspension
-    expect(lofe).toContain("This statement was written for a liquid");
+    expect(lofe).toContain("This statement was written for this form of the medicine: liquid");
     const mapr = html("maprotiline");
     expect(mapr).toContain("US label (archived FDA copy, not an Indian label)");
     expect(mapr).toContain("Drugs@FDA document 072285s021");

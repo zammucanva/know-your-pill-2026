@@ -3,6 +3,8 @@ import { getPatientGuide } from "@/lib/kyp/patient";
 import { explainPatient } from "@/lib/kyp/modes/patient-explanation";
 import { CLAIM_RECORDS, DISCOVERY_RECORDS, MEDGUIDE_RECORDS, ONSET_SCAN, SOURCE_RECORDS } from "./index";
 import { readability } from "./readability";
+import { plainSummaryFor } from "./plain-summaries";
+import { CLAIM_SOURCE_SETID } from "./claims";
 import { buildModeLens } from "@/lib/kyp/modes/build";
 import { PART_ORDER, partStates, type PartId, type PartState } from "./patient-sections";
 
@@ -31,6 +33,10 @@ export interface DashboardRow {
   /** What each of the nine Patient parts holds for this medicine. See patient-sections.ts. */
   parts: Record<PartId, PartState>;
   claimsExactQuote: number;
+  /** Quoted guide sections that also carry an 'In short' plain-language summary. */
+  guideSectionsSummarised: number;
+  /** Countries of the documents the statements rest on, e.g. "UK; US". Never includes India unless an Indian label was stored. */
+  sourceCountries: string;
   claimsRestated: number;
   medicationGuideStatus: string;
   explanationLevel: string;
@@ -86,8 +92,16 @@ export function dashboardRows(): DashboardRow[] {
       patientGuide: !!guide,
       parts,
       claimsExactQuote: claims.filter((c) => c.wordingKind === "exact-quote").length,
+      guideSectionsSummarised: claims.filter((c) => plainSummaryFor(c)).length,
+      sourceCountries: Array.from(new Set(SOURCE_RECORDS.filter((x) => x.slug === d.slug).map((x) => x.jurisdiction))).sort().join("; "),
       claimsRestated: claims.filter((c) => c.wordingKind === "paraphrase").length,
-      medicationGuideStatus: guide ? "patient-guide" : MEDGUIDE_RECORDS.find((m) => m.slug === d.slug)?.status ?? (claims.length ? "hand-picked-label" : "not-checked"),
+      medicationGuideStatus: guide
+        ? "patient-guide"
+        : SOURCE_RECORDS.some((x) => x.slug === d.slug && !x.url.includes("dailymed"))
+          ? "non-us-document-used"
+          : d.slug in CLAIM_SOURCE_SETID
+            ? "us-prescribing-information-used"
+            : MEDGUIDE_RECORDS.find((m) => m.slug === d.slug)?.status ?? "not-checked",
       explanationLevel: e.level,
       medicineSpecificSentences: shown.filter((s) => s.origin === "registry-specific" || s.origin === "authored-guide").length,
       sharedOrTemplateSentences: shown.filter((s) => s.origin === "class-shared" || s.origin === "template").length,
@@ -125,6 +139,8 @@ export function dashboardSummary(rows: DashboardRow[]) {
     },
     patientGuides: count((r) => r.patientGuide),
     claimsExactQuote: rows.reduce((n, r) => n + r.claimsExactQuote, 0),
+    guideSectionsSummarised: rows.reduce((n, r) => n + r.guideSectionsSummarised, 0),
+    medicationsBySourceCountry: rows.reduce<Record<string, number>>((m, r) => ((m[r.sourceCountries || "none"] = (m[r.sourceCountries || "none"] ?? 0) + 1), m), {}),
     claimsRestated: rows.reduce((n, r) => n + r.claimsRestated, 0),
     medicationGuideStatus: rows.reduce<Record<string, number>>((m, r) => ((m[r.medicationGuideStatus] = (m[r.medicationGuideStatus] ?? 0) + 1), m), {}),
     parts: Object.fromEntries(

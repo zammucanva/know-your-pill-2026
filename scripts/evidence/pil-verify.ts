@@ -20,9 +20,10 @@ const OUT = "src/lib/kyp/evidence/data/pil-verification.json";
 export function normalise(t: string): string {
   return t
     .split("\n")
-    .map((l) => l.replace(/^\s*(?:[•▪–—-]|-)\s+/, ""))
+    .map((l) => l.replace(/^\s*(?:[•▪–—o-]|-)\s+/, ""))
     .join(" ")
     .replace(/Page \d+ of \d+/g, " ")
+    .replace(/2023-0088319/g, " ")
     .replace(/Reference ID: \d+/g, " ")
     .replace(/This label may not be the latest approved by FDA\. For current labeling information, please visit https:\/\/www\.fda\.gov\/drugsatfda/g, " ")
     .replace(/Lof70mgin5mlSusp-PL-UK-3/g, " ")

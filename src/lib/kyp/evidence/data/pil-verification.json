@@ -119,5 +119,16 @@
   "passages": 24,
   "passagesFound": 24,
   "missing": []
+ },
+ {
+  "slug": "reboxetine",
+  "file": "21922",
+  "url": "https://assets.hpra.ie/products/Human/21922/7ccb1c6d-4bb5-4fc3-9506-1229d6a516d8.pdf",
+  "httpStatus": 200,
+  "sha256": "888e8c7359af9e2df6e92b5c3ffce22257ec944573979409a9cb847b6cae7c08",
+  "checkedAt": "2026-10-14",
+  "passages": 27,
+  "passagesFound": 27,
+  "missing": []
  }
 ]
