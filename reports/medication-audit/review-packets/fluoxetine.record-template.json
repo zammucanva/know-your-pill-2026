@@ -1,0 +1,122 @@
+{
+  "packet": "fluoxetine",
+  "reviewer": {
+    "name": "",
+    "qualification": "",
+    "registrationBody": "",
+    "registrationNumber": "",
+    "affiliation": "",
+    "conflictsOfInterest": ""
+  },
+  "reviewedAt": "",
+  "decisions": [
+    {
+      "id": "guide:classInPlainWords",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "guide:whatIsThis",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "guide:usedFor",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "guide:howItWorks",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "guide:whenNotice",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "guide:timelineShort",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "guide:usuallyTaken",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "guide:commonSideEffects",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "guide:importantSideEffects",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "guide:tellYourDoctor",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "guide:interactions",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "guide:missedDose",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "guide:stopping",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "guide:monitoring",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "guide:urgentHelp",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "guide:keyReminders",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "fluoxetine:side-effects:in1",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "fluoxetine:side-effects:in2",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    }
+  ]
+}

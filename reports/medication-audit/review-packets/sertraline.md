@@ -4,12 +4,36 @@
 
 **Indian product information:** not checked for this medicine. Statements below rest on the documents listed, none of which is an Indian label unless it says so.
 
+## Reviewer identity (once per packet; no decision below counts without all of it)
+
+Name: ____
+Professional qualification (for example MBBS, MD Psychiatry, MD Pharmacology, PharmD): ____
+Registration body and number (for example National Medical Commission or State Medical Council): ____
+Affiliation: ____
+Conflicts of interest (write 'none' if none): ____
+Date of review: ____
+Scope: which items below this reviewer covered: ____
+
+Record the outcome in the matching JSON template (`<slug>.record-template.json`) and check it with `bun scripts/evidence/review-record-check.ts <file>`. A passing check means the record is complete. It is not clinical approval, and the app never shows a statement as reviewed on that basis alone.
+
 ## Patient Guide (authored for this app)
 
 Each line is shown to patients. Check it against current Indian product information and clinical practice.
 
+### guide:classInPlainWords
+
 - classInPlainWords: Sertraline is an SSRI (selective serotonin reuptake inhibitor), one of the most commonly prescribed types of antidepressant in the world.
+
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
+
+### guide:whatIsThis
+
 - whatIsThis: A medicine that helps your brain keep more of a mood-regulating chemical (serotonin) available for longer.
+
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
+
+### guide:usedFor
+
 - usedFor > intro: Sertraline is approved to treat six conditions, and doctors also prescribe it for a seventh:
 - usedFor > uses[1] > name: Depression
 - usedFor > uses[1] > plain: Persistent low mood, loss of interest, and low energy that gets in the way of daily life.
@@ -32,11 +56,36 @@ Each line is shown to patients. Check it against current Indian product informat
 - usedFor > uses[7] > name: Generalised anxiety disorder (GAD)
 - usedFor > uses[7] > plain: Ongoing worry that is hard to control. Doctors prescribe sertraline for this even though it is not officially approved for it.
 - usedFor > uses[7] > status: off-label
+
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
+
+### guide:howItWorks
+
 - howItWorks > simple: Your brain uses a chemical called serotonin to regulate mood, anxiety, sleep, and appetite. Normally, after serotonin is released between nerve cells, it gets quickly taken back up (recycled). Sertraline blocks this recycling, so more serotonin stays available between the nerve cells for longer. Over 4–6 weeks, this helps your brain's mood-regulation system work better, but it doesn't happen immediately.
 - howItWorks > medicalDetail: Sertraline selectively blocks the serotonin transporter (SERT), increasing serotonin concentration in the synaptic cleft and enhancing serotonergic neurotransmission.
+
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
+
+### guide:whenNotice
+
 - whenNotice: Some early changes (sleep, appetite, energy) can happen within 1–2 weeks, but clearer mood benefit typically takes 4–6 weeks for depression. For anxiety disorders, PTSD, and social anxiety, full effect may take 8–12 weeks. Don't stop early just because you don't feel better yet.
+
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
+
+### guide:timelineShort
+
 - timelineShort: 4–6 weeks for depression; 8–12 for anxiety
+
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
+
+### guide:usuallyTaken
+
 - usuallyTaken: In the morning, with food if it upsets your stomach
+
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
+
+### guide:commonSideEffects
+
 - commonSideEffects > intro: Most people get some side effects in the first 1–2 weeks: usually nausea, headache, sleep changes, or feeling a bit wired. These usually settle as your body adapts. Sexual side effects (lower interest or difficulty reaching orgasm) are common and can persist: talk to your doctor if this bothers you, as there are solutions. Serious side effects are rare but you should know the signs: high fever with confusion and shaking could be serotonin syndrome (emergency), and feeling worse or having new suicidal thoughts in the first month needs immediate medical review.
 - commonSideEffects > list[1]: Feeling sick (nausea) or an upset stomach
 - commonSideEffects > list[2]: Headache
@@ -48,6 +97,11 @@ Each line is shown to patients. Check it against current Indian product informat
 - commonSideEffects > list[8]: Sweating, especially at night
 - commonSideEffects > list[9]: Sexual side effects: lower interest or difficulty reaching orgasm
 - commonSideEffects > note: Sexual side effects are common and can persist. Talk to your doctor if this bothers you: there are solutions. Do not just stop the medicine on your own.
+
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
+
+### guide:importantSideEffects
+
 - importantSideEffects > intro: Serious side effects are rare, but you should know the signs so you can recognise them early.
 - importantSideEffects > items[1] > name: Serotonin syndrome
 - importantSideEffects > items[1] > whatItMeans: A rare but serious reaction caused by too much serotonin activity: usually when sertraline is combined with another medicine that affects serotonin.
@@ -64,22 +118,57 @@ Each line is shown to patients. Check it against current Indian product informat
 - importantSideEffects > items[5] > name: Switch into mania (unusually high mood)
 - importantSideEffects > items[5] > whatItMeans: In people with unrecognised bipolar disorder, an antidepressant can trigger a period of racing thoughts, high energy, and poor judgment.
 - importantSideEffects > items[5] > whatToDo: Tell your doctor if your mood becomes unusually high, you feel unstoppable, or you make risky decisions.
+
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
+
+### guide:tellYourDoctor
+
 - tellYourDoctor[1]: All other medicines you take, including painkillers like tramadol, migraine medicines (triptans), the antibiotic linezolid, and cough syrups containing dextromethorphan.
 - tellYourDoctor[2]: Any herbal products, especially St John's Wort.
 - tellYourDoctor[3]: If you have ever had a seizure, bipolar disorder, or bleeding problems.
 - tellYourDoctor[4]: If you are pregnant, planning a pregnancy, or breastfeeding.
 - tellYourDoctor[5]: If you drink alcohol regularly.
 - tellYourDoctor[6]: If you are over 65: your doctor may check your blood sodium in the first weeks.
+
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
+
+### guide:interactions
+
 - interactions: The main thing to know: avoid alcohol or keep it to a minimum. It can make you more drowsy and worsen mood symptoms. Tell your pharmacist about everything you take, including over-the-counter products, because several common medicines can interact with sertraline. The most dangerous combinations are with other medicines that affect serotonin: your doctor or pharmacist will check for these automatically.
+
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
+
+### guide:missedDose
+
 - missedDose: Take the missed dose as soon as you remember, unless it is within 8 hours of your next dose. In that case, skip the missed dose and continue normally. Do not double up to make up for a missed dose.
+
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
+
+### guide:stopping
+
 - stopping: Do not stop sertraline suddenly without medical guidance. Your doctor will recommend a gradual taper over several weeks, depending on your dose, how long you have taken it, and your symptoms. Stopping suddenly after several weeks can cause uncomfortable withdrawal-like symptoms: dizziness, 'brain zaps', nausea, and irritability. Also, for a first episode of depression, treatment usually continues for 6–12 months after you feel better, because stopping earlier raises the risk of the depression coming back.
+
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
+
+### guide:monitoring
+
 - monitoring: You'll have check-ins with your doctor at 2 weeks, 4 weeks, and 6 weeks to see how you're responding. They'll ask about your mood, side effects, and any new thoughts. You may be asked to fill in a short questionnaire (PHQ-9) so your progress can be tracked. If you're over 65, your doctor may check your blood sodium in the first 2 weeks.
+
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
+
+### guide:urgentHelp
+
 - urgentHelp > intro: Get urgent medical help (do not wait to see if it passes) if any of these happen:
 - urgentHelp > signs[1]: A high fever with confusion, sweating, shaking, muscle twitching or stiffness, and a fast heartbeat (possible serotonin syndrome).
 - urgentHelp > signs[2]: New or worsening thoughts of harming yourself, especially in the first month.
 - urgentHelp > signs[3]: Confusion, a seizure, or a severe new headache.
 - urgentHelp > signs[4]: Any allergic reaction: rash, swelling of the face or throat, or trouble breathing.
 - urgentHelp > action: If you think someone is in immediate danger, call your local emergency number straight away. KYP lists India-specific helplines in the Emergency Help section at the bottom of every page.
+
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
+
+### guide:keyReminders
+
 - keyReminders[1]: It takes 4–6 weeks for the full benefit in depression. Don't stop early just because you don't feel better yet.
 - keyReminders[2]: Side effects in the first 1–2 weeks usually settle as your body adapts.
 - keyReminders[3]: Take it in the morning if it makes you feel more alert; at night if it makes you sleepy. Taking it with food reduces nausea.
@@ -87,7 +176,7 @@ Each line is shown to patients. Check it against current Indian product informat
 - keyReminders[5]: Keep alcohol to a minimum or avoid it: it can make you more drowsy and worsen mood symptoms.
 - keyReminders[6]: Tell every doctor, dentist, and pharmacist that you take sertraline. If you take the liquid form, tell them before you start disulfiram (a medicine for alcohol dependence): the liquid contains alcohol.
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## Documents the statements rest on
 
@@ -107,5 +196,5 @@ Limits: Indian safety-alert list (IPC, PvPI), 30th September, 2026 (file P.17019
 
 Open questions: Confirm this is the label of the brand the patient is actually given.
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 

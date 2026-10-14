@@ -1,0 +1,236 @@
+{
+  "packet": "in-short-bank",
+  "reviewer": {
+    "name": "",
+    "qualification": "",
+    "registrationBody": "",
+    "registrationNumber": "",
+    "affiliation": "",
+    "conflictsOfInterest": ""
+  },
+  "reviewedAt": "",
+  "decisions": [
+    {
+      "id": "antidepressant-suicidality-early-or-dose",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "antidepressant-suicidality-early",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "antidepressant-suicidality",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "antidepressant-suicidality-young",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "antiepileptic-suicidality",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "watch-mood-changes",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "call-for-mood-changes",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "suicidal-thoughts-get-help",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "dementia-death",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "opioid-sedation",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "abuse-misuse-addiction-overdose-death",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "abuse-misuse-addiction-overdose",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "physical-dependence-withdrawal",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "complex-sleep-behaviours",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "serotonin-syndrome",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "allergic-reaction",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "take-exactly",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "dose-not-yourself",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "do-not-stop",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "stopping-suddenly-problems",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "missed-take",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "missed-skip",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "no-double-dose",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "with-or-without-food",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "swallow-whole",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "overdose-get-help",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "tell-all-medicines",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "tell-all-conditions",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "tell-pregnancy",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "tell-breastfeeding",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "alcohol",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "alcohol-until-talk",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "driving",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "do-not-share",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "keep-safe-misuse",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "keep-safe-children",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "not-complete-list",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    }
+  ]
+}

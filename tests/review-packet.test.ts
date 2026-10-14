@@ -10,9 +10,10 @@ describe("clinical review packets are preparation, never a review record", () =>
       const p = reviewPacket(slug);
       expect(p).toContain("Status: NOT REVIEWED");
       expect(p).toContain("It is not a review record");
-      expect(p).toContain("Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____");
+      expect(p).toContain("Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____");
+      expect(p).toContain("## Reviewer identity");
       expect(p).not.toMatch(/\b(approved by|reviewed by|signed off|clinically approved)\b/i);
-      expect(p).not.toMatch(/Reviewer: (?!_)/);
+      expect(p).not.toMatch(/^(Name|Professional qualification[^:]*|Registration body and number[^:]*|Affiliation|Date of review): (?!_)/m);
     }
     expect(reviewPacket("sertraline")).toContain("Patient Guide (authored for this app)");
     const m = reviewPacket("moclobemide");
@@ -32,7 +33,8 @@ describe("the 'In short' sentence bank has a review packet that is not a review 
     const p = inShortReviewPacket();
     expect(p).toContain("Status: NOT REVIEWED");
     for (const s of PLAIN_SENTENCES) expect(p).toContain(`## ${s.id} (`);
-    expect(p.match(/Decision \(approve \/ edit \/ reject\): ____   Reviewer: ____   Date: ____/g)?.length).toBe(PLAIN_SENTENCES.length);
+    expect(p.match(/Decision \(accept \/ amend \/ reject \/ request-evidence\): ____/g)?.length).toBe(PLAIN_SENTENCES.length);
+    expect(p).toContain("## Reviewer identity");
     expect(p).not.toMatch(/\b(approved by|reviewed by|signed off)\b/i);
   });
 });

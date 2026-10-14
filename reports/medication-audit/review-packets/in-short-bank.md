@@ -4,6 +4,18 @@
 
 For each sentence, check that it says the same as EVERY source wording listed, keeps any condition, number or limit those wordings carry, and cannot be read as a promise or as advice for one person.
 
+## Reviewer identity (once per packet; no decision below counts without all of it)
+
+Name: ____
+Professional qualification (for example MBBS, MD Psychiatry, MD Pharmacology, PharmD): ____
+Registration body and number (for example National Medical Commission or State Medical Council): ____
+Affiliation: ____
+Conflicts of interest (write 'none' if none): ____
+Date of review: ____
+Scope: which items below this reviewer covered: ____
+
+Record the outcome in the matching JSON template (`<slug>.record-template.json`) and check it with `bun scripts/evidence/review-record-check.ts <file>`. A passing check means the record is complete. It is not clinical approval, and the app never shows a statement as reviewed on that basis alone.
+
 ## antidepressant-suicidality-early-or-dose (shown 1 time, 1 distinct source wording)
 
 Plain sentence: Antidepressant medicines may increase suicidal thoughts or actions in some children, teenagers and young adults within the first few months of treatment or when the dose is changed.
@@ -12,7 +24,7 @@ Support patterns (all must match): `increase suicidal thoughts or actions in som
 
 - [1] • Milnacipran hydrochloride tablets and antidepressant medicines may increase suicidal thoughts or actions in some children, teenagers, and young adults within the first few months of treatment or when the dose is changed.
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## antidepressant-suicidality-early (shown 4 times, 4 distinct source wordings)
 
@@ -25,7 +37,7 @@ Support patterns (all must match): `increase suicidal thoughts or actions in som
 - [1] • Antidepressant medicines may increase suicidal thoughts or actions in some children, teenagers, and young adults within the first few months of treatment.
 - [1] Bupropion may increase suicidal thoughts or actions in some children, teenagers, and young adults within the first few months of treatment.
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## antidepressant-suicidality (shown 0 times, 0 distinct source wordings)
 
@@ -34,7 +46,7 @@ Plain sentence: Antidepressant medicines may increase suicidal thoughts or actio
 Support patterns (all must match): `increase suicidal thoughts or actions in some children, teenagers,? and young adults(?! within the first)`
 
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## antidepressant-suicidality-young (shown 0 times, 0 distinct source wordings)
 
@@ -43,7 +55,7 @@ Plain sentence: Antidepressant medicines may increase suicidal thoughts or actio
 Support patterns (all must match): `antidepressant[^.]{0,200}suicidal thoughts or actions in some (people|children|patients)[^.]{0,80}(young|younger|years of age)|may increase (the risk of )?suicidal thoughts or actions in some (people|children|patients)[^.]{0,80}(young|younger|years of age)`  and  `^(?![\s\S]*(first few months|children, teenagers,? and young adults))`
 
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## antiepileptic-suicidality (shown 0 times, 0 distinct source wordings)
 
@@ -52,7 +64,7 @@ Plain sentence: Medicines for seizures may cause suicidal thoughts or actions in
 Support patterns (all must match): `antiepileptic[^.]{0,250}suicidal thoughts or actions|suicidal thoughts or actions[^.]{0,250}antiepileptic`  and  `very small number|small number`
 
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## watch-mood-changes (shown 10 times, 9 distinct source wordings)
 
@@ -70,7 +82,7 @@ Support patterns (all must match): `pay close attention to any changes`  and  `(
 - [1] ○ Pay close attention to any changes, especially sudden changes in mood, behaviors, thoughts, or feelings. | This is very important when VRAYLAR or the antidepressant medicine is started or when the dose is changed.
 - ... and 1 more wordings (see summary-trace.csv)
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## call-for-mood-changes (shown 10 times, 8 distinct source wordings)
 
@@ -87,7 +99,7 @@ Support patterns (all must match): `call (the|your) (health ?care )?provider rig
 - [1] Call your healthcare provider right away to report new or sudden changes in mood, behavior, thoughts, or feelings, or if you develop suicidal thoughts or actions.
 - [1] ○ Call the healthcare provider right away to report new or sudden changes in mood, behavior, thoughts, or feelings, or if you develop suicidal thoughts or actions.
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## suicidal-thoughts-get-help (shown 19 times, 18 distinct source wordings)
 
@@ -105,7 +117,7 @@ Support patterns (all must match): `thoughts about suicide or dying`  and  `(cal
 - [1] o Call the healthcare provider right away to report new or sudden changes in mood, behavior, thoughts, or feelings. | Call the healthcare provider between visits as needed, especially if you have concerns about symptoms. | Call a healthcare provider right away if you or your family member has any of the following symptoms, especially if they are new, worse, or worry you: | thoughts about suicide o
 - ... and 10 more wordings (see summary-trace.csv)
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## dementia-death (shown 7 times, 7 distinct source wordings)
 
@@ -121,7 +133,7 @@ Support patterns (all must match): `dementia-related psychosis`  and  `(increase
 - [1] Increased risk of death in elderly people with dementia-related psychosis. | Medicines like brexpiprazole tablets can raise the risk of death in elderly people who have lost touch with reality (psychosis) due to confusion and memory loss (dementia). | Brexpiprazole tablets are not approved for the treatment of people with dementia-related psychosis.
 - [1] Increased risk of death in elderly people with dementia related psychosis. | Medicines like VRAYLAR can raise the risk of death in elderly who have lost touch with reality (psychosis) due to confusion and memory loss (dementia). | VRAYLAR is not approved for the treatment of patients with dementia-related psychosis.
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## opioid-sedation (shown 11 times, 11 distinct source wordings)
 
@@ -139,7 +151,7 @@ Support patterns (all must match): `opioid`  and  `(alcohol|depressants|CNS)`  a
 - [1] Taking benzodiazepines with opioid medicines, alcohol, or other central nervous system(CNS) depressants (including street drugs) can cause severe drowsiness, breathing problems (respiratory depression), coma and death.Get emergency help right away if any of the following happens: | shallow or slowed breathing breathing stops (which may lead to the heart stopping) excessive sleepiness (sedation). |
 - ... and 3 more wordings (see summary-trace.csv)
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## abuse-misuse-addiction-overdose-death (shown 16 times, 16 distinct source wordings)
 
@@ -157,7 +169,7 @@ Support patterns (all must match): `abuse,? misuse,? and addiction`  and  `overd
 - [1] Taking benzodiazepines with opioid medicines, alcohol, or other central nervous system(CNS) depressants (including street drugs) can cause severe drowsiness, breathing problems (respiratory depression), coma and death.Get emergency help right away if any of the following happens: | Risk of abuse, misuse, and addiction.There is a risk of abuse, misuse, and addiction with benzodiazepines, including 
 - ... and 8 more wordings (see summary-trace.csv)
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## abuse-misuse-addiction-overdose (shown 0 times, 0 distinct source wordings)
 
@@ -166,7 +178,7 @@ Plain sentence: There is a risk of abuse, misuse and addiction, which can lead t
 Support patterns (all must match): `abuse,? misuse,? and addiction`  and  `overdose`
 
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## physical-dependence-withdrawal (shown 0 times, 0 distinct source wordings)
 
@@ -175,7 +187,7 @@ Plain sentence: Your body can become physically dependent on it. Stopping sudden
 Support patterns (all must match): `physical dependence`  and  `withdrawal reactions[^.]{0,120}life-threatening|life-threatening[^.]{0,120}withdrawal reactions`  and  `(stop(ping)?|reduc(e|ing)|lower(ing)?)[^.]{0,120}(suddenly|abruptly|too (quickly|fast)|rapidly)`  and  `^(?![\s\S]*(several days|several weeks|for weeks))`
 
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## complex-sleep-behaviours (shown 7 times, 7 distinct source wordings)
 
@@ -191,7 +203,7 @@ Support patterns (all must match): `sleep-?(walking|driving)`  and  `(not fully 
 - [1] The next morning, you may not remember that you did anything during the night. | driving a car ("sleep-driving") making and eating food talking on the phone having sex sleep-walking Call your doctor right away if you find out that you have done any of the above activities after taking Ramelteon tablets.
 - [1] The next morning, you may not remember that you did anything during the night. | • driving a car ("sleep-driving") • making and eating food • talking on the phone • having sex • sleep-walking Important: | • have ever experienced a complex sleep behavior (such as driving a car, making and eating food, talking on the phone or having sex while not fully awake) after taking zaleplon • drink alcohol • 
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## serotonin-syndrome (shown 7 times, 7 distinct source wordings)
 
@@ -207,7 +219,7 @@ Support patterns (all must match): `(call|go to the nearest|get (emergency|medic
 - [1] This problem may happen when Dextroamphetamine Sulfate Tablets is taken with certain other medicines and may be life-threatening. | Stop taking Dextroamphetamine Sulfate Tablets and call your healthcare provider or go to the nearest hospital emergency room right away if you or your child develop any of the following signs and symptoms of serotonin syndrome:
 - [1] This problem may happen when Amphetamine Sulfate Tablets is taken with certain other medicines and may be life-threatening. | Call your healthcare provider or go to the nearest hospital emergency room right away if you or your child develop any of the following signs and symptoms of serotonin syndrome agitation, hallucinations, coma fast heartbeat flushing Seizure sweating or fever Loss of coordin
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## allergic-reaction (shown 1 time, 1 distinct source wording)
 
@@ -217,7 +229,7 @@ Support patterns (all must match): `(signs|symptoms) of (a |an )?(serious )?alle
 
 - [1] If you have a seizure while taking CONTRAVE, stop taking CONTRAVE and call your healthcare provider right away. | You or someone close to you should get emergency medical help right away if you: | Stop taking CONTRAVE and call your healthcare provider or go to the nearest hospital emergency room right away if you have any of the following signs and symptoms of an allergic reaction:
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## take-exactly (shown 57 times, 57 distinct source wordings)
 
@@ -235,7 +247,7 @@ Support patterns (all must match): `exactly as (your|a)? ?(health ?care )?provid
 - [1] Take lurasidone hydrochloride tablets exactly as your healthcare provider tells you to take it.
 - ... and 49 more wordings (see summary-trace.csv)
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## dose-not-yourself (shown 18 times, 14 distinct source wordings)
 
@@ -253,7 +265,7 @@ Support patterns (all must match): `do not change your dose`
 - [1] • Do not change your dose of gabapentin tablets without talking to your healthcare provider.
 - ... and 6 more wordings (see summary-trace.csv)
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## do-not-stop (shown 32 times, 32 distinct source wordings)
 
@@ -271,7 +283,7 @@ Support patterns (all must match): `(do not|never) stop[^.]{0,140}(without|sudde
 - [1] • Do not change your dose of gabapentin tablets without talking to your healthcare provider. | • Do not stop taking gabapentin tablets without talking to your healthcare provider first.
 - ... and 24 more wordings (see summary-trace.csv)
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## stopping-suddenly-problems (shown 37 times, 32 distinct source wordings)
 
@@ -289,7 +301,7 @@ Support patterns (all must match): `stopping[^.]{0,120}(suddenly|abruptly)[^.]{0
 - [1] Stopping TOPAMAX suddenly may cause serious problems.
 - ... and 24 more wordings (see summary-trace.csv)
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## missed-take (shown 8 times, 8 distinct source wordings)
 
@@ -306,7 +318,7 @@ Support patterns (all must match): `miss(ed)? a dose`  and  `take (it|the missed
 - [1] If you miss a dose of buprenorphine sublingual tablets, take it as soon as you remember.
 - [1] If you miss a dose of varenicline tablets, take it as soon as you remember.
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## missed-skip (shown 7 times, 5 distinct source wordings)
 
@@ -320,7 +332,7 @@ Support patterns (all must match): `almost time for (your |the )?next dose`  and
 - [1] If it is almost time for your next dose, skip the missed dose and take the next dose at your regular time.
 - [1] If it is almost time for your next dose, skip the missed dose.
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## no-double-dose (shown 0 times, 0 distinct source wordings)
 
@@ -329,7 +341,7 @@ Plain sentence: Do not take two doses at the same time.
 Support patterns (all must match): `(do not|never) take (two|double)[^.]{0,80}(at the same time|doses)`
 
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## with-or-without-food (shown 16 times, 16 distinct source wordings)
 
@@ -347,7 +359,7 @@ Support patterns (all must match): `with or without food`
 - [1] Take quetiapine tablets by mouth, with or without food.
 - ... and 8 more wordings (see summary-trace.csv)
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## swallow-whole (shown 11 times, 11 distinct source wordings)
 
@@ -365,7 +377,7 @@ Support patterns (all must match): `swallow(ed)?[^.]{0,60}whole(?![^.]*\b(or|and
 - [1] Clonazepam tablets should be taken with water and swallowed whole.
 - ... and 3 more wordings (see summary-trace.csv)
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## overdose-get-help (shown 21 times, 21 distinct source wordings)
 
@@ -383,7 +395,7 @@ Support patterns (all must match): `((take|taken) too (much|many)|overdose)[^.]{
 - [1] If you take too much TOPAMAX, call your healthcare provider right away or go to the nearest emergency room.
 - ... and 13 more wordings (see summary-trace.csv)
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## tell-all-medicines (shown 33 times, 14 distinct source wordings)
 
@@ -401,7 +413,7 @@ Support patterns (all must match): `about all the medicines you take`
 - [1] have or have had depression, mood problems, or suicidal thoughts or behavior have any other medical conditions Tell your healthcare provider about all the medicines you take,including prescription and non-prescription medicines, vitamins, herbal supplements and medicines that you take for a short period of time.
 - ... and 6 more wordings (see summary-trace.csv)
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## tell-all-conditions (shown 35 times, 35 distinct source wordings)
 
@@ -419,7 +431,7 @@ Support patterns (all must match): `about all (of )?your medical conditions`
 - [1] Before taking aripiprazole tablets, tell your healthcare provider about all your medical conditions, including if you have or had:
 - ... and 27 more wordings (see summary-trace.csv)
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## tell-pregnancy (shown 42 times, 36 distinct source wordings)
 
@@ -437,7 +449,7 @@ Support patterns (all must match): `(are|become) pregnant or plan to (become|get
 - [1] have or have a family history of suicide, depression, bipolar disorder, mania or hypomania have or had bleeding problems have or had seizures or convulsions have high pressure in the eye (glaucoma) have low sodium levels in your blood drink alcohol are pregnant or plan to become pregnant.
 - ... and 28 more wordings (see summary-trace.csv)
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## tell-breastfeeding (shown 37 times, 9 distinct source wordings)
 
@@ -455,7 +467,7 @@ Support patterns (all must match): `breastfeeding or plan to breastfeed`
 - [1] if you are breastfeeding or plan to breastfeed.
 - ... and 1 more wordings (see summary-trace.csv)
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## alcohol (shown 8 times, 7 distinct source wordings)
 
@@ -471,7 +483,7 @@ Support patterns (all must match): `(do not drink|avoid drinking|should avoid dr
 - [1] Do not drink alcohol while taking quetiapine tablets.
 - [1] Do not drink alcohol while taking BELSOMRA.
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## alcohol-until-talk (shown 16 times, 16 distinct source wordings)
 
@@ -489,7 +501,7 @@ Support patterns (all must match): `do not drink alcohol or take other (medicine
 - [1] Do not drink alcohol or take other drugs that may make you sleepy or dizzy while taking clonazepam tablets until you talk to your healthcare provider.
 - ... and 8 more wordings (see summary-trace.csv)
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## driving (shown 45 times, 45 distinct source wordings)
 
@@ -507,7 +519,7 @@ Support patterns (all must match): `do not (drive|operate)[^.]{0,120}until you k
 - [1] Do not drive, operate machinery, or do other dangerous activities until you know how quetiapine tablet affects you.
 - ... and 37 more wordings (see summary-trace.csv)
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## do-not-share (shown 6 times, 6 distinct source wordings)
 
@@ -522,7 +534,7 @@ Support patterns (all must match): `do not share`
 - [1] – Do not share your oxazepam with other people.
 - [1] Do not share your flurazepam hydrochloride capsules with other people.
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## keep-safe-misuse (shown 15 times, 15 distinct source wordings)
 
@@ -540,7 +552,7 @@ Support patterns (all must match): `safe place to prevent misuse and abuse`
 - [1] Keep Quazepam Tablets in a safe place to prevent misuse and abuse.
 - ... and 7 more wordings (see summary-trace.csv)
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## keep-safe-children (shown 1 time, 1 distinct source wording)
 
@@ -550,7 +562,7 @@ Support patterns (all must match): `safe place[^.]{0,60}away from children|away 
 
 - [1] Keep clorazepate dipotassium tablets in a safe place and away from children.
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
 ## not-complete-list (shown 40 times, 40 distinct source wordings)
 
@@ -568,5 +580,5 @@ Support patterns (all must match): `not all (of )?the possible side effects|not 
 - [1] These are not all of the possible side effects of zonisamide capsules.
 - ... and 32 more wordings (see summary-trace.csv)
 
-Decision (approve / edit / reject): ____   Reviewer: ____   Date: ____   Notes: ____
+Decision (accept / amend / reject / request-evidence): ____   Amended wording (if amend): ____   Notes (required unless accept): ____
 
