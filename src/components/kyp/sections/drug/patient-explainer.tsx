@@ -40,7 +40,7 @@ function PartHeader({ id, state }: { id: PartId; state: PartState }) {
       <h3 id={`pe-${id}-h`} className="text-h3">
         {PART_TITLE[id]}
       </h3>
-      <span data-part-state={state} className={cn("rounded-full border px-2 py-0.5 text-xs", chipTone[state])}>
+      <span id={`pe-${id}-state`} data-part-state={state} className={cn("rounded-full border px-2 py-0.5 text-xs", chipTone[state])}>
         {EC.part.chip[state]}
       </span>
     </div>
@@ -114,7 +114,7 @@ export function PatientExplainer({
 
         <div className="mt-8 space-y-10">
           {/* 1. What it is */}
-          <section id="pe-what" aria-labelledby="pe-what-h" className="scroll-mt-24">
+          <section id="pe-what" aria-labelledby="pe-what-h" aria-describedby="pe-what-state" className="scroll-mt-24">
             <PartHeader id="what" state={states.what} />
             <EvidenceClaimCards views={forPart("what")} />
             {e.level === "missing" && states.what === "unavailable" ? (
@@ -143,7 +143,7 @@ export function PatientExplainer({
           </section>
 
           {/* 2. Used for */}
-          <section id="pe-uses" aria-labelledby="pe-uses-h" className="scroll-mt-24">
+          <section id="pe-uses" aria-labelledby="pe-uses-h" aria-describedby="pe-uses-state" className="scroll-mt-24">
             <PartHeader id="uses" state={states.uses} />
             <EvidenceClaimCards views={forPart("uses")} />
             {forPart("uses").length === 0 && usesStatedInWhat(claims) && (
@@ -173,7 +173,7 @@ export function PatientExplainer({
           </section>
 
           {/* 3. How to take it */}
-          <section id="pe-how" aria-labelledby="pe-how-h" className="scroll-mt-24">
+          <section id="pe-how" aria-labelledby="pe-how-h" aria-describedby="pe-how-state" className="scroll-mt-24">
             <PartHeader id="how" state={states.how} />
             <EvidenceClaimCards views={forPart("how")} />
             {e.reminders.length > 0 && (
@@ -188,14 +188,14 @@ export function PatientExplainer({
           </section>
 
           {/* 4. Precautions */}
-          <section id="pe-precautions" aria-labelledby="pe-precautions-h" className="scroll-mt-24">
+          <section id="pe-precautions" aria-labelledby="pe-precautions-h" aria-describedby="pe-precautions-state" className="scroll-mt-24">
             <PartHeader id="precautions" state={states.precautions} />
             <EvidenceClaimCards views={forPart("precautions")} />
             {states.precautions === "unavailable" && <Unavailable part="precautions" />}
           </section>
 
           {/* 5. Side effects */}
-          <section id="pe-side-effects" aria-labelledby="pe-side-effects-h" className="scroll-mt-24">
+          <section id="pe-side-effects" aria-labelledby="pe-side-effects-h" aria-describedby="pe-side-effects-state" className="scroll-mt-24">
             <PartHeader id="side-effects" state={states["side-effects"]} />
             <EvidenceClaimCards views={forPart("side-effects")} />
             {e.sideEffects.length > 0 && (
@@ -211,7 +211,7 @@ export function PatientExplainer({
           </section>
 
           {/* 6. Other medicines */}
-          <section id="pe-interactions" aria-labelledby="pe-interactions-h" className="scroll-mt-24">
+          <section id="pe-interactions" aria-labelledby="pe-interactions-h" aria-describedby="pe-interactions-state" className="scroll-mt-24">
             <PartHeader id="interactions" state={states.interactions} />
             <EvidenceClaimCards views={forPart("interactions")} />
             {states.interactions === "unavailable" && <Unavailable part="interactions" />}
@@ -226,7 +226,7 @@ export function PatientExplainer({
           </section>
 
           {/* 7. When to get help */}
-          <section id="pe-seek-help" aria-labelledby="pe-seek-help-h" className="scroll-mt-24">
+          <section id="pe-seek-help" aria-labelledby="pe-seek-help-h" aria-describedby="pe-seek-help-state" className="scroll-mt-24">
             <PartHeader id="seek-help" state={states["seek-help"]} />
             <EvidenceClaimCards views={forPart("seek-help")} />
             {states["seek-help"] !== "authored-guide" && urgentPointers(claims).length > 0 && (
@@ -240,7 +240,7 @@ export function PatientExplainer({
           </section>
 
           {/* 8. Questions to ask */}
-          <section id="pe-questions" aria-labelledby="pe-questions-h" className="scroll-mt-24">
+          <section id="pe-questions" aria-labelledby="pe-questions-h" aria-describedby="pe-questions-state" className="scroll-mt-24">
             <PartHeader id="questions" state={states.questions} />
             {questions.length > 0 ? (
               <>
@@ -259,7 +259,7 @@ export function PatientExplainer({
           </section>
 
           {/* 9. Sources and review status */}
-          <section id="pe-sources" aria-labelledby="pe-sources-h" className="scroll-mt-24 rounded-lg border border-border/70 p-4">
+          <section id="pe-sources" aria-labelledby="pe-sources-h" aria-describedby="pe-sources-state" className="scroll-mt-24 rounded-lg border border-border/70 p-4">
             <PartHeader id="sources" state={states.sources} />
             {distinctSources.length > 0 ? (
               <ul data-source-list="" className="mt-3 space-y-2 text-sm">

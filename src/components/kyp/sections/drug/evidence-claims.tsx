@@ -52,7 +52,7 @@ export function EvidenceClaimCards({ views }: { views: EvidenceClaimView[] }) {
   if (!views.length) return null;
   return (
     <ul data-evidence-claims="" className="mt-3 space-y-3">
-      {views.map(({ claim, source }) => (
+      {views.map(({ claim, source }, index) => (
         <li key={claim.id} data-claim={claim.id} data-claim-category={claim.category} data-claim-kind={claim.wordingKind} className="rounded-lg border border-sky-500/30 p-3 text-sm">
           <p className="text-xs font-medium text-muted-foreground">{EC.evidence.group[claim.category]}</p>
           {(() => {
@@ -98,7 +98,7 @@ export function EvidenceClaimCards({ views }: { views: EvidenceClaimView[] }) {
             {EC.evidence.notReviewed}
           </p>
           <details className="mt-2">
-            <summary className="cursor-pointer text-xs underline underline-offset-2">About this statement</summary>
+            <summary aria-label={`About this statement, ${index + 1} of ${views.length}: ${EC.evidence.group[claim.category]}`} className="cursor-pointer text-xs underline underline-offset-2">About this statement</summary>
             <p data-claim-source-detail="" className="mt-1 text-xs text-muted-foreground">
               {source.organisation}
               {source.publishedDate ? `, published ${source.publishedDate}` : ""}. {sourceIdLabel(source)}. Accessed {source.accessedAt}.

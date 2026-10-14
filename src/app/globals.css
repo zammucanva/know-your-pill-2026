@@ -997,13 +997,13 @@ html[data-reduced-motion="true"] .dash-drawer {
 }
 
 /* Four-mode lens: every control in a learning flow shows a visible keyboard focus ring. */
-[data-flow-mode] :is(button, [role="radio"], [role="tab"], input, a):focus-visible {
+[data-flow-mode] :is(button, [role="radio"], [role="tab"], input, a, summary):focus-visible {
   outline: 2px solid var(--foreground);
   outline-offset: 2px;
 }
 
 /* Patient explanation: same visible keyboard focus ring as the learning flows. */
-[data-patient-explainer] :is(button, input, a):focus-visible {
+[data-patient-explainer] :is(button, input, a, summary):focus-visible {
   outline: 2px solid var(--foreground);
   outline-offset: 2px;
 }
