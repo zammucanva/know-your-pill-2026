@@ -1,6 +1,7 @@
 import { describe, expect, test } from "bun:test";
 import { readFileSync } from "fs";
-import { reviewPacket } from "@/lib/kyp/evidence/review-packet";
+import { inShortReviewPacket, reviewPacket } from "@/lib/kyp/evidence/review-packet";
+import { PLAIN_SENTENCES } from "@/lib/kyp/evidence/plain-summaries";
 import { claimsFor } from "@/lib/kyp/evidence";
 
 describe("clinical review packets are preparation, never a review record", () => {
@@ -23,5 +24,15 @@ describe("clinical review packets are preparation, never a review record", () =>
   });
   test("a medicine with nothing to review says so", () => {
     expect(reviewPacket("tianeptine")).toContain("nothing to review yet");
+  });
+});
+
+describe("the 'In short' sentence bank has a review packet that is not a review record", () => {
+  test("every sentence is listed with a blank decision, and no approval is claimed", () => {
+    const p = inShortReviewPacket();
+    expect(p).toContain("Status: NOT REVIEWED");
+    for (const s of PLAIN_SENTENCES) expect(p).toContain(`## ${s.id} (`);
+    expect(p.match(/Decision \(approve \/ edit \/ reject\): ____   Reviewer: ____   Date: ____/g)?.length).toBe(PLAIN_SENTENCES.length);
+    expect(p).not.toMatch(/\b(approved by|reviewed by|signed off)\b/i);
   });
 });

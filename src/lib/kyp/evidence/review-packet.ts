@@ -1,6 +1,7 @@
 import { drugs } from "@/lib/kyp/data";
 import { getPatientGuide } from "@/lib/kyp/patient";
-import { claimsFor, sourcesFor } from "./index";
+import { CLAIM_RECORDS, claimsFor, sourcesFor } from "./index";
+import { PLAIN_SENTENCES, plainSummaryFor } from "./plain-summaries";
 
 /**
  * A packet a qualified clinical reviewer can work from. It is NOT a review record: it states no decision, names no
@@ -44,5 +45,39 @@ export function reviewPacket(slug: string): string {
     }
   }
   if (!guide && !claims.length) L.push("No Patient Guide and no source-backed statement exists for this medicine, so there is nothing to review yet.", "");
+  return L.join("\n");
+}
+
+/**
+ * A packet for the "In short" sentence bank: each plain sentence, how many quoted guide sections it is shown above,
+ * and the distinct source wordings it stands for. Like the medicine packets it is NOT a review record: no decision,
+ * no reviewer, and every decision field is blank.
+ */
+export function inShortReviewPacket(): string {
+  const L: string[] = [];
+  L.push("# Review packet: the 'In short' sentence bank", "");
+  L.push("**Status: NOT REVIEWED.** Each sentence below is shown above quoted Medication Guide text on medicine pages. A sentence is shown only when the quoted section matches every support pattern listed. It is not a review record; every decision field is blank.", "");
+  L.push("For each sentence, check that it says the same as EVERY source wording listed, keeps any condition, number or limit those wordings carry, and cannot be read as a promise or as advice for one person.", "");
+  const uses = new Map<string, Map<string, number>>();
+  for (const c of CLAIM_RECORDS) {
+    const s = plainSummaryFor(c);
+    if (!s) continue;
+    const parts = c.passage.replace(/\s+/g, " ").split(/(?<=[.!?:])\s+/);
+    for (const id of s.ids) {
+      const bank = PLAIN_SENTENCES.find((x) => x.id === id)!;
+      const hit = parts.filter((p) => bank.support.some((re) => !re.source.startsWith("^(?!") && re.test(p))).join(" | ");
+      const m = uses.get(id) ?? new Map<string, number>();
+      m.set(hit, (m.get(hit) ?? 0) + 1);
+      uses.set(id, m);
+    }
+  }
+  for (const bank of PLAIN_SENTENCES) {
+    const m = uses.get(bank.id) ?? new Map<string, number>();
+    const n = [...m.values()].reduce((a, b) => a + b, 0);
+    L.push(`## ${bank.id} (shown ${n} time${n === 1 ? "" : "s"}, ${m.size} distinct source wording${m.size === 1 ? "" : "s"})`, "", `Plain sentence: ${bank.text}`, "", `Support patterns (all must match): ${bank.support.map((r) => "`" + r.source + "`").join("  and  ")}`, "");
+    for (const [wording, count] of [...m].sort((a, b) => b[1] - a[1]).slice(0, 8)) L.push(`- [${count}] ${wording.slice(0, 400)}`);
+    if (m.size > 8) L.push(`- ... and ${m.size - 8} more wordings (see summary-trace.csv)`);
+    L.push("", blankDecision, "");
+  }
   return L.join("\n");
 }
