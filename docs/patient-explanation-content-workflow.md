@@ -46,3 +46,24 @@ Nothing here has been reviewed. A completed record needs a real reviewer. Fields
 
 ## The nine parts and the coverage matrix
 `src/lib/kyp/evidence/patient-sections.ts` defines what each part holds for each medicine (authored-guide, source-backed, registry-wording, standard-wording, general-direction, unavailable). `india-first-dashboard.csv` has one `part_*` column per part. Rendering all 145 pages is UI coverage; the `part_*` columns are content coverage; sources and clinical review are separate columns. Do not add them together.
+
+## Three ways a statement gets its evidence (and what each proves)
+1. **Quoted guide text** (`medguide.ts`): patient-directed US Medication Guides or patient information sheets, quoted exactly. A separate "In short" summary (`plain-summaries.ts`) may sit above a quote. Its sentences come from a fixed bank and are shown only when every support pattern for that sentence is found in the quote; nothing is paraphrased freehand, and no sentence has a number or a medicine name.
+2. **Restated label passages** (`claims.ts`, `claims-batch2.ts`): for a US label that has no patient-directed text, one short exact passage of the stored prescribing information (`fetch-label.ts <slug> <setid>`, which keeps every same-coded sub-section) plus a plain-language wording. The validator checks the passage is in the stored text and that the wording adds no number. A person still has to check that the wording keeps every condition, warning and limit of the passage.
+3. **Non-US patient documents** (`pil-docs.ts`): a UK or Irish package leaflet, or an archived FDA label, for a medicine with no usable DailyMed text. Only short passages are stored. `bun scripts/evidence/pil-verify.ts` downloads each document again and records that every passage is really in it (`data/pil-verification.json`, with the file's SHA-256). Needs `pdftotext`.
+
+Which US label is read for a medicine is decided by `scripts/evidence/choose.ts`: never a combination product (unless the medicine is one), an ordinary oral tablet or capsule first, then non-repackagers, then newest. Injection, patch and inhaled products are excluded unless the medicine is on `NON_ORAL_MEDICINES`. Statements taken from a non-plain form are flagged on the page.
+
+## Adding an Indian label or package insert (the practical import path)
+There is no script that can fetch CDSCO or IPC/PvPI per-medicine records, so this is a person's step:
+1. Download the Indian label or package insert PDF (CDSCO "Prescribing Information", the manufacturer's CDSCO-approved insert, or an IPC/PvPI communication). Note the URL and the date on the document.
+2. Add the host to `ALLOWED_SOURCE_HOSTS` in `src/lib/kyp/evidence/index.ts` on purpose.
+3. Add a `PilDoc` with `kind: "indian-label"` to `pil-docs.ts`: slug, file id, product and strength, formulation, holder, the document's own revision date, then one entry per statement: category, an exact short passage, and a plain wording (numbers in the wording must appear in the passage).
+4. Run `bun scripts/evidence/pil-verify.ts`; every passage must be found. Run `bun test`. The dashboard's Indian-source count and the page's source line update by themselves.
+5. Nothing is reviewed until a qualified reviewer's record exists. An Indian label for one brand still applies to that brand only.
+
+## Questions to ask
+`patient-sections.ts` builds them from the real gaps on each page: a part with nothing supported, no sourced onset statement, a source from another country (brand and strength may differ), a statement written for another form, a stopping or check-up statement. They are navigation prompts, not advice.
+
+## Medicines with no source yet
+`india-first-dashboard.csv` (`missingElements`, `nextAction`) names, per medicine, what a content owner must obtain. For medicines with no US label and no UK/Irish leaflet found (for example tianeptine, blonanserin, perospirone, sertindole, zotepine, cyamemazine, mesoridazine, pipothiazine, loflazepate, flunitrazepam, pemoline, tacrine, lorcaserin, caprylidene), the missing thing is the product's own label or patient leaflet from the country where it is sold.

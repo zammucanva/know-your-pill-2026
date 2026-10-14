@@ -151,6 +151,7 @@ export const EXPLANATION_COPY = {
     questionsIntro: "These prompts are built from the parts of this page that have no supported information for this medicine. They are questions to ask, not medical advice.",
     questionsGuide: "Prompts you can take to your pharmacist or prescriber:",
     personalNote: "Your selections stay on this page as your own notes. They are not a check of your medicines and are not saved or sent.",
+    sourcesHow: "How to read this page: a box marked \"In short\" is a short summary written for this app from the document text underneath it. Other statements are plain-language rewrites of one short passage of the document named under them; \"About this statement\" shows the passage. A few are the document's own words, unchanged. The documents are labels or leaflets made for a country and a product, not for you.",
     sourcesNone: "No product label has been retrieved for this medicine, so nothing on this page is source-backed.",
     sourcesIndia: "Indian product information (CDSCO, IPC/PvPI) has not been checked for any medicine on this page. Indian labels may differ from the US or UK documents named here.",
     reviewLine: "Clinical review: none recorded for this medicine.",

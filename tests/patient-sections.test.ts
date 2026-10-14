@@ -9,7 +9,7 @@ import { PatientExplainer } from "@/components/kyp/sections/drug/patient-explain
 import { CLAIM_RECORDS, MEDGUIDE_RECORDS, SOURCE_RECORDS, claimsFor, evidenceViews, validateEvidence } from "@/lib/kyp/evidence";
 import { CLAIM_SOURCE_SETID } from "@/lib/kyp/evidence/claims";
 import { categoryOfHeading, deriveMedGuideEvidence } from "@/lib/kyp/evidence/medguide-claims";
-import { PART_ORDER, PART_TITLE, QUESTION_PROMPTS, partStates, questionsFor } from "@/lib/kyp/evidence/patient-sections";
+import { GAP_PROMPTS, PART_ORDER, PART_TITLE, QUESTION_PROMPTS, partStates, questionsFor } from "@/lib/kyp/evidence/patient-sections";
 import { dashboardRows, dashboardSummary } from "@/lib/kyp/evidence/dashboard";
 import { PIL_DOCS } from "@/lib/kyp/evidence/pil-docs";
 import { splitGuide } from "../scripts/evidence/medguide";
@@ -86,7 +86,7 @@ describe("part states are computed from evidence, never assumed", () => {
       const s = states(d.slug);
       for (const q of questionsFor(s)) {
         expect(Object.values(QUESTION_PROMPTS)).toContain(q.question);
-        expect(["unavailable", "standard-wording", "general-direction"]).toContain(s[q.part]);
+        expect(["unavailable", "standard-wording", "general-direction"]).toContain(s[q.part!]);
       }
     }
     expect(questionsFor(states("fluoxetine"))).toEqual(questionsFor(states("fluoxetine"))); // deterministic
@@ -170,5 +170,32 @@ describe("coverage matrix: UI, content, sources and review are reported apart", 
   test("sourced medicine counts match the stored claims", () => {
     expect(sum.claimsWithTraceableSource).toBe(CLAIM_RECORDS.length);
     expect(sum.claimsExactQuote + sum.claimsRestated).toBe(CLAIM_RECORDS.length);
+  });
+});
+
+describe("questions to ask are specific to the real gaps on each page", () => {
+  const body = (h: string) => h.slice(h.indexOf('id="pe-questions"'), h.indexOf('id="pe-sources"'));
+  test("no sourced onset statement: the onset question appears; with one, it does not", () => {
+    expect(body(html("alprazolam"))).toContain(GAP_PROMPTS.onset);
+    expect(body(html("moclobemide"))).not.toContain(GAP_PROMPTS.onset);
+  });
+  test("a source from another country prompts a brand question; a statement for another form prompts a form question", () => {
+    expect(body(html("moclobemide"))).toContain(GAP_PROMPTS.brand);
+    expect(body(html("lofepramine"))).toContain(GAP_PROMPTS.form); // the leaflet is for the liquid
+    expect(body(html("tranylcypromine"))).not.toContain(GAP_PROMPTS.form);
+  });
+  test("a stopping or check-up statement prompts the matching question, and only then", () => {
+    expect(body(html("propranolol"))).toContain(GAP_PROMPTS.stopping);
+    expect(body(html("mianserin"))).toContain(GAP_PROMPTS.monitoring);
+    expect(body(html("buspirone"))).not.toContain(GAP_PROMPTS.stopping);
+  });
+  test("a Patient Guide medicine gets none of these extra questions", () => {
+    for (const k of Object.values(GAP_PROMPTS)) expect(body(html("fluoxetine"))).not.toContain(k);
+  });
+  test("a medicine with no source at all asks only the part-based questions", () => {
+    const none = drugs.find((d) => !getPatientGuide(d.slug) && claimsFor(d.slug).length === 0)!;
+    const b = body(html(none.slug));
+    expect(b).toContain(GAP_PROMPTS.onset);
+    expect(b).not.toContain(GAP_PROMPTS.brand);
   });
 });

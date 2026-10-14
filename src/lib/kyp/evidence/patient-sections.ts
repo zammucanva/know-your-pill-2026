@@ -94,8 +94,42 @@ export const QUESTION_PROMPTS: Partial<Record<PartId, string>> = {
   "seek-help": "When should I call you or go to a hospital?",
 };
 
-export function questionsFor(states: Record<PartId, PartState>): { part: PartId; question: string }[] {
-  return (Object.keys(QUESTION_PROMPTS) as PartId[])
+/** What the page actually has for one medicine, so the questions can name the real gaps. */
+export interface QuestionContext {
+  hasGuide: boolean;
+  hasSourcedClaims: boolean;
+  hasOnsetClaim: boolean;
+  hasStoppingClaim: boolean;
+  hasMonitoringClaim: boolean;
+  /** A statement on the page was written for a form other than an ordinary tablet or capsule (liquid, injection, extended-release...). */
+  nonPlainForm: boolean;
+}
+
+/** Questions that depend on a specific gap or caveat on the page, not on a missing part. */
+export const GAP_PROMPTS = {
+  onset: "How long might it take before I notice any benefit, and what should I do if I do not?",
+  brand: "Is the brand I have been given the same product, strength and form as the one described on this page (which is not from India)?",
+  form: "Does what is written here apply to the form I take (tablet, capsule, liquid, injection, extended-release)?",
+  stopping: "If my doctor decides to stop it, how should I stop safely, and what should I watch for?",
+  monitoring: "Which check-ups or blood tests do I need while I take it, and how often?",
+} as const;
+
+export interface QuestionItem {
+  key: string;
+  part?: PartId;
+  question: string;
+}
+
+export function questionsFor(states: Record<PartId, PartState>, ctx?: QuestionContext): QuestionItem[] {
+  const fromParts: QuestionItem[] = (Object.keys(QUESTION_PROMPTS) as PartId[])
     .filter((p) => states[p] === "unavailable" || states[p] === "standard-wording" || states[p] === "general-direction")
-    .map((p) => ({ part: p, question: QUESTION_PROMPTS[p]! }));
+    .map((p) => ({ key: p, part: p, question: QUESTION_PROMPTS[p]! }));
+  if (!ctx || ctx.hasGuide) return fromParts;
+  const extra: QuestionItem[] = [];
+  if (!ctx.hasOnsetClaim) extra.push({ key: "onset", question: GAP_PROMPTS.onset });
+  if (ctx.hasSourcedClaims) extra.push({ key: "brand", question: GAP_PROMPTS.brand });
+  if (ctx.nonPlainForm) extra.push({ key: "form", question: GAP_PROMPTS.form });
+  if (ctx.hasStoppingClaim) extra.push({ key: "stopping", question: GAP_PROMPTS.stopping });
+  if (ctx.hasMonitoringClaim) extra.push({ key: "monitoring", question: GAP_PROMPTS.monitoring });
+  return [...fromParts, ...extra];
 }

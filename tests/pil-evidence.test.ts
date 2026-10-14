@@ -78,6 +78,11 @@ describe("non-US source documents (UK leaflets, an archived FDA label)", () => {
     expect(mocl).toContain("Leaflet file pil.10614");
     expect(mocl).toContain("This is a UK package leaflet. Indian product information has not been checked");
     expect(mocl).not.toContain("DailyMed set id pil");
+    const rebox = html("reboxetine");
+    expect(rebox).toContain("Irish patient leaflet (not an Indian label)");
+    expect(rebox).toContain("HPRA leaflet hpra.21922");
+    expect(rebox).toContain("This is an Irish package leaflet");
+    expect(rebox).toContain("date not stated in the document");
     const lofe = html("lofepramine");
     expect(lofe).toContain('data-claim-form="liquid"'); // the leaflet is for the oral suspension
     expect(lofe).toContain("This statement was written for this form of the medicine: liquid");
@@ -87,6 +92,13 @@ describe("non-US source documents (UK leaflets, an archived FDA label)", () => {
     expect(mapr).not.toContain("DailyMed set id fda");
     expect(sourceKind({ jurisdiction: "US", organisation: "x", identifier: "abc", type: "us-product-label" })).toBe("US label");
     expect(sourceIdLabel({ jurisdiction: "US", organisation: "x", identifier: "abc", type: "us-product-label" })).toBe("DailyMed set id abc");
+  });
+
+  test("sourced pages explain in plain words how to read the sources; unsourced pages do not claim any", () => {
+    expect(html("moclobemide")).toContain("data-provenance-how");
+    expect(html("moclobemide")).toContain("How to read this page");
+    expect(html("tianeptine")).not.toContain("data-provenance-how");
+    expect(html("tianeptine")).not.toContain("data-claim=");
   });
 
   test("a leaflet's onset sentence replaces the generic one only when the leaflet states it, and says what it is", () => {

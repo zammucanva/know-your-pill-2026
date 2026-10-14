@@ -7,6 +7,7 @@ import { EXPLANATION_COPY as EC, type PatientExplanation } from "@/lib/kyp/modes
 import type { LensBlock } from "@/lib/kyp/modes/types";
 import type { EvidenceClaimView } from "@/lib/kyp/evidence/types";
 import { PART_CATEGORIES, PART_ORDER, PART_TITLE, partStates, questionsFor, usesStatedInWhat, type PartId, type PartState } from "@/lib/kyp/evidence/patient-sections";
+import { formOf } from "@/lib/kyp/evidence/label-form";
 import { sourceIdLabel, sourceKind } from "@/lib/kyp/evidence/source-label";
 import { ExplanationText } from "./explanation-text";
 import { EvidenceClaimCards } from "./evidence-claims";
@@ -71,7 +72,14 @@ export function PatientExplainer({
   const names = interactions && interactions.kind === "patient-interactions" ? interactions.names.length : 0;
   const states = partStates({ explanation: e, claims, hasGuide, interactionsStatement: statement, interactionNames: names });
   const forPart = (p: PartId) => evidence.filter((v) => PART_CATEGORIES[p].includes(v.claim.category));
-  const questions = questionsFor(states);
+  const questions = questionsFor(states, {
+    hasGuide,
+    hasSourcedClaims: claims.length > 0,
+    hasOnsetClaim: claims.some((c) => c.category === "onset"),
+    hasStoppingClaim: claims.some((c) => c.category === "stopping"),
+    hasMonitoringClaim: claims.some((c) => c.category === "monitoring"),
+    nonPlainForm: evidence.some((v) => !formOf(v.source.formulation ?? v.source.title).plainOral),
+  });
   const distinctSources = Array.from(new Map(evidence.map((v) => [v.source.identifier, v.source])).values());
 
   return (
@@ -230,7 +238,7 @@ export function PatientExplainer({
                 <p className="mt-2 text-sm text-muted-foreground">{EC.part.questionsIntro}</p>
                 <ul data-questions="" className="mt-3 list-disc space-y-1.5 pl-5 text-sm">
                   {questions.map((q) => (
-                    <li key={q.part} data-question-for={q.part}>
+                    <li key={q.key} data-question-for={q.part ?? q.key}>
                       {q.question}
                     </li>
                   ))}
@@ -258,6 +266,11 @@ export function PatientExplainer({
               </ul>
             ) : (
               <p className="mt-3 text-sm">{EC.part.sourcesNone}</p>
+            )}
+            {distinctSources.length > 0 && (
+              <p data-provenance-how="" className="mt-3 text-sm">
+                {EC.part.sourcesHow}
+              </p>
             )}
             <p data-india-note="" className="mt-3 text-sm">
               {EC.part.sourcesIndia}
