@@ -120,7 +120,7 @@ export function EvidenceClaimCards({ views }: { views: EvidenceClaimView[] }) {
                 </blockquote>
               </>
             )}
-            {claim.wordingKind === "exact-quote" && <p className="mt-1 text-xs text-muted-foreground">This statement is the label's own text, quoted exactly.</p>}
+            {claim.wordingKind === "exact-quote" && <p data-exact-quote-note="" className="mt-1 text-xs text-muted-foreground">{source.identifier.startsWith("mlp.") ? "This statement is the information page's own text, quoted exactly. The page is not a product label." : "This statement is the label's own text, quoted exactly."}</p>}
           </details>
         </li>
       ))}
