@@ -41,7 +41,7 @@ describe("evidence layer: integrity", () => {
     expect(validateEvidence()).toEqual([]);
     const guides = MEDGUIDE_RECORDS.filter((r) => r.status === "medication-guide-found" && !(r.slug in CLAIM_SOURCE_SETID)).length; // a hand-picked label replaces a stored guide
     expect(guides).toBe(59);
-    expect(SOURCE_RECORDS.length).toBe(Object.keys(CLAIM_SOURCE_SETID).length + guides + PIL_DOCS.length); // hand-picked US labels + patient-directed US sections + non-US documents
+    expect(SOURCE_RECORDS.length).toBe(Object.keys(CLAIM_SOURCE_SETID).length + guides + PIL_DOCS.length + SOURCE_RECORDS.filter((x) => x.identifier.startsWith("mlp.")).length); // hand-picked US labels + patient-directed US sections + non-US documents
     expect(Object.keys(CLAIM_SOURCE_SETID).length).toBe(44);
     expect(CLAIM_RECORDS.length).toBeGreaterThanOrEqual(50);
   });
@@ -71,7 +71,7 @@ describe("evidence layer: integrity", () => {
       expect(["US", "UK", "IE"]).toContain(s.jurisdiction);
       expect(["us-product-label", "international-patient-information"]).toContain(s.type);
       expect(c.review).toBe("not-reviewed");
-      expect(c.limitations.join(" ")).toMatch(s.jurisdiction === "UK" || s.jurisdiction === "IE" ? /(UK|Irish) (leaflet|package leaflet)/i : /US (label|Medication Guide|patient information|prescribing information)/i);
+      expect(c.limitations.join(" ")).toMatch(s.jurisdiction === "UK" || s.jurisdiction === "IE" ? /(UK|Irish) (leaflet|package leaflet)/i : /US (label|Medication Guide|patient information|prescribing information|drug-information page)/i);
       expect(c.verification).toBe("passage-found-in-source");
     }
     expect(INDIAN_SOURCE_SEARCH.outcome).toBe("unresolved-for-every-medication");

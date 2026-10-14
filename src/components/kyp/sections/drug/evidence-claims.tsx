@@ -1,7 +1,7 @@
 import * as React from "react";
 import { EXPLANATION_COPY as EC } from "@/lib/kyp/modes/explanation-copy";
 import type { EvidenceClaimView } from "@/lib/kyp/evidence/types";
-import { sourceIdLabel, sourceKind } from "@/lib/kyp/evidence/source-label";
+import { jurisdictionNoteKey, sourceIdLabel, sourceKind } from "@/lib/kyp/evidence/source-label";
 import { formOf } from "@/lib/kyp/evidence/label-form";
 import { plainSummaryFor } from "@/lib/kyp/evidence/plain-summaries";
 import { splitList } from "@/lib/kyp/evidence/list-text";
@@ -88,7 +88,7 @@ export function EvidenceClaimCards({ views }: { views: EvidenceClaimView[] }) {
           </p>
           {(() => {
             const form = formOf(source.formulation ?? source.title);
-            return form.plainOral ? null : (
+            return form.plainOral || source.identifier.startsWith("mlp.") ? null : (
               <p data-claim-form={form.label} className="mt-1 rounded border border-amber-500/50 px-2 py-1 text-xs">
                 {EC.evidence.formNote(form.label)}
               </p>
@@ -104,7 +104,7 @@ export function EvidenceClaimCards({ views }: { views: EvidenceClaimView[] }) {
               {source.publishedDate ? `, published ${source.publishedDate}` : ""}. {sourceIdLabel(source)}. Accessed {source.accessedAt}.
             </p>
             <p data-jurisdiction-note="" className="mt-1 text-xs">
-              {EC.evidence.jurisdiction[source.jurisdiction === "UK" || source.jurisdiction === "IN" || source.jurisdiction === "IE" ? source.jurisdiction : "US"]}
+              {EC.evidence.jurisdiction[jurisdictionNoteKey(source)]}
             </p>
             <ul className="mt-1 list-disc space-y-0.5 pl-5 text-xs text-muted-foreground">
               {[...claim.applicability, ...claim.limitations].map((t, i) => (

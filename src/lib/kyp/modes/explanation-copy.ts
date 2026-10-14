@@ -95,6 +95,7 @@ export const EXPLANATION_COPY = {
       "These statements come from the product label or leaflet named under each one. They are rewritten in plain words, have not been reviewed by a clinician, and do not replace advice from your pharmacist or prescriber.",
     jurisdiction: {
       US: "This is a US product label. Indian product information has not been checked, and Indian labels may differ.",
+      USINFO: "This is a US drug-information page for patients (MedlinePlus), not a product label. Indian product information has not been checked, and Indian labels may differ.",
       UK: "This is a UK package leaflet. Indian product information has not been checked, and Indian leaflets may differ.",
       IE: "This is an Irish package leaflet (published by the Irish regulator, HPRA). Indian product information has not been checked, and Indian leaflets may differ.",
       IN: "This is an Indian product label. It applies to the product named, and other Indian brands, strengths and forms may differ.",

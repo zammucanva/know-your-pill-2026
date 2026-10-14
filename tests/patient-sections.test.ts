@@ -129,14 +129,14 @@ describe("Medication Guide evidence: exact quotes, correctly categorised, never 
     }
     const derived = deriveMedGuideEvidence(MEDGUIDE_RECORDS);
     expect(derived.sources.length).toBe(MEDGUIDE_RECORDS.filter((r) => r.status === "medication-guide-found" && !(r.slug in CLAIM_SOURCE_SETID)).length);
-    expect(SOURCE_RECORDS.length).toBe(Object.keys(CLAIM_SOURCE_SETID).length + derived.sources.length + PIL_DOCS.length);
+    expect(SOURCE_RECORDS.length).toBe(Object.keys(CLAIM_SOURCE_SETID).length + derived.sources.length + PIL_DOCS.length + SOURCE_RECORDS.filter((x) => x.identifier.startsWith("mlp.")).length);
   });
   test("records say honestly when no Medication Guide or no US label was found", () => {
     for (const r of MEDGUIDE_RECORDS) {
       if (r.status === "no-medication-guide-in-labels-checked") expect(r.note).toMatch(/Not a statement that none exists/);
       if (r.status === "no-us-label-found") expect(r.note).toMatch(/nothing about Indian/);
       // No Medication Guide claim exists for them; the only claims that can exist rest on a named non-US document.
-      if (r.status !== "medication-guide-found") for (const c of claimsFor(r.slug)) expect(PIL_DOCS.some((d) => d.slug === r.slug && c.sourceId.includes(d.file)) || Object.keys(CLAIM_SOURCE_SETID).includes(r.slug)).toBe(true);
+      if (r.status !== "medication-guide-found") for (const c of claimsFor(r.slug)) expect(c.sourceId.includes(":mlp.") || PIL_DOCS.some((d) => d.slug === r.slug && c.sourceId.includes(d.file)) || Object.keys(CLAIM_SOURCE_SETID).includes(r.slug)).toBe(true);
     }
   });
   test("a medicine's source-backed cards appear in the right part, with source, date and review status", () => {
