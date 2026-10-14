@@ -198,8 +198,8 @@
       "medicationsWithMissingElements": 120,
       "readability": {
         "note": "Automated screening heuristic (Flesch-Kincaid grade, sentence length). Not a comprehension test.",
-        "medicationsAboveGrade10": 106,
-        "medicationsWithLongSentences": 129
+        "medicationsAboveGrade10": 109,
+        "medicationsWithLongSentences": 130
       },
       "clinicallyReviewed": 0,
       "indianSourceSearch": {
