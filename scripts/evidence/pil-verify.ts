@@ -42,7 +42,7 @@ export function normalise(t: string): string {
 if (import.meta.main) {
 const dir = mkdtempSync(join(tmpdir(), "pil-"));
 const results: Record<string, unknown>[] = [];
-for (const d of PIL_DOCS) {
+for (const d of PIL_DOCS.filter((x) => !x.importCheck)) {
   const url = d.url ?? `https://www.medicines.org.uk/emc/files/pil.${d.file}.pdf`;
   const res = await fetch(url, { headers: { "user-agent": "KYP-evidence-script/1.0 (educational, local)" } });
   const buf = Buffer.from(await res.arrayBuffer());

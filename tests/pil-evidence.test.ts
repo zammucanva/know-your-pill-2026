@@ -22,8 +22,9 @@ const html = (slug: string) => {
 describe("non-US source documents (UK leaflets, an archived FDA label)", () => {
   test("every document was re-downloaded and every stored passage was found in it", () => {
     const v = verification as { slug: string; file: string; httpStatus: number; sha256: string; passages: number; passagesFound: number; missing: string[]; checkedAt: string }[];
-    expect(v.map((x) => `${x.slug}:${x.file}`).sort()).toEqual(PIL_DOCS.map((d) => `${d.slug}:${d.file}`).sort());
-    for (const d of PIL_DOCS) {
+    const redownloadable = PIL_DOCS.filter((d) => !d.importCheck); // a manually imported Indian insert cannot be re-downloaded
+    expect(v.map((x) => `${x.slug}:${x.file}`).sort()).toEqual(redownloadable.map((d) => `${d.slug}:${d.file}`).sort());
+    for (const d of redownloadable) {
       const r = v.find((x) => x.slug === d.slug && x.file === d.file)!;
       expect(r.file).toBe(d.file);
       expect(r.httpStatus).toBe(200);

@@ -1,5 +1,6 @@
 import type { ClaimCategory, ClaimRecord, SourceRecord } from "./types";
 import { PVPI_DOCS } from "./pil-docs-pvpi";
+import indianDocsJson from "./data/indian-docs.json";
 
 /**
  * UK patient leaflets (package leaflets) used as supplementary evidence for medicines that have no US label.
@@ -45,6 +46,8 @@ export interface PilDoc {
   limits: string[];
   accessedAt: string;
   claims: PilClaim[];
+  /** Set on a manually imported Indian document: what the import script checked. The document is not re-downloadable. */
+  importCheck?: { sha256: string; checkedAt: string; passagesFound: number; passages: number; readWith: string; providedBy: string };
 }
 
 const ON = "onset-works-gradually";
@@ -667,7 +670,9 @@ const BASE_DOCS: PilDoc[] = [
   },
 ];
 
-export const PIL_DOCS: PilDoc[] = [...BASE_DOCS, ...PVPI_DOCS];
+/** Indian package inserts a person supplied and scripts/evidence/indian-import.ts validated (empty until one is imported). */
+export const INDIAN_DOCS = indianDocsJson as unknown as PilDoc[];
+export const PIL_DOCS: PilDoc[] = [...BASE_DOCS, ...PVPI_DOCS, ...INDIAN_DOCS];
 
 const nrm = (t: string) => t.replace(/\s+/g, " ").trim();
 

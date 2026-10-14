@@ -55,7 +55,11 @@ Nothing here has been reviewed. A completed record needs a real reviewer. Fields
 Which US label is read for a medicine is decided by `scripts/evidence/choose.ts`: never a combination product (unless the medicine is one), an ordinary oral tablet or capsule first, then non-repackagers, then newest. Injection, patch and inhaled products are excluded unless the medicine is on `NON_ORAL_MEDICINES`. Statements taken from a non-plain form are flagged on the page.
 
 ## Adding an Indian label or package insert (the practical import path)
-There is no script that can fetch CDSCO or IPC/PvPI per-medicine records, so this is a person's step:
+There is no script that can fetch CDSCO per-medicine records, so obtaining the document is a person's step. Once a person has the PDF, `bun scripts/evidence/indian-import.ts spec.json` (fields in the file's header comment) validates it and stores the claims: every passage must be found in the PDF text, the URL host must be allowed, no number may appear in a wording that is not in its passage, and a wording must differ from its passage. It writes `data/indian-docs.json` with the PDF's SHA-256 (the PDF is not stored) and never marks anything reviewed. Documents imported this way count as Indian product labels on the dashboard. The older manual route below still works.
+
+Where to look for Indian per-medicine text: the manufacturer's CDSCO-approved insert for the brand the patient holds; the National Formulary of India (NFI 2026, IPC), which has a monograph per drug but is a priced publication, so a person must obtain it; CDSCO "Prescribing Information" pages. Indian safety signals are already in the repository from the IPC/PvPI alert list (`pil-docs-pvpi.ts`, regenerate with `scripts/evidence/pvpi-rows.ts`); they are counted apart from labels.
+
+Manual steps if you prefer to edit by hand:
 1. Download the Indian label or package insert PDF (CDSCO "Prescribing Information", the manufacturer's CDSCO-approved insert, or an IPC/PvPI communication). Note the URL and the date on the document.
 2. Add the host to `ALLOWED_SOURCE_HOSTS` in `src/lib/kyp/evidence/index.ts` on purpose.
 3. Add a `PilDoc` with `kind: "indian-label"` to `pil-docs.ts`: slug, file id, product and strength, formulation, holder, the document's own revision date, then one entry per statement: category, an exact short passage, and a plain wording (numbers in the wording must appear in the passage).
