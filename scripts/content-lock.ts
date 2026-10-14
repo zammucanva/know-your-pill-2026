@@ -20,7 +20,7 @@
  * The baseline file is scripts/content-lock-baseline.json.
  */
 
-import { createHash } from "crypto";
+import { lfSha256File } from "./content-lock-hash";
 import { readFileSync, writeFileSync, existsSync, readdirSync } from "fs";
 import { resolve, dirname } from "path";
 
@@ -82,11 +82,7 @@ interface Baseline {
   counts: typeof EXPECTED_COUNTS;
 }
 
-function sha256File(path: string): string {
-  // Line endings are not content: a Windows checkout may hold CRLF where the index holds LF. Hash the LF form.
-  const text = readFileSync(path, "utf8").replace(/\r\n/g, "\n");
-  return createHash("sha256").update(text).digest("hex");
-}
+const sha256File = lfSha256File;
 
 async function collectCounts() {
   const { drugs } = await import(`../${DATA_DIR}/drugs/index.ts`);

@@ -11,7 +11,7 @@
  */
 
 import { beforeAll, describe, expect, test } from "bun:test";
-import { createHash } from "crypto";
+import { lfSha256File } from "../scripts/content-lock-hash";
 import { existsSync, readFileSync } from "fs";
 import { resolve } from "path";
 
@@ -72,7 +72,7 @@ describe("content lock — 165 locked medical data files", () => {
       const absolute = resolve(ROOT, file);
       expect(existsSync(absolute)).toBe(true);
       // Line endings are not content (a Windows checkout may hold CRLF where the index holds LF): hash the LF form.
-      const actual = createHash("sha256").update(readFileSync(absolute, "utf8").replace(/\r\n/g, "\n")).digest("hex");
+      const actual = lfSha256File(absolute);
       expect(actual).toBe(baseline.files[file]);
     });
   }
