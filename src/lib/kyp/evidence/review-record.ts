@@ -22,7 +22,7 @@ export function validateReviewRecord(r: ReviewRecord, expectedItems: ReviewItem[
   const rv = r.reviewer ?? ({} as ReviewRecord["reviewer"]);
   for (const [k, label] of [["name", "reviewer name"], ["qualification", "professional qualification"], ["registrationBody", "registration body"], ["registrationNumber", "registration number"], ["affiliation", "affiliation"], ["conflictsOfInterest", "conflicts of interest (write 'none' if none)"]] as const)
     if (!real(rv[k])) p.push(`${label} is missing or a placeholder`);
-  if (real(rv.name) && /\b(claude|anthropic|gpt|openai|gemini|assistant|bot|ai)\b/i.test(rv.name)) p.push("the reviewer must be a qualified person, not software");
+  if (real(rv.name) && /\b(claude|anthropic|gpt|openai|gemini|assistant|bot|ai|kyp|know your pill|engineering|system|automated|generated|script|template)\b/i.test(rv.name)) p.push("the reviewer must be a named, qualified person, not software, this app or its tooling");
   if (!/^\d{4}-\d{2}-\d{2}$/.test(r.reviewedAt ?? "") || Number.isNaN(Date.parse(r.reviewedAt))) p.push("reviewedAt must be a real date, YYYY-MM-DD");
   else if (Date.parse(r.reviewedAt) > now.getTime() + 24 * 3600 * 1000) p.push("reviewedAt is in the future");
   const seen = new Set<string>();

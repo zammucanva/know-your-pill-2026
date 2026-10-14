@@ -3,6 +3,7 @@ import { getPatientGuide } from "@/lib/kyp/patient";
 import { CLAIM_RECORDS, claimsFor, sourcesFor } from "./index";
 import { PLAIN_SENTENCES, plainSummaryFor } from "./plain-summaries";
 import { contentHash } from "@/lib/kyp/content-hash";
+import type { ClaimRecord } from "./types";
 
 /**
  * A packet a qualified clinical reviewer can work from. It is NOT a review record: it states no decision, names no
@@ -37,9 +38,12 @@ export function reviewItems(slug: string): ReviewItem[] {
   const guide = getPatientGuide(slug);
   const items: ReviewItem[] = [];
   if (guide) for (const [k, v] of Object.entries(guide)) if (k !== "slug") items.push({ id: `guide:${k}`, hash: contentHash(JSON.stringify([slug, k, v])) });
-  for (const c of claimsFor(slug)) items.push({ id: c.id, hash: contentHash(JSON.stringify([c.id, c.slug, c.category, c.patientWording, c.wordingKind, c.passage, c.sourceId, c.applicability, c.limitations])) });
+  for (const c of claimsFor(slug)) items.push({ id: c.id, hash: claimItemHash(c) });
   return items;
 }
+/** Everything a decision on one statement depends on. A change to any part (wording, passage, source, formulation or population in `applicability`, limits) makes an old decision stale. */
+export const claimItemHash = (c: Pick<ClaimRecord, "id" | "slug" | "category" | "patientWording" | "wordingKind" | "passage" | "sourceId" | "applicability" | "limitations">): string =>
+  contentHash(JSON.stringify([c.id, c.slug, c.category, c.patientWording, c.wordingKind, c.passage, c.sourceId, c.applicability, c.limitations]));
 export const reviewItemIds = (slug: string): string[] => reviewItems(slug).map((i) => i.id);
 /** The empty record a reviewer fills in. It is deliberately invalid until every field is real. */
 export function blankRecordTemplate(slug: string) {
