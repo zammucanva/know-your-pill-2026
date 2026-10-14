@@ -1,4 +1,4 @@
-import { DECISIONS, type Decision } from "./review-packet";
+import { DECISIONS, type Decision, type ReviewItem } from "./review-packet";
 
 /**
  * A completed clinical review record, as a qualified reviewer would return it. This file only CHECKS a record for
@@ -9,13 +9,14 @@ export interface ReviewRecord {
   packet: string;
   reviewer: { name: string; qualification: string; registrationBody: string; registrationNumber: string; affiliation: string; conflictsOfInterest: string };
   reviewedAt: string;
-  decisions: { id: string; decision: string; amendedWording?: string; notes?: string }[];
+  decisions: { id: string; contentHash?: string; decision: string; amendedWording?: string; notes?: string }[];
 }
 
 const PLACEHOLDER = /^(_+|-+|\.+|tbd|todo|n\/?a|na|none given|unknown|reviewer|name|test|xxx+|placeholder|your name|\?+)$/i;
 const real = (v: unknown) => typeof v === "string" && v.trim().length >= 2 && !PLACEHOLDER.test(v.trim());
 
-export function validateReviewRecord(r: ReviewRecord, expectedItemIds: string[], now = new Date()): string[] {
+export function validateReviewRecord(r: ReviewRecord, expectedItems: ReviewItem[], now = new Date()): string[] {
+  const expectedItemIds = expectedItems.map((i) => i.id);
   const p: string[] = [];
   if (!r || typeof r !== "object") return ["not a review record"];
   const rv = r.reviewer ?? ({} as ReviewRecord["reviewer"]);
@@ -26,7 +27,9 @@ export function validateReviewRecord(r: ReviewRecord, expectedItemIds: string[],
   else if (Date.parse(r.reviewedAt) > now.getTime() + 24 * 3600 * 1000) p.push("reviewedAt is in the future");
   const seen = new Set<string>();
   for (const d of r.decisions ?? []) {
-    if (!expectedItemIds.includes(d.id)) p.push(`decision for "${d.id}": no such item in this packet`);
+    const item = expectedItems.find((i) => i.id === d.id);
+    if (!item) p.push(`decision for "${d.id}": no such item in this packet`);
+    else if (d.contentHash !== item.hash) p.push(`decision for "${d.id}": it was made on different text, source or applicability than the item now has (hash mismatch). Review the current text again`);
     if (seen.has(d.id)) p.push(`decision for "${d.id}": decided twice`);
     seen.add(d.id);
     if (!DECISIONS.includes(d.decision as Decision)) p.push(`decision for "${d.id}": must be one of ${DECISIONS.join(", ")}`);

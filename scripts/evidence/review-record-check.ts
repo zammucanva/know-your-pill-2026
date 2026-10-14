@@ -8,7 +8,7 @@
  * It does NOT approve anything and the app does not read the record.
  */
 import { mkdirSync, readFileSync, writeFileSync } from "fs";
-import { blankRecordTemplate, reviewItemIds } from "@/lib/kyp/evidence/review-packet";
+import { blankRecordTemplate, reviewItems } from "@/lib/kyp/evidence/review-packet";
 import { validateReviewRecord, type ReviewRecord } from "@/lib/kyp/evidence/review-record";
 
 const OUT = "reports/medication-audit/review-packets";
@@ -25,7 +25,7 @@ if (process.argv[2] === "--template") {
     process.exit(2);
   }
   const rec = JSON.parse(readFileSync(file, "utf8")) as ReviewRecord;
-  const problems = validateReviewRecord(rec, reviewItemIds(rec.packet));
+  const problems = validateReviewRecord(rec, reviewItems(rec.packet));
   if (problems.length) {
     console.error(`NOT a complete review record (${problems.length} problem(s)):\n - ${problems.join("\n - ")}`);
     process.exit(1);

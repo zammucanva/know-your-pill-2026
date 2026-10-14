@@ -12,222 +12,259 @@
   "decisions": [
     {
       "id": "antidepressant-suicidality-early-or-dose",
+      "contentHash": "15afca250aaead",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "antidepressant-suicidality-early",
+      "contentHash": "02d7300fc1ec31",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "antidepressant-suicidality",
+      "contentHash": "1b159b763d5296",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "antidepressant-suicidality-young",
+      "contentHash": "00b2998886223d",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "antiepileptic-suicidality",
+      "contentHash": "1e4095d964f68a",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "watch-mood-changes",
+      "contentHash": "0dcc2785abbc61",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "call-for-mood-changes",
+      "contentHash": "1693baa8af17b9",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "suicidal-thoughts-get-help",
+      "contentHash": "1f06a7e8d6cd71",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "dementia-death",
+      "contentHash": "1926381a3e0a65",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "opioid-sedation",
+      "contentHash": "15246e0e1ce084",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "abuse-misuse-addiction-overdose-death",
+      "contentHash": "1ba0cd22c3a62d",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "abuse-misuse-addiction-overdose",
+      "contentHash": "1a0adf21496998",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "physical-dependence-withdrawal",
+      "contentHash": "16983bd6eb820d",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "complex-sleep-behaviours",
+      "contentHash": "0dae4558d2e06b",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "serotonin-syndrome",
+      "contentHash": "1828d7d3641496",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "allergic-reaction",
+      "contentHash": "1ee42ce7823c59",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "take-exactly",
+      "contentHash": "16f364187d3179",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "dose-not-yourself",
+      "contentHash": "088e166f70cbf7",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "do-not-stop",
+      "contentHash": "16519a16d8041e",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "stopping-suddenly-problems",
+      "contentHash": "0ed9ebb948cd36",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "missed-take",
+      "contentHash": "1cc3a74b2fe498",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "missed-skip",
+      "contentHash": "0abf5b9a031673",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "no-double-dose",
+      "contentHash": "18521fcd6315b8",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "with-or-without-food",
+      "contentHash": "03f7af0f769421",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "swallow-whole",
+      "contentHash": "1469612596e3fb",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "overdose-get-help",
+      "contentHash": "007708d8291c61",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "tell-all-medicines",
+      "contentHash": "0698689d1e9081",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "tell-all-conditions",
+      "contentHash": "18556e9162f47b",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "tell-pregnancy",
+      "contentHash": "19e14b8e7eb66d",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "tell-breastfeeding",
+      "contentHash": "1a5f53914f8341",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "alcohol",
+      "contentHash": "01a8a68cd7762c",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "alcohol-until-talk",
+      "contentHash": "115a0ec70a4e5e",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "driving",
+      "contentHash": "0e4bd662b00753",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "do-not-share",
+      "contentHash": "16a60085792a74",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "keep-safe-misuse",
+      "contentHash": "0f5d04764bde32",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "keep-safe-children",
+      "contentHash": "07d31191eacb15",
       "decision": "",
       "amendedWording": "",
       "notes": ""
     },
     {
       "id": "not-complete-list",
+      "contentHash": "19cd924398e177",
       "decision": "",
       "amendedWording": "",
       "notes": ""

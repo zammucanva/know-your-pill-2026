@@ -2,6 +2,7 @@ import { drugs } from "@/lib/kyp/data";
 import { getPatientGuide } from "@/lib/kyp/patient";
 import { CLAIM_RECORDS, claimsFor, sourcesFor } from "./index";
 import { PLAIN_SENTENCES, plainSummaryFor } from "./plain-summaries";
+import { contentHash } from "@/lib/kyp/content-hash";
 
 /**
  * A packet a qualified clinical reviewer can work from. It is NOT a review record: it states no decision, names no
@@ -26,21 +27,28 @@ const reviewerBlock = [
 ];
 /** Items a reviewer can decide on, in packet order: Patient Guide groups (by top-level key), then claim ids. */
 export const IN_SHORT_PACKET = "in-short-bank";
-export function reviewItemIds(slug: string): string[] {
-  if (slug === IN_SHORT_PACKET) return PLAIN_SENTENCES.map((b) => b.id);
-  const guide = getPatientGuide(slug);
-  const ids: string[] = [];
-  if (guide) for (const k of Object.keys(guide)) if (k !== "slug") ids.push(`guide:${k}`);
-  for (const c of claimsFor(slug)) ids.push(c.id);
-  return ids;
+export interface ReviewItem {
+  id: string;
+  /** Hash of everything a decision depends on: the wording, the exact passage, the source, and where it applies. */
+  hash: string;
 }
+export function reviewItems(slug: string): ReviewItem[] {
+  if (slug === IN_SHORT_PACKET) return PLAIN_SENTENCES.map((b) => ({ id: b.id, hash: contentHash(JSON.stringify([b.id, b.text, b.support.map((r) => r.source)])) }));
+  const guide = getPatientGuide(slug);
+  const items: ReviewItem[] = [];
+  if (guide) for (const [k, v] of Object.entries(guide)) if (k !== "slug") items.push({ id: `guide:${k}`, hash: contentHash(JSON.stringify([slug, k, v])) });
+  for (const c of claimsFor(slug)) items.push({ id: c.id, hash: contentHash(JSON.stringify([c.id, c.slug, c.category, c.patientWording, c.wordingKind, c.passage, c.sourceId, c.applicability, c.limitations])) });
+  return items;
+}
+export const reviewItemIds = (slug: string): string[] => reviewItems(slug).map((i) => i.id);
 /** The empty record a reviewer fills in. It is deliberately invalid until every field is real. */
 export function blankRecordTemplate(slug: string) {
   return {
     packet: slug,
     reviewer: { name: "", qualification: "", registrationBody: "", registrationNumber: "", affiliation: "", conflictsOfInterest: "" },
     reviewedAt: "",
-    decisions: reviewItemIds(slug).map((id) => ({ id, decision: "", amendedWording: "", notes: "" })),
+    // contentHash is filled by engineering: it names the exact text a decision applies to. The reviewer never edits it.
+    decisions: reviewItems(slug).map(({ id, hash }) => ({ id, contentHash: hash, decision: "", amendedWording: "", notes: "" })),
   };
 }
 

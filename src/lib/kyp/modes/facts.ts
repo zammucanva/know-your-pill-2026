@@ -1,4 +1,5 @@
 import type { Drug } from "@/lib/kyp/data";
+import { contentHash } from "@/lib/kyp/content-hash";
 import type { PatientGuide } from "@/lib/kyp/patient/types";
 import { BLOCK_CONTRACTS, CATEGORY_MODES, categoryOfSource, type FactCategory } from "./contracts";
 import { isTemplateText } from "./patient-interactions";
@@ -51,11 +52,17 @@ export interface Fact {
   usedIn: ModeId[];
 }
 
-/** A recorded qualified review. None exist; approval cannot be inferred from anything else. */
+/**
+ * A recorded qualified review. None exist; approval cannot be inferred from anything else. A record applies to ONE
+ * medicine, ONE canonical path, and only while the fact still reads exactly as it did when it was reviewed
+ * (`valueHash`). There is no whole-medication wildcard: a review of today's text must not cover tomorrow's edit.
+ */
 export interface ReviewRecord {
   slug: string;
-  /** Canonical path, or "*" for the whole medication. */
+  /** Canonical path of the one fact reviewed. */
   path: string;
+  /** contentHash of the fact's verbatim value at review time. */
+  valueHash: string;
   reviewer: string;
   qualification: string;
   date: string;
@@ -104,7 +111,7 @@ function judge(slug: string, path: string, value: string | null, prov: FactProve
   if (sens) reasons.push(sens);
   if (value && path === "patientMode.interactions" && isTemplateText(value))
     reasons.push("standard template wording shared by many medicines, including a general alcohol sentence that is not specific to this medicine");
-  const record = REVIEW_RECORDS.some((r) => r.slug === slug && (r.path === path || r.path === "*"));
+  const record = value !== null && REVIEW_RECORDS.some((r) => r.slug === slug && r.path === path && r.valueHash === contentHash(value));
   const review: FactReview = record ? "approved" : flag ? "flagged" : "unreviewed";
   let status: FactStatus = "present";
   if (value === null) status = "missing";
