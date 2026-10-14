@@ -35,7 +35,7 @@ describe("pointer from 'when to get help' to statements that say to get help rig
     expect(h).toContain("This is a general direction, not from a product label.");
   });
   test("no pointer without sourced passages, and none on an authored Patient Guide", () => {
-    expect(html("tianeptine")).not.toContain("data-seek-help-pointer");
+    expect(html("ketamine")).not.toContain("data-seek-help-pointer");
     expect(html("sertraline")).not.toContain("data-seek-help-pointer");
   });
 });

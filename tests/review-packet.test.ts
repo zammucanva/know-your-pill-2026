@@ -23,7 +23,7 @@ describe("clinical review packets are preparation, never a review record", () =>
     for (const slug of ["sertraline", "fluoxetine"]) expect(readFileSync(`reports/medication-audit/review-packets/${slug}.md`, "utf8")).toBe(reviewPacket(slug) + "\n");
   });
   test("a medicine with nothing to review says so", () => {
-    expect(reviewPacket("tianeptine")).toContain("nothing to review yet");
+    expect(reviewPacket("ketamine")).toContain("nothing to review yet");
   });
 });
 

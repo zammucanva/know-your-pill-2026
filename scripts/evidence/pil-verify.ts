@@ -13,6 +13,7 @@ import { mkdtempSync, readFileSync, writeFileSync } from "fs";
 import { tmpdir } from "os";
 import { join } from "path";
 import { PIL_DOCS } from "@/lib/kyp/evidence/pil-docs";
+import { htmlToText } from "./medlineplus";
 
 const OUT = "src/lib/kyp/evidence/data/pil-verification.json";
 
@@ -47,7 +48,8 @@ for (const d of PIL_DOCS) {
   const buf = Buffer.from(await res.arrayBuffer());
   const pdf = join(dir, `pil.${d.file}.pdf`);
   writeFileSync(pdf, buf);
-  const text = normalise(execFileSync("pdftotext", ["-enc", "UTF-8", ...(d.kind === "fda-label" || d.layout === false ? [] : ["-layout"]), pdf, "-"], { encoding: "utf8" }));
+  // A web page (the Singapore formulary) is read as visible text; every other document is a PDF.
+  const text = normalise(d.kind === "sg-formulary" ? htmlToText(buf.toString("utf8")) : execFileSync("pdftotext", ["-enc", "UTF-8", ...(d.kind === "fda-label" || d.layout === false ? [] : ["-layout"]), pdf, "-"], { encoding: "utf8" }));
   const missing = d.claims.map((c) => normalise(c[1])).filter((p) => !text.includes(p));
   results.push({
     slug: d.slug,

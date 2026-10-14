@@ -30,7 +30,7 @@ describe("what was looked for, for medicines that still have no source", () => {
     }
   });
   test("the page shows the record in the sources part and still says nothing is source-backed", () => {
-    const h = html("tianeptine");
+    const h = html("ketamine");
     expect(h).toContain("data-search-log");
     expect(h).toContain("What was looked for");
     expect(h).toContain("No product label has been retrieved for this medicine, so nothing on this page is source-backed.");

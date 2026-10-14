@@ -35,7 +35,7 @@ export interface PilDoc {
   /** Where the document is published, if not the emc leaflet URL (e.g. a Drugs@FDA label). */
   url?: string;
   /** "leaflet" (default): a UK patient leaflet. "fda-label": an FDA-approved US label from the Drugs@FDA archive. "indian-label": an Indian product label or package insert (add its host to ALLOWED_SOURCE_HOSTS first). */
-  kind?: "leaflet" | "fda-label" | "ie-leaflet" | "indian-label";
+  kind?: "leaflet" | "fda-label" | "ie-leaflet" | "sg-formulary" | "indian-label";
   /** Who the document is written about, when that is not adults (replaces the default "Adults unless the statement says otherwise"). */
   population?: string;
   /** Extra limits that apply to every claim from this leaflet. */
@@ -603,6 +603,31 @@ export const PIL_DOCS: PilDoc[] = [
       ["side-effects", "At the beginning of treatment with Serdolect, you may feel dizzy when you get out of bed or stand up. This feeling will most likely go away when you have taken Serdolect for a while.", "At the start of treatment you may feel dizzy when you get out of bed or stand up. This will most likely go away after you have taken it for a while."],
     ],
   },
+  {
+    slug: "tianeptine",
+    file: "SIN11182P",
+    kind: "sg-formulary",
+    url: "https://www.ndf.gov.sg/about-drugs/product-information/sin11182p/",
+    product: "Stablon tablet 12.5 mg (tianeptine sodium)",
+    title: "Stablon tablet 12.5 mg [SIN11182P]: Singapore National Drug Formulary product information",
+    holder: "Singapore Ministry of Health, National Drug Formulary (licence holder Servier (S) Pte Ltd)",
+    revised: "page says: last updated on 9 October 2026",
+    formulation: "12.5 mg sugar-coated tablet",
+    limits: [
+      "This page summarises only some sections (indication, dosing, contraindications) of the Singapore-licensed product information. It gives no side effects, interactions or onset, and it points to the full Product Insert/Patient Information Leaflet published by the Singapore Health Sciences Authority.",
+      "It is not an Indian label. Tianeptine is sold under several Indian brand names, whose package inserts were not found in a retrievable official source.",
+    ],
+    accessedAt: "2026-10-14",
+    claims: [
+      ["used-for", "This drug is recommended in depressive states of mild, moderate or severe intensity.", "It is recommended for depressive states of mild, moderate or severe intensity."],
+      ["how-to-take", "The recommended dosage is one 12.5 mg tablet three times a day (morning, midday and evening) at the beginning of the main meals.", "The page gives a recommended dose of one 12.5 mg tablet three times a day (morning, midday and evening), at the beginning of the main meals. Your own dose is set by your prescriber."],
+      ["how-to-take", "In subjects aged over 70 years, and in subjects with renal insufficiency, the dosage should be restricted to 2 tablets per day.", "For people aged over 70 years, and for people with kidney problems (renal insufficiency), the dose should be limited to 2 tablets per day."],
+      ["how-to-take", "In chronic alcoholics, whether cirrhotic or not, no alteration of the dosage is necessary.", "In people with long-term heavy alcohol use, with or without cirrhosis (liver scarring), no change of dose is necessary."],
+      ["stopping", "Abrupt discontinuation of the treatment should be avoided. The dosage should be gradually reduced over a period of 7 to 14 days in order to reduce the risk of withdrawal reactions", "Stopping suddenly should be avoided. The dose should be reduced gradually over 7 to 14 days to lower the risk of withdrawal reactions. Do not do this on your own: it is for your prescriber to direct."],
+      ["contraindication", "Children and adolescents under 15 years old.", "It must not be used in children and adolescents under 15 years old."],
+      ["contraindication", "Hypersensitivity to drug substance or to any of the excipients", "It must not be used if you are hypersensitive (allergic) to the active substance or to any of the other ingredients (excipients)."],
+    ],
+  },
 ];
 
 const nrm = (t: string) => t.replace(/\s+/g, " ").trim();
@@ -612,6 +637,7 @@ const KINDS = {
   leaflet: { type: "international-patient-information", jurisdiction: "UK", prefix: "pil", noun: "UK package leaflet", dated: "leaflet", nonIndian: true },
   "fda-label": { type: "us-product-label", jurisdiction: "US", prefix: "fda", noun: "US label", dated: "label", nonIndian: true },
   "ie-leaflet": { type: "international-patient-information", jurisdiction: "IE", prefix: "hpra", noun: "Irish package leaflet", dated: "leaflet", nonIndian: true },
+  "sg-formulary": { type: "international-regulator-label", jurisdiction: "SG", prefix: "sg", noun: "Singapore National Drug Formulary entry", dated: "page", nonIndian: true },
   "indian-label": { type: "indian-product-label", jurisdiction: "IN", prefix: "in", noun: "Indian product label", dated: "label", nonIndian: false },
 } as const;
 
@@ -664,7 +690,7 @@ export function deriveFromPilDocs(docs: PilDoc[] = PIL_DOCS): { sources: SourceR
           d.kind === "fda-label"
             ? `US label only (not an Indian label): this label was revised ${d.revised}, FDA marks archived labels as possibly not the latest, and an Indian product may differ.`
             : k.nonIndian
-              ? `${d.kind === "ie-leaflet" ? "Irish" : "UK"} leaflet only (not an Indian label): the leaflet was last revised ${d.revised}, and the current leaflet or an Indian product may differ.`
+              ? `${d.kind === "ie-leaflet" ? "Irish leaflet" : d.kind === "sg-formulary" ? "Singapore formulary entry" : "UK leaflet"} only (not an Indian label): the document was last revised ${d.revised}, and the current document or an Indian product may differ.`
               : `Indian product label, revised ${d.revised}: it applies to the named product only.`,
           "General information, not advice for any one person.",
           ...d.limits,

@@ -104,9 +104,9 @@
         "candidates-found": 121,
         "none-found": 24
       },
-      "medicationsWithRetrievedSource": 122,
-      "medicationsWithSourcedClaims": 122,
-      "claimsWithTraceableSource": 1766,
+      "medicationsWithRetrievedSource": 123,
+      "medicationsWithSourcedClaims": 123,
+      "claimsWithTraceableSource": 1773,
       "medicationsWithSourcedOnsetClaim": 20,
       "onsetScan": {
         "note": "Screening of US labels for sentences that may state onset. Candidates for a person to read in context; noisy; not claims.",
@@ -119,19 +119,20 @@
       "claimsExactQuote": 455,
       "guideSectionsSummarised": 233,
       "medicationsBySourceCountry": {
-        "none": 23,
+        "none": 22,
+        "SG": 1,
         "US": 110,
         "UK": 10,
         "IE": 2
       },
-      "claimsRestated": 1311,
+      "claimsRestated": 1318,
       "medicationGuideStatus": {
         "patient-guide": 12,
-        "no-us-label-found": 10,
+        "non-us-document-used": 43,
         "us-prescribing-information-used": 40,
-        "non-us-document-used": 42,
         "medication-guide-found": 40,
-        "no-medication-guide-in-labels-checked": 1
+        "no-medication-guide-in-labels-checked": 1,
+        "no-us-label-found": 9
       },
       "parts": {
         "what": {
@@ -142,19 +143,19 @@
         },
         "uses": {
           "authored-guide": 12,
-          "registry-wording": 11,
-          "source-backed": 122
+          "source-backed": 123,
+          "registry-wording": 10
         },
         "how": {
           "authored-guide": 12,
-          "unavailable": 10,
-          "source-backed": 122,
+          "source-backed": 123,
+          "unavailable": 9,
           "registry-wording": 1
         },
         "precautions": {
           "authored-guide": 12,
-          "unavailable": 11,
-          "source-backed": 122
+          "source-backed": 123,
+          "unavailable": 10
         },
         "side-effects": {
           "authored-guide": 12,
@@ -179,8 +180,8 @@
         },
         "sources": {
           "authored-guide": 12,
-          "unavailable": 11,
-          "source-backed": 122
+          "source-backed": 123,
+          "unavailable": 10
         }
       },
       "explanationLevel": {

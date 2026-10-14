@@ -68,10 +68,10 @@ describe("evidence layer: integrity", () => {
   test("no claim is an Indian label claim, none is reviewed, and every one says which non-Indian document it rests on", () => {
     for (const c of CLAIM_RECORDS) {
       const s = SOURCE_RECORDS.find((x) => x.id === c.sourceId)!;
-      expect(["US", "UK", "IE"]).toContain(s.jurisdiction);
-      expect(["us-product-label", "international-patient-information"]).toContain(s.type);
+      expect(["US", "UK", "IE", "SG"]).toContain(s.jurisdiction);
+      expect(["us-product-label", "international-patient-information", "international-regulator-label"]).toContain(s.type);
       expect(c.review).toBe("not-reviewed");
-      expect(c.limitations.join(" ")).toMatch(s.jurisdiction === "UK" || s.jurisdiction === "IE" ? /(UK|Irish) (leaflet|package leaflet)/i : /US (label|Medication Guide|patient information|prescribing information|drug-information page)/i);
+      expect(c.limitations.join(" ")).toMatch(s.jurisdiction === "UK" || s.jurisdiction === "IE" || s.jurisdiction === "SG" ? /(UK|Irish|Singapore) (leaflet|package leaflet|formulary entry)/i : /US (label|Medication Guide|patient information|prescribing information|drug-information page)/i);
       expect(c.verification).toBe("passage-found-in-source");
     }
     expect(INDIAN_SOURCE_SEARCH.outcome).toBe("unresolved-for-every-medication");

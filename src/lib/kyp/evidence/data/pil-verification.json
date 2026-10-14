@@ -152,5 +152,16 @@
   "passages": 26,
   "passagesFound": 26,
   "missing": []
+ },
+ {
+  "slug": "tianeptine",
+  "file": "SIN11182P",
+  "url": "https://www.ndf.gov.sg/about-drugs/product-information/sin11182p/",
+  "httpStatus": 200,
+  "sha256": "44fcd7b769ca10ac8a76918ba473d8a8a4197464d0b7b9815ee47241e8408c45",
+  "checkedAt": "2026-10-14",
+  "passages": 7,
+  "passagesFound": 7,
+  "missing": []
  }
 ]

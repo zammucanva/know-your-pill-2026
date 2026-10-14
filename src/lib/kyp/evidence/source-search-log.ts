@@ -18,15 +18,6 @@ const D = "2026-10-14";
 const BASE = ["US DailyMed labels (searched by generic name)", "MedlinePlus drug-information pages (searched by generic name)"];
 
 export const SOURCE_SEARCH_LOG: Record<string, SearchLogEntry> = {
-  tianeptine: {
-    date: D,
-    checked: [...BASE, "A web search for an Indian package insert for tianeptine brands"],
-    notUsed: [
-      "Indian pharmacy and drug-database listing pages: commercial pages, and the ones read disagreed with each other, so they were not used.",
-      "A Singapore regulator product page for one tianeptine brand and an EU safety review exist; they have not been imported.",
-    ],
-    next: "Obtain the package insert of the Indian brand being taken (CDSCO or the box), then import it.",
-  },
   ketamine: {
     date: D,
     checked: [...BASE],
