@@ -174,5 +174,203 @@
   "passages": 16,
   "passagesFound": 16,
   "missing": []
+ },
+ {
+  "slug": "olanzapine",
+  "file": "pvpi-dsa-list",
+  "url": "https://ipc.gov.in/images/pvpi/List-of-drug-safety-alerts-issued-by-PvPI.pdf",
+  "httpStatus": 200,
+  "sha256": "23ce7d40297685835953e936bbeff433169b03d20cd255bc55fe2ff10fb8f0c8",
+  "checkedAt": "2026-10-14",
+  "passages": 3,
+  "passagesFound": 3,
+  "missing": []
+ },
+ {
+  "slug": "clozapine",
+  "file": "pvpi-dsa-list",
+  "url": "https://ipc.gov.in/images/pvpi/List-of-drug-safety-alerts-issued-by-PvPI.pdf",
+  "httpStatus": 200,
+  "sha256": "23ce7d40297685835953e936bbeff433169b03d20cd255bc55fe2ff10fb8f0c8",
+  "checkedAt": "2026-10-14",
+  "passages": 2,
+  "passagesFound": 2,
+  "missing": []
+ },
+ {
+  "slug": "disulfiram",
+  "file": "pvpi-dsa-list",
+  "url": "https://ipc.gov.in/images/pvpi/List-of-drug-safety-alerts-issued-by-PvPI.pdf",
+  "httpStatus": 200,
+  "sha256": "23ce7d40297685835953e936bbeff433169b03d20cd255bc55fe2ff10fb8f0c8",
+  "checkedAt": "2026-10-14",
+  "passages": 2,
+  "passagesFound": 2,
+  "missing": []
+ },
+ {
+  "slug": "amisulpride",
+  "file": "pvpi-dsa-list",
+  "url": "https://ipc.gov.in/images/pvpi/List-of-drug-safety-alerts-issued-by-PvPI.pdf",
+  "httpStatus": 200,
+  "sha256": "23ce7d40297685835953e936bbeff433169b03d20cd255bc55fe2ff10fb8f0c8",
+  "checkedAt": "2026-10-14",
+  "passages": 1,
+  "passagesFound": 1,
+  "missing": []
+ },
+ {
+  "slug": "carbamazepine",
+  "file": "pvpi-dsa-list",
+  "url": "https://ipc.gov.in/images/pvpi/List-of-drug-safety-alerts-issued-by-PvPI.pdf",
+  "httpStatus": 200,
+  "sha256": "23ce7d40297685835953e936bbeff433169b03d20cd255bc55fe2ff10fb8f0c8",
+  "checkedAt": "2026-10-14",
+  "passages": 1,
+  "passagesFound": 1,
+  "missing": []
+ },
+ {
+  "slug": "clomipramine",
+  "file": "pvpi-dsa-list",
+  "url": "https://ipc.gov.in/images/pvpi/List-of-drug-safety-alerts-issued-by-PvPI.pdf",
+  "httpStatus": 200,
+  "sha256": "23ce7d40297685835953e936bbeff433169b03d20cd255bc55fe2ff10fb8f0c8",
+  "checkedAt": "2026-10-14",
+  "passages": 2,
+  "passagesFound": 2,
+  "missing": []
+ },
+ {
+  "slug": "lurasidone",
+  "file": "pvpi-dsa-list",
+  "url": "https://ipc.gov.in/images/pvpi/List-of-drug-safety-alerts-issued-by-PvPI.pdf",
+  "httpStatus": 200,
+  "sha256": "23ce7d40297685835953e936bbeff433169b03d20cd255bc55fe2ff10fb8f0c8",
+  "checkedAt": "2026-10-14",
+  "passages": 1,
+  "passagesFound": 1,
+  "missing": []
+ },
+ {
+  "slug": "valproate",
+  "file": "pvpi-dsa-list",
+  "url": "https://ipc.gov.in/images/pvpi/List-of-drug-safety-alerts-issued-by-PvPI.pdf",
+  "httpStatus": 200,
+  "sha256": "23ce7d40297685835953e936bbeff433169b03d20cd255bc55fe2ff10fb8f0c8",
+  "checkedAt": "2026-10-14",
+  "passages": 1,
+  "passagesFound": 1,
+  "missing": []
+ },
+ {
+  "slug": "hydroxyzine",
+  "file": "pvpi-dsa-list",
+  "url": "https://ipc.gov.in/images/pvpi/List-of-drug-safety-alerts-issued-by-PvPI.pdf",
+  "httpStatus": 200,
+  "sha256": "23ce7d40297685835953e936bbeff433169b03d20cd255bc55fe2ff10fb8f0c8",
+  "checkedAt": "2026-10-14",
+  "passages": 2,
+  "passagesFound": 2,
+  "missing": []
+ },
+ {
+  "slug": "amitriptyline",
+  "file": "pvpi-dsa-list",
+  "url": "https://ipc.gov.in/images/pvpi/List-of-drug-safety-alerts-issued-by-PvPI.pdf",
+  "httpStatus": 200,
+  "sha256": "23ce7d40297685835953e936bbeff433169b03d20cd255bc55fe2ff10fb8f0c8",
+  "checkedAt": "2026-10-14",
+  "passages": 1,
+  "passagesFound": 1,
+  "missing": []
+ },
+ {
+  "slug": "quetiapine",
+  "file": "pvpi-dsa-list",
+  "url": "https://ipc.gov.in/images/pvpi/List-of-drug-safety-alerts-issued-by-PvPI.pdf",
+  "httpStatus": 200,
+  "sha256": "23ce7d40297685835953e936bbeff433169b03d20cd255bc55fe2ff10fb8f0c8",
+  "checkedAt": "2026-10-14",
+  "passages": 1,
+  "passagesFound": 1,
+  "missing": []
+ },
+ {
+  "slug": "fluoxetine",
+  "file": "pvpi-dsa-list",
+  "url": "https://ipc.gov.in/images/pvpi/List-of-drug-safety-alerts-issued-by-PvPI.pdf",
+  "httpStatus": 200,
+  "sha256": "23ce7d40297685835953e936bbeff433169b03d20cd255bc55fe2ff10fb8f0c8",
+  "checkedAt": "2026-10-14",
+  "passages": 2,
+  "passagesFound": 2,
+  "missing": []
+ },
+ {
+  "slug": "sertraline",
+  "file": "pvpi-dsa-list",
+  "url": "https://ipc.gov.in/images/pvpi/List-of-drug-safety-alerts-issued-by-PvPI.pdf",
+  "httpStatus": 200,
+  "sha256": "23ce7d40297685835953e936bbeff433169b03d20cd255bc55fe2ff10fb8f0c8",
+  "checkedAt": "2026-10-14",
+  "passages": 1,
+  "passagesFound": 1,
+  "missing": []
+ },
+ {
+  "slug": "risperidone",
+  "file": "pvpi-dsa-list",
+  "url": "https://ipc.gov.in/images/pvpi/List-of-drug-safety-alerts-issued-by-PvPI.pdf",
+  "httpStatus": 200,
+  "sha256": "23ce7d40297685835953e936bbeff433169b03d20cd255bc55fe2ff10fb8f0c8",
+  "checkedAt": "2026-10-14",
+  "passages": 1,
+  "passagesFound": 1,
+  "missing": []
+ },
+ {
+  "slug": "fluvoxamine",
+  "file": "pvpi-dsa-list",
+  "url": "https://ipc.gov.in/images/pvpi/List-of-drug-safety-alerts-issued-by-PvPI.pdf",
+  "httpStatus": 200,
+  "sha256": "23ce7d40297685835953e936bbeff433169b03d20cd255bc55fe2ff10fb8f0c8",
+  "checkedAt": "2026-10-14",
+  "passages": 1,
+  "passagesFound": 1,
+  "missing": []
+ },
+ {
+  "slug": "ziprasidone",
+  "file": "pvpi-dsa-list",
+  "url": "https://ipc.gov.in/images/pvpi/List-of-drug-safety-alerts-issued-by-PvPI.pdf",
+  "httpStatus": 200,
+  "sha256": "23ce7d40297685835953e936bbeff433169b03d20cd255bc55fe2ff10fb8f0c8",
+  "checkedAt": "2026-10-14",
+  "passages": 1,
+  "passagesFound": 1,
+  "missing": []
+ },
+ {
+  "slug": "clonidine",
+  "file": "pvpi-dsa-list",
+  "url": "https://ipc.gov.in/images/pvpi/List-of-drug-safety-alerts-issued-by-PvPI.pdf",
+  "httpStatus": 200,
+  "sha256": "23ce7d40297685835953e936bbeff433169b03d20cd255bc55fe2ff10fb8f0c8",
+  "checkedAt": "2026-10-14",
+  "passages": 1,
+  "passagesFound": 1,
+  "missing": []
+ },
+ {
+  "slug": "oxcarbazepine",
+  "file": "pvpi-dsa-list",
+  "url": "https://ipc.gov.in/images/pvpi/List-of-drug-safety-alerts-issued-by-PvPI.pdf",
+  "httpStatus": 200,
+  "sha256": "23ce7d40297685835953e936bbeff433169b03d20cd255bc55fe2ff10fb8f0c8",
+  "checkedAt": "2026-10-14",
+  "passages": 1,
+  "passagesFound": 1,
+  "missing": []
  }
 ]

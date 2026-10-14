@@ -7,6 +7,7 @@ import { buildModeLens, explainPatient } from "@/lib/kyp/modes";
 import { PatientExplainer } from "@/components/kyp/sections/drug/patient-explainer";
 import { CLAIM_RECORDS, MEDGUIDE_RECORDS, SOURCE_RECORDS, claimsFor, evidenceViews, validateEvidence } from "@/lib/kyp/evidence";
 import { PIL_DOCS } from "@/lib/kyp/evidence/pil-docs";
+import { dashboardRows } from "@/lib/kyp/evidence/dashboard";
 import { formOf, isCombinationTitle } from "@/lib/kyp/evidence/label-form";
 import { sourceIdLabel, sourceKind } from "@/lib/kyp/evidence/source-label";
 import verification from "@/lib/kyp/evidence/data/pil-verification.json";
@@ -21,9 +22,9 @@ const html = (slug: string) => {
 describe("non-US source documents (UK leaflets, an archived FDA label)", () => {
   test("every document was re-downloaded and every stored passage was found in it", () => {
     const v = verification as { slug: string; file: string; httpStatus: number; sha256: string; passages: number; passagesFound: number; missing: string[]; checkedAt: string }[];
-    expect(v.map((x) => x.slug).sort()).toEqual(PIL_DOCS.map((d) => d.slug).sort());
+    expect(v.map((x) => `${x.slug}:${x.file}`).sort()).toEqual(PIL_DOCS.map((d) => `${d.slug}:${d.file}`).sort());
     for (const d of PIL_DOCS) {
-      const r = v.find((x) => x.slug === d.slug)!;
+      const r = v.find((x) => x.slug === d.slug && x.file === d.file)!;
       expect(r.file).toBe(d.file);
       expect(r.httpStatus).toBe(200);
       expect(r.sha256).toMatch(/^[0-9a-f]{64}$/);
@@ -42,7 +43,7 @@ describe("non-US source documents (UK leaflets, an archived FDA label)", () => {
         expect(c.wordingKind).toBe("paraphrase");
         expect(c.passage.length).toBeLessThan(1300);
         expect(c.review).toBe("not-reviewed");
-        expect(c.limitations.join(" ")).toMatch(/not an Indian label/);
+        expect(c.limitations.join(" ")).toMatch(d.kind === "in-safety-alert" ? /not a product label/ : /not an Indian label/);
         expect(c.verification).toBe("passage-found-in-source");
       }
     }
@@ -138,5 +139,31 @@ describe("US label selection never presents a different product form as the medi
   test("a guide for a non-plain form is flagged on every statement taken from it", () => {
     const flagged = MEDGUIDE_RECORDS.filter((r) => r.status === "medication-guide-found" && !formOf(r.labelTitle!).plainOral);
     for (const r of flagged.slice(0, 5)) expect(html(r.slug)).toContain("data-claim-form=");
+  });
+});
+
+describe("Indian PvPI safety-alert rows are Indian sources, labelled as safety signals and never as product labels", () => {
+  const pvpi = SOURCE_RECORDS.filter((s) => s.type === "indian-safety-communication");
+  test("they are stored, typed and located correctly", () => {
+    expect(pvpi.length).toBe(18);
+    for (const s of pvpi) {
+      expect(s.jurisdiction).toBe("IN");
+      expect(s.url).toBe("https://ipc.gov.in/images/pvpi/List-of-drug-safety-alerts-issued-by-PvPI.pdf");
+      expect(sourceKind(s)).toMatch(/not a product label/);
+      expect(s.limitations.join(" ")).toMatch(/signal/);
+    }
+  });
+  test("the dashboard counts them apart from Indian product labels", () => {
+    const rows = dashboardRows();
+    expect(rows.filter((r) => r.indianSafetyAlertSources > 0).length).toBe(18);
+    expect(rows.every((r) => r.indianSourcesVerified === 0)).toBe(true);
+    expect(rows.find((r) => r.slug === "olanzapine")!.indianSourceStatus).toBe("safety-alert-only");
+    expect(rows.find((r) => r.slug === "olanzapine")!.worklist).toContain("no Indian product label or insert");
+  });
+  test("the page says what the row is and is not", () => {
+    const h = html("olanzapine");
+    expect(h).toContain("Indian drug safety alert list (IPC, PvPI)");
+    expect(h).toContain("it gives no rate, cause or dosing advice");
+    expect(h).toContain("it is a safety signal, it does not say how often this happens");
   });
 });

@@ -123,7 +123,7 @@ export function validateEvidence(sources: SourceRecord[] = SOURCE_RECORDS, claim
 /** What the Indian-source search actually found. Recorded so "no Indian source" is a stated result, not a silence. */
 export const INDIAN_SOURCE_SEARCH = {
   accessedAt: "2026-10-13",
-  outcome: "unresolved-for-every-medication",
+  outcome: "no-indian-product-label-for-any-medication",
   organisations: [
     {
       name: "CDSCO (Central Drugs Standard Control Organisation)",
@@ -135,7 +135,7 @@ export const INDIAN_SOURCE_SEARCH = {
     {
       name: "IPC / PvPI (Indian Pharmacopoeia Commission, Pharmacovigilance Programme of India)",
       url: "https://www.ipc.gov.in/",
-      found: "Home page with Indian Pharmacopoeia editions, National Formulary of India, PvPI (ADR reporting, publications, orders and circulars). No page named 'Drug Safety Alerts' was found on the home page.",
+      found: "Home page with Indian Pharmacopoeia editions, National Formulary of India and PvPI. The PvPI 'List of Drugs Safety Alerts' PDF (safety signals, not labels) was retrieved and is used for a few side-effect statements.",
       perMedicineRecordsRetrievable: false,
       reason: "Pharmacopoeial monographs and PvPI publications were not retrieved per medicine. Nothing from them is claimed.",
     },

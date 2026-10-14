@@ -1,4 +1,5 @@
 import type { ClaimCategory, ClaimRecord, SourceRecord } from "./types";
+import { PVPI_DOCS } from "./pil-docs-pvpi";
 
 /**
  * UK patient leaflets (package leaflets) used as supplementary evidence for medicines that have no US label.
@@ -32,10 +33,12 @@ export interface PilDoc {
   formulation: string;
   /** Set false when the PDF is an artwork layout whose text only reads correctly in reading order (not -layout mode). */
   layout?: boolean;
+  /** Read the PDF in raw content order (pdftotext -raw), for a table whose rows must stay in one piece. */
+  raw?: boolean;
   /** Where the document is published, if not the emc leaflet URL (e.g. a Drugs@FDA label). */
   url?: string;
   /** "leaflet" (default): a UK patient leaflet. "fda-label": an FDA-approved US label from the Drugs@FDA archive. "indian-label": an Indian product label or package insert (add its host to ALLOWED_SOURCE_HOSTS first). */
-  kind?: "leaflet" | "fda-label" | "ie-leaflet" | "sg-formulary" | "ca-monograph" | "indian-label";
+  kind?: "leaflet" | "fda-label" | "ie-leaflet" | "sg-formulary" | "ca-monograph" | "in-safety-alert" | "indian-label";
   /** Who the document is written about, when that is not adults (replaces the default "Adults unless the statement says otherwise"). */
   population?: string;
   /** Extra limits that apply to every claim from this leaflet. */
@@ -46,7 +49,7 @@ export interface PilDoc {
 
 const ON = "onset-works-gradually";
 
-export const PIL_DOCS: PilDoc[] = [
+const BASE_DOCS: PilDoc[] = [
   {
     slug: "moclobemide",
     file: "10614",
@@ -664,6 +667,8 @@ export const PIL_DOCS: PilDoc[] = [
   },
 ];
 
+export const PIL_DOCS: PilDoc[] = [...BASE_DOCS, ...PVPI_DOCS];
+
 const nrm = (t: string) => t.replace(/\s+/g, " ").trim();
 
 /** What each kind of document is, in one place: how it is typed, labelled and described to the reader. */
@@ -673,6 +678,7 @@ const KINDS = {
   "ie-leaflet": { type: "international-patient-information", jurisdiction: "IE", prefix: "hpra", noun: "Irish package leaflet", dated: "leaflet", nonIndian: true },
   "sg-formulary": { type: "international-regulator-label", jurisdiction: "SG", prefix: "sg", noun: "Singapore National Drug Formulary entry", dated: "page", nonIndian: true },
   "ca-monograph": { type: "international-regulator-label", jurisdiction: "CA", prefix: "ca", noun: "Canadian product monograph", dated: "monograph", nonIndian: true },
+  "in-safety-alert": { type: "indian-safety-communication", jurisdiction: "IN", prefix: "in", noun: "Indian PvPI drug safety alert list", dated: "list", nonIndian: false },
   "indian-label": { type: "indian-product-label", jurisdiction: "IN", prefix: "in", noun: "Indian product label", dated: "label", nonIndian: false },
 } as const;
 
@@ -726,7 +732,9 @@ export function deriveFromPilDocs(docs: PilDoc[] = PIL_DOCS): { sources: SourceR
             ? `US label only (not an Indian label): this label was revised ${d.revised}, FDA marks archived labels as possibly not the latest, and an Indian product may differ.`
             : k.nonIndian
               ? `${d.kind === "ie-leaflet" ? "Irish leaflet" : d.kind === "sg-formulary" ? "Singapore formulary entry" : d.kind === "ca-monograph" ? "Canadian product monograph" : "UK leaflet"} only (not an Indian label): the document was last revised ${d.revised}, and the current document or an Indian product may differ.`
-              : `Indian product label, revised ${d.revised}: it applies to the named product only.`,
+              : d.kind === "in-safety-alert"
+                ? `Indian safety-alert list (IPC, PvPI), ${d.revised}: a signal from reports, not a rate or a cause, and not a product label.`
+                : `Indian product label, revised ${d.revised}: it applies to the named product only.`,
           "General information, not advice for any one person.",
           ...d.limits,
           ...(extra?.limitations ?? []),

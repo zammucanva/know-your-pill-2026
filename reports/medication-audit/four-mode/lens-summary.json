@@ -100,13 +100,14 @@
       "patientUiRenders": 145,
       "indianSourcesVerified": 0,
       "indianSourcesUnresolved": 145,
+      "indianSafetyAlertMedications": 18,
       "usLabelDiscovery": {
         "candidates-found": 121,
         "none-found": 24
       },
-      "medicationsWithRetrievedSource": 125,
-      "medicationsWithSourcedClaims": 125,
-      "claimsWithTraceableSource": 1806,
+      "medicationsWithRetrievedSource": 130,
+      "medicationsWithSourcedClaims": 130,
+      "claimsWithTraceableSource": 1829,
       "medicationsWithSourcedOnsetClaim": 21,
       "onsetScan": {
         "note": "Screening of US labels for sentences that may state onset. Candidates for a person to read in context; noisy; not claims.",
@@ -116,22 +117,25 @@
         "withCandidateSentencesButNoSourcedClaim": 27
       },
       "patientGuides": 12,
-      "claimsExactQuote": 458,
+      "claimsExactQuote": 456,
       "guideSectionsSummarised": 233,
       "medicationsBySourceCountry": {
-        "none": 20,
+        "IN": 5,
+        "none": 15,
         "SG": 1,
-        "US": 111,
-        "UK": 10,
+        "US": 99,
+        "UK": 9,
         "IE": 2,
+        "IN; UK": 1,
+        "IN; US": 12,
         "CA": 1
       },
-      "claimsRestated": 1348,
+      "claimsRestated": 1373,
       "medicationGuideStatus": {
         "patient-guide": 12,
-        "non-us-document-used": 44,
-        "us-prescribing-information-used": 41,
-        "medication-guide-found": 40,
+        "non-us-document-used": 53,
+        "us-prescribing-information-used": 38,
+        "medication-guide-found": 34,
         "no-us-label-found": 8
       },
       "parts": {
@@ -193,13 +197,13 @@
       "medicationsWithMissingElements": 121,
       "readability": {
         "note": "Automated screening heuristic (Flesch-Kincaid grade, sentence length). Not a comprehension test.",
-        "medicationsAboveGrade10": 111,
-        "medicationsWithLongSentences": 125
+        "medicationsAboveGrade10": 112,
+        "medicationsWithLongSentences": 130
       },
       "clinicallyReviewed": 0,
       "indianSourceSearch": {
         "accessedAt": "2026-10-13",
-        "outcome": "unresolved-for-every-medication",
+        "outcome": "no-indian-product-label-for-any-medication",
         "organisations": [
           {
             "name": "CDSCO (Central Drugs Standard Control Organisation)",
@@ -211,7 +215,7 @@
           {
             "name": "IPC / PvPI (Indian Pharmacopoeia Commission, Pharmacovigilance Programme of India)",
             "url": "https://www.ipc.gov.in/",
-            "found": "Home page with Indian Pharmacopoeia editions, National Formulary of India, PvPI (ADR reporting, publications, orders and circulars). No page named 'Drug Safety Alerts' was found on the home page.",
+            "found": "Home page with Indian Pharmacopoeia editions, National Formulary of India and PvPI. The PvPI 'List of Drugs Safety Alerts' PDF (safety signals, not labels) was retrieved and is used for a few side-effect statements.",
             "perMedicineRecordsRetrievable": false,
             "reason": "Pharmacopoeial monographs and PvPI publications were not retrieved per medicine. Nothing from them is claimed."
           }

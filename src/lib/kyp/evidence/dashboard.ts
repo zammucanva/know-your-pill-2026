@@ -22,7 +22,9 @@ export interface DashboardRow {
   patientUi: "renders";
   /** Indian sources retrieved for this medication (a stored, quote-verified Indian label or insert). 0 until a person adds one: see INDIAN_SOURCE_SEARCH. */
   indianSourcesVerified: number;
-  indianSourceStatus: "unresolved" | "retrieved";
+  /** Indian PvPI/IPC safety-alert entries stored for this medication. A safety signal is not a product label, so it is counted apart. */
+  indianSafetyAlertSources: number;
+  indianSourceStatus: "unresolved" | "safety-alert-only" | "retrieved";
   usLabelDiscovery: "candidates-found" | "none-found" | "error" | "not-run";
   usLabelCandidates: number;
   sourcesRetrieved: number;
@@ -101,7 +103,7 @@ export function dashboardRows(): DashboardRow[] {
     }
     if (srcs.some((x) => !x.identifier.startsWith("mlp.") && !formOf(x.formulation ?? x.title).plainOral)) work.push("label is for a non-plain form");
     if (srcs.length && !srcs.some((x) => x.jurisdiction === "US")) work.push("no US document: non-US source only");
-    if (srcs.length && !srcs.some((x) => x.jurisdiction === "IN")) work.push("no Indian source");
+    if (srcs.length && !srcs.some((x) => x.jurisdiction === "IN" && x.type !== "indian-safety-communication")) work.push("no Indian product label or insert");
     if (withheld.length) work.push(`${withheld.length} withheld shared claim(s)`);
     if (r.grade > 10) work.push(`reading grade ${r.grade} above 10 (screen only)`);
     let next: string;
@@ -112,8 +114,9 @@ export function dashboardRows(): DashboardRow[] {
     return {
       slug: d.slug,
       patientUi: "renders" as const,
-      indianSourcesVerified: SOURCE_RECORDS.filter((s) => s.slug === d.slug && s.jurisdiction === "IN").length,
-      indianSourceStatus: SOURCE_RECORDS.some((s) => s.slug === d.slug && s.jurisdiction === "IN") ? ("retrieved" as const) : ("unresolved" as const),
+      indianSourcesVerified: SOURCE_RECORDS.filter((s) => s.slug === d.slug && s.jurisdiction === "IN" && s.type !== "indian-safety-communication").length,
+      indianSafetyAlertSources: SOURCE_RECORDS.filter((s) => s.slug === d.slug && s.type === "indian-safety-communication").length,
+      indianSourceStatus: SOURCE_RECORDS.some((s) => s.slug === d.slug && s.jurisdiction === "IN" && s.type !== "indian-safety-communication") ? ("retrieved" as const) : SOURCE_RECORDS.some((s) => s.slug === d.slug && s.type === "indian-safety-communication") ? ("safety-alert-only" as const) : ("unresolved" as const),
       usLabelDiscovery: disc?.status ?? "not-run",
       usLabelCandidates: disc?.totalFound ?? 0,
       sourcesRetrieved: sourced,
@@ -160,7 +163,8 @@ export function dashboardSummary(rows: DashboardRow[]) {
     medications: rows.length,
     patientUiRenders: count((r) => r.patientUi === "renders"),
     indianSourcesVerified: count((r) => r.indianSourcesVerified > 0),
-    indianSourcesUnresolved: count((r) => r.indianSourceStatus === "unresolved"),
+    indianSourcesUnresolved: count((r) => r.indianSourceStatus !== "retrieved"),
+    indianSafetyAlertMedications: count((r) => r.indianSafetyAlertSources > 0),
     usLabelDiscovery: rows.reduce<Record<string, number>>((m, r) => ((m[r.usLabelDiscovery] = (m[r.usLabelDiscovery] ?? 0) + 1), m), {}),
     medicationsWithRetrievedSource: count((r) => r.sourcesRetrieved > 0),
     medicationsWithSourcedClaims: count((r) => r.claimsWithSource > 0),

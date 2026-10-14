@@ -68,13 +68,21 @@ describe("evidence layer: integrity", () => {
   test("no claim is an Indian label claim, none is reviewed, and every one says which non-Indian document it rests on", () => {
     for (const c of CLAIM_RECORDS) {
       const s = SOURCE_RECORDS.find((x) => x.id === c.sourceId)!;
+      if (s.type === "indian-safety-communication") {
+        // An Indian safety-alert row is an Indian source but not a product label: it says so, and only supports a reported-signal statement.
+        expect(s.jurisdiction).toBe("IN");
+        expect(c.category).toBe("side-effects");
+        expect(c.limitations.join(" ")).toMatch(/not a product label/);
+        expect(c.patientWording).toMatch(/safety signal/);
+        continue;
+      }
       expect(["US", "UK", "IE", "SG", "CA"]).toContain(s.jurisdiction);
       expect(["us-product-label", "international-patient-information", "international-regulator-label"]).toContain(s.type);
       expect(c.review).toBe("not-reviewed");
       expect(c.limitations.join(" ")).toMatch(s.jurisdiction === "UK" || s.jurisdiction === "IE" || s.jurisdiction === "SG" || s.jurisdiction === "CA" ? /(UK|Irish|Singapore|Canadian) (leaflet|package leaflet|formulary entry|product monograph)/i : /US (label|Medication Guide|patient information|prescribing information|drug-information page)/i);
       expect(c.verification).toBe("passage-found-in-source");
     }
-    expect(INDIAN_SOURCE_SEARCH.outcome).toBe("unresolved-for-every-medication");
+    expect(INDIAN_SOURCE_SEARCH.outcome).toBe("no-indian-product-label-for-any-medication");
     expect(INDIAN_SOURCE_SEARCH.organisations.every((o) => o.perMedicineRecordsRetrievable === false)).toBe(true);
   });
 
