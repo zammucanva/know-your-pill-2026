@@ -56,7 +56,7 @@ Registry findings (145 medications, `lens-summary.json`)
 Blocked / requires humans
 - Clinical review of any medication's content (reviewer TBD); authorship of Patient Guides (133), decision paths (133) and common mistakes (133).
 Next executable step
-- Batch-enable nothing yet: pick the next medicine with a Patient Guide (fluoxetine already meets the mechanical gate), obtain its clinical review record, then add the review to `REVIEW_RECORDS` and the slug to `LENS_ENABLED_SLUGS`. Engineering-only alternative: a Resident medication-interaction block from canonical `interactions` (shared with MBBS), following the same contract pattern.
+- Batch-enable nothing yet: pick the next medicine with a Patient Guide (fluoxetine already meets the mechanical gate), obtain its clinical review record, then add the review to `REVIEW_RECORDS` (one record per fact: slug, path and `valueHash` of the reviewed value) and the slug to `LENS_ENABLED_SLUGS`. Engineering-only alternative: a Resident medication-interaction block from canonical `interactions` (shared with MBBS), following the same contract pattern.
 
 ## 5. Not done / limits
 - One medication enabled, not 145. No UI integration with progress tracking or search (no regression, no new tracking).
