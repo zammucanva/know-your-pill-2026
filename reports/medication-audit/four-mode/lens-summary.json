@@ -107,7 +107,7 @@
       },
       "medicationsWithRetrievedSource": 130,
       "medicationsWithSourcedClaims": 130,
-      "claimsWithTraceableSource": 1829,
+      "claimsWithTraceableSource": 1853,
       "medicationsWithSourcedOnsetClaim": 21,
       "onsetScan": {
         "note": "Screening of US labels for sentences that may state onset. Candidates for a person to read in context; noisy; not claims.",
@@ -130,7 +130,7 @@
         "IN; US": 12,
         "CA": 1
       },
-      "claimsRestated": 1373,
+      "claimsRestated": 1397,
       "medicationGuideStatus": {
         "patient-guide": 12,
         "non-us-document-used": 53,
@@ -169,14 +169,14 @@
         },
         "interactions": {
           "authored-guide": 12,
-          "standard-wording": 12,
-          "source-backed": 120,
+          "standard-wording": 11,
+          "source-backed": 121,
           "registry-wording": 1
         },
         "seek-help": {
           "authored-guide": 12,
-          "general-direction": 44,
-          "source-backed": 89
+          "general-direction": 28,
+          "source-backed": 105
         },
         "questions": {
           "authored-guide": 12,
@@ -194,7 +194,7 @@
         "template-only": 16
       },
       "medicationsWithWithheldSharedClaims": 132,
-      "medicationsWithMissingElements": 121,
+      "medicationsWithMissingElements": 120,
       "readability": {
         "note": "Automated screening heuristic (Flesch-Kincaid grade, sentence length). Not a comprehension test.",
         "medicationsAboveGrade10": 112,

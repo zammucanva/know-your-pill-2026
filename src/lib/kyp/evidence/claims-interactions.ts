@@ -21,6 +21,12 @@ const LIMITS = [
   "US label only: Indian approval, strengths and warnings may differ.",
 ];
 
+const LIMITS_ADVICE = [
+  "US prescribing information (the part that tells clinicians what to counsel patients about): this restates one passage of it in plain words.",
+  "It is not a complete list of signs that need help. A sign that is not listed is not shown to be harmless, and when in doubt you should contact your pharmacist or prescriber.",
+  "US label only: Indian approval, strengths and warnings may differ. Any phone number or service it names is a US one.",
+];
+
 export type InteractionClaim = [slug: string, category: ClaimCategory, loinc: string, passage: string, wording: string];
 
 const counters = new Map<string, number>();
@@ -40,7 +46,7 @@ function build([slug, category, loinc, passage, wording]: InteractionClaim): Cla
     excerptId: `${slug}:pi:${loinc}`,
     passage,
     applicability: ["Adults, as described in the US prescribing information for the named product."],
-    limitations: LIMITS,
+    limitations: category === "urgent-help" || category === "how-to-take" ? LIMITS_ADVICE : LIMITS,
     verification: "passage-found-in-source",
     review: "not-reviewed",
     openQuestions: ["Compare with the Indian product information for the brand the patient is actually given."],
@@ -49,6 +55,7 @@ function build([slug, category, loinc, passage, wording]: InteractionClaim): Cla
 
 const CONTRA = "34070-3";
 const INTER = "34073-7";
+const PATIENT = "34076-0";
 const BOX = "34066-1";
 
 const DATA: InteractionClaim[] = [
@@ -371,6 +378,25 @@ const DATA: InteractionClaim[] = [
   ["phentermine-topiramate", "interactions", INTER, "Inform patients not to discontinue their combination oral contraceptive if spotting occurs, but to notify their health care provider if the spotting is troubling to them.", "Do not stop your combined oral contraceptive if spotting occurs, but tell your health care provider if the spotting is troubling."],
   ["phentermine-topiramate", "interactions", INTER, "The concomitant use of alcohol or CNS depressant drugs (e.g., barbiturates, benzodiazepines, and sleep medications) with phentermine or topiramate may potentiate CNS depression such as dizziness or cognitive adverse reactions, or other centrally mediated effects of these agents.", "Using alcohol or CNS depressant medicines (for example barbiturates, benzodiazepines and sleep medicines) with it may increase CNS depression, such as dizziness or problems with thinking."],
   ["phentermine-topiramate", "interactions", INTER, "Caution patients against excessive alcohol intake when taking phentermine and topiramate extended-release capsules.", "Avoid excessive alcohol while taking it."],
+  /* ---- when to get help, from the counselling section of the prescribing information ---- */
+  ["nefazodone", "urgent-help", PATIENT, "Patients should be advised to be alert for signs of liver dysfunction (jaundice, anorexia, gastrointestinal complaints, malaise, etc.) and to report them to their doctor immediately if they occur.", "Be alert for signs of liver problems (jaundice, loss of appetite, stomach or bowel complaints, feeling generally unwell, and similar) and tell your doctor immediately if they occur."],
+  ["vilazodone", "urgent-help", PATIENT, "Patients should contact their health care provider or report to the emergency room if they experience signs or symptoms of serotonin syndrome", "Contact your health care provider or go to the emergency room if you have signs or symptoms of serotonin syndrome."],
+  ["clozapine", "urgent-help", PATIENT, "Advise patients to consult their clinician immediately if they feel faint, lose consciousness or have signs or symptoms suggestive of bradycardia or arrhythmia", "See your clinician immediately if you feel faint, lose consciousness, or have signs or symptoms suggesting a slow heartbeat (bradycardia) or an abnormal heart rhythm (arrhythmia)."],
+  ["clozapine", "how-to-take", PATIENT, "if the patient misses taking clozapine tablets for 1 day or more, they should not restart their medication at the same dosage but should contact their physician for dosing instructions", "If you miss taking clozapine for 1 day or more, do not restart at the same dose. Contact your doctor for dosing instructions."],
+  ["olanzapine", "urgent-help", PATIENT, "Patients should be advised to call their doctor right away if they become severely ill and have some or all of these symptoms of dehydration: sweating too much or not at all, dry mouth, feeling very hot, feeling thirsty, not able to produce urine", "Call your doctor right away if you become severely ill and have some or all of these symptoms of dehydration: sweating too much or not at all, dry mouth, feeling very hot, feeling thirsty, not being able to pass urine."],
+  ["lithium", "urgent-help", PATIENT, "Advise patients to discontinue lithium treatment and contact their healthcare provider if clinical signs of lithium toxicity such as diarrhea, vomiting, tremor, lack of muscle coordination, drowsiness, abnormal heart rhythm or muscular weakness occur", "Stop taking lithium and contact your healthcare provider if you have signs of lithium toxicity such as diarrhea, vomiting, tremor, lack of muscle coordination, drowsiness, abnormal heart rhythm or muscular weakness."],
+  ...["alprazolam", "lorazepam", "oxazepam", "quazepam", "temazepam", "triazolam"].map((slug): InteractionClaim => [slug, "urgent-help", PATIENT, "Inform patients about the signs and symptoms of benzodiazepine abuse, misuse, and addiction; to seek medical help if they develop these signs and/or symptoms", "You should know the signs and symptoms of benzodiazepine abuse, misuse and addiction, and seek medical help if you develop them."]),
+  ["triazolam", "urgent-help", PATIENT, "Advise patients to report similar experiences to their healthcare provider immediately, since \"sleep-driving\" can be dangerous.", "Report episodes like sleep-driving to your healthcare provider immediately, because sleep-driving can be dangerous."],
+  ["quazepam", "urgent-help", PATIENT, "Tell patients that Quazepam Tablets can worsen depression, and to immediately report any suicidal thoughts", "It can worsen depression. Report any suicidal thoughts immediately."],
+  ["eszopiclone", "urgent-help", PATIENT, "Tell patients to immediately report any suicidal thoughts.", "Report any suicidal thoughts immediately."],
+  ["armodafinil", "urgent-help", PATIENT, "Instruct patients to discontinue NUVIGIL and consult with their healthcare provider immediately if a skin reaction such as rash, mouth sores, blisters, or peeling skin occurs during treatment with NUVIGIL", "Stop taking it and consult your healthcare provider immediately if you get a skin reaction such as a rash, mouth sores, blisters or peeling skin."],
+  ["armodafinil", "urgent-help", PATIENT, "Advise patients to stop taking NUVIGIL and contact their physician right away if they experience, depression, anxiety, or signs of psychosis or mania.", "Stop taking it and contact your doctor right away if you have depression, anxiety, or signs of psychosis or mania."],
+  ["armodafinil", "urgent-help", PATIENT, "a fever associated with signs of other organ system involvement (e.g., rash, lymphadenopathy, hepatic dysfunction) may be drug-related and should be reported to their healthcare provider immediately", "A fever together with signs that other organs are involved (for example rash, swollen lymph nodes, liver problems) may be related to the medicine and should be reported to your healthcare provider immediately."],
+  ["buprenorphine", "urgent-help", PATIENT, "Educate patients and caregivers on how to recognize respiratory depression and emphasize the importance of calling 911 or getting emergency medical help right away in the event of a known or suspected overdose", "Patients and caregivers should learn how to recognise slowed breathing (respiratory depression), and call emergency services or get emergency medical help right away if an overdose is known or suspected. The label names the US number 911; that number does not apply in India."],
+  ["naltrexone-bupropion", "urgent-help", PATIENT, "Patients should be advised to call their healthcare provider to report new or sudden changes in mood, behavior, thoughts, or feelings.", "Call your healthcare provider to report new or sudden changes in mood, behavior, thoughts or feelings."],
+  ["naltrexone-bupropion", "urgent-help", PATIENT, "Patients should be advised to call their healthcare provider if they experience increased blood pressure or heart rate.", "Call your healthcare provider if you have an increase in blood pressure or heart rate."],
+  ["varenicline", "urgent-help", PATIENT, "Instruct patients to discontinue varenicline tablets and contact a healthcare provider immediately if they experience a seizure while on treatment", "Stop taking varenicline and contact a healthcare provider immediately if you have a seizure while on treatment."],
+  ["varenicline", "urgent-help", PATIENT, "Advise patients to stop taking varenicline tablets at the first sign of rash with mucosal lesions or skin reaction and contact a healthcare provider immediately", "Stop taking varenicline at the first sign of a rash with sores on the lining of the mouth or other mucous membranes, or of a skin reaction, and contact a healthcare provider immediately."],
 ];
 
 export const INTERACTION_CLAIMS: ClaimRecord[] = DATA.map(build);
