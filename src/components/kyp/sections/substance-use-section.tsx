@@ -134,7 +134,7 @@ export function SubstanceUseSection() {
                   </div>
 
                   {/* Neurotransmitter — micro text */}
-                  <span className="text-[0.6rem] text-muted-foreground/40 hidden sm:block shrink-0">
+                  <span className="text-[0.6rem] text-muted-foreground hidden sm:block shrink-0">
                     {sub.neurotransmitter}
                   </span>
 

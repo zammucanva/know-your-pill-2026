@@ -628,7 +628,7 @@ export function MedicalKnowledgeChain({ drugSlug }: MedicalKnowledgeChainProps) 
                       {row.relationship || row.descriptor}
                       {row.relationship && row.descriptor ? ` · ${row.descriptor}` : ""}
                     </span>
-                    <span className="text-[0.625rem] font-medium uppercase tracking-[0.14em] text-muted-foreground/60 sm:justify-self-end">
+                    <span className="text-[0.625rem] font-medium uppercase tracking-[0.14em] text-muted-foreground sm:justify-self-end">
                       {row.kindLabel}
                     </span>
                   </a>

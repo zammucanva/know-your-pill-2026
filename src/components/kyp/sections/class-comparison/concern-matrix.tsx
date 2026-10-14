@@ -48,7 +48,7 @@ function CompactCell({ cell }: { cell: ConcernCell }) {
     return (
       <div className="py-2">
         <p className="text-xs italic text-muted-foreground/75">Data not available</p>
-        <p className="mt-0.5 hidden text-[0.65rem] leading-snug text-muted-foreground/40 md:block">
+        <p className="mt-0.5 hidden text-[0.65rem] leading-snug text-muted-foreground md:block">
           not listed in this profile
         </p>
       </div>
@@ -152,7 +152,7 @@ function DetailBlock({
                           <Badge variant={severityBadgeVariant[entry.severity]} size="sm">
                             {SEVERITY_LABEL[entry.severity]}
                           </Badge>
-                          <span className="text-[0.65rem] text-muted-foreground/75">
+                          <span className="text-[0.65rem] text-muted-foreground">
                             {entry.list === "common" ? "common list" : "serious list"}
                           </span>
                         </div>
@@ -190,7 +190,7 @@ function DetailBlock({
                     ))}
                   </ul>
                 )}
-                <p className="mt-3 text-[0.65rem] leading-snug text-muted-foreground/75">
+                <p className="mt-3 text-[0.65rem] leading-snug text-muted-foreground">
                   {cell.basis}
                 </p>
               </>
@@ -198,7 +198,7 @@ function DetailBlock({
           </div>
         );
       })}
-      <p className="text-[0.65rem] leading-snug text-muted-foreground/40 md:col-span-2">
+      <p className="text-[0.65rem] leading-snug text-muted-foreground md:col-span-2">
         All values are copied verbatim from {drug.genericName}&apos;s own reviewed
         profile: the common/serious adverse-effect lists, monitoring list,
         interaction list and Prescriber&apos;s Guide layer. Nothing is merged,
@@ -249,7 +249,7 @@ export function ConcernMatrix({ cards, concerns, classLabel }: ConcernMatrixProp
                     <span className="block text-xs font-semibold text-foreground">
                       {concern.label}
                     </span>
-                    <span className="mt-0.5 block max-w-[220px] text-[0.65rem] font-normal leading-snug text-muted-foreground/70">
+                    <span className="mt-0.5 block max-w-[220px] text-[0.65rem] font-normal leading-snug text-muted-foreground">
                       {concern.blurb}
                     </span>
                   </th>
@@ -279,7 +279,7 @@ export function ConcernMatrix({ cards, concerns, classLabel }: ConcernMatrixProp
                         >
                           {card.drug.genericName}
                         </Link>
-                        <span className="mt-0.5 block text-[0.65rem] text-muted-foreground/60">
+                        <span className="mt-0.5 block text-[0.65rem] text-muted-foreground">
                           {card.drug.drugClassLabel}
                           {card.drug.drugClassLabel !== classLabel && " · subgroup"}
                         </span>
@@ -340,7 +340,7 @@ export function ConcernMatrix({ cards, concerns, classLabel }: ConcernMatrixProp
                   >
                     {card.drug.genericName}
                   </Link>
-                  <p className="mt-0.5 text-[0.65rem] text-muted-foreground/60">
+                  <p className="mt-0.5 text-[0.65rem] text-muted-foreground">
                     {card.drug.drugClassLabel}
                   </p>
                 </div>
@@ -361,7 +361,7 @@ export function ConcernMatrix({ cards, concerns, classLabel }: ConcernMatrixProp
               <dl className="divide-y divide-border/20">
                 {card.cells.map((cell, i) => (
                   <div key={cell.concernId} className="px-4 py-3">
-                    <dt className="text-[0.65rem] font-semibold uppercase tracking-wide text-muted-foreground/70">
+                    <dt className="text-[0.65rem] font-semibold uppercase tracking-wide text-muted-foreground">
                       {concerns[i]?.label}
                     </dt>
                     <dd className="mt-1">

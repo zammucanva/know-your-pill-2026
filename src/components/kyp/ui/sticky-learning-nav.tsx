@@ -244,7 +244,7 @@ export function StickyLearningNav({ items, drugSlug }: StickyLearningNavProps) {
       <aside className="hidden lg:block fixed left-0 top-16 z-30 w-48 xl:w-52 border-r border-border/40 bg-card/40 backdrop-blur-sm print:hidden">
         <div className="px-3 py-3">
           {/* Progress header — compact */}
-          <div className="flex items-center justify-between text-[0.65rem] font-medium uppercase tracking-wide text-muted-foreground/80">
+          <div className="flex items-center justify-between text-[0.65rem] font-medium uppercase tracking-wide text-muted-foreground">
             <span>Progress</span>
             <span className="tabular-nums">{completedCount}/{totalCount}</span>
           </div>

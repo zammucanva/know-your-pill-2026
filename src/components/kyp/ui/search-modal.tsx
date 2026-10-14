@@ -261,7 +261,7 @@ export function SearchModal({ open, onOpenChange, initialQuery = null }: SearchM
                     <button
                       type="button"
                       onClick={clearHistory}
-                      className="flex items-center gap-1 text-[0.65rem] text-muted-foreground/50 hover:text-muted-foreground"
+                      className="flex items-center gap-1 text-[0.65rem] text-muted-foreground hover:text-muted-foreground"
                     >
                       <Trash2 className="h-2.5 w-2.5" />
                       Clear
@@ -277,7 +277,7 @@ export function SearchModal({ open, onOpenChange, initialQuery = null }: SearchM
                       <Clock className="h-3 w-3 shrink-0 text-muted-foreground/40" />
                       <span className="truncate">{entry.query}</span>
                       {entry.resultTitle && (
-                        <span className="ml-auto truncate text-[0.65rem] text-muted-foreground/50">
+                        <span className="ml-auto truncate text-[0.65rem] text-muted-foreground">
                           → {entry.resultTitle}
                         </span>
                       )}
