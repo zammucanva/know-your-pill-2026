@@ -20,3 +20,24 @@ describe("diagnostics never echo a connection string with its credentials", () =
     expect(s).not.toMatch(/\$\{dbUrl\}/);
   });
 });
+
+import { redactSecretsInText } from "@/lib/kyp/redact-url";
+describe("free text such as a thrown error never carries a credential", () => {
+  test("connection URLs, key=value secrets, bearer tokens and JWTs are replaced", () => {
+    const err = new Error("connect ECONNREFUSED postgresql://role:Pa55w0rd-value@db.example.com:5432/app?sslmode=require; password=hunter2-value; Authorization: Bearer abcdef0123456789abcdef; token: 'tok-12345678'; jwt eyJhbGciOiJIUzI1.eyJzdWIiOiIxMjM0NTY3.SflKxwRJSMeKKF2QT4fw");
+    const out = redactSecretsInText(err.message);
+    for (const secret of ["Pa55w0rd-value", "role:", "hunter2-value", "abcdef0123456789abcdef", "tok-12345678", "eyJhbGciOiJIUzI1", "SflKxwRJSMeKKF2QT4fw"]) expect(out).not.toContain(secret);
+    expect(out).toContain("ECONNREFUSED");
+    expect(out).toContain("<credentials hidden>");
+  });
+  test("URL-encoded and unusual credentials are covered, and ordinary text is left alone", () => {
+    expect(redactSecretsInText("postgres://u:%3Fp%40ss@h:1/d failed")).not.toMatch(/%3F|%40|p%40ss/);
+    expect(redactSecretsInText("The test database is local and named kyp_test.")).toBe("The test database is local and named kyp_test.");
+    expect(redactSecretsInText("https://example.com/path")).toBe("https://example.com/path");
+  });
+  test("the test harness routes database-reset failures through the redactor", () => {
+    const h = readFileSync("tests/helpers/server.ts", "utf8");
+    expect(h).toContain("redactSecretsInText(");
+    expect(h).toMatch(/Test database reset failed/);
+  });
+});

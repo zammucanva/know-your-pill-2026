@@ -21,6 +21,7 @@ import { connect } from "net";
 import { createWriteStream, existsSync } from "fs";
 import { tmpdir } from "os";
 import { join, resolve } from "path";
+import { redactSecretsInText } from "../../src/lib/kyp/redact-url";
 import type { PrismaClient } from "@prisma/client";
 
 // The first test in a file that calls ensureServer() pays for the database
@@ -141,7 +142,12 @@ export async function ensureServer(): Promise<string> {
   }
   await Bun.sleep(500);
   await assertDatabaseReachable();
-  await resetTestDatabase();
+  try {
+    await resetTestDatabase();
+  } catch (e) {
+    // A failure here must not echo connection strings or credentials into test output.
+    throw new Error(`Test database reset failed: ${redactSecretsInText(e instanceof Error ? e.message : String(e)).slice(0, 1500)}`);
+  }
   serverProc = spawn("node", [resolve(process.cwd(), ".next/standalone/server.js")], {
     env: {
       ...process.env,
