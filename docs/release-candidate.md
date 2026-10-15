@@ -57,3 +57,6 @@ User actions still required, in order:
 3. Supply genuine Indian package inserts through the importer. None are stored.
 4. Supply official product information for blonanserin, perospirone, zotepine, cyamemazine, loflazepate, flunitrazepam, tacrine and caprylidene.
 5. Push the branch or open a pull request to the repository's protected main so hosted CI runs, then read the result for the exact commit. Authorisation to push has not been given here.
+
+## Correction to an earlier coverage headline (2026-10-19)
+Earlier reports said "130 medicines have label-backed claims". That counted medicines with a claim of any kind. Recomputed by the kind of document each claim rests on (`medication-evidence-gap-register.md`): **121** medicines have a claim that rests on a product label, leaflet, monograph or formulary entry; 4 have only MedlinePlus patient-information claims; 5 have only PvPI signal rows; 15 have no source-backed claim (the 8 unsourced medicines plus 7 Patient Guide medicines whose guides have no claim-level source). None of the 12 authored Patient Guides has a label-backed claim, so a reviewer must check the guides against current product information. 0 Indian product-label claims.
