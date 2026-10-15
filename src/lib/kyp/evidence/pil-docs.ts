@@ -47,7 +47,7 @@ export interface PilDoc {
   accessedAt: string;
   claims: PilClaim[];
   /** Set on a manually imported Indian document: what the import script checked. The document is not re-downloadable. */
-  importCheck?: { sha256: string; checkedAt: string; passagesFound: number; passages: number; readWith: string; providedBy: string };
+  importCheck?: { sha256: string; checkedAt: string; passagesFound: number; passages: number; readWith: string; providedBy: string; documentType?: string; provenance?: string; importedAt?: string };
 }
 
 const ON = "onset-works-gradually";

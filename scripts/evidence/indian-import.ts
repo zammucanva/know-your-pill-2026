@@ -8,6 +8,8 @@
  * spec.json:
  *   {
  *     "slug": "sertraline",
+ *     "documentType": "package-insert | prescribing-information | patient-information-leaflet",
+ *     "provenance": "who supplied the document, or where and when you obtained it (at least 15 characters)",
  *     "pdf": "C:/path/to/the-insert.pdf",
  *     "url": "https://...official address of the document (host must be in ALLOWED_SOURCE_HOSTS)",
  *     "product": "Brand X 50 mg film-coated tablets (sertraline)",
@@ -41,8 +43,20 @@ function namesFor(slug: string): string[] {
   return [...new Set([slug, d.genericName, ...(d.brandNames ?? [])].flatMap((n) => String(n).toLowerCase().split(/[^a-z]+/)).filter((w) => w.length >= 4 && !["sodium", "hydrochloride", "tablet", "tablets"].includes(w)))];
 }
 
+/** What kind of Indian document this is. Pharmacovigilance alerts and general health information are NOT accepted here. */
+export const DOCUMENT_TYPES = ["package-insert", "prescribing-information", "patient-information-leaflet"] as const;
+export type DocumentType = (typeof DOCUMENT_TYPES)[number];
+/** Words that mark a document as a safety alert, news item or general article, which must not enter as a product label. */
+const NOT_A_LABEL = /\b(pvpi|pharmacovigilance|safety alert|drug safety|adverse (?:drug )?reaction (?:report|list|alert)|press release|newsletter|advertis(?:e|ement)|blog)\b/i;
+const NEGATION = /\b(?:not|never|no|avoid|without|cannot|can't|don't|do not|must not|should not)\b/i;
+const CONDITION = /\b(?:if|unless|except|only|until|before|after|when|while)\b/i;
+
 export interface IndianImportSpec {
   slug: string;
+  /** package-insert, prescribing-information or patient-information-leaflet of a specific Indian product. */
+  documentType: DocumentType;
+  /** How the person came to hold the document: who supplied it or where it was obtained, and when. Free text, required. */
+  provenance: string;
   pdf: string;
   url: string;
   product: string;
@@ -73,6 +87,10 @@ export function validateSpec(spec: IndianImportSpec, text: string): string[] {
   }
   if (host && !ALLOWED_SOURCE_HOSTS.includes(host)) problems.push(`host ${host} is not in ALLOWED_SOURCE_HOSTS: a person must add it on purpose (src/lib/kyp/evidence/index.ts)`);
   for (const f of ["product", "holder", "revised", "formulation"] as const) if (!spec[f]?.trim()) problems.push(`${f} is required`);
+  if (!DOCUMENT_TYPES.includes(spec.documentType)) problems.push(`documentType must be one of ${DOCUMENT_TYPES.join(", ")} (got "${spec.documentType ?? ""}"). Safety alerts and general articles are not product labels and are not imported here`);
+  if ((spec.provenance ?? "").trim().length < 15) problems.push("provenance is required: say who supplied the document or where and when it was obtained (at least 15 characters)");
+  const labelText = `${spec.product ?? ""} ${spec.provenance ?? ""} ${spec.url ?? ""}`;
+  if (NOT_A_LABEL.test(labelText)) problems.push(`the product, provenance or address reads like a safety alert, news item or advertisement ("${(NOT_A_LABEL.exec(labelText) ?? [""])[0]}"). Only a product's own package insert, prescribing information or leaflet is accepted`);
   if (!spec.claims?.length) problems.push("at least one claim is required");
   const flatText = flat(text);
   if (flatText.length < 200) problems.push("the document has almost no readable text (scanned image or damaged PDF?): nothing can be checked against it");
@@ -95,6 +113,8 @@ export function validateSpec(spec: IndianImportSpec, text: string): string[] {
       if (!flatText.includes(flat(c.passage))) problems.push(`${tag}: passage not found in the document text: "${c.passage.slice(0, 70)}"`);
       const extra = [...numbersIn(c.wording)].filter((n) => !numbersIn(c.passage).has(n));
       if (extra.length) problems.push(`${tag}: wording has number(s) ${extra.join(", ")} that the passage does not`);
+      if (NEGATION.test(c.passage) && !NEGATION.test(c.wording)) problems.push(`${tag}: the passage contains a negation or an avoidance ("not", "no", "avoid", "without" ...) that the wording drops; keep it, or the statement may say the opposite`);
+      if (CONDITION.test(c.passage) && !CONDITION.test(c.wording)) problems.push(`${tag}: the passage states a condition or limit ("if", "unless", "only", "before", "after" ...) that the wording drops; keep it`);
       if (flat(c.wording) === flat(c.passage)) problems.push(`${tag}: wording equals the passage; give a plain-language rewrite or leave it out`);
       if (flat(c.passage).length < 25) problems.push(`${tag}: passage is too short to identify where it came from (25 characters minimum)`);
       if (APPROVAL_LANGUAGE.test(c.wording)) problems.push(`${tag}: wording claims a review or approval; an import is never reviewed`);
@@ -112,17 +132,58 @@ export function readPdfText(pdf: string): string {
   return ["-layout", "-raw"].map((mode) => execFileSync("pdftotext", [mode, "-enc", "UTF-8", pdf, "-"], { encoding: "utf8", maxBuffer: 64 * 1024 * 1024 })).join("\n");
 }
 
+interface StoredRecord {
+  slug: string;
+  file: string;
+  product: string;
+  holder: string;
+  revised: string;
+  formulation: string;
+  importCheck?: { sha256: string };
+}
+
+/**
+ * Conflicts with records already stored. The same document (same bytes) must carry the same product, holder,
+ * formulation and revision; two different documents must not claim to be the same product at the same revision
+ * (one of them is mislabelled). Re-importing identical metadata is fine: it replaces its own record.
+ */
+export function conflictsWith(existing: StoredRecord[], spec: Pick<IndianImportSpec, "slug" | "product" | "holder" | "revised" | "formulation">, sha256: string): string[] {
+  const norm = (t: string) => t.toLowerCase().replace(/\s+/g, " ").trim();
+  const problems: string[] = [];
+  for (const r of existing.filter((x) => x.slug === spec.slug)) {
+    const same = r.importCheck?.sha256 === sha256;
+    const sameMeta = norm(r.product) === norm(spec.product) && norm(r.holder) === norm(spec.holder) && norm(r.formulation) === norm(spec.formulation) && norm(r.revised) === norm(spec.revised);
+    if (same && !sameMeta) problems.push(`this exact document is already stored as "${r.product}" (${r.holder}, ${r.formulation}, revised ${r.revised}); the metadata given now differs. Correct one of them: a document has one product, holder, formulation and revision`);
+    if (!same && sameMeta) problems.push(`a different document is already stored for the same product, holder, formulation and revision ("${r.product}", revised ${r.revised}). One of the two is mislabelled or out of date; resolve before importing`);
+  }
+  return problems;
+}
+
+/** Append-only record of every import attempt (accepted or rejected). It holds metadata and counts, never document text. */
+function appendLog(logPath: string, entry: Record<string, unknown>) {
+  const all: unknown[] = existsSync(logPath) ? JSON.parse(readFileSync(logPath, "utf8")) : [];
+  writeFileSync(logPath, JSON.stringify([...all, entry], null, 1) + "\n");
+}
+
 export function importIndianLabel(spec: IndianImportSpec, out: string, today = new Date().toLocaleDateString("en-CA")) {
+  const logPath = out.replace(/\.json$/, "") + ".log.json";
+  const specSha = createHash("sha256").update(JSON.stringify({ ...spec, pdf: undefined })).digest("hex");
   if (!existsSync(spec.pdf)) throw new Error(`PDF not found: ${spec.pdf}`);
   let text: string;
   try {
     text = readPdfText(spec.pdf);
   } catch (e) {
-    return { ok: false as const, problems: [`the PDF could not be read (${(e as Error).message.slice(0, 120)}): malformed file or pdftotext missing`] };
+    const problems = [`the PDF could not be read (${(e as Error).message.slice(0, 120)}): malformed file or pdftotext missing`];
+    appendLog(logPath, { at: today, slug: spec.slug, outcome: "rejected", specSha256: specSha, problems: problems.length });
+    return { ok: false as const, problems };
   }
-  const problems = validateSpec(spec, text);
-  if (problems.length) return { ok: false as const, problems };
   const sha256 = createHash("sha256").update(readFileSync(spec.pdf)).digest("hex");
+  const existing: StoredRecord[] = existsSync(out) ? JSON.parse(readFileSync(out, "utf8")) : [];
+  const problems = [...validateSpec(spec, text), ...conflictsWith(existing, spec, sha256)];
+  if (problems.length) {
+    appendLog(logPath, { at: today, slug: spec.slug, outcome: "rejected", documentSha256: sha256, specSha256: specSha, problems: problems.length });
+    return { ok: false as const, problems };
+  }
   const record = {
     slug: spec.slug,
     file: `in-${sha256.slice(0, 12)}`,
@@ -133,14 +194,15 @@ export function importIndianLabel(spec: IndianImportSpec, out: string, today = n
     holder: spec.holder,
     revised: spec.revised,
     formulation: spec.formulation,
-    limits: ["Supplied by a person from an Indian document; the document itself is not stored here, only the short passages below and its SHA-256.", "It applies to the named brand and strength: other Indian brands, strengths and forms may differ."],
+    limits: [`Document type: ${spec.documentType.replace(/-/g, " ")}. Provenance as stated by the person who imported it: ${spec.provenance.trim()}`, "Supplied by a person from an Indian document; the document itself is not stored here, only the short passages below and its SHA-256.", "It applies to the named brand and strength: other Indian brands, strengths and forms may differ."],
     accessedAt: today,
     claims: spec.claims.map((c) => [c.category, c.passage.replace(/\s+/g, " ").trim(), c.wording.trim(), c.replacesRule ? { replacesRule: c.replacesRule } : undefined].filter((x) => x !== undefined)),
-    importCheck: { sha256, checkedAt: today, passagesFound: spec.claims.length, passages: spec.claims.length, readWith: "pdftotext -layout and -raw", providedBy: "a person (manual import)" },
+    importCheck: { sha256, checkedAt: today, passagesFound: spec.claims.length, passages: spec.claims.length, readWith: "pdftotext -layout and -raw", providedBy: "a person (manual import)", documentType: spec.documentType, provenance: spec.provenance.trim(), importedAt: today },
   };
   const all: { slug: string; file: string }[] = existsSync(out) ? JSON.parse(readFileSync(out, "utf8")) : [];
   const next = [...all.filter((r) => !(r.slug === record.slug && r.file === record.file)), record];
   writeFileSync(out, JSON.stringify(next, null, 1) + "\n");
+  appendLog(logPath, { at: today, slug: spec.slug, outcome: "accepted", documentSha256: sha256, specSha256: specSha, product: spec.product, claims: spec.claims.length });
   return { ok: true as const, record };
 }
 
