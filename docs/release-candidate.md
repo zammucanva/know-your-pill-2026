@@ -14,7 +14,7 @@ Engineering status and clinical status are separate. A green run below says the 
 ## Recorded results at the release candidate (2026-10-18)
 | Check | Result |
 |---|---|
-| `bun test tests/` with an isolated PostgreSQL 16.9 | 2,106 pass, 0 fail, 0 skipped, 0 timeouts (90 files, 297 s) |
+| `bun test tests/` with an isolated PostgreSQL 16.9 | 2,112 pass, 0 fail, 0 skipped, 0 timeouts (90 files, 331 s), run from a clean `bun install --frozen-lockfile` copy of the committed tree |
 | `tsc`, `lint:dashes`, four-mode audit, ESLint on changed files | clean |
 | Content lock | 165/165 |
 | Production build | exit 0 |
@@ -42,3 +42,18 @@ A short fragment of the exposed password was briefly in one local commit's test 
 - The PostgreSQL digest in `ci.yml` equals the `Docker-Content-Digest` the Docker registry (registry-1.docker.io) returns for `library/postgres:16.9`, for both the OCI index and Docker manifest-list media types. The image itself was not pulled here.
 - Hosted CI for this branch: **none exists**. The branch has never been pushed, and the workflow only runs on pushes to `main` and `codex/**` and on pull requests to `main`. The latest hosted `ci.yml` run on `main` (run 37969674785, commit 0a0e427, 2026-10-09) succeeded, including its lint, content-lock, build and full test steps; that run says nothing about this branch's changes. It was read with the already-authenticated GitHub CLI, read-only.
 
+## Release decision (2026-10-19)
+**Engineering: a verified release candidate, pending a hosted CI run. Clinical: not ready, not reviewed.**
+
+Verified from a clean copy of the committed tree (no `.env.local`, no untracked files) with the frozen-lockfile toolchain: toolchain check, `prisma generate`, `tsc`, repo-wide ESLint (0 errors, 5 warnings), content lock (165/165), dash lint, four-mode audit, `bun run build` (exit 0), and `bun test tests/` against an isolated PostgreSQL 16.9: 2,112 pass, 0 fail, 0 skipped, 0 timeouts. Production-browser journeys and axe checks (contrast, ARIA, names, labels) passed in light and dark at 375 px for sertraline in all four modes, quetiapine (safety-signal and information-page states) and blonanserin (unsourced, visibly unavailable).
+
+Found and fixed in this gate: `bun run build` failed on Windows after a successful Next build because the script used shell `cp -r` (now `scripts/copy-standalone-assets.mjs`); the toolchain check now covers all direct dependencies, the Bun version and Node; `package-lock.json` disagrees with `bun.lock` on 20 of 35 direct dependencies and is not what CI uses.
+
+Hosted CI: no run exists for this commit (the branch was never pushed; the GitHub CLI reports the commit unknown to GitHub). It is a release gate that needs the user to push or open a pull request.
+
+User actions still required, in order:
+1. Rotate the exposed Supabase database password and update `.env.local` and Vercel (`docs/credential-rotation-handoff.md`). Not done.
+2. Obtain a qualified clinical review of the sertraline, fluoxetine, "In short" and viva packets. No claim is reviewed or approved.
+3. Supply genuine Indian package inserts through the importer. None are stored.
+4. Supply official product information for blonanserin, perospirone, zotepine, cyamemazine, loflazepate, flunitrazepam, tacrine and caprylidene.
+5. Push the branch or open a pull request to the repository's protected main so hosted CI runs, then read the result for the exact commit. Authorisation to push has not been given here.

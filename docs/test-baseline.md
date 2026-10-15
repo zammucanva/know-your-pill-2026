@@ -56,3 +56,6 @@ Earlier notes called the repo-wide ESLint output (43 problems, 38 errors, mostly
 ## Final regression run (2026-10-18)
 - Same isolated PostgreSQL 16.9 procedure and a fresh production build: `bun test tests/` **2,106 pass, 0 fail, 0 skipped, 0 timeouts** (90 files, 297 s). A run just before it had one failure, an overly broad test-isolation guard that took the package name `@prisma/client` inside a string for a Prisma import; the guard was corrected to look for real imports and the rerun was clean.
 - Also run: `tsc`, `lint:dashes`, four-mode audit, content lock, ESLint on changed files, a scan of all 9,572 git objects (0 occurrences of the exposed password or its fragments), and production-browser journeys and axe checks for sertraline (four modes), quetiapine, mesoridazine and blonanserin.
+
+## Clean-install gate (2026-10-19)
+`bun test tests/` from a clean copy of the committed tree with `bun install --frozen-lockfile`, against the same isolated PostgreSQL 16.9 procedure: **2,112 pass, 0 fail, 0 skipped, 0 timeouts** (90 files, 331 s). The first attempt at `bun run build` there exited 1 on Windows (shell `cp -r` after a successful Next build); fixed in `scripts/copy-standalone-assets.mjs`, then `bun run build` exited 0.
