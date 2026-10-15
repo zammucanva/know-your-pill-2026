@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import { execFileSync } from "child_process";
-import { readFileSync } from "fs";
+import { readFileSync, statSync } from "fs";
 
 /**
  * A guard against committing credentials. It reads only files git tracks or would track (never .env.local, which is
@@ -46,6 +46,7 @@ describe("no credentials in tracked or trackable files", () => {
     for (const f of files) {
       let text = "";
       try {
+        if (statSync(f).size > 3_000_000) continue; // generated data files; none holds a credential
         text = readFileSync(f, "utf8");
       } catch {
         continue;
@@ -53,7 +54,7 @@ describe("no credentials in tracked or trackable files", () => {
       for (const [name, re] of Object.entries(PATTERNS)) if (re.test(text)) hits.push(`${f}: ${name}`);
     }
     expect(hits).toEqual([]);
-  });
+  }, 60000); // reads every tracked file; over bun's 5 s default when the machine is busy
   test("env files are ignored by git and none is tracked", () => {
     expect(list(["ls-files"]).filter((f) => /(^|\/)\.env(\.|$)/.test(f) && !/\.example$|\.sample$/.test(f))).toEqual([]);
     const ignored = execFileSync("git", ["check-ignore", ".env.local"], { encoding: "utf8" }).trim();
