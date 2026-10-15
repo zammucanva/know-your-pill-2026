@@ -52,3 +52,7 @@ Limitations: this is one comparison per side, and the load-dependent suites are 
 
 ## ESLint baseline, corrected (2026-10-17)
 Earlier notes called the repo-wide ESLint output (43 problems, 38 errors, mostly `react-hooks/set-state-in-effect`) "baseline debt that is identical on `main`". That was a wrong explanation. The local `node_modules` was newer than `bun.lock` (eslint-plugin-react-hooks 7.1.1 against 7.0.1 pinned, eslint-config-next 16.4.0 against 16.3.6, eslint 9.39.5 against 9.39.2). With the frozen lockfile installed in a scratch folder, `bun run lint` on this branch exits 0 with 0 errors and 5 warnings, and the last hosted CI run on `main` passed its lint step. Run `bun scripts/check-toolchain.ts` (or `bun install --frozen-lockfile`) before judging lint locally. The scratch install was not used to run the test suite.
+
+## Final regression run (2026-10-18)
+- Same isolated PostgreSQL 16.9 procedure and a fresh production build: `bun test tests/` **2,106 pass, 0 fail, 0 skipped, 0 timeouts** (90 files, 297 s). A run just before it had one failure, an overly broad test-isolation guard that took the package name `@prisma/client` inside a string for a Prisma import; the guard was corrected to look for real imports and the rerun was clean.
+- Also run: `tsc`, `lint:dashes`, four-mode audit, content lock, ESLint on changed files, a scan of all 9,572 git objects (0 occurrences of the exposed password or its fragments), and production-browser journeys and axe checks for sertraline (four modes), quetiapine, mesoridazine and blonanserin.
