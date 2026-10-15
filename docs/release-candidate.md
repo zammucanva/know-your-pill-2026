@@ -3,7 +3,7 @@
 Engineering status and clinical status are separate. A green run below says the software behaves as tested. It says nothing about whether any medical statement is correct, applicable or approved. No statement has a recorded qualified review (`REVIEW_RECORDS` is empty and every claim is `not-reviewed`).
 
 ## Reproducible command sequence (local, no production access)
-1. `bun install` (or use the existing `node_modules`), and keep working-tree line endings as the repository index has them (LF); the checks that read files normalise CRLF where they must.
+1. `bun install --frozen-lockfile` with Bun 1.3.4 (the version CI pins; `package.json` declares `"packageManager": "bun@1.3.4"`), then `bun scripts/check-toolchain.ts`, which must print "Toolchain matches CI". `bun.lock` is authoritative. The tracked `package-lock.json` disagrees with `bun.lock` on 20 of 35 direct dependencies, so `npm install` gives a different toolchain from CI; do not use it for release checks. Keep working-tree line endings as the repository index has them (LF); the checks that read files normalise CRLF where they must.
 2. Static: `npx tsc --noEmit`; `npm run lint:dashes`; `bun scripts/audit-four-mode-coverage.ts --check`; `bun scripts/check-toolchain.ts` first (it fails if `node_modules` has drifted from `bun.lock`), then `bun run lint`.
 3. Content lock: `bun scripts/content-lock.ts` (165/165 files, LF-normalised hash).
 4. Build: `rm -rf .next/standalone && npm run build` (the server tests need `.next/standalone`).
