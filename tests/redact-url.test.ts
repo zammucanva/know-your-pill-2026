@@ -41,3 +41,29 @@ describe("free text such as a thrown error never carries a credential", () => {
     expect(h).toMatch(/Test database reset failed/);
   });
 });
+
+describe("malformed and hostile input", () => {
+  const j = (...p: string[]) => p.join("");
+  test("truncated, empty-user, double-@ and non-string inputs never echo a secret or throw", () => {
+    const secret = j("Zq", "81-notARealPass");
+    for (const t of [j("postgres://u:", secret, "@"), j("postgresql://:", secret, "@host"), j("postgres://u:", secret, "@@host:5432/db"), j("//u:", secret, "@host"), j("postgres://u:", secret, " and more text")]) {
+      expect(redactSecretsInText(t)).not.toContain(secret);
+      expect(redactDatabaseUrl(t)).not.toContain(secret);
+    }
+    expect(redactSecretsInText(undefined as unknown as string)).toBe("undefined");
+    expect(redactSecretsInText(null as unknown as string)).toBe("null");
+    expect(() => redactDatabaseUrl(12345 as unknown as string)).not.toThrow();
+  });
+  test("a secret split across a newline in a stack trace is still caught on its own line", () => {
+    const secret = j("Zq", "81-notARealPass");
+    const out = redactSecretsInText(`Error: connect failed\n  at connect (postgres://u:${secret}@db.remote.net/app)\n  password=${secret}`);
+    expect(out).not.toContain(secret);
+    expect(out).toContain("connect failed");
+  });
+});
+
+describe("redaction leaves harmless text alone", () => {
+  test("credential-free URLs with host and port are not mangled", () => {
+    for (const t of ["postgresql://127.0.0.1:5432/kyp_test", "https://example.com:8443/path?x=1", "listening on 127.0.0.1:54329", "see //cdn.example.com/lib.js"]) expect(redactSecretsInText(t)).toBe(t);
+  });
+});
