@@ -60,3 +60,15 @@ User actions still required, in order:
 
 ## Correction to an earlier coverage headline (2026-10-19)
 Earlier reports said "130 medicines have label-backed claims". That counted medicines with a claim of any kind. Recomputed by the kind of document each claim rests on (`medication-evidence-gap-register.md`): **121** medicines have a claim that rests on a product label, leaflet, monograph or formulary entry; 4 have only MedlinePlus patient-information claims; 5 have only PvPI signal rows; 15 have no source-backed claim (the 8 unsourced medicines plus 7 Patient Guide medicines whose guides have no claim-level source). None of the 12 authored Patient Guides has a label-backed claim, so a reviewer must check the guides against current product information. 0 Indian product-label claims.
+
+## Milestone update: evidence readiness (2026-10-19)
+Reports (all generated from the code the pages use; each has a test that the saved file equals the generator's output):
+- `reports/medication-audit/medication-evidence-gap-register.{md,csv}`: one evidence class per medicine, reconciled to 145.
+- `reports/medication-audit/indian-source-acquisition-report.md`: stored Indian records (0), importer rules, document requests in priority order.
+- `reports/medication-audit/clinical-review-readiness.md`: the four prepared packets, their digests, what is unresolved, what a reviewer must supply.
+- `reports/medication-audit/patient-content-safety-report.md`: sentences withheld for unsupported figures, guide figures to check, parts still unavailable.
+- `reports/medication-audit/four-mode/patient-section-matrix.md`: Patient parts by content class.
+
+What changed: the importer now requires a document type and provenance, refuses alerts and news as labels, refuses wordings that drop a negation or a condition, detects conflicting records and keeps an audit log; review records need a scope, the packet digest and a rationale for every decision (including acceptance), and packet status is pending, incomplete, stale or record-complete (never "approved"); registry sentences that state a dose, a wait or a time-to-effect figure with no source statement are withheld (9 sentences).
+
+Status: engineering as in the table above plus the checks run for this milestone (see `docs/test-baseline.md`); hosted CI for this branch: none exists (not pushed); credential rotation: **not done**, user action; clinical review: none recorded, all four packets pending; Indian product labels: 0; unsourced medicines: 8.
