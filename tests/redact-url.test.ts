@@ -56,7 +56,7 @@ describe("malformed and hostile input", () => {
   });
   test("a secret split across a newline in a stack trace is still caught on its own line", () => {
     const secret = j("Zq", "81-notARealPass");
-    const out = redactSecretsInText(`Error: connect failed\n  at connect (postgres://u:${secret}@db.remote.net/app)\n  password=${secret}`);
+    const out = redactSecretsInText(`Error: connect failed\n  at connect (postgres://u:${secret}@db.example.net/app)\n  password=${secret}`);
     expect(out).not.toContain(secret);
     expect(out).toContain("connect failed");
   });
