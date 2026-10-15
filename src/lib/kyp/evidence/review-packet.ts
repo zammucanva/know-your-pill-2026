@@ -14,7 +14,7 @@ import { sourceKind } from "./source-label";
  */
 export const DECISIONS = ["accept", "amend", "reject", "request-evidence", "unresolved"] as const;
 export type Decision = (typeof DECISIONS)[number];
-const blankDecision = "Decision (accept / amend / reject / request-evidence / unresolved): ____   Amended wording (if amend): ____   Notes (required unless accept): ____";
+const blankDecision = "Decision (accept / amend / reject / request-evidence / unresolved): ____   Amended wording (if amend): ____   Rationale (required for every decision): ____";
 const reviewerBlock = [
   "## Reviewer identity (once per packet; no decision below counts without all of it)",
   "",
@@ -24,9 +24,9 @@ const reviewerBlock = [
   "Affiliation: ____",
   "Conflicts of interest (write 'none' if none): ____",
   "Date of review: ____",
-  "Scope: which items below this reviewer covered: ____",
+  "Scope (what you reviewed and against what, in your own words; the record's `scope` field): ____",
   "",
-  "Record the outcome in the matching JSON template (`<slug>.record-template.json`) and check it with `bun scripts/evidence/review-record-check.ts <file>`. A passing check means the record is complete. It is not clinical approval, and the app never shows a statement as reviewed on that basis alone.",
+  "Record the outcome in the matching JSON template (`<slug>.record-template.json`) and check it with `bun scripts/evidence/review-record-check.ts <file>`. The record also carries the packet digest (which ties it to this exact packet content) and the check fails if any item has changed since. A passing check means the record is complete. It is not clinical approval, and the app never shows a statement as reviewed on that basis alone.",
   "",
 ];
 /** Items a reviewer can decide on, in packet order: Patient Guide groups (by top-level key), then claim ids. */
@@ -69,11 +69,17 @@ export function reviewItems(slug: string): ReviewItem[] {
 export const inShortItemHash = (b: { id: string; text: string; support: RegExp[] }, wordings: string[]): string => contentHash(JSON.stringify([b.id, b.text, b.support.map((r) => r.source), [...wordings].sort()]));
 export const claimItemHash = (c: Pick<ClaimRecord, "id" | "slug" | "category" | "patientWording" | "wordingKind" | "passage" | "sourceId" | "applicability" | "limitations">, s?: Pick<SourceRecord, "title" | "url" | "identifier" | "publishedDate" | "formulation" | "jurisdiction" | "type" | "productTitle" | "organisation">): string =>
   contentHash(JSON.stringify([c.id, c.slug, c.category, c.patientWording, c.wordingKind, c.passage, c.sourceId, c.applicability, c.limitations, s ? [s.title, s.url, s.identifier, s.publishedDate ?? null, s.formulation ?? null, s.jurisdiction, s.type, s.productTitle, s.organisation] : null]));
+/** One digest of the whole packet: it changes when any item's wording, passage, source metadata or applicability changes, or an item is added or removed. */
+export const packetDigest = (items: readonly ReviewItem[]): string => contentHash(JSON.stringify(items.map((i) => [i.id, i.hash])));
 export const reviewItemIds = (slug: string): string[] => reviewItems(slug).map((i) => i.id);
 /** The empty record a reviewer fills in. It is deliberately invalid until every field is real. */
 export function blankRecordTemplate(slug: string) {
   return {
     packet: slug,
+    // What the reviewer actually covered, in their own words (for example "all 31 statements for sertraline against the current Indian package insert").
+    scope: "",
+    // Filled by engineering: names the exact packet content this template was made from. The reviewer never edits it.
+    packetDigest: packetDigest(reviewItems(slug)),
     reviewer: { name: "", qualification: "", registrationBody: "", registrationNumber: "", affiliation: "", conflictsOfInterest: "" },
     reviewedAt: "",
     // contentHash is filled by engineering: it names the exact text a decision applies to. The reviewer never edits it.

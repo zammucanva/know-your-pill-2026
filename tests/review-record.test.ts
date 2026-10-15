@@ -1,16 +1,18 @@
 import { describe, expect, test } from "bun:test";
 import { existsSync, readFileSync, readdirSync } from "fs";
 import { CLAIM_RECORDS } from "@/lib/kyp/evidence";
-import { IN_SHORT_PACKET, blankRecordTemplate, claimItemHash, reviewItemIds, reviewItems, reviewPacket } from "@/lib/kyp/evidence/review-packet";
-import { validateReviewRecord, type ReviewRecord } from "@/lib/kyp/evidence/review-record";
+import { IN_SHORT_PACKET, blankRecordTemplate, claimItemHash, packetDigest, reviewItemIds, reviewItems, reviewPacket } from "@/lib/kyp/evidence/review-packet";
+import { packetStatus, staleDecisions, validateReviewRecord, type ReviewRecord } from "@/lib/kyp/evidence/review-record";
 import { SOURCE_RECORDS } from "@/lib/kyp/evidence";
 
 const NOW = new Date("2026-10-14");
 const filled = (slug: string): ReviewRecord => ({
   packet: slug,
+  scope: "Fixture scope: every item in the packet, checked against a synthetic reference",
+  packetDigest: packetDigest(reviewItems(slug)),
   reviewer: { name: "Dr Test Fixture", qualification: "MD Psychiatry (fixture)", registrationBody: "Fixture council", registrationNumber: "FIX-0001", affiliation: "Fixture hospital", conflictsOfInterest: "none" },
   reviewedAt: "2026-10-13",
-  decisions: reviewItems(slug).map(({ id, hash }) => ({ id, contentHash: hash, decision: "accept" })),
+  decisions: reviewItems(slug).map(({ id, hash }) => ({ id, contentHash: hash, decision: "accept", notes: "Checked against the synthetic fixture reference" })),
 });
 
 describe("a review record is checked for completeness; an empty packet or template is never a review", () => {
@@ -44,18 +46,18 @@ describe("a review record is checked for completeness; an empty packet or templa
     dup.decisions.push({ ...dup.decisions[0] });
     expect(validateReviewRecord(dup, reviewItems("moclobemide"), NOW).join()).toMatch(/decided twice/);
     const alien = base();
-    alien.decisions.push({ id: "not-a-claim", contentHash: "x", decision: "accept" });
+    alien.decisions.push({ id: "not-a-claim", contentHash: "x", decision: "accept", notes: "n/a n/a n/a n/a" });
     expect(validateReviewRecord(alien, reviewItems("moclobemide"), NOW).join()).toMatch(/no such item/);
   });
   test("amend, reject and request-evidence need their words; software cannot be the reviewer", () => {
     const r = filled("moclobemide");
-    r.decisions[0] = { id: r.decisions[0].id, decision: "amend" };
-    r.decisions[1] = { id: r.decisions[1].id, decision: "reject" };
+    r.decisions[0] = { id: r.decisions[0].id, decision: "amend", notes: "" };
+    r.decisions[1] = { id: r.decisions[1].id, decision: "reject", notes: "" };
     r.decisions[2] = { id: r.decisions[2].id, decision: "request-evidence", notes: "Needs the Indian insert" };
     const p = validateReviewRecord(r, reviewItems("moclobemide"), NOW).join(" | ");
     expect(p).toMatch(/amend needs the amended wording/);
-    expect(p).toMatch(/reject needs notes/);
-    expect(p).not.toMatch(/request-evidence needs notes/);
+    expect(p).toContain(`decision for "${r.decisions[1].id}": every decision needs a recorded rationale`);
+    expect(p).not.toContain(`decision for "${r.decisions[2].id}": every decision needs a recorded rationale`);
     const bot = filled("moclobemide");
     bot.reviewer.name = "Claude";
     expect(validateReviewRecord(bot, reviewItems("moclobemide"), NOW).join()).toMatch(/not software/);
@@ -168,8 +170,8 @@ describe("integrity of review records against stale, transferred and self-made d
 describe("unresolved items and source changes", () => {
   test("an item can be left unresolved, but only with a note saying what evidence is missing", () => {
     const r = filled("moclobemide");
-    r.decisions[0] = { ...r.decisions[0], decision: "unresolved" };
-    expect(validateReviewRecord(r, reviewItems("moclobemide"), NOW).join()).toMatch(/unresolved needs a note/);
+    r.decisions[0] = { ...r.decisions[0], decision: "unresolved", notes: "" };
+    expect(validateReviewRecord(r, reviewItems("moclobemide"), NOW).join()).toMatch(/every decision needs a recorded rationale/);
     r.decisions[0] = { ...r.decisions[0], decision: "unresolved", notes: "No Indian product information available to compare with" };
     expect(validateReviewRecord(r, reviewItems("moclobemide"), NOW)).toEqual([]);
   });
@@ -202,7 +204,7 @@ describe("the viva findings are reviewable in the same record format", () => {
     const blank = blankRecordTemplate(VIVA_PACKET) as unknown as ReviewRecord;
     expect(validateReviewRecord(blank, reviewItems(VIVA_PACKET), NOW).length).toBeGreaterThan(5);
     const done = filled(VIVA_PACKET);
-    done.decisions = done.decisions.map((d, i) => ({ ...d, decision: i === 0 ? "amend" : "unresolved", amendedWording: "close the bracket", notes: "pending evidence" }));
+    done.decisions = done.decisions.map((d, i) => ({ ...d, decision: i === 0 ? "amend" : "unresolved", amendedWording: "close the bracket", notes: "pending evidence from the reviewer" }));
     expect(validateReviewRecord(done, reviewItems(VIVA_PACKET), NOW)).toEqual([]);
   });
 });
@@ -218,5 +220,50 @@ describe("a decision on an 'In short' sentence goes stale when the source wordin
     expect(inShortItemHash(b, ["wording A", "wording B", "wording C"])).not.toBe(base);
     expect(inShortItemHash({ ...b, text: b.text + " " }, ["wording A", "wording B"])).not.toBe(base);
     expect(inShortUses().size).toBeGreaterThan(10);
+  });
+});
+
+describe("scope, rationale, packet digest and packet status", () => {
+  test("a record without scope, with a stale packet digest, or with a decision lacking a rationale is refused", () => {
+    const items = reviewItems("moclobemide");
+    const noScope = filled("moclobemide");
+    noScope.scope = "";
+    expect(validateReviewRecord(noScope, items, NOW).join()).toMatch(/scope is missing/);
+    const oldDigest = filled("moclobemide");
+    oldDigest.packetDigest = "0".repeat(14);
+    expect(validateReviewRecord(oldDigest, items, NOW).join()).toMatch(/packet has changed since this record's template was made/);
+    const noWhy = filled("moclobemide");
+    noWhy.decisions[0] = { ...noWhy.decisions[0], notes: "" };
+    expect(validateReviewRecord(noWhy, items, NOW).join()).toMatch(/every decision needs a recorded rationale/);
+    const acceptNoWhy = filled("moclobemide");
+    acceptNoWhy.decisions[1] = { ...acceptNoWhy.decisions[1], decision: "accept", notes: "ok" };
+    expect(validateReviewRecord(acceptNoWhy, items, NOW).join()).toMatch(/for accept: what it was checked against/);
+  });
+  test("the packet digest changes when any item changes, is added or is removed", () => {
+    const items = reviewItems("moclobemide");
+    const base = packetDigest(items);
+    expect(packetDigest(items)).toBe(base);
+    expect(packetDigest([{ ...items[0], hash: "0".repeat(14) }, ...items.slice(1)])).not.toBe(base);
+    expect(packetDigest(items.slice(1))).not.toBe(base);
+    expect(packetDigest([...items, { id: "x", hash: "y" }])).not.toBe(base);
+  });
+  test("status: pending with no record, incomplete when identity is missing, stale after a change, record-complete only when everything holds", () => {
+    const items = reviewItems("moclobemide");
+    expect(packetStatus(null, items, NOW).status).toBe("pending");
+    const noId = filled("moclobemide");
+    noId.reviewer.name = "";
+    expect(packetStatus(noId, items, NOW).status).toBe("incomplete");
+    const changed = items.map((i, n) => (n === 0 ? { ...i, hash: "1".repeat(14) } : i));
+    const stale = packetStatus(filled("moclobemide"), changed, NOW);
+    expect(stale.status).toBe("stale");
+    expect(staleDecisions(filled("moclobemide"), changed)).toEqual([items[0].id]);
+    expect(packetStatus(filled("moclobemide"), items, NOW).status).toBe("record-complete");
+  });
+  test("every saved template is pending: it fails validation and carries the current packet digest", () => {
+    for (const slug of ["sertraline", "fluoxetine", IN_SHORT_PACKET, "viva-findings"]) {
+      const t = JSON.parse(readFileSync(`reports/medication-audit/review-packets/${slug}.record-template.json`, "utf8")) as ReviewRecord;
+      expect(t.packetDigest).toBe(packetDigest(reviewItems(slug)));
+      expect(packetStatus(t, reviewItems(slug), NOW).status).not.toBe("record-complete");
+    }
   });
 });

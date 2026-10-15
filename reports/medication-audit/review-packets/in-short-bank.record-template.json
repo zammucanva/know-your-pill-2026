@@ -1,5 +1,7 @@
 {
   "packet": "in-short-bank",
+  "scope": "",
+  "packetDigest": "0203be4bf038fb",
   "reviewer": {
     "name": "",
     "qualification": "",

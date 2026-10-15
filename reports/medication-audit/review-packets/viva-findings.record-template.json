@@ -1,5 +1,7 @@
 {
   "packet": "viva-findings",
+  "scope": "",
+  "packetDigest": "19ef25a5a74f39",
   "reviewer": {
     "name": "",
     "qualification": "",
