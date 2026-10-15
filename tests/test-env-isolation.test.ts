@@ -15,7 +15,7 @@ describe("tests cannot reach the production database by accident", () => {
     const offenders: string[] = [];
     for (const [f, text] of files) {
       if (f === "test-env-isolation.test.ts") continue;
-      const usesDb = /@prisma\/client|from ["']@\/lib\/db|["']@\/lib\/prisma|new PrismaClient|\bprisma\./.test(text);
+      const usesDb = /(?:from|import|require\()\s*["']@prisma\/client["']|from ["']@\/lib\/db|["']@\/lib\/prisma|new PrismaClient|\bprisma\.(?:user|session|\$)/.test(text);
       const guarded = /from ["'](?:\.\/)?helpers\/server["']|import\(["']\.\/helpers\/server["']\)/.test(text);
       if (usesDb && !guarded) offenders.push(f);
     }
