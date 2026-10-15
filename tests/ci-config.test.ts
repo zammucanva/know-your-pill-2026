@@ -62,3 +62,13 @@ describe("CI configuration is pinned, isolated and matches the documented checks
     }
   });
 });
+
+describe("the build script is portable", () => {
+  test("it uses no shell cp, so `bun run build` works on Windows as well as in CI", () => {
+    expect(pkg.scripts.build).toBe("next build --webpack && node scripts/copy-standalone-assets.mjs");
+    expect(pkg.scripts.build).not.toMatch(/\bcp\b/);
+    const script = read("scripts/copy-standalone-assets.mjs");
+    expect(script).toContain("cpSync(\".next/static\", \".next/standalone/.next/static\"");
+    expect(script).toContain("cpSync(\"public\", \".next/standalone/public\"");
+  });
+});
