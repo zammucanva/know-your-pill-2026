@@ -32,7 +32,7 @@ const html = (slug: string) => {
   const interactions = buildModeLens("patient", { drug: d, patientGuide: g, mcqs: [] }).blocks.find((b) => b.kind === "patient-interactions") ?? null;
   return renderToStaticMarkup(React.createElement(PatientExplainer, { drugName: d.genericName, explanation: explainPatient(d, g), interactions, evidence: evidenceViews(slug) }));
 };
-const TEMPLATE_ONLY = ["isocarboxazid", "moclobemide", "phenelzine", "selegiline", "tranylcypromine", "amoxapine", "desipramine", "dothiepin", "doxepin", "imipramine", "lofepramine", "maprotiline", "mianserin", "nortriptyline", "protriptyline", "trimipramine"];
+const TEMPLATE_ONLY = ["isocarboxazid", "moclobemide", "phenelzine", "selegiline", "tranylcypromine", "amoxapine", "desipramine", "dothiepin", "doxepin", "imipramine", "lofepramine", "maprotiline", "mianserin", "nortriptyline", "protriptyline", "trimipramine", "zaleplon"];
 const sourcesOf = (slug: string) => SOURCE_RECORDS.filter((s) => s.slug === slug);
 const NO_US_LABEL = ["moclobemide", "dothiepin", "lofepramine", "maprotiline", "mianserin"];
 
@@ -207,11 +207,11 @@ describe("India-first dashboard: separate measures, honest numbers", () => {
     expect(Object.keys(sum)).not.toContain("percent");
     expect(Object.keys(sum).some((k) => /percent|score|overall/i.test(k))).toBe(false);
   });
-  test("the 16 template-only medicines are all tracked and all have sourced statements; five rest on non-US documents only", () => {
+  test("the 17 template-only medicines are all tracked and all have sourced statements; five rest on non-US documents only (zaleplon joined when its unsourced timing sentence was withheld)", () => {
     const t = rows.filter((r) => r.explanationLevel === "template-only").map((r) => r.slug).sort();
     expect(t).toEqual([...TEMPLATE_ONLY].sort());
     const sourced = t.filter((s) => claimsFor(s).length > 0);
-    expect(sourced.length).toBe(16);
+    expect(sourced.length).toBe(17);
     for (const s of NO_US_LABEL) expect(sourcesOf(s).every((x) => !x.url.includes("dailymed"))).toBe(true);
     // Sourced claims do not make the registry wording medicine-specific: the level stays template-only.
     for (const s of sourced) expect(rows.find((r) => r.slug === s)!.explanationLevel).toBe("template-only");

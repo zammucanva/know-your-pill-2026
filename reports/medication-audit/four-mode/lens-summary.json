@@ -73,8 +73,8 @@
     },
     "byLevel": {
       "authored-guide": 12,
-      "registry-specific": 117,
-      "template-only": 16
+      "registry-specific": 116,
+      "template-only": 17
     },
     "source": {
       "patient-guide": 12,
@@ -198,10 +198,10 @@
       },
       "explanationLevel": {
         "authored-guide": 12,
-        "registry-specific": 117,
-        "template-only": 16
+        "registry-specific": 116,
+        "template-only": 17
       },
-      "medicationsWithWithheldSharedClaims": 132,
+      "medicationsWithWithheldSharedClaims": 133,
       "medicationsWithMissingElements": 120,
       "readability": {
         "note": "Automated screening heuristic (Flesch-Kincaid grade, sentence length). Not a comprehension test.",
@@ -353,7 +353,7 @@
         }
       ],
       "unclassifiedSharedSentences": 0,
-      "medicationsWithAnyWithheldClaim": 132
+      "medicationsWithAnyWithheldClaim": 133
     }
   },
   "flows": {

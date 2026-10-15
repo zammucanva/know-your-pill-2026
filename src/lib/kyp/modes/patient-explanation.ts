@@ -75,6 +75,19 @@ function indicationMatches(condition: string, d: Drug): boolean {
   return !!c && names.some((n) => n === c || n.includes(c) || c.includes(n));
 }
 
+/**
+ * Figures that tell a patient WHEN something happens or HOW MUCH to take. Registry wording is not source-backed, so
+ * such a figure is not shown as guidance: a stored source statement (a label passage) shows it with its source, or a
+ * reviewer confirms it. A threshold inside a safety statement ("patch 9 mg with tyramine") is not an instruction and
+ * is left alone.
+ */
+const UNIT = "(?:days?|weeks?|hours?|minutes?|months?)";
+const NUM = "(?:\\d+(?:\\s?(?:-|to|–)\\s?\\d+)?|one|two|three|four|several|a few)";
+export const UNSOURCED_TIMING = new RegExp(`\\b(?:within|builds? over|takes?|up to|for about|about|for)\\s+(?:about\\s+|around\\s+|at least\\s+)?${NUM}\\s+${UNIT}\\b`, "i");
+export const UNSOURCED_DOSE = /\b(?:take|taking|starting (?:dose|at)|(?<!high-)dose (?:is|of)|usual dose|maximum|capped|at night)\b[^.;]{0,50}\b\d+(?:\.\d+)?\s?(?:mg|mcg|g|ml)\b|\b\d+(?:\.\d+)?\s?(?:mg|mcg)\s+(?:a|per|each)\s+(?:day|night|dose)\b/i;
+export const UNSOURCED_WAIT = /\b(?:nothing to eat or drink|wait|do not (?:eat|drink))\b[^.;]{0,40}\b(?:for|until)\s+\d+\s+minutes?\b/i;
+const unsourcedFigure = (s: string) => UNSOURCED_TIMING.test(s) || UNSOURCED_DOSE.test(s) || UNSOURCED_WAIT.test(s);
+
 /** Verbatim segments for one registry text, each labelled by what the data shows about its origin. */
 export function segmentRegistryText(text: unknown, d: Drug): ExplanationSegment[] {
   if (!clean(text)) return [];
@@ -99,6 +112,9 @@ export function segmentRegistryText(text: unknown, d: Drug): ExplanationSegment[
     if (rule) {
       seg.rule = { id: rule.id, kind: rule.kind, category: rule.category, why: rule.why };
       if (rule.kind === "claim") seg.handling = "withhold";
+    } else if (unsourcedFigure(s)) {
+      seg.rule = { id: "unsourced-figure", kind: "unclassified", category: "dose-or-timing-figure", why: "Registry wording states when something happens or how much to take, with no stored source statement. It is not shown as guidance until a source statement or a reviewer supports it." };
+      seg.handling = "withhold";
     } else if (!std && n >= TEMPLATE_THRESHOLD) {
       // Shared by 20+ medicines and not classified: never shown as guidance until a person classifies it.
       seg.rule = { id: "unclassified-shared", kind: "unclassified", category: "unclassified", why: "Shared by 20 or more medicines and not yet classified by a content owner." };

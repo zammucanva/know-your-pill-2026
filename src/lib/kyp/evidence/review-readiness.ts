@@ -3,6 +3,18 @@ import { getPatientGuide } from "@/lib/kyp/patient";
 import { IN_SHORT_PACKET, VIVA_PACKET, packetDigest, reviewItems, vivaFindings } from "./review-packet";
 import { packetStatus } from "./review-record";
 import { REVIEW_FLAGS, REVIEW_RECORDS } from "@/lib/kyp/modes";
+import { UNSOURCED_DOSE, UNSOURCED_TIMING, UNSOURCED_WAIT } from "@/lib/kyp/modes/patient-explanation";
+
+const strings = (v: unknown, out: string[] = []): string[] => {
+  if (typeof v === "string") out.push(v);
+  else if (Array.isArray(v)) v.forEach((x) => strings(x, out));
+  else if (v && typeof v === "object") Object.values(v).forEach((x) => strings(x, out));
+  return out;
+};
+/** Sentences in an authored guide that state a dose, a wait or a time frame: figures a reviewer must check against product information. */
+export function guideFigureSentences(guide: unknown): string[] {
+  return strings(guide).flatMap((t) => t.split(/(?<=[.!?])\s+/)).filter((x) => UNSOURCED_TIMING.test(x) || UNSOURCED_DOSE.test(x) || UNSOURCED_WAIT.test(x));
+}
 
 /**
  * The clinical review readiness report: for each prepared packet, what it holds, what a reviewer must supply, what is
@@ -38,6 +50,10 @@ export function packetReadiness(): PacketReadiness[] {
     else if (packet === IN_SHORT_PACKET) unresolved.push("Every sentence: say the same as every source wording it stands for, keep any condition, number or limit, and cannot be read as advice for one person.");
     else {
       const guide = getPatientGuide(packet);
+      if (guide) {
+        const figs = guideFigureSentences(guide);
+        if (figs.length) unresolved.push(`${figs.length} guide sentence(s) state a dose, a wait or a time frame (check each figure against current product information): ${figs.slice(0, 3).map((f) => `"${f.slice(0, 70)}"`).join("; ")}${figs.length > 3 ? "; ..." : ""}`);
+      }
       if (guide) unresolved.push(`Patient Guide (${items.filter((i) => i.id.startsWith("guide:")).length} groups) is authored text with no claim-level label source: check against current Indian product information.`);
       const open = claims.filter((c) => c.openQuestions.length);
       if (open.length) unresolved.push(`${open.length} source-backed statement(s) carry open questions (for example confirm the brand): ${open.map((c) => c.id).slice(0, 4).join(", ")}${open.length > 4 ? ", ..." : ""}`);
