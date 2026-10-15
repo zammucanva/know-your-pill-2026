@@ -4,7 +4,7 @@ Engineering status and clinical status are separate. A green run below says the 
 
 ## Reproducible command sequence (local, no production access)
 1. `bun install` (or use the existing `node_modules`), and keep working-tree line endings as the repository index has them (LF); the checks that read files normalise CRLF where they must.
-2. Static: `npx tsc --noEmit`; `npm run lint:dashes`; `bun scripts/audit-four-mode-coverage.ts --check`; ESLint on changed files (repo-wide ESLint has known older debt, see `docs/test-baseline.md`).
+2. Static: `npx tsc --noEmit`; `npm run lint:dashes`; `bun scripts/audit-four-mode-coverage.ts --check`; `bun scripts/check-toolchain.ts` first (it fails if `node_modules` has drifted from `bun.lock`), then `bun run lint`.
 3. Content lock: `bun scripts/content-lock.ts` (165/165 files, LF-normalised hash).
 4. Build: `rm -rf .next/standalone && npm run build` (the server tests need `.next/standalone`).
 5. Database: start a disposable local PostgreSQL (for example `docker run --rm -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=kyp_test postgres:16.9`) or set `KYP_TEST_DATABASE_URL` to a local database whose name contains `test`. The harness refuses anything else. Never use `.env.local` values.
@@ -31,9 +31,14 @@ Engineering status and clinical status are separate. A green run below says the 
 ## Local verification versus hosted CI
 - Everything above was run locally on one Windows machine. **No hosted CI run has been performed or observed**; this environment cannot trigger or read one.
 - `.github/workflows/ci.yml` is checked statically by `tests/ci-config.test.ts`: actions pinned to commit SHAs with their version in a comment, PostgreSQL pinned to `postgres:16.9` with its Docker Hub index digest (read from the Docker Hub API; the image was not pulled here), least-privilege permissions, a local test database URL only, and the order install, typecheck, content lock, dash lint, four-mode audit, build, tests. The same local commands are in the sequence above.
-- The `bun run lint` step runs repo-wide ESLint, which has known older errors (see `docs/test-baseline.md`); that step may fail on a hosted run for reasons that predate this branch.
+- The `bun run lint` step runs repo-wide ESLint. At the lockfile-pinned tool versions it exits 0 (0 errors, 5 warnings; checked by installing the frozen lockfile in a scratch folder), and the last hosted run on `main` (run 37969674785, 2026-10-09, commit 0a0e427) passed that step. A local `node_modules` that is newer than `bun.lock` (for example eslint-plugin-react-hooks 7.1.1 against the pinned 7.0.1) reports 38 extra errors; that is local drift, not branch debt. `scripts/check-toolchain.ts` detects it.
 - A missing database fails the database tests with `TEST PREREQUISITE MISSING`; a busy test port also fails. Neither is skipped or counted as a pass.
 
 ## Local history
 A short fragment of the exposed password was briefly in one local commit's test fixture. The affected local commits were rewritten and every object in the repository was scanned afterwards (`docs/credential-rotation-handoff.md`). Rotating the password is still the user's action.
+
+## CI pins, independently checked (2026-10-17)
+- Every `uses:` SHA in both workflows was compared with the upstream repository's tag (`git ls-remote`, annotated tags peeled): all seven match the version named in their comment.
+- The PostgreSQL digest in `ci.yml` equals the `Docker-Content-Digest` the Docker registry (registry-1.docker.io) returns for `library/postgres:16.9`, for both the OCI index and Docker manifest-list media types. The image itself was not pulled here.
+- Hosted CI for this branch: **none exists**. The branch has never been pushed, and the workflow only runs on pushes to `main` and `codex/**` and on pull requests to `main`. The latest hosted `ci.yml` run on `main` (run 37969674785, commit 0a0e427, 2026-10-09) succeeded, including its lint, content-lock, build and full test steps; that run says nothing about this branch's changes. It was read with the already-authenticated GitHub CLI, read-only.
 

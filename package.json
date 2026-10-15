@@ -21,6 +21,7 @@
     "db:deploy": "bunx prisma migrate deploy",
     "lint:content": "bun scripts/concept-content-lint.ts",
     "lint:dashes": "node scripts/lint-dashes.mjs",
+    "check:toolchain": "bun scripts/check-toolchain.ts",
     "audit:four-mode": "bun scripts/audit-four-mode-coverage.ts --check"
   },
   "dependencies": {
