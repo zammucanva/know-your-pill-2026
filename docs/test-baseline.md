@@ -47,3 +47,6 @@ Limitations: this is one comparison per side, and the load-dependent suites are 
 - A fresh download of the same EnterpriseDB PostgreSQL 16.9 zip had the identical SHA-256 as the first, which is consistent but still not a vendor-published digest. The instance was handled exactly as before (user process, localhost only, test-only role, deleted afterwards and verified).
 - `bun test tests/`: **2,060 pass, 0 fail, 0 skipped, 0 timeouts** (83 files, 277 s).
 
+## Post-cleanup run (2026-10-17)
+- After the local history cleanup, with a rebuilt production build and the same isolated PostgreSQL 16.9 procedure: `bun test tests/` **2,100 pass, 0 fail, 0 skipped, 0 timeouts** (89 files, 270 s). An earlier run in the same session had one timeout in the secret-scan test under load; that test now has an explicit 60 s timeout and skips generated files over 3 MB, and the rerun was clean.
+

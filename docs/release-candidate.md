@@ -11,10 +11,10 @@ Engineering status and clinical status are separate. A green run below says the 
 6. Tests: `bun test tests/`. Without a database the 47 database-dependent tests fail with `TEST PREREQUISITE MISSING`; they are never skipped.
 7. Browser: serve the standalone build (`PORT=3310 HOSTNAME=127.0.0.1 node .next/standalone/server.js`), run axe-core on the pages listed in `docs/test-baseline.md`, in light and dark and at 375 px and desktop width, with transitions disabled for the dark check.
 
-## Recorded results at the release candidate (2026-10-16)
+## Recorded results at the release candidate (2026-10-17)
 | Check | Result |
 |---|---|
-| `bun test tests/` with an isolated PostgreSQL 16.9 | 2,084 pass, 0 fail, 0 skipped, 0 timeouts (88 files, 252 s) |
+| `bun test tests/` with an isolated PostgreSQL 16.9 | 2,100 pass, 0 fail, 0 skipped, 0 timeouts (89 files, 270 s) |
 | `tsc`, `lint:dashes`, four-mode audit, ESLint on changed files | clean |
 | Content lock | 165/165 |
 | Production build | exit 0 |
@@ -27,3 +27,13 @@ Engineering status and clinical status are separate. A green run below says the 
 - Official product information for blonanserin, perospirone, zotepine, cyamemazine, loflazepate, flunitrazepam, tacrine and caprylidene.
 - Rotation of the exposed database password (`docs/credential-rotation-handoff.md`).
 - Release authorisation for any medicine beyond sertraline.
+
+## Local verification versus hosted CI
+- Everything above was run locally on one Windows machine. **No hosted CI run has been performed or observed**; this environment cannot trigger or read one.
+- `.github/workflows/ci.yml` is checked statically by `tests/ci-config.test.ts`: actions pinned to commit SHAs with their version in a comment, PostgreSQL pinned to `postgres:16.9` with its Docker Hub index digest (read from the Docker Hub API; the image was not pulled here), least-privilege permissions, a local test database URL only, and the order install, typecheck, content lock, dash lint, four-mode audit, build, tests. The same local commands are in the sequence above.
+- The `bun run lint` step runs repo-wide ESLint, which has known older errors (see `docs/test-baseline.md`); that step may fail on a hosted run for reasons that predate this branch.
+- A missing database fails the database tests with `TEST PREREQUISITE MISSING`; a busy test port also fails. Neither is skipped or counted as a pass.
+
+## Local history
+A short fragment of the exposed password was briefly in one local commit's test fixture. The affected local commits were rewritten and every object in the repository was scanned afterwards (`docs/credential-rotation-handoff.md`). Rotating the password is still the user's action.
+
