@@ -59,3 +59,9 @@ Earlier notes called the repo-wide ESLint output (43 problems, 38 errors, mostly
 
 ## Clean-install gate (2026-10-19)
 `bun test tests/` from a clean copy of the committed tree with `bun install --frozen-lockfile`, against the same isolated PostgreSQL 16.9 procedure: **2,112 pass, 0 fail, 0 skipped, 0 timeouts** (90 files, 331 s). The first attempt at `bun run build` there exited 1 on Windows (shell `cp -r` after a successful Next build); fixed in `scripts/copy-standalone-assets.mjs`, then `bun run build` exited 0.
+
+## Evidence-readiness milestone (full suite, isolated database)
+
+- `bun test tests/` with a temporary official PostgreSQL 16.9 (checksum-verified, localhost only, test-only credentials, removed afterwards): 2,145 pass, 0 fail, 93 files, 354 s, 0 timeouts.
+- `tsc --noEmit`, `lint:dashes`, four-mode coverage `--check` and the content lock (145 medicines, 1,650 MCQs) all pass.
+- Hosted CI has not run for this branch (never pushed).
