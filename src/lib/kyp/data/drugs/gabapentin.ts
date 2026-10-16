@@ -514,7 +514,7 @@ export const gabapentin: Drug = {
   faqs: [
     {
       question: "How long does Gabapentin take to work?",
-      answer: "Pain/anxiety benefit over 1-2 weeks of titration.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Pain/anxiety benefit over 1-2 weeks of titration.",
     },
     {
       question: "What are the most common side effects of Gabapentin?",

@@ -546,7 +546,7 @@ export const ziprasidone: Drug = {
   faqs: [
     {
       question: "How long does Ziprasidone take to work?",
-      answer: "Acute agitation (IM): 15–30 minutes.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Acute agitation (IM): 15–30 minutes.",
     },
     {
       question: "What are the most common side effects of Ziprasidone?",

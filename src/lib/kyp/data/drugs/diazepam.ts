@@ -564,7 +564,7 @@ export const diazepam: Drug = {
   faqs: [
     {
       question: "How long does Diazepam take to work?",
-      answer: "IV: 30–60 seconds (status epilepticus, agitation).. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "IV: 30–60 seconds (status epilepticus, agitation).",
     },
     {
       question: "What are the most common side effects of Diazepam?",

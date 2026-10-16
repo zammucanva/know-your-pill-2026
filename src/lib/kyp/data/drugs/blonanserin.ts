@@ -503,7 +503,7 @@ export const blonanserin: Drug = {
   faqs: [
     {
       question: "How long does Blonanserin take to work?",
-      answer: "As with the class: 1-3 weeks at antipsychotic dose.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "As with the class: 1-3 weeks at antipsychotic dose.",
     },
     {
       question: "What are the most common side effects of Blonanserin?",

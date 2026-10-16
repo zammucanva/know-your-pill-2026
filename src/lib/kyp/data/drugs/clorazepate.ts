@@ -491,7 +491,7 @@ export const clorazepate: Drug = {
   faqs: [
     {
       question: "How long does Clorazepate take to work?",
-      answer: "Oral: 30–60 min (after conversion).. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Oral: 30–60 min (after conversion).",
     },
     {
       question: "What are the most common side effects of Clorazepate?",

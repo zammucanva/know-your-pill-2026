@@ -405,7 +405,7 @@ export const tasimelteon: Drug = {
   faqs: [
     {
       question: "How long does Tasimelteon take to work?",
-      answer: "Entrainment builds over weeks to months of consistent timing.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Entrainment builds over weeks to months of consistent timing.",
     },
     {
       question: "What are the most common side effects of Tasimelteon?",

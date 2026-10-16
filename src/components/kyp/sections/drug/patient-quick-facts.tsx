@@ -42,12 +42,39 @@ export function primaryUsesSummary(drug: Drug): string {
     .join(", ");
 }
 
+/**
+ * The medical variant's “Typical onset” card, derived from the drug's own
+ * Prescriber's Guide onset timeline (D-1 remediation: this slot previously
+ * hard-coded the antidepressant onset “4–6 weeks” for every medicine, which
+ * is clinically false for the non-antidepressants). The authored first onset
+ * bullet is rendered verbatim — never reworded or re-parsed.
+ *
+ * Returns null when the drug has no onset timeline; the card is then
+ * omitted entirely (neutral no-data state) rather than showing a
+ * class-specific default.
+ */
+export function typicalOnsetCard(
+  drug: Drug
+): { label: string; value: string; text: string } | null {
+  const bullets = drug.prescriberGuide?.onsetTimeline ?? [];
+  if (bullets.length === 0) return null;
+  return {
+    label: "Typical onset",
+    value: bullets[0],
+    text:
+      bullets.length > 1
+        ? `First of ${bullets.length} milestones; the full timeline is in the Prescriber's Guide below.`
+        : "Full onset details are in the Prescriber's Guide below.",
+  };
+}
+
 export function PatientQuickFacts({ drug, guide }: PatientQuickFactsProps) {
   const mode = useGuidedLearning((s) => s.mode);
   const isPatient = mode === "patient" && guide !== undefined;
 
   if (!isPatient) {
     // Medical variant — the canonical clinical quick facts.
+    const onsetCard = typicalOnsetCard(drug);
     const facts = [
       {
         label: "Drug class",
@@ -59,11 +86,7 @@ export function PatientQuickFacts({ drug, guide }: PatientQuickFactsProps) {
         value: primaryUsesSummary(drug),
         text: `${drug.indications.length} total indications (${drug.indications.filter((i) => i.status === "fda-approved").length} FDA-approved)`,
       },
-      {
-        label: "Typical onset",
-        value: "4–6 weeks",
-        text: "Full antidepressant effect. Anxiety disorders may take 8–12 weeks.",
-      },
+      ...(onsetCard ? [onsetCard] : []),
       {
         label: "Key side effects",
         value: drug.commonSideEffects
