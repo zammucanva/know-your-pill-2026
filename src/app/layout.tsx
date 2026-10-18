@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
+import { MedicineNebula } from "@/components/ui/cosmic-nebula";
 import { ThemeProvider } from "@/components/kyp/theme-provider";
 import { SkipToContentLink } from "@/components/kyp/ui/skip-to-content";
 import { LiquidGlassFilters } from "@/components/kyp/ui/liquid-glass-filters";
@@ -147,6 +148,8 @@ export default function RootLayout({
               motion, high contrast, focus indicators) applied as
               attributes on <html>. Renders nothing. */}
           <SettingsEffects />
+          {/* Site-wide medicine nebula: fixed behind every page. */}
+          <MedicineNebula className="fixed -z-10" />
           {children}
           <Toaster />
         </ThemeProvider>
