@@ -506,9 +506,57 @@
 }
 
 /* ============================================================
+   Medicine nebula (components/ui/cosmic-nebula.tsx)
+   Blur blobs use KYP tokens so they follow light/dark mode.
+   `spin` is already provided by Tailwind (animate-spin).
+   ============================================================ */
+@keyframes kyp-float {
+  0%, 100% { transform: translate(0, 0) rotate(var(--rot, 0deg)); }
+  50%      { transform: translate(var(--dx, 20px), var(--dy, -24px)) rotate(calc(var(--rot, 0deg) + 14deg)); }
+}
+.kyp-float {
+  animation: kyp-float 20s var(--ease-in-out-soft) infinite;
+  will-change: transform;
+}
+/* Pointer-follow layer: transform is driven from JS (eased per frame). */
+.kyp-parallax {
+  will-change: transform;
+}
+.kyp-glow {
+  filter: blur(var(--blur, 2px)) drop-shadow(0 0 3px color-mix(in oklch, currentColor 30%, transparent));
+}
+.bg-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(70px);
+  opacity: 0.2;
+  animation: kyp-drift 26s var(--ease-in-out-soft) infinite;
+}
+.dark .bg-orb { opacity: 0.27; }
+.orb-1 {
+  top: -8%; right: -6%;
+  width: 52vmin; height: 52vmin;
+  background: radial-gradient(circle, var(--brand), transparent 68%);
+}
+.orb-2 {
+  bottom: -10%; left: -6%;
+  width: 46vmin; height: 46vmin;
+  background: radial-gradient(circle, var(--neural), transparent 68%);
+  animation-delay: -9s;
+}
+.orb-3 {
+  top: 38%; left: 40%;
+  width: 34vmin; height: 34vmin;
+  background: radial-gradient(circle, var(--class-hallucinogen), transparent 68%);
+  animation-delay: -16s;
+}
+
+/* ============================================================
    Reduced motion — respect user preference
    ============================================================ */
 @media (prefers-reduced-motion: reduce) {
+  .kyp-float, .bg-orb { animation: none !important; }
+
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
