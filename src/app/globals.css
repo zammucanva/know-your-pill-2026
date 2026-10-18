@@ -325,6 +325,13 @@
     letter-spacing: -0.03em;
     font-weight: 600;
   }
+  /* Compact page title: the dashboard welcome heading. Sits between .text-h1 and .text-h2. */
+  .text-title {
+    font-family: var(--font-serif);
+    font-size: clamp(1.9rem, 3.4vw, 2.75rem);
+    letter-spacing: -0.025em;
+    font-weight: 600;
+  }
   .text-h1 {
     font-family: var(--font-serif);
     font-size: clamp(2.25rem, 4.5vw, 3.25rem);
