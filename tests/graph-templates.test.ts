@@ -49,7 +49,7 @@ describe("graph templates — presence and determinism", () => {
     for (const id of ["mechanism-effect", "shared-target", "side-effect-association"]) {
       expect(byTemplate(id).length).toBeGreaterThan(0);
     }
-  });
+  }, 60000); // builds questions for the whole 145-drug registry: 5-9 s, over bun's 5 s default (also on main)
 
   test("3. deterministic: the same template call returns identical questions", () => {
     for (const id of ["mechanism-effect", "shared-target", "side-effect-association"]) {

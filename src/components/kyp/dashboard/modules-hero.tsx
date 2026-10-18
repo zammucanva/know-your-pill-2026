@@ -81,10 +81,7 @@ export function WelcomeHero({
     <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
       <div className="min-w-0">
         <p className="text-overline text-brand mb-3">Your Learning Dashboard</p>
-        <h1
-          className="font-serif font-semibold tracking-tight text-foreground"
-          style={{ fontSize: "clamp(1.9rem, 3.4vw, 2.75rem)" }}
-        >
+        <h1 className="text-title text-foreground">
           Welcome back{name ? `, ${name.split(" ")[0]}` : ""}.
         </h1>
         <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted-foreground">

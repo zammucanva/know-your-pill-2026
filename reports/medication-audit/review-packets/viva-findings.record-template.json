@@ -1,0 +1,30 @@
+{
+  "packet": "viva-findings",
+  "scope": "",
+  "packetDigest": "19ef25a5a74f39",
+  "reviewer": {
+    "name": "",
+    "qualification": "",
+    "registrationBody": "",
+    "registrationNumber": "",
+    "affiliation": "",
+    "conflictsOfInterest": ""
+  },
+  "reviewedAt": "",
+  "decisions": [
+    {
+      "id": "clomipramine#viva[4]",
+      "contentHash": "0da24dcac00dda",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    },
+    {
+      "id": "tacrine#viva[2]",
+      "contentHash": "028aa222c4bce3",
+      "decision": "",
+      "amendedWording": "",
+      "notes": ""
+    }
+  ]
+}

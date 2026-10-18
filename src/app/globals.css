@@ -133,7 +133,7 @@
   --popover-foreground: oklch(0.18 0.02 240);
 
   /* Primary = brand teal */
-  --primary: oklch(0.55 0.11 195);
+  --primary: oklch(0.53 0.11 195);
   --primary-foreground: oklch(0.99 0.005 220);
 
   --secondary: oklch(0.96 0.012 200);
@@ -152,7 +152,7 @@
   --ring: oklch(0.55 0.11 195);
 
   /* Brand semantic */
-  --brand: oklch(0.55 0.11 195);
+  --brand: oklch(0.51 0.11 195);
   --brand-soft: oklch(0.93 0.04 195);
   --brand-ink: oklch(0.32 0.08 200);
 
@@ -170,15 +170,22 @@
   --success: oklch(0.62 0.13 155);
   --success-soft: oklch(0.94 0.04 155);
 
+  /* Text-role colours: AA (4.5:1) on white and on the soft tints. The fill tokens above are unchanged. */
+  --brand-text: oklch(0.46 0.1 195);
+  --emergency-text: oklch(0.5 0.2 25);
+  --neural-text: var(--neural-ink);
+  --warning-text: var(--warning-ink);
+  --success-text: oklch(0.45 0.11 155);
+
   /* Drug class accents */
-  --class-depressant: oklch(0.6 0.18 280);    /* violet */
-  --class-stimulant: oklch(0.7 0.19 50);      /* amber */
-  --class-hallucinogen: oklch(0.65 0.22 320); /* magenta */
-  --class-opioid: oklch(0.55 0.14 230);       /* blue */
-  --class-cannabinoid: oklch(0.62 0.15 145);  /* green */
+  --class-depressant: oklch(0.54 0.18 280);    /* violet */
+  --class-stimulant: oklch(0.54 0.19 50);      /* amber */
+  --class-hallucinogen: oklch(0.56 0.22 320); /* magenta */
+  --class-opioid: oklch(0.51 0.14 230);       /* blue */
+  --class-cannabinoid: oklch(0.51 0.15 145);  /* green */
   --class-dissociative: oklch(0.55 0.18 305); /* purple */
-  --class-inhalant: oklch(0.6 0.15 190);      /* cyan */
-  --class-ssri: oklch(0.55 0.11 195);         /* teal */
+  --class-inhalant: oklch(0.49 0.15 190);      /* cyan */
+  --class-ssri: oklch(0.51 0.11 195);         /* teal */
 
   /* Charts */
   --chart-1: oklch(0.55 0.11 195);
@@ -252,6 +259,13 @@
   --success: oklch(0.72 0.15 155);
   --success-soft: oklch(0.3 0.06 155);
 
+  /* Text-role colours in dark mode are the bright fill colours, which already pass on dark surfaces. */
+  --brand-text: var(--brand);
+  --emergency-text: oklch(0.8 0.14 25);
+  --neural-text: var(--neural);
+  --warning-text: var(--warning);
+  --success-text: var(--success);
+
   /* Drug class accents (dark) */
   --class-depressant: oklch(0.7 0.18 280);
   --class-stimulant: oklch(0.78 0.18 50);
@@ -309,6 +323,13 @@
     font-size: clamp(2.75rem, 6.5vw, 5rem);
     line-height: 1.02;
     letter-spacing: -0.03em;
+    font-weight: 600;
+  }
+  /* Compact page title: the dashboard welcome heading. Sits between .text-h1 and .text-h2. */
+  .text-title {
+    font-family: var(--font-serif);
+    font-size: clamp(1.9rem, 3.4vw, 2.75rem);
+    letter-spacing: -0.025em;
     font-weight: 600;
   }
   .text-h1 {
@@ -506,9 +527,57 @@
 }
 
 /* ============================================================
+   Medicine nebula (components/ui/cosmic-nebula.tsx)
+   Blur blobs use KYP tokens so they follow light/dark mode.
+   `spin` is already provided by Tailwind (animate-spin).
+   ============================================================ */
+@keyframes kyp-float {
+  0%, 100% { transform: translate(0, 0) rotate(var(--rot, 0deg)); }
+  50%      { transform: translate(var(--dx, 20px), var(--dy, -24px)) rotate(calc(var(--rot, 0deg) + 14deg)); }
+}
+.kyp-float {
+  animation: kyp-float 20s var(--ease-in-out-soft) infinite;
+  will-change: transform;
+}
+/* Pointer-follow layer: transform is driven from JS (eased per frame). */
+.kyp-parallax {
+  will-change: transform;
+}
+.kyp-glow {
+  filter: blur(var(--blur, 2px)) drop-shadow(0 0 3px color-mix(in oklch, currentColor 30%, transparent));
+}
+.bg-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(70px);
+  opacity: 0.2;
+  animation: kyp-drift 26s var(--ease-in-out-soft) infinite;
+}
+.dark .bg-orb { opacity: 0.27; }
+.orb-1 {
+  top: -8%; right: -6%;
+  width: 52vmin; height: 52vmin;
+  background: radial-gradient(circle, var(--brand), transparent 68%);
+}
+.orb-2 {
+  bottom: -10%; left: -6%;
+  width: 46vmin; height: 46vmin;
+  background: radial-gradient(circle, var(--neural), transparent 68%);
+  animation-delay: -9s;
+}
+.orb-3 {
+  top: 38%; left: 40%;
+  width: 34vmin; height: 34vmin;
+  background: radial-gradient(circle, var(--class-hallucinogen), transparent 68%);
+  animation-delay: -16s;
+}
+
+/* ============================================================
    Reduced motion — respect user preference
    ============================================================ */
 @media (prefers-reduced-motion: reduce) {
+  .kyp-float, .bg-orb { animation: none !important; }
+
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
@@ -981,3 +1050,28 @@ html[data-reduced-motion="true"] .dash-drawer {
     }
   }
 }
+
+/* Four-mode lens: every control in a learning flow shows a visible keyboard focus ring. */
+[data-flow-mode] :is(button, [role="radio"], [role="tab"], input, a, summary):focus-visible {
+  outline: 2px solid var(--foreground);
+  outline-offset: 2px;
+}
+
+/* Patient explanation: same visible keyboard focus ring as the learning flows. */
+[data-patient-explainer] :is(button, input, a, summary):focus-visible {
+  outline: 2px solid var(--foreground);
+  outline-offset: 2px;
+}
+
+/* Text-only colour roles. Tailwind's text-brand/-emergency/-neural/-warning/-success use the fill tokens, which fail
+   4.5:1 as small text on the soft tints (axe: 2.4 to 4.4). These rules change text colour only; backgrounds, borders
+   and icons that use the fill utilities are untouched. Faded muted text (60 to 80 percent) is lifted to the full
+   muted colour, which meets AA. Unlayered on purpose: it must win over the utilities layer. */
+.text-brand { color: var(--brand-text); }
+.text-emergency { color: var(--emergency-text); }
+.text-neural { color: var(--neural-text); }
+.text-warning { color: var(--warning-text); }
+.text-success { color: var(--success-text); }
+.text-muted-foreground\/60,
+.text-muted-foreground\/70,
+.text-muted-foreground\/80 { color: var(--muted-foreground); }

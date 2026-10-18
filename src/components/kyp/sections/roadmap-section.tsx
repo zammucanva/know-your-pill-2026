@@ -77,7 +77,7 @@ export function RoadmapSection() {
                       <h3 className="font-serif text-lg sm:text-xl font-semibold text-foreground">
                         {item.title}
                       </h3>
-                      <span className="text-[0.6rem] uppercase tracking-[0.12em] text-muted-foreground/40">
+                      <span className="text-[0.6rem] uppercase tracking-[0.12em] text-muted-foreground">
                         · Preview
                       </span>
                     </div>
@@ -86,7 +86,7 @@ export function RoadmapSection() {
                     </p>
                     <div className="mt-3 flex flex-wrap gap-x-2">
                       {item.preview.map((tag, ti) => (
-                        <span key={tag} className="text-[0.65rem] text-muted-foreground/40 font-medium">
+                        <span key={tag} className="text-[0.65rem] text-muted-foreground font-medium">
                           {tag}{ti < item.preview.length - 1 ? " ·" : ""}
                         </span>
                       ))}

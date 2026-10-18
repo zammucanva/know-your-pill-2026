@@ -2,9 +2,10 @@
   "name": "nextjs_tailwind_shadcn_ts",
   "version": "0.2.0",
   "private": true,
+  "packageManager": "bun@1.3.4",
   "scripts": {
     "dev": "next dev -p 3000 2>&1 | tee dev.log",
-    "build": "next build --webpack && cp -r .next/static .next/standalone/.next/ && cp -r public .next/standalone/",
+    "build": "next build --webpack && node scripts/copy-standalone-assets.mjs",
     "build:export": "GITHUB_PAGES=1 next build --webpack",
     "start": "NODE_ENV=production bun .next/standalone/server.js 2>&1 | tee server.log",
     "lint": "eslint .",
@@ -20,7 +21,9 @@
     "test:security": "bun test tests/security.test.ts tests/privacy.test.ts tests/idor.test.ts",
     "db:deploy": "bunx prisma migrate deploy",
     "lint:content": "bun scripts/concept-content-lint.ts",
-    "lint:dashes": "node scripts/lint-dashes.mjs"
+    "lint:dashes": "node scripts/lint-dashes.mjs",
+    "check:toolchain": "bun scripts/check-toolchain.ts",
+    "audit:four-mode": "bun scripts/audit-four-mode-coverage.ts --check"
   },
   "dependencies": {
     "@prisma/client": "^6.11.1",

@@ -295,7 +295,7 @@ export function LessonShell({
       >
         <div className="px-3 py-3">
           {/* Progress header — compact */}
-          <div className="flex items-center justify-between text-[0.65rem] font-medium uppercase tracking-wide text-muted-foreground/80">
+          <div className="flex items-center justify-between text-[0.65rem] font-medium uppercase tracking-wide text-muted-foreground">
             <span>Progress</span>
             <span className="tabular-nums">{completedCount}/{totalSections}</span>
           </div>
@@ -656,7 +656,7 @@ function LessonIdentityCard({
       className="rounded-xl border border-border/70 bg-card p-4 shadow-[var(--shadow-soft)]"
     >
       <div>
-        <p className="text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground/60">Lesson</p>
+        <p className="text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground">Lesson</p>
         <dl className="mt-2 space-y-1.5 text-xs">
           <div className="flex items-baseline justify-between gap-2">
             <dt className="text-muted-foreground">Type</dt>
@@ -682,7 +682,7 @@ function LessonIdentityCard({
       <div className="my-3 h-px bg-border/50" />
 
       <div>
-        <p className="text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground/60">Study</p>
+        <p className="text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground">Study</p>
         <dl className="mt-2 space-y-1.5 text-xs">
           <div className="flex items-baseline justify-between gap-2">
             <dt className="text-muted-foreground flex items-center gap-1">
@@ -704,7 +704,7 @@ function LessonIdentityCard({
       <div className="my-3 h-px bg-border/50" />
 
       <div>
-        <p className="text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground/60">Reviewed</p>
+        <p className="text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground">Reviewed</p>
         <dl className="mt-2 space-y-1.5 text-xs">
           <div className="flex items-baseline justify-between gap-2">
             <dt className="text-muted-foreground">Last reviewed</dt>

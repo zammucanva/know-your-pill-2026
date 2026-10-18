@@ -17,9 +17,11 @@
 
 import { setDefaultTimeout } from "bun:test";
 import { spawn, execSync } from "child_process";
+import { connect } from "net";
 import { createWriteStream, existsSync } from "fs";
 import { tmpdir } from "os";
 import { join, resolve } from "path";
+import { redactSecretsInText } from "../../src/lib/kyp/redact-url";
 import type { PrismaClient } from "@prisma/client";
 
 // The first test in a file that calls ensureServer() pays for the database
@@ -74,6 +76,51 @@ const DB_ENV = { DATABASE_URL: TEST_DB_URL, DIRECT_URL: TEST_DB_URL };
 let serverProc: ReturnType<typeof spawn> | null = null;
 let serverReady = false;
 
+/** Throws if something is already listening on the test port, so the tests can never talk to a stale or foreign server. */
+async function assertPortFree(port: number): Promise<void> {
+  const inUse = await new Promise<boolean>((resolveUse) => {
+    const sock = connect({ host: "127.0.0.1", port });
+    sock.setTimeout(1000, () => {
+      sock.destroy();
+      resolveUse(false);
+    });
+    sock.once("connect", () => {
+      sock.destroy();
+      resolveUse(true);
+    });
+    sock.once("error", () => resolveUse(false));
+  });
+  if (inUse) {
+    throw new Error(
+      `TEST PREREQUISITE MISSING: port ${port} is already in use. Stop whatever is listening there (often a server left by an earlier interrupted test run) and run the tests again. The harness does not kill processes by name.`
+    );
+  }
+}
+
+/** Fails fast, with the prerequisite named, when no database is listening. The tests that need one FAIL: they are
+ * never skipped, because a skipped security test reads as a passing one. */
+async function assertDatabaseReachable(): Promise<void> {
+  const u = new URL(TEST_DB_URL);
+  const port = Number(u.port || 5432);
+  const ok = await new Promise<boolean>((resolveOk) => {
+    const sock = connect({ host: u.hostname, port });
+    const done = (v: boolean) => {
+      sock.destroy();
+      resolveOk(v);
+    };
+    sock.setTimeout(2000, () => done(false));
+    sock.once("connect", () => done(true));
+    sock.once("error", () => done(false));
+  });
+  if (!ok) {
+    throw new Error(
+      `TEST PREREQUISITE MISSING: no PostgreSQL is listening at ${u.hostname}:${port}. ` +
+        `Start a disposable local one (for example: docker run --rm -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=kyp_test postgres:16.9) ` +
+        `or point KYP_TEST_DATABASE_URL at a local database whose name contains "test". This suite needs it and is not skipped.`
+    );
+  }
+}
+
 /** Recreate the test DB from the VERSIONED Prisma migrations (fresh, zero
  * rows). Using `migrate deploy` — never `db push` — means every test run
  * also proves the production migration path works end-to-end. */
@@ -103,16 +150,16 @@ export async function ensureServer(): Promise<string> {
       "Standalone build missing — run `bun run build` before tests"
     );
   }
-  // Kill any STALE server from a previous run. Next.js renames the standalone
-  // process to "next-server (vX.Y.Z)", so a plain `pkill -f server.js` will
-  // NOT match it — match on the renamed title instead.
+  // A server already listening on the test port would answer the tests instead of ours, possibly with another
+  // database behind it. Never kill processes by name (that could stop an unrelated `next dev`); refuse and say why.
+  await assertPortFree(TEST_PORT);
+  await assertDatabaseReachable();
   try {
-    execSync('pkill -f "next-server" || true');
-  } catch {
-    // no stale process — fine
+    await resetTestDatabase();
+  } catch (e) {
+    // A failure here must not echo connection strings or credentials into test output.
+    throw new Error(`Test database reset failed: ${redactSecretsInText(e instanceof Error ? e.message : String(e)).slice(0, 1500)}`);
   }
-  await Bun.sleep(500);
-  await resetTestDatabase();
   serverProc = spawn("node", [resolve(process.cwd(), ".next/standalone/server.js")], {
     env: {
       ...process.env,

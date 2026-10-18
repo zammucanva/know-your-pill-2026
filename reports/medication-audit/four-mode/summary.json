@@ -1,0 +1,201 @@
+{
+  "generatedFrom": "scripts/audit-four-mode-coverage.ts",
+  "medications": 145,
+  "patientGuides": 12,
+  "stahlMcqs": 180,
+  "medicationsWithStahlMcqs": 145,
+  "distinctVisibleSectionSetsPerMode": {
+    "patient": 2,
+    "mbbs": 1,
+    "neetPg": 1,
+    "resident": 1
+  },
+  "medicationsWithoutLearningPaths": 0,
+  "subsetRelationsAcrossMedications": {
+    "mbbs ⊂ neetPg": 145,
+    "mbbs ⊂ resident": 145,
+    "neetPg ⊂ resident": 145,
+    "patient ⊂ mbbs": 133,
+    "patient ⊂ neetPg": 133,
+    "patient ⊂ resident": 133
+  },
+  "modes": {
+    "patient": {
+      "dedicated": 134,
+      "partial": 11,
+      "missing": 0,
+      "missingSlugs": []
+    },
+    "mbbs": {
+      "dedicated": 145,
+      "partial": 0,
+      "missing": 0,
+      "missingSlugs": []
+    },
+    "neetPg": {
+      "dedicated": 19,
+      "partial": 126,
+      "missing": 0,
+      "missingSlugs": []
+    },
+    "resident": {
+      "dedicated": 12,
+      "partial": 133,
+      "missing": 0,
+      "missingSlugs": []
+    }
+  },
+  "indicators": {
+    "patient.patientGuide": {
+      "yes": 12,
+      "shared": 0,
+      "thin": 0,
+      "none": 133
+    },
+    "patient.patientExplanation": {
+      "yes": 134,
+      "shared": 11,
+      "thin": 0,
+      "none": 0
+    },
+    "patient.patientEducationPoints": {
+      "yes": 145,
+      "shared": 0,
+      "thin": 0,
+      "none": 0
+    },
+    "patient.patientMode": {
+      "yes": 145,
+      "shared": 0,
+      "thin": 0,
+      "none": 0
+    },
+    "mbbs.examLens.mbbs.viva": {
+      "yes": 145,
+      "shared": 0,
+      "thin": 0,
+      "none": 0
+    },
+    "mbbs.examLens.mbbs.practical": {
+      "yes": 145,
+      "shared": 0,
+      "thin": 0,
+      "none": 0
+    },
+    "mbbs.examLens.mbbs.longAnswer": {
+      "yes": 145,
+      "shared": 0,
+      "thin": 0,
+      "none": 0
+    },
+    "mbbs.mechanism.pharmacokinetics+prescriberGuide": {
+      "yes": 131,
+      "shared": 14,
+      "thin": 0,
+      "none": 0
+    },
+    "mbbs.cbmeMapping": {
+      "yes": 12,
+      "shared": 0,
+      "thin": 0,
+      "none": 133
+    },
+    "mbbs.mechanism": {
+      "yes": 145,
+      "shared": 0,
+      "thin": 0,
+      "none": 0
+    },
+    "neetPg.examPearls": {
+      "yes": 12,
+      "shared": 0,
+      "thin": 0,
+      "none": 133
+    },
+    "neetPg.examLens.neetPg.highYield": {
+      "yes": 145,
+      "shared": 0,
+      "thin": 0,
+      "none": 0
+    },
+    "neetPg.examLens.neetPg.pyqConcepts": {
+      "yes": 145,
+      "shared": 0,
+      "thin": 0,
+      "none": 0
+    },
+    "neetPg.memoryTricks": {
+      "yes": 18,
+      "shared": 0,
+      "thin": 127,
+      "none": 0
+    },
+    "neetPg.microQuizzes": {
+      "yes": 145,
+      "shared": 0,
+      "thin": 0,
+      "none": 0
+    },
+    "neetPg.activeRecallQuestions": {
+      "yes": 145,
+      "shared": 0,
+      "thin": 0,
+      "none": 0
+    },
+    "neetPg.stahlMcqBank>=3": {
+      "yes": 4,
+      "shared": 0,
+      "thin": 0,
+      "none": 141
+    },
+    "resident.examLens.inicet.clinicalReasoning": {
+      "yes": 145,
+      "shared": 0,
+      "thin": 0,
+      "none": 0
+    },
+    "resident.wardPearls.residentExpects": {
+      "yes": 12,
+      "shared": 0,
+      "thin": 0,
+      "none": 133
+    },
+    "resident.clinicalCases": {
+      "yes": 145,
+      "shared": 0,
+      "thin": 0,
+      "none": 0
+    },
+    "resident.clinicalDecisionPath": {
+      "yes": 12,
+      "shared": 0,
+      "thin": 0,
+      "none": 133
+    },
+    "resident.commonMistakes": {
+      "yes": 12,
+      "shared": 0,
+      "thin": 0,
+      "none": 133
+    },
+    "resident.whenNotToUse": {
+      "yes": 12,
+      "shared": 0,
+      "thin": 0,
+      "none": 133
+    },
+    "resident.prescriberGuide": {
+      "yes": 145,
+      "shared": 0,
+      "thin": 0,
+      "none": 0
+    },
+    "resident.guidelineComparisons": {
+      "yes": 12,
+      "shared": 0,
+      "thin": 0,
+      "none": 133
+    }
+  },
+  "note": "Indicator status is a size/uniqueness test, not a quality or clinical-accuracy judgement."
+}

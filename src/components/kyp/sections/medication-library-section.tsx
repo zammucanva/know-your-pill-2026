@@ -85,7 +85,7 @@ export function MedicationLibrarySection() {
                       {med.title}
                     </h4>
                     {med.comingSoon && (
-                      <span className="text-[0.6rem] uppercase tracking-wide text-muted-foreground/50">Soon</span>
+                      <span className="text-[0.6rem] uppercase tracking-wide text-muted-foreground">Soon</span>
                     )}
                   </div>
                   <p className="mt-0.5 text-body-sm text-muted-foreground/70">

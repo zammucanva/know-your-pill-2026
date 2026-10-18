@@ -3,8 +3,7 @@
 import * as React from "react";
 import { useRouter } from "next/navigation";
 import { Search, ArrowRight, Sparkles } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Reveal } from "@/components/kyp/ui/reveal";
+import { Button } from "@/components/ui/button";import { Reveal } from "@/components/kyp/ui/reveal";
 import { cn } from "@/lib/utils";
 
 /** Search plumbing is derived from the canonical registries ON THE
@@ -44,19 +43,6 @@ export function HomeHero({
       id="top"
       className="relative min-h-[100svh] overflow-hidden flex flex-col justify-center py-24 sm:py-28"
     >
-      {/* Organic shapes — two overlapping synaptic forms, not three generic blobs */}
-      <div className="pointer-events-none absolute inset-0" aria-hidden>
-        {/* Primary: teal, upper right — the dominant neurotransmitter color */}
-        <div
-          className="absolute right-[0%] top-[5%] h-[55vh] w-[55vh] rounded-full opacity-[0.08] blur-[100px]"
-          style={{ background: "radial-gradient(circle, oklch(0.55 0.11 195), transparent 65%)" }}
-        />
-        {/* Secondary: warm violet, lower left — overlapping, suggesting synaptic crosstalk */}
-        <div
-          className="absolute left-[5%] bottom-[15%] h-[40vh] w-[40vh] rounded-full opacity-[0.06] blur-[90px]"
-          style={{ background: "radial-gradient(circle, oklch(0.58 0.15 290), transparent 65%)" }}
-        />
-      </div>
 
       {/* Content — editorial grid: text column + neuroscience motif column */}
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">

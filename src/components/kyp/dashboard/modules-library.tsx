@@ -141,7 +141,7 @@ export function SavedKnowledge({
             const GroupIcon = group.icon;
             return (
               <div key={group.key} className="rounded-lg">
-                <p className="flex items-center gap-2 px-2.5 pb-1 pt-2.5 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-muted-foreground/70">
+                <p className="flex items-center gap-2 px-2.5 pb-1 pt-2.5 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-muted-foreground">
                   <GroupIcon className="h-3 w-3" />
                   {group.label}
                   <span className="font-normal text-muted-foreground/50">{items.length}</span>
