@@ -277,3 +277,8 @@ body.fs-open {overflow: hidden;}
 .syn-studio .tgroup > * + * {border-left-color: var(--frame);}
 .syn-studio .syn-toolbar,
 .syn-studio .tabs {box-shadow: 0 1px 2px color-mix(in oklch, var(--foreground) 8%, transparent);}
+
+/* brain region markers: uniform ring + dot; the approximate extent shows only on hover / focus */
+.syn-studio .region .area {transition: fill-opacity .15s ease, stroke-opacity .15s ease;}
+.syn-studio .region:hover .area,
+.syn-studio .region.hot .area {fill-opacity: .2; stroke-opacity: .85;}
