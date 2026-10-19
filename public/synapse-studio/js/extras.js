@@ -121,12 +121,16 @@ window.KYPStudioExtras = function (env) {
   bShare.addEventListener("click", () => {
     const url = location.href;
     const done = () => flash(bShare, "Link copied");
-    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(done, () => flash(bShare, "Copy failed"));
-    else {
-      const t = document.createElement("textarea"); t.value = url; document.body.appendChild(t); t.select();
-      try { document.execCommand("copy"); done(); } catch (e) { flash(bShare, "Copy failed"); }
+    // older copy method: used when the browser refuses the clipboard API (no permission, or not focused)
+    const legacy = () => {
+      const t = document.createElement("textarea"); t.value = url; t.setAttribute("readonly", "");
+      t.style.position = "fixed"; t.style.opacity = "0"; document.body.appendChild(t); t.select();
+      let ok = false; try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
       t.remove();
-    }
+      if (ok) done(); else flash(bShare, "Copy failed");
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(done, legacy);
+    else legacy();
   });
   bPrint.addEventListener("click", () => window.print());
 

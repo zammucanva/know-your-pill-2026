@@ -221,3 +221,23 @@ body.fs-open {overflow: hidden;}
   .syn-studio .stage { -webkit-print-color-adjust: exact; print-color-adjust: exact; break-inside: avoid; box-shadow: none; }
   .syn-studio .panel { position: static; max-height: none; overflow: visible; border: 0; padding: 12px 0 0; }
 }
+
+/* boxed label cards (brain overview) */
+.syn-studio .lbl-card {font-size: 12.5px; font-weight: 650;}
+.syn-studio .lbl-cardsub {font-size: 11px; font-weight: 500;}
+.syn-studio .lbl-anat-pill {font-size: 10.5px; font-style: italic; fill: #f3e9c9;}
+.syn-studio .lbl-path-pill {font-size: 10.5px; font-style: italic; font-weight: 650;}
+.syn-studio .stage.ls-large .lbl-card {font-size: 15px;}
+.syn-studio .stage.ls-large .lbl-cardsub {font-size: 13px;}
+.syn-studio .stage.ls-large .lbl-anat-pill,
+.syn-studio .stage.ls-large .lbl-path-pill {font-size: 12.5px;}
+.syn-studio .rcard:hover rect:first-child {fill-opacity: 1;}
+
+/* full screen: tabs + medication bar + toggles share one row; tighter rows give the picture the height */
+.syn-studio .stage-col.fs .tabs {flex-wrap: wrap; row-gap: 6px; margin-bottom: 6px;}
+.syn-studio .fsbar {margin: 0 0 0 10px; flex: 0 1 auto;}
+.syn-studio .stage-col.fs {padding: 8px 14px 8px;}
+.syn-studio .stage-col.fs .controls {margin-top: 6px;}
+.syn-studio .stage-col.fs .phases {margin-top: 6px;}
+.syn-studio .stage-col.fs .caption {margin: 6px 0 0; padding: 6px 12px; font-size: 13.5px;}
+.syn-studio .stage-col.fs .brainnote {margin: 3px 2px 0; font-size: 11px;}
