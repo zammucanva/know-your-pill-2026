@@ -14,7 +14,7 @@ window.KYPStudioExtras = function (env) {
     if (label) b.setAttribute("aria-label", label);
     return b;
   }
-  const bar = root.querySelector(".syn-toolbar");
+  const bar = $("btnAdd").parentNode;
   const bBrowse = btn("btnBrowse", "Browse", "Browse medications by class, target or region");
   const bCompare = btn("btnCompare", "Compare", "Compare two medications");
   bar.insertBefore(bCompare, $("btnAdd")); bar.insertBefore(bBrowse, bCompare);
@@ -22,7 +22,8 @@ window.KYPStudioExtras = function (env) {
   const bShare = btn("btnShare", "Copy link", "Copy a link to this view");
   const bImg = btn("btnImg", "Save image", "Save the current view as an image");
   const bPrint = btn("btnPrint", "Print", "Print this medication");
-  [bShare, bImg, bPrint].forEach((b) => { b.classList.add("sharebtn"); tabs.insertBefore(b, $("btnFs")); });
+  const shareGroup = $("shareGroup") || tabs;
+  [bShare, bImg, bPrint].forEach((b) => { b.classList.add("sharebtn"); shareGroup.appendChild(b); });
 
   /* ------------------------------------------------------------------------ dialogs */
   function dialog(id, title, body) {
