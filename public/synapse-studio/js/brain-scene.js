@@ -91,20 +91,51 @@
       // regions
       this.gReg = el("g", null, svg);
       this.regEls = {};
+      // marker positions: nudged apart so the rings never sit on top of each other
+      // (the hover extent stays at the true region centre; the markers are approximate anyway)
+      const P = {};
+      const shown = Object.keys(C.REGIONS).filter((id) => reg[id] || this.showAll);
+      shown.forEach((id) => { P[id] = { x: C.REGIONS[id].cx, y: C.REGIONS[id].cy, ox: C.REGIONS[id].cx, oy: C.REGIONS[id].cy }; });
+      const MIN_GAP = 25, MAX_MOVE = 40;
+      for (let pass = 0; pass < 80; pass++) {
+        let moved = false;
+        for (let i = 0; i < shown.length; i++) {
+          for (let j = i + 1; j < shown.length; j++) {
+            const a = P[shown[i]], b = P[shown[j]];
+            let dx = b.x - a.x, dy = b.y - a.y, d = Math.hypot(dx, dy);
+            if (d >= MIN_GAP) continue;
+            if (d < 0.01) { dx = 1; dy = 0; d = 1; }
+            const push = (MIN_GAP - d) / 2 + 0.01, ux = dx / d, uy = dy / d;
+            a.x -= ux * push; a.y -= uy * push; b.x += ux * push; b.y += uy * push; moved = true;
+          }
+        }
+        shown.forEach((id) => {
+          const q = P[id], dx = q.x - q.ox, dy = q.y - q.oy, d = Math.hypot(dx, dy);
+          if (d > MAX_MOVE) { q.x = q.ox + (dx / d) * MAX_MOVE; q.y = q.oy + (dy / d) * MAX_MOVE; }
+        });
+        if (!moved) break;
+      }
+      this.mpos = P;
+
       Object.keys(C.REGIONS).forEach((id) => {
         const R = C.REGIONS[id], aff = reg[id];
         if (!aff && !this.showAll) {
-          // faint outline for context
-          el("ellipse", { cx: R.cx, cy: R.cy, rx: R.rx, ry: R.ry, transform: "rotate(" + R.rot + " " + R.cx + " " + R.cy + ")", fill: "none", stroke: "#ffffff", "stroke-width": 1, opacity: 0.25, "stroke-dasharray": "3 3" }, this.gReg);
+          // unaffected regions: a faint context dot only (no outlines floating over the brain)
+          el("circle", { cx: R.cx, cy: R.cy, r: 2.6, fill: "#ffffff", opacity: 0.28 }, this.gReg);
           return;
         }
         const col = aff ? COL[aff.effect] : "#7e92b4";
         const g = el("g", { class: "region", "data-id": id, style: "cursor:pointer" }, this.gReg);
-        const halo = el("ellipse", { cx: R.cx, cy: R.cy, rx: R.rx * 1.12, ry: R.ry * 1.12, transform: "rotate(" + R.rot + " " + R.cx + " " + R.cy + ")", fill: col, opacity: 0, filter: "url(#bglow)" }, g);
-        const body = el("ellipse", { cx: R.cx, cy: R.cy, rx: R.rx, ry: R.ry, transform: "rotate(" + R.rot + " " + R.cx + " " + R.cy + ")", fill: col, "fill-opacity": 0.25, stroke: col, "stroke-width": 2 }, g);
+        el("title", null, g).textContent = R.name;
+        // approximate extent of the region: hidden until you hover the marker or its label card
+        el("ellipse", { class: "area", cx: R.cx, cy: R.cy, rx: R.rx, ry: R.ry, transform: "rotate(" + R.rot + " " + R.cx + " " + R.cy + ")", fill: col, "fill-opacity": 0, stroke: col, "stroke-opacity": 0, "stroke-width": 1.6, "stroke-dasharray": "5 4" }, g);
+        // one uniform marker per region: soft halo + ring + centre dot
+        const mp = P[id];
+        const halo = el("circle", { cx: mp.x, cy: mp.y, r: 19, fill: col, opacity: 0, filter: "url(#bglow)" }, g);
+        const body = el("circle", { cx: mp.x, cy: mp.y, r: 10.5, fill: "#070d19", "fill-opacity": 0.55, stroke: col, "stroke-width": 2.2 }, g);
+        el("circle", { cx: mp.x, cy: mp.y, r: 4, fill: col }, g);
+        el("circle", { cx: mp.x, cy: mp.y, r: 12.5, fill: "transparent" }, g); // hit area (not larger than the marker spacing)
         g.addEventListener("click", () => this.onRegion(id));
-        g.addEventListener("mouseenter", () => body.setAttribute("fill-opacity", 0.55));
-        g.addEventListener("mouseleave", () => body.setAttribute("fill-opacity", 0.25));
         this.regEls[id] = { g, halo, body, col, aff };
       });
 
@@ -129,10 +160,11 @@
 
       /* ---- region cards: two tidy columns that always fit inside the frame */
       const items = Object.keys(this.regEls).map((id) => ({ id: id, R: C.REGIONS[id], aff: this.reg[id] }));
-      const byCy = (p, q) => p.R.cy - q.R.cy;
-      const left = items.filter((i) => i.R.cx <= 400).sort(byCy), right = items.filter((i) => i.R.cx > 400).sort(byCy);
-      while (left.length - right.length > 2) { left.sort((p, q) => q.R.cx - p.R.cx); right.push(left.shift()); right.sort(byCy); left.sort(byCy); }
-      while (right.length - left.length > 2) { right.sort((p, q) => p.R.cx - q.R.cx); left.push(right.shift()); right.sort(byCy); left.sort(byCy); }
+      const MP = this.mpos;
+      const byCy = (p, q) => MP[p.id].y - MP[q.id].y;
+      const left = items.filter((i) => MP[i.id].x <= 400).sort(byCy), right = items.filter((i) => MP[i.id].x > 400).sort(byCy);
+      while (left.length - right.length > 2) { left.sort((p, q) => MP[q.id].x - MP[p.id].x); right.push(left.shift()); right.sort(byCy); left.sort(byCy); }
+      while (right.length - left.length > 2) { right.sort((p, q) => MP[p.id].x - MP[q.id].x); left.push(right.shift()); right.sort(byCy); left.sort(byCy); }
 
       const chars = large ? 22 : 26;
       const wrapC = (name) => {
@@ -157,7 +189,7 @@
         const sumH = cards.reduce((t, c) => t + c.h, 0);
         let gap = 7;
         if (sumH + gap * (n - 1) > bottom - top) gap = Math.max(3, (bottom - top - sumH) / Math.max(1, n - 1));
-        const ys = cards.map((c) => Math.min(Math.max(c.it.R.cy - c.h / 2, top), bottom - c.h));
+        const ys = cards.map((c) => Math.min(Math.max(MP[c.it.id].y - c.h / 2, top), bottom - c.h));
         for (let i = 1; i < n; i++) ys[i] = Math.max(ys[i], ys[i - 1] + cards[i - 1].h + gap);
         const over = ys[n - 1] + cards[n - 1].h - bottom;
         if (over > 0) { ys[n - 1] -= over; for (let i = n - 2; i >= 0; i--) ys[i] = Math.min(ys[i], ys[i + 1] - cards[i].h - gap); }
@@ -166,9 +198,9 @@
         cards.forEach((c, i) => {
           const it = c.it, y = ys[i], col = it.aff ? COL[it.aff.effect] : "#7e92b4";
           occ.push({ x: x0, y: y, w: BW, h: c.h });
-          const ex = side === "L" ? it.R.cx - it.R.rx * 0.85 : it.R.cx + it.R.rx * 0.85;
+          const mk = MP[it.id], ex = side === "L" ? mk.x - 11 : mk.x + 11; // leader meets the marker ring
           const cx = side === "L" ? x0 + BW : x0, cy = y + c.h / 2, mx = (ex + cx) / 2;
-          el("path", { d: "M " + ex + " " + it.R.cy + " C " + mx + " " + it.R.cy + ", " + mx + " " + cy + ", " + cx + " " + cy, fill: "none", class: "lead", stroke: col, "stroke-opacity": 0.55 }, g);
+          el("path", { d: "M " + ex + " " + mk.y + " C " + mx + " " + mk.y + ", " + mx + " " + cy + ", " + cx + " " + cy, fill: "none", class: "lead", stroke: col, "stroke-opacity": 0.55 }, g);
           const card = el("g", { class: "rcard", "data-id": it.id, style: "cursor:pointer" }, g);
           el("rect", { x: x0, y: y, width: BW, height: c.h, rx: 9, fill: "#0a1426", "fill-opacity": 0.9, stroke: col, "stroke-opacity": 0.8, "stroke-width": 1.3 }, card);
           el("rect", { x: x0, y: y + 5, width: 4, height: c.h - 10, rx: 2, fill: col }, card);
@@ -183,8 +215,8 @@
           }
           card.addEventListener("click", () => this.onRegion(it.id));
           const reg = this.regEls[it.id];
-          card.addEventListener("mouseenter", () => { if (reg) reg.body.setAttribute("fill-opacity", 0.6); });
-          card.addEventListener("mouseleave", () => { if (reg) reg.body.setAttribute("fill-opacity", 0.3); });
+          card.addEventListener("mouseenter", () => { if (reg) reg.g.classList.add("hot"); });
+          card.addEventListener("mouseleave", () => { if (reg) reg.g.classList.remove("hot"); });
         });
       };
       place(left, "L");
