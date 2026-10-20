@@ -123,6 +123,7 @@ window.KYPStudioMount = function (root) {
     $("btnBack").hidden = !isSyn;
     $("btnZoom").hidden = isSyn;
     $("lblAll").style.display = isSyn ? "none" : "";
+    $("lblDetail").style.display = isSyn ? "" : "none";
     $("gauges").hidden = !isSyn;
     $("brainNote").hidden = isSyn;
     renderLegend(); renderPhases(); updateGauges(); tick(0, true);
@@ -214,6 +215,7 @@ window.KYPStudioMount = function (root) {
   $("btnBack").addEventListener("click", () => go("brain"));
   $("btnZoom").addEventListener("click", () => go("synapse", S.drug.regions[0] && S.drug.regions[0].id));
   $("chkLabels").addEventListener("change", () => $("stage").classList.toggle("nolabels", !$("chkLabels").checked));
+  $("chkDetail").addEventListener("change", () => $("stage").classList.toggle("detail", $("chkDetail").checked));
   $("chkAll").addEventListener("change", () => { brain.setShowAll($("chkAll").checked); tick(0, true); });
   on(document, "keydown", (e) => { if (e.code === "Space" && !/INPUT|TEXTAREA|SELECT/.test((e.target.tagName || ""))) { e.preventDefault(); $("btnPlay").click(); } });
 
@@ -321,6 +323,7 @@ window.KYPStudioMount = function (root) {
   q.value = "";
   // the browser may restore ticked checkboxes on reload: make the drawing match them
   brain.setShowAll($("chkAll").checked);
+  $("stage").classList.toggle("detail", $("chkDetail").checked);
   $("stage").classList.toggle("nolabels", !$("chkLabels").checked);
   raf = requestAnimationFrame(loop);
 

@@ -282,3 +282,5 @@ body.fs-open {overflow: hidden;}
 .syn-studio .region .area {transition: fill-opacity .15s ease, stroke-opacity .15s ease;}
 .syn-studio .region:hover .area,
 .syn-studio .region.hot .area {fill-opacity: .2; stroke-opacity: .85;}
+.syn-studio .lbl-minor {display: none;}
+.syn-studio .stage.detail .lbl-minor {display: inline;}
