@@ -29,6 +29,7 @@ export const STUDIO_HTML = `<div class="syn-toolbar">
       <div class="tgroup toggles" role="group" aria-label="Display options">
         <label class="check"><input type="checkbox" id="chkLabels" checked> Labels</label>
         <label class="check" id="lblAll"><input type="checkbox" id="chkAll"> Show all regions</label>
+        <label class="check" id="lblDetail" style="display:none"><input type="checkbox" id="chkDetail"> All labels</label>
       </div>
       <div class="tgroup" id="shareGroup" role="group" aria-label="Share and export"></div>
       <button id="btnFs" class="ghost fsbtn" type="button" aria-label="Full screen (F)" title="Full screen (F)">&#9974; Full screen</button>

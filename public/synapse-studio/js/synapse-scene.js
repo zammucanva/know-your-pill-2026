@@ -254,6 +254,21 @@
       el("rect", { x: 100, y: 350, width: 800, height: 290, filter: "url(#blotch)", opacity: 0.3 }, postTex);
       el("rect", { x: 100, y: 350, width: 800, height: 290, filter: "url(#grain)", opacity: 0.5 }, postTex);
       el("rect", { x: 100, y: 350, width: 800, height: 290, fill: "url(#vigGrad)" }, postTex);
+      // crowded cytosol: faint granules, soft light from the upper left, and shadow where the membrane curves away
+      const crowd = (g, x0, y0, x1, y1, n, c1, c2, seed) => {
+        for (let i = 0; i < n; i++) {
+          const x = x0 + hash(i, seed, 2, 3) * (x1 - x0), y = y0 + hash(i, seed, 4, 5) * (y1 - y0), r = 0.8 + hash(i, seed, 6, 7) * 2.6;
+          el("circle", { cx: x, cy: y, r, fill: i % 3 ? c1 : c2, opacity: 0.12 + 0.2 * hash(i, seed, 8, 9) }, g);
+        }
+      };
+      crowd(preTex, 120, 40, 880, 245, 150, "#86c4c0", "#2c7f86", 51);
+      crowd(postTex, 120, 395, 880, 625, 150, "#9aa0e6", "#4a4fa8", 52);
+      const shade = (g, d, cx, cy) => {
+        el("path", { d, fill: "none", stroke: "#02060c", "stroke-width": 30, opacity: 0.55, filter: "url(#soft)" }, g);
+        el("ellipse", { cx, cy, rx: 330, ry: 90, fill: "#ffffff", opacity: 0.06, filter: "url(#soft)" }, g);
+      };
+      shade(preTex, PRE, 380, 120);
+      shade(postTex, POST, 380, 500);
       // postsynaptic density: dark protein scaffold under the membrane
       el("path", { d: "M 142 372 L 858 372 L 846 392 L 154 392 Z", fill: "#0d0e26", opacity: 0.8 }, post);
       for (let i = 0; i < 90; i++) {
@@ -556,25 +571,28 @@
         if (opt.color) t.setAttribute("fill", opt.color);
         return t;
       };
-      const line = (x1, y1, x2, y2) => el("line", { x1, y1, x2, y2, class: "lead" }, g);
+      const line = (x1, y1, x2, y2, minor) => el("line", { x1, y1, x2, y2, class: "lead" + (minor ? " lbl-minor" : "") }, g);
+      // minor labels (supporting organelles, bystander proteins) only show under "All labels"
+      const minor = (text, x, y, opt) => lab(text, x, y, Object.assign({}, opt || {}, { cls: "lbl-mini lbl-minor" }));
+      const sp = (n) => (n === n.toUpperCase() ? n : n.toLowerCase());
 
       lab("Presynaptic terminal (axon bouton)", 175, 62, { cls: "lbl-big" });
       lab("Axon, action potential arrives", 545, 24);
       line(530, 24, 540, 20);
       const v1 = this.vesicles[1];
       const spN = C.SPECIES[v1.species].name.replace(/ \(.*\)$/, "");
-      lab("Synaptic vesicle (stores " + spN.toLowerCase() + ")", 330, 108);
+      lab("Synaptic vesicle (stores " + sp(spN) + ")", 330, 108);
       line(v1.x - 6, v1.y - 22, 372, 114);
       const mem = (txt1, txt2, y) => {
-        const t = lab(txt1, 994, y, { anchor: "end", cls: "lbl-mem" });
-        lab(txt2, 994, y + 14, { anchor: "end", cls: "lbl-mem" });
+        const t = lab(txt1, 984, y, { anchor: "end", cls: "lbl-mem" });
+        lab(txt2, 984, y + 14, { anchor: "end", cls: "lbl-mem" });
         return t;
       };
       mem("Presynaptic", "membrane", 230);
       lab("Synaptic cleft", 22, 304, { cls: "lbl-big" });
       mem("Postsynaptic", "membrane", 340);
       lab("Postsynaptic neuron (dendritic spine)", 330, 560, { cls: "lbl-big" });
-      lab("Postsynaptic density", 330, 385, { anchor: "middle", cls: "lbl-mini" });
+      minor("Postsynaptic density", 330, 385, { anchor: "middle" });
       if (d.action === "vesicle_protein_ligand" || d.action === "vesicle_loading_inhibitor") {
         const tk = d.actsOn[0], tl = C.TARGETS[tk] ? C.TARGETS[tk].label : tk;
         lab(tl + (d.action === "vesicle_protein_ligand" ? " on the vesicle membrane" : " (loads transmitter into vesicles)"), 228, 204, { anchor: "end", cls: "lbl-mini" });
@@ -585,19 +603,20 @@
         lab("IMPase (inositol recycling)", this.casc.IMPase.x - 4, this.casc.IMPase.y + 30, { anchor: "middle", cls: "lbl-mini" });
         lab("GSK-3β", this.casc.GSK3B.x, this.casc.GSK3B.y + 30, { anchor: "middle", cls: "lbl-mini" });
       }
-      lab("Adhesion proteins (neurexin–neuroligin)", 22, 320, { cls: "lbl-mini" });
-      lab("Reserve pool of vesicles", 600, 100, { cls: "lbl-mini" });
-      lab("Smooth endoplasmic reticulum", 412, 520, { anchor: "middle", cls: "lbl-mini" });
+      minor("Adhesion proteins (neurexin–neuroligin)", 22, 322);
+      minor("Reserve pool of vesicles", 600, 100);
+      minor("Smooth endoplasmic reticulum", 412, 520, { anchor: "middle" });
       if (this.rich) {
-        lab("Microtubule (vesicle track)", 800, 160, { cls: "lbl-mini" });
-        lab("Actin filaments", 150, 222, { cls: "lbl-mini" });
-        lab("Glycocalyx (sugar coat)", 22, 334, { cls: "lbl-mini" });
-        if (d.action !== "intracellular_modulator") lab("Ribosomes (protein synthesis)", 690, 425, { anchor: "middle", cls: "lbl-mini" });
+        minor("Microtubule (vesicle track)", 800, 160);
+        minor("Actin filaments", 150, 222);
+        minor("Glycocalyx (sugar coat)", 22, 336);
+        if (d.action !== "intracellular_modulator") minor("Ribosomes (protein synthesis)", 690, 425, { anchor: "middle" });
       }
-      lab("Mitochondrion (ATP supply)", 735, 566, { anchor: "middle", cls: "lbl-mini" });
+      minor("Mitochondrion (ATP supply)", 735, 566, { anchor: "middle" });
       lab("Voltage-gated Ca²⁺ channel", 330, 214);
       line(this.vgcc[0].x + 6, PRE_Y - 20, 336, 218);
-      lab(d.actsOn.includes("COX") ? "Mitochondrion · COX enzymes (drug target)" : "Mitochondrion (MAO on its surface)", 160, 160, { cls: "lbl-mini" });
+      const mitoKey = d.actsOn.includes("COX") || (d.action === "enzyme_inhibitor" && !d.actsOn.includes("AChE"));
+      (mitoKey ? lab : minor)(d.actsOn.includes("COX") ? "Mitochondrion · COX enzymes (drug target)" : "Mitochondrion (MAO on its surface)", 160, 160, { cls: "lbl-mini" });
       if (d.action === "precursor") lab("AADC converts L-DOPA to dopamine", 560, 82, { cls: "lbl-mini" });
       if (d.action === "na_channel_blocker") lab("Voltage-gated Na⁺ channel", 548, 44);
 
@@ -606,15 +625,16 @@
       this.transporters.forEach((t) => {
         if (seen[t.species]) return;
         seen[t.species] = 1;
-        lab(t.label + ", " + t.full.toLowerCase(), t.x, 283, { anchor: t.x < 500 ? "start" : "end", cls: "lbl-mini" });
-        line(t.x, PRE_Y + 22, t.x, 276);
+        const tKey = d.action === "reuptake_inhibitor" || d.action === "releaser";
+        (tKey ? lab : minor)(t.label + ", " + t.full.toLowerCase(), t.x, 283, { anchor: t.x < 500 ? "start" : "end", cls: "lbl-mini" });
+        line(t.x, PRE_Y + 22, t.x, 276, !tKey);
       });
       // cleft enzyme labels
       const es = {};
       this.cleftEnzymes.forEach((e) => {
         if (es[e.species]) return;
         es[e.species] = 1;
-        lab(e.full, e.x, 332, { anchor: "middle", cls: "lbl-mini" });
+        (d.action === "enzyme_inhibitor" ? lab : minor)(e.full, e.x, 332, { anchor: "middle", cls: "lbl-mini" });
       });
       // receptor labels
       const seenR = {};
@@ -1048,7 +1068,7 @@
       });
       if (first) {
         this.drugLabel.setAttribute("x", first.x);
-        this.drugLabel.setAttribute("y", first.y - 24);
+        this.drugLabel.setAttribute("y", Math.min(first.y - 24, 304));
         this.drugLabel.setAttribute("opacity", clamp((t - T_ARRIVE) / 1.2, 0, 1));
       } else this.drugLabel.setAttribute("opacity", 0);
     }
