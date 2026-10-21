@@ -28,9 +28,21 @@
     constructor(svg, onRegion) {
       this.svg = svg;
       this.onRegion = onRegion || function () {};
-      svg.setAttribute("viewBox", BrainScene.VB.x + " " + BrainScene.VB.y + " " + BrainScene.VB.w + " " + BrainScene.VB.h);
+      this.vb = { x: BrainScene.VB.x, y: BrainScene.VB.y, w: BrainScene.VB.w, h: BrainScene.VB.h };
+      svg.setAttribute("viewBox", this.vb.x + " " + this.vb.y + " " + this.vb.w + " " + this.vb.h);
       this.drug = null;
       this.showAll = false;
+    }
+
+    /* Match the drawing's shape to the stage (e.g. full screen on a wide monitor) so the
+     * label cards use the whole width instead of leaving empty side margins. */
+    setAspect(a) {
+      if (!(a > 0.2)) return;
+      const w = Math.max(BrainScene.VB.w, Math.round(BrainScene.VB.h * a));
+      if (w === this.vb.w) return;
+      this.vb = { x: Math.round(BrainScene.VB.x + BrainScene.VB.w / 2 - w / 2), y: BrainScene.VB.y, w: w, h: BrainScene.VB.h };
+      this.svg.setAttribute("viewBox", this.vb.x + " " + this.vb.y + " " + this.vb.w + " " + this.vb.h);
+      if (this.drug) this.build();
     }
 
     setDrug(drug) { this.drug = drug; this.build(); }
@@ -47,11 +59,11 @@
       el("feGaussianBlur", { stdDeviation: "5" }, glow);
       const glow2 = el("filter", { id: "bglow2", x: "-80%", y: "-80%", width: "260%", height: "260%" }, defs);
       el("feGaussianBlur", { stdDeviation: "2.6" }, glow2);
-      el("rect", { x: BrainScene.VB.x, y: BrainScene.VB.y, width: BrainScene.VB.w, height: BrainScene.VB.h, fill: "url(#bbg)" }, svg);
+      el("rect", { x: this.vb.x, y: this.vb.y, width: this.vb.w, height: this.vb.h, fill: "url(#bbg)" }, svg);
 
       // real mid-sagittal brain section (Z-Anatomy, CC BY-SA 4.0)
       const img = el("image", { x: 0, y: 0, width: 800, height: 560, preserveAspectRatio: "xMidYMid meet", style: "filter: drop-shadow(0 8px 24px rgba(0,0,0,.6))" }, svg);
-      img.setAttribute("href", (global.KYP_ASSET_BASE || "") + "assets/brain_sagittal.png");
+      img.setAttribute("href", (global.KYP_ASSET_BASE || "") + "assets/brain_sagittal.webp");
 
       // affected map
       const reg = {};
@@ -79,20 +91,51 @@
       // regions
       this.gReg = el("g", null, svg);
       this.regEls = {};
+      // marker positions: nudged apart so the rings never sit on top of each other
+      // (the hover extent stays at the true region centre; the markers are approximate anyway)
+      const P = {};
+      const shown = Object.keys(C.REGIONS).filter((id) => reg[id] || this.showAll);
+      shown.forEach((id) => { P[id] = { x: C.REGIONS[id].cx, y: C.REGIONS[id].cy, ox: C.REGIONS[id].cx, oy: C.REGIONS[id].cy }; });
+      const MIN_GAP = 25, MAX_MOVE = 40;
+      for (let pass = 0; pass < 80; pass++) {
+        let moved = false;
+        for (let i = 0; i < shown.length; i++) {
+          for (let j = i + 1; j < shown.length; j++) {
+            const a = P[shown[i]], b = P[shown[j]];
+            let dx = b.x - a.x, dy = b.y - a.y, d = Math.hypot(dx, dy);
+            if (d >= MIN_GAP) continue;
+            if (d < 0.01) { dx = 1; dy = 0; d = 1; }
+            const push = (MIN_GAP - d) / 2 + 0.01, ux = dx / d, uy = dy / d;
+            a.x -= ux * push; a.y -= uy * push; b.x += ux * push; b.y += uy * push; moved = true;
+          }
+        }
+        shown.forEach((id) => {
+          const q = P[id], dx = q.x - q.ox, dy = q.y - q.oy, d = Math.hypot(dx, dy);
+          if (d > MAX_MOVE) { q.x = q.ox + (dx / d) * MAX_MOVE; q.y = q.oy + (dy / d) * MAX_MOVE; }
+        });
+        if (!moved) break;
+      }
+      this.mpos = P;
+
       Object.keys(C.REGIONS).forEach((id) => {
         const R = C.REGIONS[id], aff = reg[id];
         if (!aff && !this.showAll) {
-          // faint outline for context
-          el("ellipse", { cx: R.cx, cy: R.cy, rx: R.rx, ry: R.ry, transform: "rotate(" + R.rot + " " + R.cx + " " + R.cy + ")", fill: "none", stroke: "#ffffff", "stroke-width": 1, opacity: 0.25, "stroke-dasharray": "3 3" }, this.gReg);
+          // unaffected regions: a faint context dot only (no outlines floating over the brain)
+          el("circle", { cx: R.cx, cy: R.cy, r: 2.6, fill: "#ffffff", opacity: 0.28 }, this.gReg);
           return;
         }
         const col = aff ? COL[aff.effect] : "#7e92b4";
         const g = el("g", { class: "region", "data-id": id, style: "cursor:pointer" }, this.gReg);
-        const halo = el("ellipse", { cx: R.cx, cy: R.cy, rx: R.rx * 1.12, ry: R.ry * 1.12, transform: "rotate(" + R.rot + " " + R.cx + " " + R.cy + ")", fill: col, opacity: 0, filter: "url(#bglow)" }, g);
-        const body = el("ellipse", { cx: R.cx, cy: R.cy, rx: R.rx, ry: R.ry, transform: "rotate(" + R.rot + " " + R.cx + " " + R.cy + ")", fill: col, "fill-opacity": 0.25, stroke: col, "stroke-width": 2 }, g);
+        el("title", null, g).textContent = R.name;
+        // approximate extent of the region: hidden until you hover the marker or its label card
+        el("ellipse", { class: "area", cx: R.cx, cy: R.cy, rx: R.rx, ry: R.ry, transform: "rotate(" + R.rot + " " + R.cx + " " + R.cy + ")", fill: col, "fill-opacity": 0, stroke: col, "stroke-opacity": 0, "stroke-width": 1.6, "stroke-dasharray": "5 4" }, g);
+        // one uniform marker per region: soft halo + ring + centre dot
+        const mp = P[id];
+        const halo = el("circle", { cx: mp.x, cy: mp.y, r: 19, fill: col, opacity: 0, filter: "url(#bglow)" }, g);
+        const body = el("circle", { cx: mp.x, cy: mp.y, r: 10.5, fill: "#070d19", "fill-opacity": 0.55, stroke: col, "stroke-width": 2.2 }, g);
+        el("circle", { cx: mp.x, cy: mp.y, r: 4, fill: col }, g);
+        el("circle", { cx: mp.x, cy: mp.y, r: 12.5, fill: "transparent" }, g); // hit area (not larger than the marker spacing)
         g.addEventListener("click", () => this.onRegion(id));
-        g.addEventListener("mouseenter", () => body.setAttribute("fill-opacity", 0.55));
-        g.addEventListener("mouseleave", () => body.setAttribute("fill-opacity", 0.25));
         this.regEls[id] = { g, halo, body, col, aff };
       });
 
@@ -100,49 +143,110 @@
     }
 
     buildLabels() {
-      const svg = this.svg, d = this.drug;
+      const svg = this.svg, VB = this.vb;
       const g = (this.gLabels = el("g", { class: "labels" }, svg));
-      const items = Object.keys(this.regEls).map((id) => ({ id, R: C.REGIONS[id], aff: this.reg[id] }));
-      const left = items.filter((i) => i.R.cx <= 400).sort((a, b) => a.R.cy - b.R.cy);
-      const right = items.filter((i) => i.R.cx > 400).sort((a, b) => a.R.cy - b.R.cy);
+      const large = !!(global.KYP_GFX && global.KYP_GFX.get().labelSize === "large");
+      const BW = large ? 206 : 176;            // card width
+      const occ = [];                           // occupied rectangles (collision avoidance)
+      const hit = (r) => occ.some((o) => r.x < o.x + o.w + 3 && r.x + r.w + 3 > o.x && r.y < o.y + o.h + 3 && r.y + r.h + 3 > o.y);
+      const free = (x, y, w, h) => {            // nearest free slot by moving vertically
+        const tries = [0, -18, 18, -36, 36, -54, 54, -72, 72];
+        for (let k = 0; k < tries.length; k++) {
+          const r = { x: x, y: Math.min(Math.max(y + tries[k], VB.y + 4), VB.y + VB.h - h - 4), w: w, h: h };
+          if (!hit(r)) { occ.push(r); return r; }
+        }
+        const r0 = { x: x, y: y, w: w, h: h }; occ.push(r0); return r0;
+      };
+
+      /* ---- region cards: two tidy columns that always fit inside the frame */
+      const items = Object.keys(this.regEls).map((id) => ({ id: id, R: C.REGIONS[id], aff: this.reg[id] }));
+      const MP = this.mpos;
+      const byCy = (p, q) => MP[p.id].y - MP[q.id].y;
+      const left = items.filter((i) => MP[i.id].x <= 400).sort(byCy), right = items.filter((i) => MP[i.id].x > 400).sort(byCy);
+      while (left.length - right.length > 2) { left.sort((p, q) => MP[q.id].x - MP[p.id].x); right.push(left.shift()); right.sort(byCy); left.sort(byCy); }
+      while (right.length - left.length > 2) { right.sort((p, q) => MP[p.id].x - MP[q.id].x); left.push(right.shift()); right.sort(byCy); left.sort(byCy); }
+
+      const chars = large ? 22 : 26;
+      const wrapC = (name) => {
+        if (name.length <= chars) return [name];
+        const i = name.indexOf(" (");
+        if (i > 0 && i <= chars) return [name.slice(0, i), name.slice(i + 1)];
+        const j = name.lastIndexOf(" ", chars);
+        return j > 0 ? [name.slice(0, j), name.slice(j + 1)] : [name];
+      };
+      const lh = large ? 17 : 14.5;
       const place = (list, side) => {
-        let last = -999;
-        list.forEach((it) => {
-          const y = Math.max(it.R.cy, last + 40);
-          last = y;
-          const x = side === "L" ? 62 : 748;
-          const ex = side === "L" ? it.R.cx - it.R.rx * 0.85 : it.R.cx + it.R.rx * 0.85;
-          el("path", { d: "M " + ex + " " + it.R.cy + " L " + (side === "L" ? 86 : 724) + " " + y + " L " + (side === "L" ? 70 : 740) + " " + y, fill: "none", class: "lead" }, g);
-          const col = it.aff ? COL[it.aff.effect] : "#9fb4d9";
-          const lines = wrap(it.R.name);
-          const t = el("text", { x, y: y - 2 - (lines.length - 1) * 8, "text-anchor": side === "L" ? "end" : "start", class: "lbl lbl-region", fill: "#e8f1ff" }, g);
-          lines.forEach((ln, q) => { const ts = el("tspan", { x, dy: q ? 15 : 0 }, t); ts.textContent = ln; });
-          if (it.aff) {
-            const a = el("text", { x, y: y + 13 + (lines.length - 1) * 8, "text-anchor": side === "L" ? "end" : "start", class: "lbl-mini", fill: col }, g);
-            a.textContent = ARROW[it.aff.effect];
+        const n = list.length;
+        if (!n) return;
+        const compact = n > 9;
+        const cards = list.map((it) => {
+          const lines = wrapC(it.R.name);
+          const sub = it.aff ? ARROW[it.aff.effect] : "";
+          const h = compact ? 14 + lines.length * lh + 4 : 12 + lines.length * lh + (sub ? lh : 0) + 6;
+          return { it: it, lines: lines, sub: sub, h: h };
+        });
+        const top = VB.y + 10, bottom = VB.y + VB.h - 10 - (side === "L" ? 84 : 46); // keep clear of the legend (left) and the zoom button (right)
+        const sumH = cards.reduce((t, c) => t + c.h, 0);
+        let gap = 7;
+        if (sumH + gap * (n - 1) > bottom - top) gap = Math.max(3, (bottom - top - sumH) / Math.max(1, n - 1));
+        const ys = cards.map((c) => Math.min(Math.max(MP[c.it.id].y - c.h / 2, top), bottom - c.h));
+        for (let i = 1; i < n; i++) ys[i] = Math.max(ys[i], ys[i - 1] + cards[i - 1].h + gap);
+        const over = ys[n - 1] + cards[n - 1].h - bottom;
+        if (over > 0) { ys[n - 1] -= over; for (let i = n - 2; i >= 0; i--) ys[i] = Math.min(ys[i], ys[i + 1] - cards[i].h - gap); }
+        if (ys[0] < top) { let yy = top; for (let i = 0; i < n; i++) { ys[i] = yy; yy += cards[i].h + gap; } }
+        const x0 = side === "L" ? VB.x + 10 : VB.x + VB.w - 10 - BW;
+        cards.forEach((c, i) => {
+          const it = c.it, y = ys[i], col = it.aff ? COL[it.aff.effect] : "#7e92b4";
+          occ.push({ x: x0, y: y, w: BW, h: c.h });
+          const mk = MP[it.id], ex = side === "L" ? mk.x - 11 : mk.x + 11; // leader meets the marker ring
+          const cx = side === "L" ? x0 + BW : x0, cy = y + c.h / 2, mx = (ex + cx) / 2;
+          el("path", { d: "M " + ex + " " + mk.y + " C " + mx + " " + mk.y + ", " + mx + " " + cy + ", " + cx + " " + cy, fill: "none", class: "lead", stroke: col, "stroke-opacity": 0.55 }, g);
+          const card = el("g", { class: "rcard", "data-id": it.id, style: "cursor:pointer" }, g);
+          el("rect", { x: x0, y: y, width: BW, height: c.h, rx: 9, fill: "#0a1426", "fill-opacity": 0.9, stroke: col, "stroke-opacity": 0.8, "stroke-width": 1.3 }, card);
+          el("rect", { x: x0, y: y + 5, width: 4, height: c.h - 10, rx: 2, fill: col }, card);
+          const t = el("text", { x: x0 + 14, y: y + 6 + lh * 0.82, class: "lbl-card", fill: "#eaf3ff" }, card);
+          c.lines.forEach((ln, q) => {
+            const ts = el("tspan", { x: x0 + 14, dy: q ? lh : 0 }, t);
+            ts.textContent = ln + (compact && q === c.lines.length - 1 && c.sub ? "  " + c.sub.charAt(0) : "");
+          });
+          if (!compact && c.sub) {
+            const st = el("text", { x: x0 + 14, y: y + 6 + lh * c.lines.length + lh * 0.82, class: "lbl-cardsub", fill: col }, card);
+            st.textContent = c.sub;
           }
+          card.addEventListener("click", () => this.onRegion(it.id));
+          const reg = this.regEls[it.id];
+          card.addEventListener("mouseenter", () => { if (reg) reg.g.classList.add("hot"); });
+          card.addEventListener("mouseleave", () => { if (reg) reg.g.classList.remove("hot"); });
         });
       };
       place(left, "L");
       place(right, "R");
-      // anatomical landmarks of the section (graphics setting: anatomy labels)
+
+      /* ---- anatomical landmarks of the section: small pills, nudged apart */
       if (global.KYP_GFX && global.KYP_GFX.get().anatomy) {
         BrainScene.LANDMARKS.forEach((m) => {
           const grp = el("g", { class: "anat" + (m[6] ? "" : " anat-extra") }, g);
-          if (Math.abs(m[3] - m[1]) > 12 || Math.abs(m[4] - m[2]) > 12) el("path", { d: "M " + m[1] + " " + m[2] + " L " + (m[3] + (m[5] === "end" ? 3 : -3)) + " " + (m[4] - 3), class: "lead" }, grp);
-          el("circle", { cx: m[1], cy: m[2], r: 2.3, fill: "#f3e9c9", stroke: "#070d19", "stroke-width": 1 }, grp);
-          const t = el("text", { x: m[3], y: m[4], "text-anchor": m[5], class: "lbl-anat" }, grp);
+          const w = m[0].length * 5.4 + 12, h = 16;
+          const bx = m[5] === "end" ? m[3] - w + 3 : m[3] - 3;
+          const r = free(bx, m[4] - 12, w, h);
+          const ty = r.y + h / 2, ex = r.x > m[1] ? r.x : r.x + w;
+          if (Math.abs(ex - m[1]) > 8 || Math.abs(ty - m[2]) > 8) el("path", { d: "M " + m[1] + " " + m[2] + " L " + ex + " " + ty, class: "lead" }, grp);
+          el("rect", { x: r.x, y: r.y, width: w, height: h, rx: 8, fill: "#070d19", "fill-opacity": 0.8, stroke: "#c9b98a", "stroke-opacity": 0.55, "stroke-width": 0.8 }, grp);
+          el("circle", { cx: m[1], cy: m[2], r: 2.6, fill: "#f3e9c9", stroke: "#070d19", "stroke-width": 1 }, grp);
+          const t = el("text", { x: r.x + w / 2, y: r.y + h / 2 + 3.6, "text-anchor": "middle", class: "lbl-anat-pill" }, grp);
           t.textContent = m[0];
         });
       }
-      // pathway names near their curves
+
+      /* ---- pathway names: pills placed on their curves, kept clear of everything else */
       this.pathList.forEach((p) => {
         if (!p.aff) return;
         const cv = p.P.curves[0], m = bez(cv[0], cv[1], cv[2], cv[3], 0.5);
         const label = p.P.name + (p.aff.effect === "up" ? " ↑" : p.aff.effect === "down" ? " ↓" : " ⇄");
-        const w = label.length * 5.5 + 12;
-        el("rect", { x: m.x - w / 2, y: m.y - 20, width: w, height: 16, rx: 8, fill: "#070d19", "fill-opacity": 0.78, stroke: p.color, "stroke-opacity": 0.5, "stroke-width": 0.8 }, g);
-        const t = el("text", { x: m.x, y: m.y - 8, "text-anchor": "middle", class: "lbl-path", fill: p.color }, g);
+        const w = label.length * 5.6 + 16, h = 18;
+        const r = free(m.x - w / 2, m.y - 24, w, h);
+        el("rect", { x: r.x, y: r.y, width: w, height: h, rx: 9, fill: "#070d19", "fill-opacity": 0.85, stroke: p.color, "stroke-opacity": 0.65, "stroke-width": 0.9 }, g);
+        const t = el("text", { x: r.x + w / 2, y: r.y + h / 2 + 3.8, "text-anchor": "middle", class: "lbl-path-pill", fill: p.color }, g);
         t.textContent = label;
       });
     }

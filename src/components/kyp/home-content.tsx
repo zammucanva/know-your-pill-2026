@@ -1,13 +1,8 @@
 import { HomeHero } from "@/components/kyp/sections/home-hero";
 import { StatsSection } from "@/components/kyp/sections/stats-section";
-import { LearnBanner } from "@/components/kyp/sections/learn-banner";
 import { MedicationLibrarySection } from "@/components/kyp/sections/medication-library-section";
 import { SynapseStudioSection } from "@/components/kyp/sections/synapse-studio-section";
-import { PsychiatrySection } from "@/components/kyp/sections/psychiatry-section";
 import { SubstanceUseSection } from "@/components/kyp/sections/substance-use-section";
-import { TimelineSection } from "@/components/kyp/sections/timeline-section";
-import { NeuroArcadeSection } from "@/components/kyp/sections/neuroarcade-section";
-import { RoadmapSection } from "@/components/kyp/sections/roadmap-section";
 import { FaqSection } from "@/components/kyp/sections/faq-section";
 import { EmergencySection } from "@/components/kyp/sections/emergency-section";
 import { Footer } from "@/components/kyp/sections/footer";
@@ -23,6 +18,12 @@ import { drugs, substancePages } from "@/lib/kyp/data";
  * popular chips) from the canonical registries HERE, on the server, so
  * the client hero receives lightweight string arrays instead of pulling
  * the 145-monograph data layer into the browser bundle.
+ *
+ * Kept deliberately short (hero, stats, library, Synapse Studio,
+ * substances, FAQ, emergency) so visitors reach the useful parts. The
+ * Learn, Psychiatry, timeline, NeuroArcade and roadmap promos were
+ * removed from the homepage; their pages stay reachable from the navbar
+ * and footer, and the section components are still in sections/.
  */
 // Search plumbing — derived from the canonical registries (never a
 // second list) and passed to the client hero as plain strings.
@@ -40,14 +41,9 @@ export function HomeContent() {
           popularSearches={popularSearches}
         />
         <StatsSection />
-        <LearnBanner />
         <MedicationLibrarySection />
         <SynapseStudioSection />
-        <PsychiatrySection />
         <SubstanceUseSection />
-        <TimelineSection />
-        <NeuroArcadeSection />
-        <RoadmapSection />
         <FaqSection />
         <EmergencySection />
       </main>

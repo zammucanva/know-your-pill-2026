@@ -101,7 +101,7 @@ window.KYPStudioMount = function (root) {
       const R = regionId ? C.REGIONS[regionId] : null;
       if (R) {
         const box = $("svgBrain").getBoundingClientRect();
-        const VB = BrainScene.VB;
+        const VB = brain.vb;
         const sc = Math.min(box.width / VB.w, box.height / VB.h);
         const ox = (box.width - VB.w * sc) / 2, oy = (box.height - VB.h * sc) / 2;
         $("svgBrain").style.transformOrigin = (ox + (R.cx - VB.x) * sc) + "px " + (oy + (R.cy - VB.y) * sc) + "px";
@@ -123,11 +123,13 @@ window.KYPStudioMount = function (root) {
     $("btnBack").hidden = !isSyn;
     $("btnZoom").hidden = isSyn;
     $("lblAll").style.display = isSyn ? "none" : "";
+    $("lblDetail").style.display = isSyn ? "" : "none";
     $("gauges").hidden = !isSyn;
     $("brainNote").hidden = isSyn;
     renderLegend(); renderPhases(); updateGauges(); tick(0, true);
     $("stage").classList.toggle("nolabels", !$("chkLabels").checked);
     $("stage").classList.toggle("v-syn", isSyn); $("stage").classList.toggle("v-brain", !isSyn);
+    fitBrain();
     X.writeHash();
   }
 
@@ -213,6 +215,7 @@ window.KYPStudioMount = function (root) {
   $("btnBack").addEventListener("click", () => go("brain"));
   $("btnZoom").addEventListener("click", () => go("synapse", S.drug.regions[0] && S.drug.regions[0].id));
   $("chkLabels").addEventListener("change", () => $("stage").classList.toggle("nolabels", !$("chkLabels").checked));
+  $("chkDetail").addEventListener("change", () => $("stage").classList.toggle("detail", $("chkDetail").checked));
   $("chkAll").addEventListener("change", () => { brain.setShowAll($("chkAll").checked); tick(0, true); });
   on(document, "keydown", (e) => { if (e.code === "Space" && !/INPUT|TEXTAREA|SELECT/.test((e.target.tagName || ""))) { e.preventDefault(); $("btnPlay").click(); } });
 
@@ -259,6 +262,7 @@ window.KYPStudioMount = function (root) {
     if (on) { fillFsSelect(); try { const r = col.requestFullscreen && col.requestFullscreen(); if (r && r.catch) r.catch(() => {}); } catch (e) {} }
     else if (document.fullscreenElement) { try { document.exitFullscreen(); } catch (e) {} }
     requestAnimationFrame(() => { if (!dead) tick(0, true); });
+    [30, 250, 700].forEach((ms) => setTimeout(() => { if (!dead) fitBrain(); }, ms));
   }
   $("btnFs").addEventListener("click", () => setFs(true));
   $("fsExit").addEventListener("click", () => setFs(false));
@@ -303,10 +307,24 @@ window.KYPStudioMount = function (root) {
   $("btnGfx").addEventListener("click", () => $("dlgGfx").showModal());
   applyGfx(null);
 
+  // keep the brain drawing the same shape as the stage (full screen on a wide monitor uses the whole width)
+  function fitBrain() {
+    if (dead) return;
+    const r = $("stage").getBoundingClientRect();
+    if (r.width > 50 && r.height > 50 && S.drug) brain.setAspect(r.width / r.height);
+  }
+  if (window.ResizeObserver) { const ro = new ResizeObserver(fitBrain); ro.observe($("stage")); offs.push(() => ro.disconnect()); }
+  window.addEventListener("resize", fitBrain);
+  offs.push(() => window.removeEventListener("resize", fitBrain));
+
   const start = X.parseHash();
   setDrug(LIB[start.id] ? start.id : "clonazepam");
   if (LIB[start.id] && start.view === "synapse") go("synapse", start.region || (S.drug.regions[0] && S.drug.regions[0].id));
   q.value = "";
+  // the browser may restore ticked checkboxes on reload: make the drawing match them
+  brain.setShowAll($("chkAll").checked);
+  $("stage").classList.toggle("detail", $("chkDetail").checked);
+  $("stage").classList.toggle("nolabels", !$("chkLabels").checked);
   raf = requestAnimationFrame(loop);
 
   return function destroy() {

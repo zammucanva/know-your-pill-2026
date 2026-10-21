@@ -14,7 +14,7 @@ window.KYPStudioExtras = function (env) {
     if (label) b.setAttribute("aria-label", label);
     return b;
   }
-  const bar = root.querySelector(".syn-toolbar");
+  const bar = $("btnAdd").parentNode;
   const bBrowse = btn("btnBrowse", "Browse", "Browse medications by class, target or region");
   const bCompare = btn("btnCompare", "Compare", "Compare two medications");
   bar.insertBefore(bCompare, $("btnAdd")); bar.insertBefore(bBrowse, bCompare);
@@ -22,7 +22,8 @@ window.KYPStudioExtras = function (env) {
   const bShare = btn("btnShare", "Copy link", "Copy a link to this view");
   const bImg = btn("btnImg", "Save image", "Save the current view as an image");
   const bPrint = btn("btnPrint", "Print", "Print this medication");
-  [bShare, bImg, bPrint].forEach((b) => { b.classList.add("sharebtn"); tabs.insertBefore(b, $("btnFs")); });
+  const shareGroup = $("shareGroup") || tabs;
+  [bShare, bImg, bPrint].forEach((b) => { b.classList.add("sharebtn"); shareGroup.appendChild(b); });
 
   /* ------------------------------------------------------------------------ dialogs */
   function dialog(id, title, body) {
@@ -121,12 +122,16 @@ window.KYPStudioExtras = function (env) {
   bShare.addEventListener("click", () => {
     const url = location.href;
     const done = () => flash(bShare, "Link copied");
-    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(done, () => flash(bShare, "Copy failed"));
-    else {
-      const t = document.createElement("textarea"); t.value = url; document.body.appendChild(t); t.select();
-      try { document.execCommand("copy"); done(); } catch (e) { flash(bShare, "Copy failed"); }
+    // older copy method: used when the browser refuses the clipboard API (no permission, or not focused)
+    const legacy = () => {
+      const t = document.createElement("textarea"); t.value = url; t.setAttribute("readonly", "");
+      t.style.position = "fixed"; t.style.opacity = "0"; document.body.appendChild(t); t.select();
+      let ok = false; try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
       t.remove();
-    }
+      if (ok) done(); else flash(bShare, "Copy failed");
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(done, legacy);
+    else legacy();
   });
   bPrint.addEventListener("click", () => window.print());
 

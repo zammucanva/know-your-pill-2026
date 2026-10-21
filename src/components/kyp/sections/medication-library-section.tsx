@@ -6,6 +6,13 @@ import { Reveal } from "@/components/kyp/ui/reveal";
 import { medicationClasses, categories, drugs } from "@/lib/kyp/data";
 
 /**
+ * Categories that have no guides yet. Hidden from the homepage list so
+ * nothing looks unfinished; the data file itself is content-locked, so the
+ * decision lives here. Remove an id once its guides exist.
+ */
+const NO_GUIDES_YET = new Set(["pain", "antibiotics"]);
+
+/**
  * MedicationLibrarySection — homepage medication-library entry.
  *
  * Server Component (static content + Links only — the canonical drug
@@ -28,7 +35,7 @@ export function MedicationLibrarySection() {
               {drugs.length} psychiatric medications, structured the same way
             </h2>
             <p className="mt-5 text-body text-muted-foreground max-w-2xl leading-relaxed">
-              Each drug page covers mechanism of action, receptor pharmacology, clinical indications, side effects with management, monitoring parameters, drug interactions, patient education, and a real clinical case.
+              Every guide starts with plain-language answers: what the medicine does, what side effects to expect, and when to get help. Students can go deeper into mechanism of action, receptor pharmacology, monitoring, interactions and a worked clinical case.
             </p>
           </div>
         </Reveal>
@@ -70,14 +77,15 @@ export function MedicationLibrarySection() {
 
         {/* Secondary categories — text entries, no cards */}
         <div className="space-y-0">
-          {medicationClasses.slice(1).map((med, i) => (
+          {/* Only categories with real guides; "coming soon" entries stay hidden. */}
+          {medicationClasses.slice(1).filter((med) => !med.comingSoon && !NO_GUIDES_YET.has(med.id)).map((med, i) => (
             <Reveal key={med.id} delay={0.12 + i * 0.06}>
               <Link
                 href={med.href}
                 className="group flex items-center gap-6 py-5 border-b border-border/15 last:border-0 transition-all duration-300"
               >
                 <span className="font-mono text-xs text-muted-foreground/30 w-8">
-                  {med.number}
+                  {String(i + 2).padStart(2, "0")}
                 </span>
                 <div className="flex-1">
                   <div className="flex items-center gap-3">
@@ -106,14 +114,14 @@ export function MedicationLibrarySection() {
             </p>
             <div className="flex flex-wrap gap-x-4 gap-y-2">
               {categories.map((cat) => (
-                <a
+                <Link
                   key={cat.id}
-                  href="#library"
+                  href="/drugs"
                   className="group inline-flex items-center gap-1.5 text-sm text-foreground/50 transition-colors hover:text-brand"
                 >
                   <span className="h-1 w-1 rounded-full bg-muted-foreground/30 group-hover:bg-brand" />
                   {cat.title}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

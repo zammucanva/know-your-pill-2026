@@ -4,11 +4,13 @@
  * Single source of truth for absolute URLs in server-rendered metadata
  * (canonical links, Open Graph URLs, JSON-LD structured data, sitemap).
  *
- * The repository's public deployment is the GitHub Pages project site
- * (no custom domain — no CNAME; workflow: .github/workflows/deploy.yml;
- * repo: zammucanva/know-your-pill-2026), so the canonical origin is
- * deterministic. Deployments behind a custom domain override it with
- * NEXT_PUBLIC_SITE_URL at build time — no code change needed.
+ * The production site is the Vercel deployment at
+ * https://know-your-pill-2026.vercel.app (repo:
+ * zammucanva/know-your-pill-2026). That is the single canonical origin, so
+ * search engines index one address. The GitHub Pages export (workflow:
+ * .github/workflows/deploy.yml) is a mirror and canonicalises to the same
+ * Vercel origin. A custom domain overrides it with NEXT_PUBLIC_SITE_URL at
+ * build time (set it in the Vercel project settings): no code change needed.
  *
  * Design rule: structured data must never carry localhost or
  * build-machine URLs. In development the same canonical production
@@ -21,10 +23,10 @@
  * into every route's module graph.
  */
 
-/** Canonical public origin, incl. the GitHub Pages basePath. Never localhost. */
+/** Canonical public origin (the Vercel production site). Never localhost. */
 export const SITE_URL: string = (
   process.env.NEXT_PUBLIC_SITE_URL ||
-  "https://zammucanva.github.io/know-your-pill-2026"
+  "https://know-your-pill-2026.vercel.app"
 ).replace(/\/+$/, "");
 
 /** Function form of SITE_URL — use wherever a call reads better (e.g. `new URL(getSiteUrl())`). */

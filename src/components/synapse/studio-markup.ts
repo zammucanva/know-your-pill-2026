@@ -4,28 +4,35 @@ export const STUDIO_HTML = `<div class="syn-toolbar">
     <input id="q" type="search" autocomplete="off" placeholder="Search a medication (e.g. fluoxetine, Xanax, naloxone)&hellip;" aria-label="Search a medication">
     <ul id="suggest" class="suggest" hidden></ul>
   </div>
-  <button id="btnAdd" class="ghost" type="button">+ Add a medication</button>
-  <button id="btnGfx" class="ghost" type="button" aria-label="Graphics settings" title="Graphics settings">&#9881; Graphics</button>
+  <div class="tgroup tactions" role="group" aria-label="Library actions">
+    <button id="btnAdd" class="ghost" type="button">+ Add a medication</button>
+    <button id="btnGfx" class="ghost" type="button" aria-label="Graphics settings" title="Graphics settings">&#9881; Graphics</button>
+  </div>
 </div>
 
 <div class="layout">
   <section class="stage-col" id="stageCol">
-    <div class="tabs" role="tablist">
-      <button id="tabBrain" class="tab active" role="tab" aria-selected="true" type="button">Brain overview</button>
-      <button id="tabSyn" class="tab" role="tab" aria-selected="false" type="button">Synapse close-up</button>
+    <div class="tabs">
+      <div class="tgroup segtabs" role="tablist" aria-label="View">
+        <button id="tabBrain" class="tab active" role="tab" aria-selected="true" type="button">Brain overview</button>
+        <button id="tabSyn" class="tab" role="tab" aria-selected="false" type="button">Synapse close-up</button>
+      </div>
+      <div class="fsbar" id="fsbar" hidden>
+        <button id="fsPrev" class="ghost" type="button" aria-label="Previous medication" title="Previous medication">&#9664;</button>
+        <select id="fsDrug" aria-label="Medication"></select>
+        <button id="fsNext" class="ghost" type="button" aria-label="Next medication" title="Next medication">&#9654;</button>
+        <span class="spacer"></span>
+        <button id="fsGfx" class="ghost" type="button" title="Graphics settings">&#9881; Graphics</button>
+        <button id="fsExit" class="primary" type="button" title="Exit full screen (Esc)">Exit full screen</button>
+      </div>
       <span class="spacer"></span>
-      <label class="check"><input type="checkbox" id="chkLabels" checked> Labels</label>
-      <label class="check" id="lblAll"><input type="checkbox" id="chkAll"> Show all regions</label>
+      <div class="tgroup toggles" role="group" aria-label="Display options">
+        <label class="check"><input type="checkbox" id="chkLabels" checked> Labels</label>
+        <label class="check" id="lblAll"><input type="checkbox" id="chkAll"> Show all regions</label>
+        <label class="check" id="lblDetail" style="display:none"><input type="checkbox" id="chkDetail"> All labels</label>
+      </div>
+      <div class="tgroup" id="shareGroup" role="group" aria-label="Share and export"></div>
       <button id="btnFs" class="ghost fsbtn" type="button" aria-label="Full screen (F)" title="Full screen (F)">&#9974; Full screen</button>
-    </div>
-
-    <div class="fsbar" id="fsbar" hidden>
-      <button id="fsPrev" class="ghost" type="button" aria-label="Previous medication" title="Previous medication">&#9664;</button>
-      <select id="fsDrug" aria-label="Medication"></select>
-      <button id="fsNext" class="ghost" type="button" aria-label="Next medication" title="Next medication">&#9654;</button>
-      <span class="spacer"></span>
-      <button id="fsGfx" class="ghost" type="button" title="Graphics settings">&#9881; Graphics</button>
-      <button id="fsExit" class="primary" type="button" title="Exit full screen (Esc)">Exit full screen</button>
     </div>
     <div id="stage" class="stage">
       <svg id="svgBrain" class="scene on" role="img" aria-label="Labelled brain overview animation"></svg>

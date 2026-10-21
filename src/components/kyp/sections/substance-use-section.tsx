@@ -32,13 +32,31 @@ const ARTWORK_DIMS: Record<string, { width: number; height: number }> = {
   "/artwork/withdrawal.png": { width: 1024, height: 1024 },
 };
 
+/**
+ * Only substances with a real page are listed. Entries whose href is just
+ * an in-page anchor have no module yet and would be dead links, so they
+ * stay out of the homepage until their pages exist.
+ */
+const available = substances.filter((s) => s.href.startsWith("/"));
+
 export function SubstanceUseSection() {
   const [active, setActive] = React.useState<DrugClassId | "all">("all");
 
   const filtered = React.useMemo(() => {
-    if (active === "all") return substances;
-    return substances.filter((s) => s.drugClass === active);
+    if (active === "all") return available;
+    return available.filter((s) => s.drugClass === active);
   }, [active]);
+
+  // Class filters only help once there is a list worth filtering, and only
+  // for classes that still have an entry.
+  const filters = React.useMemo(
+    () =>
+      drugClassFilters.filter(
+        (f) => f.id === "all" || available.some((s) => s.drugClass === f.id)
+      ),
+    []
+  );
+  const showFilters = available.length > 4;
 
   return (
     <Section id="substances" className="bg-muted/20 relative overflow-hidden">
@@ -61,15 +79,16 @@ export function SubstanceUseSection() {
               How psychoactive substances alter the brain
             </h2>
             <p className="mt-4 text-body text-muted-foreground max-w-2xl leading-relaxed">
-              Each module covers receptor pharmacology, intoxication features, withdrawal timelines, complications, and emergency guidance. Three modules are fully built; the rest are being migrated.
+              Each module explains how the substance affects the brain, what intoxication and withdrawal look like, the main risks, and where to get emergency help.
             </p>
           </div>
         </Reveal>
 
         {/* Filter — minimal text buttons */}
+        {showFilters && (
         <Reveal delay={0.08}>
           <div className="flex items-center gap-4 overflow-x-auto kyp-scroll pb-2 mb-6">
-            {drugClassFilters.map((f) => (
+            {filters.map((f) => (
               <button
                 key={f.id}
                 type="button"
@@ -86,6 +105,7 @@ export function SubstanceUseSection() {
             ))}
           </div>
         </Reveal>
+        )}
 
         {/* Editorial substance index — numbered, no cards */}
         <div>
