@@ -6,6 +6,13 @@ import { Reveal } from "@/components/kyp/ui/reveal";
 import { medicationClasses, categories, drugs } from "@/lib/kyp/data";
 
 /**
+ * Categories that have no guides yet. Hidden from the homepage list so
+ * nothing looks unfinished; the data file itself is content-locked, so the
+ * decision lives here. Remove an id once its guides exist.
+ */
+const NO_GUIDES_YET = new Set(["pain", "antibiotics"]);
+
+/**
  * MedicationLibrarySection — homepage medication-library entry.
  *
  * Server Component (static content + Links only — the canonical drug
@@ -71,7 +78,7 @@ export function MedicationLibrarySection() {
         {/* Secondary categories — text entries, no cards */}
         <div className="space-y-0">
           {/* Only categories with real guides; "coming soon" entries stay hidden. */}
-          {medicationClasses.slice(1).filter((med) => !med.comingSoon).map((med, i) => (
+          {medicationClasses.slice(1).filter((med) => !med.comingSoon && !NO_GUIDES_YET.has(med.id)).map((med, i) => (
             <Reveal key={med.id} delay={0.12 + i * 0.06}>
               <Link
                 href={med.href}

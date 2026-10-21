@@ -80,7 +80,6 @@ export const medicationClasses: MedicationClass[] = [
       "Bacterial cell wall synthesis inhibitors, protein synthesis blockers, and DNA replication disruptors explained visually.",
     icon: Beaker,
     href: "#library",
-    comingSoon: true,
     chips: ["Amoxicillin", "Azithromycin", "Ciprofloxacin"],
   },
   {

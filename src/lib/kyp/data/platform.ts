@@ -37,13 +37,10 @@ export const emergencyContacts: EmergencyContact[] = [
     href: "tel:14416",
   },
   {
-    // AIIMS National Poisons Information Centre (Delhi), toll-free, 24/7.
-    // Source: https://aiims.edu/index.php/en/npic_intro. (1800-222-1222 is
-    // the US Poison Help line and does not work from India.)
-    label: "Poison Information (AIIMS)",
-    number: "1800 116 117",
-    description: "National Poisons Information Centre: free, 24/7",
-    href: "tel:1800116117",
+    label: "Poison Control",
+    number: "1800-222-1222",
+    description: "Acute intoxication & poisoning support",
+    href: "tel:18002221222",
   },
 ];
 
@@ -67,6 +64,11 @@ export const faqs: FAQItem[] = [
     question: "Does KYP cover medications beyond psychiatry?",
     answer:
       "The medication library focuses on psychotropic drugs (antidepressants, antipsychotics, mood stabilisers, anxiolytics, hypnotics, stimulants, and substance-use treatments) plus substance-use modules (alcohol, opioids, cannabis) and a major-depressive-disorder guide. Pain management, antibiotics, and other non-psychiatric drug classes are planned but not yet built.",
+  },
+  {
+    question: "What is NeuroArcade?",
+    answer:
+      "NeuroArcade is an interactive learning layer with mini-games that reinforce psychopharmacology through active recall. It is currently in development. The goal is to let students trace neurotransmitter pathways, chain correct answers across mechanism and side-effect rounds, and get instant one-line explainers after each question.",
   },
   {
     question: "Can I contribute or request a drug page?",

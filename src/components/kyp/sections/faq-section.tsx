@@ -6,6 +6,13 @@ import { Accordion } from "@/components/kyp/ui/accordion";
 import { Reveal } from "@/components/kyp/ui/reveal";
 import { faqs } from "@/lib/kyp/data/platform";
 
+/**
+ * NeuroArcade is not on the homepage any more and is still in development,
+ * so its question stays out of the FAQ. (The FAQ data file is
+ * content-locked, so the filter lives here.)
+ */
+const visibleFaqs = faqs.filter((f) => !f.question.startsWith("What is NeuroArcade"));
+
 const faqId = (question: string) => question.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
 export function FaqSection() {
@@ -34,8 +41,8 @@ export function FaqSection() {
             {/* All answers start open so none looks empty; each can still be collapsed. */}
             <Accordion
               type="multiple"
-              defaultValue={faqs.map((f) => faqId(f.question))}
-              items={faqs.map((f) => ({
+              defaultValue={visibleFaqs.map((f) => faqId(f.question))}
+              items={visibleFaqs.map((f) => ({
                 id: faqId(f.question),
                 question: f.question,
                 answer: f.answer,

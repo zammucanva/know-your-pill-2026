@@ -4,7 +4,6 @@ import * as React from "react";
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 import type { EmergencyContact } from "@/lib/kyp/data/types";
-import { emergencyContacts as INDIA_CONTACTS } from "@/lib/kyp/data/platform";
 
 /**
  * Region: which country's emergency numbers the visitor sees.
@@ -34,7 +33,29 @@ const REGION_IDS = REGION_OPTIONS.map((r) => r.id);
 
 /** Emergency and poison/crisis lines per region. Keep each list short. */
 export const REGION_CONTACTS: Record<Region, EmergencyContact[]> = {
-  india: INDIA_CONTACTS,
+  india: [
+    {
+      label: "Emergency Services",
+      number: "112",
+      description: "All India emergency number: medical, police, fire",
+      href: "tel:112",
+    },
+    {
+      label: "Tele-MANAS",
+      number: "14416",
+      description: "National mental health helpline: free, confidential, 24/7",
+      href: "tel:14416",
+    },
+    {
+      // AIIMS National Poisons Information Centre (Delhi), toll-free, 24/7.
+      // Source: https://aiims.edu/index.php/en/npic_intro. The number the
+      // old list carried (1800-222-1222) is the US Poison Help line.
+      label: "Poison Information (AIIMS)",
+      number: "1800 116 117",
+      description: "National Poisons Information Centre: free, 24/7",
+      href: "tel:1800116117",
+    },
+  ],
   us: [
     {
       label: "Emergency Services",
