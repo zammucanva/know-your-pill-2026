@@ -44,6 +44,14 @@ const eslintConfig = [...nextCoreWebVitals, ...nextTypescript, {
     "no-useless-escape": "off",
   },
 }, {
+  // The ECG Lab slice was written and tested outside KYP (reset-on-prop effects, ref-backed counters).
+  // These two React-compiler checks are relaxed for it only; the rest of KYP keeps the repo-wide rules.
+  files: ["src/components/ecg-lab/**"],
+  rules: {
+    "react-hooks/set-state-in-effect": "off",
+    "react-hooks/refs": "off",
+  },
+}, {
   ignores: ["node_modules/**", ".next/**", "out/**", "build/**", "next-env.d.ts", "examples/**", "skills"]
 }];
 
