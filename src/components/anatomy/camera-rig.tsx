@@ -25,6 +25,7 @@ export function CameraRig() {
   const viewPreset = useCameraStore((s) => s.viewPreset);
   const focusTarget = useCameraStore((s) => s.focusTarget);
   const resetToken = useCameraStore((s) => s.resetToken);
+  const explodeLevel = useCameraStore((s) => s.explodeLevel);
   const brainModeActive = useAnatomyStore((s) => s.brainModeActive);
   const { getPartById } = useAtlasData();
   const setDistance = useCameraDistanceStore((s) => s.setDistance);
@@ -159,6 +160,19 @@ export function CameraRig() {
     }
     return animateCamera(end, lookAt, 600);
   }, [viewPreset, resetToken, camera, reducedMotion, invalidate, syncDistance, currentPresets, currentTarget, animateCamera]);
+
+  // ── Pull the camera back as the model explodes so the spread stays in frame ──
+  //
+  // Scales the CURRENT distance by the change in a (1 + k * level) factor, so any zoom the user chose is kept.
+  const lastExplodeRef = React.useRef(0);
+  React.useEffect(() => {
+    const prev = lastExplodeRef.current;
+    lastExplodeRef.current = explodeLevel;
+    if (brainModeActive || prev === explodeLevel) return;
+    const k = 0.45;
+    const ratio = (1 + k * explodeLevel) / (1 + k * prev);
+    zoomToDistance(getCameraDistance() * ratio);
+  }, [explodeLevel, brainModeActive, zoomToDistance, getCameraDistance]);
 
   // ── Animate to focus target ──────────────────────────────────────
   React.useEffect(() => {

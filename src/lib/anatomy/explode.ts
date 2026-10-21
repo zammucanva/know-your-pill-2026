@@ -51,16 +51,16 @@ export const EXPLODE_LAYOUT: Record<string, ExplodeLayoutEntry> = {
   muscular:       { direction: [0, 0, 0],  distance: 0.00 }, // per-part shader
   integumentary:  { direction: [0, 0, 0],  distance: 0.00 },
   connective:     { direction: [0, 0, 0],  distance: 0.00 }, // small loose fragments, moving them just scatters shards
-  cardiac:        { direction: [-1, 0, 0], distance: 0.06 },
-  respiratory:    { direction: [0, 0, 1],  distance: 0.05 },
+  cardiac:        { direction: [-1, 0, 0], distance: 0.09 },
+  respiratory:    { direction: [0, 0, 1],  distance: 0.08 },
   arterial:       { direction: [1, 0, 0],  distance: 0.08 },
   venous:         { direction: [-0.7071, 0.7071, 0], distance: 0.07 },
-  digestive:      { direction: [0, 0, 1],  distance: 0.04 },
-  urinary:        { direction: [0, -0.5, -0.866], distance: 0.04 },
+  digestive:      { direction: [0, 0, 1],  distance: 0.07 },
+  urinary:        { direction: [0, -0.5, -0.866], distance: 0.07 },
   lymphatic:      { direction: [1, 0, 0],  distance: 0.05 },
-  reproductive:   { direction: [0, -1, 0], distance: 0.06 },
-  sensory:        { direction: [0, 0, 1],  distance: 0.04 },
-  endocrine:      { direction: [0, 0.7071, -0.7071], distance: 0.04 },
+  reproductive:   { direction: [0, -1, 0], distance: 0.09 },
+  sensory:        { direction: [0, 0, 1],  distance: 0.06 },
+  endocrine:      { direction: [0, 0.7071, -0.7071], distance: 0.06 },
 };
 
 export const FALLBACK_LAYOUT: ExplodeLayoutEntry = {
