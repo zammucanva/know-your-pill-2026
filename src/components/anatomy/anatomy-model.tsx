@@ -6,7 +6,7 @@ import { useThree, type ThreeEvent } from "@react-three/fiber";
 import { useAnatomyModel, type BP3DAtlas } from "@/lib/hooks/use-anatomy-model";
 import { useAnatomyStore } from "@/lib/anatomy/store/anatomy-store";
 import { useCameraStore } from "@/lib/anatomy/store/camera-store";
-import { ALL_BRAIN_CONCEPT_IDS } from "@/lib/anatomy/brain-registry";
+import { ALL_BRAIN_CONCEPT_IDS, conceptIdsForPreset } from "@/lib/anatomy/brain-registry";
 import {
   computeExplodeOffsets,
   computeBrainExplodeOffsets,
@@ -38,6 +38,7 @@ export function AnatomyModel() {
   const setHovered = useAnatomyStore((s) => s.setHovered);
   const explodeLevel = useCameraStore((s) => s.explodeLevel);
   const brainModeActive = useAnatomyStore((s) => s.brainModeActive);
+  const activeBrainPreset = useAnatomyStore((s) => s.activeBrainPreset);
 
   // Atlas system ids and store ids are the same namespace (see SystemId in lib/anatomy/types.ts).
   const isSystemVisible = React.useCallback(
@@ -124,6 +125,7 @@ export function AnatomyModel() {
             explodeLevel={explodeLevel}
             muscleExplodeData={muscleData}
             brainModeActive={brainModeActive}
+            brainPreset={activeBrainPreset}
             onSelect={(partId) => selectStructure(partId)}
             onHover={(partId) => setHovered(partId)}
           />
@@ -145,6 +147,7 @@ interface SystemMeshProps {
   explodeLevel: number;
   muscleExplodeData: Float32Array<ArrayBuffer> | null;
   brainModeActive: boolean;
+  brainPreset: string | null;
   onSelect: (partId: string) => void;
   onHover: (partId: string | null) => void;
 }
@@ -152,7 +155,7 @@ interface SystemMeshProps {
 function SystemMesh({
   systemId, geometry, parts, color, visible,
   selectedPartId, hoveredPartId, explodeOffset, explodeLevel,
-  muscleExplodeData, brainModeActive,
+  muscleExplodeData, brainModeActive, brainPreset,
   onSelect, onHover,
 }: SystemMeshProps) {
   const meshRef = React.useRef<THREE.Mesh | null>(null);
@@ -228,7 +231,8 @@ function SystemMesh({
       let isVisible = 1;
       // Brain Mode isolates the brain: the nervous system also holds spinal cord and peripheral nerves.
       if (brainModeActive && systemId === "nervous") {
-        isVisible = ALL_BRAIN_CONCEPT_IDS.has(part.conceptId) ? 1 : 0;
+        const shown = conceptIdsForPreset(brainPreset) ?? ALL_BRAIN_CONCEPT_IDS;
+        isVisible = shown.has(part.conceptId) ? 1 : 0;
       }
       data[idx] = isVisible;
       if (selectedPartId === part.id) data[idx + 1] = 1;
@@ -236,7 +240,7 @@ function SystemMesh({
     });
     tex.needsUpdate = true;
     invalidate();
-  }, [stateReady, parts, selectedPartId, hoveredPartId, brainModeActive, systemId, invalidate]);
+  }, [stateReady, parts, selectedPartId, hoveredPartId, brainModeActive, brainPreset, systemId, invalidate]);
 
   // ── Update the shared explode uniform (no recompile, no race) ────
   React.useEffect(() => {
