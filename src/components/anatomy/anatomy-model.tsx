@@ -6,7 +6,9 @@ import { useThree, type ThreeEvent } from "@react-three/fiber";
 import { useAnatomyModel, type BP3DAtlas } from "@/lib/hooks/use-anatomy-model";
 import { useAnatomyStore } from "@/lib/anatomy/store/anatomy-store";
 import { useCameraStore } from "@/lib/anatomy/store/camera-store";
-import { ALL_BRAIN_CONCEPT_IDS, conceptIdsForPreset } from "@/lib/anatomy/brain-registry";
+import {
+  ALL_BRAIN_CONCEPT_IDS, conceptIdsForPreset, brainConceptGroupIndex, brainStructureGroups, brainGroupColors,
+} from "@/lib/anatomy/brain-registry";
 import {
   computeExplodeOffsets,
   computeBrainExplodeOffsets,
@@ -135,6 +137,26 @@ export function AnatomyModel() {
   );
 }
 
+/** Brain Mode tissue colours as GLSL: one entry per brain group, picked by the per-part tone value. */
+const BRAIN_TINT_GLSL = (() => {
+  const cols = brainStructureGroups.map((g) => {
+    const c = new THREE.Color(brainGroupColors[g.id] ?? "#c9a59b");
+    return `vec3(${c.r.toFixed(4)}, ${c.g.toFixed(4)}, ${c.b.toFixed(4)})`;
+  });
+  return (
+    `if (vTone > 0.0) {
+` +
+    `  vec3 brainPal[${cols.length}] = vec3[${cols.length}](${cols.join(", ")});
+` +
+    `  int gi = clamp(int(vTone * 32.0 + 0.5) - 1, 0, ${cols.length - 1});
+` +
+    `  diffuseColor.rgb = brainPal[gi] * (0.86 + 0.28 * tone);
+` +
+    `}
+`
+  );
+})();
+
 interface SystemMeshProps {
   systemId: string;
   geometry: THREE.BufferGeometry;
@@ -235,6 +257,10 @@ function SystemMesh({
         isVisible = shown.has(part.conceptId) ? 1 : 0;
       }
       data[idx] = isVisible;
+      if (brainModeActive && systemId === "nervous") {
+        const gi = brainConceptGroupIndex.get(part.conceptId);
+        if (gi !== undefined) data[idx + 3] = (gi + 1) / 32;
+      }
       if (selectedPartId === part.id) data[idx + 1] = 1;
       if (hoveredPartId === part.id) data[idx + 2] = 1;
     });
@@ -320,8 +346,8 @@ function SystemMesh({
 
   // ── Shader injection ─────────────────────────────────────────────
   const shaderHeader = hasPerPartExplode
-    ? `attribute float partIndex;\nuniform sampler2D partState;\nuniform float stateWidth;\nuniform sampler2D uExplodeState;\nuniform float uExplodeLevel;\nvarying float vPartVisible;\nvarying float vPartSelected;\nvarying float vPartHovered;\nvarying float vPartId;\n`
-    : `attribute float partIndex;\nuniform sampler2D partState;\nuniform float stateWidth;\nvarying float vPartVisible;\nvarying float vPartSelected;\nvarying float vPartHovered;\nvarying float vPartId;\n`;
+    ? `attribute float partIndex;\nuniform sampler2D partState;\nuniform float stateWidth;\nuniform sampler2D uExplodeState;\nuniform float uExplodeLevel;\nvarying float vPartVisible;\nvarying float vPartSelected;\nvarying float vPartHovered;\nvarying float vPartId;\nvarying float vTone;\n`
+    : `attribute float partIndex;\nuniform sampler2D partState;\nuniform float stateWidth;\nvarying float vPartVisible;\nvarying float vPartSelected;\nvarying float vPartHovered;\nvarying float vPartId;\nvarying float vTone;\n`;
 
   const vertexReplace = hasPerPartExplode
     ? `#include <begin_vertex>
@@ -332,14 +358,16 @@ function SystemMesh({
        vPartId = partIndex;
        vPartVisible = state.x;
        vPartSelected = state.y;
-       vPartHovered = state.z;`
+       vPartHovered = state.z;
+       vTone = state.w;`
     : `#include <begin_vertex>
        vec2 stateUv = vec2((partIndex + 0.5) / stateWidth, 0.5);
        vec4 state = texture2D(partState, stateUv);
        vPartId = partIndex;
        vPartVisible = state.x;
        vPartSelected = state.y;
-       vPartHovered = state.z;`;
+       vPartHovered = state.z;
+       vTone = state.w;`;
 
   return (
     <mesh
@@ -371,7 +399,7 @@ function SystemMesh({
           shader.vertexShader = shaderHeader + shader.vertexShader;
           shader.vertexShader = shader.vertexShader.replace("#include <begin_vertex>", vertexReplace);
           shader.fragmentShader =
-            `varying float vPartVisible;\nvarying float vPartSelected;\nvarying float vPartHovered;\nvarying float vPartId;\n` +
+            `varying float vPartVisible;\nvarying float vPartSelected;\nvarying float vPartHovered;\nvarying float vPartId;\nvarying float vTone;\n` +
             shader.fragmentShader;
           shader.fragmentShader = shader.fragmentShader.replace(
             "#include <clipping_planes_fragment>",
@@ -382,6 +410,7 @@ function SystemMesh({
             `#include <color_fragment>\n` +
             `float tone = fract(sin(vPartId * 12.9898) * 43758.5453);\n` +
             `diffuseColor.rgb *= 0.84 + 0.3 * tone;\n` +
+            BRAIN_TINT_GLSL +
             `diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.08, 0.58, 0.53), vPartSelected * 0.75);\n` +
             `diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.95, 0.77, 0.36), vPartHovered * 0.4);`
           );

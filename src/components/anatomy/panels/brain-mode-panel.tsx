@@ -49,7 +49,8 @@ export function BrainModePanel() {
   const setFocusTarget = useCameraStore((s) => s.setFocusTarget);
   const { atlas } = useAtlasData();
   const [query, setQuery] = React.useState("");
-  const [collapsed, setCollapsed] = React.useState(false);
+  const collapsed = useAnatomyStore((s) => s.brainPanelCollapsed);
+  const setBrainPanelCollapsed = useAnatomyStore((s) => s.setBrainPanelCollapsed);
 
   // Build a concept-by-id map and a per-group list of resolved concepts.
   // Groups with zero resolved concepts are dropped (we never show empty
@@ -131,7 +132,7 @@ export function BrainModePanel() {
         <div className="flex items-center gap-0.5">
         <button
           type="button"
-          onClick={() => setCollapsed((c) => !c)}
+          onClick={() => setBrainPanelCollapsed(!collapsed)}
           aria-label={collapsed ? "Expand Brain Mode panel" : "Collapse Brain Mode panel"}
           aria-expanded={!collapsed}
           className="rounded-md p-1 text-[var(--muted-foreground)] transition-colors hover:bg-[var(--secondary)] hover:text-[var(--foreground)]"

@@ -26,6 +26,9 @@ interface AnatomyState {
   activeBrainPreset: string | null;
   /** Saved visibility state before entering Brain Mode (for restoration) */
   savedVisibility: Record<SystemId, boolean> | null;
+  /** Brain Mode panel collapsed (the camera only leaves room for the panel while it is open) */
+  brainPanelCollapsed: boolean;
+  setBrainPanelCollapsed: (v: boolean) => void;
 
   selectSystem: (id: SystemId | null) => void;
   selectStructure: (id: string | null) => void;
@@ -57,6 +60,8 @@ export const useAnatomyStore = create<AnatomyState>((set) => ({
   brainModeActive: false,
   activeBrainPreset: null,
   savedVisibility: null,
+  brainPanelCollapsed: false,
+  setBrainPanelCollapsed: (v) => set({ brainPanelCollapsed: v }),
 
   selectSystem: (id) =>
     set({ selectedSystemId: id, selectedStructureId: null }),
@@ -130,6 +135,8 @@ export const useAnatomyStore = create<AnatomyState>((set) => ({
         systemVisibility: newVis,
         isolatedSystemId: null,
         selectedSystemId: "nervous" as SystemId,
+        // on narrow screens the panel would cover the brain, so it starts collapsed
+        brainPanelCollapsed: typeof window !== "undefined" && window.innerWidth < 1100,
       };
     }),
 

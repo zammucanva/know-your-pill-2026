@@ -352,6 +352,30 @@ export function conceptIdsForPreset(presetId: string | null): ReadonlySet<string
   return set;
 }
 
+/** Camera framing per Brain Mode view: where the camera sits and what it looks at (model metres). */
+export const brainViewFraming: Record<string, { pos: [number, number, number]; target: [number, number, number] }> = {
+  "whole-brain": { pos: [0.5, 1.72, 0.72], target: [0, 1.62, -0.01] },
+  cortex: { pos: [0.5, 1.72, 0.72], target: [0, 1.62, -0.01] },
+  "deep-brain": { pos: [0.42, 1.66, 0.5], target: [0, 1.6, -0.01] },
+  brainstem: { pos: [0.4, 1.52, 0.32], target: [0, 1.56, -0.03] },
+  cerebellum: { pos: [0.4, 1.52, -0.48], target: [0, 1.56, -0.07] },
+  "cranial-nerves": { pos: [0, 1.46, 0.7], target: [0, 1.55, 0] },
+  "ventricular-system": { pos: [0.45, 1.7, 0.52], target: [0, 1.62, 0] },
+};
+
+/** Tissue colours per group (sRGB hex): cortex grey-pink, white matter cream, cerebellum warm, ventricles blue. */
+export const brainGroupColors: Record<string, string> = {
+  "frontal-cortex": "#c9a59b", "parietal-cortex": "#cba99d", "temporal-cortex": "#c6a096", "occipital-cortex": "#c39d94",
+  "other-cortex": "#be9890", thalamus: "#b58b84", hypothalamus: "#c79088", "basal-ganglia": "#b3857e",
+  "limbic-system": "#c58c86", "corpus-callosum": "#ece4d3", "white-matter": "#e6dccb", brainstem: "#d2bc9f",
+  midbrain: "#c9b08f", cerebellum: "#b88a6e", "ventricular-system": "#5f86b8", "cranial-nerves": "#e6dba8",
+};
+
+/** conceptId → index of its group in brainStructureGroups (for the tissue-colour shader). */
+export const brainConceptGroupIndex: ReadonlyMap<string, number> = new Map(
+  brainStructureGroups.flatMap((g, i) => g.conceptIds.map((id) => [id, i] as [string, number]))
+);
+
 /**
  * Look up the brain group a concept belongs to.
  * Returns the first matching group (a concept is only ever in one group

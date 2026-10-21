@@ -8,7 +8,7 @@ import { useCameraStore, type ViewPreset } from "@/lib/anatomy/store/camera-stor
 import { useAtlasData } from "@/lib/hooks/use-atlas-data";
 import { useAnatomyStore } from "@/lib/anatomy/store/anatomy-store";
 import { useCameraDistanceStore, ZOOM_LIMITS, type ZoomApi } from "@/lib/anatomy/store/camera-distance-store";
-import { brainCameraPositions } from "@/lib/anatomy/brain-registry";
+import { brainCameraPositions, brainViewFraming } from "@/lib/anatomy/brain-registry";
 
 const PRESET_POSITIONS: Record<ViewPreset, [number, number, number]> = {
   anterior: [0, 0.9, 3.6],
@@ -27,6 +27,8 @@ export function CameraRig() {
   const resetToken = useCameraStore((s) => s.resetToken);
   const explodeLevel = useCameraStore((s) => s.explodeLevel);
   const brainModeActive = useAnatomyStore((s) => s.brainModeActive);
+  const activeBrainPreset = useAnatomyStore((s) => s.activeBrainPreset);
+  const brainPanelCollapsed = useAnatomyStore((s) => s.brainPanelCollapsed);
   const { getPartById } = useAtlasData();
   const setDistance = useCameraDistanceStore((s) => s.setDistance);
   const setRange = useCameraDistanceStore((s) => s.setRange);
@@ -141,7 +143,13 @@ export function CameraRig() {
   );
 
   // ── Animate to preset position ───────────────────────────────────
+  const lastBrainModeRef = React.useRef(brainModeActive);
   React.useEffect(() => {
+    // Entering / leaving Brain Mode is framed by the effect further down, not by the plain view preset.
+    if (lastBrainModeRef.current !== brainModeActive) {
+      lastBrainModeRef.current = brainModeActive;
+      return;
+    }
     const targetPos = currentPresets[viewPreset];
     if (!targetPos) return;
     const end = new THREE.Vector3(...targetPos);
@@ -209,13 +217,15 @@ export function CameraRig() {
 
   // ── Animate to brain position when Brain Mode is entered/exited ──
   React.useEffect(() => {
-    const targetPos = brainModeActive
-      ? brainCameraPositions["anterior"]
-      : PRESET_POSITIONS["anterior"];
-    const lookAt = brainModeActive
-      ? new THREE.Vector3(0, 1.62, 0)
-      : new THREE.Vector3(0, 0.9, 0);
+    const framing = brainModeActive ? brainViewFraming[activeBrainPreset ?? "whole-brain"] : undefined;
+    const targetPos = framing ? framing.pos : brainModeActive ? brainCameraPositions["anterior"] : PRESET_POSITIONS["anterior"];
+    const lookAt = framing ? new THREE.Vector3(...framing.target) : brainModeActive ? new THREE.Vector3(0, 1.62, 0) : new THREE.Vector3(0, 0.9, 0);
     const end = new THREE.Vector3(...targetPos);
+    if (framing && !brainPanelCollapsed) {
+      // the Brain Mode panel covers the left of the viewport: slide the brain into the free space on the right
+      lookAt.x -= 0.045;
+      end.x -= 0.045;
+    }
 
     if (reducedMotion) {
       camera.position.copy(end);
@@ -230,7 +240,7 @@ export function CameraRig() {
       return;
     }
     return animateCamera(end, lookAt, 800);
-  }, [brainModeActive, camera, reducedMotion, invalidate, syncDistance, animateCamera]);
+  }, [brainModeActive, activeBrainPreset, brainPanelCollapsed, camera, reducedMotion, invalidate, syncDistance, animateCamera]);
 
   return (
     <OrbitControls
