@@ -50,6 +50,13 @@ export function BrainModePanel() {
   const { atlas } = useAtlasData();
   const [query, setQuery] = React.useState("");
   const collapsed = useAnatomyStore((s) => s.brainPanelCollapsed);
+  const [openGroups, setOpenGroups] = React.useState<ReadonlySet<string>>(new Set());
+  const toggleGroup = (id: string) =>
+    setOpenGroups((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id); else next.add(id);
+      return next;
+    });
   const setBrainPanelCollapsed = useAnatomyStore((s) => s.setBrainPanelCollapsed);
 
   // Build a concept-by-id map and a per-group list of resolved concepts.
@@ -233,33 +240,49 @@ export function BrainModePanel() {
         ) : (
           <div>
             <p className="kyp-label mb-1.5">Structures</p>
-            {resolvedGroups.map(({ group, concepts }) => (
-              <div
-                key={group.id}
-                className={cn(
-                  "mb-2 rounded-xl p-1.5 transition-all duration-[var(--duration-base)]",
-                  activePreset && activeGroupIds.has(group.id)
-                    ? "bg-[var(--neural)]/10 ring-1 ring-[var(--neural)]/25"
-                    : ""
-                )}
-              >
-                <p className="mb-0.5 text-xs font-semibold text-[var(--foreground)]">{group.label}</p>
-                <p className="mb-1 text-[10px] text-[var(--muted-foreground)]">{group.description}</p>
-                <ul className="space-y-0.5">
-                  {concepts.map((concept) => (
-                    <BrainConceptRow
-                      key={concept.id}
-                      concept={concept}
-                      conceptById={conceptById}
-                      onSelect={(partId) => {
-                        selectStructure(partId);
-                        setFocusTarget(partId);
-                      }}
-                    />
-                  ))}
-                </ul>
-              </div>
-            ))}
+            {resolvedGroups.map(({ group, concepts }) => {
+              const inView = !activePreset || activeGroupIds.has(group.id);
+              const open = openGroups.has(group.id);
+              return (
+                <div
+                  key={group.id}
+                  className={cn(
+                    "mb-1.5 rounded-xl p-1 transition-all duration-[var(--duration-base)]",
+                    inView ? "" : "opacity-50",
+                    open && inView ? "bg-[var(--neural)]/10 ring-1 ring-[var(--neural)]/25" : ""
+                  )}
+                >
+                  <button
+                    type="button"
+                    onClick={() => toggleGroup(group.id)}
+                    aria-expanded={open}
+                    className="flex w-full items-center gap-1.5 rounded-lg px-1.5 py-1 text-left hover:bg-[var(--secondary)]"
+                  >
+                    <ChevronRight size={12} className={cn("shrink-0 text-[var(--muted-foreground)] transition-transform", open && "rotate-90")} />
+                    <span className="min-w-0 flex-1">
+                      <span className="block text-xs font-semibold text-[var(--foreground)]">{group.label}</span>
+                      <span className="block truncate text-[10px] text-[var(--muted-foreground)]">{group.description}</span>
+                    </span>
+                    <span className="rounded-full bg-[var(--secondary)] px-1.5 py-0.5 text-[10px] tabular-nums text-[var(--muted-foreground)]">{concepts.length}</span>
+                  </button>
+                  {open && (
+                    <ul className="mt-0.5 space-y-0.5">
+                      {concepts.map((concept) => (
+                        <BrainConceptRow
+                          key={concept.id}
+                          concept={concept}
+                          conceptById={conceptById}
+                          onSelect={(partId) => {
+                            selectStructure(partId);
+                            setFocusTarget(partId);
+                          }}
+                        />
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              );
+            })}
             <p className="mt-3 px-2 py-2 text-[10px] italic text-[var(--muted-foreground)]">
               {allResolvedConcepts.length} brain structures from Z-Anatomy.
             </p>
