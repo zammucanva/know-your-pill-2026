@@ -3,7 +3,7 @@
 import { loadCorpus } from "../../src/lib/oxford/loader";
 import { readFileSync } from "node:fs";
 
-const doc = readFileSync("KYP-PSYCHIATRY-CURRICULUM-NORMALIZATION.md", "utf8");
+const doc = readFileSync("docs/KYP-PSYCHIATRY-CURRICULUM-NORMALIZATION.md", "utf8");
 const corpus = loadCorpus();
 
 // table rows: | Tier | Type | **Title** | Subtitle | Duration | Count |
