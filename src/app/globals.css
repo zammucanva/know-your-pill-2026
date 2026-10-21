@@ -528,47 +528,46 @@
 
 /* ============================================================
    Medicine nebula (components/ui/cosmic-nebula.tsx)
-   Blur blobs use KYP tokens so they follow light/dark mode.
-   `spin` is already provided by Tailwind (animate-spin).
+   Built to hold 60fps: every moving thing is one compositor layer
+   animated with transform only. Blur is baked into each SVG (rasterised
+   once, not re-filtered every frame) and the big blobs are soft gradients
+   instead of CSS blur filters. The float animation drives `transform`,
+   JS drives the individual `translate` / `rotate` properties, so the two
+   compose on a single element with no extra wrapper layers.
    ============================================================ */
 @keyframes kyp-float {
   0%, 100% { transform: translate(0, 0) rotate(var(--rot, 0deg)); }
   50%      { transform: translate(var(--dx, 20px), var(--dy, -24px)) rotate(calc(var(--rot, 0deg) + 14deg)); }
 }
-.kyp-float {
+.kyp-item {
   animation: kyp-float 20s var(--ease-in-out-soft) infinite;
-  will-change: transform;
-}
-/* Pointer-follow layer: transform is driven from JS (eased per frame). */
-.kyp-parallax {
-  will-change: transform;
-}
-.kyp-glow {
-  filter: blur(var(--blur, 2px)) drop-shadow(0 0 3px color-mix(in oklch, currentColor 30%, transparent));
+  will-change: transform, translate, rotate;
+  backface-visibility: hidden;
 }
 .bg-orb {
   position: absolute;
   border-radius: 9999px;
-  filter: blur(70px);
   opacity: 0.2;
   animation: kyp-drift 26s var(--ease-in-out-soft) infinite;
+  will-change: transform;
 }
 .dark .bg-orb { opacity: 0.27; }
+/* Soft falloff stands in for the old blur(70px) filter. */
 .orb-1 {
-  top: -8%; right: -6%;
-  width: 52vmin; height: 52vmin;
-  background: radial-gradient(circle, var(--brand), transparent 68%);
+  top: -14%; right: -12%;
+  width: 72vmin; height: 72vmin;
+  background: radial-gradient(closest-side, var(--brand), color-mix(in oklch, var(--brand) 40%, transparent) 45%, transparent 100%);
 }
 .orb-2 {
-  bottom: -10%; left: -6%;
-  width: 46vmin; height: 46vmin;
-  background: radial-gradient(circle, var(--neural), transparent 68%);
+  bottom: -16%; left: -12%;
+  width: 64vmin; height: 64vmin;
+  background: radial-gradient(closest-side, var(--neural), color-mix(in oklch, var(--neural) 40%, transparent) 45%, transparent 100%);
   animation-delay: -9s;
 }
 .orb-3 {
-  top: 38%; left: 40%;
-  width: 34vmin; height: 34vmin;
-  background: radial-gradient(circle, var(--class-hallucinogen), transparent 68%);
+  top: 30%; left: 34%;
+  width: 48vmin; height: 48vmin;
+  background: radial-gradient(closest-side, var(--class-hallucinogen), color-mix(in oklch, var(--class-hallucinogen) 40%, transparent) 45%, transparent 100%);
   animation-delay: -16s;
 }
 
@@ -576,7 +575,7 @@
    Reduced motion — respect user preference
    ============================================================ */
 @media (prefers-reduced-motion: reduce) {
-  .kyp-float, .bg-orb { animation: none !important; }
+  .kyp-item, .bg-orb { animation: none !important; }
 
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -848,7 +847,8 @@ summary,
   .backdrop-blur-sm {
     backdrop-filter: none !important;
   }
-  .kyp-float,
+  .kyp-item,
+  .bg-orb,
   .kyp-drift,
   .kyp-pulse-dot::before {
     animation: none !important;
