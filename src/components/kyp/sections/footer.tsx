@@ -6,6 +6,12 @@ import { ArrowUp, Github, Mail } from "lucide-react";
 import { Container } from "@/components/kyp/ui/container";
 import { Reveal } from "@/components/kyp/ui/reveal";
 
+/**
+ * Footer link groups. The medication list is a fixed set of widely used
+ * drugs (not derived from the registry) so this client component never
+ * pulls the 145-monograph data layer into every page's bundle. Every href
+ * here is a real page.
+ */
 const footerLinks = [
   {
     title: "Medications",
@@ -13,7 +19,20 @@ const footerLinks = [
       { label: "Sertraline", href: "/drugs/sertraline" },
       { label: "Fluoxetine", href: "/drugs/fluoxetine" },
       { label: "Escitalopram", href: "/drugs/escitalopram" },
+      { label: "Citalopram", href: "/drugs/citalopram" },
+      { label: "Paroxetine", href: "/drugs/paroxetine" },
+      { label: "Venlafaxine", href: "/drugs/venlafaxine" },
+      { label: "Duloxetine", href: "/drugs/duloxetine" },
       { label: "Bupropion", href: "/drugs/bupropion" },
+      { label: "Mirtazapine", href: "/drugs/mirtazapine" },
+      { label: "Amitriptyline", href: "/drugs/amitriptyline" },
+      { label: "Olanzapine", href: "/drugs/olanzapine" },
+      { label: "Quetiapine", href: "/drugs/quetiapine" },
+      { label: "Risperidone", href: "/drugs/risperidone" },
+      { label: "Aripiprazole", href: "/drugs/aripiprazole" },
+      { label: "Lithium", href: "/drugs/lithium" },
+      { label: "Diazepam", href: "/drugs/diazepam" },
+      { label: "Browse all medications", href: "/drugs" },
     ],
   },
   {
@@ -22,29 +41,30 @@ const footerLinks = [
       { label: "Alcohol", href: "/substances/alcohol" },
       { label: "Opioids", href: "/substances/opioids" },
       { label: "Cannabis", href: "/substances/cannabis" },
+      { label: "All substance modules", href: "/#substances" },
     ],
   },
   {
-    title: "Clinical",
+    title: "Learn",
     links: [
+      { label: "Patient guides", href: "/medicine" },
+      { label: "Psychiatry", href: "/psychiatry" },
       { label: "Major Depressive Disorder", href: "/diseases/major-depressive-disorder" },
-      // Real destinations — the emergency and FAQ sections live on the
-      // homepage; rendering them through next/link prepends the GitHub
-      // Pages basePath, so they work from every page.
-      { label: "Emergency Help", href: "/#emergency" },
-      { label: "FAQ", href: "/#faq" },
+      { label: "Drug interactions", href: "/interactions" },
+      { label: "Self-test questions", href: "/quiz" },
+      { label: "Study Mode", href: "/study" },
+      { label: "Learn", href: "/learn" },
     ],
   },
   {
     title: "Platform",
     links: [
-      { label: "Learn", href: "/learn" },
-      { label: "Study Mode", href: "/study" },
       { label: "3D Anatomy", href: "/anatomy" },
       { label: "Synapse Studio", href: "/synapse-studio" },
-      { label: "Medications", href: "/#library" },
-      { label: "Substance Use", href: "/#substances" },
-      { label: "Emergency", href: "/#emergency" },
+      // The emergency and FAQ sections live on the homepage; next/link
+      // prepends any basePath, so they work from every page.
+      { label: "Emergency Help", href: "/#emergency" },
+      { label: "FAQ", href: "/#faq" },
       { label: "Terms & Copyright", href: "/legal/terms" },
     ],
   },

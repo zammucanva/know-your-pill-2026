@@ -69,11 +69,6 @@ export const faqs: FAQItem[] = [
       "The medication library focuses on psychotropic drugs (antidepressants, antipsychotics, mood stabilisers, anxiolytics, hypnotics, stimulants, and substance-use treatments) plus substance-use modules (alcohol, opioids, cannabis) and a major-depressive-disorder guide. Pain management, antibiotics, and other non-psychiatric drug classes are planned but not yet built.",
   },
   {
-    question: "What is NeuroArcade?",
-    answer:
-      "NeuroArcade is an interactive learning layer with mini-games that reinforce psychopharmacology through active recall. It is currently in development. The goal is to let students trace neurotransmitter pathways, chain correct answers across mechanism and side-effect rounds, and get instant one-line explainers after each question.",
-  },
-  {
     question: "Can I contribute or request a drug page?",
     answer:
       "Yes. The repository is open on GitHub. Open an issue with the drug name and a brief rationale. Priority goes to commonly prescribed psychiatric medications and substances with significant public-health impact in India.",

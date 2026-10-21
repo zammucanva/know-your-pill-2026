@@ -28,7 +28,7 @@ export function MedicationLibrarySection() {
               {drugs.length} psychiatric medications, structured the same way
             </h2>
             <p className="mt-5 text-body text-muted-foreground max-w-2xl leading-relaxed">
-              Each drug page covers mechanism of action, receptor pharmacology, clinical indications, side effects with management, monitoring parameters, drug interactions, patient education, and a real clinical case.
+              Every guide starts with plain-language answers: what the medicine does, what side effects to expect, and when to get help. Students can go deeper into mechanism of action, receptor pharmacology, monitoring, interactions and a worked clinical case.
             </p>
           </div>
         </Reveal>

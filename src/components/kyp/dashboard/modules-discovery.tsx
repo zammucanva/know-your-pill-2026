@@ -29,7 +29,7 @@ export function QuickActions() {
     { label: "Start MCQs", icon: ClipboardList, href: "/quiz" },
     { label: "Explore Psychiatry", icon: Brain, href: "/psychiatry" },
     { label: "Drug interactions", icon: ArrowLeftRight, href: "/interactions" },
-    { label: "Brain Science", icon: Atom, href: "/#neuroarcade" },
+    { label: "Brain Science", icon: Atom, href: "/synapse-studio" },
     { label: "Study Mode", icon: BookOpen, href: "/study" },
   ];
 

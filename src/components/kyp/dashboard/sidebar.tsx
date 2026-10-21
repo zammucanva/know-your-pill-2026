@@ -43,7 +43,7 @@ const LEARN_ITEMS: SidebarNavItem[] = [
   { id: "interactions", label: "Interactions", href: "/interactions", icon: ArrowLeftRight },
   { id: "substances", label: "Substances", href: "/#substances", icon: FlaskConical, anchor: true },
   { id: "study", label: "Study Mode", href: "/study", icon: GraduationCap },
-  { id: "brain-science", label: "Brain Science", href: "/#neuroarcade", icon: Atom, anchor: true },
+  { id: "brain-science", label: "Brain Science", href: "/synapse-studio", icon: Atom },
 ];
 
 const YOU_ITEMS: SidebarNavItem[] = [
