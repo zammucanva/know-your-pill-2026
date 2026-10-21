@@ -24,7 +24,10 @@ import {
   resolveRelatedDrugHref,
   composeWhenNotToUseAlternative,
 } from "@/components/kyp/sections/drug/drug-related-drugs";
-import { primaryUsesSummary } from "@/components/kyp/sections/drug/patient-quick-facts";
+import {
+  primaryUsesSummary,
+  typicalOnsetCard,
+} from "@/components/kyp/sections/drug/patient-quick-facts";
 
 /** Word-boundary matcher — "Citalopram" must not match inside
  *  "Escitalopram". */
@@ -241,5 +244,58 @@ describe("condition display — hero primary uses keep distinct indications dist
         .slice(0, 3);
       expect(summary).toBe(list.map((i) => i.name.split(" (")[0]).join(", "));
     }
+  });
+});
+
+describe("quick-facts onset card is this drug's own (D-1 regression)", () => {
+  test("the antidepressant hardcode is gone from the medical variant", () => {
+    // D-1: the slot previously rendered "4–6 weeks — Full antidepressant
+    // effect. Anxiety disorders may take 8–12 weeks." for every medicine,
+    // which is clinically false on the 104 non-antidepressants (zolpidem,
+    // flumazenil, methylphenidate, propranolol, …).
+    for (const drug of drugs) {
+      const card = typicalOnsetCard(drug);
+      if (!card) continue;
+      expect(card.value).not.toBe("4–6 weeks");
+      expect(card.text).not.toContain("Full antidepressant effect");
+      expect(card.text).not.toContain("Anxiety disorders may take 8–12 weeks");
+    }
+  });
+
+  test("the onset value is the drug's own authored first bullet, verbatim", () => {
+    for (const drug of drugs) {
+      const bullets = drug.prescriberGuide?.onsetTimeline ?? [];
+      const card = typicalOnsetCard(drug);
+      if (bullets.length === 0) {
+        // Neutral no-data state: the card is omitted, never a class default.
+        expect(card).toBeNull();
+        continue;
+      }
+      expect(card).not.toBeNull();
+      expect(card!.label).toBe("Typical onset");
+      expect(card!.value).toBe(bullets[0]);
+      expect(card!.text.length).toBeGreaterThan(0);
+    }
+  });
+
+  test("a drug without an onset timeline gets the neutral omitted card", () => {
+    const bare = {
+      slug: "__probe__",
+      genericName: "Probe",
+      indications: [],
+      drugClassLabel: "Probe class",
+      drugClassFullName: "Probe class",
+      commonSideEffects: [],
+      seriousSideEffects: [],
+      prescriberGuide: { onsetTimeline: [] },
+    } as unknown as Parameters<typeof typicalOnsetCard>[0];
+    expect(typicalOnsetCard(bare)).toBeNull();
+  });
+
+  test("spot contracts: zolpidem shows minutes, not an antidepressant onset", () => {
+    const zolpidem = drugs.find((d) => d.slug === "zolpidem")!;
+    const card = typicalOnsetCard(zolpidem)!;
+    expect(card.value).toBe(zolpidem.prescriberGuide!.onsetTimeline[0]);
+    expect(card.value).not.toContain("week");
   });
 });

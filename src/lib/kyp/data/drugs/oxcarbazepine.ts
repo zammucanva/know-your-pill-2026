@@ -482,7 +482,7 @@ export const oxcarbazepine: Drug = {
   faqs: [
     {
       question: "How long does Oxcarbazepine take to work?",
-      answer: "Anticonvulsant effect days; off-label mood effects build over weeks.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Anticonvulsant effect days; off-label mood effects build over weeks.",
     },
     {
       question: "What are the most common side effects of Oxcarbazepine?",

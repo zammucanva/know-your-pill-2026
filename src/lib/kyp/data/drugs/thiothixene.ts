@@ -498,7 +498,7 @@ export const thiothixene: Drug = {
   faqs: [
     {
       question: "How long does Thiothixene take to work?",
-      answer: "Clinical effect of Thiothixene typically builds over 1–4 weeks at the target dose.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Clinical effect of Thiothixene typically builds over 1–4 weeks at the target dose.",
     },
     {
       question: "What are the most common side effects of Thiothixene?",

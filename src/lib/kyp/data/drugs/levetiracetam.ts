@@ -468,7 +468,7 @@ export const levetiracetam: Drug = {
   faqs: [
     {
       question: "How long does Levetiracetam take to work?",
-      answer: "Seizure control within titration; behavioural effects early.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Seizure control within titration; behavioural effects early.",
     },
     {
       question: "What are the most common side effects of Levetiracetam?",

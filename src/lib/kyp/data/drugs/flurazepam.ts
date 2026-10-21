@@ -496,7 +496,7 @@ export const flurazepam: Drug = {
   faqs: [
     {
       question: "How long does Flurazepam take to work?",
-      answer: "15–45 minutes.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "15–45 minutes.",
     },
     {
       question: "What are the most common side effects of Flurazepam?",

@@ -501,7 +501,7 @@ export const varenicline: Drug = {
   faqs: [
     {
       question: "How long does Varenicline take to work?",
-      answer: "Craving relief within days; quit date set at day 8.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Craving relief within days; quit date set at day 8.",
     },
     {
       question: "What are the most common side effects of Varenicline?",
