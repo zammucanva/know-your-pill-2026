@@ -1,6 +1,7 @@
 import { Clock, Calendar, CheckCircle2, Globe, BookMarked } from "lucide-react";
 import { Container } from "@/components/kyp/ui/container";
 import type { Drug } from "@/lib/kyp/data";
+import { CLINICAL_REVIEWER } from "@/lib/kyp/editorial";
 
 /**
  * PageMetadataStrip — minimal professional metadata footer.
@@ -9,7 +10,7 @@ import type { Drug } from "@/lib/kyp/data";
  *   - Difficulty: MBBS · NEET PG · INICET
  *   - Read time
  *   - Last updated
- *   - Reviewed by
+ *   - Clinical review status (from lib/kyp/editorial.ts; never invented)
  *   - Evidence level: Indian + International
  *
  * Small, minimal, very professional. Builds trust.
@@ -72,8 +73,17 @@ export function PageMetadataStrip({ drug }: PageMetadataStripProps) {
         {/* Reviewed by */}
         <div className="flex items-center gap-1.5">
           <CheckCircle2 className="h-3 w-3" />
-          <span>Reviewed by</span>
-          <span className="font-medium text-foreground">KYP Editorial Board</span>
+          {CLINICAL_REVIEWER ? (
+            <>
+              <span>Reviewed by</span>
+              <span className="font-medium text-foreground">{CLINICAL_REVIEWER.name}</span>
+            </>
+          ) : (
+            <>
+              <span>Clinical review:</span>
+              <span className="font-medium text-foreground">not yet reviewed</span>
+            </>
+          )}
         </div>
 
         {/* Evidence level */}

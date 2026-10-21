@@ -2,7 +2,8 @@
 
 import * as React from "react";
 import { useRouter } from "next/navigation";
-import { Search, ArrowRight, Sparkles } from "lucide-react";
+import Link from "next/link";
+import { Search, ArrowRight, Sparkles, HeartHandshake, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";import { Reveal } from "@/components/kyp/ui/reveal";
 import { cn } from "@/lib/utils";
 
@@ -127,14 +128,36 @@ export function HomeHero({
               </div>
             </Reveal>
 
+            {/* Two clear starting points, so patients are not dropped into
+                receptor pharmacology and students are not slowed down. */}
             <Reveal delay={0.32}>
-              <div className="mt-10 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs uppercase tracking-[0.12em] text-muted-foreground/50">
-                {["Mechanisms", "Clinical", "Side Effects", "Safety"].map((chip, i) => (
-                  <span key={chip} className="flex items-center gap-4">
-                    {chip}
-                    {i < 3 && <span className="text-muted-foreground/20">/</span>}
+              <div className="mt-10 grid max-w-xl gap-3 sm:grid-cols-2">
+                <Link
+                  href="/medicine"
+                  className="kyp-focus-ring group rounded-2xl border border-border/60 bg-card/70 p-4 transition-colors hover:border-brand/50 hover:bg-card"
+                >
+                  <span className="flex items-center gap-2 text-sm font-semibold text-foreground">
+                    <HeartHandshake className="h-4 w-4 text-brand" aria-hidden />
+                    I&apos;m a patient or caregiver
+                    <ArrowRight className="ml-auto h-3.5 w-3.5 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:text-brand" aria-hidden />
                   </span>
-                ))}
+                  <span className="mt-1.5 block text-xs leading-relaxed text-muted-foreground">
+                    Plain-language guides: what a medicine does, side effects, and when to call a doctor.
+                  </span>
+                </Link>
+                <Link
+                  href="/study"
+                  className="kyp-focus-ring group rounded-2xl border border-border/60 bg-card/70 p-4 transition-colors hover:border-brand/50 hover:bg-card"
+                >
+                  <span className="flex items-center gap-2 text-sm font-semibold text-foreground">
+                    <GraduationCap className="h-4 w-4 text-neural" aria-hidden />
+                    I&apos;m a medical student
+                    <ArrowRight className="ml-auto h-3.5 w-3.5 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:text-brand" aria-hidden />
+                  </span>
+                  <span className="mt-1.5 block text-xs leading-relaxed text-muted-foreground">
+                    Mechanisms, receptor pharmacology, clinical pearls and exam practice.
+                  </span>
+                </Link>
               </div>
             </Reveal>
           </div>
