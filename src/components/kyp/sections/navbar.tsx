@@ -54,6 +54,7 @@ const navGroups = [
     items: [
       { href: "/anatomy", label: "3D Anatomy", description: "Explore the body in 3D" },
       { href: "/synapse-studio", label: "Synapse Studio", description: "Animated drug-action scenes" },
+      { href: "/ecg-lab", label: "ECG Lab", description: "Calibrated ECG simulator and practice" },
     ],
   },
 ];
