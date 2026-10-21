@@ -414,7 +414,7 @@ export const prazosin: Drug = {
   faqs: [
     {
       question: "How long does Prazosin take to work?",
-      answer: "Nightmare reduction within days of an effective dose.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Nightmare reduction within days of an effective dose.",
     },
     {
       question: "What are the most common side effects of Prazosin?",

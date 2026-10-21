@@ -497,7 +497,7 @@ export const iloperidone: Drug = {
   faqs: [
     {
       question: "How long does Iloperidone take to work?",
-      answer: "Antipsychotic dose reached after the week-long titration; response 1-3 weeks after.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Antipsychotic dose reached after the week-long titration; response 1-3 weeks after.",
     },
     {
       question: "What are the most common side effects of Iloperidone?",

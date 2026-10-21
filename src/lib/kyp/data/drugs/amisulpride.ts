@@ -530,7 +530,7 @@ export const amisulpride: Drug = {
   faqs: [
     {
       question: "How long does Amisulpride take to work?",
-      answer: "Dose-band-dependent effects; antipsychotic response 1-3 weeks at high dose.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Dose-band-dependent effects; antipsychotic response 1-3 weeks at high dose.",
     },
     {
       question: "What are the most common side effects of Amisulpride?",

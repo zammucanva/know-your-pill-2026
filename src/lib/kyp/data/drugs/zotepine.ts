@@ -503,7 +503,7 @@ export const zotepine: Drug = {
   faqs: [
     {
       question: "How long does Zotepine take to work?",
-      answer: "As with the class.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "As with the class.",
     },
     {
       question: "What are the most common side effects of Zotepine?",
