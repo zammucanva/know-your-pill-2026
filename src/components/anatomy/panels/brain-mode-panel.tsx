@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { Brain, X, ChevronRight, Search } from "lucide-react";
+import { Brain, X, ChevronRight, ChevronUp, ChevronDown, Search } from "lucide-react";
 import { useAnatomyStore } from "@/lib/anatomy/store/anatomy-store";
 import { useCameraStore } from "@/lib/anatomy/store/camera-store";
 import { useAtlasData } from "@/lib/hooks/use-atlas-data";
@@ -49,6 +49,7 @@ export function BrainModePanel() {
   const setFocusTarget = useCameraStore((s) => s.setFocusTarget);
   const { atlas } = useAtlasData();
   const [query, setQuery] = React.useState("");
+  const [collapsed, setCollapsed] = React.useState(false);
 
   // Build a concept-by-id map and a per-group list of resolved concepts.
   // Groups with zero resolved concepts are dropped (we never show empty
@@ -120,13 +121,23 @@ export function BrainModePanel() {
   const isSearching = query.trim().length > 0;
 
   return (
-    <div className="kyp-scroll pointer-events-auto absolute bottom-16 left-3 top-14 z-10 flex w-72 flex-col overflow-y-auto rounded-2xl border border-[var(--border)] bg-[var(--card)]/95 shadow-[var(--shadow-lift)] backdrop-blur-xl">
+    <div className={"kyp-scroll pointer-events-auto absolute left-3 top-14 z-10 flex flex-col overflow-y-auto rounded-2xl " + (collapsed ? "w-52 [&>*:not(:first-child)]:hidden " : "bottom-16 w-72 ") + " border border-[var(--border)] bg-[var(--card)]/95 shadow-[var(--shadow-lift)] backdrop-blur-xl"}>
       {/* Header */}
       <div className="sticky top-0 flex items-center justify-between border-b border-[var(--border)] bg-[var(--card)]/95 px-3 py-2.5 backdrop-blur-xl">
         <div className="flex items-center gap-2">
           <Brain size={16} className="text-[var(--neural)]" />
           <span className="text-sm font-semibold text-[var(--foreground)]">Brain Mode</span>
         </div>
+        <div className="flex items-center gap-0.5">
+        <button
+          type="button"
+          onClick={() => setCollapsed((c) => !c)}
+          aria-label={collapsed ? "Expand Brain Mode panel" : "Collapse Brain Mode panel"}
+          aria-expanded={!collapsed}
+          className="rounded-md p-1 text-[var(--muted-foreground)] transition-colors hover:bg-[var(--secondary)] hover:text-[var(--foreground)]"
+        >
+          {collapsed ? <ChevronDown size={14} /> : <ChevronUp size={14} />}
+        </button>
         <button
           type="button"
           onClick={exitBrainMode}
@@ -135,6 +146,7 @@ export function BrainModePanel() {
         >
           <X size={14} />
         </button>
+        </div>
       </div>
 
       {/* Presets */}

@@ -279,8 +279,8 @@ export const brainPresets: BrainPreset[] = [
   {
     id: "whole-brain",
     label: "Whole Brain",
-    description: "All brain structures visible",
-    groupIds: brainStructureGroups.map((g) => g.id),
+    description: "The brain itself: cortex, white matter, deep nuclei, brainstem, cerebellum and ventricles",
+    groupIds: brainStructureGroups.filter((g) => g.id !== "cranial-nerves").map((g) => g.id),
   },
   {
     id: "cortex",
@@ -312,6 +312,12 @@ export const brainPresets: BrainPreset[] = [
     groupIds: ["cerebellum"],
   },
   {
+    id: "cranial-nerves",
+    label: "Cranial Nerves",
+    description: "The twelve pairs of cranial nerves leaving the brain",
+    groupIds: ["cranial-nerves"],
+  },
+  {
     id: "ventricular-system",
     label: "Ventricular System",
     description:
@@ -332,6 +338,19 @@ export const brainPresets: BrainPreset[] = [
 export const ALL_BRAIN_CONCEPT_IDS: ReadonlySet<string> = new Set(
   brainStructureGroups.flatMap((g) => g.conceptIds)
 );
+
+/** Concept ids shown by a brain preset (null when the preset is unknown: show every brain part). */
+const presetConceptCache = new Map<string, ReadonlySet<string>>();
+export function conceptIdsForPreset(presetId: string | null): ReadonlySet<string> | null {
+  const preset = brainPresets.find((p) => p.id === presetId);
+  if (!preset) return null;
+  let set = presetConceptCache.get(preset.id);
+  if (!set) {
+    set = new Set(brainStructureGroups.filter((g) => preset.groupIds.includes(g.id)).flatMap((g) => g.conceptIds));
+    presetConceptCache.set(preset.id, set);
+  }
+  return set;
+}
 
 /**
  * Look up the brain group a concept belongs to.
