@@ -37,10 +37,13 @@ export const emergencyContacts: EmergencyContact[] = [
     href: "tel:14416",
   },
   {
-    label: "Poison Control",
-    number: "1800-222-1222",
-    description: "Acute intoxication & poisoning support",
-    href: "tel:18002221222",
+    // AIIMS National Poisons Information Centre (Delhi), toll-free, 24/7.
+    // Source: https://aiims.edu/index.php/en/npic_intro. (1800-222-1222 is
+    // the US Poison Help line and does not work from India.)
+    label: "Poison Information (AIIMS)",
+    number: "1800 116 117",
+    description: "National Poisons Information Centre: free, 24/7",
+    href: "tel:1800116117",
   },
 ];
 

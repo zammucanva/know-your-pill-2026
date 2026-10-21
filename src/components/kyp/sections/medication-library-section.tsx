@@ -70,14 +70,15 @@ export function MedicationLibrarySection() {
 
         {/* Secondary categories — text entries, no cards */}
         <div className="space-y-0">
-          {medicationClasses.slice(1).map((med, i) => (
+          {/* Only categories with real guides; "coming soon" entries stay hidden. */}
+          {medicationClasses.slice(1).filter((med) => !med.comingSoon).map((med, i) => (
             <Reveal key={med.id} delay={0.12 + i * 0.06}>
               <Link
                 href={med.href}
                 className="group flex items-center gap-6 py-5 border-b border-border/15 last:border-0 transition-all duration-300"
               >
                 <span className="font-mono text-xs text-muted-foreground/30 w-8">
-                  {med.number}
+                  {String(i + 2).padStart(2, "0")}
                 </span>
                 <div className="flex-1">
                   <div className="flex items-center gap-3">
@@ -106,14 +107,14 @@ export function MedicationLibrarySection() {
             </p>
             <div className="flex flex-wrap gap-x-4 gap-y-2">
               {categories.map((cat) => (
-                <a
+                <Link
                   key={cat.id}
-                  href="#library"
+                  href="/drugs"
                   className="group inline-flex items-center gap-1.5 text-sm text-foreground/50 transition-colors hover:text-brand"
                 >
                   <span className="h-1 w-1 rounded-full bg-muted-foreground/30 group-hover:bg-brand" />
                   {cat.title}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

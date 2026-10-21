@@ -3,6 +3,7 @@
 import { ProfileMenu } from "@/components/kyp/ui/profile-menu";
 import { NavDropdown } from "@/components/kyp/ui/nav-dropdown";
 import { ActionSearchBar } from "@/components/kyp/ui/action-search-bar";
+import { RegionPicker } from "@/components/kyp/ui/region-picker";
 import * as React from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -205,6 +206,9 @@ export function Navbar({ intro }: { intro?: NavbarIntro } = {}) {
         <div className="flex items-center gap-2">
           <ActionSearchBar className="hidden lg:block" />
 
+          {/* Country picker: sets which emergency numbers are shown site-wide. */}
+          <RegionPicker className="hidden sm:flex" />
+
           <Link
             href="/#emergency"
             className="hidden items-center gap-1.5 rounded-full border border-emergency/30 bg-emergency-soft/60 px-2.5 py-1.5 text-[11px] font-bold text-[oklch(0.4_0.16_25)] dark:text-[oklch(0.86_0.09_25)] transition-colors hover:bg-emergency/10 sm:flex xl:px-3 xl:text-xs"
@@ -304,6 +308,10 @@ export function Navbar({ intro }: { intro?: NavbarIntro } = {}) {
               <Phone className="h-4 w-4" strokeWidth={2.5} />
               Emergency Help
             </Link>
+            <div className="mt-2 flex items-center justify-between gap-3 px-3 text-xs text-muted-foreground">
+              <span>Emergency numbers for</span>
+              <RegionPicker />
+            </div>
             {/* Auth link in mobile menu (hidden in the static export —
                 no backend, no dead ends [audit B1]) */}
             {!IS_STATIC_EXPORT && (

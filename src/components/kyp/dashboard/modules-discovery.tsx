@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 
 import { ModuleCard, ModuleHeader } from "./modules-hero";
-import { emergencyContacts } from "@/lib/kyp/data/platform";
+import { useEmergencyContacts } from "@/lib/kyp/region";
 
 /**
  * Quick Actions (real routes + the existing kyp:search handoff),
@@ -125,6 +125,7 @@ export function ExploreNext() {
 /* ─── Emergency ──────────────────────────────────────────────────── */
 
 export function EmergencyCard() {
+  const emergencyContacts = useEmergencyContacts();
   return (
     <ModuleCard className="border-emergency/25 bg-emergency-soft/15">
       <div className="flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between">
