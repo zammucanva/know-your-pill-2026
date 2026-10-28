@@ -508,7 +508,6 @@ export function CustomTestBuilder() {
     resolveMistakes(results.correct.map((a) => a.question.identity));
     // Refresh the preset chips in case anything changed elsewhere.
     setPresets((prev) => prev ?? getTestPresets());
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, results, attempt]);
 
   const elapsedLabel = React.useMemo(() => {
@@ -545,7 +544,6 @@ export function CustomTestBuilder() {
       timeUpRef.current = key;
       finishAttempt();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, attempt, remainingMs]);
 
   /** Pacing: at the current question the learner should have consumed
@@ -675,7 +673,6 @@ export function CustomTestBuilder() {
       }
       return;
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams]);
 
   /* ============================================================

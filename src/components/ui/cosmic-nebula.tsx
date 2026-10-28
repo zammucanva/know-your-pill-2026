@@ -278,7 +278,6 @@ export function MedicineNebula({ className }: MedicineNebulaProps) {
 
   // Random layout is built after mount, so server and client markup match.
   React.useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     setField(buildField());
   }, []);
 

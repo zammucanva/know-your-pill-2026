@@ -77,7 +77,7 @@ export default function MistakeBookPage() {
 
   const stats = React.useMemo(
     () => getMistakeBookStats(),
-    [data] // eslint-disable-line react-hooks/exhaustive-deps
+    [data]
   );
 
   const filtered = React.useMemo(
