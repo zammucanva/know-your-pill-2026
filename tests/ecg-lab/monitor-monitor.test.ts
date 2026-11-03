@@ -266,3 +266,70 @@ describe('restoring a saved run', () => {
     expect(Math.abs(restored.log[0].atMs - live.log[0].atMs)).toBeLessThanOrEqual(16);
   });
 });
+
+describe('critical limits escalate alarm priority', () => {
+  const deterioration = getMonitorScenario('scenario.rapid-deterioration.01')!;
+  const built = buildScenarioTimeline(deterioration);
+  const critical = deterioration.criticalLimits!;
+
+  it('rises step by step and replaces the ordinary high-rate alarm with a high-priority one past the critical limit', async () => {
+    const { alarmStateAt } = await import('@/components/ecg-lab/monitor/alarms');
+    expect([10_000, 30_000, 60_000, 90_000].map(time => readingsAt(built, time).heartRate.value)).toEqual([88, 118, 135, 180]);
+    const before = alarmStateAt(built, 70_000);
+    expect(before.active.map(alarm => [alarm.id, alarm.priority])).toEqual([['hr-high', 'medium']]);
+    const after = alarmStateAt(built, 80_000);
+    expect(after.active.map(alarm => [alarm.id, alarm.priority])).toEqual([['hr-critical-high', 'high']]);
+    expect(after.log.filter(entry => entry.id === 'hr-high').map(entry => entry.event)).toEqual(['onset', 'cleared']);
+    expect(after.active[0].message).toBe(`Heart rate above the critical limit: 180 /min (critical high ${critical.heartRateHigh})`);
+  });
+
+  it('applies critical limits only where a scenario sets them', () => {
+    const fast = readingsAt(buildScenarioTimeline(scenario), onset + 5_000);
+    expect(evaluateAlarmConditions(fast, scenario.alarmLimits).map(condition => condition.id)).toEqual(['hr-high']);
+    expect(evaluateAlarmConditions(fast, scenario.alarmLimits, { heartRateHigh: 160, heartRateLow: 40, spo2Low: 85 }).map(condition => [condition.id, condition.priority])).toEqual([['hr-critical-high', 'high']]);
+    const low = { ...fast, heartRate: { value: 35, status: 'ok' as const }, spo2: { value: 82, status: 'ok' as const } };
+    expect(evaluateAlarmConditions(low, scenario.alarmLimits, critical).map(condition => condition.id)).toEqual(['hr-critical-low', 'spo2-critical-low']);
+    expect(evaluateAlarmConditions(low, scenario.alarmLimits).map(condition => condition.id)).toEqual(['hr-low', 'spo2-low']);
+  });
+
+  it('rejects critical limits that do not lie beyond the ordinary limits', () => {
+    expect(monitorScenarioSchema.safeParse({ ...deterioration, criticalLimits: { ...critical, heartRateHigh: 110 } }).success).toBe(false);
+    expect(monitorScenarioSchema.safeParse({ ...deterioration, criticalLimits: { ...critical, spo2Low: 92 } }).success).toBe(false);
+  });
+});
+
+describe('threshold boundaries and critical recovery', () => {
+  const deterioration = getMonitorScenario('scenario.rapid-deterioration.01')!;
+  const critical = deterioration.criticalLimits!;
+  const base = readingsAt(buildScenarioTimeline(deterioration), 10_000);
+  const withHr = (value: number) => ({ ...base, heartRate: { value, status: 'ok' as const } });
+  const ids = (value: number) => evaluateAlarmConditions(withHr(value), deterioration.alarmLimits, critical).map(condition => condition.id);
+
+  it('alarms only beyond a limit: a value exactly at a limit does not alarm or escalate', () => {
+    expect(ids(deterioration.alarmLimits.heartRate.high)).toEqual([]);
+    expect(ids(deterioration.alarmLimits.heartRate.high + 1)).toEqual(['hr-high']);
+    expect(ids(critical.heartRateHigh)).toEqual(['hr-high']);
+    expect(ids(critical.heartRateHigh + 1)).toEqual(['hr-critical-high']);
+    expect(ids(deterioration.alarmLimits.heartRate.low)).toEqual([]);
+    expect(ids(critical.heartRateLow)).toEqual(['hr-low']);
+    expect(ids(critical.heartRateLow - 1)).toEqual(['hr-critical-low']);
+  });
+
+  it('steps back down from critical to the ordinary alarm, then clears, with each change logged once', () => {
+    let state: AlarmState = initialAlarmState();
+    for (const [time, hr] of [[0, 100], [1_000, 180], [2_000, 135], [3_000, 100]] as const) {
+      state = updateAlarms(state, evaluateAlarmConditions(withHr(hr), deterioration.alarmLimits, critical), time);
+    }
+    expect(state.active).toEqual([]);
+    expect(state.log.map(entry => [entry.id, entry.event, entry.atMs])).toEqual([
+      ['hr-critical-high', 'onset', 1_000],
+      ['hr-critical-high', 'cleared', 2_000], ['hr-high', 'onset', 2_000],
+      ['hr-high', 'cleared', 3_000],
+    ]);
+  });
+
+  it('is deterministic: the deterioration alarm history is identical on every build', async () => {
+    const { alarmStateAt } = await import('@/components/ecg-lab/monitor/alarms');
+    expect(alarmStateAt(buildScenarioTimeline(deterioration), deterioration.durationMs)).toEqual(alarmStateAt(buildScenarioTimeline(deterioration), deterioration.durationMs));
+  });
+});

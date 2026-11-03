@@ -156,3 +156,14 @@ describe('case-specific monitor rules', () => {
     expect(getMonitorScenario('scenario.pulse-oximeter-signal.01')!.assessment.kind).toBe('decision');
   });
 });
+
+describe('debrief timeline wording', () => {
+  it('calls a faster rate of the same rhythm a rate change, and a new rhythm a rhythm change', async () => {
+    const { describePhaseChange } = await import('@/components/ecg-lab/monitor/MonitorScenario');
+    const deterioration = getMonitorScenario('scenario.rapid-deterioration.01')!;
+    const [settled, faster, fast, critical] = deterioration.phases;
+    expect(describePhaseChange(settled, faster)).toMatch(/^the rhythm changed from Normal sinus rhythm to Sinus tachycardia;/);
+    expect(describePhaseChange(faster, fast)).toMatch(/^the heart rate rose from 118 to 135 per minute \(Sinus tachycardia\);/);
+    expect(describePhaseChange(fast, critical)).toMatch(/^the rhythm changed from Sinus tachycardia to Ventricular tachycardia;/);
+  });
+});

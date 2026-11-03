@@ -59,8 +59,12 @@ export function alarmChoices(actual: AlarmId | null): { id: string; label: strin
 export function describePhaseChange(previous: ScenarioPhase, next: ScenarioPhase): string {
   const changes: string[] = [];
   if (previous.rhythmCaseId !== next.rhythmCaseId) {
+    const before = getRhythmCase(previous.rhythmCaseId)!;
+    const after = getRhythmCase(next.rhythmCaseId)!;
     const label = (id: string) => buildCase(getRhythmCase(id)!).category.label;
-    changes.push(`the rhythm changed from ${label(previous.rhythmCaseId)} to ${label(next.rhythmCaseId)}`);
+    // Same rhythm category at a different rate is a rate change, not a new rhythm.
+    if (before.categoryId === after.categoryId) changes.push(`the heart rate ${after.rateBpm > before.rateBpm ? 'rose' : 'fell'} from ${before.rateBpm} to ${after.rateBpm} per minute (${label(next.rhythmCaseId)})`);
+    else changes.push(`the rhythm changed from ${label(previous.rhythmCaseId)} to ${label(next.rhythmCaseId)}`);
   }
   if (previous.ecg !== next.ecg) changes.push(next.ecg === 'lead-off' ? 'an ECG lead came off' : 'the ECG leads were reconnected');
   const before = previous.spo2;

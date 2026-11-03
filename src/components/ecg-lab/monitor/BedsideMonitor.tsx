@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { timeMsToSvgUnits, voltageMvToSvgUnits } from '../engine/calibration';
 import { generateRhythmLeadSamples } from '../engine/rhythm-signal';
-import { ALARM_SILENCE_MS, alarmLabels, type AlarmState } from './alarms';
-import type { ScenarioTimeline } from './timeline';
+import { ALARM_SILENCE_MS, alarmLabels, type AlarmId, type AlarmState } from './alarms';
+import { eventsBetween, type ScenarioTimeline } from './timeline';
 import type { ToneSource } from './useMonitorRuntime';
 import { plethWindow, readingsAt, respirationWindow, type ChannelStatus, type MonitorReadings, type WaveSample } from './vitals';
 import type { AudioStatus } from '../audio/monitor-audio';
@@ -107,13 +107,15 @@ type TileProps = {
   alarmed: boolean;
   explanation: string;
   testId: string;
+  /** Flashes a heart symbol in time with each beat the tone follows. */
+  beat?: boolean;
   children?: React.ReactNode;
 };
 
-function Tile({ label, unit, source, value, status, className, alarmed, explanation, testId, children }: TileProps) {
+function Tile({ label, unit, source, value, status, className, alarmed, explanation, testId, beat, children }: TileProps) {
   return (
     <section className={`bedside-tile ${className}${alarmed ? ' alarmed' : ''}`} aria-label={`${label}: ${status === 'ok' ? `${value} ${unit}` : statusText[status]}${alarmed ? ', in alarm' : ''}`} data-testid={testId}>
-      <header><span>{label}</span><small>{unit}</small></header>
+      <header><span>{label}{beat !== undefined && <span className={beat ? 'bedside-beat on' : 'bedside-beat'} aria-hidden="true"> ♥</span>}</span><small>{unit}</small></header>
       <output className="bedside-value" aria-hidden="true">{status === 'ok' || status === 'poor' ? value : '---'}</output>
       {status !== 'ok' && <p className="bedside-status">{statusText[status]}</p>}
       {children}
@@ -146,12 +148,14 @@ type BedsideMonitorProps = {
     setMuted: (value: boolean) => void;
     setVolume: (value: number) => void;
     setToneSource: (value: ToneSource) => void;
+    test: () => Promise<boolean>;
   };
 };
 
 const audioStatusText: Record<AudioStatus, string> = {
   off: 'Sound off',
   running: 'Sound on',
+  interrupted: 'The browser paused the sound (for example after the screen locked or another app played audio). Tap the sound button to resume.',
   blocked: 'The browser did not allow sound to start. Try the button again.',
   unavailable: 'Sound is not available in this browser. Every alarm is also shown on screen.',
 };
@@ -183,6 +187,9 @@ export function BedsideMonitor({ timeline, snapshot, alarms, reducedMotion, onPl
   const respPath = useMemo(() => showResp ? auxPath(respirationWindow(timeline, windowStart, now), windowStart, AUX_HEIGHT_UNITS, 26, AUX_HEIGHT_UNITS / 2) : null, [timeline, windowStart, now, showResp]);
 
   const alarmedIds = new Set(alarms.active.map(alarm => alarm.id));
+  // The heart flashes for each beat the tone follows (ECG beats, or pleth pulses for the oximeter tone).
+  const beatTimes = audio.toneSource === 'ecg' ? timeline.ecgDetectedQrsTimesMs : timeline.plethPulseTimesMs;
+  const beatNow = snapshot.isPlaying && eventsBetween(beatTimes, now - 150, now).length > 0;
   const silenced = alarms.silencedUntilMs !== null && now < alarms.silencedUntilMs;
 
   // Announce alarm onsets once, not every frame.
@@ -210,13 +217,19 @@ export function BedsideMonitor({ timeline, snapshot, alarms, reducedMotion, onPl
           <span className="bedside-bed">{timeline.scenario.bedLabel}</span>
           <span className="bedside-sim">SIMULATION · generated teaching data · not connected to a patient</span>
           <span className="bedside-clock" aria-label={`Simulated time ${formatSimTime(now)} of ${formatSimTime(timeline.scenario.durationMs)}`}>{formatSimTime(now)} / {formatSimTime(timeline.scenario.durationMs)}</span>
+          {/* On the screen itself, so the sound control is the first thing found, on phones too. */}
+          {audio.status === 'running'
+            ? <button type="button" className="bedside-sound-toggle on" onClick={audio.disable}><span aria-hidden="true">🔊 </span>Turn sound off</button>
+            : audio.status === 'interrupted' || audio.status === 'blocked'
+              ? <button type="button" className="bedside-sound-toggle warn" onClick={() => { void audio.enable(); }}><span aria-hidden="true">⚠ </span>Sound paused by the browser: tap to resume</button>
+              : <button type="button" className="bedside-sound-toggle" onClick={() => { void audio.enable(); }}><span aria-hidden="true">🔇 </span>Turn on monitor sound</button>}
         </header>
 
         <div className={`bedside-alarm-bar${alarms.active.length ? ` active priority-${alarms.active[0].priority}` : ''}`} data-testid="alarm-bar">
           {alarms.active.length === 0 ? <span>No active alarms</span> : (
             <ul aria-label="Active alarms">
               {alarms.active.map(alarm => (
-                <li key={alarm.id}><strong>{alarm.priority === 'medium' ? '!!' : alarm.priority === 'high' ? '!!!' : '!'}</strong> {alarm.message} <small>since {formatSimTime(alarm.onsetMs)}</small></li>
+                <li key={alarm.id}><strong>{alarm.priority === 'high' ? '!!!' : alarm.priority === 'medium' ? '!!' : alarm.priority === 'low' ? '!' : 'i'}</strong> {alarm.message} <small>since {formatSimTime(alarm.onsetMs)}</small></li>
               ))}
             </ul>
           )}
@@ -234,9 +247,9 @@ export function BedsideMonitor({ timeline, snapshot, alarms, reducedMotion, onPl
             {showResp && <Trace windowMs={windowMs} title="Resp" source="simulated respiration · arbitrary units" className="resp" path={respPath} heightUnits={AUX_HEIGHT_UNITS} unavailableText="Respiration not monitored" />}
           </div>
           <div className="bedside-numerics">
-            <Tile label="HR" unit="/min" source="ECG channel: average of the last R–R intervals" value={fmt(readings.heartRate)} status={readings.heartRate.status} className="ecg" alarmed={alarmedIds.has('hr-high') || alarmedIds.has('hr-low')} testId="tile-hr"
+            <Tile label="HR" unit="/min" source="ECG channel: average of the last R–R intervals" value={fmt(readings.heartRate)} status={readings.heartRate.status} className="ecg" alarmed={['hr-high', 'hr-low', 'hr-critical-high', 'hr-critical-low'].some(id => alarmedIds.has(id as AlarmId))} testId="tile-hr" beat={beatNow}
               explanation={`Counted from the simulated QRS complexes, so it follows the electrical rhythm. Simulation limits: ${limits.heartRate.low}–${limits.heartRate.high} per minute.`} />
-            <Tile label="SpO₂" unit="%" source="pulse-oximetry channel" value={fmt(readings.spo2)} status={readings.spo2.status} className="pleth" alarmed={alarmedIds.has('spo2-low')} testId="tile-spo2"
+            <Tile label="SpO₂" unit="%" source="pulse-oximetry channel" value={fmt(readings.spo2)} status={readings.spo2.status} className="pleth" alarmed={alarmedIds.has('spo2-low') || alarmedIds.has('spo2-critical-low')} testId="tile-spo2"
               explanation={`A separate simulated sensor with its own value and signal quality. The display changes gradually, one point at a time, after a change. Simulation low limit: ${limits.spo2.low}%.`}>
               <p className="bedside-sub">PR {fmt(readings.pulseRate)} /min <small>(from pleth pulses)</small></p>
             </Tile>
@@ -273,9 +286,7 @@ export function BedsideMonitor({ timeline, snapshot, alarms, reducedMotion, onPl
           <label><input type="checkbox" checked={showResp} onChange={event => setShowResp(event.target.checked)} /> Resp</label>
         </div>
         <div className="bedside-group bedside-sound" role="group" aria-label="Monitor sound">
-          {audio.status === 'running'
-            ? <button type="button" className="cta secondary" onClick={audio.disable}>Turn sound off</button>
-            : <button type="button" className="cta secondary" onClick={() => { void audio.enable(); }}>Turn on monitor sound</button>}
+          <button type="button" className="cta secondary" onClick={() => { void audio.test(); }}>Test sound</button>
           <label><input type="checkbox" checked={audio.muted} onChange={event => audio.setMuted(event.target.checked)} /> Mute</label>
           <label>Volume <input type="range" min="0" max="1" step="0.05" value={audio.volume} onChange={event => audio.setVolume(Number(event.target.value))} /></label>
           <label>Beat tone from
@@ -284,7 +295,7 @@ export function BedsideMonitor({ timeline, snapshot, alarms, reducedMotion, onPl
               <option value="pleth">Pulse oximeter (pitch follows SpO₂)</option>
             </select>
           </label>
-          <p className="bedside-note" role="status">{audioStatusText[audio.status]}{audio.status === 'running' && audio.muted ? ' (muted)' : ''}</p>
+          <p className="bedside-note" role="status">{audioStatusText[audio.status]}{audio.status === 'running' && audio.muted ? ' (muted)' : ''}{audio.status === 'running' && !audio.muted && !snapshot.isPlaying ? '. The heartbeat tone plays while the scenario is running.' : ''}</p>
         </div>
       </div>
       {reducedMotion && <p className="bedside-note">Reduced motion is on, so the traces update once per second instead of scrolling.</p>}

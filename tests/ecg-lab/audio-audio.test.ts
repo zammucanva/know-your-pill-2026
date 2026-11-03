@@ -177,6 +177,34 @@ describe('tone scheduler', () => {
     expect(run.alarms().length).toBe(medium.length + 1);
   });
 
+  it('asks for the alarm burst to stop when the audible alarm clears, changes or is silenced', () => {
+    const run = harness();
+    let cancels = 0;
+    const scheduler = new ToneScheduler();
+    const step = (now: number, alarm: SchedulerInput['alarm']) => {
+      const actions = scheduler.update({ snapshot: { elapsedMs: now, isPlaying: true, isSuspended: false }, audioNowS: 10 + now / 1000, eventTimesMs: [], frequencyAt: () => 880, alarm });
+      if (actions.cancelAlarm) cancels += 1;
+      return actions;
+    };
+    step(0, null);
+    step(16, { id: 'hr-high', priority: 'medium' });
+    step(32, { id: 'hr-high', priority: 'medium' });
+    expect(cancels).toBe(0);
+    step(48, { id: 'hr-critical-high', priority: 'high' });
+    expect(cancels).toBe(1);
+    step(64, null);
+    expect(cancels).toBe(2);
+    expect(run.alarms()).toEqual([]);
+  });
+
+  it('never sounds an informational alarm', () => {
+    const scheduler = new ToneScheduler();
+    const input = (now: number) => ({ snapshot: { elapsedMs: now, isPlaying: true, isSuspended: false }, audioNowS: 1 + now / 1000, eventTimesMs: [], frequencyAt: () => 880, alarm: { id: 'note', priority: 'info' as const } });
+    scheduler.update(input(0));
+    for (let now = 16; now < 20_000; now += 16) expect(scheduler.update(input(now)).alarm).toBeNull();
+    expect(alarmBurst('info')).toEqual([]);
+  });
+
   it('maps a lower SpO2 to a lower pitch and gives each alarm priority a distinct burst', () => {
     expect(spo2PitchHz(100)).toBe(880);
     expect(spo2PitchHz(99)).toBeLessThan(spo2PitchHz(100));
@@ -225,6 +253,56 @@ describe('monitor audio output', () => {
     expect(audio.pendingCount()).toBe(0);
     audio.playTones([tone(6)]);
     expect(started.length).toBe(2);
+  });
+
+  it('plays a test beep only while running, and asks the browser for a playback audio session', async () => {
+    const session = { type: 'auto' };
+    const originalNavigator = globalThis.navigator;
+    Object.defineProperty(globalThis, 'navigator', { value: { ...originalNavigator, audioSession: session }, configurable: true });
+    try {
+      const { context, started } = fakeContext();
+      const audio = new MonitorAudio(() => context);
+      expect(audio.testBeep()).toBe(false);
+      await audio.enable();
+      expect(session.type).toBe('playback');
+      expect(audio.testBeep()).toBe(true);
+      expect(started.length).toBe(1);
+      audio.setMuted(true);
+      expect(audio.testBeep()).toBe(false);
+    } finally {
+      Object.defineProperty(globalThis, 'navigator', { value: originalNavigator, configurable: true });
+    }
+  });
+
+  it('reports an interruption by the browser, stops scheduling against the frozen clock, and resumes', async () => {
+    const { context, raw } = fakeContext();
+    const audio = new MonitorAudio(() => context);
+    const changes: string[] = [];
+    audio.onStateChange(() => changes.push(audio.getStatus()));
+    await audio.enable();
+    audio.playTones([tone(4), tone(5)]);
+    expect(audio.pendingCount()).toBe(2);
+    raw.state = 'interrupted';
+    (context as unknown as { onstatechange: () => void }).onstatechange();
+    expect(audio.getStatus()).toBe('interrupted');
+    expect(audio.now()).toBeNull();
+    expect(audio.pendingCount()).toBe(0);
+    audio.playTones([tone(6)]);
+    expect(audio.pendingCount()).toBe(0);
+    expect(await audio.resumeIfInterrupted()).toBe('running');
+    expect(changes).toEqual(['interrupted']);
+  });
+
+  it('cancels alarm tones without touching heartbeat tones', async () => {
+    const { context } = fakeContext();
+    const audio = new MonitorAudio(() => context);
+    await audio.enable();
+    audio.playTones([tone(4), tone(5)]);
+    audio.playAlarm({ priority: 'high', atAudioS: 4 });
+    expect(audio.pendingCount('alarm')).toBe(alarmBurst('high').length);
+    audio.cancelPending('alarm');
+    expect(audio.pendingCount('alarm')).toBe(0);
+    expect(audio.pendingCount('beat')).toBe(2);
   });
 
   it('reports unavailable and blocked audio without throwing', async () => {
