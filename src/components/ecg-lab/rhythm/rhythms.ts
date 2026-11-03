@@ -10,6 +10,11 @@ export const STRIP_DURATION_MS = 6000;
 /** Beats are generated beyond the visible 0-6 s window so the strip edges look natural. */
 const BUILD_START_MS = -2500;
 const BUILD_END_MS = STRIP_DURATION_MS + 2500;
+/** The window a schedule is built over. The default is the six-second strip plus its margins. */
+export type BuildWindow = { startMs: number; endMs: number };
+export const STRIP_BUILD_WINDOW: BuildWindow = Object.freeze({ startMs: BUILD_START_MS, endMs: BUILD_END_MS });
+/** Upper bound for a single build window (ten simulated minutes), so a bad config cannot allocate without limit. */
+export const MAX_BUILD_WINDOW_MS = 600_000;
 
 export type RhythmCategoryId =
   | 'nsr' | 'sinus-bradycardia' | 'sinus-tachycardia' | 'sinus-arrhythmia' | 'pac' | 'atrial-fibrillation'
@@ -92,9 +97,9 @@ const p = (timeMs: number, ampScale = 1): PWaveEvent => ({ kind: 'p', timeMs, am
 const qrs = (timeMs: number, extra: Partial<QrsEvent> = {}): QrsEvent => ({ kind: 'qrs', timeMs, ...extra });
 
 /** R-peak times at a fixed interval covering the build window. */
-function regularRs(rrMs: number, offsetMs: number): number[] {
+function regularRs(rrMs: number, offsetMs: number, window: BuildWindow): number[] {
   const times: number[] = [];
-  for (let t = offsetMs - Math.ceil((offsetMs - BUILD_START_MS) / rrMs) * rrMs; t <= BUILD_END_MS; t += rrMs) times.push(t);
+  for (let t = offsetMs - Math.ceil((offsetMs - window.startMs) / rrMs) * rrMs; t <= window.endMs; t += rrMs) times.push(t);
   return times;
 }
 
@@ -103,28 +108,41 @@ function sinusEvents(rTimes: number[], pToRMs = 130): RhythmEvent[] {
 }
 
 /** Cumulative R times from a list of intervals. */
-function cumulative(intervals: number[], startMs: number): number[] {
+function cumulative(intervals: number[], startMs: number, endMs: number): number[] {
   const times: number[] = [];
   let t = startMs;
-  for (const interval of intervals) { times.push(t); t += interval; if (t > BUILD_END_MS) break; }
+  for (const interval of intervals) { times.push(t); t += interval; if (t > endMs) break; }
   return times;
 }
 
-export function buildRhythmSchedule(categoryId: RhythmCategoryId, params: RhythmParams): RhythmSchedule {
+/**
+ * Builds a beat schedule over `window` (default: the six-second strip plus margins). Offsets inside
+ * the window are relative to `window.startMs`, so the default reproduces the strip cases exactly.
+ * Interval lists grow with longer windows; for the default window they keep their original length.
+ */
+export function buildRhythmSchedule(categoryId: RhythmCategoryId, params: RhythmParams, window: BuildWindow = STRIP_BUILD_WINDOW): RhythmSchedule {
+  if (!Number.isFinite(window.startMs) || !Number.isFinite(window.endMs) || window.endMs <= window.startMs || window.endMs - window.startMs > MAX_BUILD_WINDOW_MS) {
+    throw new RangeError('Rhythm build window must be finite, ordered and at most ten minutes long');
+  }
   const random = seededRandom(params.seed);
   const rr = 60000 / params.rateBpm;
   const offset = Math.round(random() * 0.6 * rr);
+  // Where the default window began at BUILD_START_MS, a custom window begins at its own start.
+  const start = window.startMs;
+  const isStripWindow = window.startMs === BUILD_START_MS && window.endMs === BUILD_END_MS;
+  // Shortest generated interval is 0.45 x the base interval, so this many always cover the window.
+  const spanBeats = (minimum: number, intervalMs: number) => isStripWindow ? minimum : Math.max(minimum, Math.ceil((window.endMs - window.startMs) / (intervalMs * 0.45)) + 2);
   switch (categoryId) {
     case 'nsr':
     case 'sinus-bradycardia':
     case 'sinus-tachycardia':
-      return { events: sinusEvents(regularRs(rr, offset)) };
+      return { events: sinusEvents(regularRs(rr, offset + start - BUILD_START_MS, window)) };
     case 'sinus-arrhythmia': {
-      const intervals = Array.from({ length: 40 }, (_, index) => rr * (1 + 0.16 * Math.sin((2 * Math.PI * index) / 5.5 + params.seed % 6)));
-      return { events: sinusEvents(cumulative(intervals, BUILD_START_MS + offset)) };
+      const intervals = Array.from({ length: spanBeats(40, rr * 0.84) }, (_, index) => rr * (1 + 0.16 * Math.sin((2 * Math.PI * index) / 5.5 + params.seed % 6)));
+      return { events: sinusEvents(cumulative(intervals, start + offset, window.endMs)) };
     }
     case 'pac': {
-      const regular = regularRs(rr, offset);
+      const regular = regularRs(rr, offset + start - BUILD_START_MS, window);
       const earlyIndex = regular.findIndex(time => time > 1200 + (params.seed % 3) * 500);
       const events: RhythmEvent[] = [];
       let shift = 0;
@@ -139,22 +157,22 @@ export function buildRhythmSchedule(categoryId: RhythmCategoryId, params: Rhythm
       return { events };
     }
     case 'atrial-fibrillation': {
-      const intervals = Array.from({ length: 60 }, () => rr * (0.45 + random() * 0.9));
+      const intervals = Array.from({ length: spanBeats(60, rr) }, () => rr * (0.45 + random() * 0.9));
       const mean = intervals.reduce((sum, value) => sum + value, 0) / intervals.length;
       const scaled = intervals.map(value => (value * rr) / mean);
-      return { events: cumulative(scaled, BUILD_START_MS + offset).map(time => qrs(time)), fibrillation: { amplitudeMv: 0.07, seed: params.seed } };
+      return { events: cumulative(scaled, start + offset, window.endMs).map(time => qrs(time)), fibrillation: { amplitudeMv: 0.07, seed: params.seed } };
     }
     case 'atrial-flutter':
-      return { events: regularRs(rr, offset).map(time => qrs(time, { tScale: 0.5 })), flutter: { periodMs: rr / 4, amplitudeMv: 0.16, offsetMs: offset } };
+      return { events: regularRs(rr, offset + start - BUILD_START_MS, window).map(time => qrs(time, { tScale: 0.5 })), flutter: { periodMs: rr / 4, amplitudeMv: 0.16, offsetMs: offset } };
     case 'svt':
-      return { events: regularRs(rr, offset).map(time => qrs(time, { tScale: 0.5, ampScale: 0.95 })) };
+      return { events: regularRs(rr, offset + start - BUILD_START_MS, window).map(time => qrs(time, { tScale: 0.5, ampScale: 0.95 })) };
     case 'first-degree-avb':
-      return { events: sinusEvents(regularRs(rr, offset), 270) };
+      return { events: sinusEvents(regularRs(rr, offset + start - BUILD_START_MS, window), 270) };
     case 'mobitz-1': {
       const atrialMs = rr / 0.75;
       const pToR = [170, 250, 320];
       const events: RhythmEvent[] = [];
-      for (let index = 0, time = BUILD_START_MS + offset; time < BUILD_END_MS; index += 1, time += atrialMs) {
+      for (let index = 0, time = start + offset; time < window.endMs; index += 1, time += atrialMs) {
         const position = index % 4;
         events.push(p(time));
         if (position < 3) events.push(qrs(time + pToR[position]));
@@ -164,7 +182,7 @@ export function buildRhythmSchedule(categoryId: RhythmCategoryId, params: Rhythm
     case 'mobitz-2': {
       const atrialMs = rr / 0.75;
       const events: RhythmEvent[] = [];
-      for (let index = 0, time = BUILD_START_MS + offset; time < BUILD_END_MS; index += 1, time += atrialMs) {
+      for (let index = 0, time = start + offset; time < window.endMs; index += 1, time += atrialMs) {
         events.push(p(time));
         if (index % 4 !== 3) events.push(qrs(time + 190));
       }
@@ -173,7 +191,7 @@ export function buildRhythmSchedule(categoryId: RhythmCategoryId, params: Rhythm
     case 'avb-2to1': {
       const atrialMs = rr / 2;
       const events: RhythmEvent[] = [];
-      for (let index = 0, time = BUILD_START_MS + offset; time < BUILD_END_MS; index += 1, time += atrialMs) {
+      for (let index = 0, time = start + offset; time < window.endMs; index += 1, time += atrialMs) {
         events.push(p(time));
         if (index % 2 === 0) events.push(qrs(time + 200));
       }
@@ -182,29 +200,32 @@ export function buildRhythmSchedule(categoryId: RhythmCategoryId, params: Rhythm
     case 'third-degree-avb': {
       const atrialMs = 780 + (params.seed % 5) * 20;
       const events: RhythmEvent[] = [];
-      for (let time = BUILD_START_MS + offset; time < BUILD_END_MS; time += atrialMs) events.push(p(time));
-      for (const time of regularRs(rr, Math.round(offset * 0.7) + 90)) events.push(qrs(time, { wide: true, tScale: 0.9 }));
+      for (let time = start + offset; time < window.endMs; time += atrialMs) events.push(p(time));
+      for (const time of regularRs(rr, Math.round(offset * 0.7) + 90 + start - BUILD_START_MS, window)) events.push(qrs(time, { wide: true, tScale: 0.9 }));
       return { events };
     }
     case 'pvc': {
-      const regular = regularRs(rr, offset);
+      const regular = regularRs(rr, offset + start - BUILD_START_MS, window);
       const ectopicIndex = regular.findIndex(time => time > 1500 + (params.seed % 3) * 400);
+      // The strip has one premature beat. A longer (monitoring) window repeats it every few beats.
+      const every = 6 + (params.seed % 3);
+      const isEctopic = (index: number) => isStripWindow ? index === ectopicIndex : index > 0 && index >= ectopicIndex && (index - ectopicIndex) % every === 0;
       const events: RhythmEvent[] = [];
       regular.forEach((time, index) => {
         events.push(p(time - 130));
-        if (index === ectopicIndex) events.push(qrs(regular[index - 1] + 0.58 * rr, { wide: true, ampScale: 1.1 }));
+        if (isEctopic(index)) events.push(qrs(regular[index - 1] + 0.58 * rr, { wide: true, ampScale: 1.1 }));
         else events.push(qrs(time));
       });
       return { events };
     }
     case 'idioventricular':
-      return { events: regularRs(rr, offset).map(time => qrs(time, { wide: true })) };
+      return { events: regularRs(rr, offset + start - BUILD_START_MS, window).map(time => qrs(time, { wide: true })) };
     case 'vt':
-      return { events: regularRs(rr, offset).map(time => qrs(time, { wide: true, tScale: 0 })) };
+      return { events: regularRs(rr, offset + start - BUILD_START_MS, window).map(time => qrs(time, { wide: true, tScale: 0 })) };
     case 'vf':
       return { events: [], chaos: { amplitudeMv: 0.55 } };
     case 'paced':
-      return { events: regularRs(rr, offset).flatMap(time => [{ kind: 'pace' as const, timeMs: time - 45 }, qrs(time, { wide: true, tScale: 0.8 })]) };
+      return { events: regularRs(rr, offset + start - BUILD_START_MS, window).flatMap(time => [{ kind: 'pace' as const, timeMs: time - 45 }, qrs(time, { wide: true, tScale: 0.8 })]) };
   }
 }
 

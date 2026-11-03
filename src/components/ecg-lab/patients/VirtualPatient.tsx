@@ -14,12 +14,16 @@ type VirtualPatientProps = {
   onOpenChallenge: () => void;
   /** Injectable for tests; defaults to the authored registry. */
   registry?: readonly PatientCase[];
+  /** Opens the monitored version of a case, when one exists. */
+  onOpenMonitored?: (patientCaseId: string) => void;
+  /** Patient case ids that have a monitored version. */
+  monitoredCaseIds?: readonly string[];
 };
 
 const steps = ['Presentation', 'ECG and rate', 'Interpretation', 'Debrief'] as const;
 const leadChoices: Lead[] = ['I', 'II', 'V1', 'V5'];
 
-export function VirtualPatient({ completed, onCompleted, onOpenAcademy, onOpenChallenge, registry = patientCases }: VirtualPatientProps) {
+export function VirtualPatient({ completed, onCompleted, onOpenAcademy, onOpenChallenge, registry = patientCases, onOpenMonitored, monitoredCaseIds = [] }: VirtualPatientProps) {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [step, setStep] = useState(0);
   const [lead, setLead] = useState<Lead>('II');
@@ -223,6 +227,7 @@ export function VirtualPatient({ completed, onCompleted, onOpenAcademy, onOpenCh
           <div className="challenge-actions">
             <button type="button" className="cta secondary" onClick={backToList}>Back to cases</button>
             {nextCase && <button type="button" className="cta" onClick={() => open(nextCase.id)}>Next case: {nextCase.title}</button>}
+            {onOpenMonitored && monitoredCaseIds.includes(patient.id) && <button type="button" className="cta secondary" onClick={() => onOpenMonitored(patient.id)}>Put this patient on the bedside monitor</button>}
             <button type="button" className="cta secondary" onClick={onOpenChallenge}>Practise in the Rhythm Challenge</button>
             <button type="button" className="cta secondary" onClick={onOpenAcademy}>View Academy</button>
           </div>
