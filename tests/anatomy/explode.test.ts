@@ -32,8 +32,12 @@ describe("System-level explode", () => {
     const full = computeExplodeOffsets(ALL_SYSTEMS, 1);
     const half = computeExplodeOffsets(ALL_SYSTEMS, 0.5);
     for (let i = 0; i < full.length; i++) {
-      expect(half[i].offset[0]).toBeCloseTo(full[i].offset[0] * 0.5, 5);
+      for (let axis = 0; axis < 3; axis++) {
+        expect(half[i].offset[axis], `${full[i].systemId} axis ${axis}`).toBeCloseTo(full[i].offset[axis] * 0.5, 5);
+      }
     }
+    // Guard against a vacuous pass: some systems really do move.
+    expect(full.some(o => Math.hypot(...o.offset) > 0)).toBe(true);
   });
   it("muscular system offset is ZERO (per-part handles it)", () => {
     const r = computeExplodeOffsets(ALL_SYSTEMS, 1);
@@ -46,8 +50,16 @@ describe("System-level explode", () => {
   it("no cumulative drift", () => {
     expect(computeExplodeOffsets(ALL_SYSTEMS, 0.5)).toEqual(computeExplodeOffsets(ALL_SYSTEMS, 0.5));
   });
-  it("reset restores exact original", () => {
-    for (const o of computeExplodeOffsets(ALL_SYSTEMS, 0)) expect(o.offset).toEqual([0, 0, 0]);
+  it("clamps the explode level to 0..1", () => {
+    expect(computeExplodeOffsets(ALL_SYSTEMS, 2)).toEqual(computeExplodeOffsets(ALL_SYSTEMS, 1));
+    expect(computeExplodeOffsets(ALL_SYSTEMS, -1)).toEqual(computeExplodeOffsets(ALL_SYSTEMS, 0));
+    expect(computeBrainExplodeOffsets(ALL_SYSTEMS, 5)).toEqual(computeBrainExplodeOffsets(ALL_SYSTEMS, 1));
+  });
+  it("offsets follow the curated layout: direction × distance at full explode", () => {
+    for (const o of computeExplodeOffsets(ALL_SYSTEMS, 1)) {
+      const { direction, distance } = EXPLODE_LAYOUT[o.systemId];
+      for (let axis = 0; axis < 3; axis++) expect(o.offset[axis], `${o.systemId} axis ${axis}`).toBeCloseTo(direction[axis] * distance, 10);
+    }
   });
   it("hidden systems get zero offset", () => {
     const r = computeExplodeOffsets(ALL_SYSTEMS.map(s => s.id === "cardiac" ? {...s, visible: false} : s), 1);
@@ -64,6 +76,7 @@ describe("System-level explode", () => {
   });
   it("unknown system falls back safely", () => {
     const r = computeExplodeOffsets([{id:"unknown", bounds:{min:[0,0,0] as [number,number,number], max:[1,1,1] as [number,number,number]}, visible:true}], 1);
+    expect(r[0].offset).toEqual(FALLBACK_LAYOUT.direction.map(d => d * FALLBACK_LAYOUT.distance) as [number, number, number]);
     expect(Math.hypot(...r[0].offset)).toBeLessThan(0.1);
   });
   it("all offsets are finite", () => {
@@ -76,6 +89,33 @@ describe("Brain Mode explode", () => {
     const r = computeBrainExplodeOffsets(ALL_SYSTEMS, 1);
     const n = r.find(o => o.systemId === "nervous")!;
     expect(n.offset[2]).toBeGreaterThan(0);
+  });
+  it("separates the brain and the cardiac ventricle meshes in opposite directions", () => {
+    const r = computeBrainExplodeOffsets(ALL_SYSTEMS, 1);
+    expect(r.find(o => o.systemId === "cardiac")!.offset[2]).toBeLessThan(0);
+  });
+  it("hidden systems stay put and level 0 moves nothing", () => {
+    const hidden = computeBrainExplodeOffsets(ALL_SYSTEMS.map(s => ({ ...s, visible: s.id !== "nervous" })), 1);
+    expect(hidden.find(o => o.systemId === "nervous")!.offset).toEqual([0, 0, 0]);
+    for (const o of computeBrainExplodeOffsets(ALL_SYSTEMS, 0)) expect(o.offset).toEqual([0, 0, 0]);
+  });
+});
+
+describe("Explode centre helpers", () => {
+  it("boundsCenter is the midpoint of the bounds", () => {
+    const c = boundsCenter({ min: [-1, 2, 0], max: [3, 4, 10] });
+    expect([c.x, c.y, c.z]).toEqual([1, 3, 5]);
+  });
+  it("computeVisibleCenter averages only the visible systems' centres", () => {
+    const a = { id: "a", bounds: { min: [0, 0, 0] as [number,number,number], max: [2, 2, 2] as [number,number,number] }, visible: true };
+    const b = { id: "b", bounds: { min: [2, 2, 2] as [number,number,number], max: [4, 4, 4] as [number,number,number] }, visible: true };
+    const hidden = { id: "c", bounds: { min: [100, 100, 100] as [number,number,number], max: [200, 200, 200] as [number,number,number] }, visible: false };
+    const c = computeVisibleCenter([a, b, hidden])!;
+    expect([c.x, c.y, c.z]).toEqual([2, 2, 2]);
+  });
+  it("computeVisibleCenter is null when nothing is visible", () => {
+    expect(computeVisibleCenter(ALL_SYSTEMS.map(s => ({ ...s, visible: false })))).toBeNull();
+    expect(computeVisibleCenter([])).toBeNull();
   });
 });
 

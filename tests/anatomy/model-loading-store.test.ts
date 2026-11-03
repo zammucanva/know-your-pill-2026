@@ -27,7 +27,20 @@ describe("model-loading-store — initial state", () => {
     expect(s.error).toBe("");
     expect(s.errorCategory).toBe("");
     expect(s.loaded).toBe(false);
+    expect(s.partial).toBe(false);
     expect(s.retryToken).toBe(0);
+  });
+});
+
+describe("model-loading-store — setPartial", () => {
+  it("marks the model partially shown without touching other fields", () => {
+    state().setProgress(40);
+    state().setPartial(true);
+    expect(state().partial).toBe(true);
+    expect(state().progress).toBe(40);
+    expect(state().loaded).toBe(false);
+    state().setPartial(false);
+    expect(state().partial).toBe(false);
   });
 });
 
@@ -96,6 +109,7 @@ describe("model-loading-store — setError", () => {
 describe("model-loading-store — retry()", () => {
   it("clears error state, resets loaded/progress and bumps retryToken", () => {
     state().setProgress(73);
+    state().setPartial(true);
     state().setLoaded(true);
     state().setError("chunk failed after 3 retries", "anatomy-asset");
 
@@ -105,6 +119,7 @@ describe("model-loading-store — retry()", () => {
     expect(s.error).toBe("");
     expect(s.errorCategory).toBe("");
     expect(s.loaded).toBe(false);
+    expect(s.partial).toBe(false);
     expect(s.progress).toBe(0);
     expect(s.retryToken).toBe(1);
   });

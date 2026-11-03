@@ -15,6 +15,12 @@ import {
  * The override set is EXACTLY the six brain CSF chambers BodyParts3D
  * misclassified as cardiac (because of the word "ventricle"); the
  * cardiovascular ventricles must remain cardiac.
+ *
+ * These ids come from the BodyParts3D atlas. The Z-Anatomy atlas the site now
+ * ships uses `ZA-` ids and already files the brain ventricles under nervous,
+ * so this layer is a lookup kept for compatibility. What users see (brain
+ * ventricles nervous, heart ventricles cardiac) is checked against the real
+ * atlas in atlas-integrity.test.ts.
  */
 
 /** The documented override set: brain CSF chambers misclassified as cardiac. */

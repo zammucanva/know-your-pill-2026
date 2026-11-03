@@ -12,8 +12,10 @@ import {
  * Registry integrity tests for Brain Mode navigation data.
  *
  * brainStructureGroups is the single source of truth for brain grouping —
- * it must only contain groups with real atlas concepts (FMA ids) and no
- * fabricated structures (e.g. substantia nigra is intentionally absent).
+ * it must only contain groups with real atlas concepts (Z-Anatomy `ZA-` ids)
+ * and no fabricated structures (e.g. substantia nigra is intentionally absent).
+ * That every concept exists in the shipped atlas is checked against the real
+ * atlas data in atlas-integrity.test.ts.
  */
 
 const DOCUMENTED_GROUP_IDS = [
@@ -195,5 +197,22 @@ describe("brain-registry — camera framing", () => {
       expect(pos, `${view} position`).toHaveLength(3);
       for (const v of pos) expect(Number.isFinite(v), `${view} component`).toBe(true);
     }
+  });
+
+  it("every brain camera view sits outside the brain, on its named side", () => {
+    const { min, max, center } = brainBounds;
+    const outside = (p: [number, number, number]) => [0, 1, 2].some((i) => p[i] < min[i] || p[i] > max[i]);
+    for (const [view, pos] of Object.entries(brainCameraPositions)) {
+      expect(outside(pos), `${view} camera is inside the brain bounds`).toBe(true);
+    }
+    const p = brainCameraPositions;
+    expect(p.anterior[2]).toBeGreaterThan(max[2]);
+    expect(p.posterior[2]).toBeLessThan(min[2]);
+    expect(p.right[0]).toBeGreaterThan(max[0]);
+    expect(p.left[0]).toBeLessThan(min[0]);
+    expect(p.superior[1]).toBeGreaterThan(max[1]);
+    expect(p.inferior[1]).toBeLessThan(min[1]);
+    // The horizontal views look at the brain's height, not above or below it.
+    for (const view of ["anterior", "posterior", "left", "right"]) expect(p[view][1]).toBeCloseTo(center[1], 6);
   });
 });
