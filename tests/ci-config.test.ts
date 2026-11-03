@@ -36,6 +36,11 @@ describe("CI configuration is pinned, isolated and matches the documented checks
     expect(order.every((i) => i >= 0)).toBe(true);
     expect([...order].sort((a, b) => a - b)).toEqual(order);
   });
+  test("it installs poppler-utils before the tests, because the PDF importer tests shell out to pdftotext", () => {
+    const install = ci.indexOf("poppler-utils");
+    expect(install).toBeGreaterThan(-1);
+    expect(install).toBeLessThan(ci.indexOf("bun test tests/"));
+  });
   test("every 'bun run X' in the workflow is a real package script", () => {
     for (const m of ci.matchAll(/bun run ([\w:-]+)/g)) expect(Object.keys(pkg.scripts)).toContain(m[1]);
   });

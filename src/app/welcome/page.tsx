@@ -15,6 +15,7 @@ import {
   Eye, EyeOff, ShieldCheck,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { RegionPicker } from "@/components/kyp/ui/region-picker";
 import { IS_STATIC_EXPORT } from "@/lib/kyp/static-export";
 import { getRedirectResult, signInWithPopup, signInWithRedirect } from "firebase/auth";
 import { getFirebaseAuth, createGoogleProvider, canUseSameOriginAuth } from "@/lib/firebase-client";
@@ -368,6 +369,15 @@ export default function WelcomePage() {
                   />
                 </div>
                 <div>
+                  <Label htmlFor="region" className="text-xs">Country</Label>
+                  <div className="mt-1">
+                    <RegionPicker id="region" variant="field" />
+                  </div>
+                  <p className="mt-1 text-[11px] text-muted-foreground">
+                    Used to show the right emergency numbers. You can change it any time.
+                  </p>
+                </div>
+                <div>
                   <Label htmlFor="password" className="text-xs">Password</Label>
                   <div className="relative mt-1">
                     <Input
@@ -580,6 +590,17 @@ export default function WelcomePage() {
                 <ShieldCheck className="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand" />
                 <p className="text-xs text-muted-foreground leading-relaxed">
                   This is a personalization preference, not a medical credential. All content remains accessible to everyone.
+                </p>
+              </div>
+
+              {/* Country: tunes the emergency numbers shown across the site */}
+              <div className="mt-4">
+                <Label htmlFor="region-role" className="text-xs">Your country</Label>
+                <div className="mt-1">
+                  <RegionPicker id="region-role" variant="field" />
+                </div>
+                <p className="mt-1 text-[11px] text-muted-foreground">
+                  Used to show the right emergency numbers. You can change it any time.
                 </p>
               </div>
 

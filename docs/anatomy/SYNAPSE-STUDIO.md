@@ -26,5 +26,5 @@ Users can also add their own medication in the page ("+ Add a medication"); thos
 
 ## Licence
 
-The brain image (`public/synapse-studio/assets/brain_sagittal.png`) is a CC BY-SA 4.0 rendering of Z-Anatomy /
+The brain image (`public/synapse-studio/assets/brain_sagittal.webp`) is a CC BY-SA 4.0 rendering of Z-Anatomy /
 BodyParts3D models; attribution is in `public/synapse-studio/ATTRIBUTION.txt` and on the page.

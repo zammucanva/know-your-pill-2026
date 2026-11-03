@@ -221,3 +221,66 @@ body.fs-open {overflow: hidden;}
   .syn-studio .stage { -webkit-print-color-adjust: exact; print-color-adjust: exact; break-inside: avoid; box-shadow: none; }
   .syn-studio .panel { position: static; max-height: none; overflow: visible; border: 0; padding: 12px 0 0; }
 }
+
+/* boxed label cards (brain overview) */
+.syn-studio .lbl-card {font-size: 12.5px; font-weight: 650;}
+.syn-studio .lbl-cardsub {font-size: 11px; font-weight: 500;}
+.syn-studio .lbl-anat-pill {font-size: 10.5px; font-style: italic; fill: #f3e9c9;}
+.syn-studio .lbl-path-pill {font-size: 10.5px; font-style: italic; font-weight: 650;}
+.syn-studio .stage.ls-large .lbl-card {font-size: 15px;}
+.syn-studio .stage.ls-large .lbl-cardsub {font-size: 13px;}
+.syn-studio .stage.ls-large .lbl-anat-pill,
+.syn-studio .stage.ls-large .lbl-path-pill {font-size: 12.5px;}
+.syn-studio .rcard:hover rect:first-child {fill-opacity: 1;}
+
+/* full screen: tabs + medication bar + toggles share one row; tighter rows give the picture the height */
+.syn-studio .stage-col.fs .tabs {flex-wrap: wrap; row-gap: 6px; margin-bottom: 6px;}
+.syn-studio .fsbar {margin: 0 0 0 10px; flex: 0 1 auto;}
+.syn-studio .stage-col.fs {padding: 8px 14px 8px;}
+.syn-studio .stage-col.fs .controls {margin-top: 6px;}
+.syn-studio .stage-col.fs .phases {margin-top: 6px;}
+.syn-studio .stage-col.fs .caption {margin: 6px 0 0; padding: 6px 12px; font-size: 13.5px;}
+.syn-studio .stage-col.fs .brainnote {margin: 3px 2px 0; font-size: 11px;}
+
+/* The medication list must open ABOVE the diagram (it was drawn behind the stage and only a sliver showed). */
+.syn-studio .syn-toolbar {position: relative; z-index: 30;}
+.syn-studio .suggest {z-index: 40;}
+
+/* Framed toolbars: related controls sit together inside one border instead of floating loose. */
+.syn-studio .syn-toolbar,
+.syn-studio .tabs {gap: 10px; padding: 8px; border: 1px solid var(--line); border-radius: 14px; background: var(--panel);}
+.syn-studio .syn-toolbar {margin-bottom: 12px;}
+.syn-studio .tabs {margin-bottom: 12px; align-items: center;}
+.syn-studio .syn-toolbar .search input {border-radius: 10px; padding: 9px 14px; background: var(--bg);}
+.syn-studio .tgroup {display: inline-flex; align-items: stretch; border: 1px solid var(--line); border-radius: 11px; background: var(--bg); overflow: hidden;}
+.syn-studio .tgroup > * {border: 0; border-radius: 0; background: transparent; padding: 8px 14px; font-size: 13px; display: inline-flex; align-items: center; gap: 6px;}
+.syn-studio .tgroup > * + * {border-left: 1px solid var(--line);}
+.syn-studio .tgroup > button:hover,
+.syn-studio .tgroup > label:hover {background: var(--hover);}
+.syn-studio .tgroup .tab {color: var(--mut); font-size: 14px;}
+.syn-studio .tgroup .tab.active {color: var(--txt); background: var(--sel); box-shadow: inset 0 -2px 0 var(--teal);}
+.syn-studio .tabs > .fsbtn {padding: 8px 14px; border-radius: 11px; font-size: 13px;}
+.syn-studio .fsbar {border: 1px solid var(--line); border-radius: 11px; background: var(--bg); padding: 3px; gap: 4px; margin: 0;}
+.syn-studio .fsbar .ghost {border-color: transparent;}
+.syn-studio .fsbar .ghost:hover {border-color: var(--teal);}
+@media (max-width: 640px) {
+  .syn-studio .tgroup {flex-wrap: wrap;}
+  .syn-studio .tgroup > * {padding: 7px 10px;}
+}
+
+/* clearly visible frame colour for the toolbars (the default hairline border token is very pale) */
+.syn-studio {--frame: color-mix(in oklch, var(--foreground) 26%, var(--background));}
+.syn-studio .syn-toolbar,
+.syn-studio .tabs,
+.syn-studio .tgroup,
+.syn-studio .fsbar {border-color: var(--frame);}
+.syn-studio .tgroup > * + * {border-left-color: var(--frame);}
+.syn-studio .syn-toolbar,
+.syn-studio .tabs {box-shadow: 0 1px 2px color-mix(in oklch, var(--foreground) 8%, transparent);}
+
+/* brain region markers: uniform ring + dot; the approximate extent shows only on hover / focus */
+.syn-studio .region .area {transition: fill-opacity .15s ease, stroke-opacity .15s ease;}
+.syn-studio .region:hover .area,
+.syn-studio .region.hot .area {fill-opacity: .2; stroke-opacity: .85;}
+.syn-studio .lbl-minor {display: none;}
+.syn-studio .stage.detail .lbl-minor {display: inline;}

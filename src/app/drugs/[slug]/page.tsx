@@ -52,6 +52,7 @@ import {
   DrugNavigationModule,
   PageMetadataStrip,
 } from "@/components/kyp/sections/drug";
+import { DrugTrustLine } from "@/components/kyp/sections/drug/drug-trust-line";
 
 import { Timeline } from "@/components/kyp/ui/timeline";
 import { Container } from "@/components/kyp/ui/container";
@@ -256,6 +257,8 @@ export default async function DrugPage({ params }: PageProps) {
         <GuidedLearningVisibility drug={drug} sectionId="top">
           <DrugHero drug={drug} patientGuide={patientGuide} />
         </GuidedLearningVisibility>
+
+        <DrugTrustLine drug={drug} />
 
         <GuidedLearningVisibility drug={drug} sectionId="quick-facts">
           <DrugQuickFacts drug={drug} patientGuide={patientGuide} />
