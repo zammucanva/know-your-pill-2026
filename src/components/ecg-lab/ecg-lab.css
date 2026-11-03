@@ -630,7 +630,7 @@
   .ecg-lab .bedside-numerics { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
   .ecg-lab .bedside-value, .ecg-lab .bedside-tile.ecg .bedside-value { font-size: 30px; }
 }
-@media (prefers-reduced-motion: reduce) { .bedside * { transition: none !important; animation: none !important; } }
+@media (prefers-reduced-motion: reduce) { .ecg-lab .bedside * { transition: none !important; animation: none !important; } }
 .ecg-lab .scenario-actions ul { list-style: none; padding: 0 !important; display: grid; gap: 8px; }
 .ecg-lab .scenario-actions li { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; }
 .ecg-lab .scenario-actions small { color: var(--muted); font-size: 12px; }
@@ -652,3 +652,6 @@
 .ecg-lab .bedside-beat { opacity: .15; margin-left: 2px; }
 .ecg-lab .bedside-beat.on { opacity: 1; }
 @media (max-width: 560px) { .ecg-lab .bedside-sound-toggle { min-height: 44px; width: 100%; } }
+.ecg-lab .bedside-sound-toggle.warn { border-color: var(--alarm-medium); color: var(--alarm-medium); }
+.ecg-lab .bedside { --alarm-info: oklch(30% .03 250); }
+.ecg-lab .bedside-alarm-bar.active.priority-info { background: var(--alarm-info); color: var(--mon-text); }

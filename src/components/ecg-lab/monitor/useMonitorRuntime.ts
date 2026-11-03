@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { DEFAULT_VOLUME, MonitorAudio, type AudioStatus } from '../audio/monitor-audio';
+import { MonitorAudio, type AudioStatus } from '../audio/monitor-audio';
+import { readAudioPreferences, writeAudioPreferences, type AudioPreferences } from '../audio/preferences';
+import { browserStorageOrNull } from './run-storage';
 import { BEAT_TONE_HZ, spo2PitchHz, ToneScheduler } from '../audio/scheduler';
 import { SimulationClock, type AnimationFrameScheduler, type ClockSnapshot } from '../engine/clock';
 import { acknowledgeAlarms, alarmStateAt, audibleAlarm, evaluateAlarmConditions, initialAlarmState, updateAlarms, type AlarmState } from './alarms';
@@ -45,16 +47,19 @@ export function useMonitorRuntime(scenario: MonitorScenario, options: MonitorRun
   const [snapshot, setSnapshot] = useState<ClockSnapshot>(initialSnapshot);
   const [alarms, setAlarms] = useState<AlarmState>(initialAlarmState);
   const [audioStatus, setAudioStatus] = useState<AudioStatus>('off');
-  const [muted, setMutedState] = useState(false);
-  const [volume, setVolumeState] = useState(DEFAULT_VOLUME);
-  const [toneSource, setToneSourceState] = useState<ToneSource>('ecg');
+  // Sound settings remembered in this browser (sound itself always starts off).
+  const [initialPreferences] = useState<AudioPreferences>(() => readAudioPreferences(browserStorageOrNull()));
+  const [muted, setMutedState] = useState(initialPreferences.muted);
+  const [volume, setVolumeState] = useState(initialPreferences.volume);
+  const [toneSource, setToneSourceState] = useState<ToneSource>(initialPreferences.toneSource);
+  const preferencesRef = useRef<AudioPreferences>(initialPreferences);
   const [reducedMotion] = useState(prefersReducedMotion);
 
   const clockRef = useRef<SimulationClock | null>(null);
   const alarmsRef = useRef<AlarmState>(initialAlarmState());
   const audioRef = useRef<MonitorAudio>(options.audio ?? new MonitorAudio());
   const toneSchedulerRef = useRef(new ToneScheduler());
-  const toneSourceRef = useRef<ToneSource>('ecg');
+  const toneSourceRef = useRef<ToneSource>(initialPreferences.toneSource);
   const lastAlarmStepRef = useRef<number | null>(null);
   /** Last simulated time the clock reported; still readable after the clock is disposed on unmount. */
   const lastElapsedRef = useRef(0);
@@ -67,7 +72,15 @@ export function useMonitorRuntime(scenario: MonitorScenario, options: MonitorRun
       setAudioStatus('off');
     }
     const audio = audioRef.current;
-    return () => { void audio.dispose(); };
+    // A new audio object starts with defaults; give it the learner's current settings.
+    audio.setVolume(preferencesRef.current.volume);
+    audio.setMuted(preferencesRef.current.muted);
+    // The browser can suspend or interrupt sound at any time; reflect it and drop stale scheduling.
+    const unsubscribe = audio.onStateChange(() => {
+      toneSchedulerRef.current.reset();
+      setAudioStatus(audio.getStatus());
+    });
+    return () => { unsubscribe(); void audio.dispose(); };
   }, []);
 
   useEffect(() => {
@@ -109,6 +122,7 @@ export function useMonitorRuntime(scenario: MonitorScenario, options: MonitorRun
           endMs: timeline.scenario.durationMs,
         });
         if (actions.cancelPending) audio.cancelPending();
+        else if (actions.cancelAlarm) audio.cancelPending('alarm');
         audio.playTones(actions.tones);
         if (actions.alarm) audio.playAlarm(actions.alarm);
       }
@@ -123,7 +137,11 @@ export function useMonitorRuntime(scenario: MonitorScenario, options: MonitorRun
 
     const onVisibilityChange = () => {
       if (document.visibilityState === 'hidden') clock.suspend();
-      else clock.resumeFromSuspension();
+      else {
+        clock.resumeFromSuspension();
+        // Some browsers suspend audio in a background tab; try to resume it (a click may still be needed).
+        void audioRef.current.resumeIfInterrupted().then(status => setAudioStatus(status));
+      }
     };
     document.addEventListener('visibilitychange', onVisibilityChange);
     return () => {
@@ -194,7 +212,8 @@ export function useMonitorRuntime(scenario: MonitorScenario, options: MonitorRun
     if (!clock) return;
     alarmsRef.current = acknowledgeAlarms(alarmsRef.current, clock.getSnapshot().elapsedMs);
     setAlarms(alarmsRef.current);
-    audioRef.current.cancelPending();
+    // Silencing stops alarm sound only; the heartbeat tone carries on.
+    audioRef.current.cancelPending('alarm');
   }, []);
 
   const enableAudio = useCallback(async () => {
@@ -218,14 +237,24 @@ export function useMonitorRuntime(scenario: MonitorScenario, options: MonitorRun
     toneSchedulerRef.current.reset();
     setAudioStatus(audioRef.current.getStatus());
   }, []);
-  const setMuted = useCallback((value: boolean) => { audioRef.current.setMuted(value); setMutedState(value); }, []);
-  const setVolume = useCallback((value: number) => { audioRef.current.setVolume(value); setVolumeState(audioRef.current.getVolume()); }, []);
+  const remember = useCallback((change: Partial<AudioPreferences>) => {
+    preferencesRef.current = { ...preferencesRef.current, ...change };
+    writeAudioPreferences(browserStorageOrNull(), preferencesRef.current);
+  }, []);
+  const setMuted = useCallback((value: boolean) => { audioRef.current.setMuted(value); setMutedState(value); remember({ muted: value }); }, [remember]);
+  const setVolume = useCallback((value: number) => {
+    audioRef.current.setVolume(value);
+    const applied = audioRef.current.getVolume();
+    setVolumeState(applied);
+    remember({ volume: applied });
+  }, [remember]);
   const setToneSource = useCallback((value: ToneSource) => {
     toneSourceRef.current = value;
+    remember({ toneSource: value });
     toneSchedulerRef.current.reset();
     audioRef.current.cancelPending();
     setToneSourceState(value);
-  }, []);
+  }, [remember]);
 
   return {
     timeline, snapshot, alarms, reducedMotion, taken,

@@ -297,3 +297,39 @@ describe('critical limits escalate alarm priority', () => {
     expect(monitorScenarioSchema.safeParse({ ...deterioration, criticalLimits: { ...critical, spo2Low: 92 } }).success).toBe(false);
   });
 });
+
+describe('threshold boundaries and critical recovery', () => {
+  const deterioration = getMonitorScenario('scenario.rapid-deterioration.01')!;
+  const critical = deterioration.criticalLimits!;
+  const base = readingsAt(buildScenarioTimeline(deterioration), 10_000);
+  const withHr = (value: number) => ({ ...base, heartRate: { value, status: 'ok' as const } });
+  const ids = (value: number) => evaluateAlarmConditions(withHr(value), deterioration.alarmLimits, critical).map(condition => condition.id);
+
+  it('alarms only beyond a limit: a value exactly at a limit does not alarm or escalate', () => {
+    expect(ids(deterioration.alarmLimits.heartRate.high)).toEqual([]);
+    expect(ids(deterioration.alarmLimits.heartRate.high + 1)).toEqual(['hr-high']);
+    expect(ids(critical.heartRateHigh)).toEqual(['hr-high']);
+    expect(ids(critical.heartRateHigh + 1)).toEqual(['hr-critical-high']);
+    expect(ids(deterioration.alarmLimits.heartRate.low)).toEqual([]);
+    expect(ids(critical.heartRateLow)).toEqual(['hr-low']);
+    expect(ids(critical.heartRateLow - 1)).toEqual(['hr-critical-low']);
+  });
+
+  it('steps back down from critical to the ordinary alarm, then clears, with each change logged once', () => {
+    let state: AlarmState = initialAlarmState();
+    for (const [time, hr] of [[0, 100], [1_000, 180], [2_000, 135], [3_000, 100]] as const) {
+      state = updateAlarms(state, evaluateAlarmConditions(withHr(hr), deterioration.alarmLimits, critical), time);
+    }
+    expect(state.active).toEqual([]);
+    expect(state.log.map(entry => [entry.id, entry.event, entry.atMs])).toEqual([
+      ['hr-critical-high', 'onset', 1_000],
+      ['hr-critical-high', 'cleared', 2_000], ['hr-high', 'onset', 2_000],
+      ['hr-high', 'cleared', 3_000],
+    ]);
+  });
+
+  it('is deterministic: the deterioration alarm history is identical on every build', async () => {
+    const { alarmStateAt } = await import('@/components/ecg-lab/monitor/alarms');
+    expect(alarmStateAt(buildScenarioTimeline(deterioration), deterioration.durationMs)).toEqual(alarmStateAt(buildScenarioTimeline(deterioration), deterioration.durationMs));
+  });
+});

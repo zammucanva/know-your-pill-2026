@@ -13,6 +13,8 @@ export type AudioContextLike = {
   readonly baseLatency?: number;
   readonly state: string;
   readonly destination: unknown;
+  /** Fired by browsers when the context is suspended, interrupted or resumed. */
+  onstatechange?: ((this: unknown, event: unknown) => void) | null;
   resume(): Promise<void>;
   close(): Promise<void>;
   createOscillator(): OscillatorLike;
@@ -30,7 +32,13 @@ export type OscillatorLike = {
   onended: (() => void) | null;
 };
 
-export type AudioStatus = 'off' | 'running' | 'blocked' | 'unavailable';
+/**
+ * 'interrupted': the learner turned sound on, but the browser has since suspended or interrupted
+ * the audio context (screen lock, a phone call, some tab switches). Nothing can play until it is
+ * resumed, which some browsers allow only from a click.
+ */
+export type AudioStatus = 'off' | 'running' | 'interrupted' | 'blocked' | 'unavailable';
+export type ToneKind = 'beat' | 'alarm';
 
 export const DEFAULT_VOLUME = 0.7;
 const BEAT_DURATION_S = 0.06;
@@ -59,7 +67,7 @@ function requestPlaybackSession(): void {
   } catch { /* not supported: sound still works where the device allows it */ }
 }
 
-type Voice = { oscillator: OscillatorLike; gain: GainLike; endS: number };
+type Voice = { oscillator: OscillatorLike; gain: GainLike; endS: number; kind: ToneKind };
 
 export class MonitorAudio {
   private context: AudioContextLike | null = null;
@@ -69,10 +77,21 @@ export class MonitorAudio {
   private volume = DEFAULT_VOLUME;
   private status: AudioStatus = 'off';
   private disposed = false;
+  private listeners = new Set<() => void>();
 
   constructor(private readonly createContext: () => AudioContextLike | null = browserAudioContext) {}
 
-  getStatus(): AudioStatus { return this.status; }
+  /** The real state: a context the browser suspended after sound was turned on reads 'interrupted'. */
+  getStatus(): AudioStatus {
+    if (this.status === 'running' && this.context && this.context.state !== 'running') return 'interrupted';
+    return this.status;
+  }
+
+  /** Notified whenever the browser changes the audio context's state. Returns an unsubscribe. */
+  onStateChange(listener: () => void): () => void {
+    this.listeners.add(listener);
+    return () => this.listeners.delete(listener);
+  }
   isDisposed(): boolean { return this.disposed; }
   isMuted(): boolean { return this.muted; }
   getVolume(): number { return this.volume; }
@@ -85,7 +104,7 @@ export class MonitorAudio {
   }
 
   /** Audio clock in seconds, or null when audio is not running. */
-  now(): number | null { return this.status === 'running' && this.context ? this.context.currentTime : null; }
+  now(): number | null { return this.getStatus() === 'running' && this.context ? this.context.currentTime : null; }
 
   /** Must be called from a user gesture (click or key press) because of browser autoplay rules. */
   async enable(): Promise<AudioStatus> {
@@ -95,6 +114,11 @@ export class MonitorAudio {
       if (!this.context) {
         this.context = this.createContext();
         if (!this.context) { this.status = 'unavailable'; return this.status; }
+        this.context.onstatechange = () => {
+          // A suspended clock would make every scheduled tone land at the wrong time.
+          if (this.context && this.context.state !== 'running') this.cancelPending();
+          this.listeners.forEach(listener => listener());
+        };
         this.master = this.context.createGain();
         this.master.gain.value = this.muted ? 0 : this.volume;
         this.master.connect(this.context.destination);
@@ -104,7 +128,17 @@ export class MonitorAudio {
     } catch {
       this.status = 'blocked';
     }
-    return this.status;
+    return this.getStatus();
+  }
+
+  /**
+   * After an interruption, tries to resume without a click (allowed by some browsers, for example
+   * when the tab becomes visible again). Returns the resulting status.
+   */
+  async resumeIfInterrupted(): Promise<AudioStatus> {
+    if (this.getStatus() !== 'interrupted' || !this.context) return this.getStatus();
+    try { await this.context.resume(); } catch { /* still interrupted: a click will be needed */ }
+    return this.getStatus();
   }
 
   /** Turns sound off: stops pending tones and suspends output without destroying the context. */
@@ -127,37 +161,41 @@ export class MonitorAudio {
 
   playTones(tones: readonly PlannedTone[]): void {
     if (!this.canPlay()) return;
-    for (const tone of tones) this.pulse(tone.atAudioS, BEAT_DURATION_S, tone.frequencyHz, BEAT_LEVEL, 'triangle');
+    for (const tone of tones) this.pulse(tone.atAudioS, BEAT_DURATION_S, tone.frequencyHz, BEAT_LEVEL, 'triangle', 'beat');
   }
 
   playAlarm(alarm: PlannedAlarm): void {
     if (!this.canPlay()) return;
-    for (const pulse of alarmBurst(alarm.priority)) this.pulse(alarm.atAudioS + pulse.offsetS, pulse.durationS, pulse.frequencyHz, ALARM_LEVEL, 'square');
+    for (const pulse of alarmBurst(alarm.priority)) this.pulse(alarm.atAudioS + pulse.offsetS, pulse.durationS, pulse.frequencyHz, ALARM_LEVEL, 'square', 'alarm');
   }
 
   /** One beat tone right away, so the learner can check that sound reaches them. */
   testBeep(): boolean {
     if (!this.canPlay() || !this.context) return false;
-    this.pulse(this.context.currentTime + 0.05, BEAT_DURATION_S * 2, 880, BEAT_LEVEL, 'triangle');
+    this.pulse(this.context.currentTime + 0.05, BEAT_DURATION_S * 2, 880, BEAT_LEVEL, 'triangle', 'beat');
     return true;
   }
 
-  /** Stops every tone that has not finished. Used for pause, seek, reset and mute. */
-  cancelPending(): void {
+  /**
+   * Stops every tone that has not finished, or only beat or only alarm tones. Used for pause, seek,
+   * reset and mute (all), and for silencing or clearing an alarm (alarm tones only).
+   */
+  cancelPending(kind?: ToneKind): void {
     const now = this.context?.currentTime ?? 0;
-    for (const voice of this.voices) {
+    for (const voice of [...this.voices]) {
+      if (kind && voice.kind !== kind) continue;
       try {
         voice.gain.gain.cancelScheduledValues(now);
         voice.gain.gain.setValueAtTime(0, now);
         voice.oscillator.stop(now);
       } catch { /* already stopped */ }
       this.release(voice);
+      this.voices.delete(voice);
     }
-    this.voices.clear();
   }
 
   /** Number of tones started and not yet finished; exposed for tests and diagnostics. */
-  pendingCount(): number { return this.voices.size; }
+  pendingCount(kind?: ToneKind): number { return kind ? [...this.voices].filter(voice => voice.kind === kind).length : this.voices.size; }
 
   async dispose(): Promise<void> {
     if (this.disposed) return;
@@ -168,11 +206,13 @@ export class MonitorAudio {
     this.master?.disconnect();
     this.master = null;
     this.status = 'off';
+    this.listeners.clear();
+    if (context) context.onstatechange = null;
     try { await context?.close(); } catch { /* closing a failed context is not an app error */ }
   }
 
   private canPlay(): boolean {
-    return !this.disposed && !this.muted && this.status === 'running' && this.context !== null && this.master !== null;
+    return !this.disposed && !this.muted && this.getStatus() === 'running' && this.context !== null && this.master !== null;
   }
 
   private applyMasterLevel(): void {
@@ -182,7 +222,7 @@ export class MonitorAudio {
     this.master.gain.setValueAtTime(level, this.context.currentTime);
   }
 
-  private pulse(atS: number, durationS: number, frequencyHz: number, level: number, type: string): void {
+  private pulse(atS: number, durationS: number, frequencyHz: number, level: number, type: string, kind: ToneKind): void {
     const context = this.context!;
     const start = Math.max(atS, context.currentTime);
     const oscillator = context.createOscillator();
@@ -196,7 +236,7 @@ export class MonitorAudio {
     gain.gain.linearRampToValueAtTime(0, start + durationS);
     oscillator.connect(gain);
     gain.connect(this.master);
-    const voice: Voice = { oscillator, gain, endS: start + durationS };
+    const voice: Voice = { oscillator, gain, endS: start + durationS, kind };
     oscillator.onended = () => { this.release(voice); this.voices.delete(voice); };
     this.voices.add(voice);
     oscillator.start(start);

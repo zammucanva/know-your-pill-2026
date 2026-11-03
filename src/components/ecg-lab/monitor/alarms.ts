@@ -7,7 +7,8 @@ import { readingsAt, type MonitorReadings } from './vitals';
  * limits; the state machine records onset, acknowledgement and clearing. Silencing only stops the
  * sound for a while: it never clears an alarm, which clears only when its condition does.
  */
-export type AlarmPriority = 'high' | 'medium' | 'low';
+/** 'info' is shown on screen but never sounds; the others sound with distinct burst patterns. */
+export type AlarmPriority = 'high' | 'medium' | 'low' | 'info';
 export type AlarmKind = 'physiological' | 'technical';
 
 export type AlarmCondition = {
@@ -37,7 +38,7 @@ export const alarmLabels: Record<AlarmId, string> = {
   'spo2-poor-signal': 'SpO₂ poor signal',
 };
 
-const priorityRank: Record<AlarmPriority, number> = { high: 3, medium: 2, low: 1 };
+const priorityRank: Record<AlarmPriority, number> = { high: 3, medium: 2, low: 1, info: 0 };
 
 /**
  * Conditions active for these readings. In this simulation limit violations are medium priority,
@@ -123,9 +124,9 @@ export function acknowledgeAlarms(state: AlarmState, nowMs: number, silenceMs = 
 
 /** The alarm whose sound should play now, or null when none is active or audio is silenced. */
 export function audibleAlarm(state: AlarmState, nowMs: number): ActiveAlarm | null {
-  if (state.active.length === 0) return null;
   if (state.silencedUntilMs !== null && nowMs < state.silencedUntilMs) return null;
-  return state.active[0];
+  // Active alarms are sorted by priority, so the first one that sounds is the most urgent.
+  return state.active.find(alarm => alarm.priority !== 'info') ?? null;
 }
 
 /**

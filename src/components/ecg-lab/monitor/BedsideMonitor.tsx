@@ -155,6 +155,7 @@ type BedsideMonitorProps = {
 const audioStatusText: Record<AudioStatus, string> = {
   off: 'Sound off',
   running: 'Sound on',
+  interrupted: 'The browser paused the sound (for example after the screen locked or another app played audio). Tap the sound button to resume.',
   blocked: 'The browser did not allow sound to start. Try the button again.',
   unavailable: 'Sound is not available in this browser. Every alarm is also shown on screen.',
 };
@@ -219,14 +220,16 @@ export function BedsideMonitor({ timeline, snapshot, alarms, reducedMotion, onPl
           {/* On the screen itself, so the sound control is the first thing found, on phones too. */}
           {audio.status === 'running'
             ? <button type="button" className="bedside-sound-toggle on" onClick={audio.disable}><span aria-hidden="true">🔊 </span>Turn sound off</button>
-            : <button type="button" className="bedside-sound-toggle" onClick={() => { void audio.enable(); }}><span aria-hidden="true">🔇 </span>Turn on monitor sound</button>}
+            : audio.status === 'interrupted' || audio.status === 'blocked'
+              ? <button type="button" className="bedside-sound-toggle warn" onClick={() => { void audio.enable(); }}><span aria-hidden="true">⚠ </span>Sound paused by the browser: tap to resume</button>
+              : <button type="button" className="bedside-sound-toggle" onClick={() => { void audio.enable(); }}><span aria-hidden="true">🔇 </span>Turn on monitor sound</button>}
         </header>
 
         <div className={`bedside-alarm-bar${alarms.active.length ? ` active priority-${alarms.active[0].priority}` : ''}`} data-testid="alarm-bar">
           {alarms.active.length === 0 ? <span>No active alarms</span> : (
             <ul aria-label="Active alarms">
               {alarms.active.map(alarm => (
-                <li key={alarm.id}><strong>{alarm.priority === 'medium' ? '!!' : alarm.priority === 'high' ? '!!!' : '!'}</strong> {alarm.message} <small>since {formatSimTime(alarm.onsetMs)}</small></li>
+                <li key={alarm.id}><strong>{alarm.priority === 'high' ? '!!!' : alarm.priority === 'medium' ? '!!' : alarm.priority === 'low' ? '!' : 'i'}</strong> {alarm.message} <small>since {formatSimTime(alarm.onsetMs)}</small></li>
               ))}
             </ul>
           )}

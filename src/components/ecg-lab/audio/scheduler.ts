@@ -10,7 +10,8 @@ import type { AlarmPriority } from '../monitor/alarms';
  */
 export type PlannedTone = { kind: 'beat'; simTimeMs: number; atAudioS: number; frequencyHz: number };
 export type PlannedAlarm = { priority: AlarmPriority; atAudioS: number };
-export type SchedulerActions = { cancelPending: boolean; tones: PlannedTone[]; alarm: PlannedAlarm | null };
+/** cancelAlarm: the audible alarm stopped or changed, so any alarm burst still playing should stop. */
+export type SchedulerActions = { cancelPending: boolean; cancelAlarm: boolean; tones: PlannedTone[]; alarm: PlannedAlarm | null };
 
 export type SchedulerInput = {
   snapshot: ClockSnapshot;
@@ -45,9 +46,9 @@ export const DRIFT_TOLERANCE_S = 0.03;
 /** Output latency above this is treated as this; very large reported values are not trusted. */
 export const MAX_LATENCY_COMPENSATION_S = 0.3;
 /** Repeat interval of each alarm burst, in simulated time. Simulation settings, not a standard. */
-export const ALARM_REPEAT_MS: Record<AlarmPriority, number> = { high: 5_000, medium: 8_000, low: 16_000 };
+export const ALARM_REPEAT_MS: Record<AlarmPriority, number> = { high: 5_000, medium: 8_000, low: 16_000, info: Number.POSITIVE_INFINITY };
 
-const none = (): SchedulerActions => ({ cancelPending: false, tones: [], alarm: null });
+const none = (): SchedulerActions => ({ cancelPending: false, cancelAlarm: false, tones: [], alarm: null });
 
 export class ToneScheduler {
   private scheduledUntilMs: number | null = null;
@@ -122,7 +123,9 @@ export class ToneScheduler {
     }
     this.scheduledUntilMs = to;
 
-    const key = input.alarm ? `${input.alarm.id}:${input.alarm.priority}` : null;
+    const key = input.alarm && input.alarm.priority !== 'info' ? `${input.alarm.id}:${input.alarm.priority}` : null;
+    // A burst may still be sounding for an alarm that has cleared, been silenced or been replaced.
+    if (this.alarmKey !== null && key !== this.alarmKey) actions.cancelAlarm = true;
     if (key === null) {
       this.nextAlarmMs = null;
       this.alarmKey = null;
@@ -160,6 +163,7 @@ export type AlarmPulse = { offsetS: number; durationS: number; frequencyHz: numb
  */
 export function alarmBurst(priority: AlarmPriority): AlarmPulse[] {
   const pulse = (offsetS: number, frequencyHz: number): AlarmPulse => ({ offsetS, durationS: 0.15, frequencyHz });
+  if (priority === 'info') return [];
   if (priority === 'high') return [0, 0.25, 0.5, 1.0, 1.25, 2.0, 2.25, 2.5, 3.0, 3.25].map((offset, index) => pulse(offset, index % 2 ? 990 : 784));
   if (priority === 'medium') return [pulse(0, 660), pulse(0.25, 660), pulse(0.5, 660)];
   return [pulse(0, 523), pulse(0.3, 523)];
