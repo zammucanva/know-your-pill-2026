@@ -21,15 +21,24 @@ export type PWaveEvent = { kind: 'p'; timeMs: number; ampScale?: number };
 export type PaceSpikeEvent = { kind: 'pace'; timeMs: number };
 export type RhythmEvent = QrsEvent | PWaveEvent | PaceSpikeEvent;
 
+/**
+ * Optional half-open time range [fromMs, toMs) for continuous activity. Absent bounds are open, so a
+ * schedule without them behaves exactly as before. Used when one timeline joins several rhythms.
+ */
+export type ActiveRange = { fromMs?: number; toMs?: number };
+
 export type RhythmSchedule = {
   events: RhythmEvent[];
   /** Continuous sawtooth atrial activity (flutter waves). */
-  flutter?: { periodMs: number; amplitudeMv: number; offsetMs?: number };
+  flutter?: { periodMs: number; amplitudeMv: number; offsetMs?: number } & ActiveRange;
   /** Continuous irregular fibrillatory baseline (no organised P waves). */
-  fibrillation?: { amplitudeMv: number; seed: number };
+  fibrillation?: { amplitudeMv: number; seed: number } & ActiveRange;
   /** Disorganised ventricular activity with no discrete QRS complexes. */
-  chaos?: { amplitudeMv: number };
+  chaos?: { amplitudeMv: number } & ActiveRange;
 };
+
+const isActiveAt = (range: ActiveRange, timeMs: number) =>
+  (range.fromMs === undefined || timeMs >= range.fromMs) && (range.toMs === undefined || timeMs < range.toMs);
 
 const WIDE_STRETCH = 2.6;
 /** Waves reach at most this far before/after their event time. */
@@ -103,18 +112,18 @@ function sampleVoltage(schedule: RhythmSchedule, events: RhythmEvent[], lead: Le
   }
 
   const seconds = timeMs / 1000;
-  if (schedule.flutter) {
+  if (schedule.flutter && isActiveAt(schedule.flutter, timeMs)) {
     const { periodMs, amplitudeMv, offsetMs = 0 } = schedule.flutter;
     const phase = ((((timeMs + offsetMs) % periodMs) + periodMs) % periodMs) / periodMs;
     const saw = phase < 0.85 ? 0.5 - phase / 0.85 : -0.5 + (phase - 0.85) / 0.15;
     voltage += amplitudeMv * profile.p * saw;
   }
-  if (schedule.fibrillation) {
+  if (schedule.fibrillation && isActiveAt(schedule.fibrillation, timeMs)) {
     const { amplitudeMv, seed } = schedule.fibrillation;
     const waves = 0.55 * Math.sin(2 * Math.PI * 6.3 * seconds) + 0.35 * Math.sin(2 * Math.PI * 8.9 * seconds + 1.3) + 0.25 * Math.sin(2 * Math.PI * 11.2 * seconds + 2.1);
     voltage += amplitudeMv * profile.p * waves + noiseAt(sampleIndex, seed) * 0.05;
   }
-  if (schedule.chaos) {
+  if (schedule.chaos && isActiveAt(schedule.chaos, timeMs)) {
     const envelope = 0.55 + 0.45 * Math.sin(2 * Math.PI * 0.31 * seconds + 0.4);
     const phase = 2 * Math.PI * 4.6 * seconds + 1.7 * Math.sin(2 * Math.PI * 0.23 * seconds);
     const wave = Math.sin(phase) + 0.5 * Math.sin(2.3 * phase + 0.8);

@@ -39,6 +39,9 @@ import { AcademyDashboard } from './academy/AcademyDashboard';
 import { useAcademy } from './academy/useAcademy';
 import { RhythmChallenge } from './rhythm/RhythmChallenge';
 import { VirtualPatient } from './patients/VirtualPatient';
+import { MonitorScenarios } from './monitor/MonitorScenario';
+import { browserStorageOrNull, readScenarioRuns, resumableRun } from './monitor/run-storage';
+import { monitorScenarios } from './monitor/scenario';
 import { MedicationCenter } from './medication/MedicationCenter';
 import { HomeDashboard } from './home/HomeDashboard';
 import { buildHomeSummary } from './home/summary';
@@ -91,7 +94,7 @@ export default function EcgLab() {
   const theme: 'light' | 'dark' = resolvedTheme === 'dark' ? 'dark' : 'light';
   const [config, setConfig] = useState<MachineConfig>({ lead: 'V3', paperSpeed: 25, gain: 20, showGrid: true, preset: 'sinus' });
   const [view, setView] = useState<'single' | 'multi'>('single');
-  const [activeSection, setActiveSection] = useState<'home' | 'simulator' | 'challenge' | 'patients' | 'medication' | 'academy' | 'learn'>('simulator');
+  const [activeSection, setActiveSection] = useState<'home' | 'simulator' | 'challenge' | 'patients' | 'monitor' | 'medication' | 'academy' | 'learn'>('simulator');
   // Home reads stored exercise progress when it is shown; the exercise panel writes it as the learner works.
   const [exerciseProgress, setExerciseProgress] = useState<ExerciseProgress>(emptyExerciseProgress);
   const [exerciseRequest, setExerciseRequest] = useState<{ id: string; token: number }>();
@@ -148,9 +151,12 @@ export default function EcgLab() {
   const [pendingRestore, setPendingRestore] = useState<ExperimentState | null>(null);
   const [pendingDelete, setPendingDelete] = useState<ExperimentState | null>(null);
   const [restoreRequest, setRestoreRequest] = useState<{ id: number; elapsedMs: number } | undefined>();
+  const [scenarioRunsVersion, setScenarioRunsVersion] = useState(0);
+  const [scenarioRequest, setScenarioRequest] = useState<{ scenarioId: string; mode: 'resume' | 'start'; token: number } | undefined>();
+  const scenarioRuns = useMemo(() => readScenarioRuns(browserStorageOrNull()), [scenarioRunsVersion, activeSection]);
   const homeSummary = useMemo(
-    () => buildHomeSummary({ academy: academy.progress, exerciseProgress, savedExperiments }),
-    [academy.progress, exerciseProgress, savedExperiments],
+    () => buildHomeSummary({ academy: academy.progress, exerciseProgress, savedExperiments, scenarioRuns }),
+    [academy.progress, exerciseProgress, savedExperiments, scenarioRuns],
   );
   const patch = (next: Partial<MachineConfig>) => setConfig(current => ({ ...current, ...next }));
   const signals = useMemo(() => generateLeadSignals(config.preset), [config.preset]);
@@ -310,6 +316,7 @@ export default function EcgLab() {
         <button type="button" aria-current={activeSection === 'simulator' ? 'page' : undefined} onClick={() => setActiveSection('simulator')}>ECG simulator</button>
         <button type="button" aria-current={activeSection === 'challenge' ? 'page' : undefined} onClick={() => setActiveSection('challenge')}>Rhythm Challenge</button>
         <button type="button" aria-current={activeSection === 'patients' ? 'page' : undefined} onClick={() => setActiveSection('patients')}>Virtual Patients</button>
+        <button type="button" aria-current={activeSection === 'monitor' ? 'page' : undefined} onClick={() => { setScenarioRequest(undefined); setActiveSection('monitor'); }}>Bedside Monitor</button>
         <button type="button" aria-current={activeSection === 'medication' ? 'page' : undefined} onClick={() => setActiveSection('medication')}>Medication Center</button>
         <button type="button" aria-current={activeSection === 'academy' ? 'page' : undefined} onClick={() => setActiveSection('academy')}>Academy</button>
         <button type="button" aria-current={activeSection === 'learn' ? 'page' : undefined} onClick={() => setActiveSection('learn')}>Lessons</button>
@@ -330,6 +337,8 @@ export default function EcgLab() {
         onOpenPatients={() => setActiveSection('patients')}
         onOpenAcademy={() => setActiveSection('academy')}
         onOpenSimulator={() => setActiveSection('simulator')}
+        onOpenScenario={(scenarioId, mode) => { setScenarioRequest(current => ({ scenarioId, mode, token: (current?.token ?? 0) + 1 })); setActiveSection('monitor'); }}
+        onOpenMonitor={() => { setScenarioRequest(undefined); setActiveSection('monitor'); }}
       /> : activeSection === 'simulator' ? <>
       <section className="intro">
         <div>
@@ -546,8 +555,27 @@ export default function EcgLab() {
           onCompleted={academy.recordPatientCase}
           onOpenAcademy={() => setActiveSection('academy')}
           onOpenChallenge={() => setActiveSection('challenge')}
+          monitoredCaseIds={monitorScenarios.flatMap(item => item.patientCaseId ? [item.patientCaseId] : [])}
+          onOpenMonitored={patientCaseId => {
+            const scenario = monitorScenarios.find(item => item.patientCaseId === patientCaseId);
+            if (!scenario) return;
+            const mode = resumableRun(readScenarioRuns(browserStorageOrNull()), scenario) && academy.progress.scenarios[scenario.id] !== scenario.version ? 'resume' : 'start';
+            setScenarioRequest(current => ({ scenarioId: scenario.id, mode, token: (current?.token ?? 0) + 1 }));
+            setActiveSection('monitor');
+          }}
         />
       </div>
+      {/* Mounted only while open, so leaving the section stops its clock and releases its audio. */}
+      {activeSection === 'monitor' && (
+        <MonitorScenarios
+          completed={academy.progress.scenarios}
+          onCompleted={academy.recordScenario}
+          onOpenAcademy={() => setActiveSection('academy')}
+          onOpenChallenge={() => setActiveSection('challenge')}
+          request={scenarioRequest}
+          onRunsChanged={() => setScenarioRunsVersion(value => value + 1)}
+        />
+      )}
       <div hidden={activeSection !== 'medication'}>
         <MedicationCenter records={medications} preview={medicationPreview} publishedLessons={relatedLessons} onOpenLearn={() => setActiveSection('learn')} />
       </div>
