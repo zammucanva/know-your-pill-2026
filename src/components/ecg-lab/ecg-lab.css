@@ -573,7 +573,7 @@
 .ecg-lab .scenario { max-width: 1180px; }
 .ecg-lab .bedside { --mon-bg: oklch(13% .015 250); --mon-panel: oklch(17% .02 250); --mon-line: oklch(100% 0 0 / .1); --mon-text: oklch(96% .005 220); --mon-muted: oklch(76% .015 220);
   --ch-ecg: oklch(84% .2 145); --ch-pleth: oklch(82% .13 215); --ch-resp: oklch(88% .15 95); --ch-nibp: oklch(90% .02 250); --ch-temp: oklch(85% .09 330);
-  --alarm-medium: oklch(85% .16 85); --alarm-high: oklch(68% .21 25); --alarm-low: oklch(82% .1 220);
+  --alarm-medium: oklch(85% .16 85); --alarm-high: oklch(48% .19 27); --alarm-low: oklch(82% .1 220);
   display: grid; gap: 12px; min-width: 0; }
 .ecg-lab .bedside-screen { border: 1px solid var(--border-strong); border-radius: 10px; background: var(--mon-bg); color: var(--mon-text); padding: 10px 12px 12px; box-shadow: var(--shadow); min-width: 0; }
 .ecg-lab .bedside-head { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: baseline; justify-content: space-between; font-size: 12px; color: var(--mon-muted); }
@@ -646,3 +646,9 @@
   .ecg-lab .bedside-controls .cta, .ecg-lab .bedside-window button { min-height: 44px; }
   .ecg-lab .bedside-group label { min-height: 36px; }
 }
+.ecg-lab .bedside-sound-toggle { border: 1px solid var(--mon-muted); border-radius: 999px; background: transparent; color: var(--mon-text); padding: 6px 12px; font-size: 12px; font-weight: 600; cursor: pointer; min-height: 36px; }
+.ecg-lab .bedside-sound-toggle.on { border-color: var(--ch-ecg); color: var(--ch-ecg); }
+.ecg-lab .bedside-sound-toggle:focus-visible { outline: 2px solid var(--ch-ecg); outline-offset: 2px; }
+.ecg-lab .bedside-beat { opacity: .15; margin-left: 2px; }
+.ecg-lab .bedside-beat.on { opacity: 1; }
+@media (max-width: 560px) { .ecg-lab .bedside-sound-toggle { min-height: 44px; width: 100%; } }

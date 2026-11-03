@@ -32,12 +32,12 @@ export type OscillatorLike = {
 
 export type AudioStatus = 'off' | 'running' | 'blocked' | 'unavailable';
 
-export const DEFAULT_VOLUME = 0.35;
+export const DEFAULT_VOLUME = 0.7;
 const BEAT_DURATION_S = 0.06;
 const ATTACK_S = 0.005;
 /** Alarm pulses are quieter than full scale and share the learner's master volume. */
 const ALARM_LEVEL = 0.7;
-const BEAT_LEVEL = 0.5;
+const BEAT_LEVEL = 0.6;
 
 export function browserAudioContext(): AudioContextLike | null {
   if (typeof window === 'undefined') return null;
@@ -45,6 +45,18 @@ export function browserAudioContext(): AudioContextLike | null {
     ?? (window as unknown as { webkitAudioContext?: new () => AudioContextLike }).webkitAudioContext;
   if (!Constructor) return null;
   try { return new Constructor(); } catch { return null; }
+}
+
+/**
+ * Asks the browser to treat this page's sound as media playback. On iPhone and iPad, Safari
+ * otherwise silences Web Audio while the ring/silent switch is set to silent. Browsers without the
+ * Audio Session API ignore this.
+ */
+function requestPlaybackSession(): void {
+  try {
+    const session = (globalThis.navigator as unknown as { audioSession?: { type: string } } | undefined)?.audioSession;
+    if (session && session.type !== 'playback') session.type = 'playback';
+  } catch { /* not supported: sound still works where the device allows it */ }
 }
 
 type Voice = { oscillator: OscillatorLike; gain: GainLike; endS: number };
@@ -78,6 +90,7 @@ export class MonitorAudio {
   /** Must be called from a user gesture (click or key press) because of browser autoplay rules. */
   async enable(): Promise<AudioStatus> {
     if (this.disposed) return this.status;
+    requestPlaybackSession();
     try {
       if (!this.context) {
         this.context = this.createContext();
@@ -120,6 +133,13 @@ export class MonitorAudio {
   playAlarm(alarm: PlannedAlarm): void {
     if (!this.canPlay()) return;
     for (const pulse of alarmBurst(alarm.priority)) this.pulse(alarm.atAudioS + pulse.offsetS, pulse.durationS, pulse.frequencyHz, ALARM_LEVEL, 'square');
+  }
+
+  /** One beat tone right away, so the learner can check that sound reaches them. */
+  testBeep(): boolean {
+    if (!this.canPlay() || !this.context) return false;
+    this.pulse(this.context.currentTime + 0.05, BEAT_DURATION_S * 2, 880, BEAT_LEVEL, 'triangle');
+    return true;
   }
 
   /** Stops every tone that has not finished. Used for pause, seek, reset and mute. */

@@ -227,6 +227,25 @@ describe('monitor audio output', () => {
     expect(started.length).toBe(2);
   });
 
+  it('plays a test beep only while running, and asks the browser for a playback audio session', async () => {
+    const session = { type: 'auto' };
+    const originalNavigator = globalThis.navigator;
+    Object.defineProperty(globalThis, 'navigator', { value: { ...originalNavigator, audioSession: session }, configurable: true });
+    try {
+      const { context, started } = fakeContext();
+      const audio = new MonitorAudio(() => context);
+      expect(audio.testBeep()).toBe(false);
+      await audio.enable();
+      expect(session.type).toBe('playback');
+      expect(audio.testBeep()).toBe(true);
+      expect(started.length).toBe(1);
+      audio.setMuted(true);
+      expect(audio.testBeep()).toBe(false);
+    } finally {
+      Object.defineProperty(globalThis, 'navigator', { value: originalNavigator, configurable: true });
+    }
+  });
+
   it('reports unavailable and blocked audio without throwing', async () => {
     expect(await new MonitorAudio(() => null).enable()).toBe('unavailable');
     expect(await new MonitorAudio(() => fakeContext({ resumeFails: true }).context).enable()).toBe('blocked');

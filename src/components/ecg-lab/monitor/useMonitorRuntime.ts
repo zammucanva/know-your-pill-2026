@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { MonitorAudio, type AudioStatus } from '../audio/monitor-audio';
+import { DEFAULT_VOLUME, MonitorAudio, type AudioStatus } from '../audio/monitor-audio';
 import { BEAT_TONE_HZ, spo2PitchHz, ToneScheduler } from '../audio/scheduler';
 import { SimulationClock, type AnimationFrameScheduler, type ClockSnapshot } from '../engine/clock';
 import { acknowledgeAlarms, alarmStateAt, audibleAlarm, evaluateAlarmConditions, initialAlarmState, updateAlarms, type AlarmState } from './alarms';
@@ -46,7 +46,7 @@ export function useMonitorRuntime(scenario: MonitorScenario, options: MonitorRun
   const [alarms, setAlarms] = useState<AlarmState>(initialAlarmState);
   const [audioStatus, setAudioStatus] = useState<AudioStatus>('off');
   const [muted, setMutedState] = useState(false);
-  const [volume, setVolumeState] = useState(0.35);
+  const [volume, setVolumeState] = useState(DEFAULT_VOLUME);
   const [toneSource, setToneSourceState] = useState<ToneSource>('ecg');
   const [reducedMotion] = useState(prefersReducedMotion);
 
@@ -89,7 +89,7 @@ export function useMonitorRuntime(scenario: MonitorScenario, options: MonitorRun
       const now = state.elapsedMs;
       if (lastAlarmStepRef.current === null || now !== lastAlarmStepRef.current) {
         if (lastAlarmStepRef.current !== null && now < lastAlarmStepRef.current) alarmsRef.current = initialAlarmState();
-        alarmsRef.current = updateAlarms(alarmsRef.current, evaluateAlarmConditions(readingsAt(timeline, now), timeline.scenario.alarmLimits), now);
+        alarmsRef.current = updateAlarms(alarmsRef.current, evaluateAlarmConditions(readingsAt(timeline, now), timeline.scenario.alarmLimits, timeline.scenario.criticalLimits), now);
         lastAlarmStepRef.current = now;
       }
 
@@ -203,6 +203,16 @@ export function useMonitorRuntime(scenario: MonitorScenario, options: MonitorRun
     setAudioStatus(status);
     return status;
   }, []);
+  /** Plays one beep now, turning sound on first if needed (must run from a click or key press). */
+  const testSound = useCallback(async () => {
+    let status = audioRef.current.getStatus();
+    if (status !== 'running') {
+      toneSchedulerRef.current.reset();
+      status = await audioRef.current.enable();
+      setAudioStatus(status);
+    }
+    return status === 'running' && audioRef.current.testBeep();
+  }, []);
   const disableAudio = useCallback(() => {
     audioRef.current.disable();
     toneSchedulerRef.current.reset();
@@ -227,6 +237,6 @@ export function useMonitorRuntime(scenario: MonitorScenario, options: MonitorRun
     currentTimeMs: () => clockRef.current?.getSnapshot().elapsedMs ?? lastElapsedRef.current,
     /** Actions taken so far, updated synchronously (render state can lag behind during a remount). */
     currentTaken: () => takenRef.current,
-    audio: { status: audioStatus, muted, volume, toneSource, enable: enableAudio, disable: disableAudio, setMuted, setVolume, setToneSource },
+    audio: { status: audioStatus, muted, volume, toneSource, enable: enableAudio, disable: disableAudio, setMuted, setVolume, setToneSource, test: testSound },
   };
 }

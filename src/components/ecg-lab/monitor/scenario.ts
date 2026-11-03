@@ -65,6 +65,17 @@ export const SIMULATION_DEFAULT_ALARM_LIMITS: AlarmLimits = Object.freeze({
   systolic: Object.freeze({ low: 90, high: 160 }),
 }) as AlarmLimits;
 
+/**
+ * Optional critical limits. Crossing one raises a high-priority alarm in place of the ordinary
+ * limit alarm. Simulation settings for a scenario, not thresholds for any real patient or device.
+ */
+export const criticalLimitsSchema = z.strictObject({
+  heartRateHigh: limit(100, 250),
+  heartRateLow: limit(20, 60),
+  spo2Low: limit(60, 95),
+});
+export type CriticalLimits = z.infer<typeof criticalLimitsSchema>;
+
 export const MAX_SCENARIO_DURATION_MS = 300_000;
 
 /**
@@ -119,6 +130,8 @@ export const monitorScenarioSchema = z.strictObject({
   /** Simulated time between automatic cuff measurements. Compressed for teaching; labelled as such. */
   nibpIntervalMs: z.number().int().min(15_000).max(MAX_SCENARIO_DURATION_MS),
   alarmLimits: alarmLimitsSchema,
+  /** Absent in most scenarios: then no alarm escalates to high priority. */
+  criticalLimits: criticalLimitsSchema.optional(),
   phases: z.array(scenarioPhaseSchema).min(1).max(6),
   /** The phase the checkpoint is about: the questions open after it begins. */
   assessedPhaseId: z.string(),
@@ -134,6 +147,9 @@ export const monitorScenarioSchema = z.strictObject({
     if (!getRhythmCase(phase.rhythmCaseId)) context.addIssue({ code: 'custom', path: ['phases', index, 'rhythmCaseId'], message: 'Unknown rhythm case.' });
   });
   if (new Set(value.phases.map(phase => phase.id)).size !== value.phases.length) context.addIssue({ code: 'custom', path: ['phases'], message: 'Phase ids must be unique.' });
+  if (value.criticalLimits && (value.criticalLimits.heartRateHigh <= value.alarmLimits.heartRate.high || value.criticalLimits.heartRateLow >= value.alarmLimits.heartRate.low || value.criticalLimits.spo2Low >= value.alarmLimits.spo2.low)) {
+    context.addIssue({ code: 'custom', path: ['criticalLimits'], message: 'Critical limits must lie beyond the ordinary alarm limits.' });
+  }
   if (!value.phases.some(phase => phase.id === value.assessedPhaseId)) context.addIssue({ code: 'custom', path: ['assessedPhaseId'], message: 'The assessed phase must exist.' });
   if (value.patientCaseId !== undefined && !patientCases.some(patient => patient.id === value.patientCaseId)) context.addIssue({ code: 'custom', path: ['patientCaseId'], message: 'Unknown patient case.' });
   if (new Set(value.actions.map(action => action.id)).size !== value.actions.length) context.addIssue({ code: 'custom', path: ['actions'], message: 'Action ids must be unique.' });
@@ -266,6 +282,41 @@ rawScenarios.push({
       effect: { spo2: { percent: 98, quality: 'good', perfusion: 'normal' } },
     },
   ],
+  publicationStatus: 'draft',
+  reviewStatus: 'unreviewed',
+});
+
+rawScenarios.push({
+  id: 'scenario.rapid-deterioration.01',
+  version: '0.1.0',
+  title: 'A rapidly worsening monitor',
+  bedLabel: 'SIM-BED-09',
+  ageRange: '61–75 years',
+  presentation: 'A fictional patient is resting on a monitored bed after feeling unwell earlier in the day. Over the next two minutes the heart rate climbs step by step, and then the monitor changes suddenly.',
+  symptoms: ['Feeling increasingly unwell (fictional)', 'Awareness of a fast heartbeat', 'Lightheadedness'],
+  history: ['Known heart condition (fictional)'],
+  learningObjectives: [
+    'Hear the heartbeat tone speed up as the monitored heart rate rises.',
+    'Notice when an alarm escalates to high priority because a critical simulation limit is crossed.',
+    'Identify the final rhythm on a recorded strip.',
+  ],
+  caveats: [
+    'All values are generated teaching data from a simplified simulation, not measurements from a patient.',
+    'Alarm and critical limits here are simulation settings for this exercise, not rules for any real patient or device.',
+    'This scenario does not teach management. Real deterioration needs the clinical team and local protocols.',
+  ],
+  durationMs: 120_000,
+  nibpIntervalMs: 20_000,
+  alarmLimits: SIMULATION_DEFAULT_ALARM_LIMITS,
+  criticalLimits: { heartRateHigh: 150, heartRateLow: 40, spo2Low: 85 },
+  phases: [
+    { id: 'settled', startMs: 0, rhythmCaseId: 'rhythm.nsr.02', ecg: 'connected', spo2: { percent: 97, quality: 'good', perfusion: 'normal' }, respiratoryRatePerMin: 16, nibp: { systolic: 128, diastolic: 80 }, temperatureC: 37.2 },
+    { id: 'faster', startMs: 25_000, rhythmCaseId: 'rhythm.sinus-tachycardia.01', ecg: 'connected', spo2: { percent: 96, quality: 'good', perfusion: 'normal' }, respiratoryRatePerMin: 20, nibp: { systolic: 120, diastolic: 76 }, temperatureC: 37.2 },
+    { id: 'fast', startMs: 50_000, rhythmCaseId: 'rhythm.sinus-tachycardia.02', ecg: 'connected', spo2: { percent: 94, quality: 'good', perfusion: 'low' }, respiratoryRatePerMin: 22, nibp: { systolic: 110, diastolic: 70 }, temperatureC: 37.2 },
+    { id: 'critical', startMs: 75_000, rhythmCaseId: 'rhythm.vt.01', ecg: 'connected', spo2: { percent: 88, quality: 'good', perfusion: 'low' }, respiratoryRatePerMin: 24, nibp: { systolic: 84, diastolic: 52 }, temperatureC: 37.2 },
+  ],
+  assessedPhaseId: 'critical',
+  assessment: { kind: 'rhythm' },
   publicationStatus: 'draft',
   reviewStatus: 'unreviewed',
 });

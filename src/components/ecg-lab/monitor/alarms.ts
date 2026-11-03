@@ -1,4 +1,4 @@
-import type { AlarmLimits } from './scenario';
+import type { AlarmLimits, CriticalLimits } from './scenario';
 import type { ScenarioTimeline } from './timeline';
 import { readingsAt, type MonitorReadings } from './vitals';
 
@@ -18,10 +18,13 @@ export type AlarmCondition = {
   message: string;
 };
 
-export const alarmIds = ['hr-high', 'hr-low', 'spo2-low', 'rr-high', 'rr-low', 'sys-high', 'sys-low', 'ecg-lead-off', 'spo2-sensor-off', 'spo2-poor-signal'] as const;
+export const alarmIds = ['hr-critical-high', 'hr-critical-low', 'spo2-critical-low', 'hr-high', 'hr-low', 'spo2-low', 'rr-high', 'rr-low', 'sys-high', 'sys-low', 'ecg-lead-off', 'spo2-sensor-off', 'spo2-poor-signal'] as const;
 export type AlarmId = (typeof alarmIds)[number];
 
 export const alarmLabels: Record<AlarmId, string> = {
+  'hr-critical-high': 'Heart rate above the critical limit',
+  'hr-critical-low': 'Heart rate below the critical limit',
+  'spo2-critical-low': 'SpO₂ below the critical limit',
   'hr-high': 'Heart rate above the high limit',
   'hr-low': 'Heart rate below the low limit',
   'spo2-low': 'SpO₂ below the low limit',
@@ -37,22 +40,28 @@ export const alarmLabels: Record<AlarmId, string> = {
 const priorityRank: Record<AlarmPriority, number> = { high: 3, medium: 2, low: 1 };
 
 /**
- * Conditions active for these readings. In this simulation limit violations are medium priority
- * and equipment problems are low priority; real monitors and local policies assign priorities
- * differently.
+ * Conditions active for these readings. In this simulation limit violations are medium priority,
+ * crossing a scenario's optional critical limit is high priority (and replaces the ordinary alarm
+ * for that value), and equipment problems are low priority. Real monitors and local policies
+ * assign priorities differently.
  */
-export function evaluateAlarmConditions(readings: MonitorReadings, limits: AlarmLimits): AlarmCondition[] {
+export function evaluateAlarmConditions(readings: MonitorReadings, limits: AlarmLimits, critical?: CriticalLimits): AlarmCondition[] {
   const out: AlarmCondition[] = [];
-  const physiological = (id: AlarmId, value: number, unit: string, limit: number, direction: '>' | '<') =>
-    out.push({ id, kind: 'physiological', priority: 'medium', message: `${alarmLabels[id]}: ${value} ${unit} (limit ${direction === '>' ? 'high' : 'low'} ${limit})` });
+  const physiological = (id: AlarmId, value: number, unit: string, limit: number, direction: '>' | '<', priority: AlarmPriority = 'medium') =>
+    out.push({ id, kind: 'physiological', priority, message: `${alarmLabels[id]}: ${value} ${unit} (${priority === 'high' ? 'critical' : 'limit'} ${direction === '>' ? 'high' : 'low'} ${limit})` });
 
   const hr = readings.heartRate.value;
   if (hr !== null) {
-    if (hr > limits.heartRate.high) physiological('hr-high', hr, '/min', limits.heartRate.high, '>');
+    if (critical && hr > critical.heartRateHigh) physiological('hr-critical-high', hr, '/min', critical.heartRateHigh, '>', 'high');
+    else if (critical && hr < critical.heartRateLow) physiological('hr-critical-low', hr, '/min', critical.heartRateLow, '<', 'high');
+    else if (hr > limits.heartRate.high) physiological('hr-high', hr, '/min', limits.heartRate.high, '>');
     else if (hr < limits.heartRate.low) physiological('hr-low', hr, '/min', limits.heartRate.low, '<');
   }
   const spo2 = readings.spo2.value;
-  if (spo2 !== null && readings.spo2.status === 'ok' && spo2 < limits.spo2.low) physiological('spo2-low', spo2, '%', limits.spo2.low, '<');
+  if (spo2 !== null && readings.spo2.status === 'ok') {
+    if (critical && spo2 < critical.spo2Low) physiological('spo2-critical-low', spo2, '%', critical.spo2Low, '<', 'high');
+    else if (spo2 < limits.spo2.low) physiological('spo2-low', spo2, '%', limits.spo2.low, '<');
+  }
   const rr = readings.respiratoryRate.value;
   if (rr !== null) {
     if (rr > limits.respiratoryRate.high) physiological('rr-high', rr, '/min', limits.respiratoryRate.high, '>');
@@ -126,6 +135,7 @@ export function audibleAlarm(state: AlarmState, nowMs: number): ActiveAlarm | nu
  */
 export function alarmStateAt(timeline: ScenarioTimeline, untilMs: number, stepMs = 16): AlarmState {
   let state = initialAlarmState();
-  for (let time = 0; time <= untilMs; time += stepMs) state = updateAlarms(state, evaluateAlarmConditions(readingsAt(timeline, time), timeline.scenario.alarmLimits), time);
-  return updateAlarms(state, evaluateAlarmConditions(readingsAt(timeline, untilMs), timeline.scenario.alarmLimits), untilMs);
+  const { alarmLimits, criticalLimits } = timeline.scenario;
+  for (let time = 0; time <= untilMs; time += stepMs) state = updateAlarms(state, evaluateAlarmConditions(readingsAt(timeline, time), alarmLimits, criticalLimits), time);
+  return updateAlarms(state, evaluateAlarmConditions(readingsAt(timeline, untilMs), alarmLimits, criticalLimits), untilMs);
 }
