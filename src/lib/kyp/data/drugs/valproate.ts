@@ -591,7 +591,7 @@ export const valproate: Drug = {
   faqs: [
     {
       question: "How long does Valproate take to work?",
-      answer: "Mania: 3–7 days for early anti-manic effect (faster than lithium).. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Mania: 3–7 days for early anti-manic effect (faster than lithium).",
     },
     {
       question: "What are the most common side effects of Valproate?",

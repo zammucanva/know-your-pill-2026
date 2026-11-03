@@ -504,7 +504,7 @@ export const lisdexamfetamine: Drug = {
   faqs: [
     {
       question: "How long does Lisdexamfetamine take to work?",
-      answer: "~1.5-2 h to peak effect.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "~1.5-2 h to peak effect.",
     },
     {
       question: "What are the most common side effects of Lisdexamfetamine?",

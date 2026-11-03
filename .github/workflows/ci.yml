@@ -4,7 +4,7 @@ on:
   push:
     branches: [main, "codex/**"]
   pull_request:
-    branches: [main]
+    branches: [main, feat/four-mode-medication-experience]
 
 permissions:
   contents: read
@@ -50,5 +50,8 @@ jobs:
       - run: bun run lint:dashes
       - run: bun run audit:four-mode
       - run: bun run build
+      # pdftotext (poppler-utils) is absent from ubuntu-latest; the Indian
+      # package insert tests shell out to it (scripts/evidence/indian-import.ts).
+      - run: sudo apt-get update && sudo apt-get install -y --no-install-recommends poppler-utils
       - run: bun test tests/
       - run: bun run build:export

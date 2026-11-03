@@ -503,7 +503,7 @@ export const zuclopenthixol: Drug = {
   faqs: [
     {
       question: "How long does Zuclopenthixol take to work?",
-      answer: "Clinical effect of Zuclopenthixol typically builds over 1–4 weeks at the target dose.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Clinical effect of Zuclopenthixol typically builds over 1–4 weeks at the target dose.",
     },
     {
       question: "What are the most common side effects of Zuclopenthixol?",

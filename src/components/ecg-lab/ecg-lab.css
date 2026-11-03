@@ -566,3 +566,92 @@
 .ecg-lab .ecg-status .status { background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 5px 12px; }
 .ecg-lab .ecg-status .status { font-size: 10px; }
 .ecg-lab .ecg-footnote { margin: 24px 0 0; color: var(--muted); font-size: 11px; text-align: center; }
+
+/* ───────── Bedside monitor (simulated) ─────────
+   The screen keeps a dark, high-contrast palette in both themes so waveforms and numbers stay
+   readable; channel colours follow familiar monitoring conventions without copying any device. */
+.ecg-lab .scenario { max-width: 1180px; }
+.ecg-lab .bedside { --mon-bg: oklch(13% .015 250); --mon-panel: oklch(17% .02 250); --mon-line: oklch(100% 0 0 / .1); --mon-text: oklch(96% .005 220); --mon-muted: oklch(76% .015 220);
+  --ch-ecg: oklch(84% .2 145); --ch-pleth: oklch(82% .13 215); --ch-resp: oklch(88% .15 95); --ch-nibp: oklch(90% .02 250); --ch-temp: oklch(85% .09 330);
+  --alarm-medium: oklch(85% .16 85); --alarm-high: oklch(48% .19 27); --alarm-low: oklch(82% .1 220);
+  display: grid; gap: 12px; min-width: 0; }
+.ecg-lab .bedside-screen { border: 1px solid var(--border-strong); border-radius: 10px; background: var(--mon-bg); color: var(--mon-text); padding: 10px 12px 12px; box-shadow: var(--shadow); min-width: 0; }
+.ecg-lab .bedside-head { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: baseline; justify-content: space-between; font-size: 12px; color: var(--mon-muted); }
+.ecg-lab .bedside-bed { color: var(--mon-text); font-weight: 700; letter-spacing: .08em; }
+.ecg-lab .bedside-sim { font-size: 11px; letter-spacing: .04em; }
+.ecg-lab .bedside-clock { font-variant-numeric: tabular-nums; color: var(--mon-text); font-weight: 600; }
+.ecg-lab .bedside-alarm-bar { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; justify-content: space-between; margin: 8px 0; padding: 7px 10px; border-radius: 6px; background: var(--mon-panel); font-size: 13px; color: var(--mon-muted); min-height: 38px; }
+.ecg-lab .bedside-alarm-bar ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; color: inherit; font-size: 13px; }
+/* Text colour is set per alarm state below; inherited list colours from page styles would fail contrast. */
+.ecg-lab .bedside-alarm-bar small { color: inherit; margin-left: 6px; font-size: 11px; }
+.ecg-lab .bedside-alarm-bar.active.priority-medium { background: var(--alarm-medium); color: oklch(18% .03 80); }
+.ecg-lab .bedside-alarm-bar.active.priority-high { background: var(--alarm-high); color: oklch(99% 0 0); }
+.ecg-lab .bedside-alarm-bar.active.priority-low { background: var(--alarm-low); color: oklch(18% .03 240); }
+.ecg-lab .bedside-ack { border: 1px solid currentColor; border-radius: 6px; background: transparent; color: inherit; padding: 6px 10px; font-weight: 600; cursor: pointer; }
+.ecg-lab .bedside-ack:disabled { opacity: .75; cursor: default; }
+.ecg-lab .bedside-body { display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 10px; }
+.ecg-lab .bedside-waves { display: grid; gap: 4px; min-width: 0; }
+.ecg-lab .bedside-trace { margin: 0; border-bottom: 1px solid var(--mon-line); padding-bottom: 2px; min-width: 0; }
+.ecg-lab .bedside-trace figcaption { font-size: 11px; color: var(--mon-muted); }
+.ecg-lab .bedside-trace figcaption strong { margin-right: 6px; }
+.ecg-lab .bedside-trace svg { display: block; width: 100%; height: auto; }
+.ecg-lab .bedside-trace.ecg figcaption strong, .ecg-lab .bedside-trace.ecg path { color: var(--ch-ecg); stroke: var(--ch-ecg); }
+.ecg-lab .bedside-trace.pleth figcaption strong, .ecg-lab .bedside-trace.pleth path { color: var(--ch-pleth); stroke: var(--ch-pleth); }
+.ecg-lab .bedside-trace.resp figcaption strong, .ecg-lab .bedside-trace.resp path { color: var(--ch-resp); stroke: var(--ch-resp); }
+.ecg-lab .bedside-trace-empty { fill: var(--mon-muted); font-size: 14px; }
+.ecg-lab .bedside-numerics { display: grid; gap: 6px; align-content: start; }
+.ecg-lab .bedside-tile { border: 1px solid var(--mon-line); border-radius: 6px; background: var(--mon-panel); padding: 6px 9px; color: var(--tile, var(--mon-text)); }
+.ecg-lab .bedside-tile.ecg { --tile: var(--ch-ecg); } .ecg-lab .bedside-tile.pleth { --tile: var(--ch-pleth); } .ecg-lab .bedside-tile.resp { --tile: var(--ch-resp); }
+.ecg-lab .bedside-tile.nibp { --tile: var(--ch-nibp); } .ecg-lab .bedside-tile.temp { --tile: var(--ch-temp); }
+.ecg-lab .bedside-tile header { display: flex; justify-content: space-between; font-size: 12px; font-weight: 700; letter-spacing: .06em; }
+.ecg-lab .bedside-tile header small { color: var(--mon-muted); font-weight: 400; letter-spacing: 0; }
+.ecg-lab .bedside-value { display: block; font: 600 34px/1.05 ui-sans-serif, system-ui, sans-serif; font-variant-numeric: tabular-nums; }
+.ecg-lab .bedside-tile.ecg .bedside-value { font-size: 44px; }
+.ecg-lab .bedside-tile.alarmed { border-color: var(--alarm-medium); box-shadow: inset 0 0 0 2px var(--alarm-medium); }
+.ecg-lab .bedside-status, .ecg-lab .bedside-sub { margin: 2px 0 0; font-size: 12px; color: var(--mon-muted); }
+.ecg-lab .bedside-sub { color: var(--tile); }
+.ecg-lab .bedside-sub small { color: var(--mon-muted); }
+.ecg-lab .bedside-tile details { margin-top: 3px; font-size: 11px; color: var(--mon-muted); }
+.ecg-lab .bedside-tile summary { cursor: pointer; }
+.ecg-lab .bedside-tile details p { margin: 4px 0; line-height: 1.45; }
+.ecg-lab .bedside-controls { display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; }
+.ecg-lab .bedside-group { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; font-size: 12px; color: var(--text); }
+.ecg-lab .bedside-group label { display: inline-flex; gap: 6px; align-items: center; }
+.ecg-lab .bedside-group select { border: 1px solid var(--border-strong); border-radius: 6px; background: var(--surface); color: var(--text); padding: 5px 6px; }
+.ecg-lab .bedside-note { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.5; }
+.ecg-lab .scenario-questions fieldset { display: grid; gap: 6px; }
+.ecg-lab .scenario-results { list-style: none; padding: 0 !important; display: grid; gap: 10px; }
+.ecg-lab .scenario-results li { border-left: 3px solid var(--border-strong); padding-left: 10px; }
+.ecg-lab .scenario-results li.correct { border-color: var(--primary); }
+.ecg-lab .scenario-results li.incorrect { border-color: var(--marker); }
+.ecg-lab .scenario-timeline { font-variant-numeric: tabular-nums; }
+@media (max-width: 860px) {
+  .ecg-lab .bedside-body { grid-template-columns: minmax(0, 1fr); }
+  .ecg-lab .bedside-numerics { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+  .ecg-lab .bedside-value, .ecg-lab .bedside-tile.ecg .bedside-value { font-size: 30px; }
+}
+@media (prefers-reduced-motion: reduce) { .ecg-lab .bedside * { transition: none !important; animation: none !important; } }
+.ecg-lab .scenario-actions ul { list-style: none; padding: 0 !important; display: grid; gap: 8px; }
+.ecg-lab .scenario-actions li { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; }
+.ecg-lab .scenario-actions small { color: var(--muted); font-size: 12px; }
+.ecg-lab .home-recommended { border-left: 3px solid var(--primary); padding-left: 10px; margin: 6px 0 10px; }
+.ecg-lab .home-recommended p { margin: 4px 0; }
+.ecg-lab .home-tag { display: inline-block; border-radius: 999px; background: var(--primary-soft); color: var(--primary-ink); font-size: 10px; font-weight: 700; letter-spacing: .08em; padding: 2px 8px; text-transform: uppercase; }
+.ecg-lab .bedside-ticks line { stroke: var(--mon-muted); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.ecg-lab .bedside-window button { min-width: 44px; min-height: 36px; padding: 6px 10px; }
+/* Selected state keeps its colours under hover; the generic secondary hover would otherwise put light text on a pale fill. */
+.ecg-lab .bedside-window .cta.secondary[aria-pressed="true"], .ecg-lab .bedside-window .cta.secondary[aria-pressed="true"]:hover:not(:disabled) { background: var(--primary); color: var(--primary-foreground); border-color: var(--primary); }
+.ecg-lab .bedside-window small { color: var(--muted); font-size: 11px; }
+@media (max-width: 560px) {
+  .ecg-lab .bedside-controls .cta, .ecg-lab .bedside-window button { min-height: 44px; }
+  .ecg-lab .bedside-group label { min-height: 36px; }
+}
+.ecg-lab .bedside-sound-toggle { border: 1px solid var(--mon-muted); border-radius: 999px; background: transparent; color: var(--mon-text); padding: 6px 12px; font-size: 12px; font-weight: 600; cursor: pointer; min-height: 36px; }
+.ecg-lab .bedside-sound-toggle.on { border-color: var(--ch-ecg); color: var(--ch-ecg); }
+.ecg-lab .bedside-sound-toggle:focus-visible { outline: 2px solid var(--ch-ecg); outline-offset: 2px; }
+.ecg-lab .bedside-beat { opacity: .15; margin-left: 2px; }
+.ecg-lab .bedside-beat.on { opacity: 1; }
+@media (max-width: 560px) { .ecg-lab .bedside-sound-toggle { min-height: 44px; width: 100%; } }
+.ecg-lab .bedside-sound-toggle.warn { border-color: var(--alarm-medium); color: var(--alarm-medium); }
+.ecg-lab .bedside { --alarm-info: oklch(30% .03 250); }
+.ecg-lab .bedside-alarm-bar.active.priority-info { background: var(--alarm-info); color: var(--mon-text); }
