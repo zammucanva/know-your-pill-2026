@@ -39,7 +39,7 @@ import {
 import type { Drug } from "@/lib/kyp/data/types";
 
 const read = (rel: string): string =>
-  readFileSync(join(process.cwd(), rel), "utf8");
+  readFileSync(join(process.cwd(), rel), "utf8").replace(/\r\n/g, "\n"); // LF form: a Windows checkout may hold CRLF
 
 const PAGE = "src/app/interactions/page.tsx";
 

@@ -421,7 +421,7 @@ export const memantine: Drug = {
   faqs: [
     {
       question: "How long does Memantine take to work?",
-      answer: "Benefit over weeks-months; titration 4 weeks to target.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Benefit over weeks-months; titration 4 weeks to target.",
     },
     {
       question: "What are the most common side effects of Memantine?",

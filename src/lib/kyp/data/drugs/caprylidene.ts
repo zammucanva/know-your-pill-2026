@@ -371,7 +371,7 @@ export const caprylidene: Drug = {
   faqs: [
     {
       question: "How long does Caprylidene take to work?",
-      answer: "Ketone availability within hours; clinical claims over months.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Ketone availability within hours; clinical claims over months.",
     },
     {
       question: "What are the most common side effects of Caprylidene?",

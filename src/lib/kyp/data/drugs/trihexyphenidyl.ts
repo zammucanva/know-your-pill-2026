@@ -427,7 +427,7 @@ export const trihexyphenidyl: Drug = {
   faqs: [
     {
       question: "How long does Trihexyphenidyl take to work?",
-      answer: "EPS relief within hours (oral).. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "EPS relief within hours (oral).",
     },
     {
       question: "What are the most common side effects of Trihexyphenidyl?",

@@ -80,7 +80,7 @@
     ],
   };
 
-  /* Regions sit on the real mid-sagittal section (assets/brain_sagittal.png, drawn at 0,0 800x560). */
+  /* Regions sit on the real mid-sagittal section (assets/brain_sagittal.webp, drawn at 0,0 800x560). */
   const REGIONS = {
     pfc:         { name: "Prefrontal cortex",          cx: 190, cy: 150, rx: 58, ry: 52, rot: 0 },
     motor:       { name: "Motor cortex",               cx: 384, cy: 78,  rx: 40, ry: 20, rot: 0 },

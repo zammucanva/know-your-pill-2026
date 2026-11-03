@@ -450,7 +450,7 @@ export const atomoxetine: Drug = {
   faqs: [
     {
       question: "How long does Atomoxetine take to work?",
-      answer: "Therapeutic effect builds over 2-6 weeks, not a same-day drug.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Therapeutic effect builds over 2-6 weeks, not a same-day drug.",
     },
     {
       question: "What are the most common side effects of Atomoxetine?",

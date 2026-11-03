@@ -57,14 +57,14 @@
 
 .kyp-mech-chip:hover {
   border-color: color-mix(in oklch, var(--brand) 45%, transparent);
-  color: var(--brand);
+  color: var(--brand-text);
 }
 
 .kyp-mech-chip[aria-pressed="true"],
 .kyp-mech-chip[data-active="true"] {
   background: color-mix(in oklch, var(--brand) 14%, transparent);
   border-color: color-mix(in oklch, var(--brand) 55%, transparent);
-  color: var(--brand);
+  color: var(--brand-text);
 }
 
 .kyp-mech-chip:focus-visible,
@@ -100,13 +100,13 @@
 
 .kyp-mech-btn:hover {
   border-color: color-mix(in oklch, var(--brand) 45%, transparent);
-  color: var(--brand);
+  color: var(--brand-text);
 }
 
 .kyp-mech-btn[data-pressed="true"] {
   background: color-mix(in oklch, var(--brand) 14%, transparent);
   border-color: color-mix(in oklch, var(--brand) 55%, transparent);
-  color: var(--brand);
+  color: var(--brand-text);
 }
 
 .kyp-mech-toolbar-label {
@@ -443,7 +443,7 @@ path.kyp-mech-terminal[data-intervention] {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--brand);
+  color: var(--brand-text);
 }
 
 .kyp-mech-inspector .insp-section {
@@ -632,7 +632,7 @@ path.kyp-mech-terminal[data-intervention] {
 }
 
 .kyp-mech-fallback summary:hover {
-  color: var(--brand);
+  color: var(--brand-text);
   border-color: color-mix(in oklch, var(--brand) 45%, transparent);
 }
 

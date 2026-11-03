@@ -409,7 +409,7 @@ export const flibanserin: Drug = {
   faqs: [
     {
       question: "How long does Flibanserin take to work?",
-      answer: "Desire effects assessed at 4-8 weeks.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Desire effects assessed at 4-8 weeks.",
     },
     {
       question: "What are the most common side effects of Flibanserin?",

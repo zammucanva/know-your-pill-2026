@@ -52,6 +52,7 @@ import {
   DrugNavigationModule,
   PageMetadataStrip,
 } from "@/components/kyp/sections/drug";
+import { DrugTrustLine } from "@/components/kyp/sections/drug/drug-trust-line";
 
 import { Timeline } from "@/components/kyp/ui/timeline";
 import { Container } from "@/components/kyp/ui/container";
@@ -65,6 +66,11 @@ import { PatientHidden } from "@/components/kyp/ui/patient-hidden";
 import { PatientModeSwitch } from "@/components/kyp/ui/patient-mode-switch";
 import { PatientGuideSection } from "@/components/kyp/sections/drug/patient-guide-section";
 import { getPatientGuide } from "@/lib/kyp/patient";
+import { buildModeLens, explainPatient, getModeLenses } from "@/lib/kyp/modes";
+import { evidenceViews } from "@/lib/kyp/evidence";
+import { ModeLensSection } from "@/components/kyp/sections/drug/mode-lens";
+import { PatientExplainer, PatientProvenanceNote } from "@/components/kyp/sections/drug/patient-explainer";
+import { searchLogFor } from "@/lib/kyp/evidence/source-search-log";
 
 import { getDrugBySlug, getAllDrugSlugs } from "@/lib/kyp/data";
 import { DRUG_COURSE_NAV_ITEMS } from "@/lib/kyp/drug-course-sections";
@@ -143,6 +149,11 @@ export default async function DrugPage({ params }: PageProps) {
   // medication (Patient guided-learning mode). Undefined only if a drug
   // has no guide, in which case medical content is shown in every mode.
   const patientGuide = getPatientGuide(drug.slug);
+  const modeLenses = getModeLenses(drug.slug);
+  // Patient explanation: one shared structure for every medication, labelled by source (see modes/patient-explanation).
+  const patientExplanation = explainPatient(drug, patientGuide);
+  const patientInteractions =
+    buildModeLens("patient", { drug, patientGuide, mcqs: [] }).blocks.find((b) => b.kind === "patient-interactions") ?? null;
 
   const navItems = getNavItems();
   const lessons = drug.lessonGroups ?? [];
@@ -247,12 +258,16 @@ export default async function DrugPage({ params }: PageProps) {
           <DrugHero drug={drug} patientGuide={patientGuide} />
         </GuidedLearningVisibility>
 
+        <DrugTrustLine drug={drug} />
+
         <GuidedLearningVisibility drug={drug} sectionId="quick-facts">
           <DrugQuickFacts drug={drug} patientGuide={patientGuide} />
           <PatientHidden>
             <HeroInfoStrip drug={drug} />
           </PatientHidden>
         </GuidedLearningVisibility>
+
+        {modeLenses && <ModeLensSection drugName={drug.genericName} lenses={modeLenses} />}
 
         <GuidedLearningVisibility drug={drug} sectionId="learning-objectives">
           <DrugLearningObjectives drug={drug} />
@@ -373,9 +388,12 @@ export default async function DrugPage({ params }: PageProps) {
           <PatientModeSwitch
             patient={
               patientGuide ? (
-                <PatientGuideSection drug={drug} guide={patientGuide} />
+                <>
+                  <PatientProvenanceNote />
+                  <PatientGuideSection drug={drug} guide={patientGuide} />
+                </>
               ) : (
-                <DrugPatientEducation drug={drug} />
+                <PatientExplainer drugName={drug.genericName} explanation={patientExplanation} interactions={patientInteractions} evidence={evidenceViews(drug.slug)} hasGuide={false} searchLog={searchLogFor(drug.slug)} />
               )
             }
             medical={<DrugPatientEducation drug={drug} />}
