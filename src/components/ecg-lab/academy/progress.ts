@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { monitorScenarios, type MonitorScenario } from '../monitor/scenario';
 import { patientCases, type PatientCase } from '../patients/cases';
 import { getRhythmCase, rhythmCases, type AnswerEvaluation, type RhythmCase } from '../rhythm/cases';
 import { rhythmCategories } from '../rhythm/rhythms';
@@ -26,6 +27,11 @@ export const XP_RULES = {
   sessionCompleted: 15,
   caseStudyCompleted: 15,
   caseStudyCorrectRhythm: 10,
+  monitoredScenarioCompleted: 20,
+  monitoredScenarioCorrectRhythm: 10,
+  monitoredScenarioCorrectAlarm: 5,
+  monitoredScenarioCorrectDecision: 10,
+  monitoredScenarioActionTaken: 5,
 } as const;
 
 const isoDate = z.iso.datetime({ offset: true });
@@ -47,6 +53,8 @@ export const academyProgressSchema = z.strictObject({
   exercises: z.record(z.string().regex(/^[a-z][a-z0-9-]{2,60}$/), z.string().regex(/^\d+\.\d+\.\d+$/)),
   /** Completed fictional case studies. Optional in stored data so earlier version-1 records still load. */
   patients: z.record(z.string().regex(/^patient\.[a-z0-9-]+\.\d{2}$/), z.string().regex(/^\d+\.\d+\.\d+$/)).default({}),
+  /** Completed monitored scenarios. Optional in stored data so earlier version-1 records still load. */
+  scenarios: z.record(z.string().regex(/^scenario\.[a-z0-9-]+\.\d{2}$/), z.string().regex(/^\d+\.\d+\.\d+$/)).default({}),
   achievements: z.record(z.string().min(1).max(100), z.strictObject({ at: isoDate })),
   bests: z.strictObject({
     timedScore: z.number().int().min(0).max(1_000_000),
@@ -66,6 +74,7 @@ export const emptyAcademyProgress = (): AcademyProgress => ({
   cases: {},
   exercises: {},
   patients: {},
+  scenarios: {},
   achievements: {},
   bests: { timedScore: 0, timedAccuracyPercent: 0, bestStreak: 0, sessionsCompleted: 0 },
   recent: [],
@@ -121,6 +130,7 @@ export const achievementDefinitions: readonly AchievementDefinition[] = Object.f
   { id: 'corrected-after-review', title: 'Learning from mistakes', description: 'Correctly identify a strip you previously missed.' },
   { id: 'first-case-study', title: 'First case study', description: 'Complete a fictional patient case.' },
   { id: 'all-case-studies', title: 'Every case study', description: 'Complete every available fictional patient case.' },
+  { id: 'first-monitored-scenario', title: 'First monitored scenario', description: 'Complete a bedside monitor scenario and read its debrief.' },
   ...rhythmCategories.map(category => ({ id: `category-complete.${category.id}`, title: `${category.label}: complete`, description: `Correctly identify every ${category.label} case.` })),
 ]);
 
@@ -145,6 +155,7 @@ export function awardAchievements(progress: AcademyProgress, now: string): { pro
     'corrected-after-review': Object.keys(progress.awards).some(key => key.startsWith('corrected:')),
     'first-case-study': Object.keys(progress.patients).length >= 1,
     'all-case-studies': patientCases.length > 0 && patientCases.every(item => progress.patients[item.id] === item.version),
+    'first-monitored-scenario': Object.keys(progress.scenarios).length >= 1,
   };
   for (const category of rhythmCategories) {
     const ids = rhythmCases.filter(item => item.categoryId === category.id).map(item => item.id);
@@ -223,6 +234,50 @@ export function applyPatientCase(progress: AcademyProgress, patient: PatientCase
   return { progress: unlocked.progress, xpGained: totalXp(unlocked.progress) - xpBefore, achievements: unlocked.awarded, alreadyApplied: false };
 }
 
+export type ScenarioOutcome = {
+  /** Rhythm scenarios: first answer for the assessed phase's rhythm, scored on that rhythm case. */
+  rhythm?: AnswerEvaluation;
+  /** Decision scenarios: whether the learner chose the best-supported option. */
+  decisionCorrect?: boolean;
+  /** Decision scenarios: whether the learner took the expected bedside action before answering. */
+  actionTaken?: boolean;
+  /** Whether the learner named the alarm the simulation actually raised. */
+  alarmCorrect: boolean;
+};
+
+/**
+ * Records a completed monitored scenario once per scenario id and version. Completion earns a flat
+ * reward (reaching the debrief is the point); correct reasoning earns separate, smaller bonuses. The
+ * rhythm answer is credited through the same path as every other rhythm question.
+ */
+export function applyMonitorScenario(progress: AcademyProgress, scenario: MonitorScenario, outcome: ScenarioOutcome, now: string): ApplyResult {
+  const key = `scenario:${scenario.id}@${scenario.version}`;
+  const tag = `${scenario.id}@${scenario.version}`;
+  if (progress.awards[key] || progress.scenarios[scenario.id] === scenario.version) return { progress, xpGained: 0, achievements: [], alreadyApplied: true };
+  const refused = { progress, xpGained: 0, achievements: [], alreadyApplied: false };
+  const xpBefore = totalXp(progress);
+  let next = progress;
+
+  if (scenario.assessment.kind === 'rhythm') {
+    const phase = scenario.phases.find(item => item.id === scenario.assessedPhaseId);
+    const rhythm = phase ? getRhythmCase(phase.rhythmCaseId) : undefined;
+    const answer = outcome.rhythm;
+    if (!rhythm || !answer || answer.caseId !== rhythm.id || answer.caseVersion !== rhythm.version) return refused;
+    next = recordRhythmAttempt(next, rhythm, answer, now);
+    if (answer.rhythmCorrect) next = recordAward(next, `scenario-rhythm:${tag}`, XP_RULES.monitoredScenarioCorrectRhythm, `Rhythm change identified: ${scenario.title}`, now);
+  } else {
+    if (typeof outcome.decisionCorrect !== 'boolean') return refused;
+    if (outcome.decisionCorrect) next = recordAward(next, `scenario-decision:${tag}`, XP_RULES.monitoredScenarioCorrectDecision, `Evidence weighed correctly: ${scenario.title}`, now);
+    if (outcome.actionTaken && scenario.assessment.expectedActionId !== null) next = recordAward(next, `scenario-action:${tag}`, XP_RULES.monitoredScenarioActionTaken, `Bedside check made: ${scenario.title}`, now);
+  }
+
+  next = { ...next, scenarios: { ...next.scenarios, [scenario.id]: scenario.version } };
+  next = recordAward(next, key, XP_RULES.monitoredScenarioCompleted, `Completed monitored scenario: ${scenario.title}`, now);
+  if (outcome.alarmCorrect) next = recordAward(next, `scenario-alarm:${tag}`, XP_RULES.monitoredScenarioCorrectAlarm, `Alarm identified: ${scenario.title}`, now);
+  const unlocked = awardAchievements(next, now);
+  return { progress: unlocked.progress, xpGained: totalXp(unlocked.progress) - xpBefore, achievements: unlocked.awarded, alreadyApplied: false };
+}
+
 /**
  * Applies a finished session. Only first attempts count. The session id makes the whole operation
  * idempotent, so a double click or a re-render cannot award twice. Sessions that were never ended
@@ -282,6 +337,8 @@ export function dashboardStats(progress: AcademyProgress) {
     exercisesCompleted: Object.keys(progress.exercises).length,
     caseStudiesCompleted: Object.keys(progress.patients).length,
     caseStudiesAvailable: patientCases.length,
+    monitoredScenariosCompleted: Object.keys(progress.scenarios).length,
+    monitoredScenariosAvailable: monitorScenarios.length,
     rhythmAttempts: attempts,
     rhythmAccuracyPercent: attempts === 0 ? null : Math.round((correct / attempts) * 100),
     rateAttempts,

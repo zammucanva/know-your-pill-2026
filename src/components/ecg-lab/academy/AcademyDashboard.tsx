@@ -40,6 +40,7 @@ export function AcademyDashboard({ progress, notice, onReset, onOpenChallenge, o
           <dl className="challenge-stats">
             <div><dt>Exercises completed</dt><dd>{stats.exercisesCompleted}</dd></div>
             <div><dt>Case studies completed</dt><dd>{stats.caseStudiesCompleted} of {stats.caseStudiesAvailable}</dd></div>
+            <div><dt>Monitored scenarios completed</dt><dd>{stats.monitoredScenariosCompleted} of {stats.monitoredScenariosAvailable}</dd></div>
             <div><dt>Rhythm accuracy</dt><dd>{percent(stats.rhythmAccuracyPercent)}</dd></div>
             <div><dt>Rate estimates in range</dt><dd>{percent(stats.rateAccuracyPercent)}</dd></div>
             <div><dt>Sessions completed</dt><dd>{stats.bests.sessionsCompleted}</dd></div>

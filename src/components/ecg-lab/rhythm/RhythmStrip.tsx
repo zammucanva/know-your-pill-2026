@@ -1,13 +1,15 @@
 import { useId, useMemo } from 'react';
 import { EcgGridDefinitions } from '../components/EcgGrid';
 import { SVG_UNITS_PER_MM, timeMsToSvgUnits, traceViewHeightUnits, voltageMvToSvgUnits } from '../engine/calibration';
-import { generateRhythmLeadSamples } from '../engine/rhythm-signal';
+import { generateRhythmLeadSamples, type RhythmSchedule } from '../engine/rhythm-signal';
 import type { Gain, Lead, PaperSpeed } from '../engine/types';
 import { buildCase, type RhythmCase } from './cases';
 import { STRIP_DURATION_MS } from './rhythms';
 
 type RhythmStripProps = {
-  definition: RhythmCase;
+  /** Draw a rhythm case's own strip, or a recorded window of a longer schedule. */
+  definition?: RhythmCase;
+  recording?: { schedule: RhythmSchedule; startMs: number };
   lead?: Lead;
   paperSpeed?: PaperSpeed;
   gain?: Gain;
@@ -19,18 +21,21 @@ const TIME_BAR_UNITS = 5 * SVG_UNITS_PER_MM;
  * A fixed six-second calibrated strip drawn from the case's own beat schedule with the shared
  * calibration functions. The accessible name describes the strip's settings but never its rhythm.
  */
-export function RhythmStrip({ definition, lead = 'II', paperSpeed = 25, gain = 10 }: RhythmStripProps) {
+export function RhythmStrip({ definition, recording, lead = 'II', paperSpeed = 25, gain = 10 }: RhythmStripProps) {
   const gridId = useId().replace(/:/g, '');
   const { path, widthUnits, heightUnits, baseline } = useMemo(() => {
-    const { schedule } = buildCase(definition);
-    const samples = generateRhythmLeadSamples(schedule, lead, 0, STRIP_DURATION_MS);
+    const schedule = recording?.schedule ?? (definition ? buildCase(definition).schedule : null);
+    if (!schedule) throw new Error('RhythmStrip needs a rhythm case or a recording');
+    const startMs = recording?.startMs ?? 0;
+    // Times are shown relative to the start of the strip, so a recording reads 0-6 s like a case.
+    const samples = generateRhythmLeadSamples(schedule, lead, startMs, startMs + STRIP_DURATION_MS).map(sample => ({ ...sample, timeMs: sample.timeMs - startMs }));
     const maxAbs = Math.max(...samples.map(sample => Math.abs(sample.voltageMv)), 0);
     const width = timeMsToSvgUnits(STRIP_DURATION_MS, paperSpeed);
     const height = traceViewHeightUnits(maxAbs, gain);
     const zero = height / 2;
     const d = samples.map((sample, index) => `${index === 0 ? 'M' : 'L'} ${timeMsToSvgUnits(sample.timeMs, paperSpeed).toFixed(2)} ${(zero - voltageMvToSvgUnits(sample.voltageMv, gain)).toFixed(2)}`).join(' ');
     return { path: d, widthUnits: width, heightUnits: height, baseline: zero };
-  }, [definition, lead, paperSpeed, gain]);
+  }, [definition, recording, lead, paperSpeed, gain]);
 
   const seconds = Array.from({ length: STRIP_DURATION_MS / 1000 + 1 }, (_, index) => index);
   const totalHeight = heightUnits + TIME_BAR_UNITS;

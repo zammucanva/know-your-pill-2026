@@ -1,4 +1,4 @@
-import type { ExerciseState, HomeSummary } from './summary';
+import type { ExerciseState, HomeSummary, ScenarioState } from './summary';
 
 type HomeDashboardProps = {
   summary: HomeSummary;
@@ -9,6 +9,18 @@ type HomeDashboardProps = {
   onOpenPatients: () => void;
   onOpenAcademy: () => void;
   onOpenSimulator: () => void;
+  /** Opens a monitored scenario: 'resume' continues a paused run, 'start' begins from its brief. */
+  onOpenScenario?: (scenarioId: string, mode: 'resume' | 'start') => void;
+  onOpenMonitor?: () => void;
+};
+
+const scenarioStateText = (state: ScenarioState, pausedAtMs: number | null) => {
+  if (state === 'completed') return 'Completed';
+  if (state === 'in-progress' && pausedAtMs !== null) {
+    const total = Math.floor(pausedAtMs / 1000);
+    return `Paused at ${String(Math.floor(total / 60)).padStart(2, '0')}:${String(total % 60).padStart(2, '0')}`;
+  }
+  return 'Not started';
 };
 
 const stateText: Record<ExerciseState, string> = { completed: 'Completed', 'in-progress': 'In progress', 'not-started': 'Not started' };
@@ -18,8 +30,9 @@ const actionText: Record<ExerciseState, string> = { completed: 'Review', 'in-pro
  * Everything on this page is read from stored learner state. Cards with nothing real behind them say so
  * and offer the action that would create it; no figure is ever filled in by default.
  */
-export function HomeDashboard({ summary, onStartExercise, onResumeExperiment, onBeginChallenge, onReviewMissed, onOpenPatients, onOpenAcademy, onOpenSimulator }: HomeDashboardProps) {
-  const { continueLearning, exercises, experiment, challenge, patients, progress } = summary;
+export function HomeDashboard({ summary, onStartExercise, onResumeExperiment, onBeginChallenge, onReviewMissed, onOpenPatients, onOpenAcademy, onOpenSimulator, onOpenScenario, onOpenMonitor }: HomeDashboardProps) {
+  const { continueLearning, exercises, experiment, challenge, patients, progress, monitor } = summary;
+  const recommended = monitor.recommended;
   const firstExercise = exercises[0];
 
   return (
@@ -97,6 +110,37 @@ export function HomeDashboard({ summary, onStartExercise, onResumeExperiment, on
           <button type="button" className="cta secondary" onClick={onOpenPatients}>{patients.completed === 0 ? 'Open the cases' : 'Continue with cases'}</button>
         </section>
 
+        {onOpenScenario && monitor.total > 0 && (
+          <section className="home-card home-monitor" aria-labelledby="home-monitor">
+            <h3 id="home-monitor">Bedside monitor</h3>
+            <p className="challenge-note">{monitor.completed} of {monitor.total} monitored scenarios completed.</p>
+            {recommended ? (
+              <div className="home-recommended">
+                <p><span className="home-tag">Recommended</span> <strong>{recommended.title}</strong></p>
+                <p className="challenge-note">{recommended.detail}</p>
+                <div className="challenge-actions">
+                  <button type="button" className="cta" onClick={() => onOpenScenario(recommended.scenarioId, recommended.resume ? 'resume' : 'start')}>
+                    {recommended.resume ? 'Resume' : recommended.earnsXp ? 'Start' : 'Replay'} scenario: {recommended.title}
+                  </button>
+                  {recommended.resume && <button type="button" className="cta secondary" onClick={() => onOpenScenario(recommended.scenarioId, 'start')}>Restart from the beginning</button>}
+                </div>
+              </div>
+            ) : <p className="challenge-note">You have completed every monitored scenario, and no missed rhythm is waiting for review.</p>}
+            <ul className="home-exercise-list" aria-label="Monitored scenarios">
+              {monitor.scenarios.map(item => (
+                <li key={item.id}>
+                  <span><strong>{item.title}</strong><small>{scenarioStateText(item.state, item.pausedAtMs)}{item.linkedPatientTitle ? ` · case study: ${item.linkedPatientTitle}` : ''}</small></span>
+                  <button type="button" className="cta secondary" onClick={() => onOpenScenario(item.id, item.state === 'in-progress' ? 'resume' : 'start')}
+                    aria-label={`${item.state === 'in-progress' ? 'Resume' : item.state === 'completed' ? 'Replay' : 'Start'} monitored scenario: ${item.title}`}>
+                    {item.state === 'in-progress' ? 'Resume' : item.state === 'completed' ? 'Replay' : 'Start'}
+                  </button>
+                </li>
+              ))}
+            </ul>
+            {onOpenMonitor && <button type="button" className="cta secondary" onClick={onOpenMonitor}>Open the bedside monitor</button>}
+          </section>
+        )}
+
         <section className="home-card" aria-labelledby="home-progress">
           <h3 id="home-progress">Your progress</h3>
           {summary.isEmpty ? (
@@ -108,6 +152,7 @@ export function HomeDashboard({ summary, onStartExercise, onResumeExperiment, on
               <ul className="home-facts">
                 <li>Exercises completed: {progress.exercisesCompleted} of {progress.exercisesTotal}</li>
                 <li>Case studies completed: {progress.caseStudiesCompleted} of {progress.caseStudiesTotal}</li>
+                <li>Monitored scenarios completed: {monitor.completed} of {monitor.total}</li>
                 <li>Rhythm accuracy: {progress.rhythmAccuracyPercent === null ? 'no attempts yet' : `${progress.rhythmAccuracyPercent}%`}</li>
               </ul>
               {progress.recent.length > 0 && (
