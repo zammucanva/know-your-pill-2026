@@ -143,7 +143,7 @@ export function HeroIdentityCard({ drug, guide }: HeroIdentityCardProps) {
     return (
       <aside className="rounded-xl border border-border/70 bg-card p-4 shadow-[var(--shadow-soft)]">
         <div>
-          <p className="text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground/60">Identity</p>
+          <p className="text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground">Identity</p>
           <dl className="mt-2 space-y-1.5 text-xs">
             <div className="flex items-baseline justify-between gap-2">
               <dt className="text-muted-foreground">Generic</dt>
@@ -163,7 +163,7 @@ export function HeroIdentityCard({ drug, guide }: HeroIdentityCardProps) {
         <div className="my-3 h-px bg-border/50" />
 
         <div>
-          <p className="text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground/60">Pharmacology</p>
+          <p className="text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground">Pharmacology</p>
           <dl className="mt-2 space-y-2 text-xs">
             <div className="flex items-baseline justify-between gap-2">
               <dt className="text-muted-foreground shrink-0">Target</dt>
@@ -185,7 +185,7 @@ export function HeroIdentityCard({ drug, guide }: HeroIdentityCardProps) {
         <div className="my-3 h-px bg-border/50" />
 
         <div>
-          <p className="text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground/60">Clinical</p>
+          <p className="text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground">Clinical</p>
           <dl className="mt-2 space-y-1.5 text-xs">
             <div className="flex items-baseline justify-between gap-2">
               <dt className="text-muted-foreground flex items-center gap-1">
@@ -220,7 +220,7 @@ export function HeroIdentityCard({ drug, guide }: HeroIdentityCardProps) {
   return (
     <aside className="rounded-xl border border-border/70 bg-card p-4 shadow-[var(--shadow-soft)]">
       <div>
-        <p className="text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground/80">
+        <p className="text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
           {PATIENT_HERO_LABELS.identity}
         </p>
         <dl className="mt-2 space-y-1.5 text-xs">
@@ -242,7 +242,7 @@ export function HeroIdentityCard({ drug, guide }: HeroIdentityCardProps) {
       <div className="my-3 h-px bg-border/50" />
 
       <div>
-        <p className="text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground/80">
+        <p className="text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
           {PATIENT_HERO_LABELS.whatToExpect}
         </p>
         <dl className="mt-2 space-y-1.5 text-xs">
@@ -260,7 +260,7 @@ export function HeroIdentityCard({ drug, guide }: HeroIdentityCardProps) {
       <div className="my-3 h-px bg-border/50" />
 
       <div>
-        <p className="text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground/80">
+        <p className="text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
           Used for
         </p>
         <p className="mt-2 text-xs font-medium text-foreground leading-relaxed">{topUses.join(", ")}</p>

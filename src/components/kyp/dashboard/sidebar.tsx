@@ -43,7 +43,7 @@ const LEARN_ITEMS: SidebarNavItem[] = [
   { id: "interactions", label: "Interactions", href: "/interactions", icon: ArrowLeftRight },
   { id: "substances", label: "Substances", href: "/#substances", icon: FlaskConical, anchor: true },
   { id: "study", label: "Study Mode", href: "/study", icon: GraduationCap },
-  { id: "brain-science", label: "Brain Science", href: "/#neuroarcade", icon: Atom, anchor: true },
+  { id: "brain-science", label: "Brain Science", href: "/synapse-studio", icon: Atom },
 ];
 
 const YOU_ITEMS: SidebarNavItem[] = [
@@ -124,7 +124,7 @@ function GroupLabel({ children, collapsed }: { children: React.ReactNode; collap
   return (
     <p
       className={cn(
-        "px-2.5 pb-1 pt-5 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground/60",
+        "px-2.5 pb-1 pt-5 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground",
         collapsed && "sr-only"
       )}
     >
@@ -281,7 +281,7 @@ export function MobileSidebarDrawer({
           </button>
         </div>
         <div className="flex-1 overflow-y-auto px-3 py-3">
-          <p className="px-2.5 pb-1 pt-2 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground/60">
+          <p className="px-2.5 pb-1 pt-2 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
             Learn
           </p>
           <div className="space-y-0.5">
@@ -289,7 +289,7 @@ export function MobileSidebarDrawer({
               <SidebarLink key={item.id} item={item} collapsed={false} onNavigate={onClose} />
             ))}
           </div>
-          <p className="px-2.5 pb-1 pt-5 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground/60">
+          <p className="px-2.5 pb-1 pt-5 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
             You
           </p>
           <div className="space-y-0.5">

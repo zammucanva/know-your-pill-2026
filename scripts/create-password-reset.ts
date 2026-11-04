@@ -32,6 +32,7 @@
 import { randomBytes, createHash } from "crypto";
 import { resolve } from "path";
 import { PrismaClient } from "@prisma/client";
+import { redactDatabaseUrl } from "../src/lib/kyp/redact-url";
 
 const RESET_TTL_MINUTES = 30;
 
@@ -57,7 +58,7 @@ async function main() {
   });
   if (!user) {
     console.error(
-      `No account exists for that email in ${dbUrl}. Nothing was changed.`
+      `No account exists for that email in ${redactDatabaseUrl(dbUrl)}. Nothing was changed.`
     );
     process.exitCode = 1;
     return;

@@ -5,6 +5,7 @@ import { Link2, Route } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import type { Drug } from "@/lib/kyp/data/types";
+import { splitWithheld } from "@/lib/kyp/modes/shared-claims";
 
 /**
  * DrugSideEffectCausal — the "Why this effect" causal view (NEXT-X7).
@@ -42,6 +43,7 @@ export function DrugSideEffectCausal({ drug }: { drug: Drug }) {
     drug.patientMode?.mechanism && drug.patientMode?.sideEffects
   );
 
+  const withheldCount = hasPatientMode ? splitWithheld(drug.patientMode.mechanism).withheld.length + splitWithheld(drug.patientMode.sideEffects).withheld.length : 0;
   if (all.length === 0) return null;
   const effect = all[Math.min(selected, all.length - 1)];
 
@@ -87,13 +89,18 @@ export function DrugSideEffectCausal({ drug }: { drug: Drug }) {
           <>
             <CausalStep
               label="How this medication works: plain language"
-              body={drug.patientMode!.mechanism}
+              body={splitWithheld(drug.patientMode!.mechanism).shown}
             />
             <CausalStep
               label="Its side effects: plain language"
-              body={drug.patientMode!.sideEffects}
+              body={splitWithheld(drug.patientMode!.sideEffects).shown}
               last
             />
+            {withheldCount > 0 && (
+              <li data-withheld-note className="mt-3 list-none text-xs text-muted-foreground">
+                {withheldCount} standard sentence{withheldCount === 1 ? "" : "s"} used for many medicines {withheldCount === 1 ? "is" : "are"} not shown here because nothing confirms {withheldCount === 1 ? "it" : "them"} for this medicine. Ask your pharmacist or prescriber what to expect.
+              </li>
+            )}
           </>
         ) : (
           <>

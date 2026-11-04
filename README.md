@@ -43,10 +43,10 @@ and the complete psychiatry curriculum.
 - **Progress** — static-host-friendly localStorage store
   (`src/lib/kyp/progress/`), slug-keyed, hydration-safe; shared by drug
   lessons, psychiatry courses, practice and the library.
-- **Curriculum record** — `KYP-PSYCHIATRY-CURRICULUM-NORMALIZATION.md`
+- **Curriculum record** — `docs/KYP-PSYCHIATRY-CURRICULUM-NORMALIZATION.md`
   (normalized metadata, overlap audit, 11 [PROPOSED] future additions,
   change log, integrity audits). Coverage limitations:
-  `KYP-PSYCHIATRY-COVERAGE.md` (source book parts 6–7 were never
+  `docs/KYP-PSYCHIATRY-COVERAGE.md` (source book parts 6–7 were never
   uploaded — nothing pretends otherwise).
 
 ### Content layers (strict separation)
@@ -78,7 +78,7 @@ clinical notes in one registry:
   components; `tests/platform-hardening.test.ts` pins them deep-equal
   to the live derivation.
 
-👉 **[`STAHL-NOTES-COMPANION.md`](./STAHL-NOTES-COMPANION.md)** — the
+👉 **[`docs/STAHL-NOTES-COMPANION.md`](./docs/STAHL-NOTES-COMPANION.md)** — the
 master index: the complete 145-drug table by class, book mapping, the
 integration wiring, and how to extend the registry.
 

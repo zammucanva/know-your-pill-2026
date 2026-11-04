@@ -53,7 +53,7 @@ const CODE_REGEX_LINES = [
   ["src/lib/kyp/psychiatry-concept-visibility.ts", 212, "segment cut regex"],
   ["src/lib/kyp/psychiatry-concept-visibility.ts", 242, "segment split regex"],
   ["src/lib/kyp/psychiatry-concept-visibility.ts", 359, "leading separator strip regex"],
-  ["src/lib/oxford/loader.ts", 249, "note-group header parse regex"],
+  ["src/lib/oxford/loader.ts", 252, "note-group header parse regex"],
 ];
 
 /* allowlist: exact normalized strings kept deliberately */

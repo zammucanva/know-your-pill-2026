@@ -452,7 +452,7 @@ export const clonidine: Drug = {
   faqs: [
     {
       question: "How long does Clonidine take to work?",
-      answer: "Sedation within the hour (IR); ADHD effects over 1-2 weeks.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Sedation within the hour (IR); ADHD effects over 1-2 weeks.",
     },
     {
       question: "What are the most common side effects of Clonidine?",

@@ -468,7 +468,7 @@ export const acamprosate: Drug = {
   faqs: [
     {
       question: "How long does Acamprosate take to work?",
-      answer: "Weeks of treatment before full benefit; efficacy trials 3-12 months.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Weeks of treatment before full benefit; efficacy trials 3-12 months.",
     },
     {
       question: "What are the most common side effects of Acamprosate?",

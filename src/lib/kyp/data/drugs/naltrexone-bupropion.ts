@@ -523,7 +523,7 @@ export const naltrexoneBupropion: Drug = {
   faqs: [
     {
       question: "How long does Naltrexone-Bupropion take to work?",
-      answer: "Appetite effect within weeks; weight trajectory over months.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Appetite effect within weeks; weight trajectory over months.",
     },
     {
       question: "What are the most common side effects of Naltrexone-Bupropion?",
