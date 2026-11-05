@@ -4,6 +4,7 @@
   "private": true,
   "packageManager": "bun@1.3.4",
   "scripts": {
+    "postinstall": "prisma generate",
     "dev": "next dev -p 3000 2>&1 | tee dev.log",
     "build": "next build --webpack && node scripts/copy-standalone-assets.mjs",
     "build:export": "GITHUB_PAGES=1 next build --webpack",
