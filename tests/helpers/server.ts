@@ -65,7 +65,8 @@ export const TEST_DB_URL = process.env.KYP_TEST_DATABASE_URL ?? DEFAULT_TEST_DB_
 assertDisposableTestDatabase(TEST_DB_URL);
 
 // Override BOTH Prisma connection variables BEFORE any PrismaClient is
-// instantiated: prisma/schema.prisma reads DATABASE_URL and DIRECT_URL, and
+// instantiated: prisma.config.ts (migrations) and src/lib/db.ts (runtime, in
+// the spawned server) read DIRECT_URL and DATABASE_URL, and
 // a stale DIRECT_URL from .env.local would otherwise point migrations at
 // production.
 process.env.DATABASE_URL = TEST_DB_URL;
@@ -129,7 +130,9 @@ async function resetTestDatabase(): Promise<void> {
   // `bunx prisma` process; only `migrate deploy` needs the CLI.
   // eslint-disable-next-line @typescript-eslint/no-require-imports
   const { PrismaClient } = require("@prisma/client") as typeof import("@prisma/client");
-  const admin = new PrismaClient({ datasources: { db: { url: TEST_DB_URL } } });
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const { PrismaPg } = require("@prisma/adapter-pg") as typeof import("@prisma/adapter-pg");
+  const admin = new PrismaClient({ adapter: new PrismaPg({ connectionString: TEST_DB_URL }) });
   try {
     await admin.$executeRawUnsafe("DROP SCHEMA IF EXISTS public CASCADE");
     await admin.$executeRawUnsafe("CREATE SCHEMA public");
@@ -215,7 +218,9 @@ export function testDb(): PrismaClient {
     // Lazy require to avoid instantiating before ensureServer reset the DB.
     // eslint-disable-next-line @typescript-eslint/no-require-imports
     const { PrismaClient } = require("@prisma/client") as typeof import("@prisma/client");
-    prismaSingleton = new PrismaClient({ datasources: { db: { url: TEST_DB_URL } } });
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const { PrismaPg } = require("@prisma/adapter-pg") as typeof import("@prisma/adapter-pg");
+    prismaSingleton = new PrismaClient({ adapter: new PrismaPg({ connectionString: TEST_DB_URL }) });
   }
   return prismaSingleton;
 }
