@@ -529,7 +529,7 @@ export const buprenorphine: Drug = {
   faqs: [
     {
       question: "How long does Buprenorphine take to work?",
-      answer: "Withdrawal relief within 30-60 minutes of first sublingual dose (if timed correctly).. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Withdrawal relief within 30-60 minutes of first sublingual dose (if timed correctly).",
     },
     {
       question: "What are the most common side effects of Buprenorphine?",

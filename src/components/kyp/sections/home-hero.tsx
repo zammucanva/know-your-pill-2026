@@ -2,9 +2,9 @@
 
 import * as React from "react";
 import { useRouter } from "next/navigation";
-import { Search, ArrowRight, Sparkles } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Reveal } from "@/components/kyp/ui/reveal";
+import Link from "next/link";
+import { Search, ArrowRight, Sparkles, HeartHandshake, GraduationCap } from "lucide-react";
+import { Button } from "@/components/ui/button";import { Reveal } from "@/components/kyp/ui/reveal";
 import { cn } from "@/lib/utils";
 
 /** Search plumbing is derived from the canonical registries ON THE
@@ -44,19 +44,6 @@ export function HomeHero({
       id="top"
       className="relative min-h-[100svh] overflow-hidden flex flex-col justify-center py-24 sm:py-28"
     >
-      {/* Organic shapes — two overlapping synaptic forms, not three generic blobs */}
-      <div className="pointer-events-none absolute inset-0" aria-hidden>
-        {/* Primary: teal, upper right — the dominant neurotransmitter color */}
-        <div
-          className="absolute right-[0%] top-[5%] h-[55vh] w-[55vh] rounded-full opacity-[0.08] blur-[100px]"
-          style={{ background: "radial-gradient(circle, oklch(0.55 0.11 195), transparent 65%)" }}
-        />
-        {/* Secondary: warm violet, lower left — overlapping, suggesting synaptic crosstalk */}
-        <div
-          className="absolute left-[5%] bottom-[15%] h-[40vh] w-[40vh] rounded-full opacity-[0.06] blur-[90px]"
-          style={{ background: "radial-gradient(circle, oklch(0.58 0.15 290), transparent 65%)" }}
-        />
-      </div>
 
       {/* Content — editorial grid: text column + neuroscience motif column */}
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -141,14 +128,36 @@ export function HomeHero({
               </div>
             </Reveal>
 
+            {/* Two clear starting points, so patients are not dropped into
+                receptor pharmacology and students are not slowed down. */}
             <Reveal delay={0.32}>
-              <div className="mt-10 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs uppercase tracking-[0.12em] text-muted-foreground/50">
-                {["Mechanisms", "Clinical", "Side Effects", "Safety"].map((chip, i) => (
-                  <span key={chip} className="flex items-center gap-4">
-                    {chip}
-                    {i < 3 && <span className="text-muted-foreground/20">/</span>}
+              <div className="mt-10 grid max-w-xl gap-3 sm:grid-cols-2">
+                <Link
+                  href="/medicine"
+                  className="kyp-focus-ring group rounded-2xl border border-border/60 bg-card/70 p-4 transition-colors hover:border-brand/50 hover:bg-card"
+                >
+                  <span className="flex items-center gap-2 text-sm font-semibold text-foreground">
+                    <HeartHandshake className="h-4 w-4 text-brand" aria-hidden />
+                    I&apos;m a patient or caregiver
+                    <ArrowRight className="ml-auto h-3.5 w-3.5 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:text-brand" aria-hidden />
                   </span>
-                ))}
+                  <span className="mt-1.5 block text-xs leading-relaxed text-muted-foreground">
+                    Plain-language guides: what a medicine does, side effects, and when to call a doctor.
+                  </span>
+                </Link>
+                <Link
+                  href="/study"
+                  className="kyp-focus-ring group rounded-2xl border border-border/60 bg-card/70 p-4 transition-colors hover:border-brand/50 hover:bg-card"
+                >
+                  <span className="flex items-center gap-2 text-sm font-semibold text-foreground">
+                    <GraduationCap className="h-4 w-4 text-neural" aria-hidden />
+                    I&apos;m a medical student
+                    <ArrowRight className="ml-auto h-3.5 w-3.5 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:text-brand" aria-hidden />
+                  </span>
+                  <span className="mt-1.5 block text-xs leading-relaxed text-muted-foreground">
+                    Mechanisms, receptor pharmacology, clinical pearls and exam practice.
+                  </span>
+                </Link>
               </div>
             </Reveal>
           </div>

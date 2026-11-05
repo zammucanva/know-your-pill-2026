@@ -31,7 +31,7 @@ import {
 function SettingsSection({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section aria-label={title} className="border-t border-border/50 px-5 py-4 first:border-t-0">
-      <p className="mb-3 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground/70">
+      <p className="mb-3 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
         {title}
       </p>
       <div className="space-y-1">{children}</div>

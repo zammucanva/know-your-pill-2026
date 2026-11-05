@@ -456,7 +456,7 @@ export const tiagabine: Drug = {
   faqs: [
     {
       question: "How long does Tiagabine take to work?",
-      answer: "Seizure adjunct effects within titration.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Seizure adjunct effects within titration.",
     },
     {
       question: "What are the most common side effects of Tiagabine?",

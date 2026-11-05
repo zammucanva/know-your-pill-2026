@@ -511,7 +511,7 @@ export const midazolam: Drug = {
   faqs: [
     {
       question: "How long does Midazolam take to work?",
-      answer: "IV: 1–5 min. IM: 10–15 min. Buccal/intranasal: 5–10 min.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "IV: 1–5 min. IM: 10–15 min. Buccal/intranasal: 5–10 min.",
     },
     {
       question: "What are the most common side effects of Midazolam?",

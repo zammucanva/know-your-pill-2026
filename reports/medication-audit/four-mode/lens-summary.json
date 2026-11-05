@@ -1,0 +1,394 @@
+{
+  "generatedFrom": "scripts/audit-four-mode-coverage.ts (lens contract validation)",
+  "medications": 145,
+  "layers": {
+    "mechanical": {
+      "note": "Contract blocks built, references valid, a distinctive interaction per mode. NOT content quality and NOT clinical approval.",
+      "allBlocksBuilt": 12,
+      "mechanicalOk": 12,
+      "structuralDefects": 0,
+      "modesWithoutDistinctiveInteraction": {
+        "patient": 0,
+        "mbbs": 0,
+        "neetPg": 0,
+        "resident": 0
+      },
+      "unavailableBlocksByKind": {
+        "patient-how-to-take": 133,
+        "urgent-help": 133,
+        "tell-your-doctor": 133,
+        "decision-path": 133,
+        "pitfalls": 133
+      }
+    },
+    "quality": {
+      "note": "Signals only: duplicated sentences, heuristic contradictions, viva items needing review. Absence of a signal is not proof of quality.",
+      "withDuplicateAcrossFields": 133,
+      "withPossibleContradictions": 0,
+      "possibleContradictions": [],
+      "vivaNeedsReview": 2,
+      "medicationsWithSharedFactsAcrossModes": 145
+    },
+    "clinical": {
+      "note": "Approval exists only through a recorded review (REVIEW_RECORDS). Everything else is unreviewed.",
+      "factsApproved": 0,
+      "factsFlagged": 1,
+      "factsReviewRequired": 1182,
+      "factsUnverified": 0,
+      "medicationsWithReviewRequiredFacts": 145
+    }
+  },
+  "interactions": {
+    "note": "Resident interactions block. 'absent' (field missing) is reported separately from 'empty' (explicit empty list); neither means the medicine has no interactions.",
+    "states": {
+      "listed": 145
+    },
+    "records": 596,
+    "incompleteRecords": 0,
+    "bySeverity": {
+      "contraindicated": 130,
+      "major": 276,
+      "moderate": 179,
+      "minor": 11
+    },
+    "recordsPerMedication": {
+      "min": 1,
+      "max": 15
+    }
+  },
+  "patientInteractions": {
+    "note": "Patient wording is existing registry/Patient Guide text shown verbatim. 'template' = the shared lead-in plus a fixed general alcohol sentence (review-required). Nothing is paraphrased or inferred.",
+    "origins": {
+      "authored-guide": 12,
+      "template": 131,
+      "authored-registry": 2
+    },
+    "medicationsWithNames": 145,
+    "medicationsWithoutPatientWording": 0
+  },
+  "patientExplanation": {
+    "note": "Separate measures. Rendering the Patient explanation slot is not content completeness, and content completeness is not clinical approval.",
+    "patientUiSlot": {
+      "medications": 145
+    },
+    "byLevel": {
+      "authored-guide": 12,
+      "registry-specific": 116,
+      "template-only": 17
+    },
+    "source": {
+      "patient-guide": 12,
+      "registry-wording": 133
+    },
+    "documentedUses": {
+      "listed": 145
+    },
+    "sentenceOrigins": {
+      "authored-guide": 115,
+      "registry-specific": 576,
+      "class-shared": 283,
+      "template": 1290
+    },
+    "standardPurposeSentence": {
+      "none": 14,
+      "matches-registry-indication": 131
+    },
+    "clinicallyReviewed": 0,
+    "indiaFirst": {
+      "note": "Separate measures. Never add them into one percentage. Sources are not review; a draft is not approval; rendering is not content.",
+      "medications": 145,
+      "patientUiRenders": 145,
+      "indianSourcesVerified": 0,
+      "indianSourcesUnresolved": 145,
+      "indianSafetyAlertMedications": 18,
+      "usLabelDiscovery": {
+        "candidates-found": 121,
+        "none-found": 24
+      },
+      "medicationsWithRetrievedSource": 130,
+      "medicationsWithSourcedClaims": 130,
+      "claimsWithTraceableSource": 1853,
+      "medicationsWithSourcedOnsetClaim": 21,
+      "onsetScan": {
+        "note": "Screening of US labels for sentences that may state onset. Candidates for a person to read in context; noisy; not claims.",
+        "scanned": 121,
+        "noUsLabel": 24,
+        "withCandidateSentences": 33,
+        "withCandidateSentencesButNoSourcedClaim": 27
+      },
+      "patientGuides": 12,
+      "claimsExactQuote": 456,
+      "guideSectionsSummarised": 233,
+      "medicationsBySourceCountry": {
+        "IN": 5,
+        "none": 15,
+        "SG": 1,
+        "US": 99,
+        "UK": 9,
+        "IE": 2,
+        "IN; UK": 1,
+        "IN; US": 12,
+        "CA": 1
+      },
+      "claimsRestated": 1397,
+      "medicationGuideStatus": {
+        "patient-guide": 12,
+        "non-us-document-used": 53,
+        "us-prescribing-information-used": 38,
+        "medication-guide-found": 34,
+        "no-us-label-found": 8
+      },
+      "parts": {
+        "what": {
+          "authored-guide": 12,
+          "registry-wording": 50,
+          "standard-wording": 10,
+          "source-backed": 73
+        },
+        "uses": {
+          "authored-guide": 12,
+          "source-backed": 102,
+          "info-page-only": 23,
+          "registry-wording": 8
+        },
+        "how": {
+          "authored-guide": 12,
+          "source-backed": 108,
+          "info-page-only": 17,
+          "unavailable": 7,
+          "registry-wording": 1
+        },
+        "precautions": {
+          "authored-guide": 12,
+          "source-backed": 117,
+          "unavailable": 8,
+          "info-page-only": 8
+        },
+        "side-effects": {
+          "authored-guide": 12,
+          "registry-wording": 8,
+          "source-backed": 104,
+          "info-page-only": 18,
+          "safety-alert-only": 2,
+          "standard-wording": 1
+        },
+        "interactions": {
+          "authored-guide": 12,
+          "standard-wording": 11,
+          "source-backed": 118,
+          "info-page-only": 3,
+          "registry-wording": 1
+        },
+        "seek-help": {
+          "authored-guide": 12,
+          "general-direction": 28,
+          "source-backed": 87,
+          "info-page-only": 18
+        },
+        "questions": {
+          "authored-guide": 12,
+          "general-direction": 133
+        },
+        "sources": {
+          "authored-guide": 12,
+          "source-backed": 121,
+          "unavailable": 8,
+          "info-page-only": 4
+        }
+      },
+      "explanationLevel": {
+        "authored-guide": 12,
+        "registry-specific": 116,
+        "template-only": 17
+      },
+      "medicationsWithWithheldSharedClaims": 133,
+      "medicationsWithMissingElements": 120,
+      "readability": {
+        "note": "Automated screening heuristic (Flesch-Kincaid grade, sentence length). Not a comprehension test.",
+        "medicationsAboveGrade10": 109,
+        "medicationsWithLongSentences": 130
+      },
+      "clinicallyReviewed": 0,
+      "indianSourceSearch": {
+        "accessedAt": "2026-10-13",
+        "outcome": "no-indian-product-label-for-any-medication",
+        "organisations": [
+          {
+            "name": "CDSCO (Central Drugs Standard Control Organisation)",
+            "url": "https://cdsco.gov.in/opencms/opencms/en/Home/",
+            "found": "Home page with menus named \"New Drugs\", \"Subsequent New Drugs\", \"Approval\", \"Drugs@CDSCO\", \"Prescribing Information\", \"Alerts\" and \"Adverse Drug Reaction related Notifications\".",
+            "perMedicineRecordsRetrievable": false,
+            "reason": "No per-medicine index was reachable by script. cdscoonline.gov.in returned no readable content without a browser session. No Indian label text was retrieved, so none is claimed."
+          },
+          {
+            "name": "IPC / PvPI (Indian Pharmacopoeia Commission, Pharmacovigilance Programme of India)",
+            "url": "https://www.ipc.gov.in/",
+            "found": "Home page with Indian Pharmacopoeia editions, National Formulary of India and PvPI. The PvPI 'List of Drugs Safety Alerts' PDF (safety signals, not labels) was retrieved and is used for a few side-effect statements.",
+            "perMedicineRecordsRetrievable": false,
+            "reason": "Pharmacopoeial monographs and PvPI publications were not retrieved per medicine. Nothing from them is claimed."
+          }
+        ],
+        "supplementary": {
+          "name": "DailyMed (US FDA labelling)",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/",
+          "use": "Supplementary international evidence only. A US label is not an Indian label."
+        }
+      },
+      "evidenceIntegrityIssues": 0
+    },
+    "sharedWording": {
+      "note": "Standard sentences used across medicines. Claims are withheld from guidance; directions stay visible as standard wording. Nothing here is reviewed.",
+      "rules": [
+        {
+          "id": "onset-works-gradually",
+          "kind": "claim",
+          "category": "onset",
+          "handling": "withheld from guidance",
+          "medications": 131
+        },
+        {
+          "id": "onset-like-every-medicine",
+          "kind": "claim",
+          "category": "onset",
+          "handling": "withheld from guidance",
+          "medications": 13
+        },
+        {
+          "id": "onset-benefit-builds",
+          "kind": "claim",
+          "category": "onset",
+          "handling": "withheld from guidance",
+          "medications": 125
+        },
+        {
+          "id": "onset-do-not-judge",
+          "kind": "claim",
+          "category": "onset",
+          "handling": "withheld from guidance",
+          "medications": 125
+        },
+        {
+          "id": "ae-usually-early-settle",
+          "kind": "claim",
+          "category": "adverse-effects",
+          "handling": "withheld from guidance",
+          "medications": 132
+        },
+        {
+          "id": "ae-almost-always-solution",
+          "kind": "claim",
+          "category": "adverse-effects",
+          "handling": "withheld from guidance",
+          "medications": 132
+        },
+        {
+          "id": "admin-same-time-daily",
+          "kind": "claim",
+          "category": "administration",
+          "handling": "withheld from guidance",
+          "medications": 86
+        },
+        {
+          "id": "contra-allergy-only",
+          "kind": "claim",
+          "category": "contraindication-scope",
+          "handling": "withheld from guidance",
+          "medications": 120
+        },
+        {
+          "id": "dir-contact-urgently",
+          "kind": "direction",
+          "category": "safety-direction",
+          "handling": "shown as standard wording",
+          "medications": 131
+        },
+        {
+          "id": "dir-report-persistent",
+          "kind": "direction",
+          "category": "safety-direction",
+          "handling": "shown as standard wording",
+          "medications": 86
+        },
+        {
+          "id": "dir-do-not-stop-suddenly",
+          "kind": "direction",
+          "category": "safety-direction",
+          "handling": "shown as standard wording",
+          "medications": 103
+        },
+        {
+          "id": "dir-tell-every-doctor",
+          "kind": "direction",
+          "category": "interaction-direction",
+          "handling": "shown as standard wording",
+          "medications": 125
+        },
+        {
+          "id": "dir-tell-everything-you-take",
+          "kind": "direction",
+          "category": "interaction-direction",
+          "handling": "shown as standard wording",
+          "medications": 131
+        },
+        {
+          "id": "dir-avoid-alcohol-unless-safe",
+          "kind": "direction",
+          "category": "interaction-direction",
+          "handling": "shown as standard wording",
+          "medications": 131
+        },
+        {
+          "id": "dir-share-history",
+          "kind": "direction",
+          "category": "interaction-direction",
+          "handling": "shown as standard wording",
+          "medications": 133
+        },
+        {
+          "id": "dir-keep-appointments",
+          "kind": "direction",
+          "category": "monitoring-direction",
+          "handling": "shown as standard wording",
+          "medications": 133
+        }
+      ],
+      "unclassifiedSharedSentences": 0,
+      "medicationsWithAnyWithheldClaim": 133
+    }
+  },
+  "flows": {
+    "note": "What each learning flow has to work with. Counts of authored material only: not a measure of quality or of clinical completeness.",
+    "questions": {
+      "total": 1824,
+      "authoredQuiz": 1644,
+      "stahlBank": 180,
+      "skippedMalformed": 0,
+      "withoutRationale": 0,
+      "perMedication": {
+        "min": 12,
+        "max": 21
+      }
+    },
+    "mbbsExamPrep": {
+      "medications": 145,
+      "practicalTasks": 314,
+      "longAnswerPrompts": 421
+    },
+    "resident": {
+      "withDecisionPath": 12,
+      "withCommonErrors": 12,
+      "boxedWarnings": {
+        "listed": 111,
+        "empty": 34
+      }
+    },
+    "patient": {
+      "howToTakeFromGuide": 12,
+      "sideEffects": {
+        "guide": 12,
+        "registry": 133
+      }
+    }
+  },
+  "structuralDefectList": []
+}

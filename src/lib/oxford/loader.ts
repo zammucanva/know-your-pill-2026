@@ -28,6 +28,9 @@ import type {
 import { normaliseFrontMatter, parseFrontMatter } from "./frontmatter";
 import { parseBlocks, inlineToPlain } from "./markdown";
 
+/** Notes are read in their LF form: a Windows checkout may hold CRLF and the parsers split on line feeds. Content is unchanged. */
+const readText = (path: string): string => readFileSync(path, "utf-8").replace(/\r\n/g, "\n");
+
 /* ─── Canonical location ──────────────────────────────────────────────
  * download/kyp-notes/ is the ONLY canonical note directory. Backups,
  * snapshots and temporary copies must never be read (see the content
@@ -322,7 +325,7 @@ export function loadCorpus(): CorpusModel {
     .sort();
 
   const notes: PsychiatryNote[] = files.map((f) =>
-    parseNote(f.replace(/\.md$/, ""), readFileSync(join(dir, f), "utf-8"))
+    parseNote(f.replace(/\.md$/, ""), readText(join(dir, f)))
   );
 
   const bySlug = new Map<string, PsychiatryNote>();
@@ -333,7 +336,7 @@ export function loadCorpus(): CorpusModel {
     bySlug.set(n.frontmatter.slug, n);
   }
 
-  const indexRaw = readFileSync(join(dir, "00-topic-index.md"), "utf-8");
+  const indexRaw = readText(join(dir, "00-topic-index.md"));
   const groups = parseGroups(indexRaw);
   const groupBySlug = new Map<string, PsychiatryGroup>();
   for (const g of groups) {
