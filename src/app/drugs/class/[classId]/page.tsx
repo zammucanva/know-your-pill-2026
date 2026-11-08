@@ -18,7 +18,7 @@ import {
   getTaxonomyAncestry,
   drugTaxonomyClasses,
   DRUG_TAXONOMY_CATEGORY_HREF,
-  DRUG_TAXONOMY_FAMILY_HREF,
+  drugTaxonomyFamilyHref,
 } from "@/lib/kyp/data";
 import type { Drug } from "@/lib/kyp/data";
 
@@ -169,7 +169,7 @@ export default async function DrugClassPage({
                 links={[
                   "/drugs",
                   DRUG_TAXONOMY_CATEGORY_HREF,
-                  DRUG_TAXONOMY_FAMILY_HREF,
+                  drugTaxonomyFamilyHref(familyName),
                   undefined,
                 ]}
               />

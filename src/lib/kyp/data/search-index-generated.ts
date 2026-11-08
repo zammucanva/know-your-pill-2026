@@ -177,7 +177,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "title": "Antipsychotics",
     "type": "collection",
     "description": "3 classes · 34 medication guides across these classes: Atypical Antipsychotics, Atypical Antipsychotics, Typical Antipsychotics.",
-    "href": "/drugs/#antidepressants",
+    "href": "/drugs/#antipsychotics",
     "keywords": [
       "Antipsychotics",
       "antipsychotics",
@@ -231,7 +231,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "title": "Mood Stabilisers & Anticonvulsants",
     "type": "collection",
     "description": "2 classes · 11 medication guides across these classes: Anticonvulsants, Mood Stabilisers.",
-    "href": "/drugs/#antidepressants",
+    "href": "/drugs/#mood-stabilisers-and-anticonvulsants",
     "keywords": [
       "Mood Stabilisers & Anticonvulsants",
       "mood stabilisers & anticonvulsants",
@@ -259,7 +259,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "title": "Anxiolytics & Sedatives",
     "type": "collection",
     "description": "6 classes · 15 medication guides across these classes: Alpha-1 Blockers, Antihistamines, Azapirones, Benzodiazepines, Benzodiazepine Antagonists, Beta-Blockers.",
-    "href": "/drugs/#antidepressants",
+    "href": "/drugs/#anxiolytics-and-sedatives",
     "keywords": [
       "Anxiolytics & Sedatives",
       "anxiolytics & sedatives",
@@ -303,7 +303,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "title": "Sleep Medicines",
     "type": "collection",
     "description": "4 classes · 13 medication guides across these classes: Benzodiazepine Hypnotics, Orexin Antagonists, Melatonin Agonists, Non-Benzodiazepine Hypnotics.",
-    "href": "/drugs/#antidepressants",
+    "href": "/drugs/#sleep-medicines",
     "keywords": [
       "Sleep Medicines",
       "sleep medicines",
@@ -339,7 +339,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "title": "ADHD Medications",
     "type": "collection",
     "description": "4 classes · 12 medication guides across these classes: Alpha-2 Agonists, NRIs, Stimulants, Wake-Promoting Agents.",
-    "href": "/drugs/#antidepressants",
+    "href": "/drugs/#adhd-medications",
     "keywords": [
       "ADHD Medications",
       "adhd medications",
@@ -374,7 +374,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "title": "Cognitive Enhancers",
     "type": "collection",
     "description": "3 classes · 8 medication guides across these classes: Cholinesterase Inhibitors, Augmentation Agents, NMDA Antagonists.",
-    "href": "/drugs/#antidepressants",
+    "href": "/drugs/#cognitive-enhancers",
     "keywords": [
       "Cognitive Enhancers",
       "cognitive enhancers",
@@ -402,7 +402,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "title": "Substance Use Treatments",
     "type": "collection",
     "description": "1 classes · 7 medication guides across these classes: Alcohol Dependence Treatments.",
-    "href": "/drugs/#antidepressants",
+    "href": "/drugs/#substance-use-treatments",
     "keywords": [
       "Substance Use Treatments",
       "substance use treatments",
@@ -423,7 +423,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "title": "Specialised Agents",
     "type": "collection",
     "description": "5 classes · 8 medication guides across these classes: Anticholinergics, Libido Enhancers, NMDA Antagonists, Narcolepsy Agents, Weight Management Agents.",
-    "href": "/drugs/#antidepressants",
+    "href": "/drugs/#specialised-agents",
     "keywords": [
       "Specialised Agents",
       "specialised agents",
