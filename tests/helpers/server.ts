@@ -12,7 +12,7 @@
  *     CI Postgres service (postgresql://postgres:postgres@127.0.0.1:5432/kyp_test)
  *   - SESSION_SECRET is a fixed TEST-ONLY secret (never a production value)
  *   - NODE_ENV=production so Secure-cookie behavior is exercised
- *   - PORT 3101 (test-only port)
+ *   - PORT 3101 by default; KYP_TEST_PORT overrides it (test-only port)
  */
 
 import { setDefaultTimeout } from "bun:test";
@@ -29,7 +29,7 @@ import type { PrismaClient } from "@prisma/client";
 // exceeds Bun's 5s default. Applies to every file that imports this helper.
 setDefaultTimeout(60_000);
 
-export const TEST_PORT = 3101;
+export const TEST_PORT = Number(process.env.KYP_TEST_PORT ?? 3101);
 export const BASE_URL = `http://localhost:${TEST_PORT}`;
 /** Fixed test-only session secret (32+ chars). NEVER a production value. */
 export const TEST_SESSION_SECRET =
@@ -75,6 +75,53 @@ const DB_ENV = { DATABASE_URL: TEST_DB_URL, DIRECT_URL: TEST_DB_URL };
 
 let serverProc: ReturnType<typeof spawn> | null = null;
 let serverReady = false;
+
+/** Stop the test server this harness spawned (idempotent; only ever our own
+ * child process — never anything matched by name or port). */
+export function stopServer(): void {
+  if (serverProc && serverProc.exitCode === null) {
+    try {
+      serverProc.kill("SIGTERM");
+    } catch {
+      // Racing a natural exit — nothing left to stop.
+    }
+  }
+}
+
+/**
+ * Ensure the spawned server cannot outlive the test process.
+ *
+ * Regression history: the server used to be spawned and NEVER stopped, so
+ * every completed or interrupted `bun test` run leaked an orphan
+ * `next-server` (reparented to init) still holding the test port, which
+ * made the NEXT local run fail with "port already in use". Hosted CI never
+ * saw it because runner VMs are destroyed after the job. We now stop our
+ * own child on normal exit and on the signals that abort a run. A foreign
+ * listener on the port is still refused loudly (assertPortFree), never
+ * killed.
+ */
+function installServerStopHooks(): void {
+  if (installServerStopHooks.installed) return;
+  installServerStopHooks.installed = true;
+  // bun-types narrows the typed event surface of `process` to
+  // "memoryPressure" only, so these registrations go through a minimal
+  // structural type. At runtime Bun (like Node) delivers the exit event
+  // and SIGINT/SIGTERM to these handlers.
+  const processEvents = process as unknown as {
+    on: (event: string, listener: () => void) => void;
+    once: (event: string, listener: () => void) => void;
+  };
+  processEvents.on("exit", stopServer);
+  processEvents.once("SIGINT", () => {
+    stopServer();
+    process.exit(130); // 128 + SIGINT — the conventional exit status
+  });
+  processEvents.once("SIGTERM", () => {
+    stopServer();
+    process.exit(143); // 128 + SIGTERM
+  });
+}
+installServerStopHooks.installed = false;
 
 /** Throws if something is already listening on the test port, so the tests can never talk to a stale or foreign server. */
 async function assertPortFree(port: number): Promise<void> {
@@ -182,6 +229,9 @@ export async function ensureServer(): Promise<string> {
     }
     serverReady = false;
   });
+  // Never leak the server: stop our own child when this process ends,
+  // however it ends (see installServerStopHooks).
+  installServerStopHooks();
   // Fail fast if our spawn dies (e.g. port conflict) instead of silently
   // talking to some other process.
   const pollStarted = Date.now();

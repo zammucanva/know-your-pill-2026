@@ -1,0 +1,8 @@
+# Bun test configuration.
+#
+# The preload file registers the global end-of-run hook that stops the test
+# server (see tests/preload.ts). Without it, `bun test` completes via a hard
+# exit that does NOT run process.on("exit") handlers, which is how the
+# server used to leak as an orphan holding the test port.
+[test]
+preload = ["./tests/preload.ts"]
