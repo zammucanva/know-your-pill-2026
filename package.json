@@ -67,6 +67,7 @@
   },
   "overrides": {
     "@grpc/grpc-js": "^1.14.5",
+    "deepmerge-ts": "^8.0.2",
     "source-map-js": "^1.2.2"
   }
 }
