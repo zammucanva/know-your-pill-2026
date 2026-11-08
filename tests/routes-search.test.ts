@@ -19,6 +19,7 @@
 
 import { beforeAll, describe, expect, test } from "bun:test";
 import { BASE_URL, ensureServer } from "./helpers/server";
+import { drugTaxonomy, familyAnchorId } from "../src/lib/kyp/data/drug-taxonomy";
 
 // Top-level import — the index is static data; iterating it at module
 // scope registers one link-check test per entry.
@@ -60,7 +61,19 @@ describe("routes/search — route behavior (7)", () => {
     const res = await fetch(`${BASE_URL}/drugs`);
     const html = await res.text();
     expect(html).toMatch(/id="psychiatry"/);
-    expect(html).toMatch(/id="antidepressants"/);
+    // Regression (2026-11-09): every family section used to render the SAME
+    // id="antidepressants" — invalid HTML, and every family breadcrumb
+    // ("Sleep Medicines", …) jumped to the Antidepressants section. Each
+    // family must now own its anchor, exactly once.
+    const families = drugTaxonomy.flatMap((c) => c.families.map((f) => f.name));
+    expect(families.length).toBeGreaterThanOrEqual(9);
+    for (const name of families) {
+      const anchor = familyAnchorId(name);
+      const count = (html.match(new RegExp(`id="${anchor}"`, "g")) ?? []).length;
+      expect(`family "${name}" anchor #${anchor} count=${count}`).toBe(
+        `family "${name}" anchor #${anchor} count=1`
+      );
+    }
   });
 
   test("drug pages serve HTML content type", async () => {

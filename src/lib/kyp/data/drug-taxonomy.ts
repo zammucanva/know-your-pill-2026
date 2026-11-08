@@ -32,8 +32,35 @@ import type { Drug } from "./types";
 /** Section anchor for the (single) Psychiatry category on /drugs/. */
 export const DRUG_TAXONOMY_CATEGORY_HREF = "/drugs/#psychiatry";
 
-/** Section anchor for the (single) Antidepressants family on /drugs/. */
-export const DRUG_TAXONOMY_FAMILY_HREF = "/drugs/#antidepressants";
+/**
+ * URL-safe section anchor id for a taxonomy family, derived from its name.
+ *
+ * "Antidepressants" → "antidepressants" — the historical anchor, so
+ * existing deep links keep resolving; "Sleep Medicines" →
+ * "sleep-medicines"; "Mood Stabilisers & Anticonvulsants" →
+ * "mood-stabilisers-and-anticonvulsants".
+ */
+export function familyAnchorId(familyName: string): string {
+  return familyName
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+/**
+ * Section anchor on /drugs/ for ONE family.
+ *
+ * History: this used to be a single constant (#antidepressants) from the
+ * era when the taxonomy had one family. The registry now has nine, and
+ * every family section on /drugs/ rendered the SAME
+ * id="antidepressants" — invalid HTML, and every drug-page family
+ * breadcrumb ("Sleep Medicines", "ADHD Medications", …) jumped to the
+ * Antidepressants section. Each family now anchors to its own section.
+ */
+export function drugTaxonomyFamilyHref(familyName: string): string {
+  return `/drugs/#${familyAnchorId(familyName)}`;
+}
 
 /** URL-safe collection id for a medication class, derived from its registry label. */
 // Pure label→id transform lives in ./class-id.ts (zero data imports)
@@ -175,10 +202,10 @@ export function getAllTaxonomyClassIds(): string[] {
  */
 export function learningPathLinks(drug: Drug): Array<string | undefined> {
   const classId = drugClassIdFromLabel(drug.drugClassLabel);
-  return drug.learningPath.map((_segment, i) => {
+  return drug.learningPath.map((segment, i) => {
     if (i === drug.learningPath.length - 1) return undefined; // current page
     if (i === 0) return DRUG_TAXONOMY_CATEGORY_HREF;
-    if (i === 1) return DRUG_TAXONOMY_FAMILY_HREF;
+    if (i === 1) return drugTaxonomyFamilyHref(segment);
     if (i === 2) return `/drugs/class/${classId}`;
     return undefined;
   });

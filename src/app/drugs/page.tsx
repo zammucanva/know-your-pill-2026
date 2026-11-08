@@ -13,6 +13,7 @@ import {
   drugs,
   drugTaxonomy,
   drugClassIdFromLabel,
+  familyAnchorId,
   taxonomyCategoryMedicationCount,
   taxonomyFamilyMedicationCount,
 } from "@/lib/kyp/data";
@@ -162,7 +163,7 @@ export default function MedicationLibraryPage() {
               </Reveal>
 
               {category.families.map((family) => (
-                <div key={family.name} id="antidepressants">
+                <div key={family.name} id={familyAnchorId(family.name)}>
                   <Reveal>
                     <h2
                       className="font-serif font-semibold tracking-[-0.02em] text-foreground"

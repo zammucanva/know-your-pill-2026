@@ -14,7 +14,7 @@ import {
   taxonomyCategoryMedicationCount,
   taxonomyFamilyMedicationCount,
   DRUG_TAXONOMY_CATEGORY_HREF,
-  DRUG_TAXONOMY_FAMILY_HREF,
+  drugTaxonomyFamilyHref,
 } from "./drug-taxonomy";
 
 /**
@@ -57,7 +57,7 @@ export const searchIndex: SearchableItem[] = [
       title: family.name,
       type: "collection" as const,
       description: `${family.classes.length} classes · ${taxonomyFamilyMedicationCount(family)} medication guides across these classes: ${family.classes.map((c) => c.label).join(", ")}.`,
-      href: DRUG_TAXONOMY_FAMILY_HREF,
+      href: drugTaxonomyFamilyHref(family.name),
       keywords: [
         family.name,
         family.name.toLowerCase(),
