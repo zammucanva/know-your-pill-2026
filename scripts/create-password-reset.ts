@@ -9,8 +9,8 @@
  *              e.g. https://kyp.example.com (default: http://localhost:3000)
  *
  * Environment:
- *   DATABASE_URL — SQLite file URL of the target database.
- *                  Defaults to the repository's db/custom.db.
+ *   DATABASE_URL — PostgreSQL connection URL of the target database
+ *                  (required; the schema is PostgreSQL).
  *
  * SECURITY NOTES:
  *   - This is the VERIFIED OPERATOR PROCESS for password reset delivery while
@@ -30,14 +30,11 @@
  */
 
 import { randomBytes, createHash } from "crypto";
-import { resolve } from "path";
 import { PrismaClient } from "@prisma/client";
+import { PrismaPg } from "@prisma/adapter-pg";
 import { redactDatabaseUrl } from "../src/lib/kyp/redact-url";
 
 const RESET_TTL_MINUTES = 30;
-
-const repoRoot = resolve(import.meta.dir, "..");
-const DEFAULT_DB_URL = `file:${repoRoot}/db/custom.db`;
 
 const emailArg = process.argv[2];
 if (!emailArg) {
@@ -47,9 +44,13 @@ if (!emailArg) {
 const origin = process.argv[3] || process.env.KYP_ORIGIN || "http://localhost:3000";
 
 const normalizedEmail = emailArg.toLowerCase().trim();
-const dbUrl = process.env.DATABASE_URL || DEFAULT_DB_URL;
+const dbUrl = process.env.DATABASE_URL;
+if (!dbUrl) {
+  console.error("DATABASE_URL is not set. Point it at the PostgreSQL database to use.");
+  process.exit(1);
+}
 
-const prisma = new PrismaClient({ datasources: { db: { url: dbUrl } } });
+const prisma = new PrismaClient({ adapter: new PrismaPg({ connectionString: dbUrl }) });
 
 async function main() {
   const user = await prisma.user.findUnique({
