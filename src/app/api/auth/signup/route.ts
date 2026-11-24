@@ -123,6 +123,14 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    // Bound free-text inputs so oversized values cannot bloat storage.
+    if (name.trim().length === 0 || name.length > 100 || email.length > 254) {
+      return NextResponse.json(
+        { error: "Please enter a valid name (up to 100 characters) and email address" },
+        { status: 400 }
+      );
+    }
+
     // Unified password policy (8–128) — shared with change/reset.
     const policy = validatePasswordPolicy(password, { subject: "Password" });
     if (!policy.ok) {

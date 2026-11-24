@@ -1,5 +1,5 @@
 import { logger } from "@/lib/logger";
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse, after } from "next/server";
 
 // Dynamic route — database access (and the response must never be cached).
 export const dynamic = "force-dynamic";
@@ -80,20 +80,27 @@ export async function POST(req: NextRequest) {
     // Count the request (identically for known and unknown emails).
     await recordLoginFailure(`reset:${normalizedEmail}`, source);
 
-    // Silent token creation — the response never differs.
-    const user = await db.user.findUnique({
-      where: { email: normalizedEmail },
-      select: { id: true, email: true, name: true },
-    });
-    if (user) {
-      const reset = await createPasswordResetToken(user.id, source);
+    // Silent token creation. The lookup, token write and email send run AFTER
+    // the response is sent, so response time is identical for registered and
+    // unregistered emails (an in-request email send would be a timing oracle).
+    after(async () => {
       try {
-        await sendPasswordResetEmail({ to: user.email, name: user.name, token: reset.raw, expiresAt: reset.expiresAt });
+        const user = await db.user.findUnique({
+          where: { email: normalizedEmail },
+          select: { id: true, email: true, name: true },
+        });
+        if (!user) return;
+        const reset = await createPasswordResetToken(user.id, source);
+        try {
+          await sendPasswordResetEmail({ to: user.email, name: user.name, token: reset.raw, expiresAt: reset.expiresAt });
+        } catch (error) {
+          await invalidatePasswordResetToken(reset.raw);
+          logger.error("Password reset email delivery failed", error);
+        }
       } catch (error) {
-        await invalidatePasswordResetToken(reset.raw);
-        logger.error("Password reset email delivery failed", error);
+        logger.error("Password reset background task failed", error);
       }
-    }
+    });
 
     return NextResponse.json(GENERIC_RESPONSE);
   } catch (error) {

@@ -4,6 +4,7 @@ import { db } from "@/lib/db";
 import { createSessionForUser, setSessionCookie } from "@/lib/session";
 import { isSessionSecretConfigured } from "@/lib/session-secret";
 import { logger } from "@/lib/logger";
+import { isTrustedGoogleIdentity } from "@/lib/google-identity";
 
 export const dynamic = "force-dynamic";
 
@@ -45,9 +46,19 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Invalid or expired Google token" }, { status: 401 });
     }
 
-    const { uid, email, name, email_verified } = decoded;
+    const { uid, email, name } = decoded;
     if (!email) {
       return NextResponse.json({ error: "Google account has no email address" }, { status: 400 });
+    }
+
+    // Account-takeover guard: the Firebase API key is public, so a token can
+    // belong to a Firebase account with an unverified, attacker-chosen email.
+    // Only a verified email linked to the Google provider may sign in here.
+    if (!isTrustedGoogleIdentity(decoded)) {
+      return NextResponse.json(
+        { error: "Your Google account email must be verified to sign in" },
+        { status: 401 }
+      );
     }
 
     const normalizedEmail = email.toLowerCase().trim();
@@ -64,7 +75,7 @@ export async function POST(req: NextRequest) {
           email: normalizedEmail,
           name: name ?? normalizedEmail.split("@")[0],
           passwordHash: "",
-          emailVerified: email_verified ?? false,
+          emailVerified: true,
           provider: "google",
           providerAccountId: uid,
         },

@@ -45,7 +45,12 @@ export default function ResetPasswordPage() {
     }
     const params = new URLSearchParams(window.location.search);
     const t = params.get("token");
-    if (t) setToken(t);
+    if (t) {
+      setToken(t);
+      // Remove the one-time token from the address bar and history so it is
+      // not left in browser history, screenshots or shared links.
+      window.history.replaceState(null, "", window.location.pathname);
+    }
   }, []);
 
   const canSubmit =

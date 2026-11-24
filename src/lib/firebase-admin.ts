@@ -12,6 +12,7 @@ export async function verifyFirebaseToken(idToken: string): Promise<{
   email: string | undefined;
   name: string | undefined;
   email_verified: boolean;
+  providers: string[];
 }> {
   const apiKey = process.env.NEXT_PUBLIC_FIREBASE_API_KEY;
   if (!apiKey) throw new Error("NEXT_PUBLIC_FIREBASE_API_KEY is not configured");
@@ -39,6 +40,7 @@ export async function verifyFirebaseToken(idToken: string): Promise<{
       email?: string;
       displayName?: string;
       emailVerified?: boolean;
+      providerUserInfo?: Array<{ providerId?: string }>;
     }>;
   };
 
@@ -50,5 +52,8 @@ export async function verifyFirebaseToken(idToken: string): Promise<{
     email: user.email,
     name: user.displayName,
     email_verified: user.emailVerified ?? false,
+    providers: (user.providerUserInfo ?? [])
+      .map((p) => p.providerId)
+      .filter((p): p is string => typeof p === "string"),
   };
 }

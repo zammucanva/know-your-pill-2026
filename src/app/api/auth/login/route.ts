@@ -4,6 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 // This route must be dynamic — it reads/writes cookies and queries the database.
 export const dynamic = "force-dynamic";
 import { db } from "@/lib/db";
+import { rejectCrossOrigin } from "@/lib/same-origin";
 import bcrypt from "bcryptjs";
 import {
   checkLoginAllowed,
@@ -40,6 +41,8 @@ const DUMMY_BCRYPT_HASH =
   "$2b$12$6Qw/vvDS/r.1h76sjDs0j.i20uFJ.9SnBf4enrV6C48yBCktW2l2a";
 
 export async function POST(req: NextRequest) {
+  const crossOrigin = rejectCrossOrigin(req);
+  if (crossOrigin) return crossOrigin;
   if (!isSessionSecretConfigured()) {
     // Fail closed — authentication cannot operate without the session secret.
     return NextResponse.json(
