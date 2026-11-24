@@ -4,7 +4,7 @@ import * as React from "react";
 import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 import {
-  ArrowUpRight, KeyRound, Loader2, LogOut, RotateCcw, ShieldCheck, UserRound, X,
+  ArrowUpRight, KeyRound, Loader2, LogOut, RotateCcw, ShieldCheck, Trash2, UserRound, X,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -217,6 +217,13 @@ export function SettingsDrawer({
 
   const [signingOut, setSigningOut] = React.useState(false);
 
+  // Permanent account deletion (typed confirmation + password when set).
+  const [showDelete, setShowDelete] = React.useState(false);
+  const [deletePassword, setDeletePassword] = React.useState("");
+  const [deleteConfirm, setDeleteConfirm] = React.useState("");
+  const [deleteError, setDeleteError] = React.useState("");
+  const [deleteBusy, setDeleteBusy] = React.useState(false);
+
   React.useEffect(() => {
     if (!open) return;
     openerRef.current = document.activeElement;
@@ -281,6 +288,30 @@ export function SettingsDrawer({
       setSecurityError("Network error: please try again.");
     } finally {
       setSecurityBusy(false);
+    }
+  };
+
+  const deleteAccount = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (deleteBusy || deleteConfirm !== "DELETE") return;
+    setDeleteError("");
+    setDeleteBusy(true);
+    try {
+      const res = await fetch("/api/auth/account", {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ confirm: deleteConfirm, password: deletePassword || undefined }),
+      });
+      const data = (await res.json().catch(() => ({}))) as { error?: string };
+      if (!res.ok) {
+        setDeleteError(data.error || "Failed to delete account. Please try again.");
+        return;
+      }
+      router.push("/welcome");
+    } catch {
+      setDeleteError("Network error: please try again.");
+    } finally {
+      setDeleteBusy(false);
     }
   };
 
@@ -507,6 +538,51 @@ export function SettingsDrawer({
             </div>
 
             <div className="pt-1">
+              <button
+                type="button"
+                onClick={() => setShowDelete((v) => !v)}
+                aria-expanded={showDelete}
+                className="flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-left text-sm text-emergency transition-colors hover:bg-emergency-soft/40"
+              >
+                <Trash2 className="h-4 w-4" />
+                Delete account
+              </button>
+              {showDelete && (
+                <form onSubmit={deleteAccount} className="mt-2 space-y-3 px-2.5 pb-2">
+                  <p className="text-xs leading-relaxed text-muted-foreground">
+                    This permanently deletes your account, progress, bookmarks and search history. It cannot be undone.
+                  </p>
+                  <div>
+                    <Label htmlFor="dash-delete-password" className="text-xs">Password (if you set one)</Label>
+                    <Input
+                      id="dash-delete-password"
+                      type="password"
+                      value={deletePassword}
+                      onChange={(e) => setDeletePassword(e.target.value)}
+                      autoComplete="current-password"
+                      className="mt-1 h-10 rounded-xl"
+                    />
+                  </div>
+                  <div>
+                    <Label htmlFor="dash-delete-confirm" className="text-xs">Type DELETE to confirm</Label>
+                    <Input
+                      id="dash-delete-confirm"
+                      value={deleteConfirm}
+                      onChange={(e) => setDeleteConfirm(e.target.value)}
+                      autoComplete="off"
+                      className="mt-1 h-10 rounded-xl"
+                    />
+                  </div>
+                  {deleteError && (
+                    <p className="rounded-lg border border-emergency/30 bg-emergency-soft/20 px-3 py-2 text-xs text-emergency" role="alert">
+                      {deleteError}
+                    </p>
+                  )}
+                  <Button type="submit" size="sm" variant="destructive" className="rounded-xl" disabled={deleteBusy || deleteConfirm !== "DELETE"}>
+                    {deleteBusy ? <Loader2 className="h-4 w-4 animate-spin" /> : "Permanently delete account"}
+                  </Button>
+                </form>
+              )}
               <button
                 type="button"
                 onClick={signOut}

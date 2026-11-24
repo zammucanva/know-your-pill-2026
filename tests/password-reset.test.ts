@@ -25,6 +25,16 @@ import {
 } from "./helpers/server";
 
 const FORGOT_URL = `${BASE_URL}/api/auth/password/forgot`;
+
+/** Poll for background-created reset tokens (forgot work runs after the response). */
+async function waitForTokenRows(userId: string, count: number) {
+  let rows = await testDb().passwordResetToken.findMany({ where: { userId } });
+  for (let i = 0; i < 50 && rows.length < count; i++) {
+    await new Promise((r) => setTimeout(r, 100));
+    rows = await testDb().passwordResetToken.findMany({ where: { userId } });
+  }
+  return rows;
+}
 const RESET_URL = `${BASE_URL}/api/auth/password/reset`;
 const CHANGE_URL = `${BASE_URL}/api/auth/password/change`;
 
@@ -142,9 +152,8 @@ describe("password reset requests", () => {
   test("6. a token row is created (hash-only, never the raw token)", async () => {
     const user = await createTestUser("forgot", 6);
     await postJson(FORGOT_URL, { email: user.email }, { "x-forwarded-for": SRC_FORGOT });
-    const rows = await testDb().passwordResetToken.findMany({
-      where: { userId: user.userId },
-    });
+    // Token creation runs after the response (timing-oracle fix): poll for it.
+    const rows = await waitForTokenRows(user.userId, 1);
     expect(rows.length).toBe(1);
     // Stored value is a sha256 hex digest of the raw token — 64 hex chars,
     // never the raw token itself.
@@ -156,11 +165,19 @@ describe("password reset requests", () => {
   test("7. a second request invalidates the previous token", async () => {
     const user = await createTestUser("forgot", 7);
     await postJson(FORGOT_URL, { email: user.email }, { "x-forwarded-for": SRC_FORGOT });
+    const first = await waitForTokenRows(user.userId, 1);
     await postJson(FORGOT_URL, { email: user.email }, { "x-forwarded-for": SRC_FORGOT });
-    const outstanding = await testDb().passwordResetToken.findMany({
-      where: { userId: user.userId, usedAt: null },
-    });
+    // Wait until the second background task has replaced the first token.
+    let outstanding = first;
+    for (let i = 0; i < 50; i++) {
+      outstanding = await testDb().passwordResetToken.findMany({
+        where: { userId: user.userId, usedAt: null },
+      });
+      if (outstanding.length === 1 && outstanding[0].id !== first[0].id) break;
+      await new Promise((r) => setTimeout(r, 100));
+    }
     expect(outstanding.length).toBe(1);
+    expect(outstanding[0].id).not.toBe(first[0].id);
   });
 
   test("8. repeated requests are rate limited identically for known and unknown emails", async () => {

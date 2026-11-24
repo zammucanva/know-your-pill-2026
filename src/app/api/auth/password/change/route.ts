@@ -5,6 +5,7 @@ import { NextRequest, NextResponse } from "next/server";
 export const dynamic = "force-dynamic";
 import bcrypt from "bcryptjs";
 import { db } from "@/lib/db";
+import { rejectCrossOrigin } from "@/lib/same-origin";
 import { validatePasswordPolicy } from "@/lib/password-policy";
 import {
   checkLoginAllowed,
@@ -43,6 +44,8 @@ import {
  */
 
 export async function POST(req: NextRequest) {
+  const crossOrigin = rejectCrossOrigin(req);
+  if (crossOrigin) return crossOrigin;
   const session = await resolveSessionFromCookie();
   if (!session) {
     return NextResponse.json({ error: "Not authenticated" }, { status: 401 });

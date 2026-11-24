@@ -2,6 +2,7 @@ import { logger } from "@/lib/logger";
 import { NextRequest, NextResponse } from "next/server";
 export const dynamic = "force-dynamic";
 import { db } from "@/lib/db";
+import { rejectCrossOrigin } from "@/lib/same-origin";
 import { getSessionUser } from "@/lib/auth";
 
 const VALID_LEARNER_TYPES = [
@@ -17,6 +18,8 @@ const VALID_LEARNER_TYPES = [
 ] as const;
 
 export async function POST(req: NextRequest) {
+  const crossOrigin = rejectCrossOrigin(req);
+  if (crossOrigin) return crossOrigin;
   try {
     const user = await getSessionUser();
     if (!user) return NextResponse.json({ error: "Not authenticated" }, { status: 401 });

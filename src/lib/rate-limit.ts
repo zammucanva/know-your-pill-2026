@@ -248,26 +248,26 @@ export async function recordLoginFailure(
       continue;
     }
 
-    const failureCount = existing.failureCount + 1;
-    const data: {
-      failureCount: number;
-      lastFailureAt: Date;
-      lockoutUntil?: Date;
-      escalationLevel?: number;
-    } = { failureCount, lastFailureAt: now };
+    // Atomic increment: concurrent failures each count exactly once (a
+    // read-then-write here would let a parallel burst undercount).
+    const updated = await db.loginAttempt.update({
+      where: { id: existing.id },
+      data: { failureCount: { increment: 1 }, lastFailureAt: now },
+      select: { failureCount: true, escalationLevel: true },
+    });
 
-    if (failureCount >= key.maxFailures) {
-      const level = existing.escalationLevel;
-      data.lockoutUntil = new Date(now.getTime() + lockoutDuration(level));
+    if (updated.failureCount >= key.maxFailures) {
+      const level = updated.escalationLevel;
       // Escalation only grows while the attacker keeps failing within/after
       // lockouts, and the duration is capped at maxLockoutMs.
-      data.escalationLevel = Math.min(level + 1, 10);
+      await db.loginAttempt.update({
+        where: { id: existing.id },
+        data: {
+          lockoutUntil: new Date(now.getTime() + lockoutDuration(level)),
+          escalationLevel: Math.min(level + 1, 10),
+        },
+      });
     }
-
-    await db.loginAttempt.update({
-      where: { id: existing.id },
-      data,
-    });
   }
 }
 
@@ -457,23 +457,22 @@ export async function recordSignupAttempt(
       continue;
     }
 
-    const attemptCount = existing.failureCount + 1;
-    const data: {
-      failureCount: number;
-      lastFailureAt: Date;
-      lockoutUntil?: Date;
-      escalationLevel?: number;
-    } = { failureCount: attemptCount, lastFailureAt: now };
-
-    if (attemptCount >= key.maxAttempts) {
-      const level = existing.escalationLevel;
-      data.lockoutUntil = new Date(now.getTime() + signupLockoutDuration(level));
-      data.escalationLevel = Math.min(level + 1, 10);
-    }
-
-    await db.loginAttempt.update({
+    // Atomic increment (see recordLoginFailure).
+    const updated = await db.loginAttempt.update({
       where: { id: existing.id },
-      data,
+      data: { failureCount: { increment: 1 }, lastFailureAt: now },
+      select: { failureCount: true, escalationLevel: true },
     });
+
+    if (updated.failureCount >= key.maxAttempts) {
+      const level = updated.escalationLevel;
+      await db.loginAttempt.update({
+        where: { id: existing.id },
+        data: {
+          lockoutUntil: new Date(now.getTime() + signupLockoutDuration(level)),
+          escalationLevel: Math.min(level + 1, 10),
+        },
+      });
+    }
   }
 }
