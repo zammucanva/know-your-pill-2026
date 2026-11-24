@@ -6,11 +6,13 @@ export const dynamic = "force-dynamic";
 import bcrypt from "bcryptjs";
 import { db } from "@/lib/db";
 import { rejectCrossOrigin } from "@/lib/same-origin";
+import { PASSWORD_INPUT_MAX_LENGTH } from "@/lib/input-validation";
 import { validatePasswordPolicy } from "@/lib/password-policy";
 import {
-  checkLoginAllowed,
+  claimLoginAttempt,
   getClientSource,
   recordLoginFailure,
+  recordLoginSuccess,
 } from "@/lib/rate-limit";
 import {
   createSessionForUser,
@@ -64,7 +66,8 @@ export async function POST(req: NextRequest) {
       newPassword?: unknown;
     };
     if (typeof currentPassword !== "string" || typeof newPassword !== "string" ||
-        currentPassword.length === 0 || newPassword.length === 0) {
+        currentPassword.length === 0 || newPassword.length === 0 ||
+        currentPassword.length > PASSWORD_INPUT_MAX_LENGTH || newPassword.length > PASSWORD_INPUT_MAX_LENGTH) {
       return NextResponse.json(
         { error: "Current password and new password are required" },
         { status: 400 }
@@ -73,7 +76,7 @@ export async function POST(req: NextRequest) {
 
     const source = getClientSource(req);
     const limitKey = `change:${session.userId}`;
-    const decision = await checkLoginAllowed(limitKey, source);
+    const decision = await claimLoginAttempt(limitKey, source);
     if (!decision.allowed) {
       return NextResponse.json(
         { error: "Too many attempts. Please try again later." },
@@ -95,12 +98,14 @@ export async function POST(req: NextRequest) {
 
     const valid = await bcrypt.compare(currentPassword, user.passwordHash);
     if (!valid) {
-      await recordLoginFailure(limitKey, source);
+      await recordLoginFailure(limitKey, source, { sourceOnly: true });
       return NextResponse.json(
         { error: "Current password is incorrect" },
         { status: 401 }
       );
     }
+
+    await recordLoginSuccess(limitKey, source);
 
     // Only validate the replacement password after proving control of the
     // current password. This prevents an unauthenticated/wrong-credential

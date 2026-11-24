@@ -144,10 +144,6 @@ function dimensions(identifier: string, source: string) {
   ];
 }
 
-function isWindowStale(windowStart: Date): boolean {
-  return Date.now() - windowStart.getTime() >= RATE_LIMIT_CONFIG.windowMs;
-}
-
 function lockoutDuration(level: number): number {
   const escalated = RATE_LIMIT_CONFIG.baseLockoutMs * Math.pow(2, level);
   return Math.min(escalated, RATE_LIMIT_CONFIG.maxLockoutMs);
@@ -200,73 +196,22 @@ export async function checkLoginAllowed(
  */
 export async function recordLoginFailure(
   identifier: string,
-  source: string
+  source: string,
+  options: { sourceOnly?: boolean } = {}
 ): Promise<void> {
-  const now = new Date();
-  const keys = dimensions(identifier, source);
+  // When the attempt was already counted up front by claimLoginAttempt (the
+  // account dimensions), only the source-wide spraying counter is added here.
+  const all = dimensions(identifier, source);
+  const keys = options.sourceOnly ? all.slice(2) : all;
 
   for (const key of keys) {
-    const existing = await db.loginAttempt.findUnique({
-      where: {
-        identifierHash_sourceHash: {
-          identifierHash: key.identifierHash,
-          sourceHash: key.sourceHash,
-        },
-      },
-    });
-
-    if (!existing) {
-      await db.loginAttempt.create({
-        data: {
-          identifierHash: key.identifierHash,
-          sourceHash: key.sourceHash,
-          failureCount: 1,
-          windowStart: now,
-          lastFailureAt: now,
-        },
-      });
-      continue;
-    }
-
-    // Window expired? Start a fresh window at 1 failure.
-    if (isWindowStale(existing.windowStart)) {
-      await db.loginAttempt.update({
-        where: { id: existing.id },
-        data: {
-          failureCount: 1,
-          windowStart: now,
-          lastFailureAt: now,
-          // A brand-new window keeps prior escalation memory only if the
-          // previous lockout lapsed recently; after it expires the level
-          // decays back down automatically.
-          escalationLevel: existing.lockoutUntil && existing.lockoutUntil > now
-            ? existing.escalationLevel
-            : Math.max(0, existing.escalationLevel - 1),
-          lockoutUntil: null,
-        },
-      });
-      continue;
-    }
-
-    // Atomic increment: concurrent failures each count exactly once (a
-    // read-then-write here would let a parallel burst undercount).
-    const updated = await db.loginAttempt.update({
-      where: { id: existing.id },
-      data: { failureCount: { increment: 1 }, lastFailureAt: now },
-      select: { failureCount: true, escalationLevel: true },
-    });
-
-    if (updated.failureCount >= key.maxFailures) {
-      const level = updated.escalationLevel;
+    // Atomic, race-safe counting (concurrent first failures cannot collide on
+    // the unique row, and concurrent failures each count exactly once).
+    const row = await bumpCounter(key.identifierHash, key.sourceHash, RATE_LIMIT_CONFIG.windowMs);
+    if (row.failureCount >= key.maxFailures) {
       // Escalation only grows while the attacker keeps failing within/after
       // lockouts, and the duration is capped at maxLockoutMs.
-      await db.loginAttempt.update({
-        where: { id: existing.id },
-        data: {
-          lockoutUntil: new Date(now.getTime() + lockoutDuration(level)),
-          escalationLevel: Math.min(level + 1, 10),
-        },
-      });
+      await tryTakeLockout(row, lockoutDuration(row.escalationLevel));
     }
   }
 }
@@ -475,4 +420,140 @@ export async function recordSignupAttempt(
       });
     }
   }
+}
+
+// ─── Atomic claim (closes the check-then-act race) ─────────────────────────
+
+/**
+ * checkLoginAllowed() followed by recordLoginFailure() is a time-of-check /
+ * time-of-use gap: a burst of N parallel requests all pass the check before
+ * any failure is recorded, so an attacker gets N guesses instead of 5.
+ *
+ * claimLoginAttempt() closes it. It counts the attempt BEFORE the password is
+ * verified, with an atomic database increment, on the two ACCOUNT dimensions
+ * (account+source and account-wide). Exactly one request can win the
+ * conditional lockout update when the threshold is reached; every other
+ * concurrent request loses it and is rejected. A successful login resets
+ * these counters (recordLoginSuccess), so legitimate users never accumulate.
+ * The source-wide spraying dimension still counts failures only, so a shared
+ * address is not locked by many successful logins.
+ *
+ * Callers: claim -> verify -> on failure recordLoginFailure(..., {sourceOnly})
+ *                          -> on success recordLoginSuccess.
+ */
+
+type CounterRow = { id: string; failureCount: number; escalationLevel: number };
+
+async function bumpCounter(
+  identifierHash: string,
+  sourceHash: string,
+  windowMs: number
+): Promise<CounterRow> {
+  for (let attempt = 0; attempt < 5; attempt++) {
+    const now = new Date();
+    const row = await db.loginAttempt.findUnique({
+      where: { identifierHash_sourceHash: { identifierHash, sourceHash } },
+    });
+    if (!row) {
+      try {
+        return await db.loginAttempt.create({
+          data: { identifierHash, sourceHash, failureCount: 1, windowStart: now, lastFailureAt: now },
+          select: { id: true, failureCount: true, escalationLevel: true },
+        });
+      } catch (error) {
+        if (!isUniqueConstraintViolationCode(error)) throw error;
+        continue; // a concurrent request created the row first: retry as an update
+      }
+    }
+    if (now.getTime() - row.windowStart.getTime() >= windowMs) {
+      const escalationLevel =
+        row.lockoutUntil && row.lockoutUntil > now
+          ? row.escalationLevel
+          : Math.max(0, row.escalationLevel - 1);
+      // Conditional on the old windowStart so only one racer resets the window.
+      const reset = await db.loginAttempt.updateMany({
+        where: { id: row.id, windowStart: row.windowStart },
+        data: { failureCount: 1, windowStart: now, lastFailureAt: now, escalationLevel, lockoutUntil: null },
+      });
+      if (reset.count === 1) return { id: row.id, failureCount: 1, escalationLevel };
+      continue;
+    }
+    return db.loginAttempt.update({
+      where: { id: row.id },
+      data: { failureCount: { increment: 1 }, lastFailureAt: now },
+      select: { id: true, failureCount: true, escalationLevel: true },
+    });
+  }
+  throw new Error("rate limit counter contention");
+}
+
+/**
+ * Take the lockout if it is not already active. Returns true for exactly one
+ * of any number of concurrent callers (the conditional update matches once).
+ */
+async function tryTakeLockout(
+  row: CounterRow,
+  durationMs: number
+): Promise<boolean> {
+  const now = new Date();
+  const result = await db.loginAttempt.updateMany({
+    where: { id: row.id, OR: [{ lockoutUntil: null }, { lockoutUntil: { lte: now } }] },
+    data: {
+      lockoutUntil: new Date(now.getTime() + durationMs),
+      escalationLevel: Math.min(row.escalationLevel + 1, 10),
+    },
+  });
+  return result.count === 1;
+}
+
+/**
+ * Count one login attempt atomically and decide whether it may proceed.
+ * Attempts 1..(max-1) proceed; the attempt that reaches the threshold proceeds
+ * only if it wins the lockout (so exactly `max` attempts per window, however
+ * many requests arrive in parallel); everything after is rejected.
+ */
+export async function claimLoginAttempt(
+  identifier: string,
+  source: string
+): Promise<RateLimitDecision> {
+  const blocked = await checkLoginAllowed(identifier, source);
+  if (!blocked.allowed) return blocked;
+
+  const identifierHash = hashDimension(identifier);
+  const accountKeys = [hashDimension(source), ANY];
+  let rejected = false;
+  for (const sourceHash of accountKeys) {
+    const row = await bumpCounter(identifierHash, sourceHash, RATE_LIMIT_CONFIG.windowMs);
+    if (row.failureCount >= RATE_LIMIT_CONFIG.maxFailures) {
+      const won = await tryTakeLockout(row, lockoutDuration(row.escalationLevel));
+      if (!won) rejected = true;
+    }
+  }
+  if (rejected) {
+    const after = await checkLoginAllowed(identifier, source);
+    return after.allowed ? { allowed: false, retryAfterSeconds: 1 } : after;
+  }
+  return { allowed: true, retryAfterSeconds: 0 };
+}
+
+/** Atomic equivalent of checkSignupAllowed() + recordSignupAttempt(). */
+export async function claimSignupAttempt(
+  source: string
+): Promise<RateLimitDecision> {
+  const blocked = await checkSignupAllowed(source);
+  if (!blocked.allowed) return blocked;
+
+  let rejected = false;
+  for (const key of signupDimensions(source)) {
+    const row = await bumpCounter(key.identifierHash, key.sourceHash, SIGNUP_RATE_LIMIT_CONFIG.windowMs);
+    if (row.failureCount >= key.maxAttempts) {
+      const won = await tryTakeLockout(row, signupLockoutDuration(row.escalationLevel));
+      if (!won) rejected = true;
+    }
+  }
+  if (rejected) {
+    const after = await checkSignupAllowed(source);
+    return after.allowed ? { allowed: false, retryAfterSeconds: 1 } : after;
+  }
+  return { allowed: true, retryAfterSeconds: 0 };
 }

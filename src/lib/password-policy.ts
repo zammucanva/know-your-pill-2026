@@ -26,6 +26,13 @@ export const PASSWORD_MIN_LENGTH = 8;
 /** Maximum password length, enforced identically on every path. */
 export const PASSWORD_MAX_LENGTH = 128;
 
+/**
+ * bcrypt silently ignores everything after the first 72 BYTES, so two
+ * different long passwords sharing a 72-byte prefix would be interchangeable.
+ * New passwords are rejected above this size instead of being truncated.
+ */
+export const PASSWORD_MAX_BYTES = 72;
+
 export interface PasswordPolicyOptions {
   /**
    * Word used in the human-facing error message, e.g. "Password" or
@@ -66,6 +73,13 @@ export function validatePasswordPolicy(
       ok: false,
       code: "too-long",
       message: `${subject} must be at most ${PASSWORD_MAX_LENGTH} characters`,
+    };
+  }
+  if (Buffer.byteLength(password as string, "utf8") > PASSWORD_MAX_BYTES) {
+    return {
+      ok: false,
+      code: "too-long",
+      message: `${subject} must be at most ${PASSWORD_MAX_BYTES} bytes (72 ASCII characters)`,
     };
   }
   return { ok: true };

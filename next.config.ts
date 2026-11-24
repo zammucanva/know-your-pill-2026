@@ -83,6 +83,11 @@ const nextConfig: NextConfig = {
                 ...productionOnly,
               ],
             },
+            // Authenticated JSON must never be stored by a shared cache/CDN.
+            {
+              source: "/api/:path*",
+              headers: [{ key: "Cache-Control", value: "no-store" }],
+            },
             // Anatomy geometry chunks are requested with ?v=<content hash> (see use-anatomy-model),
             // so a changed chunk always has a new URL and these can be cached for a year.
             {

@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 
 // This route must be dynamic — it reads/writes cookies.
 export const dynamic = "force-dynamic";
+import { rejectCrossOrigin } from "@/lib/same-origin";
 import { clearSessionCookie, resolveSessionFromCookie, revokeSessionFromCookie } from "@/lib/session";
 
 /**
@@ -39,7 +40,9 @@ export async function GET() {
  * Idempotent: an absent or invalid session still returns success without
  * revealing anything.
  */
-export async function DELETE() {
+export async function DELETE(req: Request) {
+  const crossOrigin = rejectCrossOrigin(req);
+  if (crossOrigin) return crossOrigin;
   await revokeSessionFromCookie();
   await clearSessionCookie();
   return NextResponse.json({ success: true });

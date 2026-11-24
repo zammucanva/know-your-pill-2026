@@ -5,6 +5,7 @@ import { NextRequest, NextResponse } from "next/server";
 export const dynamic = "force-dynamic";
 import bcrypt from "bcryptjs";
 import { db } from "@/lib/db";
+import { rejectCrossOrigin } from "@/lib/same-origin";
 import { validatePasswordPolicy } from "@/lib/password-policy";
 import {
   checkLoginAllowed,
@@ -42,6 +43,8 @@ import { revokeAllSessionsForUser } from "@/lib/session";
 const GENERIC_TOKEN_ERROR = "Invalid or expired reset token";
 
 export async function POST(req: NextRequest) {
+  const crossOrigin = rejectCrossOrigin(req);
+  if (crossOrigin) return crossOrigin;
   try {
     let body: unknown;
     try {

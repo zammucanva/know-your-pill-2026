@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import { db } from "@/lib/db";
 import {
-  checkLoginAllowed,
+  claimLoginAttempt,
   getClientSource,
   recordLoginFailure,
 } from "@/lib/rate-limit";
@@ -56,7 +56,7 @@ export async function DELETE(req: NextRequest) {
 
     const source = getClientSource(req);
     const limitKey = `delete:${session.userId}`;
-    const decision = await checkLoginAllowed(limitKey, source);
+    const decision = await claimLoginAttempt(limitKey, source);
     if (!decision.allowed) {
       return NextResponse.json(
         { error: "Too many attempts. Please try again later." },
@@ -82,7 +82,7 @@ export async function DELETE(req: NextRequest) {
         password.length <= 128 &&
         (await bcrypt.compare(password, user.passwordHash));
       if (!valid) {
-        await recordLoginFailure(limitKey, source);
+        await recordLoginFailure(limitKey, source, { sourceOnly: true });
         return NextResponse.json({ error: "Password is incorrect" }, { status: 401 });
       }
     }

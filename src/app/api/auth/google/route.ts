@@ -4,6 +4,7 @@ import { db } from "@/lib/db";
 import { createSessionForUser, setSessionCookie } from "@/lib/session";
 import { isSessionSecretConfigured } from "@/lib/session-secret";
 import { logger } from "@/lib/logger";
+import { rejectCrossOrigin } from "@/lib/same-origin";
 import { isTrustedGoogleIdentity } from "@/lib/google-identity";
 
 export const dynamic = "force-dynamic";
@@ -18,6 +19,8 @@ export const dynamic = "force-dynamic";
  * Response: { id, name, email, learnerType, emailVerified, isNew }
  */
 export async function POST(req: NextRequest) {
+  const crossOrigin = rejectCrossOrigin(req);
+  if (crossOrigin) return crossOrigin;
   if (!isSessionSecretConfigured()) {
     return NextResponse.json(
       { error: "Authentication is temporarily unavailable" },

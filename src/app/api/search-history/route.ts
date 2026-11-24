@@ -2,6 +2,8 @@ import { logger } from "@/lib/logger";
 import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/lib/db";
 import { getSessionUser } from "@/lib/auth";
+import { rejectCrossOrigin } from "@/lib/same-origin";
+import { hasControlChars } from "@/lib/input-validation";
 import { isKypContentType, resolveContent } from "@/lib/kyp/data/content-registry";
 
 export const dynamic = "force-dynamic";
@@ -23,6 +25,8 @@ export async function GET(req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
+  const crossOrigin = rejectCrossOrigin(req);
+  if (crossOrigin) return crossOrigin;
   const user = await getSessionUser();
   if (!user) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
@@ -32,7 +36,7 @@ export async function POST(req: NextRequest) {
       resultType?: unknown;
       resultSlug?: unknown;
     };
-    if (typeof body.query !== "string" || !body.query.trim() || body.query.trim().length > 500) {
+    if (typeof body.query !== "string" || !body.query.trim() || body.query.trim().length > 500 || hasControlChars(body.query)) {
       return NextResponse.json({ error: "query is required and must be at most 500 characters" }, { status: 400 });
     }
 
@@ -97,7 +101,9 @@ export async function POST(req: NextRequest) {
   }
 }
 
-export async function DELETE() {
+export async function DELETE(req: NextRequest) {
+  const crossOrigin = rejectCrossOrigin(req);
+  if (crossOrigin) return crossOrigin;
   const user = await getSessionUser();
   if (!user) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   try {

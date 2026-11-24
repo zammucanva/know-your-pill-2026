@@ -5,9 +5,10 @@ import { NextRequest, NextResponse } from "next/server";
 export const dynamic = "force-dynamic";
 import { db } from "@/lib/db";
 import { rejectCrossOrigin } from "@/lib/same-origin";
+import { EMAIL_MAX_LENGTH, PASSWORD_INPUT_MAX_LENGTH, hasControlChars } from "@/lib/input-validation";
 import bcrypt from "bcryptjs";
 import {
-  checkLoginAllowed,
+  claimLoginAttempt,
   getClientSource,
   recordLoginFailure,
   recordLoginSuccess,
@@ -75,12 +76,25 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    // Bound inputs. Control characters (NUL especially) would reach the
+    // database driver and surface as a 500; an over-long password can never be
+    // valid (policy maximum is 128) and must not reach bcrypt.
+    if (
+      email.length > EMAIL_MAX_LENGTH ||
+      hasControlChars(email) ||
+      password.length > PASSWORD_INPUT_MAX_LENGTH
+    ) {
+      return NextResponse.json({ error: "Invalid email or password" }, { status: 400 });
+    }
+
     // Normalize email to lowercase for lookup (server-side only)
     const normalizedEmail = email.toLowerCase().trim();
     const source = getClientSource(req);
 
     // ── Rate limit BEFORE the expensive bcrypt work ──
-    const decision = await checkLoginAllowed(normalizedEmail, source);
+    // Atomic: counts this attempt before the password is checked, so parallel
+    // bursts cannot exceed the threshold.
+    const decision = await claimLoginAttempt(normalizedEmail, source);
     if (!decision.allowed) {
       return NextResponse.json(
         { error: "Too many login attempts. Please try again later." },
@@ -96,14 +110,14 @@ export async function POST(req: NextRequest) {
     if (!user) {
       // Unknown account: record the failure (throttles probing) and run a
       // dummy bcrypt compare so timing matches the wrong-password path.
-      await recordLoginFailure(normalizedEmail, source);
+      await recordLoginFailure(normalizedEmail, source, { sourceOnly: true });
       await bcrypt.compare(password, DUMMY_BCRYPT_HASH);
       return NextResponse.json({ error: GENERIC_LOGIN_ERROR }, { status: 401 });
     }
 
     const valid = await bcrypt.compare(password, user.passwordHash);
     if (!valid) {
-      await recordLoginFailure(normalizedEmail, source);
+      await recordLoginFailure(normalizedEmail, source, { sourceOnly: true });
       return NextResponse.json({ error: GENERIC_LOGIN_ERROR }, { status: 401 });
     }
 
