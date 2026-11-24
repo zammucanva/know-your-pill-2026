@@ -11,6 +11,8 @@ import {
 } from "@/lib/rate-limit";
 import { createPasswordResetToken, invalidatePasswordResetToken } from "@/lib/password-reset";
 import { sendPasswordResetEmail } from "@/lib/email";
+import { isValidEmailShape } from "@/lib/input-validation";
+import { rejectCrossOrigin } from "@/lib/same-origin";
 
 /**
  * POST /api/auth/password/forgot
@@ -33,7 +35,6 @@ import { sendPasswordResetEmail } from "@/lib/email";
  *     account (only the latest can be used).
  */
 
-const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const GENERIC_RESPONSE = {
   message:
@@ -41,6 +42,8 @@ const GENERIC_RESPONSE = {
 };
 
 export async function POST(req: NextRequest) {
+  const crossOrigin = rejectCrossOrigin(req);
+  if (crossOrigin) return crossOrigin;
   try {
     let body: unknown;
     try {
@@ -57,8 +60,13 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    // Cheap bound first: never lowercase/trim a multi-megabyte string.
+    if (email.length > 1024) {
+      return NextResponse.json({ error: "Invalid email address" }, { status: 400 });
+    }
     const normalizedEmail = email.toLowerCase().trim();
-    if (!EMAIL_REGEX.test(normalizedEmail) || normalizedEmail.length > 254) {
+    // Length is bounded and structure checked in linear time (no regex backtracking).
+    if (!isValidEmailShape(normalizedEmail)) {
       // Shape errors carry no account information.
       return NextResponse.json({ error: "Invalid email address" }, { status: 400 });
     }

@@ -74,7 +74,10 @@ describe("password policy module (unit)", () => {
   test("2. boundary behaviour is deterministic", () => {
     expect(validatePasswordPolicy("a".repeat(7)).ok).toBe(false);
     expect(validatePasswordPolicy("a".repeat(8)).ok).toBe(true);
-    expect(validatePasswordPolicy("a".repeat(128)).ok).toBe(true);
+    expect(validatePasswordPolicy("a".repeat(72)).ok).toBe(true);
+    // bcrypt ignores bytes beyond 72, so longer passwords are rejected, not truncated.
+    expect(validatePasswordPolicy("a".repeat(73)).ok).toBe(false);
+    expect(validatePasswordPolicy("é".repeat(37)).ok).toBe(false); // 74 UTF-8 bytes
     expect(validatePasswordPolicy("a".repeat(129)).ok).toBe(false);
   });
 

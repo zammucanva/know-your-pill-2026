@@ -58,6 +58,13 @@ describe("smoke — valid routes return 200", () => {
     const res = await fetch(`${BASE_URL}/legal/terms`);
     expect(res.status).toBe(200);
   });
+  test("/legal/privacy (privacy policy) returns 200 and names account deletion", async () => {
+    const res = await fetch(`${BASE_URL}/legal/privacy`);
+    expect(res.status).toBe(200);
+    const html = await res.text();
+    expect(html).toContain("Privacy Policy");
+    expect(html).toContain("Delete account");
+  });
   test("/dashboard returns 200", async () => {
     const res = await fetch(`${BASE_URL}/dashboard`);
     expect(res.status).toBe(200);

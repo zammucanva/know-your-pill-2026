@@ -160,6 +160,13 @@ export function Footer() {
                   >
                     Terms &amp; Copyright
                   </Link>
+                  {" · "}
+                  <Link
+                    href="/legal/privacy"
+                    className="underline decoration-border underline-offset-2 transition-colors hover:text-brand hover:decoration-brand"
+                  >
+                    Privacy
+                  </Link>
                 </p>
                 {/* Page-local back-to-top — a real control, not an anchor
                     to an id that most pages don't have. Smooth scroll

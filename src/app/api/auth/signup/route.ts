@@ -15,11 +15,12 @@ import {
   setSessionCookie,
 } from "@/lib/session";
 import { isSessionSecretConfigured } from "@/lib/session-secret";
+import { isSafeDisplayName, isValidEmailShape } from "@/lib/input-validation";
+import { rejectCrossOrigin } from "@/lib/same-origin";
 import { validatePasswordPolicy } from "@/lib/password-policy";
 import {
-  checkSignupAllowed,
+  claimSignupAttempt,
   getClientSource,
-  recordSignupAttempt,
 } from "@/lib/rate-limit";
 
 /**
@@ -62,7 +63,6 @@ import {
  * Fails closed with HTTP 500 when SESSION_SECRET is not configured.
  */
 
-const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 /** Prisma unique-constraint violation code (lost the race to create). */
 function isUniqueConstraintViolation(error: unknown): boolean {
@@ -91,6 +91,8 @@ async function uniformExistingEmailResponse(name: string, normalizedEmail: strin
 }
 
 export async function POST(req: NextRequest) {
+  const crossOrigin = rejectCrossOrigin(req);
+  if (crossOrigin) return crossOrigin;
   if (!isSessionSecretConfigured()) {
     return NextResponse.json(
       { error: "Authentication is temporarily unavailable" },
@@ -123,10 +125,10 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Bound free-text inputs so oversized values cannot bloat storage.
-    if (name.trim().length === 0 || name.length > 100 || email.length > 254) {
+    // Bound and sanitise free-text inputs (linear time; length checked first).
+    if (!isSafeDisplayName(name)) {
       return NextResponse.json(
-        { error: "Please enter a valid name (up to 100 characters) and email address" },
+        { error: "Please enter a valid name (up to 100 characters, no control or invisible characters)" },
         { status: 400 }
       );
     }
@@ -138,7 +140,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Validate email format
-    if (!EMAIL_REGEX.test(email)) {
+    if (!isValidEmailShape(email)) {
       return NextResponse.json(
         { error: "Please enter a valid email address" },
         { status: 400 }
@@ -153,7 +155,9 @@ export async function POST(req: NextRequest) {
     // budget is keyed on the source only, so throttling is identical for
     // registered and unregistered emails — a 429 is never an account signal.
     const source = getClientSource(req);
-    const signupDecision = await checkSignupAllowed(source);
+    // Atomic: the attempt is counted before any bcrypt work, so a parallel
+    // burst cannot slip past the per-source budget.
+    const signupDecision = await claimSignupAttempt(source);
     if (!signupDecision.allowed) {
       return NextResponse.json(
         { error: "Too many signup attempts. Please try again later." },
@@ -163,9 +167,6 @@ export async function POST(req: NextRequest) {
         }
       );
     }
-    // Count this attempt BEFORE burning the hash cycles, on every path
-    // that reaches this point (new account AND existing-email uniform).
-    await recordSignupAttempt(source);
 
     // Timing equalisation: hash the password BEFORE the existence check so
     // both paths perform the same expensive bcrypt work. The hash of the
