@@ -28,6 +28,7 @@ import { ClassHoneycomb, type HoneycombClass } from "@/components/kyp/sections/s
 import { StudyProgressCard } from "@/components/kyp/sections/study/study-progress-card";
 import { DailyPlan } from "@/components/kyp/sections/study/daily-plan";
 import { drugs } from "@/lib/kyp/data";
+import { practicePoolCount } from "@/lib/kyp/practice-counts";
 
 /**
  * /study — Study Mode: the single unified learning hub.
@@ -300,7 +301,7 @@ export default function StudyPage() {
                 <PracticeCard
                   icon={Zap}
                   title="Quick MCQs"
-                  body={`Test yourself with existing question sets: every one of the ${totalQuestions} library questions with immediate feedback and a one-line explanation.`}
+                  body={`Test yourself with existing question sets: every one of the ${practicePoolCount} practice questions with immediate feedback and a one-line explanation.`}
                   href="/quiz"
                   cta="Start Practice"
                   primary

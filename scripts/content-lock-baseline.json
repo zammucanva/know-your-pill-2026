@@ -10,7 +10,7 @@
     "src/lib/kyp/data/disease-types.ts": "de41533d52bb35e7e17ca5b9159d4741513c7a3539a7f973f45839c970497028",
     "src/lib/kyp/data/substance-types.ts": "44c11c6e8bf444f7739209cc768e0eacc94e65d8f0a1b06283b66cb550fe06e4",
     "src/lib/kyp/data/types.ts": "e97a1820cf5bebcc9722cedcb4d311b362c631ce60a0df02a9b0678526e03411",
-    "src/lib/kyp/data/platform.ts": "2dca3d1ef018cfb983eaf4452fdc35b1f0b37c1cc91537415e35762cd19327ec",
+    "src/lib/kyp/data/platform.ts": "6303a4ed07c40fadc98d88b3fb6070c93a62405ef3083dd887885151b11e2df1",
     "src/lib/kyp/data/index.ts": "3f65f35f76f019e7b285b8ba43718e2b2247079a848480bec01a9e83111de9d7",
     "src/lib/kyp/data/neurotransmitter-artwork.json": "590fdf059028a8bd01ab21e4f7584a2aba15fac6b850e427abe74a6471a1ef58",
     "src/lib/kyp/data/drugs/acamprosate.ts": "6bb4ec32c66db191c3554dd844c1260ecb4986d8d89540bba29880040bdbe508",

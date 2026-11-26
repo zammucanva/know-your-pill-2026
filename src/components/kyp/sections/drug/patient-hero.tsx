@@ -199,7 +199,7 @@ export function HeroIdentityCard({ drug, guide }: HeroIdentityCardProps) {
             <div className="flex items-baseline justify-between gap-2">
               <dt className="text-muted-foreground flex items-center gap-1">
                 <Clock className="h-3 w-3" />
-                Last reviewed
+                Content updated
               </dt>
               <dd className="font-medium text-foreground">
                 {new Date(drug.lastReviewed).toLocaleDateString("en-GB", {

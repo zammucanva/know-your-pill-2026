@@ -707,7 +707,7 @@ function LessonIdentityCard({
         <p className="text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground">Reviewed</p>
         <dl className="mt-2 space-y-1.5 text-xs">
           <div className="flex items-baseline justify-between gap-2">
-            <dt className="text-muted-foreground">Last reviewed</dt>
+            <dt className="text-muted-foreground">Content updated</dt>
             <dd className="font-medium text-foreground">{formatReviewDate(note.frontmatter.last_reviewed)}</dd>
           </div>
         </dl>
