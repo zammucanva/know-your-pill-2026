@@ -10,6 +10,7 @@ import { Reveal } from "@/components/kyp/ui/reveal";
 import { ContinueLearningSection } from "./continue-learning";
 import { drugs, diseases, substancePages, brainRegions, pathways, sideEffects } from "@/lib/kyp/data";
 import { psychiatryStats } from "@/lib/kyp/data/psychiatry-search-records.generated";
+import { drugInlineCount, practicePoolCount } from "@/lib/kyp/practice-counts";
 
 /**
  * /learn — the central educational dashboard of KYP.
@@ -60,9 +61,8 @@ export default function LearnPage() {
   const sideEffectCount = sideEffects.length;
   const classGroupCount = new Set(drugs.map((d) => d.drugClassLabel)).size;
 
-  // Count total MCQs available across all drugs
-  const totalMcqs = drugs.reduce((sum, d) => sum + (d.microQuizzes?.length || 0), 0)
-    + diseases.reduce((sum, d) => sum + (d.microQuizzes?.length || 0), 0);
+  // Same pool the Practice page serves (see lib/kyp/practice-counts).
+  const totalMcqs = practicePoolCount;
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -196,7 +196,7 @@ export default function LearnPage() {
                     <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted-foreground/60">
                       <span><span className="font-semibold text-foreground">{drugCount}</span> drugs</span>
                       <span>·</span>
-                      <span><span className="font-semibold text-foreground">{totalMcqs}</span> MCQs</span>
+                      <span><span className="font-semibold text-foreground">{drugInlineCount}</span> MCQs</span>
                       <span>·</span>
                       <span><span className="font-semibold text-foreground">{classGroupCount}</span> medication classes</span>
                     </div>

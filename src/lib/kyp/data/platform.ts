@@ -58,7 +58,7 @@ export const faqs: FAQItem[] = [
   {
     question: "How accurate is the medical content?",
     answer:
-      "Content is compiled from standard pharmacology references (Katzung 16e, Goodman & Gilman 14e, Stahl\'s Essential Psychopharmacology 5e), DSM-5 diagnostic criteria, ICD-10 clinical patterns, and Indian national health guidelines (NICE CG91, APA Practice Guidelines, Tele-MANAS 14416). No formal peer-review process exists yet. Drug information evolves and guidelines change, so always cross-reference with the latest prescribing information and local protocols before clinical decision-making.",
+      "Content is compiled from standard pharmacology references (Katzung 16e, Goodman & Gilman 14e, Stahl\'s Essential Psychopharmacology 5e), DSM-5 diagnostic criteria, ICD-10 clinical patterns, international guidelines (NICE and APA), and Indian sources such as the Indian Psychiatric Society guidelines. Indian crisis support: Tele-MANAS 14416. No formal peer-review process exists yet. Drug information evolves and guidelines change, so always cross-reference with the latest prescribing information and local protocols before clinical decision-making.",
   },
   {
     question: "Does KYP cover medications beyond psychiatry?",

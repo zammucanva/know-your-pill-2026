@@ -992,7 +992,7 @@ export default async function SubstancePage({ params }: PageProps) {
         <Section spacing="tight">
           <Container className="text-center">
             <p className="text-xs text-muted-foreground">
-              Last reviewed: {new Date(substance.lastReviewed).toLocaleDateString("en-GB", { month: "long", year: "numeric" })}
+              Content updated: {new Date(substance.lastReviewed).toLocaleDateString("en-GB", { month: "long", year: "numeric" })}
               {" · "}Source: {substance.source}
             </p>
           </Container>
